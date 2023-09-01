@@ -30,8 +30,17 @@ We welcome contributions from everyone, irrespective of your background or exper
 4. **Push & Create a Pull Request**: Push your changes to your fork and then open a pull request against this repository.
 
 ## Topics of Interest
+Flashbots' topics and definitions list [here](https://github.com/flashbots/mev-research/blob/main/topics.md) enumerates topics of interest to the MEV research community. These topics include:
+- Auction Design
+- Cryptographic Privacy
+- Cryptoeconomic Privacy
+- MEV in L2
+- MEV Taxonomy
+- Account Abstraction
+- Protocol Design
+- Search Optimization
 
-- Maximal Extractable Value (MEV)
+And, more broadly:
 - Incentive Alignment in Blockchain Systems
 - Mechanism Design and its Implications in Ethereum
 - Transaction Ordering and its Impacts
