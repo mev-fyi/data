@@ -15,7 +15,7 @@ Maximal Extractable Value (MEV) refers to the total amount that can be extracted
 ## Where to start the MEV learning journey?
 1. Flashbots' MEV [Research repository](https://github.com/flashbots/mev-research/) is a great place to start. It contains a curated list of academic papers, articles, and discussions on MEV and related topics.
 
-2. Beyond Flashbots, all articles available in resources.md constitute strong foundations to get started on MEV research.
+2. Beyond Flashbots, all articles available from sources in resources.md constitute strong foundations to get started on MEV research.
 
 3. Research papers, can be browsed on the Google Sheet [here](https://docs.google.com/spreadsheets/d/1POtuj3DtF3A-uwm4MtKvwNYtnl_PW6DPUYj6x7yJUIs/edit#gid=1299175463). This file contains a list of research papers, the papers' title, authors, topics, and link.
 
