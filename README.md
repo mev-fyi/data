@@ -23,15 +23,6 @@ Maximal Extractable Value (MEV) refers to the total amount that can be extracted
 
 We've curated a selection of YouTube channels focused on MEV and related topics. Each channel's videos come with their respective transcripts to enable easy "Ctrl+F" searches. This repository offers an invaluable tool to parse video content with LLMs, create glossaries, definitions, and more.
 
-## How to Contribute
-
-We welcome contributions from everyone, irrespective of your background or expertise level!
-
-1. **Fork the Repository**: Start by forking this repository.
-2. **Clone & Create a New Branch**: Clone the repository to your local machine and create a new branch.
-3. **Make Changes**: Add your contributions. It could be a research paper you've come across, a discussion thread, or any educational content.
-4. **Push & Create a Pull Request**: Push your changes to your fork and then open a pull request against this repository.
-
 ## Topics of Interest
 Flashbots' topics and definitions list [here](https://github.com/flashbots/mev-research/blob/main/topics.md) enumerates topics of interest to the MEV research community. These topics include:
 - Auction Design
@@ -49,6 +40,15 @@ And, more broadly:
 - Transaction Ordering and its Impacts
 - Auction theory and its Applications in Blockchain
 - Potential Solutions and Mitigations for MEV
+
+## How to Contribute
+
+We welcome contributions from everyone, irrespective of your background or expertise level!
+
+1. **Fork the Repository**: Start by forking this repository.
+2. **Clone & Create a New Branch**: Clone the repository to your local machine and create a new branch.
+3. **Make Changes**: Add your contributions e.g. link to a relevant research paper in data/links/papers.txt. Articles, discussion thread, forum post or any educational content can be added to data/links/articles.txt.
+4. **Push & Create a Pull Request**: Push your changes to your fork and then open a pull request against this repository.
 
 ## Support the Initiative
 
