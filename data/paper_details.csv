@@ -7,7 +7,6 @@ Clockwork Finance: Automated Analysis of Economic Security in Smart Contracts,"K
 SquirRL: Automating Attack Analysis on Blockchain Incentive Mechanisms with Deep Reinforcement Learning,"Charlie Hou, Mingxun Zhou, Yan Ji, Phil Daian, Florian Tramer, Giulia Fanti, Ari Juels",http://arxiv.org/pdf/1912.01798v2,cs.CR,2019-12-04
 Unity is Strength: A Formalization of Cross-Domain Maximal Extractable Value,"Alexandre Obadia, Alejo Salles, Lakshman Sankar, Tarun Chitra, Vaibhav Chellani, Philip Daian",http://arxiv.org/pdf/2112.01472v2,cs.CR,2021-12-02
 Compositional game theory,"Neil Ghani, Jules Hedges, Viktor Winschel, Philipp Zahn",http://arxiv.org/pdf/1603.04641v3,cs.GT,2016-03-15
-When Bidders Are DAOs,"Maryam Bahrani, Pranav Garimidi, Tim Roughgarden",http://arxiv.org/pdf/2306.17099v1,cs.GT,2023-06-29
 "Towards Optimal Prior-Free Permissionless Rebate Mechanisms, with applications to Automated Market Makers & Combinatorial Orderflow Auctions","Bruno Mazorra, Nicolás Della Penna",http://arxiv.org/pdf/2306.17024v1,cs.GT,2023-06-29
 Time is Money: Strategic Timing Games in Proof-of-Stake Protocols,"Caspar Schwarz-Schilling, Fahad Saleh, Thomas Thiery, Jennifer Pan, Nihar Shah, Barnabé Monnot",http://arxiv.org/pdf/2305.09032v1,"cs.GT, cs.CR",2023-05-15
 "Credible, Optimal Auctions via Blockchains","Tarun Chitra, Matheus V. X. Ferreira, Kshitij Kulkarni",http://arxiv.org/pdf/2301.12532v1,"cs.GT, cs.CR",2023-01-29
@@ -52,6 +51,5 @@ Optimal Trading in Automatic Market Makers with Deep Learning,"Sebastian Jaimung
 SoK: Decentralized Exchanges (DEX) with Automated Market Maker (AMM) Protocols,"Jiahua Xu, Krzysztof Paruch, Simon Cousaert, Yebo Feng",http://arxiv.org/pdf/2103.12732v7,"q-fin.TR, cs.GT",2021-03-23
 Can You hear the Shape of a Market? Geometric Arbitrage and Spectral Theory,"Simone Farinelli, Hideyuki Takada",http://arxiv.org/pdf/1509.03264v6,"q-fin.MF, 91G10, 58J50, 53C05",2015-09-02
 Applications of Mean Field Games in Financial Engineering and Economic Theory,Rene Carmona,http://arxiv.org/pdf/2012.05237v1,"q-fin.GN, econ.TH, math.PR, 60, 91",2020-12-09
-The Cost of Misspecifying Price Impact,"Natascha Hey, Jean-Philippe Bouchaud, Iacopo Mastromatteo, Johannes Muhle-Karbe, Kevin Webster",http://arxiv.org/pdf/2306.00599v1,q-fin.TR,2023-06-01
 A Short Note on Setting Swap Parameters,"Nihar Shah, Lucas Baker, Suraj Srinivasan, Alex Toberoff",http://arxiv.org/pdf/2305.10624v1,q-fin.MF,2023-05-18
 Automated Market Making and Loss-Versus-Rebalancing,"Jason Milionis, Ciamac C. Moallemi, Tim Roughgarden, Anthony Lee Zhang",http://arxiv.org/pdf/2208.06046v3,"q-fin.MF, math.OC, q-fin.PM, q-fin.PR, q-fin.TR",2022-08-11

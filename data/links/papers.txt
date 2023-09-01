@@ -20,7 +20,6 @@ https://arxiv.org/pdf/2212.07175.pdf
 https://arxiv.org/pdf/2106.01340.pdf
 https://arxiv.org/pdf/2307.01686.pdf
 https://arxiv.org/pdf/2102.10567.pdf
-https://arxiv.org/pdf/2306.17099v1.pdf
 https://arxiv.org/pdf/2301.08523.pdf
 https://arxiv.org/pdf/2012.08630.pdf
 https://arxiv.org/pdf/2209.15569.pdf
@@ -51,6 +50,5 @@ https://arxiv.org/pdf/2304.02180.pdf
 https://arxiv.org/pdf/2103.12732.pdf
 https://arxiv.org/pdf/1509.03264.pdf
 https://arxiv.org/pdf/2012.05237
-https://arxiv.org/pdf/2306.00599.pdf
 https://arxiv.org/pdf/2305.10624.pdf
 https://arxiv.org/pdf/2208.06046.pdf
