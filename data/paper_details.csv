@@ -1,0 +1,57 @@
+title,authors,pdf_link,topics,release_date
+"Market making by an FX dealer: tiers, pricing ladders and hedging rates for optimal risk control","Alexander Barzykin, Philippe Bergault, Olivier Guéant",http://arxiv.org/pdf/2112.02269v3,"q-fin.TR, q-fin.RM",2021-12-04
+Contingent Fees in Order Flow Auctions,Max Resnick,http://arxiv.org/pdf/2304.04981v1,"econ.TH, cs.GT",2023-04-11
+The centralizing effects of private order flow on proposer-builder separation,"Tivas Gupta, Mallesh M Pai, Max Resnick",http://arxiv.org/pdf/2305.19150v1,econ.TH,2023-05-30
+Adversarial blockchain queues and trading on a CFMM,Andrew W. Macpherson,http://arxiv.org/pdf/2302.01663v2,"math.PR, cs.GT, q-fin.TR",2023-02-03
+Clockwork Finance: Automated Analysis of Economic Security in Smart Contracts,"Kushal Babel, Philip Daian, Mahimna Kelkar, Ari Juels",http://arxiv.org/pdf/2109.04347v2,"cs.CR, F.3.1; D.2.4; I.1.4",2021-09-09
+SquirRL: Automating Attack Analysis on Blockchain Incentive Mechanisms with Deep Reinforcement Learning,"Charlie Hou, Mingxun Zhou, Yan Ji, Phil Daian, Florian Tramer, Giulia Fanti, Ari Juels",http://arxiv.org/pdf/1912.01798v2,cs.CR,2019-12-04
+Unity is Strength: A Formalization of Cross-Domain Maximal Extractable Value,"Alexandre Obadia, Alejo Salles, Lakshman Sankar, Tarun Chitra, Vaibhav Chellani, Philip Daian",http://arxiv.org/pdf/2112.01472v2,cs.CR,2021-12-02
+Compositional game theory,"Neil Ghani, Jules Hedges, Viktor Winschel, Philipp Zahn",http://arxiv.org/pdf/1603.04641v3,cs.GT,2016-03-15
+When Bidders Are DAOs,"Maryam Bahrani, Pranav Garimidi, Tim Roughgarden",http://arxiv.org/pdf/2306.17099v1,cs.GT,2023-06-29
+"Towards Optimal Prior-Free Permissionless Rebate Mechanisms, with applications to Automated Market Makers & Combinatorial Orderflow Auctions","Bruno Mazorra, Nicolás Della Penna",http://arxiv.org/pdf/2306.17024v1,cs.GT,2023-06-29
+Time is Money: Strategic Timing Games in Proof-of-Stake Protocols,"Caspar Schwarz-Schilling, Fahad Saleh, Thomas Thiery, Jennifer Pan, Nihar Shah, Barnabé Monnot",http://arxiv.org/pdf/2305.09032v1,"cs.GT, cs.CR",2023-05-15
+"Credible, Optimal Auctions via Blockchains","Tarun Chitra, Matheus V. X. Ferreira, Kshitij Kulkarni",http://arxiv.org/pdf/2301.12532v1,"cs.GT, cs.CR",2023-01-29
+Commitment games with conditional information disclosure,"Anthony DiGiovanni, Jesse Clifton",http://arxiv.org/pdf/2204.03484v4,cs.GT,2022-04-07
+Decentral and Incentivized Federated Learning Frameworks: A Systematic Literature Review,"Leon Witt, Mathis Heyer, Kentaroh Toyoda, Wojciech Samek, Dan Li",http://arxiv.org/pdf/2205.07855v3,"cs.LG, cs.AI, cs.DC",2022-05-07
+Tackling the Problem of State Dependent Execution Probability: Empirical Evidence and Order Placement,"Timothée Fabre, Vincent Ragel",http://arxiv.org/pdf/2307.04863v1,q-fin.TR,2023-07-10
+What Can Cryptography Do For Decentralized Mechanism Design,"Elaine Shi, Hao Chung, Ke Wu",http://arxiv.org/pdf/2209.14462v4,"cs.GT, cs.CR",2022-09-28
+Foundations of Transaction Fee Mechanism Design,"Hao Chung, Elaine Shi",http://arxiv.org/pdf/2111.03151v3,"cs.GT, econ.TH",2021-11-04
+Transaction Fee Mechanism Design for the Ethereum Blockchain: An Economic Analysis of EIP-1559,Tim Roughgarden,http://arxiv.org/pdf/2012.00854v1,"cs.GT, cs.DC, cs.DS, econ.TH",2020-12-01
+Optimality Despite Chaos in Fee Markets,"Stefanos Leonardos, Daniël Reijsbergen, Barnabé Monnot, Georgios Piliouras",http://arxiv.org/pdf/2212.07175v2,"cs.GT, cs.CR, 91A80, 91-10, 91B26",2022-12-14
+Transaction Fee Mechanism Design,Tim Roughgarden,http://arxiv.org/pdf/2106.01340v2,"cs.CR, cs.DC, cs.DS, cs.GT, econ.TH",2021-06-02
+Transaction Fee Mechanism Design with Active Block Producers,"Maryam Bahrani, Pranav Garimidi, Tim Roughgarden",http://arxiv.org/pdf/2307.01686v1,"cs.GT, cs.CR, cs.DC, cs.DS, econ.TH",2023-07-04
+Dynamical Analysis of the EIP-1559 Ethereum Fee Market,"Stefanos Leonardos, Barnabé Monnot, Daniël Reijsbergen, Stratis Skoulakis, Georgios Piliouras",http://arxiv.org/pdf/2102.10567v3,"cs.GT, cs.CR, math.DS, 91A80, 91-10, 91B26",2021-02-21
+When Bidders Are DAOs,"Maryam Bahrani, Pranav Garimidi, Tim Roughgarden",http://arxiv.org/pdf/2306.17099v1,cs.GT,2023-06-29
+Side Contract Commitment Attacks on Blockchains,"Daji Landis, Nikolaj I. Schwartzbach",http://arxiv.org/pdf/2301.08523v2,"cs.GT, cs.CR",2023-01-20
+Open Problems in Cooperative AI,"Allan Dafoe, Edward Hughes, Yoram Bachrach, Tantum Collins, Kevin R. McKee, Joel Z. Leibo, Kate Larson, Thore Graepel",http://arxiv.org/pdf/2012.08630v1,"cs.AI, cs.MA",2020-12-15
+Credible Decentralized Exchange Design via Verifiable Sequencing Rules,"Matheus V. X. Ferreira, David C. Parkes",http://arxiv.org/pdf/2209.15569v2,"cs.GT, cs.CR, econ.TH, q-fin.TR",2022-09-30
+Differential Liquidity Provision in Uniswap v3 and Implications for Contract Design,"Zhou Fan, Francisco Marmolejo-Cossío, Ben Altschuler, He Sun, Xintong Wang, David C. Parkes",http://arxiv.org/pdf/2204.00464v2,"cs.GT, cs.CE",2022-04-01
+Cooperative and uncooperative institution designs: Surprises and problems in open-source game theory,"Andrew Critch, Michael Dennis, Stuart Russell",http://arxiv.org/pdf/2208.07006v1,"cs.GT, cs.LO, cs.MA, 93A14, 93A16, 91-08, 91A11, 91A35, 91A68, 91A44, 91B06, 91B41, 91B52, F.3.1; F.4.1; I.2.3; J.4",2022-08-15
+A Note on the Compatibility of Different Robust Program Equilibria of the Prisoner's Dilemma,Caspar Oesterheld,http://arxiv.org/pdf/2211.05057v1,"cs.GT, 91A44",2022-11-09
+Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection,"Kai Greshake, Sahar Abdelnabi, Shailesh Mishra, Christoph Endres, Thorsten Holz, Mario Fritz",http://arxiv.org/pdf/2302.12173v2,"cs.CR, cs.AI, cs.CL, cs.CY",2023-02-23
+"Constant Function Market Making, Social Welfare and Maximal Extractable Value","Bruno Mazorra, Nicolás Della Penna",http://arxiv.org/pdf/2211.07220v2,"cs.GT, math.PR",2022-11-14
+Optimal Private Payoff Manipulation against Commitment in Extensive-form Games,"Yurong Chen, Xiaotie Deng, Yuhao Li",http://arxiv.org/pdf/2206.13119v2,"cs.GT, cs.AI, cs.DS, econ.TH",2022-06-27
+Get It in Writing: Formal Contracts Mitigate Social Dilemmas in Multi-Agent RL,"Phillip J. K. Christoffersen, Andreas A. Haupt, Dylan Hadfield-Menell",http://arxiv.org/pdf/2208.10469v3,"cs.AI, cs.GT, cs.MA, econ.TH",2022-08-22
+Optimal Auctions through Deep Learning: Advances in Differentiable Economics,"Paul Dütting, Zhe Feng, Harikrishna Narasimhan, David C. Parkes, Sai Srivatsa Ravindranath",http://arxiv.org/pdf/1706.03459v6,"cs.GT, cs.AI, cs.LG",2017-06-12
+The AI Economist: Improving Equality and Productivity with AI-Driven Tax Policies,"Stephan Zheng, Alexander Trott, Sunil Srinivasa, Nikhil Naik, Melvin Gruesbeck, David C. Parkes, Richard Socher",http://arxiv.org/pdf/2004.13332v1,"econ.GN, cs.LG, q-fin.EC, stat.ML",2020-04-28
+Deep Learning for Two-Sided Matching,"Sai Srivatsa Ravindranath, Zhe Feng, Shira Li, Jonathan Ma, Scott D. Kominers, David C. Parkes",http://arxiv.org/pdf/2107.03427v1,"cs.GT, cs.AI, cs.LG",2021-07-07
+Threshold Encrypted Mempools: Limitations and Considerations,"Antoine Rondelet, Quintus Kilbourn",http://arxiv.org/pdf/2307.10878v2,cs.CR,2023-07-20
+Quick Order Fairness,"Christian Cachin, Jovana Mićić, Nathalie Steinhauer, Luca Zanolini",http://arxiv.org/pdf/2112.06615v3,cs.DC,2021-12-13
+Maximal Extractable Value (MEV) Protection on a DAG,"Dahlia Malkhi, Pawel Szalachowski",http://arxiv.org/pdf/2208.00940v1,"cs.CR, cs.DC",2022-08-01
+Bullshark: DAG BFT Protocols Made Practical,"Alexander Spiegelman, Neil Giridharan, Alberto Sonnino, Lefteris Kokoris-Kogias",http://arxiv.org/pdf/2201.05677v3,cs.CR,2022-01-14
+Towards a Theory of Maximal Extractable Value I: Constant Function Market Makers,"Kshitij Kulkarni, Theo Diamandis, Tarun Chitra",http://arxiv.org/pdf/2207.11835v2,"cs.GT, cs.CR, q-fin.CP",2022-07-24
+Improved Price Oracles: Constant Function Market Makers,"Guillermo Angeris, Tarun Chitra",http://arxiv.org/pdf/2003.10001v4,"q-fin.TR, math.OC",2020-03-22
+Dynamic Pricing for Non-fungible Resources: Designing Multidimensional Blockchain Fee Markets,"Theo Diamandis, Alex Evans, Tarun Chitra, Guillermo Angeris",http://arxiv.org/pdf/2208.07919v2,"math.OC, cs.CR, cs.GT",2022-08-16
+Concave Pro-rata Games,"Nicholas A. G Johnson, Theo Diamandis, Alex Evans, Henry de Valence, Guillermo Angeris",http://arxiv.org/pdf/2302.02126v1,"cs.GT, cs.CR, cs.MA",2023-02-04
+While Stability Lasts: A Stochastic Model of Non-Custodial Stablecoins,"Ariah Klages-Mundt, Andreea Minca",http://arxiv.org/pdf/2004.01304v3,"q-fin.TR, cs.CR",2020-04-02
+A Myersonian Framework for Optimal Liquidity Provision in Automated Market Makers,"Jason Milionis, Ciamac C. Moallemi, Tim Roughgarden",http://arxiv.org/pdf/2303.00208v1,"cs.GT, econ.TH, q-fin.MF, q-fin.TR",2023-03-01
+Automated Market Makers: Mean-Variance Analysis of LPs Payoffs and Design of Pricing Functions,"Philippe Bergault, Louis Bertucci, David Bouba, Olivier Guéant",http://arxiv.org/pdf/2212.00336v3,q-fin.TR,2022-12-01
+Decentralised Finance and Automated Market Making: Execution and Speculation,"Álvaro Cartea, Fayçal Drissi, Marcello Monga",http://arxiv.org/pdf/2307.03499v1,"q-fin.TR, q-fin.MF",2023-07-07
+FlashSyn: Flash Loan Attack Synthesis via Counter Example Driven Approximation,"Zhiyang Chen, Sidi Mohamed Beillahi, Fan Long",http://arxiv.org/pdf/2206.10708v2,"cs.PL, cs.SE",2022-06-21
+Optimal Trading in Automatic Market Makers with Deep Learning,"Sebastian Jaimungal, Yuri F. Saporito, Max O. Souza, Yuri Thamsten",http://arxiv.org/pdf/2304.02180v1,q-fin.TR,2023-04-05
+SoK: Decentralized Exchanges (DEX) with Automated Market Maker (AMM) Protocols,"Jiahua Xu, Krzysztof Paruch, Simon Cousaert, Yebo Feng",http://arxiv.org/pdf/2103.12732v7,"q-fin.TR, cs.GT",2021-03-23
+Can You hear the Shape of a Market? Geometric Arbitrage and Spectral Theory,"Simone Farinelli, Hideyuki Takada",http://arxiv.org/pdf/1509.03264v6,"q-fin.MF, 91G10, 58J50, 53C05",2015-09-02
+Applications of Mean Field Games in Financial Engineering and Economic Theory,Rene Carmona,http://arxiv.org/pdf/2012.05237v1,"q-fin.GN, econ.TH, math.PR, 60, 91",2020-12-09
+The Cost of Misspecifying Price Impact,"Natascha Hey, Jean-Philippe Bouchaud, Iacopo Mastromatteo, Johannes Muhle-Karbe, Kevin Webster",http://arxiv.org/pdf/2306.00599v1,q-fin.TR,2023-06-01
+A Short Note on Setting Swap Parameters,"Nihar Shah, Lucas Baker, Suraj Srinivasan, Alex Toberoff",http://arxiv.org/pdf/2305.10624v1,q-fin.MF,2023-05-18
+Automated Market Making and Loss-Versus-Rebalancing,"Jason Milionis, Ciamac C. Moallemi, Tim Roughgarden, Anthony Lee Zhang",http://arxiv.org/pdf/2208.06046v3,"q-fin.MF, math.OC, q-fin.PM, q-fin.PR, q-fin.TR",2022-08-11
