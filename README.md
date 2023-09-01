@@ -19,6 +19,9 @@ Maximal Extractable Value (MEV) refers to the total amount that can be extracted
 
 3. Research papers, can be browsed on the Google Sheet [here](https://docs.google.com/spreadsheets/d/1POtuj3DtF3A-uwm4MtKvwNYtnl_PW6DPUYj6x7yJUIs/edit#gid=1299175463). This file contains a list of research papers, the papers' title, authors, topics, and link.
 
+## YouTube Video Transcripts
+
+We've curated a selection of YouTube channels focused on MEV and related topics. Each channel's videos come with their respective transcripts to enable easy "Ctrl+F" searches. This repository offers an invaluable tool to parse video content with LLMs, create glossaries, definitions, and more.
 
 ## How to Contribute
 
