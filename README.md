@@ -23,6 +23,8 @@ Maximal Extractable Value (MEV) refers to the total amount that can be extracted
 
 We've curated a selection of YouTube channels focused on MEV and related topics. Each channel's videos come with their respective transcripts to enable easy "Ctrl+F" searches. This repository offers an invaluable tool to parse video content with LLMs, create glossaries, definitions, and more.
 
+Disclaimer: each transcript is fetched from Youtube API and automatically generated. The Google algorithm generating said scripts is imperfect and some words can be misinterpreted. A possible upgrade to the transcript would be to fetch the audio (against Google ToS however) and use an API like AssemblyAI's to analyse the content and correct the transcript.  
+
 ## Topics of Interest
 Flashbots' topics and definitions list [here](https://github.com/flashbots/mev-research/blob/main/topics.md) enumerates topics of interest to the MEV research community. These topics include:
 - Auction Design
