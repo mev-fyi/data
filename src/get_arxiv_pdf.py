@@ -195,7 +195,7 @@ if __name__ == "__main__":
         arxiv_links = [line.strip() for line in f.readlines()]
     download_arxiv_papers(paper_links=arxiv_links, csv_file=csv_file)
 
-    # For SSRN links
+    # For SSRN links. Credits to https://github.com/karthiktadepalli1/ssrn-scraper
     # Assuming you have a file of SSRN links similar to arXiv
     with open(os.path.join(root_directory(), 'data', 'links', 'ssrn_papers.txt'), 'r') as f:
         ssrn_links = [line.strip() for line in f.readlines()]
