@@ -196,7 +196,7 @@ def get_ssrn_details_from_url(url: str) -> dict or None:
 
         title = article.find('h1').get_text().replace("\n", "").strip()
         test_list = ordered_set_from_list(t.split("\n"))
-        authors = test_list[0].replace(title, "").replace(" :: SSRN", "").replace(" by ", "").replace(", ", ":").strip()
+        authors = test_list[1].replace(title, "").replace(" :: SSRN", "").replace(" by ", "").replace(", ", ":").strip().replace(':', ', ')
         date = [line.replace("Last revised: ", "") for line in test_list if "Last revised: " in line]
 
         # Fallback if "Last revised" isn't found
