@@ -1,0 +1,475 @@
+Atila Abdulkadiroglu: My
+talk is going to be based on a paper with the same title that's
+joined with Joshua Angrist, Yusuke Narita, and Parag Pathak. We have already seen in
+all in Parag's talk that market design offers
+practical solutions for real-life allocation
+problems with appealing properties such as strategic proofness,
+efficiency, and fairness. In addition to these
+economic considerations, centralized assignment
+also generates valuable data for
+empirical research, especially in the context
+of school choice. In particular when schools
+are oversubscribed, lottery based rationing
+of seats at schools creates a quasi-experimental
+variation in student assignment that can be used for credible evaluation of individual schools and school formal
+models such as charts. However, Mark design social
+Slack different acceptance. Barely such randomized trials, into a complex
+information structure on student preferences
+and priorities. Yet as all claimed, rules are data and knowing
+the rules are going to help us to fully exploit such randomized
+experiments from the data. The bulk of my talk today
+is going to focus on that. I am going to show, first how to fully exploit
+quasi-experimental variation, different acceptance
+Slack mechanisms. We're going to propose a
+method for research design. We are going to use 10 of those public schools
+as our testbed. You are going to study
+the charter schools. I'll tell other alternative
+school sectors. We're going to use the default except it's
+generated offers to compute the two-stage least
+squares estimates of the causal effect of attending charter at schools and attendance in other sectors. I'm also going to compare our method without anti-matters. Let's start and let's just say consider a school
+choice program that assigns students to schools via a defined acceptance mechanism. Let DIS denote where the student i gets an offer from
+school S or not. Now, in an applicant
+that cost to the deferred acceptance has
+to submit a preference list and also has priorities
+that may be determined by family income
+or neighborhood. Now, we're going to refer
+to applicants preferences, and priorities as
+his or her title. As you have seen in Ireland, peroxide notes that the
+offers are determined by the distribution of types and potentially by random numbers in different acceptance
+and potentially in other market
+design solutions. Yet, those types are
+far from being random. For example, families
+tend to look at into neighborhoods depending
+on family income, school quality, motivation, etc. Therefore, types are likely to be correlated with outcomes creating a source for
+omitted variable bias. The question boils
+down to how to eliminate that the
+omitted variable bias. Now, under deferred acceptance, if two students have
+the same types, basically the same preference
+lists and same priorities. If the priorities
+are thick, random, different acceptance
+use lotteries to break ties among such kids. Consequently, students
+with the same types are assigned schools in
+these choiceless with the same probability. That implies that the
+Amy Tan tiebreaker actually induce the steadfast a randomized control trial. In particular, for any
+random variable W_i, that is independent of
+the lottery numbers, the probability of being
+assigned school as conditional on top is
+independent of W_i. W_i may include
+potential outcomes and student characteristics like a sibling gun,
+free lunch status. This immediately gives us a straightforward
+research design. Conditioning on type, we
+can actually eliminate or omit variable bias
+encompasses by offers status. Yet this turns out to be impractical in the
+data for instead, because such conditioning create just two-minute cells with really few students within and usually with no variation
+in office within the cells. In particular, in
+Denver about 5,000 chapter applicants include more than 4,300 distinct types. Eliminating many of the schools and students from the study. Instead, we are
+going to condition on the propensity score. The propensity score
+is the probability of assignment to school
+S for a given type. The conditional
+independence resolve on the previous slide implies
+that conditional under propense score offers
+are going to be independent of any
+random variable that is independent
+of lottery numbers. In particular, offers
+are going to be independent of
+potential outcomes conditional on propensity score. That turns out to
+be useful because score is going to be
+much closer than type. It's also going to
+identify the full set of applicants for whom we have rounded my school
+assignment experiment. Now, let's see how this
+works in a simple example. In this example we have
+five students, 1, 2, 3, 4, 5 and three schools, a, b, c each with one seat, student preferences
+argument as follows. First choice is a, his second choice is b. Student 3 ranks only School a, Student 2 has priority
+at b and five his priority at c.
+One and two have the same preferences, but they are not the same type because they have
+different priorities. In fact, here, types are unique. Type conditioning
+creates five cells with one student in each eliminating potential
+research design. Now let's look at the
+different acceptance. By virtue of high priority, five is going to get
+c. Then 1, 2, 3, and four are going to be
+considered for assignment at a with no one advantage there. Consequently, different except this is going to assign School a to one of those
+four students with equal probability of 0.25. Conditioning on the
+propensity score, we are going to
+create one big cell with four students in
+it and offer radiation. Now, the default acceptance
+propensity score is actually a permutation
+distribution. It is a relative frequency of assignments generated by
+all possible lotteries. Daniel case, there are about 11,000 students, so one would need to run the deferred acceptance
+algorithm with all 11,000 factorial lotteries to compute the actual
+propensity score. This is a technically
+impossible task at the moment. However, their conventional
+law of last time was suggests that it is actually enough to sample
+lottery numbers. Yet since the paths are discrete, the
+empirical distribution, the distribution, it usually has at most as many points as
+the support dictator does. It does not offer further
+dimensional reduction. Therefore, one would need
+to rely on smoothing the propensity score in order to get further
+dimension reduction. Submission scores
+also a black box. They are also a kind
+of a black box. They don't say much
+about what's going on with the randomized
+trials in the data. If we had some formula
+for the score, we could have said
+something about what is going on with such experiments. Yet in general, proponents school does not have a
+close-form solution. Alternatively, we
+are going to develop an asymptotic approximation to the finite economics score. This score for a continue market is going to achieve
+a couple of things. First, it's going to approximate
+the propensity score as a function of a few
+easily computed statistics. It's going to be cause
+automatically so we're not going to
+need any smoothing. It's also going to
+reveal the nature of the stratified trial embedded
+in default acceptance. In particular, it's
+going to tell us which schools have random
+assignments and why. Now to this and we are going to first characterize the different acceptance
+wire admissions cut-offs. It has been done by others
+only in the literature, given a set of students and schools and their
+priorities and preferences. I'm first going to define a student's rank at
+school S. Eyes rank at school S is going
+to be the sum of his priority at school S
+plus his random number. Students are going to be
+ranked according to this tank. To lower this number, the higher the student
+is in the ranking. Priorities are going to take integer values and
+the random numbers are going to take values
+between zero and one. Therefore, the rank student
+ranks are going to be licks geographic in priorities,
+and random numbers. Now, that admissions
+cutoff score is going to be determined by the rank of the
+lowest student that gets an offer from
+the school under DA. Given those cutoffs instead of cutoffs that it's going to be easy to determine who
+gets VA for all that. In particular student
+I is going to be assigned school S, if I ranked school somewhere
+in his or her choice list. Plus his rank is better than the admissions
+cutoff at school S plus his rank is strictly worse than the
+admissions cutoff at any school, he prefers to S. I is going to be assigned if and only if this condition holds. Let's see what this means. Here is a bunch of
+students applying to school S each row
+represents a student. The first student
+has priority one and the random number 0.13
+his rank is 1.13. The second student has
+priority number 1, random number 0.99,
+and her rank is 199. Students are listed
+according to the rank here. Some students get offers. The student that gets the
+lowest ranks and that gets the offer determines
+the cutoff at that school. In particular, because
+M is given by 2.235, in this simple example. We are going to call it, we're going to refer
+the integer part of that too as the marginal
+priority and the decimal part, 0.35 as the lottery cutoff. Given that, now, we
+are going to partition the set of types of applicants
+to school S in some way. In particular,
+we're going to call those two students
+never seated students. Those students have
+priority of three, which is rushed onto. Even if they got the
+best and the number, they would not be offered
+a seat at that school. That's why we are going
+to call them never ceded. The top two students are the ones that we are
+going to call always seated that those students have Priority 1 which is strictly better than the
+marginal priority. Whenever they are not offered
+a more preferred school, they're going to get an
+offer from this school The remaining set of students
+are what we are going to call conditionally
+seated students. Conditionally students have
+priority debts equal to the module priority at that
+school and the assignment among those students is actually determined
+by the random number. Now, given this partition, the next construct we
+are going to use is what we call most informative
+disqualification. Most informative disqualification
+coloration MID tells us how the lottery number
+of distributions for applicants to S is truncated by qualification
+at more preferred schools. Consider the first line. B Delta s is the set of
+schools that tartrate students prefer to school S.
+In the first line, the priority of the
+type data student is worse than the cutoff, my margin priority of the more preferred schools
+for tartrate estimates. That for now no students
+apply to those schools, they are not going
+to get an offer from those schools that were
+older students are going to end up being considered for school S. By the time
+they apply to school as the random numbers
+can take any value between zero and one,
+indicating no truncation. Therefore MID is going
+to be equal to 0. In contrast, the types
+and the second row have priority that is sticky better than the module priority at some school day prefer to us. All of those students
+are going to get a better school and none of them are going to
+apply to school S. Therefore, the random numbers are going
+to be fully truncated. MID equal to 1 is going
+to indicate that. For other students, those students are going
+to apply to us and they're going to be considered for
+a seat at S only if they cannot clear the lottery cutoff at more preferred schools. Their MID these are going
+to be characterized by the most forgiving
+cutoff, at such schools. Given these constructs that
+our first theorem gives us a simple formula of the different acceptance for past the score in the
+continuum economy. MID is the cutoffs,
+lottery cutoffs, and the partition sets are
+population quantities, they are not random,
+they are going to be fixed in the continuum economy. Our second theorem shows
+that the sample analog of that score actually
+converges uniformly to the finite market score
+is microsites groves. This is what we are
+going to utilize next. In order to compute the score, first, we are going to use
+brute force simulations. We are going to do this. We are going to run
+the default acceptance by running it with one
+million lotteries, and we're going to compute the empirical assignment
+rate for each type. This by law of large
+numbers converges to the actual finite market score. Yet, we don't obtain much
+dimension reduction here. The simulated score
+identifies about 1,500 students that are subject to non-trivial
+charter assignment risk. That is the impropose
+that about 1,500 students have a
+propensity score between zero and one and there are more than 1,100
+distinct score values. Alternatively we're
+also going to use our Theorem 1 to
+estimate the score. We're going to do
+this in two ways. First, we are going to take the realized economy with the realized random
+numbers and assignments, we are going to compute the MIDs lottery cut-offs and we are going to sort
+students into private statuses. We're going to plug
+them into our formula. That's going to give us an
+estimate for the DA score. Second, we are going to use the empirical offer rates
+defined by this one. It turns out that
+the frequency is much closer to the final score and it's approximately unbiased. Now, given these we're going to use the Denver public schools as a test bed to show how we can utilize
+propensity scores. Now, the Denver
+public schools is an interesting laboratory for impact evaluation
+because first of all, it's majority are Hispanic. About 60 percent of the students are Hispanic origin and it has a large charter sector and other non-traditional sectors. Equally important, almost
+all of the schools are assigned through a unified,
+centralized assignment. Consequently, we observe that
+the DPS charter applicants look very much like the rest
+of the district population. Now in our benchmark model, we're going to study
+the impact of attending a charter school and to this end we're going to have an
+endogenous variable C_i, that indicates
+charter enrollment. Our instrument in
+a charter offer is going to indicate whether
+a student gets an offer from a charter school
+that he or she ranks and our key control is going to be any charter propensity score. That is the probability of being assigned to a charter school. Now, we are also going to be interested in student
+outcomes one year later like math and
+reading scores. We are going to populate our two-stage least
+square equations with the propensity
+score dummies. The DIS in particular
+is going to indicate score values and the coefficients Gamma and Alpha are going to be
+the score effects. In our study, we actually study charters at all
+grade levels K to 12 and this table records elementary and
+middle schools only. A yes in the first
+column says that the corresponding
+school is managed by a charter management
+organization. Column number 1 reports
+the number of students who rank the
+corresponding school somewhere in their choice lists. In particular, 324 students rank STRIVE Prep GVR somewhere
+in their choice list, and the school makes
+offers to 112 of them. The similarity score
+identifies that 119 of them have non-trivial risk
+of assignment at the school, that is their propensity score is strictly between
+zero and one. Alternative strategies that have been adopted in the
+literature before, one of them is what
+we are going to call the first choice strategy. I'm going to come back to that. In short, a first choice
+strategy focuses on the set of students who rank a charter school as
+their first choice. The last column actually reports the number of students who
+rank a charter school as their first choice and
+who are subject to non-trivial charter
+assignment at that school. In this case actually, we observe that no students
+who ranked this school as their first choice are
+subject to random assignment. For such strategies directly
+eliminate this school from a potential study and all those 119 students that are subject to some
+non-trivial risk. Now, let us take a closer look at those schools and then let us see
+what's happening. This table lists the
+STRIVE Prep schools and the first column shows the number of
+eligible applicants that rank these schools
+somewhere in the choices. The second column reports
+the number of capacities, and the third column reports
+the number of offers. Notice that the first
+four scores are actually making fewer offers than seats available
+at those schools. A naive definition of over-subscription based
+on the number of host and capacities would
+probably tend to eliminate those schools
+from any research design. But we have only seen that
+many students are subject to non-trivial
+charters assignment at those schools so
+what's going on here? Well, the Column 6 shows that no conditionally see these
+students are subject to random assignment
+at those four schools. The Column 8 shows that
+those who are subject to random assignment are
+all over the city types. That is, those students are
+assigned to those schools, not because they feel to qualify for an assignment
+at that school, but they failed to qualify for the school they prefer more. By the time they lose the lottery at a more
+preferred school, they come back to this schools
+and they are assigned. In contrast, the last school, Westwood actually all
+after randomization occurs among the set of
+conditionally, see the students, these are the students that have priority equal to the marginal priority and the assignment among those students
+is determined by random lottery
+at that school so the cutoff of that
+school is going to determine the admissions
+at that school. Now, given that, let's just take a quick look at
+the DPS students again. As we mentioned, it is
+majority that the first column reports the average
+characteristics of the whole DPS population. DPS students tend to
+be majority Hispanic, and the baseline scores are standardized to a mean zero standard deviation
+for the whole population. The third column reports the same averages for
+chatter applicants only. As apparent from here
+the baseline scores for charter applicants look very much like the rest
+of the population. Indicating a much less
+positive selection into charter lottery stand, for instance, the
+Boston charters. Now, given that this
+table reports two-stage least squares estimates of our benchmark model by using three different estimates
+of the propensity score. The first column
+uses the frequency, the second column
+uses the formula, and the third column use
+the simulated scores. The first stage indicates
+that a charter offer actually bumps the charter
+enrollment rate by 0.45. That number takes into account the population of
+students who are referred as always takers
+in the late framework. Those students constitute about 43 percent of
+the whole population. They do not get a charter
+offer in the first round, but somehow find a way to get into a charter
+school in later rounds. The two-stage least squares
+estimates actually show remarkably large gains format and these are similar to those deported for
+Boston charters. Like in earlier lottery
+based charter studies, we also find a positive but
+relatively smaller impact, the gains for reading. We also find large
+case for writing. Equally important though, for the purpose of our
+methodological agenda, check out the numbers
+on those three columns. The estimates are actually
+pretty close to each other. Indicating that a synthetic large market approximation is doing pretty well in
+eliminating the selection bias. The Denver Public
+Schools is actually an interesting mix
+of schools that are charter schools that
+are managed by CMOs. There are charter schools
+that run independently. There are traditional schools, there are other
+non-traditional schools such as innovation schools. Innovation schools,
+for instance, run under an innovation
+plan that waves some provisions of the relevant collective
+bargaining agreement. Our two-stage least
+squares estimates, estimate an average
+causal effect for a particular
+set of students, which we are going to refer as compliance within
+the late framework. Compliance are a set
+of students who enroll a charter school
+only when they get an offer from a charter
+school, but not otherwise. We cannot necessarily say
+who is a compliant or not, but we can estimate
+some outcomes for those students using methodology In fact, this table tells us what compliance would do when they get an offer and may mandate
+don't get an over. The top panel shows that the compliance
+who gets a charter over 95 percent of them
+end up at a CMO charter, and the remaining
+five percent ends up at a non-CMO charter. The lower panel shows that compliance that
+do not get an offer, only about 39 percent of them end up at the traditional
+public schools. Surprisingly, about 42 percent of them end up in
+innovation school. These observations
+actually motivate more algebraic model in order to isolate
+school sector effects. Doing so actually it's
+going to allow us to distinguish within
+charter sectors. It will also turn the non-charter
+counterfactual into one of mostly traditional
+public schools. To this end, they're
+going to employ a two-stage least squares with three endogenous variables, and three offer dummies. Each endogenous
+variable is going to indicate enrollment in a corresponding sector and we're going to focus
+on CMO charters, non-CMO charters and
+innovation sector, and its endogenous
+variable is going to indicate enrollment in
+a corresponding sector. The offer dummies are going to indicate getting an offer from a corresponding
+sector and we are going to saturate our two-stage least
+squares equations by proper test scores that are the probability of getting an offer from
+a particular sector. Given this model, this table
+reports multiple estimates. The left-hand side actually
+studies the single sectors. The first column focuses on the CMO schools and that particular step apply
+to similar charters, the second column studies applicants that they'd like
+to ninth similar charters, and the third column considers only innovation
+school applicants and the students who apply
+to new mission schools. Well, the first stages
+are all significant, and these two-stage
+least squares estimates show a remarkably large gain for the CMO schools as before. The CMO schools show
+statistically a significant, yet a negative impact. The innovation schools
+and the other hand, show marginally significant
+and negative impact. Recall that, for example, in Column 3, a non-innovation
+counterfactual includes all of the charter schools. Multi-sector model
+actually tries to isolate all those
+sectors independently. Randomly, estimate this
+model in the third column. Isolating those sector effects, the third column shows very large gains for
+the CMO charters. Almost non-existent gains for non-CMOs, and interestingly, the marginally significant
+negative impact turns into a significant positive
+impact after taking out the charter schools from the non-innovation
+counterfactual. The estimates are pretty similar when we use the
+joint consoles as well. You don't need to use
+a joint control spot. When we do it, we
+obtain similar results. We have only these demos, see the power of conditioning
+our propensity score. Now, next, let us try
+to compare this to the alternative
+strategies adopted by other people in the
+previous literature. One of them is what we're going to call the first
+choice strategy. The first choice strategy
+focus on the set of students who
+rank getting out of school as their first choice. In that specification, our take away is
+going to identify the charter school student i ranks along with his priority. The first choice instrument, the d of i is going to indicate qualification
+at the first choice. That's rather a
+student's rank is better then the admissions cutoff
+at that school or not. Now, given that the first
+strategy is going to saturate the two-stage least
+squares equations by the dummies that indicate
+the values for R_i. Obviously, this strategy
+discusses a lot of information since it does not consider charter schools that are ranked lower than
+the first choice. Alternatively, the qualification instrument
+considers this all of the charter schools that
+are ranked by a student. The R_i becomes the set of all charter schools that I ranks along with his
+priorities at that school. The qualification
+dummy indicates i's qualification at any
+charter he or she has ranked. The specification is similar. The next table actually reports the two-stage
+least squares estimates from those three
+different strategies. The first column is what
+we have seen before. This is any charter approach. The second color
+reports estimates from the first choice strategy, and the third one is the
+qualification strategy. The first row here reports qualifications from
+increasing our any charter dummy
+on alternatives. In particular, the first choice
+dummy is capable of explaining only about 73 percent of the offers from any charter. Also, the estimates show remarkably largest gains
+for first-year schools. Now, check out the
+set of a number of schools that are included
+in these studies. What are in the chart to offer can study toward
+the two schools, In first choice approach
+can study only 18 schools? Given this factor and obtaining a higher gain for the first-year strategy
+probably is not too surprising, because the first
+choice strategy focus on a specific set of schools. Probably, parents tend to
+rank highly string schools, higher in the choices. This result might
+be the fact that. But there's also a
+debate in the literature that focuses on the advantage of getting an offer
+for my first choice. We can actually address
+this with our methodology. We can use the same old
+second model to isolate the impact of attending a first choice charter versus
+other choice charters. Column 1 actually
+shows that there is a significant gain from attending a first
+choice charter in relative to attending
+other choice charters. We can actually take this
+one step further and try to isolate the effect of
+different charter models. That is what the second
+column is doing. The second column is isolating the effect of first
+choice charters, other choice
+charters, along with CMO charters and
+non-CMO charters. Those numbers, the first two
+numbers in the Column 2, indicate that most of
+the advantages from attending a first
+choice charter is collected if the first
+choice charter is a CMO. Although we have discussed only deferred
+acceptance mechanisms, the method we have developed
+applies to the variance of difference except
+as mechanisms easily, such as the random
+serial dictatorship and Boston's immediate
+acceptance mechanism. There's actually a
+growing literature that utilizes centralized
+assignment and we hope that there's going
+to be even more research that uses the data from
+centralized assignment, mainly because more and
+more school districts are moving to centralize
+the assignment. The results we
+show indicate that the methods we
+propose actually made a lot more to be learned
+from these data. Now, there's a lot to be done with a centralized
+assignment data, both from an economic theory
+point of view and apply. The particular projects that excites us and that
+are in progress include exploiting
+randomized trials in embedded in non-DA mechanisms
+like Top Trading Cycles. Also, we are interested in designing mechanisms
+for impact evaluation. We call that default
+acceptance relies on lotteries to break ties, CMO equal priority kids. How are we going to
+break those ties? Are we going to assign a single lottery number
+to each student? Or are we going to throw a
+new lottery at each school? Which lottery? A single lottery or
+a multiple lottery is better for research design? That's one question that
+we are interested in. Another question is actually do you exploit the full power of the score in evaluated
+models style research. One picture that I omitted
+actually shows that the significant size gains occur in charter schools, non-charter schools,
+traditional schools, pretty much all
+across the thing. 

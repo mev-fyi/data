@@ -1,0 +1,911 @@
+Matthew Jackson:
+Great, welcome back. Just to reiterate the slides you can find at this
+location on my webpage. You just have to
+type this directly, first on my webpage, and then this is the actual
+location of the slide. There's not a link, but
+you can type that directly and find them. Just to continue on, I wanted to spend a little
+bit more time on centrality and diffusion and
+then we'll come back to the diffusion more generally. We talked about different
+centrality measures. Daron talked about
+the [inaudible], which is a variation of the eigenvector
+centrality measure, and one thing we can
+do is begin to see if there are real differences or whether these things are helpful in predictive
+in some level. What I want to do is
+just talk a little bit about a quick use
+of these as seeing if they can inform
+us a little bit about a diffusion process. In particular, one
+thing is centrality, the position of a particular
+seed node in a process that you want to diffuse
+or cause contagion, that positioning can
+be very important in whether something
+takes off or not. When we talk about
+viral marketing, people are always
+interested in finding out who are the really influential
+people in their own stock. It's who the people with
+the high externalities in terms of those game
+theoretic complementarities who are the people that you
+would want to subsidize, for instance, to
+make something work. How does the centrality of
+these first formed correlate, and which centrality
+measures are predictive? I'll talk through
+a little briefly, a paper with Abhijit Banerjee, Arun Chandrasekhar,
+and Esther Duflo where we actually looked at
+Diffusion of Microfinance product in rural
+India to illustrate how you might look at
+some of these things. What we did was we looking at a set of villages in Karnataka, a microfinance
+synchronization went in, and what they did was
+they actually contacted people in villages to try and tell them about an
+available loan program. We mapped out networks
+and then tracked who they talked to and how
+that information dispersed. We surveyed the
+village before entry, and then we have network
+structure demographics, and then we have this
+diffusion process over time. Part of the reason
+for looking at this is that when you look at
+the participation rate, say in some program, you might get very different
+effects in different areas. In particular, in this case, they're getting near zero
+participation in some villages and almost 50 percent
+participation in other villages and you want to know what's
+responsible for that and whether network information
+can help us discern that. Word of mouth is essential
+in getting news out, and this can be important
+for policy implications. If it's just that you need to get better
+information flows, that's going to have
+different policy implications from whether you
+have to actually encourage people
+and other ways to get to uptake the product. I'm going to come
+back to that in more detail in a minute. Here we are, Karnataka, and what we did is we went
+into these different villages. This is a particular
+village mapped out, this one, we use a lot of different visualization
+programs for networks. This one is actually done
+in a variation of R. Let me blow this one up. Here, these clusters of
+nodes are households and they were asked a
+series of questions, so we designed a survey. The survey asked them, if you had to go borrow
+50 rupees for a day, roughly a dollar in his case, in this village is
+a day's income, who would you go to? They can answer another person, then we group these together
+on household levels, and we have a network. We have a network of
+borrowing rupees. This is a directed
+network as [inaudible], some people could
+point to somebody else and you wouldn't necessarily
+borrow and return. You have some
+directed information. We're actually going
+to treat these as reciprocal networks because we're going
+to be interested in information transmission, and so if people are
+exchanging money, that the idea would be
+you could also exchange information and that can
+flow in either direction. Then you've got a
+bunch of other things. You go to temple with who do you ask for advice and so forth. From any village, you've got a whole series of
+different interactions. We have 13 interactions in total who comes to you to
+borrow kerosene or rice, who do you go to in an
+emergency for medical help, and so you can
+aggregate these up and then you've got a
+network of the village. We'll build a 01 network where two households
+are connected if people are
+connected by any one of these particular
+interactions. Now, these interactions
+tend to layer on top of each other and so you end up with a
+typical household being connected to about 15 other
+households in the village. Now what we can do
+is we can examine how the centrality of
+these injection points, the first households that the bank talk to
+in a given village correlate with the
+eventual diffusion of the microfinance
+product in the village. They go in, it's hard to advertise these
+things in the village. A lot of the people
+are illiterate, they don't have cell
+phones and so forth, so you go in and you
+tell a few people and then hope the
+information spreads. The bank told their employee
+to go and identify people. What they did is they
+identified shopkeepers, self-help group
+leaders, teachers, and some political designates. These were the people that the bank employees
+were told to talk to and to spread information. What we're going to
+use for identification is the fact that
+in some villages, they might end up
+talking to somebody who's fairly peripheral, they might have low centrality, and in other villages
+they might hit somebody who is very well
+connected in a network. That might be something
+that we can then see whether that correlates with the ventral participation. There's variation in who they ended up talking to in terms
+of the network position. We can look first of all
+at degree centrality. For instance, we can look
+at the average degree, what we'll call these
+people leaders, the first people that they
+talk to in the village. These are the
+different villages, so they actually ended up entering 43 villages for
+each village we have, then the average degree of
+the people that they talk to first these injection
+points into the network, and then on the y-axis we have the eventual
+take-up of microfinance. Roughly between seven and
+44 percent was the range, and here you see degree
+centrality seems to do nothing. There's almost no correlation, in fact, it looks negative,
+it's insignificant, but there doesn't appear
+to be a relationship between the degree of the
+initial injection points and the eventual take-up. Not so good for
+degree centrality. As we talked about earlier, degree centrality is
+not a great measure, maybe eigenvector centrality is a better measure of
+what's going on. You can go through
+eigenvector centrality does correlate positively, its predictive, you get
+a positive slope now. If you were looking to
+eigenvector centrality, you get a better prediction, at least a positive
+significant correlation, between the centrality
+of those points and the eventual take-up. It does appear that at least
+there's a correlation here. In particular, you
+can go through different centralities:
+eigenvector centrality, correlates, degree
+insignificance. Here, what I've done is also correct for a bunch
+of covariates and then degrees comes out
+positive but insignificant. Here there's the number of
+households in the village, there's self-help group
+participation in the village. Savings measure
+whether the village has high savings or no, and then a cast variable. But basically you can go
+through your favorite, so here's the bonus
+that centrality that Daron was
+talking about between this eigenvector seems to
+be the only centrality in this particular
+instance that matters. You get some variation
+in the explanation. It's doing better at explaining what's going on, but
+not dramatically. You're at about a third of the variation across these
+villages as being explained. One thing that you can do that's very easy with networks, this is going to be a lead into what we're
+going to do later, is you can build very
+simple models of the actual process
+that you're studying and instead of taking
+off the shelf measures, you can use those as
+measures directly. If we want to measure diffusion, why don't we define diffusion
+centrality directly? Define centrality by the process through which we think
+that things are working. All of these are
+ad hoc measures, and maybe it's not
+surprising that none of them is doing
+precisely well in this particular instance
+because none of them were designed for
+microfinance diffusion, they're just things
+off the shelf. What we can do is let's define something we'll call
+diffusion centrality. The diffusion
+centrality of a node, I will put in two different
+parameters for it. What we can ask is
+how many nodes end up informed if some node is
+initially informed I, and then we just run a
+simple diffusion process. What we'll do is each
+node is going to tell each one of its friends in a given period
+with probability p. Maybe if we make p equals 0.10, then in any given period, I tell my friends
+with probability 0.1 about microfinance and then we'll just run this
+for some number of periods, we'll call it t. Just to illustrate this, we start with some node and then diffusion centrality we set p to 0.5 and t equals 4. Now we can go ahead
+and see what happens. If we ran a simulation here, after one period
+with a coin flip they happen to tell one
+of their neighbors, after two periods those
+people have told some people, this person happens to talk to his other friend and so forth. You could go through and
+you just simulate this for some number of periods, and now I'm doing it exactly
+in some simple process that we think might represent the way information would
+spread in a network. This gives us a definition, after four periods this
+node informs 13 others and in this particular
+simulation. That gives us a measure, now, of how important we think
+this note is with respect to a very specific model of
+how information spreads. We can do that for another node and do the same simulation, we get six for that node. It looks like the first
+node was twice as good as the second one in
+terms of people that might eventually
+hear about this. Now I'm going to tie this
+back to something that Daron was talking about,
+diffusion centrality. One way to estimate this would be to actually just multiply the adjacency matrix
+times this probability p that I'm going to
+talk to a neighbor and raised to the first power. This is just in my row, I'm going to get a
+p on every entry so that tells you the
+expected number of times I'm going to talk to
+each one of my friends and it's going to be
+zero for other people. If you raise this to
+the second power, then each one of them
+talks to people. You end up with how many
+people I would reach after two steps and raising
+it to the third power. How many times I reach
+three steps and so forth. What you end up with is if
+you sum this for t periods, then you end up with something which just tells you what's
+the expected number of times different people
+are going to hear from me after t periods of interaction. That's exactly what
+this object is. Now, if you take
+this t to infinity, then this is exactly the bonus, its centrality that Daron was talking about if p is low enough for this
+thing to converge. If it converges and you
+take it to infinity, then you get bonus centrality. But if you do it for
+shorter periods of time, you're going to get
+some other answer and maybe that other answer is a better measure of
+importance in these networks. That's just a basic model, and what we did here is now
+put in diffusion centrality. In particular, we've got
+two parameters to fit, both the p and the t. What we did was we actually
+fit the p from the data so you can just ask which one of these
+things best matches the actual outcomes in the data and we pick t just to be the length of time
+that the villages were actually exposed to microfinance
+in terms of trimesters. How long did the
+process operate? It actually operated for different lengths and
+different villages. Then when you run that, now you get a much
+higher R-squared, not surprisingly because
+it's a richer measure, but what it does is
+it says we could use simple models to begin to
+operate on the network in ways that would
+allow us to identify what we think of as the
+right notion of centrality and then go ahead and work
+with that in terms of this. Now, obviously, we can have lots of issues
+of causation and so forth, we just have a correlation here, but now we have
+something which is at least more predictive and substantially more in
+terms of the variation in the data that
+it's explaining. We've gone through
+these various points and we've got the networks. Seeing that centrality measures
+are actually correlating in important ways with
+eventual participation, that's something that
+can have implications. Now, we're going to talk
+a little more about this diffusion and more on
+issues of identification, endogeneity of networks,
+and network formation. Let me start by
+just stepping back and come back to
+this at the end. Questions of diffusion, and a lot of these questions
+have peer influence and so forth have a very rich
+history in the literature. This is actually from
+Griliches 1957 paper, which goes back to an earlier
+study from the 1940's, this was the diffusion of
+hybrid corn in the US. Hybrid corn was
+introduced in terms of being marketed in different
+states at different times, but basically it takes
+an adoption curve. These are the years
+and then there's the eventual fraction
+that was adopted. One of the things
+that people find as an important characteristic
+of diffusion curves is they have actually very
+specific time stamps to them. When we get into these models, will be able to recreate these time stamps through very simple model like the
+one we just looked at. They start out fairly slowly, then you get with what's known
+as the hockey stick part. The exponential
+curve moves upward and then things that
+potentially have to asymptote because you're going
+to hit a 100 percent so things go up, they slow down. In this case, it is
+dependent on the state and Griliches goes
+through a whole series of hypotheses as to why there
+is differences across states and can you explain the
+particular shapes of these? But simple diffusion
+models can answer a lot about whether a product is efficiently used in
+different contexts. When we start thinking
+about diffusion of a product or technology, there's going to be
+a whole series of different things that
+might affect things. These complementarities
+that the Roman was talking about and choices. We also have just basic
+awareness issues. I might not be aware of a new
+product and the fact that my friend has it can help
+make me aware of it. Learning about value. There's actually interactions in terms of learning effects. There's all fad and
+fashion imitation issues and then there's
+these other issues that are going to
+cause problems for us in terms of the
+characteristics that we have that are similar across
+individuals which might correlate with the actual
+decisions we're making. All of those are
+going to be at work, and one thing we
+might want to do is begin to dissect the
+diffusion process. If we want to look at some
+of these interactions, we might want to go
+inside the fee that Daron was looking at in terms of
+what these interactions are. There's an interaction between the decision of one individual and the other and separating
+those out can be important. It can be important because different forms of
+these interactions have different
+policy implications. If this is something which is just purely making
+somebody aware of something, then it means all we have to do is get the information out. If it's something where there's a real learning effect
+then it might be that we need richer
+information to get out. If it's something where there's true
+complementarities than subsidizing particular
+individuals to take things up, can be important in
+getting things to work. All of those are going
+to be different policies and one policy might
+fail miserably if it's the information issue as opposed to a
+complementarity issue. Understanding which of these
+things work is important, so we not only
+want to understand what the network effects are, but dissect them a little bit. In terms of identification, I put up a slide
+here which talks through some of the
+issues that are present. There's a fairly long list and how to deal
+with these things. One is the field or
+natural experiments so pseudo random injections
+in the Indian data. The assignment of roommates that was talked about earlier, in terms of assigning people in different situations where
+you can actually have some control over
+the interactions. IV approaches, the exploiting the network
+position as Daron mentioned, can have some difficulty. This one has a difficulty with endogenous networks
+and unobservables, and making sure that
+you've actually got the right thing measured and that the treatment
+of one individual isn't correlated
+with characteristics of another individual. That's something which
+is fairly difficult. One thing that I think, as Daron pointed out, this is a really
+promising avenue in the sense that if you can find something like
+these royal roads, which you think is
+an instrument which somehow could cause
+the network in ways that are plausibly exogenous to other aspects of the
+behaviors, that's wonderful. I put rare here because it's hard to think
+of a lot of situations where you're going to
+have that wonderful an IV variable that you think you might be able to trust
+to construct a network. That's somewhat difficult. What I wanted to
+spend the time in this lecture talking
+about mostly, is other approaches where you're really dealing
+with observational data. What we're going to try and do is go through some
+structural modeling, and use the structural
+modeling to try and understand what
+implications we should be getting from different
+interactions, and use those to try and
+separate things out. Of course, the real difficulty, as we all know from
+these approaches, is that it's going
+to be model-based, and we're going to be
+stuck with some of the structural
+modeling assumptions but they can help
+us sort things out. Then I'm going to talk at
+the end explicitly about bringing the network formation
+modeling in to the picture where we explicitly use that as a model in conjunction with
+the model of behavior. I'm going to do
+this in two pieces. Here, what we're going to do is we're going to use
+networks in a richer way than just math being
+a peer effects. We'll model the diffusion
+to identify the, behavior and track information
+diffusion over time. I'll talk about the
+identification in just a second. Let's go back to this Indian
+data that we looked at in terms of the diffusion, and talk more explicitly about what might have been
+going on in that setting. We have basic
+information diffusion. Just awareness. Does a loan exists? Is it possible for
+me to get the loan? Secondly, we've got all other
+peer influence endorsement or a game on network effects. Which are, if my
+friend gets a loan, then maybe I can
+borrow from them. Maybe I can free ride on them, and I don't need to
+take out a loan. Or maybe if they get a loan, I can see that it's improving their life and I want
+to get a loan now. Or maybe I just like to
+be similar to my friends and follow some of
+their behaviors. You can imagine a whole
+series of different effects, which would represent
+themselves in terms of either strategic
+substitutes or complements. Then there's this other part which is just purely
+being aware of things. What I wanna do is
+just talk about at least making a cut
+here where we can separate the first
+from the second part. We go back to these networks and now we want to
+do this analysis. Let's start with just a simple, we'll just do a
+straw man analysis. The straw man analysis
+is we're gonna look at a particular person or household I's choice of whether or not to
+participate in this loan. They're are limited to
+one loan per household is women between the
+ages of 18 and 57. There's some restrictions on it. They're allowed to get a
+one loan per household. We will do things at
+the household level. We'll look at what's
+the probability that I chooses to participate. In particular, let's look at just a simple logistic
+regression of the form, we did the log odds
+ratio is proportional to some characteristics
+of the household, and also on the
+friends participation. If this is positive, then we've got some
+strategic compliments, if it's negative we got
+some strategic substitutes. Here I'm not being careful about the some of the
+endogeneity issues that Daron was talking about. I just want to do this to
+get a first cut at this. We go ahead and what do we find? You get a 2.5 on
+this coefficient, and it's highly significant. It looks like there's a
+strong complementarity between people's decisions
+to take out loans. It's significant at the
+99 whatever percent you get in this case. What does this coefficient
+actually translate into? If you change the
+fraction of my friends taking out loans from 0-1, that increases my odds
+ratio by a factor of 12. If you'd take it from basically one
+standard deviation in the data from 0.1-0.3, it's about a 65 percent
+increase in my odds ratio. This is a very
+substantial effect. It looks like there's
+really strong interactions in terms of households
+decisions to take out loans. Now the question is we want to dissect this a little bit, and cut into it to try and see how much of
+this is information and how much of it
+is other things. What I want to do here
+is now talk about importing that model we just
+talked about of diffusion, into this setting
+and then lowering it with the decision and
+trying to redo this, but doing it conditional
+on people's information. Then we'll be able
+to separate out at least whether
+people are informed, and then conditional
+on being informed how much do their
+neighbors matter? Because one reason that I could be seeing
+a strong effect, is that I'm just much
+more likely to know about this product if a lot
+of my friends are using it, and I'm less likely
+to know about it if they're not using it. We know these set of
+initially formed nodes, these nodes repeatedly
+pass information. Basically, once
+they're informed, then we'll allow them
+to make a decision to take up microfinance or not. Let's enrich the
+behaviors slightly, from what we had before. The diffusion model we were
+looking at before just had one parameter of
+passing probability, which is I have some probability of telling my friends
+about a product. Now what we're
+going to do is have two different numbers, and we'll have one number
+if I did not participate, so q^N is what's the
+probability I tell my neighbors if I didn't participate. q^P is what's the probability
+I tell my neighbors if I did participate. One idea would be
+maybe this is higher if I'm a participant, I'm much more likely to be talking about this
+new loan program. If I decided not to
+participate myself, I'm less excited about it, I'm less likely to
+tell other people. We'll run a simple
+model like this and we'll just do
+the same model. We know who the first informed individuals
+in the village were. They go in, they tell
+these individuals, and now we have these
+two probabilities. This person, for instance, decides to participate
+in the program, this person also decides not to. Then we can go ahead and
+run a diffusion process. What's going to happen is now if the q^N is lower
+than the q^P, this person is going to tend
+to tell more of its friends. More of these people
+end up informed and now they make decisions. But now we can rerun the logistic regression
+we just did, but now we'll do a conditional. These individuals are going
+to make their decision. These individuals all have a neighbor who's participating, this individual has a neighbor
+who's not participating, so they might make different
+decisions based on that, but now we're doing this conditional on them
+being informed. We iterate, some of them
+decide to participate, some don't, and then we
+rerun this and so forth. We can do this all
+by simulation. We just simulate this
+and then that gives us an eventual pattern of exactly who ends up participating,
+who doesn't. Then conditional
+on being informed, then we redo this same analysis but only for people once
+they become informed, then we look at the
+characteristics, we look at the fraction
+of their friends around who are informed already
+at that point in time, and then they make their
+decision based on that. That's the procedure. Now we can go ahead
+and we can estimate these just by simulated
+method of moments. We simulate the model, the model then gives us
+different predictions of who's going to be informed
+at which points in time and how they're going to
+make their decisions, and then we'll just
+choose these parameters to best match the actual data. We'll pick a series
+of moments in a data, look at the simulations, and match the parameters. Is it clear what
+the technique is? Here, for instance,
+if we go through, we simulate this, if
+we said q^N to 0.15, q^P equal to 3, and
+peer effect of 0.5, then we would end up
+with certain patterns. If we ended up with
+other parameters, if we make q^P much higher
+and q^N much lower, then things are going
+to diffuse more from the initial participating note and less from the other one. Let me emphasize one thing of where the network
+is mattering here. It's mattering in a
+different way than it did in what Daron
+was talking about. We have two identification that are coming from networks. One is just who
+my neighbors are, and that allows me to directly estimate in these influences, although with all problems, and then we have a
+second one which is what's the overall
+network structure? What we're doing
+here is we're using that overall network
+structure to actually keep track of
+the diffusion process. What's going to happen is
+people who are very far away from the initially
+informed nodes are going to have much
+lower probabilities of ever hearing about stuff and people that are much
+closer are going to have higher probabilities
+of hearing about it. Using that variation allows us to actually map out the
+model of diffusion. That's what's giving
+us the q^Ns and q^Ps, is looking at people at
+different distances. We know people close
+by should end up with high probability hearing
+and people that are much further away might have a
+lower probability of hearing. Depending on what the actual drop-off looks like as a
+function of network distance, that'll help us identify
+information transmission. Then once we can
+condition on that, then we can go back, redo the peer analysis, and using that
+peer analysis now, then we can get an estimate of what was the effect net of becoming informed of the peer on a given person's decision. That's the basic idea. When you go through
+and you do that, what do you end up with? You end up with q^N being
+about 0.05, q^P 0.55. Now the peer effect appears to be actually slightly
+negative and insignificant, and you get a significant
+difference between this q^N and q^P. If you take the
+model at face value, what the model is
+suggesting is that the reason that you're much
+more likely to take up if you have lots of
+friends are is because they're much more
+likely to talk about it than people who
+didn't participate. Once you make that correction, then the peer effect, the peer interaction here, the coefficient pretty
+much drops to zero and it looks insignificant. At least in these data, you get something where
+it's the awareness and not the actual
+peer interaction, which appears to be
+the driving force. This is subject to the issues
+of the structural model, but at least this is one
+interpretation of it. You're getting a big difference between what you would
+get if you didn't account for the actual
+explicit diffusion process and separate out where this
+complementarity is coming from. The complementarity
+seems to be driven by this q^P factor as the
+real driving force here. Now, what this is suggesting, I think you get these
+effects from it, you can then do all
+counterfactuals the same way that Daron
+was talking about doing counterfactuals
+on what would happen if you did a particular
+policy in one of their cities and see what the impact
+would be in other cities. Here you can do the same thing. What happens in terms of how important are non-participants
+in passing information? What would happen if you
+encouraged more people or if you spread information
+more widely to begin with? What would be the
+changes in take-up rate? You can use these models fairly
+easily to do simulations. One thing I want
+to emphasize here, just given our limited
+time and so forth, is that these models
+are actually very simple to build and to simulate. Doing a model of
+diffusion on a network is a fairly simple
+object to work with. The identification,
+if you've got data which is reasonably rich
+in the network stuff, you can get a lot of
+identification out of just by looking at who's in which positions in
+the network and how their behaviors are
+changing by position. There's some [inaudible]
+that we start to worry about in
+terms of position, and that's going to be another theme that we'll come back to. But modulo that, these things can still help us dissect a lot of
+what's going on. One thing just to point back, if you take the same model that we were talking about and then you simulate it with
+different networks, so you could talk about networks where the average
+degree is three, networks with the average
+degree is 6, 9, and so forth, and you look at the
+take-up over time, you get curves that look
+remarkably similar to the things that Griliches
+was uncovering. These simple network models
+actually can recreate the timestamps of these
+things fairly simply. The reason that you
+get this take-up hockey stick exponential
+acceleration is fairly simple. You've got a few nodes
+initially informed. Once they start
+telling neighbors, then you've got
+exponential growth just in terms of this
+process going out in a tree-like fashion that we
+saw in the first lecture, and then eventually it
+saturates the people who have made their decisions and so forth and
+things taper off. You can get these
+kinds of pictures very easily from these models and their typical timestamp
+of this diffusion model. We've talked a little bit about the structural
+modeling in one part. I want to come back
+to something that both Daron and I have
+mentioned a number of times, modeling network formation and how that can be
+incorporated into this. Network formation. What are the challenges driving
+the current literature? Well, multiplicity is
+something that we're used to dealing
+in structural IO, we have all kinds of models that have multiple equilibria. Anytime you're putting in
+strategic complementarities, you're going to tend to
+have lots of equilibria. That's an issue which
+is a strong one here, as Daron mentioned, sometimes
+you can assume it away. Other times you get a control on it by some
+lattice arguments. You can talk about bounding
+max and mini equilibria. There's a whole
+literature on here. I'm not going to go into that just because I think a lot of the insights you
+already have from the IO literature can
+be imported here. There's not something
+that's dramatically new in terms of the network
+issues on multiplicity. What is new is integrating the formation process
+here with behavior. I'm going to talk
+about two things here. One is, how do we integrate
+formation with behavior? Then secondly, how do we
+deal with link dependencies? I'll end with the
+link dependencies. Always lurking, we have these
+correlated unobservables and people's behaviors correlate with the network position
+because of homophily, and so we want to deal
+with that directly. What I want to do is just
+take you through an example. This is an example
+from Goldsmith-Pinkham and Imbens paper from last year. It's one that I think a bunch of us commented on in this room. It's very interesting paper. Let me just take you through
+the basic logic of it. Because I think what's
+important to take from this is the logic more
+than the specifics. But the structure
+is simple enough that it illustrates
+the point very easily. What have we got? We've got some Y_i here that some behavior that
+we're interested in, in their case it was GPA. They were using Add Health data. The same friendship networks
+we looked at earlier. You've got your own
+characteristics. You've got some
+behavior of the peers, some characteristics
+of the peers. Here, let me put in here
+as they did explicitly, we'll keep track of something
+that we didn't observe. There's some characteristic which is affecting
+this person's behavior that we don't observe. The difficulty in
+this estimation is it's not only entering in terms of this person's error, but since this affects
+this person's behavior, that means that other
+people's errors are also affecting their behaviors, which in turn affect
+your behavior. This means that now
+we've got correlations. This is just an explicit
+way of pointing out the correlations in
+the error terms. These are unobserved and
+we want to deal with them. What's the nice
+thing that they do? Let's suppose that we explicitly measure model homophily
+and network formation. What we're going to do is
+we're going to say people get utility from being friends. In particular, let's
+let the utility of I from a friendship of j
+depend on several things. One is just some, we're very social
+animals or whatever. Then we've got an effect on the differences in their
+observed characteristics. If a_1 is positive, then you like to have people that are far apart from you. If a_1 is negative, then what you'd like to
+do is you'd like to form relationships with people who are very similar
+to yourself. You'd like this to be minimized, you'd like it to be zero. A_2, similar things in terms of the unobserved
+characteristics. We've got this utility and you can put in a bunch
+of other stuff here. In particular, the
+kind of things that they actually throw in there, you can put in past
+network relationships. Maybe I'm more likely to want to keep relationships
+I already have. There's some inertia value, past friends in common. Maybe I like to be
+friends with people who are friends with my
+friends and so forth. You can throw in a bunch
+of other things into this equation if you want or whatever you like in
+terms of the structure. What's the basic idea? The basic idea is
+we're going to try and estimate these
+unobserved characteristics directly from the
+network itself. Then use those to go back
+into the original equation and put those in
+and then figure out what we might not have observed and how that would
+affect the outcome. Is the structure clear? What we're going to
+do here is we've got these two equations. We're going to say that links or logistic in U_i
+of j and U_j of i. In particular, what
+we're going to assume is that the probability that i and j linked
+to each other is proportional to the product of a logistic function
+of these two things. High utilities for both
+people have each other, make it much more likely
+that they're going to link. High utility of one
+makes it more likely, but it's a product
+of the two utilities that it's going to matter. What they're going to do is
+then estimate the system. You can do this by
+Bayesian methods, it's the way they do it. You could do it by MLE, whatever method
+you happen to like to do your estimation. What we're going to do
+is we're going to infer the unobserved Z's
+and by doing that, then we can begin to
+actually estimate what this parameter is. That can help us correct errors that we might have had in these other parameters by now correctly including
+this in the equation. That's the idea
+of the structure. Now, let me give you the idea of where does the
+identification come from? The identification comes from
+the following observation. If i and j are connected, if you see two people
+who are connected and they actually have
+very different X_is, then it's more likely
+that they have to be similar on the Z_is. Somehow if we're connected and we look different
+on the observables, it's probably that our
+unobservables must be similar, otherwise we wouldn't
+have been friends. If you see people that aren't
+linked with similar X_is, then they're more likely to be different on the unobserved
+characteristics. What we can do is begin to infer whether people are similar or different on the
+unobserved characteristics by whether they're friends or not on the observed
+characteristics. Using that altogether, when you estimate both
+of these together, now you can well identify what this before it's going to be. Now, the trick in doing this is there's going to have
+to be assumptions about the particular
+structure of these. For instance, they do it 01, we're either both
+the ones on Z_i, both zeros or ones a
+zero and ones a one. By doing that, this thing is identified up to a sign
+change on these things. But then the sign change carries through the whole thing and so you can
+actually undo that. There's either similar
+or different basically. Now, depending on the
+particular form you might fit, you might have a harder
+time identifying it or not. But the idea here is
+now you go through, you infer these
+unobservable Z's, and you can begin to
+correct for that. You're observing it directly by modeling the network
+formation process, taking a homophily model of network formation
+together with your interaction equation and then estimating
+those at the same time. What's the lesson
+from this approach? Accounting for link formation can help infer unobservables. It can help correct estimates of strategic interaction with
+friends and acquaintances. Obviously, this isn't a
+panacea because we still have the other endogeneity issues
+that their own touched on, so it's dealing with
+one piece of it and it depends on how
+rich our model is of the interaction and the
+underlying homophily, the better that model is, the better you're going
+to be able to make inferences about what must be going on behind the
+scenes and otherwise, you might not get much out. Interestingly, when
+they go through this exercise with their data, they end up finding that this doesn't make much
+of a difference. They find interestingly,
+there do appear to be some strong complementarities in the homophily of
+forming new links so they get that people
+really care about being similar on these unobserved
+characteristics. But then the unobserved
+characteristics don't seem to matter much in terms of influencing the GPA and the observed
+characteristics in the actual add health data
+seem to be rich enough to not have been affected much by introducing this
+in their particular data. Now that begs the question, there is a power of
+a test here which you begin to have
+to worry about. The power of the test is only as rich as the model of homophily. If I've got a really
+poor model of homophily, it might be that people
+are connecting in ways that I'm not picking up and therefore I'm not
+getting a good estimate of what the behavior looks like. Let me go on with
+one other point which I think is
+really important in terms of the network
+formation literature. This is an extra layer
+of complication on things but I think
+it's probably one of the more interesting ones
+in the network literature. Link formation is
+correlated beyond the characteristics
+of individuals and what do I mean by that? The idea is if you think
+about the people you know, some of the people you know, you actually met
+through friends, you actually meet them
+through the network and that means that there's
+going to be a correlation not only in characteristics
+that are coming up, but actually in the
+structure of the network today can influence
+the structure of the network tomorrow, so who you have access to and who you might become friends with is actually
+already influenced by your current network. The difficulty with that is now it means that link formation, however complicated it is in terms of characteristics
+and so forth, is no longer independent
+across individuals. We can account for all
+the characteristics we want in the world, but the fact that
+I'm friends with their own means that I've
+met a bunch of people through their own that I
+wouldn't have met otherwise and my friendships with them are dependent on that
+relationship and therefore, I can't treat any of
+those relationships as being independent
+of this relationship. Now, what's the
+problem with that? Actually, there's
+a lot of theories as to why this might occur. One is the one we
+just mentioned, it's a meeting process and we're likely to meet
+people through people I know. Another one is that there's actually reasons
+for having closure, so closure is a term that James Coleman talked
+about a lot in important in 1988 paper. Closure being the fact that two of my
+friends are friends with each other can
+allow them to sanction me and to keep track of me, and keep me in line
+through incentives. There's all values
+actually to having closure in terms of local networks. There's theories
+in sociology about pressure and competition
+among groups and the tendency to try and force closure
+within a group. Just to illustrate this, let's take a look at what's known as
+clustering coefficients. This is something which is also quite ubiquitous in the
+networks literature. When we look at a
+given individual, one who's friends with
+both two and three, we can ask, what's the
+chance that two and three are friends with each other? There's a lot that's made in the literature about the fact that this tends to
+be fairly high, so when you look
+across networks, there's an old study now that I certainly wouldn't get by any IRBs of looking at
+friendships among prison inmates. This is from 1960. Here you see that this
+closure rate is 0.31 whereas when you look at the
+typical link probability in the network, it's about 0.01. Here it's about 30 times higher that if I have two friends
+that they're going to be friends with each
+other than just picking any two people in the network and asking if they're
+friends with each other. You'll look at these
+similar things and we look at these
+co-authorship networks, then the probability
+that random people are connected to each other
+pretty much goes to zero and yet you still see
+high probabilities and that's partly because
+people working in teams now and so there's going to be interactions and they're likely to be working with each other. If you go back to the
+Florentine marriage and business dealings, there the clustering is about 0.46 versus 0.29
+in that network. What you tend to see is you do see correlations
+in these things, the correlations
+are substantial. These are uncorrected for all observable characteristics
+but even when you go through what are known as
+stochastic block models and you do corrections
+for the characteristics, you still find a lot of
+residual correlation more so than it should be
+there at random so it suggests that these
+relationships are correlated and therefore, if we
+want to deal with network formation models, we have to deal with
+that correlation. We can't talk about
+probabilities at the link level, and this is the main challenge. Now, we've got a difficulty. Once we make link IJ
+correlated with JK and JK with KL, and so forth. Now, the whole set of links in the network become
+a correlated object, so they're all correlated and now one way to view this is instead of having
+probabilities over links, we end up with probabilities
+over a network structure. The difficulty is that
+we can't even enumerate the probabilities of
+different networks coming up because there's
+too many networks and we can't do these. Your doing a
+Bayesian calculation or a likelihood calculation, requires looking what's
+the probability of this network relative to
+some alternative network that we didn't see and that calculation
+becomes impossible because we have
+exponentially many networks to do and we just can't do that. How do people deal with this in terms of models of
+network formation? This brings me full
+circle back to the first paper I
+wrote with Asher. We can go back and
+one possibility is you just start being
+very specific about the network formation models. You write down utilities
+for individuals. You write down exactly
+what you think's going on. To some extent with
+very simple models, you can actually make equilibrium predictions
+about networks. What's the difficulty
+with that multiplicity? You end up with
+lots of networks. It's very difficult to do
+this at attractable level. There's a whole
+series of papers that have followed in this vein. There's papers that are
+random network models where you grow these over time. Some of those are
+reasonably flexible and you can actually
+take to data. But they're not general models that you can deal with and take to any given
+network structure. What happened in
+the literature was the workhorse model that
+just you can think of as the regression equivalent
+in network world is what's known as exponential
+random graph models. Those grew out of papers by
+Frank and Strauss originally and then were imported into
+sociology by Wasserman and Pattison and Snjiders
+and Handcock and so forth. What they started doing
+was using MCMC techniques. I want to talk about the
+probability of a given network. What I do is I specify that
+probability however I want. In this case in it's
+an exponential form. Then to get an
+estimate of how likely this network is relative
+to other networks, I go ahead and I specify, I just do a random sampling
+of possible networks via some MCMC technique
+or other technique where I walk through
+and network space, pick a few networks and
+say under my model, how likely would these
+alternatives be? Now, I can pick
+parameters to maximize the likelihood of
+the network I saw compared to the
+networks I didn't see. I want to say the
+parameters look good. If the network I saw
+is really likely and then networks I
+didn't see were unlikely, and I just have to pick
+a bunch of networks through some MCMC techniques. Long story short, there's really serious
+estimation problems with that. There's actually some
+really nice papers coming out of the
+statistics literature in the last few years that
+have basically shown that this problem is
+really impossible. The only way you can
+actually walk the space and get a consistent
+estimator is if you walk at exponentially long or you have approximately
+independent links. If we had approximately
+independent links, we wouldn't be in this
+story to begin with. We would have been
+where we started. Basically, there's a
+real serious problem in the estimation techniques and these things don't work. There's different
+ways out of this. One way is using
+stochastic block models. Bryan Graham's been working
+in this a little bit. There, what you do is actually you recreate this
+high clustering, not by having a
+lot of dependence, but by having really specific
+local characteristics. If you have enough
+characteristics, that part of the
+reason you say that I'm friends with Daron and I'm up friends
+with Bob as well, is because maybe we all have exactly the same characteristics and we really finally define
+those characteristics. You can generate a lot
+of local structure by just having a really
+fine characteristic grid. Another way you out of this, I've been doing with
+Arun Chandrasekhar, which is instead of working, we can still have correlation
+patterns in our structure, but not at the whole
+networks level. The way we've worked with that, as you work at subgraphs and you start talking
+about probabilities of various subgraphs appearing. You work with probability
+models directly on subgraphs. Doing that you can
+actually show that you get consistent and easy
+estimation procedures by instead of working at
+the whole graph level, you work at a local level and then aggregate upwards and under some appropriate
+sparsity conditions, you can get nice
+estimation outcome. We don't have time to go
+in through a lot of these. But what I wanted to
+point out is that effectively the networks are going to tend to be endogenous. If we go back to the
+Goldsmith-Pinkham and Imbens' approach, we've got endogenous
+networks accounting for that endogeneity explicitly can help us out in
+trying to understand what's driving the behavior. If we can understand why
+these people are friends, we can do better at
+understanding what they might be doing in
+reaction to each other. We need models of network
+formation and right now, the literature is basically
+producing those things, but it's grappling with
+a difficult problem of link dependencies that
+are really strongly prevalent in a lot of instances and cause serious calculation and practical
+estimation problems. But there are ways of
+dealing with these things. Those are things
+I think that are the current research frontier. Actually in terms of
+broader messages here, simple network models that we saw like this
+diffusion model, they're easy to set up. They can help us estimate
+and dissect effects. The network structures
+do have tractable and intuitive ways to quantify, despite their complexity in terms of the
+implications for behavior, we are dealing with this way of simplifying
+the complexity. There's different ways we
+can represent these networks and that helps us
+then understand some of what's going on and whether or not we're
+focused in on homophily, or focused in on
+some other aspect, depends on the
+particular application. I talked through identification. Let me give you a
+bucket list of things that I think are
+our current topics that are really
+interesting going on in the networks and
+economics literature. Now one thing that's amazingly set by the wayside
+for a long time, is international trade and
+international relations; these things really are
+networks at the heart of them. If I'm trading with one country and have agreements with them, it makes a big difference
+in what agreements I have with other countries. In terms of trade and
+international relations, is something that's important. There's a few papers there, but not nearly as
+many as we need. Financial interconnections, I think Daron is going to talk a little bit about
+in the fourth. Talking more generally
+about implications of shocks in one part of an
+economy spreading in another. Development, it's been really encouraging to see the explosion of network research there. I think that's because
+out of all the contexts, it's the most evident one where it's pretty
+clear that people have communication patterns
+that influence all of their decisions and
+a lot of their behaviors. Understanding, learning and
+diffusion and social norms, it's pretty hard to
+escape the networks. Now that we have better
+and better methods of measuring them and
+dealing with them, they've been popping up. Their own mentioned
+games on networks. Often we don't
+take these actions just once, but they're repeated. If we're talking
+about risk-sharing, cooperation, favor exchange, all these things, they
+are happening over time. Repeated games have
+been two-by-two games for a long time. Two people sometimes
+more than two actions, but there have been fairly
+narrow in their application. This is a setting where
+understanding repetition of interaction is important. Pure effects and
+games on networks is separating these interactions and getting identification
+and understanding policy is, I think a central one. Homophily. The why of homophily is very important
+for understanding what its implications
+and informing policy. These two things are the core of what we've been
+talking about so far. Econometrics of
+network formation is something I basically
+touched a little bit on. I think understanding
+endogeneity and behavior and overcoming a lot of
+the reflection problem, identification problems and all the endogeneity
+problems that are out there. These are really
+important things. Lastly, the looming dynamics
+that we haven't dealt with. That's another big issue. That's probably a
+good time to stop and ask for some questions. 

@@ -1,0 +1,285 @@
+Ian Appel: Now,
+there's obviously a huge literature
+out there looking at how institutional investors influence firm-level
+governance. A big chunk of this literature
+focuses on activists who specifically buy shares with the intention of
+influencing management. Now, other papers, including
+a recent paper I have with Todd and Don look at the
+role of passive investors. Now, this paper is
+different in that we specifically want to consider the interaction between these two different types
+of institutional investors. Now, to see why we're
+interested in looking at this, I'll start out by
+pointing out that we are in many respects
+in the midst of two major changes to the nature of institutional
+ownership in the US. First off, activism
+has gone mainstream. There's hundreds of activist
+campaigns every year, and The Economist refers to their current scale as
+being unprecedented. Meanwhile, these campaigns
+are in many respects, becoming more
+ambitious, that is, it's more likely that activists seek board representation, and according to an article
+in The Wall Street Journal last year, this is working. We're seeing more and
+more activist campaigns that end with the activist
+getting a seat on the board. Now, the second major change is the rise of passive investors. In this figure, we're
+plotting the percentage of equity mutual fund assets
+that are passively managed. We see that this has gone from
+under 10 percent in 1998, all the way up to over
+30 percent by 2014. In fact, just last year, Vanguard had net inflows of nearly a quarter of
+a trillion dollars, suggesting that this
+trend may not be slowing down anytime soon. What do we ask in this paper? Well, ultimately,
+we want to know whether these two
+trends are related. Specifically, we're interested
+in looking at whether passive ownership affects the goals of activist campaigns. These goals can be gaining
+board representation, they may be a policy change like increasing payouts
+to shareholders. We also want to look at whether passive ownership affects the tactics of
+activist investors. These tactics run the
+full range from having a friendly conversation
+with management all the way to the nuclear
+option of launching a proxy fight and trying to initiate a change in
+corporate control. Finally, we want to look at
+whether passive ownership affects the outcomes
+of activist campaigns. That is, does it make
+it more likely that activists achieve
+their stated goal? Now, we can certainly
+think of reasons why passive investors potentially
+facilitate activism. Activists face a classic
+free-rider problem in which they bear all the costs associated with an intervention, yet the benefits accrue
+across all shareholders. It could be that, while
+the large block holdings of these passive
+investors will reduce coordination costs for
+activists and ultimately make it cheaper to launch
+an activism campaign. In addition, it could be that
+support for campaigns may increase the expected
+benefits of activism. For instance, if an
+activist is able to gain the support of just one or two of these large
+passive investors, this potentially lends
+credibility to a campaign and ultimately increases the
+chances that it will succeed. We see anecdotal
+evidence that both of these channels
+potentially operate here. For instance, the hedge fund ValueAct was able to
+gain a board seat at Microsoft when they own less than one percent
+of all its shares. Now, they didn't go to Microsoft and initiate a proxy fight here, they simply approached
+management with demands. Now, the reason
+Microsoft was willing to give ValueAct a board
+seat was because they realized that those
+demands were backed by a number of the large mutual funds
+that own Microsoft stock. In fact, there's
+anecdotal evidence that activists
+oftentimes approach mutual funds prior to initiating their campaigns
+in order to gauge the level of support
+they'll be receiving. Now, interestingly, this
+communication can go both ways. Bill Ackman talks about how he's oftentimes approached
+by mutual funds, making what he calls an RFA, or a request for activism. One commentator says that, "This is the biggest
+shift in the battle for corporate control
+since private equity was invented in the 1980s, activists realize
+they can influence the concentrated shareholder
+base at many companies, and they're tapping
+into the desires of shareholders to see
+change take place." Now, we can also think
+about reasons why passive ownership
+may not have much of an effect on activism. For instance, some people
+have the opinion that, well, these index funds
+just typically take little interest in
+how firms are run. In fact, this cover
+article from The Economist last year referred to index funds as being
+lazy investors. Furthermore, there's potential
+conflicts of interest. In Bill Ackman's letter to
+investors earlier this year, he pointed out that one of the biggest pools of money going into index funds comes from
+corporate pension funds. It may not help these
+index funds raise money from corporate
+America if they have a reputation for taking on management and
+supporting activists. Finally, as long-term
+investors, in some sense, passive investors are the longest of long-term investors, they may not be interested in supporting
+shortsighted activists. Larry Fink, in particular, has waged a war
+on short-termism. He argues that many of
+the things being done by activists don't really benefit
+firms in the long run. Now, ultimately
+answering this question poses a bit of an
+empirical challenge. Specifically, it could be that passive ownership
+is correlated with factors that directly affect activists' tactics
+and success rates. For instance,
+membership in the S&P 500 drives a lot of
+passive ownership, yet this index excludes
+less liquid stocks. In addition, it
+could be things like past performance that affect index inclusion and also have an effect on the outcomes we're interested in studying here. Our identification strategy for this paper involves
+using variation in passive ownership that stems
+from the cutoff between the Russell 1000 index and
+the Russell 2000 index. Specifically, the way
+these indexes are constructed is that each June, Russell ranks the
+top 3,000 stocks according to their end-of-May
+market capitalization. It then chops off
+the first 1,000 stocks and calls
+that the Russell 1000 and takes the next 2,000 stocks and calls
+that the Russell 2000. Now, I will point
+out that there is one exception to this rule. Russell implemented
+what's called a banding policy in order to reduce the number of
+stocks that are jumping back and forth
+between the indexes. I won't get into the details
+here, they're in the paper. But I will say that
+this is something that we explicitly control for in our regression
+specification. Now, the important
+idea here, however, is that these indexes
+are valuated, and so the portfolio
+weights are going to vary considerably around
+the threshold between the two indexes. We see that in the
+following figure. In the first panel here, we're plotting the portfolio
+weights for the bottom 500 firms in the
+Russell 1000 index, and in the second panel, we see the portfolio
+weights for the top 500 in the Russell 2000 index. There's a large jump in these portfolio weights for stocks at the top of
+the Russell 2000, they're about an order of
+magnitude larger here. Now, it turns out there's
+a similar amount of assets tracking both
+of these indexes, and so we end up
+getting a large jump in passive ownership for
+stocks at the top of the Russell 2000
+relative to those at the bottom of
+the Russell 1000. It's about a 60 percent jump and we'll take a closer look at this in a regression specification
+in just a few slides. Ultimately, what we're going
+to do is we're going to use this as an
+instrumental variable. Specifically, we
+restrict our sample to stocks near the threshold
+between the two indexes, and then we robustly
+control for factors that determine which index
+a stock gets put into. We then use an indicator
+for assignment to the Russell 2000 as an instrument for passive
+institutional ownership. What's our key identification
+assumption here? Well, this is just the
+exclusion restriction, which says that
+after we condition on the index determinants, inclusion in the Russell
+2000 does not directly affect the activism outcomes we're interested in studying. Just a few words on the
+data we're using here. Our activism data comes
+from Shark Watch, which creates a database using both company
+and activist filings, as well as press releases
+and news publications. These sample consists
+of activism events for stocks within 500 ranks of the cutoffs between
+the two indexes. Our sample runs from
+2008 through 2014. This gives us a total of 426 activism events
+against 282 unique firms. We get mutual fund ownership
+data using S12 filings. Then we'll use the fund names
+and CRSP identifiers in order to classify funds into
+one of three categories. First, we have the
+passive funds. These are funds where the
+fund name either includes a keyword like index or Russell. Then we also use a CRSP mutual fund database
+classification for index funds. Active funds are all other
+funds that we can match to fund names in the CRSP
+mutual fund database. Then unclassified funds are
+those that can't be matched. We can take all these fund
+types and regress them on an indicator for
+inclusion in the Russell 2000 and all of our
+control variables. If we look at all
+mutual fund ownership, we see that there's
+a positive effect, but it's not statistically
+significant. However, if we break down this mutual fund ownership
+into the three types, passive, active,
+and unclassified, we see that there's a strong and statistically
+significant effect for passive ownership when a fund is included in the top
+of the Russell 2000. Now importantly,
+we don't pick up an effect for other
+types of mutual funds, suggesting that more
+active investors aren't responding
+to whether or not a stock is classified into the Russell 1000 or
+the Russell 2000. We'll jump into the results. We're first interested in studying whether or
+not passive ownership influences the type of
+campaigns pursued by activists. Shark Watch classifies
+campaigns into three types. The first type are campaigns that seek board representation. The second type are
+those that seek a policy change thought
+to enhance value. These can be things like
+increasing payouts to shareholders or changing the capital
+structure of the firm. Then finally, we have
+this other category which includes things like
+shareholder proposals, exempt solicitations, and 13D filings with no specific
+activist intent stated. We can roughly think
+about these as being in descending order of how
+ambitious they are. We start out by regressing
+these three types of campaigns onto our passive
+ownership measure. Then remember we instrument
+for passive ownership using an indicator for
+assignment to the Russell 2000. We see that there's
+an increase in campaigns seeking
+board representation. Now just to help you
+interpret these coefficients, we're scaling everything by
+standard deviations here. This is a standard
+deviation change for a one standard deviation
+change in passive ownership. We see that there's a positive
+effect across the board, significant at at least
+the five percent level. Now to help you think about the economic magnitudes here, this is pretty big. It corresponds to a doubling in the share of campaigns seeking board representation
+when we have this one standard deviation
+change in passive ownership. Now, this is offset to an extent by a decrease in other
+types of campaigns. Specifically, we see a
+negative coefficient. They're not significant
+for campaigns that are seeking
+some policy change. Then we have a
+negative coefficient on these other campaigns. A natural question is, well, why do we see more
+of these campaigns seeking board representation for the dissident shareholder? Well, an answer for
+this is the fact that passive
+ownership potentially facilitates proxy
+battles by reducing the cost that will be
+faced by the activists. Proxy fights are a common tactic for activist campaigns
+seeking board representation. An important feature about proxy fights is that they
+can be really expensive. Gantcher estimates the total average cost a greater
+than $10 million. This includes direct costs, things like hiring attorneys, or PR firms, or proxy solicitation services, and then also indirect
+costs, things like effort. Yet these costs
+may be reduced by the large blocks of
+passive investors. At a minimum, it makes it easier to gauge the
+support you're going to be receiving from the
+shareholder base prior to initiating
+a proxy fight. We see evidence of this. Here we're looking at campaigns that feature a proxy fight. Again, we see that as we
+have more passive ownership, there's an increase
+in proxy fights. Again, the economic magnitude
+here is quite large. We see that a one standard
+deviation increase in passive ownership is associated with a 135 percent
+increase in proxy fights. Now, interestingly, these
+proxy fights aren't necessarily just an activist trying to get a single
+seat on the board. We do see an increase in activists nominating
+a short slate, which is a minority
+of the board. Yet we also see some evidence of an increase of
+activists nominating a full slate of directors in order to replace
+the entire board. If we look at the outcomes
+of these proxy fights, we end up seeing that there's
+more proxy settlements. Specifically we see that a one standard deviation
+increase in passive ownership is associated with a 0.7 to 0.9 increase in the
+likelihood of a settlement. Now we don't see however, any change in whether
+the activist wins a proxy fight or whether the
+firm wins a proxy fight. This is consistent
+with the idea that if a proxy fight is close, if management thinks that the dissident has a
+chance of winning, well, they're going to
+do their best to try to settle. They don't want to lose. Now I'll briefly go over some other results we look at in terms of other
+outcomes of activism. It turned out we
+don't find any impact on the likelihood of things
+like dividend increases, capital structure
+changes, or spinoffs. This is potentially consistent with what we were talking
+about with Larry Fink before where many
+passive investors aren't really interested in supporting campaigns
+that they think might be having and might
+have short-term goals. However, we do document an impact on corporate
+control outcomes. Specifically, we
+see that it's more likely that a
+target is acquired. In addition, we
+see that it's more likely that takeover
+defenses are removed. These can be things
+like poison pills or staggered boards. We also look at
+other tactics that activists can potentially use. We don't see any
+significant impact on less costly tactics. These are things like nonbinding shareholder proposals or
+letters to shareholders. It doesn't appear that
+passive ownership affects these tactics that
+can be used by activists. However, we do see an effect on other types of
+expensive tactics. Before we said that, well, there's an increase
+in proxy fights, which are quite expensive. In addition, we see that there's an increase in hostile offers, which of course can also
+be expensive as well. On another note. We also don't document any change in the choice
+of activist targets. Specifically, passive
+ownership isn't associated with a change
+in the likelihood of a firm being targeted by an activist nor is it
+associated with differences in ex ante characteristics
+of targeted firms. We don't see any difference
+in previous years profitability or investment
+rates for firms that are targeted by activism based on this measure of
+passive ownership. I'll wrap up. In the
+last several years, we've obviously seen
+a dramatic increase in passive ownership. The shifting nature of the
+US stock market likely affects investor's ability
+to discipline managers. This paper indicates that increased passive
+ownership appears to facilitate activism by
+other types of investors. The findings
+ultimately highlight the potential
+importance of costs associated with
+undertaking proxy fights and other types of intervention. Ultimately they shed light on the determinants
+of activist goals, tactics, and eventual outcomes. 

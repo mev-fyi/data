@@ -1,0 +1,2280 @@
+Alberto Abadie: It's
+great to be here with Rocio and
+Matias talking about the synthetic controls and the regression
+discontinuity design. Yes, and the first
+lecture is going to be about synthetic control, so let's go for it. Synthetic controls
+were originally developed to
+estimate the effects of large aggregate events. In particular, the effects of policy interventions that are deployed at the aggregate level. Interventions that may affect entire cities or
+regions or country. If you think about that, much of the available
+machinery that we have in economics and
+in the statistics to estimate treatment effects is
+designed with the idea for estimating an average
+treatment effect over some population and
+from that population, we have extracted a large
+sample of individuals. Some of them are treated,
+some of them are not treated and we're going to
+compare them in some way. However, like many of the
+policy interventions that we care about or many of the aggregate events
+that we're talking about, well, they're not like that. They do not happen at
+the individual level. They happen at the level of largely restrictions
+as I said before, like cities, regions,
+or countries. Even if you're in an
+experimental setting where the experimenter
+has the freedom of deploying the intervention at a micro level or at a macro level or at
+an aggregate level, the experimenter may not want to do it at the micro level because there may be a
+fairness consideration. For example, if you
+have two individuals in the same location and one
+is treated and the other is not treated this could raise issues of fairness and also, you may have
+interference issues. You may have two individuals
+in the same location, one is treated and
+one is not treated, but they are
+interacting and this is creating a bias in the
+experimental estimate. To avoid all these
+types of issues you may want to implement
+during intervention. Not at the micro level,
+but at the level of a city or a school
+district, or a region. Synthetic controls
+have been applied to study a variety of problems empirically from
+immigration policy to the effect of corporate
+political connections. They have been adopted
+as the main tool for data analysis across
+different sites of issues in prominent policy debate on
+immigration and minimum wages and they are also applied outside economics
+in the social sciences, in biomedical disciplines,
+especially in epidemiology, in computer science, and so on. They have also been widely adopted by multilateral
+organizations, think tanks like business
+analytics units, etc. For example, a synthetic
+control method plays a big role in the official evaluation of our massive educational program funded by the Gates Foundation. I think it is fair to say that the econometrics
+methods are not a daily staple of the popular press and I guess this is a
+huge understatement. Synthetic control methods and their application half
+a times I managed to capture the attention of
+journalists and of public. What is my goal for
+the talk today? I want to provide
+an introduction to synthetic control methods, describe some of the advantages of this mythology which to my mind is explain the popularity that I
+have described before. I also want to talk about some recent developments like in synthetic control estimation, and I will finish
+with some remarks about potential avenues
+for future research, so that's going to be
+the next 50 minutes. Something that I
+should say is that many people have contributed
+to our understandings of synthetic control methods
+and related methods like in economics
+like Guido Imbens, Victor Chernozhukov,
+Bruno Furman. You see Rothstein
+and [inaudible]. In statistics Abby Feller. Davey Blaze In computer science, you have Debora Rossano. He's grouped in MIT. That list has to be
+very large and I won't have time to cover all these and I will basically
+going to concentrate in the original formulation
+of synthetic controls. They're like many
+important extensions, many important related methods so that they are out there
+in the litter to run. Of course, there are many
+empirical applications that I will not
+be able to cover. Let's just start about there. What synthetic
+controls are about? Synthetic controls are based on the observations than when you have as I described before a few aggregate units or
+the units of the analysis, then a combination
+of comparison units, what we're going to call
+a synthetic control, is often going to
+do a better job reproducing the
+characteristics of the treated unit than any
+single comparison unit alone. Motivated by this consideration, a synthetic control
+is going to be selected as the
+weighted average of four potential competition units but we're going to choose this average in a way that best resembles the characteristics
+of the treated units. When I say characteristic
+of the treated unit, so I'm thinking about predictors of the outcome for interest, you will see in a moment. To formalize this concept, so let's say introduce
+some notation. Suppose that we have
+j plus 1 units had t periods without
+loss of generality. Unit 1 is exposed to the
+intervention of interests after period t_0 and you have remained j units
+that are untreated. This is what we are
+going to say they are an untreated reservoir
+of potential controls. We will call them
+the donor pool. This is the set from which
+we are going to choose our potential comparison or the comparison for
+the treated unit. This is going to be a framework
+for potential outcomes. We will have. YI_it and YN_it. These are going to
+be the outcomes that will be observed for unit I at time t. [inaudible] without the intervention
+respectively. What we aim to estimate, we aim to estimate the effect
+of the intervention on the treated unit in a post-intervention period
+and this is going to be, of course, has always
+the comparison between the two
+potential outcomes. The first one is easy
+with that one we observe. We don't have to
+estimate anything there. But the second one
+is complicated and all our effort
+is going to be concentrated in estimating the same as the second object. As I said before, a
+synthetic control is going to be our
+weighted average, so each potential
+synthetic control can be represented by
+a vector of weights. One weight for each
+unit in the donor pool, and all the weights
+are going to be like a non-negative and they're
+going to sum to one. We do that to avoid
+extrapolation. All of these restriction
+could be relaxed and in fact, they have been relaxed
+in the later data. How are we going to choose among all these potential
+synthetic controls? Well, we're going to specify for vector of m characteristics
+for the treated units. Again, these are predictors of the outcome
+variable of interest. These are k times 1 vector, and we're going to
+have a matrix with the same values for the same characteristics for the units in the donor pool. Our vector of m, synthetic control weight
+is going to be chosen to minimize the discrepancy
+between X_1, the characteristics
+of a treated unit, and X_0 [inaudible]
+the characteristics of the synthetic control like a subject to the weight
+constraints that we have here that we
+described before. Now once we have this W star, the estimation of the
+treatment effect in the synthetic control
+framework is easy. Your estimate is going to
+be just the outcome for the treated unit minus the outcome for the
+synthetic control. This comparison, you
+can do it period by period like in after
+the intervention. In the previous slide, I use a norm but I did not
+define it and in fact, there is a lot of flexibility
+in what you can use there. But most people use some type of weighted equilibrium norm in which these weights here, these constants are
+going to reflect the predictive power of
+each of the predictors. These constants, v_1 to v_k, that are great this weights for each of the predictors
+can be chosen by the analyst statically or can be chosen in a data-driven way. Let's look at first application of a synthetic
+control estimation. This is an application
+to the effects of the German reunification on GDP per capita in West Germany. What we see in the figure
+on the left-hand side, these are the series of GDP
+per capita for West Germany before and after
+reunification in 1990. We also see the same series for a sample of OECD countries. Something that you'll notice
+here almost immediately is that here we don't have the usual conditions that
+we want to have to apply. It's something difference, indifferences, we don't
+have parallel trends. In fact, the trends before the German reunification
+for West Germany and for all the countries in the
+OECD are quite different. However, what the figure
+on the right-hand side shows is that there
+is a combination of countries in the OECD
+that very well reproduces the trajectory of
+GDP per capita for West Germany before
+the reunification. As we will see later, it is also going to reproduce
+other characteristics, other predictor of the
+outcomes for West Germany. You can see that
+much is very close. I guess that some of
+you may be thinking, "You know what this
+high [inaudible], they put all the values." To get a feature that good, you probably put
+all the values of the outcome variable in the
+pre-intervention period. You put all of them into X_1 in order to have this faith. In fact, we didn't do that. We did something very different. We just took the average over 10 years before
+the intervention, and that's what we put in X_1, and then all the
+other predictors. But you can see when
+you fit this average, you fit the tall trajectory
+very well. Why is that? Well, if you look
+at the raw data, you can see that there are some countries in this sample that are co-moving very nicely. They're co-moving very strongly. This co-movement between
+countries is exactly what the synthetic control
+is trying to exploit, and that's why we can fit
+this series quite well. What is X_1 in this case? We have here X_1. These are predictors of economic growth that are typically used in
+the literature, and these are the values that we observed for West Germany. These are the
+values here that we observed for the OECD sample. You can see that
+the West Germany is not very close to the
+average of the OECD sample, even when we are already using a sample of
+industrialized countries. But however, what we can see
+also in the second column is that there is a
+convex combination, a weighted average of
+all these countries in the OECD that very closely reproduces the
+characteristics of West Germany. This is going to be
+our synthetic control, this is going to be the comparison that
+we're going to use. If you're thinking about, what is the synthetic
+control for this problem? Here we have, perhaps
+not pretty surprisingly, Austria carries large weight, also Japan, the
+Netherlands, Switzerland, and the United States, they
+carry positive weights, and the rest of the
+countries have zero weights. As you can see, the
+control is just sparse. This is something
+that is typical of synthetic controls and
+we will see why later, and which makes the
+interpretation of synthetic controls
+particularly easy. What are the properties
+of these estimators? One could ask, to establish the properties
+of the estimator, we're going to adopt some
+type of benchmark model, some model that is
+going to generate the outcomes of interests. By the way, this is only the potential outcome
+without the treatment. As I said before, the outcome with
+treatment I observe, so I don't have to assume
+anything about it, my only assumptions
+are going to be about what happens
+without the treatment. In this simple
+linear factor model, the outcome is
+going to depend on characteristics of the
+units that we observe, and characteristics of the
+units that we don't observe, and they come with coefficients that vary
+with time arbitrarily. Also, we have an individual
+transitory shock actually, one that we're going
+to model as random noise. Suppose that we can choose
+W* such that [inaudible], we can reproduce
+the characteristics of the treated units
+and also we can reproduce the trajectory of the outcome for the treated unit before the intervention. Supposing for that,
+we can do that for any value of factual. In practice, this restriction may only hold approximately. Then we can establish a bound on the bias of the synthetic
+control estimator. For completeness, I have here all the elements
+of the bound. These are complicated subjects, but I only want to focus on something that we have
+here inside these max. We have these two objects, and these two objects
+are related to the scale of the
+transitory shocks Epsilon. In the denominator, we
+have functions of T_0, that is the number of the
+pre-intervention period. Remember that to get this bound, we need this to happen. Fine. What are the
+implications of all this? What are the implications
+of this bound of the bias? Well, the first thing that
+we have to remember, again, is that this bound is
+predicated on close fit. It is controlled by the ratio between the scale of
+the transitory shocks, and the number of
+pre-intervention periods. That means that
+the credibility of synthetic control is going
+to depend on the extent to which you can approximate
+the trajectory of the outcome variable for the treated unit for an extended
+pre-intervention period. This arrow has to be large. The variance of action
+cannot be very large, or otherwise you are not going to be able to fit
+this trajectory. There are no ex-ante
+guarantees on the fit, sometimes you are able to fit, sometimes the unit may be very stream and you're
+not able to fit. If the fit is poor, we will recommend against using the synthetic control
+or at least against using this vanilla version
+of the synthetic controls. There are some things
+that you can do about it like bias correction that I won't have time
+to discuss today. We have to be aware that
+settings perhaps with a small number of
+pre-intervention periods, large number of units
+in the normal pool, and large noise like
+large bodies of Epsilon, create substantial risk of
+overfitting in the sense that you are not
+fitting the outcomes because the characteristics
+of the units, the CI and they UI are similar. You are fitting the outcomes because you are having a
+variation in the Epsilons, and from this variation,
+the Epsilons, [inaudible] you give me enough noise
+and you can fit anything. What we're going to
+do in this setting, one good piece of advice is to restrict the donor pool to units that are similar to
+the treated unit. As we did for the German
+reification example, we look only at
+countries in the OECD. For example, you
+wouldn't want to fit a middle-income country
+with a country that is very rich and a country that is very
+poor because that will create the
+interpolation biases. But, also you may be
+aware of the risk of overfitting and having a lot
+of units in the donor pool, you may be risking
+to initial number of fitting and therefore
+having an allocation bias. What about inference?
+Inferencing in this setting. Inferencing for the
+synthetic control method is complicated by the fact that we are estimating the treatment
+effect typically for one unit. Standard synthetic
+tools do not apply in this context and to
+address this problem, we are going to
+base our inference on permutation methods. Basically what we're going
+to do is we're going to create a permutation
+distribution by iteratively reassigning the treatment to all the units in donor pool and estimating this placebo effects
+in each iteration. Then, the effect of
+the treatment on the unit that is affected
+by the intervention, we're going to say
+that this effect is significant when
+the magnitude of the estimated effect is extreme and relative to the
+permutation distribution. This is the way in which we
+are going to do inference. There are other ways
+to do inferencing, there's the control
+methods, but again, I am looking only at the
+original formulation, for example, like a
+[inaudible] theory in fact, have done some very nice work on other modes of inferencing
+synthetic controls. Let me try to explain with a sample how this permutation inference
+work in practice. Here we have our test statistic computed for West
+Germany computed for all the countries
+in the North Pole. We can see here, is
+that West Germany very extreme in
+this distribution. By the way, if you
+look at the statistic, it's not just the
+treatment effect that we estimate what we have here is the post period or post-intervention root
+mean square error divided by the pre-intervention
+root-mean-square error. Why is this? When you look at all these units in
+the unknown or portion of the inner can be fit, you can fit in very well in the
+pre-intervention period and some of them you can
+fit a not so well in the pre-intervention period. That's why we are going to take this root mean
+square error that is the difference between
+the trajectory of the outcome for the treated unit in the
+post-intervention period and the trajectory of
+the synthetic control for the synthetic control that correspond to
+the treated units. We're going to divide it by the same difference in the
+pre-intervention period. I will explain this idea
+a little bit more later. Some remarks about these type
+of permutation inference, the first one is
+that they, clearly, looking at the
+permutation distribution is much more informative
+than mechanically looking at p-values
+because you can see how far away the test statistic is relative to the
+permutation distribution, p-values only gives
+you the ranking. The second remark is
+that depending on the number of units that
+you have in the donor pool, conventional significant
+levels maybe unrealistic or maybe impossible. If you have 19 units in the donor of pool
+plus one treated unit, then you can hope for having
+a p-value equal to 0.5, otherwise, if you have fewer, you won't be able to have to
+attain a 0.5 fair p-value, which is something that some people really
+insist in doing. Something else that
+it is going to be, I hope a clear in a second example is that
+the one-sided inference is often more relevant and
+is often more powerful. We will see that in
+this second example. This is an example about them applying synthetic controls
+to study the effects of tobacco control program that was approved in
+California in 1988. What we can see here
+is at the series of per capita cigarette
+sales in California, before and after the
+passage of this law that is referred to
+as Proposition 99, and we have also the same
+series for the rest of the US. Again, this is a set in which you wouldn't want to do the
+difference in the inference. The trajectory of the outcome
+variable is completely different for California
+and the rest of the US. If I do the difference
+in inference between this point and this
+point in time, I'm going to get something but there is no intervention there. However, as for the German
+reunification example, there is a combination, there is a weighted
+average for various states in the United States
+that is able to reproduce the trajectory
+of tobacco consumption in California before the
+passage of Proposition 99. I want to talk about
+these, but also the predictors of the
+tobacco consumption. Before we want to say that this what we have
+said there is the effect of the intervention. What we're going to do
+in order to understand the inferential
+procedure a little bit better is we're going to
+plot all these differences. We are going to plot all
+these difference in time between California and the synthetic
+version in California. If you do that, you
+obtain this graph. We have fitted
+California very well. In the pre-intervention period, there is a gap in the
+post-intervention period. What is the permutation
+inference based on the idea that now
+we're going to go to our data and artificially
+we are going to reassign the treatment to the other units in the donor pool and
+see what happens. So here we are. These are all the synthetic controls for all the units in donor pool. Something that you see
+here very clearly is that, are not very surprisingly, there are some units
+that they are so extreme that have
+that the stream of distribution of the outcome that you cannot fit very well. Tobacco consumption
+in Kentucky is too high and tobacco
+consumption in Utah is too low so that we can reproduce it using a weighted average for their tobacco consumption
+in the whole regions. While the estimate for California is really extreme in this permutation
+distribution, the comparison is not even
+fair because we are including here units that we
+cannot fit very well before the intervention. If we take those
+away, let's do this, now we have only units that
+we can fit quite well, units that the mean square prediction error or
+the difference between the outcome variable
+for California and for the synthetic control
+is not more than twice, sorry, units with mean square error that is not twice the mean
+square root for California so the mean square error here is the difference between
+the outcome variable for the treated unit and the outcome variable
+for the synthetic control. So we're only keeping those that will fit almost
+as well as California. Again, you can see that these, California is a extreme
+in this distribution, and even these
+one-sided inference is useful in the
+sense that if there is a negative fit
+for California, California maybe, in the synthetic control
+for placebo intervention, creating positive fits and adding to our statistical power. If you don't like
+distribution is often taken away units that you cannot fit very well before
+the intervention, you can do as before, looking at some ratio between the post-intervention fit and
+the pre-intervention fit, and you can see, for example, California is a very extreme
+in this distribution. Let me talk about a couple of remarks about this
+permutation method. The first one is that it
+is the availability of a well-defined procedure to
+select the comparison unit, what makes the calculation of all these possible
+interventions feasible. If we're going to choose
+a comparison based on subjective measure of affinity between the units
+it will be very difficult to reproduce that when
+you have to do it in many placebo
+interventions. The second point that
+is important to notice is that the permutation
+method that we describe now, it does not attempt
+to approximate the sampling distribution
+of the test statistics. In fact, the sampling
+inference is going to be quite complicated
+in a synthetic control setting many times because
+we have the absence of a well-defined sampling
+mechanism and often because the sample is the same as the population so it is
+very difficult to think about what sampling inference
+means in this setting at least again in the
+Schrodinger formulation of the synthetic control model. Many of you probably
+realize that this type of inference
+is going to reduce to classical
+ornamentation inference if the intervention is
+actively randomized. But again, remember
+that we're talking about a setting
+which you have like a aggregate unit, like
+three or some countries and normalization in this
+setting is quite improbable. It's something that
+doesn't happen in general. But more generally, we can think about this
+mode of inference as evaluating significance
+relative to a benchmark distribution for
+the assignment mechanism, one that we can implement
+directly in the data. What I have shown before, this is benchmark
+distribution is uniform but it doesn't
+need to be uniform. You can use departures
+from uniformity and serve your fear
+point possible and have a paper about this in the
+journal of a causal inference. Many times people ask me, why don't you use something like a propensity score method? That's just complicated because in the settings with
+aggregate units, it is often difficult to
+articulate the nature of the same mechanism or even the specific nature of
+the placebo intervention. I was discussing yesterday
+in another meeting, think about what would be
+a placebo intervention in the German unification example like France is going to get
+reunified with whom exactly? A DSM inference is relative to the benchmark distribution, but it's not based on active front of
+mutation in the field. Now, I will try to think about and discuss what
+are the advantages of the synthetic control methods and why we may want to use them. In order to illustrate
+the advantages, I'm going to compare
+synthetic controls to regression analysis that is very familiar
+estimation framework. In 40 years ago when we started talking about synthetic
+controls and we will go places. They present this war people will ask why don't you just run a regression instead
+of doing this thing of a combination of
+weights sum to one. Can you do this here
+using traditional? In fact, you can do
+distribution regression. We have it here, you can take all the outcomes of the units in the North Pole in the post-intervention period. These units are not treated in the post-intervention period. We're going to regression on the characteristics
+of these units. I put a bar because I have a
+main that these metrics of a characteristics with
+a rough one because I want to have an intercept
+in my regression as usual. But once I have that, I know how to estimate regression coefficients
+with the usual formula. On each column of TCA
+Beta hat is going to be the regression
+coefficients for one of the
+post-intervention periods. Now how am I going to
+use these to calculate a regression-based estimate of the counter-factor of
+interests that piece. What would have happened with the treated unit in the post-treatment period
+without the intervention. That's going to be my usual
+intervention estimate that is going to be Beta hat multiply it by the
+characteristics of the unit. Now, something that is easy
+to see given the formulas that we have so far is that these regression-based
+counterfactual, in fact, looks very much like
+a synthetic control, is also like a combination
+of the outcomes of the untreated units in the
+post-intervention period. You could calculate the weights. These weights we usually
+don't do it when we run our regression this
+way but you could calculate these
+weights explicitly. Given the formula that we
+have for these weights, you can also prove that
+these weights sum to one. Exactly like a
+photosynthetic control, so what is the
+difference between you're doing this
+with regression, doing this with
+synthetic controls. Well, the difference is
+that these weights here, there may be outside of
+the zero, one interval. We know that we
+should allow that because integration
+extrapolates, is going to extrapolate to feed the values of the characteristics
+of the treated unit, cannot be only based
+on interpolation. Also, as we will
+see in a moment, these weights are not
+going to be as sparse. A nice exercise something that we can do is to calculate
+these weights for one of the examples that
+we consider so far. These are the weights
+for the example of the German Unification, this have declaration weights. Remember that since the
+contrast weights where it's partially were all of them, they were negative and
+most of them were zero. Here you have a non-sparse way. It's not like when
+you have shown off them that they are negative. This is a little bit
+more difficult to interpret it or much more
+difficult to interpret. The nature of this estimate
+contrafact called because now perhaps you know
+the contribution of Austria perhaps is moderated by negative
+weight of Italy or Greece. It's pretty difficult
+to figure out what's going on here and that's the cost that you pay
+for not having a sparsity. What are these advantages
+of a synthetic control? The first one is a
+no extrapolation. Like a synthetic control shall preclude extrapolation
+by using weights that are in this interval
+in-between zero and one. The second one is
+transparency of the feet, linear regression is
+going to extrapolate, so you can show that
+it's going to fit the characteristics of the
+treated unit perfectly, even if the untreated units
+are completely dissimilar in their characteristics
+and the way they are very far away from
+the treated units. In contrast, synthetic
+contrasts are going to make a transparent the actual
+discrepancy between the treated units
+and the convex hull of the units in
+the original form. Also unlike in
+regression analysis, we don't need data on post-treatment outcomes
+in the design phase of the study when we are trying to calculate this vector W star. To calculate W*, we don't need any data on
+outcomes of the intervention. Therefore, all design decisions
+like we can make all of them without knowing
+how they are going to affect the
+conclusions or other study. Not only that, these
+synthetic control which can be calculated
+and pre-registered before even push
+intervention outcomes have realized or before the actual intervention
+takes place. This provides a safeguard against specifications,
+searches on p-hacking, something that is
+worrying many people now. The last two points are related. The first one is transparency
+of the counterfactuals, entity controls make
+explicit the contribution of each compilation unit to the counter factor of interests. He said weighted average
+is easy to interpret, especially when you disperse, because the synthetic
+contract coefficients are proper weights
+and they're sparse, they allow you to have a precise interpretation
+of the nature of the estimate of
+the counter factor of interest and of
+potential biases. For example, if you think no, I think that our
+stream father was affected by the year
+number modification, you can immediately see how this is going to
+bias your estimates. We have mentioned a couple of times that it seems that
+the controls are sparse, and here we have the explanation like a geometric interpretation
+of this sparsity. You can think about
+a synthetic control. What is this synthetic control? It's a projection of x_1 on the convex hull of the characteristics of the
+units in the North Pole, and then like that, we obtain the synthetic control. If x_1 does not belong to
+a convex hull and this is typically the case because of the curse
+of dimensionality, then the synthetic
+control is going to be unique and sparse. If x_1 belongs to
+the convex hull, the synthetic control
+may not be unique, and typically you will have candidates for a
+synthetic control that may not be a sparse. Typically, you will
+have an infinite number of solutions, although we know that the data is sparse solutions among them. The question is how we can decide among all
+the many solutions? Can we get a one that
+is optimal in some way and each optimal solution going to be as sparse as before? This is related to one of the new techniques in the synthetic control
+radiator [inaudible], is called a penalized
+synthetic control estimators. Penalized synthetic control
+estimators are going to be very much the usual
+synthetic control estimators, but they are going to add this
+term to get the function. This term is penalizing the discrepancy between the characteristics of
+the treated unit, and the characteristics
+of each of the unit that contributes solution
+that the controls. When this Lambda is positive, it's going to control
+the trade-off between fitting well, the treated, I'm minimizing pairwise matching
+discrepancies between the treated units and the units in the
+synthetic controls. If you take this estimator, you calculate the estimator, I make Lambda going to zero. The resulting estimator
+in fact can be calculated without
+an approximation, maybe there are mathematical
+techniques to do that, this is what we call
+the synthetic control. This is going to minimize the pairwise matching
+discrepancies among all solutions for the
+penalized estimator. Surprisingly when you make
+Lambda goes to infinity, then only the pairwise
+matching discrepancies matter, and then you will get the nearest neighbor matching estimator; that will
+be the solution. What are the advantage of the penalized synthetic
+control estimator? For Lambda bigger than zero, the solution is
+going to be unique, and you will see that this
+is going to be a sparse. We will see in an example
+that is going to be a sparse, although this is a general
+mathematical threshold that they're not
+going to discuss. The presence of the
+penalization term is also going to reduce
+interpolation bias such that, of course, when you average units that are very far
+away from each other, and you can show that hash
+to the same computation or complexity as they
+are then penalized estimator so it's not more
+complicated to estimate. To understand how the penalize synthetic controls
+works in practice, instead of giving you
+the format result, I would like to think about
+a very simple example. This as simple as it can get. We have a one treated unit, three untreated unit, unit 1 is a treated unit. We have three untreated unit
+and x is one-dimensional. We only have one dimension. You can see here that the unpenalized
+synthetic control estimator has two
+sparse solutions. The first one is the one
+that you obtain when you use x_2 and x_3 to
+interpolate x_1, and in the second one you
+obtain when you use x_1 to an x_4 to interpolate x_1. But, you immediately see
+that the first solution dominate the second solution in terms of a matching discrepancy, and it also is going to dominate an infinite number of
+non-sparse solution that you obtain from convex hull combinations of
+the sparse solutions. But if you look at the original synthetic
+control estimator, all these infinite number
+x solutions look the same. In terms of the
+getting function, we need a way to
+discriminate among them. However, when you
+look at the penalized synthetic control estimator, as long as Lambda
+Is bigger than 0, the penalized synthetic control, it's matrix is going
+to want to have a unique solution and she's
+going to be a sparse. In fact, you can see that the neighbors uses
+the bot match x_4. The neighbor used them as much. As Lambda goes to zero, it converges to that
+one we want to start. As Lambda goes to infinity, it converges giving
+all the way to x_2. That is the nearest
+neighbor estimator, that's the way this
+works in practice. This was a little bit
+of a short summary of, one, a new development in the literature
+of a synthetic controls. Then I want to talk
+about the second one. The second one is using synthetic controls for
+experimental designs. What is this about? Let me try to explain
+this with a sample. Suppose that you are in
+a ride-sharing company, something like Uber and
+you are thinking about like a different compensation
+plan for drivers. We have the usual
+compensation scheme and a new one perhaps with
+higher incentives to drivers, and which one we
+are going to use. You are in the business
+analytic unit of this company. Something that you could
+do is say it's like, "I will go to a city
+and then I will assign some workers to the new
+compensation plans, and some workers to the
+old compensation plan and see what happens." But as we described
+in the first slide, this is going to be problematic, because you have workers in the same cities getting different amounts of money
+for the single work, and that would be considered
+unfair and dis-unfair. Also brownish that if Rothio is liking the
+high compensation plan and I need the low
+compensation plan, probably Rothio to work longer hours because has higher incentives
+as you may see, maybe you're still
+in business for me. There will be all these type
+of interference issues that we may care about when
+doing an experiment. What we may decide
+it's like, no, what we have to do
+is to deploy it or treatment of
+the entire market. Perhaps we don't
+want to do it like a treatment for 50 percent of the markets in the United States and no treatment for 50 percent of the markets in the
+United States that could be super costly perhaps. Also, it will be a little bit of a nightmare if you
+recite to roll outage, or if you decide not to implement the
+better compensation plan at the end of
+this experiment. You may decide,
+"I'm going to apply a pilot program in
+one market or in one city or a few
+market and cities, and I'm going to try to
+see what happens there." In this case, you don't
+want to randomize. You don't want to randomize
+because if you're going to apply this
+program to one city, the city that you
+can get maybe even not representative of the entire market in
+the United States, or maybe one that you
+cannot reproduce very well. That is especially
+idiosyncratic and then randomization will give
+you unbiased [inaudible]. But, I suppose you may
+be in big big trouble. Your experiment, you want to do your intervention but in
+a non-randomized way. The question that you are
+going to ask yourself is, which market of markets
+should I treat? Which markets of
+markets should I use as a comparison or as a control? We have proposed in the setting, it's like using steady controls. First you find a
+set of weights that make a synthetic
+unit that reproduces the characteristics of the
+population of interest. For example, like all the cities where my companies operate
+in the United States. Then you're going to create
+a synthetic controls for the synthetic treated unit. In contrast with the
+observational case, here we're going to have
+two units: one synthetic treated unit and one
+synthetic control unit. In these two objectives, you can operationalize in a nice objective function
+that you need to maximize and this is what
+we're going to give you a optimal designs in synthetic control settings when you are doing experimentation, not randomized experimentation
+with aggregate units. We have some work on these
+and also Doudchenko and co-authors have been working
+to describe the mix. I have to say something
+about these is that this is new to academia, but it is not new to industry, unlike many companies
+are applying this type of synthetic
+control designs for experimentation exactly
+because of the type of issues that we were talking about in the previous
+slide and this slide, and what we're trying to do
+here in this course is to try to formalize many of the themes that
+are already being applied in the industry. In academia, sometimes
+we have less capacity of randomizing our
+accuracy rate units. But that's wrong. Things happen like
+sometimes we do that thing like we [inaudible] essential. I have some time, but it seems that I
+went fast enough so I'm ready to give
+closing remarks. What I've been trying to say
+is that synthetic controls like is they have
+gained popularity. But the accretion why they have gained popularity in my
+view is because they have many practical
+advantage are the sign for the estimation of
+treatment effects, especially in settings where you have like a
+figure eight units. Some of them are exposed
+to the intervention of interest and some
+of them are not. I didn't have the time
+to talk carefully about what are the requirements that we need for synthetic
+controls to work. In practice, we show
+some of that when we talk about them
+by spawn formula. But as I said before, as for any other
+statistical procedure and especially those that they want to estimate
+causal effect the credibility of the result that
+you're going to obtain depends very much
+on how diligent you are at applying
+these methods. The type of data that
+you have and contextual, a characteristic of your
+problem that help to implement. I have a paper, a recent
+paper in the Journal of Economic Literature that
+covers all this aspect, putting in quite
+a lot of detail. What are some open areas of research for
+synthetic controls? Well, this is quite
+a new method. There is a lot that
+has not been done. Like some people
+have been working on sampling-based inference. Although in my opinion these are quite big open field in terms of a
+potential improvement. Not much has been done in
+terms of external validity, sensitivity to
+modern restrictions, the recent work with
+estimation with multiple interventions but also very interesting set of issues. Also, like much more work needs to be done on data-driven
+selectors of VH. You remember this word, the
+way it's like we put to the variables or the
+predictors that we're using for estimator and other things like
+mediation analysis. There is very little work
+done for density controls. It's something that
+my guess is that this is going to happen in
+the next few years. Also another area, this
+a favorite of mine, as you could see
+before of interest, is the use of synthetic controls as
+experimental designs. There are many contexts, especially in industry but also in academia
+where we need to carry out experiments
+at an aggregate level. We lack a lot of
+tools for doing that. Most of the tools we have today for the case
+in which we have many micro units
+that are created are many micro units that
+are not created and then this's not
+exactly the case. This is interesting because it may also a dissertation which the availability of methods may restrict
+what you do in practice. Sometimes people tend to
+do what we know how to do. As new set of potential
+experimental designs that could be used quite
+a lot in practice. Awesome computation.
+This is important. We need many more results on robust and efficient computation
+of synthetic controls and the good news about these methodologies
+that they own, the empirical sites, many
+of the bands samples, interventions that we care
+about do take place at an aggregate level and affect the entire aggregate units. There is a lot of
+many possibilities, many potential empirical
+settings where we can apply these methods. Let me finish looking a little bit at sound
+resources that I have used in this presentation on
+some extra resources that you can use for
+synthetic controls. Most of my material
+in this presentation comes from my own work and you have the reference here. In particular, it comes
+directly from a recent paper in the Journal of
+Economic Literature on feasibility data requirements and methodological aspect
+of synthetic controls. There is also some
+information here about like a code for calculating
+synthetic control estimators, calculating the penalized
+synthetic control estimator, also calculated the penalized synthetic control estimators. As I said before, many people have contributed to the literature on
+synthetic controls. I wanted to provide
+some references here. So you can access this material. I hope that these
+slides are going to be available after
+representation. That's all I have.
+Thank you very much. Rocio Titiunik: I'm
+Rocio Titiunik, from Princeton University. Matias and I are going
+to jointly talk to you about regression
+discontinuity designs. I'm going to be doing
+the first part and Matias is going to take
+over the second part. We're going to have 10
+minutes in-between. We are going to continue the causal inference on
+program evaluation framework. We're going to be thinking
+about a framework where our goal is to learn
+about treatment effect. Basically the effect of a treatment or a policy
+or an intervention. As we know, if the treatment
+is randomly assigned, then it's going to be relatively easy to estimate effects, although there can
+be complications, but at least straightforward
+how to proceed. But if the treatment is
+not randomly assigned, then we're in the world
+of observational studies and we need to invoke some assumption like selection of several walls, instrumental variables,
+some other assumption. The feature that all
+these assumptions we'll have in common
+is that they're not going to be known to be true. They're not going to be
+true by construction. They're going to be
+held as assumptions. We're going to hope
+that they're true and we're going to
+do more than that. We're going to try to
+provide some evidence that is consistent
+with there being true. But it's always a
+complicated problem. How credible are our estimates and our conclusions based
+on observational studies? The regression discontinuity
+design is one type of observational study
+that shares some of the limitations that are inherent to
+observational studies, but has some advantages relative to other
+observational studies. The first one is that it's based on a simple assignment rule. This rule is based
+on external factors. This creates an
+objective basis to evaluate the assumptions
+that we're making. This objective grounding in reality and in some
+actual rules that are verifiable allow us to falsify the design in a way that other designs
+can't be falsified. This increases the
+credibility of our designs. They're also easy to interpret
+and of course, they have some peculiar characteristics
+in some limitations. One, in particular, is
+that the parameter that we can study is very local and we're going
+to see what that means. What is a regression
+discontinuity design is defined by a triplet of a score, a treatment, and a cutoff. The units in the study
+receive a score and I'm going to call that score X. The treatment is going to be assigned based on the
+score according to a rule. Without loss of generality, we're going to assume
+that the treatment is given to units whose score
+is greater than the cutoff. The treatment is
+withheld from units whose scores are
+below the cutoff. When I withhold the treatment, I'm going to call that control. If you plot the score on
+the x-axis and you plot the conditional probability of being assigned to the treatment or the control as a
+function of the score, you're going to see
+that it's zero for all values of the score
+that are below the cutoff, and it's one for all the
+values that are above. There's a discontinuous jump in the probability
+of being assigned to treatment from 0-1
+in all our redesigns. Abruptly, I go from
+having a probability zero of being assigned to the treatment to a
+probability of one. The regression
+discontinuity design is basically a design that is based on this type of discontinuous assignment
+to treatment. What we're going to
+do is we're going to place assumptions on top of this assignment rule, Alberto Abadie: so that
+the abrupt change in Rocio Titiunik: this probability
+of treatment assignment, we'll use that abrupt change as the basis to learn about
+about the treatment effect. There's many aspects of the regression
+discontinuity design that we can talk about, we call it a regression
+discontinuity taxonomy. There are different frameworks and what we call frameworks or approaches are approaches for identification and
+interpretation and analysis. We can make continuity
+assumptions and extrapolate or we can do look at
+randomization assumptions. We're going to talk
+about this in detail. We can think about
+settings where the score is continuous versus where
+it has repeated values. There's also different
+settings in terms of whether compliance with the treatment is
+perfect or imperfect. That distinguishes
+between sharp and fuzzy. There's also situations where we can have in multi-dimensional cut-off variable and
+multi-dimensional score variable. We can also think about time as a running variable
+or dynamic treatments. Those are going to define
+different settings. I'll discuss briefly and
+give you an overview here. We can also think about different parameters
+of interests. We are going to base
+most of our discussion Alberto Abadie: in an average
+treatment effects of some sort. Rocio Titiunik: We will discuss
+different types of average effects. But like in any other
+causal inference setting, we can think about quantile facts or
+distributional effects, and we can think about
+partial effects. We can also think about heterogeneity by subgroups
+and sub-populations. We can also think about generalizing the
+parameter of interest in talking about
+extrapolation which if we'll have time,
+we'll discuss later. What I will do is I will give a little bit of an overview about the general frameworks, and I'll talk a little bit about different settings to
+give you a flavor of what different regression
+discontinuity setups you can encounter. The regression discontinuity is not something that you design, typically something
+that you come across. To give you an overview of the different types of designs that you might
+come across might gives you an idea of when can I apply these tools with
+different contexts. Then in the final part
+of my presentation, I'll talk about local
+randomization methods and Matias will
+take it from there. Let me do this a little
+bit of notation, and I'm going to
+introduce the notation in the context of a randomized
+control trial or RCT. Because we're going to be discussing the
+differences between RCTs and regression
+discontinuities in the next hour or two. Similar to Alberto,
+the notation is going to slightly change. Alberto had Yn, I am going to have Y 0, but we're going to adapt a
+potential outcome framework. We have potential outcome
+under control Y0, we have the potential
+outcome under treatment, and we have X. In an RCT, you can think of
+X as being any covariant in the RD design that's
+going to be the score. I'm going to index
+units by i from 1-n. The treatment is going to
+be T and it's going to be a binary treatment for the
+rest of our presentation. In an RCT as we know by virtue of the treatment
+being randomly assigned, the treatment is going to be independent of the
+potential outcomes also, any pre-treatment covariates and we're going to have
+an observed outcome. The data that we observe is going to be the
+observed outcome. We're going to call
+it Y. Then data on T and X for all the units. Of course, we have the
+fundamental problem Alberto Abadie: [inaudible]
+inference that we only observe Rocio Titiunik: potential
+outcome under control if I give you a control and we only observe
+potential outcome under treatment if I give
+you the treatment. That is a fundamental problem. But in the case of an RCT, it has an easy solution
+which is just go to the treatment group and get the observed outcome in
+the treatment group. Compare that to the
+observed outcome in the control group. At least if we're talking about Alberto Abadie: average
+treatment effect, Rocio Titiunik: it
+has an easy solution. We can just readily identify the average
+treatment effect in the way that I know everybody
+connecting today knows. That's the setup of an RCT. I'm going to keep the
+notation and now I'm going to change the assignment. I'm going to go from an RCT to a regression discontinuity. What's going to happen is if you have the independence
+of between T and the potential outcome is
+really going to be replaced by something that has nothing
+to do with independence, which is basically an indicator
+that it's going to be one whenever our score
+is above a non cutoff, that's going to be fixed
+and zero otherwise, the data is the same
+data as we had before. I'm now using X is going
+to be the RD score. We still have the fundamental problem
+of causal inference, but we don't have
+the easy solution anymore because we don't have independence between
+the treatment and the potential outcomes. Now the question is, what
+are we going to do to try to identify some average treatment effects and what can we do? The first thing to note is that there's no identifying
+assumption that holds by construction. This continuous rule for the assignment of the
+treatment doesn't imply in any way the identification of
+assumptions that we need. We need to place
+those assumptions on top of the assignment rule. We have different choices of what assumptions
+we want to impose. Then based on those assumptions, we'll be able to identify
+a treatment and go from there and think about
+estimation, and so on. We're going to talk
+about two assumptions. Those are going to be focusing on different
+types of effects. In what we call the
+continuity-based assumption, we're going to assume continuity of regression
+functions and we're going to define the
+parameter of interest as the average treatment
+effect at the cutoff. This is an average treatment
+effect of the cutoff is a little bit different from
+what you're used to seeing, because we're not used to seeing average treatment effects
+at a particular point. My TAs will talk about the implications of that for
+estimation and inference. We can also make
+different assumptions. Instead of making
+continuity assumptions and focusing on the average
+treatment effect at a point, we could define a parameter
+of interest that is the average treatment effect in some window or some
+interval around the cutoff. It's not a point but
+now an interval. We can think about the average treatment effect
+in that interval. That's what we're going to call the local randomization
+based approach to analysis. Both of these analysis, each one of these
+approaches is going to make a different assumption that is going to be placed
+on top of that. Discontinuous assignment rule is going to have a different way of exploiting's that the idea that above and below the cutoff. We're going to make
+some comparison. We're going to discuss
+both of them in the next hour and 40 minutes. I'm going to be focusing
+on local randomization. Matias is going to come
+back and then it's going to talk about continuity base. When you think about
+continuity base, this is the canonical plot
+that you're going to see to represent this approach. You're going to have to
+score in the x-axis and then you're going to have the potential outcomes
+on the y-axis. You're going to
+plot in particular, what we call the
+regression function. The conditional expectation of the potential outcomes as
+a function of the score. Basically, you're going to have the regression function on the treatment that regression
+function under control. You're going to define the
+treatment of interests as that vertical distance between these two regression
+functions at the cutoff. Of course, this is an unobservable effect
+and you're going to base identification on a continuity assumptions
+about this function. Matias will give you
+more details about this. In the local
+randomization approach, we do something a
+little bit different, and I'll come back to talk about this by the end of
+the presentation. Basically, we define the
+average treatment effect in this entire region here
+and this entire window, and we assume that
+in that window, basically the
+regression functions are now going to be functions of the score and that's
+going to allow us to estimate and recover
+treatment effects. Those are two
+different approaches. We're going to cover
+those in the remainder. I'm going to cover
+local randomization. Matias will cover
+continuity based. But before I go into the details of local randomization approach, we wanted to give you an idea of this taxonomy that I
+was talking about. What are the
+different aspects of regression discontinuity
+that you might encounter along these
+different dimensions. We'll use some of them here and then we'll talk about resources that we'll
+share with you. We have created a GitHub
+site where you can download the materials
+for today and we'll also share references and resources. One distinction that is very important when you encounter a regression
+discontinuity design is whether you have
+perfect compliance with the treatment or imperfect compliance with the treatment. Here on the left, I have what
+we call a sharp RD design. The literature calls
+sharp RD designs. This is basically a design where there's
+perfect compliance. Everybody with scores above the cutoff is assigned
+to the treatment. That's always the case, but
+also receives the treatment. Now we're looking here at the
+conditional probability of receiving the treatment not being assigned to the treatment, but the conditional
+probability of receiving the treatment
+as the function of the score and when you have perfect compliance in
+a sharp RD design, the probability of receiving the treatment above
+the cutoff is one and the probability of receiving a below
+the cutoff is zero, and so there's a
+full jump from 0-1, and the probability of
+receiving treatment. When we have noncompliance
+that jump still exist. It's still the case that
+when you cross the cutoff, the probability of
+receiving treatment changes discontinuously, but that is not necessarily a change between zero and one, so in this particular plot here, you're seeing one
+side of compliance. Everybody whose score is below the cutoff is in
+the control condition, doesn't receive the treatment, but above the cutoff,
+there's a fraction of the treated units that
+don't take the treatment, and that's why you
+see the jump in the probability be
+smaller than one. It jumps from zero to something
+that's smaller than one. This is typically what you'll
+see in a fuzzy RD design, which is a jump in the discontinuous jumps the probability of
+receiving treatment, but it's smaller than one, and we can still use the ideas of the
+regression discontinuity. Typically, if you are using
+a continuity-based approach, we're going to define a
+parameter that's going to be a little different
+from the sharp parameter, and it's going to
+take this ratio form that is going to have an
+analogy with instrumental, but it's like two-stage
+least squares were instrumental variables, type of estimates that you
+might be familiar with. We'll have an intention to treat effect divided by
+a first-stage effect, and that's going to be economical estimator that we can define it in both frameworks. Again, it happens in
+the in [inaudible], you're going to have to bring some additional assumptions to say exclusion restrictions or local independence
+assumptions to interpret. But this is one
+distinction that we might encounter in practice and fuzzy RD designs are
+very, very common. The other regression-related
+design that you might encounter and this is common in economics
+in particular, is what are called kink designs. These are situations where you have a treatment
+or a policy, but the policy is not binary. It's a continuous
+policy that depends on a score via formula and the
+formula introduces kink. It could be, for example, a piecewise linear rule
+that a particular levels of income changes the rate
+at which you have to pay taxes or particular
+levels of income changes, what unemployment
+insurance you can get. This rule introduces kinks, and so when you
+look at outcomes, so you might expect
+that the outcome, so the rate at which the policy is operating is
+changing at this kink points, and when you look at
+outcomes you're not going to expect a jump in the outcome
+like in the typical RD, but you might expect a
+kink like a change in the slope right at the cutoff, which basically is equivalent to a jump in the first derivatives of the regression function. You can define
+parameters of interest that are analogous. You can define them analogously and
+identify them with similar assumptions to
+their usual parameters. But you're going to have, instead of the levels of
+the regression functions, you're going to have
+the first derivatives, and when you think about
+kink designs they can be sharp in with perfect compliance or they can be fuzzy with
+imperfect compliance, and you can also
+think about them in terms of continuity base
+or local randomization, so a lot of this taxonomy
+dimensions are cross-cutting. You can have local
+randomization, fuzzy or local
+randomization sharp. You can have a lot of intersections between these
+different categories. Another design that
+is our type of RD design that is very common and you might
+encounter in practice, is an RD design where we have either a score or a cutoff that is not one-dimensional,
+but is multi-dimensional. Here on the left, I have what we call the
+multicast of RD designs. We might have on regression
+discontinuity rule that uses some cutoff
+for some population, and then for some
+other population uses some other cutoff, and so really what you have
+is regression functions for one population and
+regression function for another population you have. If you go cutoff by cutoff, you have two different
+treatment effects. Imagine that I have
+two cutoffs here, then I have the
+usual RD parameter, but now I have one RD effect
+for cutoff 1 another, the effect for cutoff 2, so this makes it also
+opens the door to, you can first of all, very easily look at heterogeneity of treatment
+effects across cutoffs. But then it opens the
+door to think about what would that happen? What would have been the effect? Let's say this population is exposed to this cutoff
+and this is the effect. What would have
+been the effect for the same population at
+the other higher cutoff? This introduces some ideas
+about extrapolation. Because as we'll talk
+about later on and Matias will also
+emphasize when he talks about continuity based. A lot of this regression
+discontinuity designs will be focused on very, very local effects, and so the idea of what happens to this effect as I
+go away from the cutoff is going to be an important
+question that we are constantly looking for ways to try to answer that question. Once we have answered, what's the effect that the cutoff or what's the effect in this very small window around the cutoff, we do want to know what's the effect beyond
+that and for that, we're going to need to make
+external other assumptions, and multiple cutoffs
+is one way in which we can get at that. Another way in which we can have a multidimensional RD is when we have a score that
+is multi-dimensional. For example, when I
+have a language exam, mathematics exam and
+then I'm going to place children in a
+particular program when they score above a
+cutoff in each score. Basically what that creates is an entire boundary instead
+of an entire boundary of points and type
+boundary where the treatment is changing from when the status is changing from
+control to treated, and again, so basically
+we're going to have an infinite number of parameters that we could estimate along this boundary. But in practice was
+typically done to happen is you're going to choose several points
+along the boundary, and when you're going to try to estimate the effect there. Again, you can
+basically define and generalize the parameters and the approaches for different types of
+multi-dimensionality. One important particular case of our multi-dimensional
+two-score RD design is a geographic
+one in particular. It is commonly used in a lot of areas of social science
+and economics in particular. Where you can think
+of the score units in space and each unit
+having a latitude and longitude two scores
+that determines the location and then having a boundary that separates a treated area
+from a control area. A treatment that changes, is continuously at the boundary. Then you can think
+about estimating different treatment effects
+along the boundary. Basically, you can
+think that if you stop, and you focus on that particular
+point of the boundary, then at this point
+in the boundary, you can calculate
+the distance of all of these units
+to this point, say the geographic
+distance of all of these units to that point. Then you can estimate a
+unidimensional RD effect at that particular point. You can repeat that for as
+many points as you want. There are different RD designs, but they all share the
+same basic structure. Obviously, there's a
+discontinuous change in the probability of receiving treatment at a
+particular cutoff. This cutoff might be one might be more than one
+multidimensional. The score might be single-dimensional or
+multi-dimensional, but there's always going to
+be this formula that creates this jump in the probability
+of receiving treatment, or at least a kink in
+a more general rule. The causal effect that
+we're going to be able to identify with this design is going to be
+different in general from an RCT and I'm going
+to discuss that more. All of these RD designs
+regardless are going to be based on this idea of
+exploiting this variation, this abrupt change
+near the cutoff. We're going to be introducing
+some assumptions that are going to basically give us
+some sense of comparability. That if I go two units
+just above the cutoff, and I go two units just below
+the cutoff, in some sense, those units will be comparable or we're going to be able to use them to approximate and get at something that
+might be comparable. There is no overlap, meaning that every
+unit that is treated, if you think about
+a sharp writer, think about perfect compliance, every unit that is
+treated has a value of the score that is higher by definition that every
+unit that is control. There's a lack of overlap in these very
+important covariant. Typically, RD designs are given based on covariates
+that are very important. I'll give you an
+example very soon. This lack of common support, and it's going to
+basically imply that treated units and control
+units are going to be different by construction. Basically, we're going to
+localize and go close to the cut-off to try to regain
+comparability of some sort. We're going to talk
+a little bit more about how to analyze
+them graphically. This is going to convey a lot of information about the design. Then another takeaway
+will be falsification, validation methods, and
+materials we'll discuss later. Let me talk a little bit about how to
+visualize the design. For this, I'm going
+to use a software. Here is the information of where to access our software packages. We'll have packages
+for RD estimation, visualization, and inference
+in Python's data on R, and you can have the
+GitHub page over there. You can download them and install them in your
+preferred platform. I'm going to use
+now a little bit of those packages to illustrate how to use them to
+analyze a real design. The application
+that we're going to analyze and we'll
+also analyze later, so I'll just introduce it once, and then we'll come back
+to it at various points. It's an application polishing the QJE in 2007 by
+Ludwig and Miller. The question is to
+study the impact of giving municipalities
+assistance for the rollout of Head
+Start and to look at that assistance on infant
+mortality in municipalities. The unit of analysis is
+municipalities in the US. The treatment is whether
+the municipality received assistance to
+rollout Head Start. The score is a poverty index. The poverty index that they
+use is poverty index before, so this is happening in the 70s, so they use the poverty index according to the
+sense of 1960 to rank municipalities according to most poor to least poor. This is important because
+it gives you an idea of why regression
+discontinuities are in a way, in one sense, the opposite of randomized constant trials. Because in this case, we
+owe the municipalities from most poor to least poor. Then basically the
+way they did it is because of budget
+considerations, they could give assistance
+to 300 municipalities. It started with the
+poorest municipality until the 300th
+poorest municipality. That's where the poverty index of that number 300
+was the cut off. That determined the cutoff to be that particular number which means that basically you sorted all the
+municipalities by poverty, and all the poorest
+municipalities are in the treatment group
+and the control group. Basically, this lack
+of common support is lack of supporting the poverty index
+that it's going to be a highly correlated with
+the outcome of interests, which is child mortality, so mortality of
+causes that might be affected by Head Start in
+children 5-9 years of age. You can see how this
+immediately creates a problem of comparability
+between treated and controls. I'm going to talk about how to visualize the design and I'm going to
+show you an RD plot. I will just show you a very
+quick little bit of code. We have shared this dataset
+and the code with you. I did have a page, you'll find it in the MBR link. You can download it, either run it now
+with me or you can download it later and
+replicate it yourself. I just have the outcome and I have the score, and then we have
+several covariates that for now, I'm
+not going to use. I'm going to create a
+treatment indicator. The only command that
+I'm going to focus on here is I'm going to use
+the command or the plot, which is going to plot the outcome as a
+function of the score, giving the particular value of the cutoff with a few options. That I'll talk about. This
+is actually the default, and in the default you can
+actually remove even that. That's going to be the default, and so this is what a regression discontinuity
+or the plot looks like. We have the outcome
+on the y-axis, the score on the x-axis, we have the cutoff and we can see there's a jump
+at the cutoff. The plot is built
+with two ingredients. One, the lines
+that you see here, those are global polynomials, so separately fitted to
+the right and to the left. In particular, the default
+in this commander or plan, it's a fourth-order
+polynomial fitted of y on x and on each side. You can see here that
+and then you can, the points here are the
+lines are the fields from global polynomials for
+ordering either side the points, our local means. Basically, we split the support of the running
+variable into intervals, and for every small interval, we calculate the
+mean of the outcome. We plot that as a point. The fit is fitted on the raw
+data and not on the right, and so the idea is that the
+global fit will give you an idea of the overall shape of the regression functions, and the point will give
+you a better idea about the local variability
+around the functions. What we're looking for is, well, if there was an effect
+of the treatment, the treatment is changing, there is no head-start
+assistance to the left. There's a system
+here to the right. What we should see is if there was a treatment
+effect on the outcome, we should see a big jump. Now, what we sit here, well, it's a huge jump at the cutoff but we need to
+be a little careful here because there seems to be quite a bit of
+overfitting going on, and so this is a problem that Matias will
+talk about later. Remember that we're trying to estimate what happens
+right at the cutoff, and so we're trying to estimate a treatment effect
+at the cutoff point, we're trying to approximate that regression function
+at the boundary point. There's no data to the left to estimate the intercept here. There's no data to the right here to
+estimate that intercept. Boundary points have
+the feature that make global polynomial is very unstable and lead
+to overfitting, and so if I run the same at the plot but I use linear polynomial
+instead of a global, you can see the difference. The local means are not moving. All that is moving
+is the global fit. In the first plot, your brain
+says the effect is huge. In the second plot, your
+brain says the effect is moderate and
+nothing has changed or has all that has
+changed is how we fitted that global regressions. This is why you cannot use
+really an RD plot to formally estimate and to formally analyze a regression
+discontinuity design. Because there's
+many possibilities for how you can
+present this plot. Nonetheless, it's
+a useful tool to visualize where the
+data points are, how much variability you have in the treated
+and the control group, and it's also setting up for Matias to come
+back and tell you why we're going to be focusing on polynomials of
+lower-order when we use continuity based analysis
+and why we want to go local to the
+cutoff and how you're going to have to take
+care of the problem of boundary bias and the fact that this
+is a boundary point. For now, let me go
+back to the slides. We have more information
+to give you about how to particularly choose
+the bins, for example, in an RD plot and just
+invite all of you to consult the references in about
+optimal selection of bins and the number of
+bins if you are interested. But in the interest of time, I'm going to keep moving along. For the last minutes that
+I have in my presentation, I want to talk about estimation and inference
+in particular. Basically, up until
+now, I gave you a big overview of
+different issues and then how to visualize
+an RD design. Now, I want to get a little bit more formal in terms of how to estimate and how to perform statistical inference under different assumptions. As I've been hinting from
+since the beginning, we're going to discuss
+two approaches. I'll now going to discuss local randomization Matias
+will discuss continuity based. There are a lot of things that these
+approaches have in common. Basically, we're going
+to need localization. We're going to go close to the cut-off before we
+do anything else. Why? Unless we want to make very strong
+parametric assumptions, we're going to need to go close. This will mean that
+we either need to select a window in the case of local randomization or in the case of local continuity, we need to select the bandwidth. When we talk about
+point estimation, we're going to have a choice between what methods we're going to use for
+point estimation. For inference,
+we're going to have a focus on non-parametric
+and non-parametric methods. In local randomization,
+we're going to have a choice between finite
+sample valid methods and large sample methods. Basically, we're going to
+focus on these two approaches. There are many
+others that exist. Empirical likelihood methods,
+Bayesian methods, etc. Those are not as widely used
+in the social sciences and sometimes require ad hoc
+choice of tuning parameters, which is something that
+we will try to avoid, and we'll talk about
+how to do data-driven, an optimal choice as much as possible of any tuning
+parameters that are needed. In general, methods that
+require users to choose these tuning parameters by
+hand are going to lead to some problems in terms of
+replicability and so on. But those existing materials, and not in writing
+a review article for the annual review of
+the dynamics and there we will provide
+comprehensive sites in case you are interested. I'll talk in the
+final part about the local randomization
+approach to RD design. What is the key assumption? As I said, the
+regression discontinuity is defined by this discontinuous
+treatment assignment rule. That is the definition of it. But that's still not
+enough to be able to say, "Well, there's an average
+treatment effect here that's identify I need something more." In the local
+randomization approach, we impose an
+additional assumption. The assumption is
+basically informally, it says it's really the
+original assumption that there was the intuition behind the first
+RD paper in 1965. Which is the assumption
+that, "Okay. If I go to a window
+around the cutoff, a little positive number w, so I go C plus WC minus W2, a small window, such
+a window exists, and in that window, subjects are asked
+if randomly assigned to either side of the cutoff and therefore
+to the treatment. That is the intuitive
+assumption. The intuitive assumption is, there exists a window
+near the cutoff where this behaves as a
+randomized control trial. How to formalize that, actually, requires a little bit of work, and so we're going to split
+that assumption into two. The first is going to be that the joint probability
+distribution of the scores for units inside the window is going to be known, and that's what will happen in a randomized control trial, if you assign the value
+of the score randomly, you will know exactly the joint probability distribution
+of that score. We're going to assume that
+it's now in practice, you don't need to know it. But things like assuming that everybody has 1.5 probability
+or whatever it is, will imply that this
+joint distribution. We're going to assume
+that we know it, and then we also need to assume
+that inside that window, the potential outcomes are
+not affected by the score. Basically, it's an
+exclusion restriction where the potential
+outcomes inside the window don't depend on
+the value of the score. This is a stronger assumption
+that you're going to see later that the standard
+assumption of continuity base. If we make these two assumptions then we can say, "Well, then we have a randomized control experiment
+in this window." Why is this stronger
+than continuity? Because given these
+assumptions is not only true that the
+regression functions are continuous at the cutoff, which is what you'll need for the standard continuity
+based approach. Inside the window,
+they're completely unaffected by the
+running variable, and that's what
+allows us to treat this as an experiment. This is the RD plot that
+I introduced before, so this is the typical
+regression functions as a function of the score. If this is poverty and this is child mortality, the potential outcomes are
+going to have a relationship. There's going to be a slope. But if you think about what
+that similar plot would be in a randomized experiment, if you take the score to be the random number
+that you use in your computer to assign people
+to treatment and control, and then you plot the
+regression function so that the regression function
+is the potential outcomes, as a function of that
+pseudo-random number, you'd see basically
+no relationship whatsoever between the regression functions
+and that number because that number is just an arbitrary thing
+that you would send arbitrary device
+that is unrelated to the characteristics
+of the units. The idea is, if we want to use the ideas of the analysis of experiments to
+analyze an RD design, we need to put this feature of a
+randomized experiment as an assumption
+into the RD design. The way we do it is by
+basically localizing, as I was saying
+before, is, of course, overall, we're not
+going to be able to assume that there is no relation between potential
+outcomes on the score. Because by definition, as
+we said, the RD score, if it's poverty and potential
+outcome is mortality, those two things are going to be very strongly correlated. But what we're going to assume is that there is a window. It could be very small. Close enough to the cutoff such that if I'm able to
+get close enough, the relationship between
+the potential outcomes and the scores disappears. This regression functions
+are flat as they would be in an experiment,
+and in addition, I know, or I can
+assume plausibly, what is the distribution of that joint distribution of
+the scoring in that window. For example, if I have 100 units in that window and I have 60 and 40 in
+treated and control, and I assume a fixed
+margins randomization took place, which
+hypothetically, then I can use that distribution for thinking about analyzing this
+as an experiment. Basically, if you're willing
+to make those assumptions, and we'll see and we can
+validate this to some extent, then you can analyze if
+this assumption holds, then basically you can deploy all of the tools
+of the analysis of experiments that
+you already know to analyze a regression
+discontinuity design. There's two steps that we
+need for implementation. The first one is, we're going to need to select that window. We can deploy all the tools from the analysis of experiments once we are in that window, but we need to know
+where that window is. The first step is to select it. The second step is, well, given that window, we can use just perform
+estimation and inference. The window selection
+step can be a challenge, although I will show you a data-driven method
+to do it in a minute. But in general, the challenge of using this approach is that the assumption
+of acid randomness, those two components, it's
+going to be strong and it's going to be a good
+approximation only if you really are able to
+go very near the cutoff. That will probably lead you to discard a lot of
+observations and you're going to end up
+with a small sample. That can introduce
+some challenges in terms of statistical
+power and so on. How to choose the
+window. Well, you can do several things. You can use proofing
+and covariates, which is our preferred
+method or you could find a neighborhood where the outcome
+underscore are independent. But doing some
+independence tests, or least preferred choice, you can do it based on some
+substantive knowledge that you have in an ad hoc way. But the preferred way is
+to use some driven method that allows you to validate
+and defend how you did it. The idea of using
+pre-treatment covariates and choose the window
+is very simple. Is that, if you have a covariate or more than one
+that is related. Here I'm plotting the
+regression function of the covariate as a
+function of the score. This is again the
+cutoff and this is the true window where
+local randomization holds. Imagine that you can find
+the covariate that is very related to the score overall. But it's a pre-treatment
+covariate. You know there's no
+treatment effect because this is a
+pre-treatment covariate, so you know there's no
+jump at the cutoff, and you also know
+the covariates to be very correlated with a score. What you're going to
+do is then say, well, if there is a W where the
+local randomization holds, if I start with the W, with the largest window, and I do say a difference
+in means test, so I test the null
+hypothesis that the mean of the covariance in
+the treatment group is different from the
+mean of the covariant, the control group in the largest possible
+window, the entire support, I'm going to reject that null. If I keep doing and
+now if I do it for a slightly smaller
+window, again, I'm going to reject the null that the covariant distribution, the covariate means
+are the same. But there's going to be a point when I hit
+the window where local randomization
+works when I'm going to stop rejecting that hypothesis, and then I'm going to
+stop rejecting it there, and then I'm going to fail to reject it in all the smaller
+windows contained in it. This gives you a data-driven
+method of choosing the window by basically
+choosing the largest window where you fail to
+reject the null that the covariate
+distributions are the same in that window and in all windows
+that are contained in it. I will show you in a moment how to implement
+that with the data. Once you've found that window, then you can deploy, as I said, all the tools from the
+analysis of experiments. You have the three
+canonical choices per image and Rubin box. You can do randomization
+inference, fishery methods. These methods are
+actually related to the methods Alberto
+was talking about permutation methods to use in the synthetic control design, where you will permute, run, and regenerate different
+versions of the treatment, and then create the renal
+randomization distribution under the null that way. These methods are going to
+be finite at sample exact, the advantage of this
+method is that if you have to do it in
+a very small window, they're going to still have known properties in this
+very finite sample. You can also use Neiman methods where the potential
+outcomes are fixed, but you rely on large samples, or you can use the standard large
+sample methods based on random potential outcomes
+that are large sample method. All of these methods
+will require a window selection
+and then a choice of the test statistic. If you're using Fisher
+and Neiman inference, you're going to need to think about the particular
+assignment mechanism as well. Let me go for the last bit, back to the code. I wanted to show you if I
+can move this away, yes. The RD plot that I just did a few minutes ago was part of the RD robust
+library or command. The command that I will use now, which is the RD Window when select is particularly
+the RD la Grande. Basically we have separated
+the RD software by RD la Grande by continuity based methods and local randomization methods are completely separate
+intentionally to emphasize the fact
+that they're based on very different
+assumptions and very different
+conceptual understanding of the design in some sense. What I will do here is I
+have in x is the score, and I have a number of covariates that I'm going to pass through this
+window selector. I also have the cutoff, and I'm going to have
+a few parameters here. I'm going to run it,
+and while it's running, I will continue talking. Basically what this is
+going to do is going to implement a Windows selector. It's going to start from the smallest
+possible window and we're going to impose a minimum of 10 observations
+on either side. Of course, one of the challenges of the Window selector
+is that you have to ensure that the last window that you test doesn't have very few observations because of course with one of the
+original on neither side, you're always going to fail
+to reject any hypothesis. You will have no
+statistical power. One recommendation based on some power calculations
+that we've done is to use a minimum of 10
+observations on either side. You start with the
+minimum window in terms of 10 observations
+on either side, which is this one, remember
+the cutoff is about 51.1. Then you start increasing the window symmetrically
+on either side. You can increase it by a step of length or you can
+increase it by number of observations and you continue
+to perform balance test. Then here we are
+doing balance tests for all the covariates and
+keeping the minimum p-value. This is the covariate associated
+with a minimum p-value. Then basically what's
+going to happen is that in cases where you can find a window
+where this works, you're going to find that the p-value starts being large. As you make the window larger, the p-value is going to start to drop until it falls below conventional
+levels of significance. If I show you the slides, I run it for many windows, which takes a
+little bit of time. I didn't want to do it live
+and which you see here is that this is a typical plot
+for their windows selector. You have for small windows and here's the length
+of the Window. This is the length of the
+window that I'm plotting. Here's the minimum
+p-value for each window. For windows that are very
+small around the color, so length, one or two, that minimum p-values
+are all very large, meaning that basically,
+you cannot reject that the distribution of this
+covariance is the same. Then as you increase
+the size of the window, as you move to the right, the length of the window, those p-values
+start to decrease, They're not exactly
+monotonically. Sometimes they go up and down, but there's a trend. That as you increase the
+length of the window, this covariant balance gets worse and worse as
+you would expect, because the outcome on that
+score are very correlated. This covariate is very
+collided with the outcomes. Basically, what you're going
+to do is in this case, this is the last window, this length right here, which is about little
+bit under five in terms of the poverty index, this is the last window where
+the p-value is about 0.15. The recommendation is to use a threshold for the
+p-value that is much higher than the
+conventional significance because we are flipping
+the null here. We're interested in
+the lack of effect, not none effect, so that changes the way you
+think about testing. You want that threshold
+to be higher, we recommend 0.15, but
+as high as possible. This is the last window where basically in this window and all the windows
+smaller than this one, all the p-values are all higher. There's no window here or on any sub-window where you
+reject that null hypothesis. Basically that would say that this window is the chosen one. Given that chosen window, which ends up being,
+it's around here. You see how you drop below
+0.15 in this window. We choose this one
+as the window. Now you can go to that window, I'm going to use an RD plot to give you an idea
+of the effect. If I go to that selected
+window and I plot it, basically, what the local
+randomization approach thus is after I've localized and I got very close
+then I just do a mean, I just calculate a
+constant polynomial, a mean on either side. I can look at the effect and
+I can see an increase in mortality that you can replicate with the
+command RD random, which will basically give you the difference in means and give you the p-values
+from trying to assemble and large sample. 10:54, I have one minute. I'm going to do this and this is where materials will take over when we
+came back from break. I'm not going to
+offer conclusions or big lessons because my TAs will be doing that at
+the end of his part. I will leave you hanging. We have a 10-minute break. We are going to be
+back at 11:05 Eastern in exactly 10 minutes, I think. Because I just saw
+a minute go to 55. Thank you. We'll see you in 10. Matias Cattaneo:
+Then, welcome back from the short 10-minute break. It's a pleasure to be
+here and to continue with Rocio's presentation
+where she left off. Together we've been doing
+quite a bit of work on regression discontinuity
+signs for the last almost a decade
+now, believe it or not. Some of all presenting
+today is summary of some of the main results
+that we came up with, along with some
+other things that we learned from others
+scholars along the way and they
+are all summarize in this set of slides. Rocio gave a gentle
+introduction to different RD designs
+and frameworks and then presented quickly
+the idea of RD plots. I think that is never
+enough emphasis in saying that those devices are extremely useful
+for visualization, but they can be very
+damaging if you're trying to learn something
+from them alone. Putting myself for a minute
+and econometrician had, I should say that it's
+always very important to do principal estimation
+and inference. The RD plots are great to visualize RD designs, but they can actually be
+misleading in many cases. I'll touch base on
+that quite a bit for most of my
+presentation today. I'll try to show you how
+sometimes curvature of the underlying
+regression functions or variability of the data itself could lead to misleading empirical conclusions in otherwise very clean or
+good-looking RD designs. Great. Then she also
+covered the idea of local randomized experiments or local randomization in the
+context of RD designs, and I won't touch base
+on that any longer. I'll just lift a
+couple of ideas from that when I get to my part. My part is about the other approach that I
+think is also quite popular. These two approaches
+in many ways are combined and originally, if we were to do a history
+lesson which we won't, you will recognize that
+these two approaches are coming together and
+splitting at some point, from a common approach,
+and a common approach, it could be found all the
+way back to the beginning when people were thinking about regression discontinuity, signs and conceptually they
+were thinking of them as local randomized experiment or globally randomized
+experiment in some sense. However, they would use arguably very parametric
+approaches to estimate those effects and eventually, do inference
+on those parameters. These two branches of thinking about regression
+discontinuity designs, I think both come as a response to those early
+approaches in the literature. The local randomization
+approach takes very seriously this idea of local as if an experiment
+locally and then tries to deploy ideas from
+analysis of experiments. Then on the other hand, the local polynomial
+methods come as a response to the global approaches that you would find early
+on in the literature, and I'll show you
+some examples of that as we move forward. What is the key idea in the local polynomial
+approach world? Well, it is constructed from an identifying assumption
+as it should be I think. You first think about what
+the parameter of interest is, and then how you can
+actually think of identifying it from the data. In order to do that,
+you need to build some assumption which is
+most likely untestable, and so it has to be
+believed to hold in the underlying data
+generating process for which we want to try
+to draw inferences. What is the idea
+in this context? Well, is a continuity one. RD designs from a
+continuity perspective are interested usually in parameters that are
+defined at a single point on the space of the
+score variable, or the running variable. In many cases, the
+most popular of those parameters is
+the average effect and so the more proper way to define it will be an average treatment
+effect at the cutoff. That means essentially that the parameter of interest
+is nothing more than the difference in
+average responses under treatment control and
+the treatment status or controls status for units
+that happen to exhibit a score value that is
+equal to the cutoff point. In itself these may not even be called a causal
+parameter by some and we can have a long and hard
+philosophical discussion of whether or not
+these can be called a comsol parameter that
+may depend on your views on what consolidates about how to define causal parameters. But putting that
+aside for today, the key part of this slide is to argue that something
+that is unobservable, that is based on the underlying
+potential outcomes of which only one of them we
+can see for any one unit, depending on whether they have scores below the cutoff
+or above the cutoff. That difference can be
+represented as something based on observable data and so the key going from the
+left to the right, the second equality is
+just saying that we can represent the
+parameter of interest as a function or functionals
+of observable or estimable, at least identifiable
+characteristics of that underlying data
+generating process. We're going to be
+able to estimate this quantities and
+what is the core idea? Well, the core idea
+is that if we're interested in the vertical jump, then we could in
+principle try to estimate the value of the
+condition expectation for the control group by estimating that regression
+function to the left of the cutoff and then somehow take a limit or project it down, or extrapolate it, if you wish, or interpolate it depending on the values that you
+have in your data. But ultimately generating
+an estimate of the condition expectation from the left to the cutoff point. Then you will do the
+same from the right. You will try to estimate
+the relation function for the treated units or the units who have
+scores of the cutoff, and then once you
+have a good handle on that condition expectation then you would try to project it down or predict the value of that conditional
+expectation at the graph. What is the core identifying assumption that it's operating. The background is
+one of continuity, and continuity
+here means that in the absence of the
+treatment assignment role in the absence of the
+abrupt discontinuity in treatment assignment
+due to the RD design, you would have seen this condition
+expectation functions to continue in a smooth
+way or continuous way. What we're saying here is that in the absence of a
+treatment assignment due to the RD design there should
+be no abrupt changes, it's continuous changes in those conditional
+expectation function. If that was to be true, then we could attribute
+any discontinuity coming from the left and
+coming from the right on those conditions expectation functions to a
+treatment assigned. That's the core
+identifying assumption that we'll be operating
+in this continuity frame. It's very different
+conceptually from what you would see in local
+randomized experiments where the identifying
+assumptions not only restrict the relationship of potential outcomes with a score, but also say something about the assignment
+mechanism all together. Very good, awesome.
+Having that in place, now we can think
+about how to actually estimate and conduct inference on that treatment effect from a continuity or local
+polynomial perspective. In the literature, I think
+it is by now quite clear that global approximations
+are not a good idea. I think Rocio showed you
+this picture which I have to show it
+again because it's just too cool not
+show it, really. It basically says that global fits which are
+actually the default in the RD plots are certainly not the preferred method to try to infer the jump at the cutoff. The idea is quite simple. What really happens is
+that when you try to fit a regression function using a polynomial approximation of
+a sufficiently high order, typically what happens
+is that the fit is fairly good in the
+center of support, and this can be
+mathematically shown, it tends to exhibit
+quite a bit of variation on the tails, or in
+particular the boundaries on the compact support that
+you're trying to estimate. In general, that would
+not be a big issue, but it just happened
+to be the case that in regression discontinuity
+designs it is the behavior of the
+function at the cutoff, which is from the perspective of the estimation at the boundary, is exactly the point that
+we care the most about. From that perspective, there is a clear trade-off and again, in this case, going from global fitting
+to local fitting. In a sense, what are modern ways of analyzing and estimating and conducting
+inference on RD designs. They will unavoidably
+search for localization. They will try one way
+or another to zoom in to a neighborhood
+around the cutoff, discard observations
+away from the cutoff, and then try to do inference using only those observations,
+which essentially, I believe mimics more closely the identifying assumptions that we pose in regression
+discontinuity designs. We cannot really say much
+about the vertical distance or any difference in general for the population
+in an RD design, but we can say
+something maybe for those units that are close
+to the cutoff instead. With that in mind, in
+local polynomial settings, usually what you do is you
+search for localization. Now you have a bunch of options in the way
+that you can do this. Today, what I'm
+going to try to talk about is basically focusing on most common approach
+in the literature. Because I believe it
+is closely related to traditional
+regression-based analysis in a blind microeconomics
+with a couple of twist that we need
+to take into account in order to accommodate the specificity of regression
+discontinuity designs. The way that we
+want to do this is basically, we're going to propose at least to
+first and foremost, think about localization as the core argument
+in the analysis. The way we're going
+to do this is by first choosing a
+polynomial order, which I'm going to
+denote by p and that will control the degree of the polynomial that
+we're going to use to approximate those
+conditional expectations. In the example here, that p would have been
+four and this fit could have been global; then this would have been a very sensitive fit near the cutoff. But perhaps a good
+approximation of the underlying
+condition expectation in the middle between 60 and 80. In the context of local
+polynomial analysis instead, what we're going to do
+is we're going to choose a lower order polynomial fit, and perhaps some
+weighting scheme that allow us to down-weight observations as they
+are farther away from the cutoff point in
+the space of the score. But regardless of the
+weighting scheme, because there's no
+weighting scheme that is just a traditional
+least-squares regression would follow up for a
+polynomial for Order 1 or 2. That will be linear
+or quadratic, say. Then the key aspect of that relation
+discontinuity design is that we're going to force
+ourselves to localize. Localization in RD designs would be controlled by
+a choice of bandwidth. Instead of age, we
+use the notation of little w just to mimic the
+edges of the window where the local randomization
+assumption was believed to give a good approximation to the underlying data
+generating process. In the context of
+local polynomials, we're going to use the
+letter h that determines, again the distance
+from the cutoff that defines the region
+where we are going to conduct estimation
+and inference. The way that the procedure
+typically works is you choose the desired order
+of the polynomial, you choose some
+weighting scheme, sometimes it's called a kernel and given these two
+characteristics, then you go ahead and choose a bandwidth that
+purposely discards a lot of observations
+and zooms into a nearby region of
+the curve growth. There are different ways of
+choosing this bandwidth, I'm going to discuss
+two of them and their corresponding
+optimality properties. As everything in econometrics
+and possibly life, there is no one global optima, so everything is relative
+to what your beliefs are. In this case, in
+econometrics or in statistics we
+typically define it in terms of a risk function or a loss function, so
+at the end of the day, we have to set the
+rules of the game, you need to define
+what we care about, and once we get about something, we might be able to
+obtain an optimal choice. In general, there is
+no optimality that is uniformly true
+for everything, it's all relative
+to what you deem to be important
+for your problem. In the context of
+bandwidth selection, there are two criteria
+that I believe are particularly useful to think about how to select
+that bandwidth. One refers to a point
+estimation criteria, ie we're trying to find
+the bandwidth that give us the best possible guess of what the treatment effect is in a very special sense and the sense here would
+be mean-square error. For those of you who may
+not remember what that is, that is just something
+about how good a point estimator
+is as meterized by the expected square difference between the point estimator and the actual target parameter, in our case, the vertical
+jump at the cutoff point. The mean square error
+essentially trade off, bias and variance in
+a particular way. A second way of choosing the bandwidth that I'm
+going to talk about briefly is related to
+interference property. One could say, hold on a minute, I'm not particularly
+interested in developing optimal
+point estimator for the treatment effect, although arguably that is
+a major goal in practice, but also I may want
+to ask the question, how should I choose
+the bandwidth? If I wanted to have the best possible Gaussian or distributional
+approximation in order to conduct inference, and one way to answer
+that question is by looking at the
+errors that you make, but not in terms of mean squared error for
+point estimation, but in terms of
+discrepancies between the sampling distribution
+of your statistic, typically a t-test of sorts, and it's limiting distribution. Of course, as anything in life, very few things are Gaussian, but many things are going
+to be close to be Gaussian, so we meterize or
+characterize the discrepancy between the sampling variability or the sampling
+distribution more precisely of the statistic and its target
+limiting distribution, the normal distribution. Those errors can be characterized
+and not surprising, they will also be a function of the bandwidth and they
+will be a function of the bandwidth in a different way and so you will trade
+off those errors in a different way and
+eventually you would get a different optimal way of
+choosing the bandwidth, and there are many
+other ways to do this. Great, so I've touched ways on that briefly and
+show you in practice how things change when you decide how to
+choose your bandwidth. What are the drawbacks of
+shifting this as well? Once you do that,
+you're ready to go because you know the
+polynomial over there, you know the weighting scheme
+that you decided to use. Now you can go straight ahead
+and choose the bandwidth, and once you have that
+neighborhood selected, you are ready to construct
+your point estimators, so again, the point estimator will estimate the
+regression from the left, the regression from the right, and then you will
+construct that jump. That will be the point
+estimator that we're going to call the RD
+treatment effect. Then once we do that, now we have to decide how we
+want to conduct inference, and hopefully, we
+would like to use a procedure to form
+confidence intervals, or perhaps conduct hypothesis
+tests that are procedures that are valid from some
+objective and demonstrable way. I'll talk about a couple
+of ways to do that, but they are all going
+to be related to an idea that Rocio and I, and some of my close and
+amazing collaborators have put forward over the years, which is the idea of
+robust bias correction. I'll talk a little bit
+about how this idea comes about and why we think
+it's a useful way of trying to understand
+or characterize better issues related to
+invalid inference that in other words would come out if you were to
+apply the naive or the simplistic approaches that sometimes I've seen in practice. I'll talk about that
+as I get there. Let me try to
+ground these ideas. Now I'll go a little
+bit quicker so I can get to the meat
+for the analysis. As I said before, we're
+trying to approximate relation functions
+from the control side and the treatment side locally, so to run ideas, think of the most
+prototypical case, I would argue it should be the default in
+most applications. Every time I get to review
+a lot of other papers, in other words, many
+of them are applied. Whenever I see that the linear
+feed has been excluded, I typically worry a little bit. I'm not saying that you
+should always use these, that you should only use this, but certainly, a linear
+approximation is arguably and very safe
+first step in the analysis. Then how do you do this when
+you choose p equal to 1, and then you select
+a window by choosing a bandwidth h such that all the units to the
+left of the cutoff, add up to that
+value h they are in the control group and
+then all the units to the right are in
+the training group. We're going to split that and we're going to analyze them separately from the left
+and from the right, and in each case,
+we're going to just run a least squares regression, so we're going to run a weighted least
+squares regression, from the left, and a
+weighted least squares regression from the right. Here the weights, I was just going
+to try to capture this idea that
+observations closer to the cut off provide arguably more
+identifying assumption, whatever that mean, but certainly, we would
+like to up-weight them and then observations farther away from the cut-off, but still in the region
+of analysis determined by the bandwidth, they will receive
+relatively less weight, and so sometimes
+we like that idea, and so in order to do so, we can choose different
+weighting schemes that one could use, and so there are
+three of them that are quite popular in practice, and the three I've plotted here. They are arguably the
+most interesting ones. The first one which is a default from a point
+estimation perspective, because of its
+optimality properties, which is not super
+important today, is known as the
+triangular cardinal. This cardinal is a
+weighting scheme that down-weights
+observations as they are placed away from the cut-off in
+terms of their score, they are down-weighted linearly. You can also down-weigh them quadratically and
+that is typically called the Epanechnikov kernel or we may choose not to weight or down-weight
+observations at all and that is typically
+called the uniform kernel. The uniform kernel is going to resemble a traditional
+least-squares regression. Whenever you use
+a uniform kernel, you're not weighting
+or down-weighting or up-weighting observations
+or get the equal weight, all we're really
+doing is localizing, dropping the
+observations outside the neighborhood determined
+by the bandwidth, and literally running a
+least squares regression. You can of course run two least squares regression,
+one from the left, one from the right
+or you could also package altogether in a single
+least-squares regression. The single least-squares
+regression will simply define a dummy
+variable for whether or not units are above the
+cutoff and then you will interact that dummy
+variable with the score. In this case, keep in mind
+you should also weight by the weighting
+scheme if there is such a weighting scheme unless you choose
+uniform kernel, and then, of course, this
+representation is only valid for p equal to 1. If you were to think of
+quadratic fitting locally, then you will still localize this weighs but then
+you will have to add the quadratic squared term
+and the interactions as well. Very good. Once you
+chose those ingredients, we are ready to explain
+how the procedure works. I think it's fairly
+straightforward, so I'm going to go fairly quick. Imagine this is a true
+data-generating process. Notice that there is a conditional
+expectation to the left. There is a conditional
+expectation to the right. In fact, they are
+continuous at the cutoff, these data generating
+process that we created. Importantly, they
+are not parallel, so that's something
+that is important too. RD designs are going to give
+us something about what happens there at
+the cutoff point from a continuity perspective, or perhaps something around here if we are
+willing and able to apply a local
+randomization analysis. But certainly, it
+will be hard to learn something
+about down there. The identification power of regression
+discontinuity design is naturally local to the cutoff. Anything that you
+aim to say or do beyond that point or
+the literature themes as extrapolation which has a natural analog to external
+validity if you wish, in the context of
+randomized experiments. RD designs are going to have
+high internal validity. They are going to
+give us a lot of information about what
+happens here at the cutoff, but very or no information
+about what happens outside that region in the absence of
+additional assumptions. There are quite a few different
+approaches out there, which I don't think today
+I'll have the time to touch base on but there will be references at the end and some review articles
+that we are writing at the moment that will touch
+base on those ideas as well. Great. Getting back to this, this is the regression
+discontinuity setting. This is the true
+underlying model but we don't get to see that. What we get to see is data. The data, in this case, is
+plotted in red for those above the cutoff and
+blue for those below. Of course, here I'm
+pulling together the true underlying conditional
+expectation functions as well as the data. In reality, you
+don't even see that. All you really see is the data. This is a very clean escalized
+example when the data is clearly separated from above and below
+according to the groups. In reality, these data will
+never be as nice as that. Just to give you an example, imagine that I
+wanted to plot for you the Ludwig and Miller data, which is such a
+fantastic paper and dataset for us to
+try crazy things on. So far we haven't been able to break it although,
+we keep trying. Here is the RD plot
+that you will get if you were to get a
+bunch of beams, which effectively says, plot each data as an individual dot. If we put 1,000
+beams on each side, essentially each
+beam will contain one or two observations,
+maybe even less. This is basically
+unscattered plot. Now you can see that there
+is no clean separation, as you would have hoped to
+see in my escalized example. Nonetheless, the
+question remains, is the are a treatment
+effect formally speaking that we can estimate and later
+attach uncertainty? Great. Here's the dataset
+in the sterilized world. How do local polynomial
+methods work? Well, as I told you before, you choose a bandwidth,
+the bandwidth localizes, immediately removes
+all that data, that's gone for us and now we're going to
+do the analysis only using the data inside
+the bandwidth region. Then the way we do it,
+it's quite simple. We'd run a local perhaps weighted least
+squares regression of some power p. In this case, p equal to 1 is linear and then we predict the value
+at the cutoff. Then we do the
+same from the left and then we predict the
+value at the cutoff. Here let me pause for a minute. Again, RD designs are fundamentally identified
+in the limit. Therefore, there is an
+extrapolation component that is unavoidable. In other words, at most
+and typically never, you will see observations
+exactly at the cutoff. You will only be able to estimate the
+regression functions with observations that are a slightly away from the cutoff. Maybe the first observation
+landed right there, then right here, then
+here, then here. In the particular application of Ludwig and Miller
+by construction, there is one and only one
+observation at the cut-off, which is the 300th municipality that determine the
+cutoff itself. But other than that,
+all other observations are away from that point. It's unavoidable that we
+are going to estimate using data that is
+around here and here. Then we're going to predict essentially to the
+boundary of this point. We can digress quite a
+bit about whether this is extrapolation or not and what exactly identification
+means in this case. This is something
+that we do quite commonly even in statistics or econometrics when
+you think about estimating functions
+at boundary points. If the conditioning
+variable is continuous, then the probability of seeing any one observation at the boundary will be
+zero and in practice, you will never have those
+observations there. There's always a tiny little bit of extrapolation that is going on underlying any
+regression discontinuity design. With that comes bias. Bias tends to be a big problem because usually, you try to predict what the
+conditional expectation is at that point but of course, your linear approximation only does so much of a good job because it's an approximation to the true underlying
+conditional expectation. In these examples, you can
+see that the predicted value differs from the
+actual population conditional expectation value. This vertical distance
+here is what we would call the bias or the
+final sample bias. I mean of course,
+bias is defined in terms of expectations
+so at the end, this is just one realization
+but the idea is the same. Essentially, there would
+be a vertical distance that captures this difference. We're going to refer to these as misspecification
+error, is not too bad. We go near the cut-off, we define a region, and then we postulate that a linear regression is a good
+enough approximation for this underlying unknown
+conditional expectation that needs not to
+be linear at all. The question is, how much
+of a mistake are we making? Intuitively, you can imagine
+that if you were to choose a large bandwidth and the conditional expectation
+exhibited enough curvature, then the linear approximation
+could not do a good job. In this example for instance, the conditional
+expectation looks like this and like this. Then because the
+bandwidth is "large", whatever that means, the bottom line is that you'll see that the linear feet
+would not do such a good job. If we were to shrink
+the bandwidth, then we would be
+approximating by assumption, a continuous function by
+identifying assumption. Therefore, in a
+local neighborhood, more local than h_2, we would be able to
+do a better job. That's exactly the idea. If we were to shrink from h_2 to h_1, then all of the sudden, the same linear model could
+do arguably a better job, hopefully a better job
+under some assumptions. This change in bias from a large bandwidth to a small bandwidth is going to play an important
+role in the analysis. Ultimately, all models
+are fundamentally misspecified and so
+the question is how we think about misspecification
+and what we do about it. In the context of bandwidth selection this is very clear. If the only goal was to
+reduce misspecification, we would just shrink the
+bandwidth as much as we can. In practice, that
+is a naive response to the problem because the smaller the
+bandwidth the less observations we have
+to do the estimation, and the price that we pay for reducing
+misclassification errors naturally is larger
+variability and eventually, inability to
+estimate the function at all. We need to trade-off this two, and that's where the trade-off comes in to select
+the bandwidth. We can select bandwidth based
+on a criteria for example, for point estimation that would be the idea of
+mean squared error. Mean squared error
+settings we're going to be trading off
+bias and variance finding the optimal sweet
+spot where that bank with lands that gave
+us the best trade off between bias
+square and variance. The idea here is very simple and I just show you
+a picture about it. If you choose a very
+small bandwidth, bias is very small but
+variance is too large, we are better off by slightly increasing the bandwidth and
+improving on the trade-off. Then as I keep increasing
+the bandwidth, I reach my optima and as soon as I cross
+that point, again, that trade-off flips and continuous uprise of the
+mean squared error is a beautiful convex
+objective function that you can solve for and
+under some conditions. An assumptions you can even give a fairly good characterizations of how these choice looks like. In the case of a local
+polynomial regression, the choice would look like a fraction of the sample size, in particular, a power
+of the sample size times a constant. On the constant needs
+to be estimated, estimation requires some
+additional steps which are not super important for
+the purpose of today but then eventually you
+can construct an estimator of that bandwidth and that wouldn't be the default
+in the analysis. Typically you choose the
+bandwidth by fitting these constants
+and then selecting the bandwidth in a
+data-driven way. That's really important because data-driven procedures take a little bit of the discretionary from
+the researcher away, so they reuse [inaudible]
+they increase transparency and they allow for something that
+is fully replicable. You're going to need to
+start asking questions like, why do you choose
+a bandwidth of 5, or 10, or 15? We can start thinking
+about what the data's telling you about what
+the bandwidth should? There's not got a
+unique bandwidth, here they bought a
+second bandwidth out there this bandwidth
+is different, it has a different rate of convergence i.e a
+different fraction of sample size or power of the sample size is being
+used and more importantly, a different trade-off
+between bias and variance is being done. In this COVID I shared approach which effectively targets the best possible
+distributional approximation of the t-statistic distribution, sampling distribution to
+the Gaussian distribution in the sense of COVID. I shared these two
+their distance is minimized by these
+particular choice. Here you can see that instead
+of trading off variance, when you trade off
+bias and variance. Again, there's no right answer, you just need to choose
+what you think is best for the problem
+at hand typically, the default will be to construct a point estimator that is optimal in a mean
+squared error sense, and that will be
+your starting point. Many people in practice and I would argue is a good idea, they decided on
+the bandwidth for point estimation
+and then they would like to keep that
+bandwidth fixed. Part of the reason is
+because, then they're using the same observations, both for if point estimation and uncertainty quantification, the only difference
+how to use them. That would be the proceeding at the heart of the procedure I will discuss in a few minutes. There are a couple of
+ways of doing this. I told you all these before, in practice you're going to put hats on the these things. As econometricians locked
+to put hats on stuff and that's a job which have put hats on things whenever
+we don't know them, that means you go to the
+data you get your best guess of those and then you plug
+them in and you go with that. Awesome. Once you have these ingredients,
+we're ready to go. How we're going to
+do inference here? Well, I hope is pretty
+straightforward. Once you decided on how to estimate this point and
+this point and notice, this is just a least
+square problem. We all know our least
+squares very well, we could very easily rely on
+traditional least-squares inference to try to learn about the uncertainty on
+our point estimators. The typical approach here
+would be to form a t-test, a difference in means but for
+the regression intercepts, and then that would put the two intercepts which will
+be the treatment effect. The point estimator for the treatment effect,
+the vertical distance, estimate it and then
+you would put down here the standard error
+of the difference. To the extent that these behaves in it does a two-sample problem, that the variance
+of the inference is the sum of the variances
+and you can just plug-in your preferred
+I can wide cluster robust or whatever
+venture you like to estimate the variance of the
+intercept from the left, the variance of the
+intercept from the right, you plug them in and you'll get yourself a great
+t-test statistic. Then comes the hope. The hope is that whenever you do that t-test statistic behaves like we know traditional
+least-squares models or these squares
+problems behind. That is the t-test enjoys a distributional approximation
+which is a normal 0, 1. If we get that, we are in business and that
+will be what you're typically appeal
+to every time that you use RAC in Stata or ln in R. What you do is basically, you postulate a linear
+regression model, we assume is
+correctly specified, then you appeal to either finite sample or a large sample distribution
+have features, and then you just form your preferred confidence interval which is point
+estimator plus minus say two times standard
+error and that will be the 95 percent
+confidence interval. What's the problem here? Well, the problem is one
+of misspecification error. As I told you before, the key distinctive
+feature between regression discontinuity
+designs and traditional
+least-squares problems, would be that in regression
+discontinuity designs, we know that we're misspecified. Furthermore, we take advantage
+of them specification in order to construct an
+optimal bandwidth joints. If you remember
+correctly, I said, "Oh, the bandwidth choice is a
+ratio of variance to bias." but if bias was zero, then
+there will be no choice other than infinity therefore, the bandwidth will be
+the entire region. That makes sense because if
+the model is truly linear, why we use localized at all? In practice we don't like that, in practice we do localize, we don't believe the
+regression function is linear and therefore, we are facing a
+natural trade-off. We're going to choose
+the bandwidth, the bias cannot be zero but if the bias is not zero,
+then in general, the distribution
+approximation is not correct because it's not
+centered at zero in general, it depends on the choice of bandwidth that you
+decide to use. In particular, if you were to use the mean-square
+error choice, then you will discover that the limiting
+distribution exhibits a first-order bias and that
+postulates a challenge. Now we need to account
+for that bias if we want to go ahead and
+conduct inference. We cannot just rely on 1.961 tiles and go ahead and
+use least squares methods. We cannot simultaneously choose the bandwidth for
+mean-square error on optimality and then pretend that there is no bias,
+we need to choose one. Either we choose the bandwidth
+in some other way or we account for the
+bias as it was. In the proposal that we
+typically use and recommend, what we do is
+essentially to provide a bias correction
+that comes about controlling for that extra
+misspecification error that you introduce when you use the mean squared
+error bandwidth, and then because this
+misspecification error has to be estimated somehow, you need to actually
+adjust the location of the confidence intervals
+by relocating them, they're centering being
+relocated to a point where this bias is
+no longer present, then that induces
+additional invariability and then additional variability
+can be accounted for. The procedure that we recommend and self-worth implemented, typically what it does, it adjust the location of the confidence interval and
+then accordingly enlarges the intervals by adding an account or trying
+to account for the extra variability that
+the bias correction estimate introduced in the first place. At the end of the day,
+the procedure will shift confidence intervals
+in location and scale. These confidence
+intervals will typically be displaced in their
+location and they will be enlarged by this
+additional variability introduced in the scale. That doesn't mean that
+the confidence intervals will lead systematically to less statistically
+significant results for example, because it all depends
+on the trade-off of the displacement to the enlargement of
+confidence interval. Let me show you a couple of
+examples on how this works. This picture tries to
+capture the idea of different possible bandwidth
+choices, and in particular, they mean-square error
+optimal will lead to least-squares confidence
+interval that by construction, which have a first of the bias. This is a mathematical fact. I don't think it's up for
+discussion in general. It can happen to be that particular bias constant
+is zero at that point, in which case, this
+would have not been well-defined to begin with other than
+infinity of course. Once you have that,
+there is a bias that leads to over-rejection
+of the null hypothesis. In practice, we will see that choosing the optimal
+mean-squared error bandwidth for point estimation in RD and then constructing
+confidence intervals using least-squares ideas
+will lead in general to misspecification
+in the location of the confidence
+intervals and over rejection of the
+null hypothesis. That means that we're
+going to be over rejecting the null hypothesis
+of no treatment effect and a back of envelope
+calculation tells you that [inaudible] that those
+confidence interval have will be roughly
+82 percent for a 95 percent nominal level
+confidence interval. That means you're
+going to be rejecting roughly 10 percent of the time incorrectly
+the null hypothesis. How do we fix that? Well, as I told you,
+we can re-center the confidence
+intervals but then we need to enlarge
+them appropriately. That's the idea and this
+problem might or might not be more important as you move yourself in
+the scale of bandwidth. If you choose a large bandwidth, large relative to the
+mean squared error 1, then the problem
+will be exacerbate. More bias will kick in and further the distance
+in the centering of the confidence interval from the true population centering. If you go to the left of
+the mean squared error, something that is
+called under spoofing, then you can mitigate
+these problems so you reduce the
+bandwidth relative to the mean squared error and eventually, if you
+reduce it enough you might be able to
+regain nominal levels. Theoretical large
+standpoint nominal levels that had been populated. Of course, that implies
+a loss of power. So typically as you do that
+you can see the length of the confidence intervals
+become larger and larger and that
+is the mechanical again because the
+bandwidth is shrinking, less observations are available, the variance is larger and the confidence
+intervals explode. Great. Let me now show
+you this in action for five minutes because
+I think it's cool to see how all these
+ideas come about. What I'm going to do is I'm
+going to try to go back to the original paper of
+Ludwig and Miller and try to replicate results
+and in particular, one thing that I love
+to do always when I see these papers
+is to say, well, in this paper they
+chose a bandwidth of 9, 18, and 76. Of course, they
+are not to blame. They did that back in 2004. We didn't have all
+the theory and ideas that we have today. But nonetheless, it would be
+cool to ask the question, what is nine relative
+to the mean squared error bandwidth that you
+would obtain nowadays? We can do that and so let me
+just show you an example of what that would look like
+if I can find it of course. Maybe down here, there
+we go, beautiful. The typical example
+would be like this. This will be a plain manilla estimate for
+the Ludwig and Miller data so on the left-hand side you have 2,400 observations. On the left you
+have about 300 and a few missing data values point there and then the
+conventional here is nothing more than these pinky intervals and procedures so the least
+squares approach to this problem and then there
+you see now that you have a point estimate
+and because this is chosen to be mean-squared
+error optimal, that means that this point
+estimate is the mean squared error point estimate of
+the RD treatment effect. Associated with it you can construct a confidence
+standard error. The standard error
+is straightforward, least-squares variance, the standard error in
+this case is an acre wide [inaudible]
+robust estimator. Then we have two options. We can do inference based on
+the least squares approach, that is the one that assumes
+no bias which again, it would be inconsistent with the idea of
+choosing a mean squared error bandwidth in the first
+place but nonetheless, you can do that I guess
+and then alternatively, you can actually
+control for the bias, bias correct, and then enlarge confidence
+intervals accordingly. That will be the
+confidence interval that comes out down here. In this example for instance, the p-value actually decreases. It goes from 0.046-0.42. That essentially means
+that the shifting of the confidence interval
+away from zero is more than proportional or some codes depending on the
+distribution relative to enlargement of the SK and so in this case the
+p-value actually goes down. It's not even true of
+course and by doing that least robust approach you automatically
+feel significant. It really depends on the
+application at hand. Now, more importantly,
+what is nine? As I said before, they used nine
+here and they used 527 observations right here so what is nine for
+them and let's check. Well, here the optimal bandwidth is actually almost seven, so they are already a
+little bit over smooth. They have a bandwidth
+that is larger than the optimal bandwidth, and then that means in
+the picture here that if this is seven then they are about nine,
+they are about there. In this example, they
+are a little bit away farther out
+from what would have been the optimal mean squared error bandwidth in the
+region where the bias of misspecification error is even larger than you
+would expect to see. That's okay, that's
+what it is and so we can actually replicate
+their results, so we could actually
+use nine as they did and so here's an
+example where we can just mechanically
+choose a bandwidth of nine and then see what
+the results would look like. Now you can see that
+with a bandwidth of nine, the coefficient, the point estimator
+actually is decreased by about 10-15 percent and
+that maybe arguably potentially due to this
+misspecification error with two large bandwidths
+to approximate correctly the conditional
+expectation near the cutoff. In particular, if you
+want to replicate their results you will see that that result actually
+is minus 1.895. In order to do that
+they actually use a uniform kernel because
+back in the days they were using the least squares
+regression with no waiting so instead of using
+a triangular kernel, what they did is they
+did a uniform kernel. Here is the replication for them with a uniform kernel
+and now you get exactly the minus 1.8952 which is a result
+reported in the Q j. Then there is some issue
+with the standard errors which in the interest of
+time I'm not going to touch base on today but if
+you explore the code you can play with it and get a
+sense of how that works. Cool. That's a short replication of that in the interest of time. Now, in the last minute or two since I started
+two minutes late, I earn my two minutes, I'm going to mention
+quickly ideas of falsification and validation. I know I'm not going to be able to cover everything
+here and I knew that coming in, so I just gave you one slide on
+this and the slide basically is just
+a reminder that regression discontinuity
+designs to me at least, and one of the reasons
+I really liked them when I started
+working on them was that to me they were
+particularly good at falsifying, verifying, validating,
+interpreting. They have a bunch of
+interesting features that are unique and not
+necessarily portable to other observational
+studied methods and in particular, here
+I mention a few so there is a very interesting way
+of thinking about whether there is manipulation of
+the units near the cutoff, so underline the
+idea of continuity or the idea of local
+randomization. There is this notion that units should not be
+able to systematically place themselves in
+one treatment group or a control group
+by their choice. In other words, if they could systematically place their
+scores above the cutoff or below the cutoff then obviously, the comparability
+will no longer be there and intuitively
+you would expect them to be quite different between treatment
+and control groups. This idea was originally posed by more practitioners
+and later it was formalized and investigated in different ways and so there is a very popular test which is called the density
+continuity test, was proposed by Justin McCrary and that one, in particular,
+seeks to try to check whether there is a
+disproportional jump in the mass of units on one side of the cutoff or the other. There are different
+ways of doing that. I'll show you very
+quickly one visually because I think
+it's cool to see. The chart basically
+estimated density of this core variable from the right and from the
+left and they hope to see that there is
+no discrepancies, lots of prices in
+terms of the number of units on either side
+of that cutoff. You can also look at
+the same idea from a binomial assignment that's perspective and so this code immediately tells
+you p-values for household pricing it is to see different
+number of units on each side of the cutoff and then you can see
+very quickly that p-values are away from
+any significant levels. That means that the
+number of observations expected to be seen
+on each side of the cutoff for different regions around the cutoff are roughly
+what you would expect to see if you were to
+randomly assign them and that appeals to the idea
+that they are not systematically placed on
+one side or the other. Of course this is neither
+necessary nor sufficient. They could be placing themselves
+one side or the other but they will do
+it in such a way that they are
+compensating the cutoffs. This is just a very
+nice realistic way of thinking about the problem. Then here's a list of
+many other ways of falsifying and investigating
+the validity of the design. I won't be able to
+touch on all of them. Let me just mention that pre-intervention covariates
+is a great idea. This was proposed
+by several people, including Ludwig and Miller. They have a great
+second table that I cannot put here where
+they check whether the treatment has any
+effect on outcomes or pre-intervention
+covariates that are deemed to not be affected
+by the treatment. That's a great check that indeed the channel of the
+treatment effect is coming from to the outcome that
+we care about and not added outcomes or
+pre-intervention covariates. There are many other
+tests that you can do. Good. I'll stop here for
+the interest of time. Let me thank not only on
+my behalf but also on Rocio since we are sharing
+the slides to begin with. Let me just mention that
+in this website here, if you were to go there
+you can actually find all references for all the stuff that we discussed today. 

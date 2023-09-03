@@ -1,0 +1,615 @@
+Gita Gopinath:
+Thank you so much. Thanks, Jim, for that
+very kind introduction. It's a real honor for me to
+give this lecture, Kate. Marty was an exceptional
+colleague and a dear friend. I would describe him as an
+incredibly helpful colleague. I remember when I came
+to Harvard in 2005, I was trying to get
+access to data from the Bureau of Labor
+Statistics and that required Harvard to countersign a
+contract with the BLS. They were giving me an
+possibly hard time to do it. I spoke to Marty and Marty said, why don't you just do
+this with the NBER? It took 24 hours
+and I was all set. That was an example. The other thing that I
+find incredibly memorable about Marty is that he was
+so respected worldwide. I went as a part of
+the Neemrana group to China when I was in India and people
+really admired him and respected to them from all
+these different countries. The impact he had obviously
+had a big influence. One of the people I
+think of as I've moved from academia to
+the policy space. In terms of the lecture today, I am going to talk
+about the topic is related to capital flows. I'm sure all of you know this, but in case you don't, actually want to probably
+the most cited paper of Marty's is the
+Feldstein-Horioka puzzle, which basically was looking
+at the relationship between savings and investment
+in the countries was an empirical relation. He just noted that there was very high correlation between
+savings and investments, savings rates and investment
+rates in countries. Under the benchmark that
+you would think, well, if this was a perfectly
+integrated world in terms of capital markets, we really shouldn't see that higher correlation between savings and investments
+in the country. That spurred a very big body of work on trying to understand different
+explanations for it, including some on
+home bias and so on. But I remember this
+paper as I was thinking about what lecture
+to give today. What I'm going to go into
+is a little more current, which is a question that many policymakers in emerging and developing
+economies are grappling with. Actually, the reason I'm
+giving you this lecture is because it gives you a flavor of how questions arise when you're at the IMF
+and topics come up. Then you see a
+disconnect between what the policy world wants and
+what the academic world has put together and we go and dig in and do some
+additional research. Once you do the research, you have to get the board
+of the IMF to sign on a new direction in which the meeting policy
+should be going. Then you go to the
+operationalization phase, which is you start when you deal with
+190 member countries, you have a new framework that
+you use to deal with it. At this current juncture, this question is very important. I put this slide up. This is called the turn in
+the global financial cycle, which is basically saying that
+after about two years when central banks around the world kept interest rates
+are extremely low and financial conditions
+were really sanguine, we're beginning to see global financial
+conditions tightened. About 75 percent of
+the central banks that we have interest rates
+that are going up, they're raising interest rates. You can see that right at
+the end of this graph, this thing moving up, which is basically
+that you have, if you look at, for instance, the global and the IMF, emerging markets excluding
+China, it's turning up, so we have a worsening or a tightening in
+financial conditions. The right graph also
+tells you something about where we are right now. This is the fraction of emerging markets whose
+yields exceed 10 percent. This is their foreign
+currency bond yield exceeds 10 percent and those are coming up
+to around 30 percent of these countries. Alongside, we have
+what classically happens when you have a
+global financial cycle, is you have a
+strengthening dollar. Why is all of this particularly concerning is because we've
+had a period before now. When you've had an increase in external debt of these emerging
+and developing economies, both in foreign currency
+and in local currency debt. Now you can see that there was some learning that happened, which is the last decade, everybody realized that having too much of your
+debt and foreign currency can be a problem, so you want to switch to the local currency
+data local currency that has also gone up. Why do emerging and developing countries worry
+about a period of this kind, is that we know that
+interest rates are going up. In our models, there will be
+an R star that's going up. But usually, along with R star going up or
+interest rates going up, you have a phenomenon called taper tantrums and sudden stops. Let me just explain to
+you what those are. This is 2013 taper
+tantrum at the time when the Fed was beginning to talk
+about tightening policy. This was Ben Bernanke, gave a speech where he
+said something about the fact that we may start quantitative tightening sooner, which means the interest
+rates may go up sooner, but no action was
+actually taken. But just the expectation that
+there would be tightening led to increase in UIP spreads, uncovered interest
+parity spreads, which is the excess return on local currency bonds issued by emerging and developing
+economies relative to dollar interest rate. That excess return goes up
+by around 200 basis points, which is quite a
+bit in this period. That's called the taper tantrum. This happens quite a bit for emerging and
+developing economies. Any communication coming up
+major central banks leads their borrowing costs to
+move quite significantly, even if it's only for a
+brief period of time, it tends to move and
+that creates a need for intervention by
+their authorities. The right graph is what's
+called sudden stops, which is much more
+serious than the tantrum. The sudden stop is
+supposed to be an episode where it's a
+non-linear phenomenon, is like you hit big
+borrowing constraint and you get a much more
+non-linear response, which then leads into having
+a very big growth impact. You can see that those
+with the episodes of the sudden stops, the global financial
+crisis shows up as one. The temper tantrum
+is not a sudden stop because you didn't really
+have a big growth impact. These are financial
+market responses that these countries
+are dealing with, which a typical advanced economy with deep financial markets
+doesn't even bother about. This is the problems that
+their markets are deep enough. One set of investors
+want to pull out, there's enough of the
+other ones that come in and you don't have this
+sudden stop or taper tantrum. The question that gets posed is our interest rates and
+flexible exchange rates enough to manage a Turn in
+the Global Financial Cycle. If you go to any textbook, by textbook I mean
+undergraduate textbook in international economics, there's nothing you
+have to do when you have flexible exchange rates. You move your policy rate around if you need to, and
+that should be enough. That's just the
+right thing to do to manage a global financial cycle. In fact, again, this comes from Ben that at the time when we have the
+opposite phenomenon, which was right after the GFC when the Fed was
+doing a whole lot of quantitative easing and at that time there was capital that was going into emerging and developing
+economies flowing in, these countries
+complained and they said, this is the problem for us, all this capital flow that's
+coming in because you're keeping all levels of interest rates low is leading to overheating
+in our economies. That's a huge problem for us. Ben said, well, the reason
+this is a problem for you is because you don't let your
+exchange rates appreciate. If you let your exchanger
+rates appreciate, you'd be just fine
+and that would give you the insulation
+that you need. That's what my talk
+is going to be about. Three years back when
+I went to the fund. These 160 member countries or so basically said, this is not satisfying. That you tell us that
+flexible exchange rates does the job in response
+to volatile capital flows. We want to dig in,
+we need to do more. The reason we need
+to understand better is because in practice, countries do many other things. If you look at most
+of our members, in addition to using the
+monetary policy rate, they use FX intervention, they use capital controls, they use domestic
+macro-prudential policies, they use all of these. But what was tough as the IMF to be able to
+have a conversation, discuss these exact
+policies with them, was that there was no framework. There is no welfare
+maximizing framework, the ones that we
+would like to use, which integrates these multiple tools
+and multiple frictions. These were tough conversations because we're doing
+x because we have y, we're using these
+two instruments. It was not clearly what is the friction
+you're addressing? What's the externality?
+What the problem is. Three years ago we
+basically at the IMF, hey, we need to do this. We need to do the research
+because it's actually, there's nothing like I can turn to aside of papers and say, well, hey, we've done this. We know what the answer
+is to using these tools. There was a hole in that space in terms of
+what we needed to build to understand how to advise countries on using these tools and if and when
+they should do it. There are many papers that got done over the
+last three years. I'm only flagging the two
+in which I was involved, which is what I'm going to base the rest of my presentation on. But there has been much other
+work and this is joint work with my coauthors at the IMF; Suman Basu, Emine Boz, Filiz Unsal, Francisco Roch. If you want to look at
+the papers underlying it, those would be the two
+papers to go and look at. That's what we did. Again, three years
+ago we started out on this and we said, we need my predecessor, who was first deputy managing
+director, David Lipton, gave it the name integrated policy framework and that stuck. That's what it's called,
+even though sometimes people don't understand what that means when you say that, but that's the language,
+that's the terminology. The way we started it is the
+way we would do this in, if we were thinking of
+solving this problem, which we would start by saying, what are the frictions
+and the externalities? Then of course, we put together
+a model to understand it. Then I'm going to
+apply that model in a specific context here, which is about managing the
+global financial cycle now and what would optimal
+policy responses be. We have a good deep literature that looks at all the kinds of frictions you can encounter in the open economy context. The first friction, of course, is one of price stickiness. This was what underpinned the classic
+Mundell-Fleming model. That was the main friction, which basically
+had that firms set prices in advance and
+those prices did not respond immediately to any new shocks and
+because of that, you could get
+fluctuations in output. Of course, in the
+open economy context, it's not enough to say
+that prices are sticky. You have to also
+say which currency the price is sticking in. There was a whole body
+of work that looked at different possible forms
+of price stickiness. I pushed the dominant
+currency pricing framework, where prices are set mainly in a couple of currencies and the dollar
+is dominant in there. That's been a well-known fact. It's not unknown that
+the dollar plays a huge role in global trade. But in the last
+decade, 10 years, the research has basically show that that actually
+means something. It's not just that the
+price is quoted in dollars, but everything that that implies in terms of the real effects
+on imports and exports, on farm profitability, and so on is what you see. There's been a big body of work that shows that's the case. Anyway, once you have
+price stickiness, then you have the
+first externality, one externality, which is the aggregate
+demand externality. I gave this to Emmanuel
+and Yvonne for making this super clear and making front and center in their
+beautiful econometrical paper. But it's to base it the
+aggregate demand externalities, that is just the fact
+that consumers don't internalize the effects of their decisions on
+aggregate demand. This can be a problem
+if prices are off, so if prices are too high and you are consuming
+too little, you're not internalizing
+the fact then that that can generate lower output
+and higher unemployment. That's the aggregate
+demand externality. Now, in the open
+economy context is also something called the terms
+of trade externality, which is basically the fact that when firms have pricing power
+in international markets, they take into account
+the fact that they have pricing power
+and that their own demand curve's downward sloping. But they don't take into
+account the fact that the whole country's demand curve is also downward sloping. Because of that, this
+gives an incentive for the plan and we actually want to manipulate the terms of trade. Gali-Monacelli is one
+presentation of this. But this is pretty much, this is they're all over
+the literature once you're doing any kind of
+price stickiness, these terms of trade
+externality shows up. One of the things
+that we do when we're working on these models, you're working at the IMF, is you're also talking to
+the authorities about what they think as being
+meaningful frictions. The terms of trade externality is something they
+just don't get. Because the terms of trade externality in
+this context would say that your country is
+actually exporting too much. You want to actually reduce
+exports so that you can move the relative price
+of your goods in international markets
+up and therefore, that will be a positive
+terms of trade effect. They just don't get it. That's not something
+they care about. You will see that when
+we build a model, we mute that particular
+channel because we don't want a policy
+prescription that's based on a terms of trade externality. The next friction,
+what they worry about, is the fact what we
+call shallow markets, which is that there's imperfect substitutability
+of assets. By the way, this is a
+parallel literature that came up at the same
+time that Mundell and Fleming were focused
+on price stickiness. There was Kouri, who was focused not
+on the goods market, but on the asset market
+and about this fact of imperfect substitutability
+across different assets. Specifically, imperfect substitutability
+between local currency bonds and foreign currency bonds. That for some reason was less explored literature
+for awhile and while yes, there was work done on it, but Gabaix and Maggiori credit for resuscitating
+that line of work. Then there are more
+papers that have come up. What kind of an externality
+does that generate? It's something what we call the financial terms of
+trade externality, which is basically that
+because these two assets, suppose this is Mexico
+and Mexico's issuing peso bonds and you have financial
+intermediaries who are then lending to you. They charge you a
+premium because of the currency risk for
+holding those peso bonds. Now, as an individual in Mexico, you're not internalizing
+the effect of your issuance on that premium. But for the country as a whole, every time you're
+issuing new peso bonds, you are affecting that
+premium and so for the country as a whole,
+that obviously matters. That's an externality again, that comes in which a
+planner would care about. They would care about why? Because It's not
+always a problem. It's a problem when these
+financial intermediaries are international
+because that's lost resources from your country to the international
+financial intermediary. If all it was was that
+it was going from one domestic agent to
+another domestic agent, the planner wouldn't
+care about it. But in this case they
+do if it is held, if it goes out externally. The other externality are external debt limits
+and sudden stops, which is what I was showing you on the slide
+before, which is again, the fact that when you borrow, you are subject to a borrowing constraint and the amount that you can borrow
+is tied to a collateral, and the value of that
+collateral can move around when your exchange rate moves
+around, and therefore, again, as a household, when you're making a
+decision about how much to consume you're not concerned about the effect on the nominal
+exchange rate and so on. Again, that's an externality that matters for the country, but you just don't
+individually internalize that. In the literature, which would be the
+standard way to do it, in the academic literature, would be to analyze
+one friction, one externality at a time. Well, most of the papers basically look at one of
+these frictions at a time. There are exceptions
+and those are some of the papers which look at a couple of those which is sticky prices and
+external debt limits, but so the challenge
+here when we set up to do this work
+was to say how can we build an analytical
+framework to actually incorporate these different
+externalities that the policy world
+that we care about? What would that give us
+in terms of predictions, including for now,
+which is in terms of managing the turn of the
+global financial cycle? Let me just walk you through
+the model very quickly. The setup that we have in
+the two papers that I listed before is richer than what
+I'm going to show you. This is a bit of a
+streamlined version. I'm not going to have any role for
+macroprudential policies. The paper has the housing
+sector and so on, which gives rise to it. I'm going to show you a
+much more streamlined model just to give you a
+flavor of how we played with it and what
+the takeaways would be. In terms of the sectors,
+we have households, we have firms that produce and sell goods
+that are tradable, we have domestic banks, and we have international
+financial intermediaries. The policy tools
+have policy rate, related exchange rate, capital controls,
+and FX intervention. We set it up as a
+three-period model because we wanted to look at both
+ex-ante and ex-post policies. Policies that you would put
+in place before the shock is realized and policies
+that you would put in place once the
+shock is realized. That gives us three periods. All of the action is in
+Period 1 because that's when the shock is realized, and Period 0 and Period 2
+are just a single state. The interesting part
+of the model is the financial flows diagram, is the financial markets.
+Here's what we have. We have domestic banks in
+this emerging market that is borrowing from international
+financial intermediaries and lending to households. They borrow in domestic currency and they lend to the households. There are limits to how
+much they can do this, which is that it's tied to
+a collateral constraint, which is that the amount of
+debt that they can issue has to be bounded above by
+a value of a collateral. Importantly, the value of the collateral is sticky
+in the domestic currency. If I rewrote this in terms of foreign currency terms by just deflating with
+exchange rate, you can see that the
+right-hand side, and again depending
+upon what it does, but the right-hand
+side will fall, which means the amount
+that you can borrow in foreign currency will decline whenever the exchange
+rate depreciates. Now what about the
+financial intermediaries? The financial
+intermediaries who are lending to the domestic banks in domestic currency are funding themselves in world
+capital markets. They borrow at i star from the world capital markets
+and they lend it, i_t, to these domestic banks, but they subject to
+a capital control, a capital tax on their earnings, so that's 1 minus [inaudible] t, and this is just taking into account the exchange
+rate movement. Under uncovered interest parity, if you had uncovered
+interest parity, this term in expectation
+would be zero, which is either an expectation, what you return you make on your domestic currency lending is exactly equal to the
+cost of your borrowing. But we have this shallow
+market phenomenon. We allow for the shallow
+market phenomenon, and that's because of the
+imperfect substitutability of domestic currency bonds
+and foreign currency bonds. That is given by
+this term over here, which by the way is a framework of [inaudible]
+and [inaudible], which is basically that this
+excess return is equal to Gamma times the amount of domestic currency bonds those intermediaries
+have to hold. This is Gamma times.
+It's not a function, it's just a parameter Gamma
+times what's in brackets. Now, there's another financial intermediary
+that comes in there, which is the S_t, which are
+basically noise traders. The noise traders
+are irrational. They come in out of the market, and they are the
+ones that generate taper tantrums in our world. What FX intervention can do is basically undo
+those taper tantrums. Now we have to be
+careful because if we're saying that the central
+bank can come in and get rid of this
+friction in the market, there has to be limits
+to how much you can do this because we
+really don't believe that the central bank is
+going to intermediate all of the private
+sector's transactions. We only allow this FX
+intervention to work when it's dealing with these noise traders, people
+who are coming here. There are limits to how
+much they can do it. Then we have a cool trick, which is that we want
+to make this model have the domestic currency
+bonds and have the foreign currency
+bonds and have the mismatch in there. We have that a
+fraction Lambda of these financial intermediaries
+are owned by households. What does it mean? If that Lambda goes to one, which means all of these
+intermediaries are owned by the domestic
+households, then effectively, all of the debt of
+this country is foreign currency debt because
+what you're doing is that the household is borrowing
+in local currency terms, but you own these firms that are basically borrowing internationally
+in foreign currency. As Lambda goes to zero, you have no currency
+mismatch and you basically are then borrowing highly in your own currency so you don't have the currency
+mismatch problem. Then the rest of it is pretty standard
+on the household side. The consumption of imported
+goods and home goods. On the pricing side,
+not surprisingly, we have dominant currency
+pricing for exports and other export prices are
+sticky [inaudible], IPS. With this, there are
+the following wedges. The first is the
+aggregate demand wedge, which is what I said earlier. What this basically
+is the gap between the margin rate of substitution between consumption and leisure, and the margin rate
+of transformation, which comes from the
+production function for the traded good. This, again, comes
+from the Yvonne and Emmanuel's very nice work. There's that. You can end up in a situation where because
+prices are too high, you end up with this
+wedge being positive, which means the
+economy as a whole is producing too little. The pecuniary externalities
+which you bought through the sun stops also feed
+into this wedge, the aggregate demand wedge. You also have the uncovered
+interest parity wedge, which is the gap in terms of the excess
+return that you are paying on domestic
+currency bonds. This is the utility
+loss from it. That's the margin utility loss from that additional
+return that you're paying. Like I said, it is a problem only to the
+extent that you have some of this that's
+owned by foreign agents. You have actually resources that are being sent
+out of the economy. If it wasn't the case,
+this will not be. If Lambda is equal to 1, then this is not a wedge that the planner needs
+to worry about. We ignore the terms of trade manipulation model for the reasons that I talked about previously and we can
+do that by basically the planner ignores
+the impact of its policies on the
+export price of the good. Without showing you that slide, we're basically solving for
+the Ramsey plan of problem. But now let's get into the
+question I started out with, which is managing
+the financial cycle. I'm going to put this
+into boxes that can help to see where results lead us. You have a country that can have deep FX markets and whose dead can be far from the debt
+limit. Think of Canada. Canada is a country with
+deeper fixed markets. It's debt is far
+from the debt limit. It's not a problem. But then you're going
+to have countries debt may be low and far
+from the debt limit, but has shallow FX markets, which is their currencies, bonds are thinly traded. Then of course you
+can have countries whose debt is near
+the debt limits. Let's just look at some cases. This is the simplest case, which is what happens if you're in this box
+and your country, or Canada, and you're in the tightening of the
+global financial cycle? For you, you're facing this, the interest rates are
+going up where you have deep FX markets and
+you're far from dead limit. The FX price would be that
+you would reduce imports, you would reduce your
+debt but otherwise your consumption
+of home goods will not change and level of
+exports would not change. Now you can mimic that exact policy if
+you have sticky prices, you can get the same outcome by letting your
+currency depreciate. Currency depreciation gives
+you the exact same effect. You get your inputs to decline, your reducer foreign debt. You are at full
+employment in the setup. This is the box I would say is the textbook
+box that we have, which if you have deep FX markets and you're
+far from the debt limit, then you can let the
+exchange rate do its job. You can use the policy
+rate and you can just exchange rate and
+then you're good. We have a policy rate and
+exchange rate depreciation. Basically, in this case, my three Pyrrhic is literally
+keep the exchange rate. You move the exchange rate and policy rate doesn't change. Now let's look at a country
+that has shallow FX markets. It's far from its debt limit
+but has shallow FX markets. Now, a lot of countries like [inaudible] Indonesia, Malaysia, Thailand, they constantly worry about the situation that they
+have shallow FX markets. Then what happens in this case is you actually end up with, in my example that one of the cases that we show
+you for starkness, which you can see is that let's look at a shop which is what we call this the
+foreign appetite shock, which is S, these are
+the noise traders. This is like a taper
+tantrum shock, which some of those
+noise traders who are coming in and buying your domestic currency bonds decided they don't want to
+do that and they go up. That's a problem for you. This is a completely
+annoyed shock. It's not a fundamental shock. In this particular case, the result that we would
+arrive at is you actually want to keep your exchange rate and your policy rate unchanged, but rely only on capital
+flow measures and FX intervention to undo it. Why is that? This is what
+I mean by an S shock. The external premium that you're paying in this
+country when you have shallow FX market is increasing in your
+amount of external debt. An S shock basically
+moves this curve around. At every level of debt, you're either paying
+a higher rate, you're paying a
+lower rate depending upon how these noise
+traders come in and out. In this particular case, when you have shallow markets and stark case where you have this symmetric
+kinds of shocks, then Cadbury controls
+and FX intervention does the job for you and you should not rely
+on any other tool. How does that work? There are two things as a
+policymaker that you can do. Well, you can do many things, which is, if you look
+at the right-hand side, this is the excess
+return that you are giving your financial
+intermediaries. When S goes down, that means that the guys with the balance sheet
+frictions need to hold more of domestic currency debt and they demanding a higher
+premium for holding it. You can meet that by you
+could raise the policy rate, you could raise interest rates, or you could give them
+a subsidy on the, this is the capital
+control subsidy. You could give them
+a capital controls. Because I'm starting with
+zero capital controls. In this case, this translates into capital controls subsidy. The benefit of using the
+capital cost subsidy as opposed to using the
+interest rate is at this, when you use the
+interest rate you're affecting borrowing
+decisions at home, all the consumption
+decisions at home, and you end up with
+excess deleveraging. By using the capital
+control subsidy. You can therefore separate
+the policy rate that domestic agents face
+from what you have to give to the financial
+intermediaries. Nothing you could do is you
+could do FX intervention, which is basically what
+you do is you would sell FX and you would buy the
+domestic currency bonds. You would take the opposite
+side of these noise traders, which is what several of
+these central banks do. Then the question is, why do I need to use both
+these instruments? I've told you why I don't
+want to use a policy rate because it's going to
+affect other margins. The question is,
+why do I need to use both FX intervention and the capital control? The main reason is that each instrument is
+costly in the setup. When you use a capital
+control subsidy, you're losing foreign
+exchange to the foreigners. Then when you do foreign
+exchange intervention, you're foregoing carry profits. You use the two together
+and when you do that, then you completely get rid
+of the effect of the shock. Another way of saying this
+is that in response to non-fundamental shocks that are hitting you, hitting
+our economy, you actually don't want
+to use your policy rate in your exchange
+rate but instead these other instruments
+are much more targeted and get you the
+insulation that you need. I see we are on time. I've another 10 minutes,
+that's the time? Then I move on to the case where I look at more what
+looks like a sudden stop, which is the case when
+Kappa H goes down, which means that the value of your pleageable collateral is
+now viewed as being lower. The markets just
+think that you don't have as much collateral as they thought you did
+have in the past so they heightened the
+borrowing constraints. If you're near the debt limit, it does depend upon
+whether you have deep FX markets or
+shallow FX markets. Because if you have
+shallow FX markets in addition to the
+sudden stopped piece, of course there's the
+other piece which is the premier that you're
+paying on your bonds. I'm just going to make a couple of results on this
+and just move on. This is what basically the
+sudden stops shock looks like. It's basically moving the
+your debt limit to the left. What happens here in the sudden stops shocks case
+is, what do you want to do? You have foreign
+financial intermediaries who now think that your
+collateral is of less worth and that leads
+to a tightening of your ability to borrow,
+which reduces consumption. In this case, what you
+want to do is you want to depreciate your currency because by depreciating your currency, you're going to tilt demand, at least towards your goods for the same level
+of consumption. The problem with doing
+that is of course, that if you have foreign
+currency borrowing, then that depreciation
+of your currency is then going to tighten the
+constraint even more. But if on the other hand, you have your debt is
+in local currency, then that negative
+effect is not there, at least by the amount of
+local currency that you have. But in the setup, what you end up having is
+because of the fact that these sudden stops
+expose lead to big drop in consumption and therefore
+through that an effect on the amount of output
+that you produce. Exotic what you want to use is you want to use
+a capital control. Again, in one of Yvonne
+and Emmanuel's papers, they have the case when all of the debt is in foreign currency, that you would use an
+exotic capital control. But of course, if it is in
+local currency terms then you will use less of that
+exotic capital control. This one last thing which
+is a question that many of these policy makers grappled with in the emerging markets, which is how much to regulate the amount of borrowing
+in different currencies. They are very concerned
+about mismatch. They're very concerned
+about their banks having exposure to foreign
+currency borrowing. In many cases, they actually restricted and they
+say you mismatch if you're borrowing in
+a currency in which your earnings are in. If you look at what
+happens if you actually do that and you move a country which is at a point where it has
+shallow affects markets, then if you say the words and you move only towards
+local currency borrowing, so the domestic banks get out of this intermediation
+business intermeding between foreign currency
+and domestic currency. On the plus side, you get better hedging. That's for sure. Because if you're moving more
+toward local currency debt, you use your exchange rate to depreciate exchange
+rate in bad times. That reduces also the
+value of your debt that is hold externally so that
+moves in the right direction. But on the other hand, because you're shrinking
+the intermediation that can be done for your currency
+bonds in markets, you end up with having to
+pay a higher premium on whatever amount of local currency borrowing
+that you're doing. Again, optimal effects,
+mismatched regulation depends on a fixed market depth and when
+you have deep FX markets, then of course you can ban FX mismatches entirely
+but when you have shallow FX markets
+you may regulate but not want to ban
+these FX mismatches. Coming to the conclusion, again back to my question of our interest rate and
+flexible exchange rates enough to manage a turn in
+the global financial cycle? Again, the textbook is yes, I will just add a line to it, which it said when markets are deep and you're away
+from the debt limit, then yes, that will be right. But more generally no, in other cases and in fact, in some cases, like I showed
+you for the S shocks, their instruments may
+actually dominate. Now, to be clear,
+we are the IMF, so we are very nervous
+about telling countries to use capital for
+our measures and ethics intervention and so on. Yes, this is theory,
+it tells you, gives you insights
+about what can happen and what instruments
+you may want to use but a big part
+of the work over the last three
+years has also been about how to use
+handle with care, which is to be in the model, the instruments work well, there's no evasion, people
+behave as you model them. There is no concern that they will be
+misuse of instruments. This is a fantastic
+Ramsey planner who's making these decisions. But obviously for the members, these are all the
+concerns that they have, which is that if you say
+that this tool is good, you can use it, then
+you might have people misusing it all over the place
+for all the wrong reasons. Some instruments are
+worse than others. The big part of the work
+over these last couple of years was basically a whole
+lot of empirical work. These are not very well
+identified specifications, but at the same time as
+best possible to figure out how these instruments
+play out in the data whether they actually provide you with the insulation, whether they actually
+help you more macro stability
+perspective and so on. Some instruments that work and some instruments
+that don't work. Also the constant refrain, which is that you
+don't want to use these instruments if you have in lieu of needed changes
+to your macro policies. If the problem is that
+you're spending too much and your fiscal deficit is too big then these measures are not
+what you should be using, you should be
+addressing the physical problem in your country. After doing all of that, just in terms of my last slide
+on the operationalization. We did this, I think
+was it February? February we had a
+board decision. We have something called the IMF institutional view
+on capital flows, which is what the IMF says, are acceptable policies on what countries can use
+to manage capital flows. This IPF work basically lead to one big change in the
+IMF's institutional view, which was basically that for
+financial stability reasons, capital controls
+on inflows may be appropriate to reduce unhedged
+external debt stocks. Basically you can use preemptive capital
+flow measures when a country's debt is high and especially if it's high
+in foreign currency, because in that
+world you are more likely to end up with
+financial stability problems. This was an important marker for the IMF's institutional view
+and capital flow management and right now we are in the operationalizing
+of this work, the integrated policy frame, multiple countries'
+surveillance. Of course, there's a lot
+more work that's done, there's work on
+quantifying the framework, building data set of metrics that capture
+these frictions. There's always going
+to be judgment which is integrating considerations
+beyond the model's effect, level of institutional
+development of the country. For instance, if you're
+a low-income country and you don't have
+strong institutions, then you really want to
+communicate only one policy in one instrument because
+otherwise you're going to have a huge problem
+managing outcomes, so getting it all of those. But anyway, I'm going
+to end with this, but it's been fun
+working on this because this cover the
+whole spectrum from a big policy question that many central bank governors
+and treasuries and so on, were thinking about to creating the work
+that was needed to help these countries
+getting a change at the board and now they
+operationalized this. As FDMD, I get to say that the operationalizations
+statement deal with countries on this.
+All right. Thank you. 

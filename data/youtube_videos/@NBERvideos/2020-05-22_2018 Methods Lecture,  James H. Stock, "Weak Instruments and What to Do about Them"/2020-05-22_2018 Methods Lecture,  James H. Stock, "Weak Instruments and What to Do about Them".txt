@@ -1,0 +1,952 @@
+James Stock: The area of
+instrumental variables and what used to be
+called finite sample distortions and
+instrumental variable estimation is just an
+incredibly old one. It's one of the
+foundational fields of econometric theory, going back to the invention of instrumental variables
+in around 1925, 1926, all the way through the early work
+in the 1950s that was done by the
+Kohl's Commission and by people working through with Dennis Sargon and the LSE, through trying to understand the behavior of instrumental
+variables estimators. There's a giant tradition. Almost all of that works, certainly the early
+work and even in some of the more
+recent phases of weak identification has focused on the most tractable case, which is the homoscedastic case. Under homoscedasticity, some really pleasant
+things happen. The X prime, X inverse, Sigma squared, that stuff
+works, everything factors out. But as practitioners, that's not really the
+most satisfying case. Routine and
+econometrics these days and down to the
+undergraduate level is to do comma or all the time. Basically, what
+we're talking about today is what do we know about the
+non-homoscedastic case? When I say
+non-homoscedastic case, we'll think about the reduced
+form errors potentially needing heteroscedasticity
+robust standard errors or hack standard errors, or if you're in a panel setting, it's going to be cluster or
+it might be two-way cluster, something along those lines. We're actually not going
+to talk about specifics as a cluster or hack or HR because
+the moment you go there, you've crossed the line into this more complicated world and it actually
+doesn't really make much difference which
+of these you're doing as long as you can get a consistent HR hack
+standard error. But it turns out that that actually makes quite
+a bit of difference for instrumental
+variables regression in the weekly identified case. That's what we're going
+to be focused on. We're going to be focusing on weak IV in the heteroskedastic. We're going to call it the
+heteroscedastic case because it's tedious to call it
+heteroskedastic hack, cluster, etc., but really
+we mean all of the above. I think this just says
+everything that I said. The outline, I'm going to do a little bit of the so what, but the fact, as
+Jim pointed out, if you're taking your Sunday
+afternoon to sit here, the so what is probably
+not super important. But I'm going to
+do a little bit of the so what just for
+internal consistency. I'm going to talk mainly about detecting weak instrument. Let me also delimit a little bit what we're
+going to talk about. The primary focus of the talk is linear IV with a single
+included endogenous regressor. Now, that is a special case. Isaiah has been doing
+some really great work on nonlinear GMM and really
+complicated models and using Gaussian processes. We could have done that, but it actually turns out
+that Sophie got a sample of 17 AER articles over the last four years that use
+GMM and IV and so forth, and 16 of the 17 have a single included
+endogenous regressor and most of them have
+a single instrument. That seems like the
+important case in practice and that's what
+we're going to talk about. We're going to talk about the important case in practice. Linear IV with a single
+included endogenous regressor. We'll talk about
+some extensions. We actually know a fair
+amount about that case. We're going to have some pretty concrete
+recommendations. I'm going to go through
+detecting weak instruments. I'm going to say just a few
+words about estimation. Isaiah then will take a break and then I'm going to
+hand it over to Isaiah. He's going to talk about some weak instrument-robust
+inference methods. You might have heard of
+Anderson Rubens statistics, things like that,
+but all in all, the HR, the
+heteroscedasticity case, and then we'll talk about some extensions and open problems. What are weak instrument? Weak instrument is
+one, loosely speaking, that's has a small correlation with the included
+endogenous regressors. That would be if you
+have control variables in the problem controlling for the control variables it has a relatively small correlation. What does small mean? That's a big question, so we'll try to be
+precise about that. When you have weak instruments, all heck can break loose. You can get bias in your two-stage least
+squares estimators, you can get substantial
+size distortion. Here's a very old picture from 1990 from a Nelson and Startz paper where they looked
+at a distribution of the t-statistic in
+two-stage least squares, and the case of
+non-identification where all the instruments
+are irrelevant. There's the black line, the solid black line. Then it morphs over
+to something that looks like a normal but
+isn't really that normal, which is the dashed line. Then that's going through the case of
+instruments being from irrelevant to intermediate
+cases to a fairly strong. Needless to say, if
+the distribution of your t statistic looks
+anything remotely close to the solid black line
+or the heavy dotted line, your plus or minus 1.96 standard error
+is just a bad idea. You're going to have to
+figure something out. This is just one example. I'm not going to
+belabor this because I think people understand that's the problem and that's why you're here and you want to
+try to avoid that. A relevant question
+is, so this is fine. The econometricians are going to say this is really
+important in theory, but then there's
+a question if is it important in practice, and it might not be that
+important in practice. If everybody always had strong instruments and all
+of their applications, then this wouldn't be an issue. This would just be a
+bunch of econometricians writing papers for
+econometricians. As I mentioned, so if
+he went and collected data from the 17 AER articles, I'm not going to describe
+the DGP they put together. Isaiah is going to
+go through that. But Isaiah and Sophie
+put together a DGP and on the x-axis here is, now we're doing a simulation, so the population value of the first stage F statistic
+is on the x-axis. Then what's on the y-axis is the median of the t-statistic. In some of these cases, there's like one instrument and if there's one instrument, you can't really talk about bias because moments
+don't exist, but you can talk about
+where the median of the t-statistic is and that normalizes it by
+the standard error. What you can see is that when you're down
+somewhere below this range, there's a vertical line at 10, and somewhere down below to the West of 10
+is a mess where you can get t-statistics in this DGP that are under the
+null hypothesis not centered around zero. They can be centered around one. A t statistic
+centered around one, that's off by a lot. But then if you've got
+pretty big first-stage Fs, 40, 50 in population, then things seem to, this isn't talking
+about size or anything, but at least it's starting, the center of it is
+in the right place. Then the relevant question is, how much of this
+really do you actually find in empirical work? Here's some other statistics
+from this sample. This is actually the
+reported first-stage F. Is that right? This is the histogram of
+reported first-stage Fs, yes. This is the histogram of
+reported first-stage Fs. It's really interesting. There were 108 specifications
+among these 17 papers. The 17 papers, one of them
+had two endogenous variables. For this purpose, we're
+throwing that away. Then one of them didn't report enough evidence for us to figure out what the
+first-stage Fs were. We have 15 papers that are here. I'll be corrected
+if that's wrong. MALE_1: There were a
+few more that reported the first-stage Fs. James Stock: Anyway.
+There's 72 of these specifications
+for the first-stage Fs are less than 50. Those are what's plotted here. What you can see is that there's a fair
+number of them that are five or 10 in that zone where things
+were really messing up. There's this big spike
+between 10 and 15, which is like, that's
+pretty interesting. We can speculate about why that might happen to be and we'll come back to that. That's actually,
+from my perspective, it's like, this is amazing. But on the other hand it is not exactly what
+you'd like to see. We'll talk about that. Especially in the simulations,
+we'll talk about that. Then there's a few cases where they have really
+strong statistics. But of course, we know not every problem is a weak
+identification problem. Then there's an
+interesting question, what do people report? Really, the main thing
+that I'm talking about is the first-stage F isn't a well-defined object because there's a number of
+different things that you could actually do. I'm sure those of you who've print nerve runs data IV Reg 2, there's this comma
+first or whatever. There's this massive
+stuff that's printed out. That includes the
+Kleibergen-Paap statistic and includes heteroscedasticity
+robust first-stage F, if you've done a comma R, comma VCE cluster or
+something like that. If you don't do that, then it's going to print out the non heteroscedasticity
+robust first-stage F. One thing that's
+not printed out, but you could print
+out is something called a Montiel Olea and Pflueger effective
+first-stage F. The main point of this
+talk of my piece of it, is to sort through all of
+those different possibilities, and to give a super precise, clear directive about which
+one you should be using. Here's what people report. Here's what people say they do. The purple ones are
+Kleibergen-Paap statistics. Then the brown ones,
+they don't say, they just say these
+are first-stage Fs. This is really interesting. Our conjecture is
+that people don't realize that the
+Kleibergen-Paap statistic is the heteroscedasticity
+robust first-stage F. That's why all of these
+ones less than five, are the Kleibergen-Paap
+statistic because they're called the
+Kleibergen-Paap statistic, not the
+heteroscedasticity robust first-stage F and the paper. That whatever referees
+or whatever are not fully aware of that
+subtlety state, it doesn't help
+with it's printout. I'm not saying that this
+is anybody's fault, but I think it represents
+some confusion. Then, there's these other
+ones that are bigger. We went back or Sophie
+went back and did some reverse
+engineering to try to find out this is what
+people say they do. Then, Sophie went back to do some reverse
+engineering to see what people actually really did. Here we've clumped
+the Kleibergen-Paap with the robust ones. That's why there's a
+shaded the same color, and those are these
+ones that are lower. The ones that are the
+really high statistics, those actually turned out to be mainly the non-robust
+F statistic. If you compute the
+first-stage F, that's not
+heteroscedasticity robust, that tends to be
+the bigger ones. That could be the
+correct thing to do, because maybe in
+those designs there's no heteroscedasticity
+and there is no hack. But on the other hand, if you're thinking, well gosh, the reason I'd want
+to do robustification is because the standard
+errors might be too small. If there's heteroscedasticity
+or cluster or something, then that would be a reason
+why you might actually find these large,
+non-robust first-stage Fs. That's the review
+of the literature. There's going to
+be a lot more on this simulation
+in Isaiah's part. Here's our recommendation. I just want you to notice. There's four
+possibilities except two of them are the same. Doing Kleibergen-Paap and doing heteroscedasticity
+robust first-stage F are actually the same thing. That's Option 1. Option 2, is doing non-robust,
+and Option 3, is doing this thing called
+the effective first-stage F from Montiel Olea and
+Pflueger 2013 JBS. None of these do the third one. None of these do the
+effect of F statistic. That is our recommendation. Our recommendation is that you do the effect
+of F statistic. Our integral, and basically the next 30 minutes of the talk is explaining to you
+why I think that's right. Now, the reason I'm going
+to spend 30 minutes on it, is that there's
+really clear theory saying that that's
+the right thing to do and nobody does
+it. Everybody does. Actually, there's
+really clear theory that both of these are the wrong thing to do in
+heteroscedasticity case. I'm just going to
+walk through that. There's going to be a
+very simple lesson. We're going to march
+through the algebra. Then, you'd have learned a thing from this first
+half of this talk, and that will be hopefully
+worth reading out. Our recommendation is
+you use this thing. You report the first-stage
+effect of F statistic, and you can compare
+it, and we'll talk about what you
+should compare it to. There's some critical values
+you could compare it to, or you could use this
+rule of thumb of 10. I'm going to come back and we're going
+to talk about that. Isaiah is going to
+talk about that too. If you're doing this as a
+pre-step or a pre diagnosis, if it's greater than
+10, then you might want to use strong
+instrument methods. Two-stage least
+squares, for example. If it's less than the cutoff, 10 or the critical value,
+if it's less than that, then you're going to have to
+use some weak instrument, robust methods for inference and Isaiah will talk about that. Then there's a list of
+things you should not do. Do not report the p-value
+of a test of Pi equals 0 because the issue is not the first stage
+coefficient equal to 0 in population. Zero's too smaller number, it actually has to
+be far enough away from zero that you're not
+going to be dividing by 0. Testing zero is not a
+useful thing to do. Don't report the non-robust
+first-stage F. Don't report the usual robust first-stage F. Except it turns out
+that when k equals 1, that is, I'm sorry if when
+there's a single instrument, that it turns out that
+the first-stage F and the effect of effort
+exactly the same thing. I'll walk through that. Don't report the
+Kleibergen-Paap statistic, which is actually the heteroscedasticity
+robust first-stage F. Don't compare the heteroscedasticity robust or Kleibergen-Paap statistic to
+Stock Yogo critical values. That's because the Stock
+Yogo critical values are under homoskedasticity. This is just something else altogether under
+heteroscedasticity. You'd think it would line up, but it doesn't line up
+because this stuff is tricky. Just because, if
+you're a referee, and they've got a
+first-stage F of six, don't reject the paper, tell them to go and use heteroscedasticity
+robust methods. Because if you just tell
+them to reject the paper, you're contributing to this publication selection
+bias problem. Whereas we have good methods for doing inference when you're
+in a week instruments. I wasn't refereeing on
+any of these papers, but that spike at
+10 is not terrific. That's what I'm going
+to do is I'm going to march through the algebra. Remember the main
+point of this is to explain in a very
+specific and concrete way, why this Monticello
+Fluker statistic is the right one to use. The effect of F statistic
+is the right one to use. Why in general, the non-robust and robust ones are not the right ones to use. When I say right and wrong, if you're in a world where
+it's truly homoscedastic, then these are all the same
+and it doesn't matter. But we're interested
+in the world that everybody lives in an
+empirical work where you think that probably isn't right
+or maybe you've had to use hack standard
+errors and there's a reason that you want to use HR or standard
+errors until we are going to want to
+have the methods align with those reasons. This is the setup
+first-stage equation says that there are some
+instruments Z relating to the single included
+endogenous regressor X. There might be some
+control variables W. The coefficient of
+interest is Beta, which is the
+coefficient on X and Y. You're going to be interpreted
+as a causal effect. That's the object of interest. There is the reduced form. The reduced form is obtained by substituting the first stage into the structural equation, and then solving out, and then you get a
+coefficient on disease. If you look at the pair
+of equations for y and x, that is a pair of
+reduced form equations, both of which are expressed
+in terms of the Z/s. Then, by doing
+that substitution, what you find is
+that the coefficient on the reduced form and Z for the Y equation is
+written as Pi times Beta. That Pi times Beta
+is this famous form, which is then the
+way that you deduce Beta is you can get a
+whole bunch of different, use two-stage least squares. If you're single, have a single included
+endogenous instrument you can take the ratio
+of Delta hat to Pi hat. That's going to give you
+an estimate of Beta hat, and that's just
+the IV estimator. That's the setup. OLS is in general inconsistent. I've included the
+control variables W, and I am now going to throw
+them away for the rest of the talk because
+you can always just project them out
+and do freshwater. They're there but they're gone. Or they're gone but there are
+there, whichever you want. That's the setup, throwing away the control variables, Q2, conditions for
+instrument validity or instrument relevance and
+instrument exogeneity. We're going to be assuming throughout that
+instruments are exogenous. That's Part 2 of the paper. Here this is just a technical
+thing having to do with making sure that the
+instruments are relevant. That's what we're going
+to focus on, relevance. The relevance condition
+is that they have to have some covariance with the
+included endogenous regressor. Or equivalently in this notation here that Pi is non-zero. To be a strong instrument, they've got to be
+better than that. Then once you have
+these two conditions, you can just derive
+the IV estimator. I'm including the
+standard derivation, or I should say the
+first derivation of the IV estimator here, which is just by writing out this covariance and
+then noting that the covariance between Z
+and Epsilon is equal to 0. Then, because the covariance between Z and X is non-zero, you can divide
+through and that's going to give you the
+moment condition, and then you just plug
+in sample moments. Those sample moments are also just the ratio of
+Delta hat to Pi hat. Everybody is with me? Clarifying questions
+are absolutely fine if I'm not being clear. Two-stage least squares, you have multiple instruments, then you can just take the predicted value
+from the first stage. One way to write
+two-stage least squares, is you just do
+that regression of Y on the predicted values from the first-stage regression, which is Y on X hat. There's the famous X prime Z, Z prime X, Z prime Z, whatever it is formula. You got that guy there and that's another way to write it. Then you can also write it if
+you notice that X prime Z, Z prime Z inverse is actually, that's the coefficient, that's the estimator for the first-stage
+equation for Pi hat. You can also rewrite
+this in terms of these OLS estimators for
+Pi hat and Delta hat, which are the two estimators
+and the reduced forms, the first stage, and then the reduced
+form equation for Y. There's various estimators
+for two-stage least squares. If you just stare at any
+of these expressions, but I like to stare at the last expression for
+two-stage least squares. Basically, the problem of weak instruments is that
+you're dividing through by something in the
+denominator and if that thing is close to zero, then you've got a problem. In fact, if the true
+values of Pi were zero, then that thing in
+the denominator is like a Chi-squared. You can get some values that are really
+small and there's a lot of noise in
+the denominator, and that can totally mess
+up your distribution. The weak instruments problem is really just a glorified
+divide-by-zero problem. You just need to be careful
+that you're not doing that. One way to say that is that you need to make sure that in population that denominator
+is not too close to zero. Otherwise that can
+really mess up the sampling
+distribution of all of your IV statistics or all of your two-stage least
+squares type statistics. One thing we're not going
+to do is talk about a much broader class of problems of which this is
+the leading case, but is only one case, which is this whole family of stuff that goes under
+the terminology of weak identification
+which gets into nonlinear GMM and not
+even GMM circumstances, but cases where you've got some parametric
+restrictions where you could be close
+to a boundary. There's some nice
+papers on that. There's the Nelson
+starts paper 2006, Journal of econometrics
+and then an Andrews Chang
+econometric of paper that go through this much
+more general treatment. We're not doing that. We're
+talking about detection. It's in the linear case
+where we've got a single X, a single included
+endogenous regressor, and we got three choices. There's three choices. Choice Number 1 is we could use the plain old fashion
+non-robust F statistic. Remember, the world we're imagining that we're
+really in the HR world, but you've just
+done this anyway. Maybe it's a good
+thing, maybe it's not what you've just
+done it anyway. The other possibility
+is you just do a heteroscedasticity robust. Well, so let's just stare
+at these for a second. These are all our
+familiar friends. Remember in the
+non-robust formula is just Z prime Z inverse Sigma squared V. That's
+just the inverse of that. Here is just the inverse of the heteroscedasticity robust F covariance matrix estimator, which is Sigma Pi Pi. I've denoted that if
+we take Pi hat as the estimator then its variance is going to be Sigma_Pi Pi. Then the estimator of that
+variance is Sigma_Pi Pi hat. Then you sandwich
+that in-between and the inner product and
+that's your F statistic. Testing that Pi is equal to 0. Then there's this weirdo thing, some hybrid, which is this
+Monty Hall or Leo Flutes. You look at it and
+you can say, "Well, I know why nobody uses it." Which is that somehow it's got the numerator of the
+non-robust thing, but then there's
+something funny going on in the denominator where it's not using
+the Pi's here, but it's using the Pi's
+in some trace down here. There's like something
+really peculiar going on, you can rewrite it as the non-robust times
+a scale factor. That scale factor is the
+ratio of the variance to some trace that involves
+the covariance matrix. So the heteroscedasticity
+robust covariance matrix and the moment
+matrix or disease. Where did that come from? We're going to have to
+try to explain that. This the big intuition. If you stare at
+two-stage least squares, look at what's in
+the denominator of two-stage least squares. In the denominator of two-stage least squares is this Pi hat, Q hat Z Z Pi hat. That's what it is. X
+prime Z Z prime Z inverse Z prime X. That's what it is. It actually is the case that the non-robust statistic
+is measuring that, it's trusted it's getting
+the standard error is wrong. The heteroscedasticity
+robust isn't measuring the right thing. It's measuring something else. It's doing a classic
+econometrics deal, which is it's measuring
+the wrong thing but getting the
+standard errors right. What this effect of F
+statistic does is it says, "We want to measure
+the right thing. We want to measure the thing
+that's in the denominator. We're not going to be able to get the standard errors right. But it turns out this trace guy gets them right on average." It gets them right on average because it bind
+this normalization, it turns out that
+the eigenvalue, it's like you're taking
+the inner product of Chi-squared or
+non-central Chi-squared, where the eigenvalues are now by this normalization
+bounded between 0 and 1. It's transformed the
+problem where we don't know exactly what the
+distribution is, but we can bound the
+distribution and we can do a lot of
+approximations to it. I'm going to give
+you some examples. Now what we're going
+to do is going to go through some examples. I'm going to do an example
+in K equals 1 case that is a single included
+endogenous regressor where everything is
+just really easy. In that example, I'm
+going to give you a case. It's actually not
+that surprising. It's more to get the
+algebra juices going. It's not that
+surprising because what you can show is that yeah, you could actually have a
+pretty weak instrument, but if your non-robust estimator is really got
+the standard errors wrong. You could get a really big
+first-stage F and it's not going to pick up
+your weak instrument because you're just getting
+the standard errors wrong. That makes sense. Of course, it's a little
+bit more subtle is then I'm going to
+go to an example. Maybe I have that. I'll give you my more subtle
+example in a minute. It is a great example. I'm going to make some
+distributional assumptions. These are high-level
+distributional assumptions where we're going to assume that these reduced form estimates
+the Pi's and the Deltas, which are just going to
+be the regression in respectively of X on
+Z and then Y on Z, that these things are jointly asymptotically
+normally distributed. Then you've got some
+consistent estimator. I guess I should say on the
+consistent estimator thing. If you're thinking, gosh, I'm really interested
+in the Hack problem, but I want to use
+Kiefer Vogelsang fixed to be asymptotic. We're not there, we're just doing
+[inaudible] West with consistency or if
+you're saying, "Gosh, I know that in
+cluster if I've got a large sample T and I only
+have a few groups that I'm clustering by that
+really I should use that Hotelling T squared
+distribution or I should use a T distribution
+with a number of groups, we're not
+doing that either. We're not doing that.
+We're just like you've got consistent
+estimators. As I said, there's a
+lot going on here. Then the next assumption
+that we're going to make is it we're going to take this central
+limit theorem thing and we're just going to
+pretend that it holds. We're just going to
+say it actually holds. The Delta hat is normally distributed and Pi hat
+is normally distributed. There's actually, in some sense, it's like a really
+easy assumption too. We'll make that assumption. There's a ton that's going on
+underneath the hood there. One of the things I mentioned, which is that we're ruling out, for example, fixed
+to be asymptotic. We're ruling out
+the non-standard cluster asymptotics, that thing. The second thing
+that's going on under the hood is that this harkens
+back to this old 1950s, 1960s literature where you're assuming that the instruments are fixed and that the errors
+are normally distributed. That in the case
+of what's called the limo K statistic
+and work on that, you actually know
+what the reduced form variance matrices are. There's an aspect
+of this literature that is what we're doing here. That's really old stuff, 50s, 60s, years old. More recently, this is one way to justify
+all of this is to weak instrument asymptotics. There one needs to
+consider drifting sequences to get all of this to line up in terms
+of the asymptotic justification where you actually think that Pi is pretty small compared to
+the sample size. That's like the case when
+these first-stage apps would be they're not so big area. Khurana and Porter 2015 and
+also 2012 paper provide limit experiment interpretations
+of all of this stuff. Then there's a question of uniformity going from
+the unidentified all the way to the strictly
+well identified case Andreessen Chen go through that. There's a lot of things
+going underneath the hood and we're not going to talk about any of that stuff. We're just going to actually plug in this normal assumption. But there's a lot of good
+theory justifying that, and it provides good
+approximation too. This is the example. I don't know if I call
+it a homework problem because it's a great
+homework problem. If you're teach this stuff
+to graduate students, this is a great
+homework problem. They will really understand at least this aspect of weak instruments where
+they come out of it. We've got two instruments. One included
+endogenous regressor. The instruments were
+orthogonal to each other, so we set them up so
+they're just normalize it. The instruments
+were orthogonal to each other orthonormal,
+so they variant is 1. Simplify things. Then Sigma. Remember Sigma is the
+covariance matrix of the Pi hats and
+the Delta hats. If it were homoscedastic, it would have this
+chronic or structure so that Sigma squared
+Epsilon and Sigma squared V is going
+to come out here and it's all going be multiplied by the
+z prime z matrix, and then everything cancels
+in a beautiful way. Remember that's the first 70
+years of this literature. That's not what
+we're going to do, but we're going to make
+it almost as simple. It has a chronic or structure, but it's not quite the
+same covariance matrix. Remember the Q_zz matrix is diagonal and we're
+going to allow one of the instruments. Think of Omega as being big. We're going to allow
+one of the instruments to have what we
+usually think of it, the heteroscedasticity
+problem, which is the standard error is the OLS standard
+errors are too small. The usual standard
+errors are too small. The real standard errors
+should be bigger. They should be bigger by a
+factor of Omega squared. The other one, just to make
+the example interesting, we're going to go the
+opposite direction. The OLS standard
+errors are too big. Really if you knew the nature of the
+heteroscedasticity or the hack, the robust standard errors
+would be a lot smaller. That's the setup. We're making one little tweak which is one of the instruments the hack works against you and one of the ways that
+it works for you, and it turns out that screws up both of
+these two statistics. It's pretty easy to
+see why it's going to screw up the
+non-robust statistic. Because the non-robust
+statistic is going to get the standard errors wrong
+on one of the pieces, and so it's going to think that the standard error is really small for one of the Pis. It's going to say, "Hey I've got one really good instrument." I've got my F-statistic
+is really big. The non-robust is just going to be misled because it's computed, the standard error as wrong. It turns out that the
+robust one is misled. It's computing the
+standard errors. But it's computing
+the wrong thing. It says, gosh, one of my
+instruments is terrific because the heteroscedasticity is
+working in my favor and it's making my real standard
+errors really small. If you are doing efficient
+GMM would say great, that's the instrumental use, but you're not doing
+efficient GMM. You're doing two-stage
+least squares. In two-stage least
+squares is waiting both of these two instruments, and one of them is not
+necessarily a strong instrument. In fact, one of them is getting the standard error is wrong. It turns out this key parameter is the fact that the
+HR is looking at the wrong thing is driving the robust one to be a to infinity. When in fact you could actually have instruments that
+are actually quite weak. The heteroscedasticity
+robust one is going to say one of my
+instruments is super, the heteroscedasticity
+robust F statistic is going to go off to infinity. But in fact, you're actually in a week
+instruments problems. Both of these you compute. Here it's actually not so
+great in the sense that if you're sitting down
+it's data or whatever, you compute the non-robust F, it's 73, you compute
+the robust F, it's 87. You say I'm good,
+but you're not. Then you compute the
+Monte [inaudible], first-stage effect of F and it's four and that's the
+one you need to use. We will discuss this. I'm going to work out the
+case for k equals 1 first. K equals 1 single included
+endogenous regressor. Remember I'm just
+assuming that Delta hat and Pi hat are
+normally distributed. Remember the reason I'm
+going through all of this, you can say, why do I have
+to suffer through this? The reason I'm going
+through all of this in such detail is that nobody does this and
+everybody should do this. At least nobody who gets
+published in the ER. It's convenient to write, I'm going to use
+this equals with a little squiggle over it
+to say I'm going to give a representation of Delta hat as this mean of Delta and then a normally distributed thing, Psi sub Delta and those net Psi is just is going to have
+this covariance matrix. In general, the HR
+covariance matrix, the heteroscedasticity
+robust covariance matrix. That's the first
+thing I'm going to do is I'm going to use
+this representation. Let me give you one
+other piece here. It's very convenient
+to have something like an OLS regression
+of z on the Epsilons, Epsilon being the errors in
+the structural regression. That's something that
+comes up in the algebra. I'm going to give that a
+name, Psi sub Epsilon. It actually can be expressed as a linear combination of the
+Delta hat and the Pi hat. It's actually Delta
+hat minus Pi hat beta. That's a key linear combination because remember in population, Delta equals Pi Beta. Delta hat minus Pi
+Beta is supposed to have a mean of zero
+and then some noise. Actually the noise it
+has is equivalent or regressing Epsilon on the z's. That's all just
+equivalent algebra. Then that means I
+can represent it in terms of a normally
+distributed thing, which is going to
+be that Psi from the Delta minus this
+Psi from the Pi. That's just going to be a
+normal random variable. It's convenient to standardize these things because
+I'm going to talk about some things being big and something's things being little. For that, it's nice to have all the random variables
+to have variance 1. We're going to standardize
+the random variables by dividing them through
+by a standard error. I'm going to write Pi plus Psi as something
+called Lambda plus z, and so z sub Pi is going to be a standard normal
+random variable. This k of k equals 1, and Z sub Epsilon is going to be another standard
+normal random variable and they're going to be
+correlated with each other. I've just taken these and divided them through
+by the standard error. This is a key thing. This parameter Lambda is a
+key object that is going to be describing the strength of the instruments and as a
+very natural interpretation, the interpretation
+of what it is, is it's Pi divided through by its population heteroscedasticity
+robust standard error. It's the population value of Pi and you divide through
+by its HR standard error. If that's big, then
+that's going to be something that's going
+to be an indication of a strong instrument. If it's small, that's
+something you're going to be an indication of a
+weak instrument. Then I'm going to do
+one more trick here, one more convenient device, which is I'm going to
+orthogonalize z Epsilon and z Pi. In general, they're
+correlated with each other because of course there's
+endogeneity here, so I'm going to do some
+orthogonal rotation. Then that orthogonal rotation since they're both
+jointly normal, I can project the Epsilon z Pi and then I'm going to have a normally distributed residual. That's going to be useful
+for representations of the variables. With that, I can move from the IV representation being the Delta hat
+over the Pi hat. Then I'm just going to
+do a couple of steps. I'm going to add and subtract. I want to add and
+subtract Pi hat Beta. Then going to notice that Pi hat Beta divided by
+Pi hat is equal to Beta. Then this thing here, I already argued, is
+equal to Psi sub Epsilon. I've got this expression
+and I'm just going to standardize by dividing through
+by standard deviations. Now I'm going to do
+this projection. The reason I'm going to do
+this projection, right now, this is a pretty informative
+thing because it says that the IV estimator
+is the true thing plus a ratio of
+normal variables, one of them has mean zero in the numerator and the other one has mean Lambda and
+the denominator times a scaling factor. It's useful to break this up. In general, because these two
+variables are correlated. That means if you take
+the expectation of the moments were to exist or if where it's
+starting to be centered, these things because
+they're correlated, that means that this thing is, in general, going to have some bias or non-central
+distribution. The reason I'm using and
+be careful about using urge biases the moments
+don't exist here, but the distribution will
+be shifted a little bit. If you then break this up by projecting z Epsilon and z Pi, and then taking the residual, you're left with this term, which I'll call a bias term
+and I'll call a noise term. Both of those are misleading because the bias
+doesn't have a mean. It's not really biased, but it's a centering, is where the thing is centered and the noise is noisy but so is the bias term because the bias has this
+random noise in it too, but it's a centering piece
+and a non-centering piece. I'm going to focus on
+the centering piece. This is like a bias-type thing. One thing you can
+see immediately is that the amount of bias, if you will, is going to
+be determined by Lambda. If Lambda is equal to 0, then these two z's
+cancel each other, and then you're just left
+with this guy right here. In the homoscedastic case, that's the PLM of OLS. What this says is
+that right away in the unidentified
+homoscedastic case, Beta-hat IV is centered
+around the PLM of OLS, well, with a ratio
+of two normals. With Cauchy noise. You take OLS and then
+you add a Cauchy to it, which is not the
+greatest thing ever. You can see what the [inaudible] but the
+bigger Lambda is, if Lambda is really big, then Lambda is going to
+swamp this randomness here, then you're just left with a normal in the numerator and
+Lambda in the denominator. Actually, that gives you your usual large sample distribution. Your usual two-stage T squares
+textbook distribution. Lambda is the key object. We're going to have to have some inference about what that is. Instrument strength
+depends on Lambda. Strong instruments is Lambda
+squared goes to infinity. Irrelevant is Lambda
+is equal to 0, I just described that case. In the old literature, this Lambda squared is
+called the concentration parameter and the
+literature that worked on Gaussian Edgeworth
+expansions. Here's a fun little calculation. It's like all these E's need
+to be in quotation marks. These expectations need
+to be in quotation marks. But if you've heard of some
+of this old literature, maybe you've heard
+of Nagar expansions and then you phased out. It's what we're going to
+do a Nagar expansion. Nagar expansion is you
+pretend that moments exist and you just linearise
+and you see what happens. It turns out in this case
+it's incredibly simple. I'm just going to
+take the ratio. Remember in the
+homoscedastic case, this is the PLM of OLS. It's the inconsistency of OLS. We're looking at how
+far off the biases of IV relative to the PLM of OLS. I'm just going to show now I'm putting an expectation where one doesn't really belong but
+I'm just putting it there. Now, I'm just rewriting this by dividing through by Lambda, and now I'm doing an
+expansion which you can pretend is justified
+if Lambda is big. Then I have a leading
+term in that expansion. Then actually, the
+only randomness appears in the numerator, but it's a standard normal. The standard normal
+just has a squared, has a mean of one, and so this term is minus
+1 over Lambda squared. If you said suppose
+that I want to have the Nagar bias be no
+more than 10 percent, that says you need
+Lambda squared to be 10. Lambda squared is the
+non-centrality parameter of the first-stage F statistic, so that's an idea of
+where this 10 come from. That's a way that you could
+think about the number 10. There are better ways, but that's our way
+to think about it. Now, we've done that, then we can go back
+and we can look at, well, what are these different? What's the robust F
+and the non-robust F? How do they play
+out in this case? Just a little bit of algebra. With the thing about
+traces of matrices, is that when the matrices are not matrices,
+but they're scalars, the traces are just
+like the thing, and then they all cancel, and the numerator and
+denominator cancel. That what happens
+when k equals 1? It turns out that
+this trace guy for the effect of F is
+just the robust F, so it just gives you the
+robust F. In that case, then the robust F is just
+going to be Lambda plus z_Pi. There's a typo there, Lambda
+plus z_Pi quantity squared. It's a non-central chi-squared with non-centrality
+parameter Lambda squared. Remember, we want it to do
+inference about Lambda. The robust F in the
+k equals 1 case is exactly what you'd want to do to do inference about Lambda. It's also equal to the
+effect of F. The problem with the non-robust is that
+it's almost what you want, but it's then times
+something weird. Well, actually, it has
+a great interpretation. It's times the ratio of the heteroscedasticity
+robust variance to the homoscedasticity-only
+variance. If the homoscedasticity
+gets it wrong, then the first-stage F has the wrong standard errors
+if it's non-robust, and so it's just going to
+give you the wrong number. It's pretty easy just to
+come up with an example where the first-stage F gets it wrong if
+it's non robust, but it gets it right
+if it's robust. In terms of thinking about
+estimation and testing here, let me just say
+one other comment. If you want it to have
+an estimator of Lambda, you could just take
+that first-stage robust F and subtract 1, and that would be an
+estimator of Lambda. But another thing you
+could do is you could say, maybe what I want is I want to formulate a hypothesis
+that says that there's like the Nagar bias, if you will, is no
+bigger than 10 percent. I want to test whether or not Lambda is sufficiently large to ensure that
+that's the case. Well, what that actually
+says is I want to test the null hypothesis of Lambda squared is equal to 10 against the alternative that Lambda
+squared is less than 10. To do that, you
+would actually use the distribution of the robust
+first-stage F statistic, which is this
+non-central chi-squared, and that gives you
+a critical value of 23, which is actually, that's the Monte Carlo of Lueger critical value for the k equals 1 case which is 23, which comes from this
+non-central chi-squared. This slide just basically
+walks through the example where you can get this completely wrong in
+the non-robust case, simply because you get your non-robust standard
+errors wrong. If the non- robust standard
+errors are too small, then you could potentially be confused and make an
+incorrect understanding that you've got a really
+big first-stage F, but that's just because the
+standard errors are wrong. Here's the interesting one. This is for k equals 2. Let me walk through
+these different things. There's k equals 2. What we have here is we
+have one instrument where the heteroscedasticity
+robust standard errors are really big, and you don't realize that when you do two-stage least squares, when you use a non-robust
+standard errors. The other instrument, the heteroskedasticity
+robust standard errors are really small, and you don't realize that when you do non-robust
+standard errors. One of them is going to mess up the non-robust statistic, one of them is going to mess
+up the robust statistic, and the effective F is going to get it
+right on average because that's what we're
+going to go through. The homework problem
+has two steps. First of all, if you just take the definitions of
+these different things, plug them in and go through all of the algebra
+that we've done, what do things look like. Then the second one is once you've got these things here, we're going to assume the
+weak instrument nesting, and then we'll just
+take some limits. It turns out that if I let
+Omega squared go to infinity. One of these has really
+horrible HR standard errors, and one if has really, really great HR standard errors, then you can actually show the following results that the non-robust goes to infinity, the robust goes to infinity. The effect of F goes
+to a Chi-Squared one, so the probability that it's less than 10 or less than that 23 critical value
+is basically one. You're going to
+conclude correctly, and then actually, it turns out that
+also in this case, where OLS two-stage least
+squares is centered, is actually at the PLM of OLS. You actually have a
+completely weak instruments in this example from a two-stage least
+squares perspective. I don't know whether
+everybody wants to march through this. It's like I could
+just leave this. Yeah. I don't know. It's all right. I'll
+do one of them. This is the non-robust. Remember I said that Pi hat is going to be Pi
+plus that random noise, and then I re-scaled it to
+make sure that the stuff was standardized and that gave
+me a Lambda plus Z_pi. By doing that, I had to
+pull out this covariance, the heteroscedasticity
+robust covariance matrix for the Pis. Then I'm still left with
+Q hat in the middle. This is the key thing that remember two-stage chi-squares, Q hat's there in the middle. Then I've got the same thing on the other side and I'm
+dividing through by that. Then I can just take
+these various limits. Because Q hat, the instruments are orthonormal in this
+particular example. Then you can just
+plug everything in and then you just
+get this expression. Now, if I stare at
+this expression, basically what this
+first-stage F is doing is one of these OLS is measuring it
+far too precisely in one of the OLS is measuring
+at far too imprecisely. But the fact that it's
+measuring one of them far too precisely gets OLS confused and blows
+up that F statistic. OLS thinks, I've got a great first-stage
+instrument when in fact, that's just because
+it hasn't been doing it
+heteroscedasticity, robust. Then you can just work through that same logic with
+the other cases. I think I probably won't
+work through that logic. The homework problem solution
+is sketched out here. I would urge you to assign this to your graduate students. It's a great exercise. First stage F. Maybe that's the one piece of mystery here
+that is worth looking at. Why does this affect of F work? Well, the effect
+of F works because remember the non-robust
+F statistic, it's measuring the right thing, but getting the
+standard errors wrong. The thing is you can get
+the standard errors right, at least on average, because the standard errors on average are going to be
+measured by the trace of that heteroscedasticity
+robust variance matrix and you can estimate that
+consistently anyway, even if you're not using it as the thing you're
+sandwiching in the middle. You can use it to correct
+the standard errors. That's exactly what this
+effect of F statistic does. In this example, it's the
+first stage F plus divided by, it's the non-robust first
+stage F. But then you divide by this trace of this robust covariance matrix. That's dividing by
+exactly the right thing to get it right on average. Now, it's not exactly like a chi-squared
+2 distribution, it turns out everything loads onto one of these
+in this example. It's a chi-squared
+1 distribution, but whether it's
+chi-squared 2 or Chi-Squared 1 doesn't matter, you're going to be recognizing that the instruments are weak for the purpose of
+two-stage least squares. Then there's some
+fancy things that Montiel Olea and Pflueger
+have to try to get a better approximation
+to that distribution so that actually realized that that would be a Chi-Squared 1. That's the whole idea. We're going to use this. One way to write it, you can
+make it look really simple. It's just this Lambda times
+Z Pi with an H matrix. I think that this
+expression looks nice because if you think
+about the H matrix, first of all, it's symmetric. Second of all, it's dividing
+through by its trace. Well, if you think about
+a symmetric matrix divided through by its trace, the trace is equal to the
+sum of the eigenvalues, but the sum of the eigenvalues if it's a symmetric matrix, all of those eigenvalues
+are positive. That says that you've made
+it so that this matrix H has eigenvalues that are at
+most one and at least zero, and the sum of them has to equal k. That's not exactly right. The sum of these eigenvalues
+has to equal one. What you've done is you've got an object where it's these chi-squareds
+hitting this matrix that has these eigenvalues that are all between zero
+and one and they sum to one and that's
+a well-behaved object and there's the family
+of things you can do. These guys found some old 1940s, 1950s approximation to this distribution as a non-central chi-squared with some
+adjusted degrees of freedom and so you can program
+that up and they have, so that you can program
+that up if you want to get critical
+values for this.. There's a variety of
+different things you can do. One of them is a
+testing approach. Even though the exact
+distribution of this guy you can simulate it, that's defeats the entire
+purpose of having to simulate a first HF defeats the entire purpose of
+doing the first HF, which is you want
+something simple to tell you whether you then have
+to do something hard. I think doing the simulated
+version of this is overkill. There's this approximation, to critical values
+that they provide using these Paitnik-Nagar
+critical values. Then they have some upper bound down those that they tabulate up as simple critical values. That's something that you
+can use in the paper. There's an additional
+approach you can use, which is you could just use a rule of thumb
+that's the bottom. You could just say what
+about 10 and Isaiah will see whether
+that works or not. This was the
+econometricians approach, which isn't really what we want you to do is
+we want you with probability 1 to do the
+right thing if they're weak, but with probability 1, if they're strong, to be able to do two-stage
+chi-squares. The answer to that is
+you should compare it to a sequence
+that's indexed to the sample size and so that's comparing it to Kappa
+sub n. So you could just compare it to Kappa sub n. Then the econometrician stops and you have to figure out
+what Kappa sub n is. One option is setting
+Kappa sub n equal to 10. Let me ask some
+additional comments about the k equals 1 case. The k equals 1 case, it turns out that this actually, it's very simple, and we have not this
+approximate picnic thing, but we actually
+know exactly what the distribution of the effect
+of f and the robust f is, which is exactly a
+non-central chi squared. There's a couple of
+different things you can do. You can either say, I want to have this
+critical value of 23, which is the 95
+percentile of the non-central chi-squared with
+a non-centrality parameter 10 in one degree of freedom, which would correspond to
+this Nagar bias of 1/10, or alternatively, you could do something like
+a testing thing. You say, in the worst-case, I want my two-stage least
+squares t-statistics to have a size distortion of no more than 10 percent
+or five percent test, I don't want it really to be no more than a
+15 percent test. It's completely arbitrary,
+but you could say that, and if you did that
+would give you some different critical values. Those are the so-called
+stock Iago critical values for size distortions, and those give you for a 10 percent size distortion that will give you
+16.4 instead of 23. There's some really concrete
+things you could do here. We are actually not going
+to recommend any of those. What we're going to
+recommend in the k equals 1 case in the very special case, when you've got one included
+endogenous regressor and one instrument which was like 14 of the 17 papers
+or something. MALE_1: Hundred. It's roughly almost half
+the specifications. James Stock: Half the
+specifications. Lots and lots. I think we all know
+from practice that this isn't important leading case. In that particular leading case, we're going to suggest that you use a heteroscedasticity robust Anderson Ruben
+statistic all the time and not bother with this
+first-stage F stuff. I won't say anymore than that. But I think there's a valid
+reasons to think about doing this first
+stage of stuff once you've cut more than
+one instrument. What if you have more than one included
+endogenous regressor? The problem with more than one included
+endogenous regressor, is that people just
+haven't worked out this stuff in the HR case. This is like a great thing. The student who does the
+best on this problem set, you can set them
+on this problem. There's some goods
+procedures out there, there's some minimum eigenvalue of a Cragg-Donald statistic, there's a related thing that Sanderson-Windmeijer
+have proposed. The question is,
+do you think you have one good instrument
+or one bad instrument? Do you think all of the
+instruments are bad? Do you think one of
+them is identified? If you have more than one including
+endogenous regressor, then the question is, what
+was one of them identified? Is the other one not identified? Are they both not identified? How do you parse that out? The complete non identification
+is one possibility. There's a partial
+identification thing or one strong one week, and so the Sanderson-Windmeijer
+statistic gets at, well, suppose one
+is okay and you want to check on the other one. The trouble with all
+of this stuff on this slide is that everything on this slide is either
+homoscedasticity only, which is the non-robust or it's getting the
+standard errors right, but measuring the wrong thing, which is the robust
+version of it. This is not really worked
+out for the HR case. I'm sorry, I think more
+work is needed on this. Let me say one other comment. Suppose you were going
+to do two-stage least, suppose you're going to do GMM instead of two-stage
+least squares, so I made this digression in my homework problem example, it actually is the case
+that if you're going to do efficient GMM, you actually have one
+terrific instrument because it happens to have this heteroscedasticity that
+makes it's variant super small if you only knew to
+put all the weight on it. That's what efficient
+GMM would do. The problem is in the
+world of weak instruments, the GMM estimator is got an even more
+complicated distribution. It depends on how you
+do the first stage. It depends on if you're going
+to do CUE and then doing testing whether or not the you can then do GMM
+in the second stage is also something that
+needs to be more work on in HR general case. Let me show you something about screening
+on first-stage F. I mentioned this at the
+beginning that it made me nervous to see that
+spike at F equals 10, and that is, it's just got to be the case
+that there were some of those papers that
+didn't get into the ER because they
+had less than 10. If your screen on less than 10, remember it's not the
+sample that matters, that's the population, and you could be in a
+weak instrument case, but then you happen
+to have that 10.3 number that then gets
+you into the paper. The trouble is if it's
+really less than 10, then you select on only
+those realizations, you can have a mess. This is just an example, and I think you'll
+probably talk about that. But you can really have a substantial selection
+problem because you are pulling from the tail of what
+appears to be strong, but really it's not, so you're getting a
+messed up distribution. That was a very
+non-technical statement, but I think you can get that. Let me say just a few
+words on estimation. We haven't talked about
+estimation very much. I haven't talked
+about estimation and Isaiah is not going to talk about estimation, I will. We wanted to bring what has happened in the literature,
+say in the last, let's say 10 years in
+the estimation world, and almost all of
+it is bad news, except there's one
+really interesting piece of good news. Maybe we have differences of opinions about how important it is, but as we'll find out. But almost all of
+it is bad news. One of the pieces of bad
+news is there used to be this folk theorem
+that everybody who stared at this problem like
+all the great Sargon and Anderson and Tile and Rothenberg and everybody,
+they stared at this. You can't have an unbiased
+estimator. It can't exist. It turns out that's correct. That was proven a few years
+ago by Hirano and Porter. That's life. There's other things that
+we've known for a long time, which is lack of
+moments existing, I will say there's this one. The final bullet is that if you a priory know what the
+sine of the first stage is. If you're a-priori, no Pi, remember this is Pi conditional
+on the instruments. But if you know Pi
+conditional instruments has a known first-stage sign, then it turns out
+that you can do this really cool thing that
+Isaiah and Tim Armstrong invented or applied in
+this case are figured out like some Russian
+had figured it out in the case when you're just doing the
+inverse of the mean, and then these guys are, if you can do it in that case, you can do it in IV. You can get an
+unbiased estimator, if you know that the first
+stage sine is positive. Then actually that
+works pretty well. If it happens to be
+a strong instrument, it turns into just like
+two-stage least squares or IV estimator and the
+strong instrument case. It's pretty cool. I haven't had a lot of
+practical applications, so we'll see.
+That's a cool idea. But you got to know
+the first, you can't know the first stage sign, you can't think that
+it's probably something, it's got to be it. K equals 1 things are
+more problematic. There was a paper that
+at least I found really influential by a Mikkel
+Kolesar in 2013, which is his job market paper. What he showed is that, if you have different layouts for the different instruments, then we know the
+two-stage least squares gives you a certain rate, and we know all about that. LIML doesn't need to be in the convex hall of these LATEs. You can have like
+this instrument and this instrument and
+this instrument or estimating these things, and that LIMLs over here. That's really problematic. You don't even have control over the estimate in a way that you would have control over the estimated with two-stage
+least squares. A lot of this family of
+procedures like LIML, which was thought, I would say until this paper, as being potentially
+a really good idea because it seems to have better bias properties than two-stage least squares in
+semi-week or week cases, you now suddenly realize, well bias for what? It's like, biased or
+unbiased. That's all. All of that is in the case that the estimates for
+all the instruments that later all the same. But as soon as you were
+in this world where you want to have some
+control over your LATE, and then I think
+you're just driven right back to two-stage
+least squares, and there's not, I think any
+real silver bullets here. The other comment is
+that things get more complicated when you start
+doing nonlinear GMM, and there's not a lot of constructive stuff
+that's been learned. Aside from Isaiah
+and Tim's paper, I think most of
+what's been learned in the last 10 years, has actually been
+negative results where we thought we knew some stuff that was pretty positive in the
+homoskedasticity on a case, and now we think maybe
+that's not so great. 

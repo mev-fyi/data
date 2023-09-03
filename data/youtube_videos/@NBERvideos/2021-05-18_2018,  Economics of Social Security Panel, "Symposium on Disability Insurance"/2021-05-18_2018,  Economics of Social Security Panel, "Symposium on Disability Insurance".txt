@@ -1,0 +1,896 @@
+Karen Glenn: One of the
+things we wanted to do to begin with is just give you a little insight into how we look at things as actuaries. One of the main things we do is look at the
+solvency of the fund. This specifically is
+about the DI trust fund, we're talking about the
+disability program here. We also look at the
+retirement fund as well. But this graph
+specifically is about DI. What it shows you
+is the reserves of the program as a percent
+of the annual cost. If you focus to begin
+with on the 1995 line, which is the black
+lines at the bottom, this is what we were
+projecting way back in 1995. You can see that the
+reserves were low. They went up beginning in
+1995 as tax rates increased. You may remember there was a little bit of a re-allocation in the OSI NDI tax
+rates at that time. That led to reserves increasing. But then things
+started coming down. Back in 1995, we projected that the reserves
+would run out in 2016. Meanwhile, move forward to 2008, that's the aqua line
+at the very top. The economy was booming, the reserves went way up. You can see that
+we were projecting the reserves there to last
+all the way until 2026. That shows you what difference the economy makes
+in the DI fund. Moving forward a little further, 2017 is the blue line that
+you can't really see, it's actually covered
+by the red line. This is after the recession. Things started coming
+way back down. Luckily, Congress in 2015 reallocated the tax
+rates again for OSI NDI. You can see that things
+were going way down, there was an reallocation
+which brought things back up and now things are
+projected to go down again. The good news here, you can see a little
+bit of the blue line there is in 2017, we were projecting reserves
+would run out in 2028. This year, in 2018 we're projecting that's
+extended out to 2032. We'll get a little more into
+the reasons for that later. Another graph here. This one really splits
+out the income and the cost of the program as a percent of GDP over the years. Probably here what we want to
+focus on is the blue line, which is the cost
+of the program. You can see back in
+the '80s and '90s, the cost was relatively low. That was when Baby Boomers were in their prime
+working ages. Most of them weren't really at prime disability ages yet. The cost was low. They weren't really in
+the disability program. However as they aged, you can see that in the 2000s, that blue line shoots way up. The Baby Boomers, this large
+generation really shifted into the disability prone
+ages and the costs went up. Really, this line is mainly
+driven by the demographics, which you can see. Now, the line is starting
+to go down somewhat. That's because these
+folks really moving into retirement and smaller
+generations are following them. Going forward, you
+can see that we project things to be
+relatively stable. Of course, this is
+our projection. It's based on what
+we know so far. No projection is guaranteed. The one thing we
+can guarantee is that we will not
+be exactly right. Steve Goss: Karen mentioned some of the experiences we
+had where the Congress had to do a couple of reallocations
+of tax rates back in '94 and in 2015 in order to keep the DI
+reserve from depleting. But you can imagine,
+and when we got into really just even prior to the product of the very recent experience
+after the recession, that a lot of people were
+worried about disability, about the research depleting, were worried about disability
+coming off the rails. There was a lot of concern in many quarters in the academic
+and the policy community about what's going on
+with disability and a lot of people were
+doing the classic, when you see a trend, you get out your ruler. That doesn't always
+work so well. One of the things that had
+been observed that was 1980 and 2010 is often cited. There was a tripling, a number of people receiving
+disabled worker benefits, one of the social security
+disability insurance program. Well, there was. Part of the
+question was why is this? Is the system out of control? Is it getting easier
+to get on disability? Well, we sat back and other
+people have done this, other people have done
+more on the sense but one thing that we
+did and we share this with some congressional
+testimonies was to try to break down that 187
+percent increase, roughly a tripling over time
+that occurred 1980-2010. It was pretty easy to break
+this down in rough terms. You can do it all
+different ways. We discovered that,
+well, first of all, just the number of
+people in our population between 20 and 64
+increased by 41 percent. You would probably
+expect you might have a few more people on
+disability roles if your basic insured
+population is going up or that's even just the
+basic population in general. But there was another factor, which is actually a lot of people are familiar with this
+concept of the Baby Boom. The Baby Boomers were
+advancing at age and we were getting a different age distribution of the population, that explained 38 percent of it. We also have another
+little thing which is not a tiny detail but
+something of significance. When we increased our
+normal retirement age by a year of between 2000 and 2005, that meant that people if they want to get a benefit
+at 62 for retirement, they're going to get less but the same amount
+for disability. Some of it is a little
+more impetus to go in for disability benefits. Also people would stay on disability benefits
+to a higher age. That also contributed
+about four percent. Disability ensured we had a big increase over this
+period, especially for women. We're going to have some more
+on that succeeding slide on numbers of people in our population even not taking into account
+the increase in the age, just the insured
+rates went up a lot. The recession of starting out in late 2007 had a big effect on the number through
+2010 obviously. Then also incidence
+rates themselves grew some overtime for lots
+of interesting reasons. All of these things
+we felt pretty much explained what was going on. A year ago, we shouldn't
+worry too much about the system really
+coming off the rails. It was just a matter of
+following the demographics. As Karen indicated back in 1995, we had projected reserved
+depletion in 2016, which is where we were back at at the time of the
+last reallocation. There was perhaps some
+pretty lucky guesses there. Now, we're going
+to talk to you a little bit some of the components of what
+happened historically. I'll grab the first
+one. Karen is going to get some after that. But this is the age distribution or redistribution
+of the population. We like this graph. This takes about 25 and
+older population in the US going back to 1940 and forward and it works
+at it over time. If you look at the green, it's orange over there,
+it's pinkish here. The bottom two segments
+are the under 65, the working age population. Well, we broke down the working age population to over and under 45 because as most of you know the disabled
+workers tend to be much more likely to be in the
+over 45 than the under 45, much higher prevalence, and incidence rates at those levels. You can see between
+1970 and 1990, wow, the share of the working
+age population that was in the disability prone ages
+was really getting small, not a big surprise that disability wasn't seen to
+be a huge problem then. Between 1990 and 2010, amazing As the baby boomers shifted into that age band, 45-64, we had a big increase in
+the number of people on disability rolls. Really not a big problem
+in understanding that. But the fun part is as
+we look into the future, we're going to have
+rough stability. The under 65 is a shrinking
+share as we all know of the population over 25 but the share that's in the disability-prone ages is going to be fairly
+stable in the future. Of course, we've known these demographics
+for a long time. This is something
+that we suddenly discovered in 2010 or 2012, so we were able to make
+projections along these lines. The one comment I'd
+want to make about this is on the last panel, the second slide
+that was shown had the wonderful
+[inaudible] daily slide about prevalence rates
+across different countries, please keep in mind when
+you look at that slide, those are gross
+prevalence rates. The total number of
+disabled workers divided by the working-age population. Those are not age-adjusted. We have age-adjusted
+charts because if you had those same charts
+on age-adjusted basis, as we had more and more working age population move
+to the higher ages, you'd see the disability
+prevalence rates not increasing to the extent it
+appeared in those trend. Karen Glenn: Two things to
+take away from this slide. This is showing the percent
+of the population ages 15 to NRA that are
+insured for disability. These are the folks who have
+worked enough and worked recently enough to be able
+to get disability benefits. The males you can see in those rates have gone
+down a little bit. We're projecting those
+to stay level in the future but the real thing to notice here is
+the increase in the female in short rates. They have gone way up from about 38% back in 1970
+to closer to 70% today. What that means
+is that women are working more and more steadily, so they're able to
+get these benefits. No real surprise that more women are ending up
+on the disability rolls. Similarly, these are
+incidence rates. These are people coming on
+to the disability rolls. As Steve mentioned,
+these are age-adjusted. We like to do things
+age-adjusted so that they're consistent, and
+comparable across time. Otherwise, you get
+demographic effects in there that can skew things up
+one way or the other. Again, little hard to see here, but this begins in 1970. There was a gap between
+the male rates, which are the blue rates, and the female rates
+which are red but that gap has really
+closed since about 2000. We are in the future
+expecting female rates to be just slightly lower than
+male rates going forward. Steve Goss: Another little
+bit of historical perspective on this is that one of the challenges back then was when
+the recession came, disability cost went way up as a percentage of
+GDP and we thought, well, it's probably
+good to look at both components of that ratio. You can see on the light
+blue lines to the right, that is the increase
+in the DI cost, benefit-cost as a
+percentage of GDP between 2008 just before when the recession was only getting started and didn't really affect our disability cost yet and 2013 when we'd really basically felt all the worst effects
+for the last great recession. You can see we had a
+pretty big increase in DI cost as percentage of GDP. But where did that come from? Well, the far-left
+little line here, which is for you, bright pink, is the increase in the benefit-cost as a
+percentage for disability. You can see, well,
+in 2010 we had a pretty big increase
+in disability costs. But by 2013, we had really virtually no
+increase in disability cost. However, what really
+affected the cost of disability as a percentage
+of GDP was the denominator. The fact that GDP
+in fact slow down, we have another
+side note here that actually shows the
+change in number of workers and the
+change in number of beneficiaries and it's much like this, but even more stark. We just wanted to point out
+when there's a recession, it's not so much a matter of, we have enormously large numbers of extra people
+getting benefits but our tax base goes down,
+and that really affects our cost as percentage
+of GDP and payroll. Now, flipping a little bit, I think the balance
+of what we've going to be talking
+about as well, actually now we'll be
+going to be going to the future as Jeff foresaw. What you're going
+to see on some of these remaining slides
+are going to be what has really happened in
+the more recent experience, which we are seeking to better understand and
+looking for cards and letters and comments from y'all to help us move
+in that direction. Applications and incidence
+rates have been dropping ever since the peak in 2010 to
+quite a dramatic degree. Numbers of beneficiaries, which people were so worried
+about just a few years ago, have actually been
+declining since 2013. Prevalence rates have
+peaked and are dropping. Now, here's the question
+about the future, are the declines we're
+seeing here recently, are these temporary, or are we moving to a new level, a new situation with disability? A bunch of possibilities we've looked at is will the economy and jobs that suggests that with a returning
+strong economy, this should be
+temporary, or is it? Has there been a
+change in the nature of employment in our country? Drop in hearings allowances, probably most are
+familiar that are administrative law
+judge hearings allowance rates have
+dropped them in the mid-60s to the mid 40% in recent years for
+perhaps a number of reasons. Some have suggested are
+the Affordable Care Act, bringing more health insurance, more access to health care to many millions of people who didn't have
+insurance before. Maybe it's kept a bunch of
+people who might have been on the verge of applying for
+disability healthier, longer, and therefore they're
+not applying as much. There has been some work by
+some people in this room about things off-field
+office consolidations. Some of them suggested
+by reduction in the number field offices
+and consolidating them by SSA that perhaps we've contributed towards the
+lesser applications we've gotten. Some people have talked about
+attorney representation. In fact, in particular,
+one very large law firm went out of business
+a few years back. There was concern that
+maybe their stoppage of their national advertising was not getting the
+word out about you can apply for
+disability benefits. We've been hearing from people though is that most of
+the attorneys working that are still working
+in that area and might be advertising at least as effectively as before
+now on a regional basis. The other question is,
+is there something more fundamental going on here? That's what we seek
+to better understand. We're going to be searching
+for it and again, as I said, working for more input from y'all about getting a
+better understanding. Karen Glenn: This graph is
+really about the numbers of disability applications
+we've been seeing in social security. You can see that back in 2007, which was basically the peak
+of the last economic cycle, applications were pretty low. They were on the
+order of 1.6 million. During a recession,
+applications kicked way up, increased rapidly to over
+two million in 2010. What you can see from
+there is that in each successive
+trustee's report, we keep projecting the
+number of applications to level off or get back
+to where they were before. Every year we've been wrong. Applications since 2010 have dropped dramatically
+as you can see. They're now below 1.5 million. Even when we think
+the economy is really back to about the
+level it was in 2000s, and then maybe not, that's
+a little bit debatable. But really applications are
+at an all-time low level. Even in 2018,
+they're still down. Again, in the 2018
+trustees report, we projected them to
+start jumping back up, but they haven't.
+They're still down. Now, this is estimate based
+on data through mid-June. It's always possible
+things will come back before the end of the year, but it's not looking good
+or it is looking good. We want fewer disability
+applications. Moving on to the incidence rate, I explained before,
+this is really the number of people
+going on the roles. This relates directly
+to disability awards, people who were actually
+awarded disability benefits. The picture is very similar
+to the applications, one, things were low, moved up
+very high in the recession, have plummeted since then. One thing to note is that the 2018 number actually
+has jumped up a little bit. That's a bit of a
+good news story. This is actually related to the Social Security
+Administration working down the
+disability backlog. We're starting to really work through some of
+those older cases. More people are
+getting on the roles. This graph is basically
+the last one, but zooming in on the recent
+history, and the near term. The blue line is exactly what you saw
+on the previous graph. This is our projection for
+the 2018 trustees report. The little red line there
+shows what would have happened if we weren't assuming any reduction
+in the backlog. You can see that
+the line is very smooth if there were no
+reduction in backlog. But we're actually
+expecting those judges to make more decisions and
+get more people on the rolls. One other interesting thing we noticed this year
+when going through our projections was that let me make sure I've
+got this straight, I always get the sign wrong, folks getting awarded at the hearings
+level actually have significantly lower benefits on average than those
+awarded initially. Because we're working
+down that backlog, the average benefit overall is lower than we would
+have expected it to be. A little interesting work
+that happened this year. So putting this all together, what does this mean? We have lower applications, we have lower awards. Obviously, that leads into lower numbers of
+beneficiaries overall. The black line on this
+graph is what we were projecting in the
+2008 trustees report. This is before we
+had incorporated any recession of facts
+into our projections. You can see we're projecting
+the roles to pretty steadily go up and then
+eventually level off. In fact, what we saw. Again, the blue and
+the red lines are overlapping each other in
+the historical period, but what we saw was that more people came on the
+roles during the recession, but significantly
+fewer since then. It actually brings
+the overall number of beneficiaries down in
+the projection period. 2018 projections are
+even lower than in 2017. Steve Goss: What
+other just a little editable pieces just
+wanted to add onto the really interesting
+point that Karen made about administrative
+law judge, allowances tended to have monthly benefits
+about 10 percent lower than those that
+are allowed earlier. The disability
+determination services that's actually been consistent over the last several years. And the way this really affected our projections is when
+we discovered this. We saw over the last 3,
+4 years during which the administrative law
+judge allowances were all hopefully smaller
+than usual share. That therefore tended to
+make our average awarded benefit amount elevated from what it should really have been. In this year where
+we're starting to get the backlog down, we had a more normal in 2017 relationship between the
+number of allowances that administrative law judge versus disability determination
+services that brought down the average reward of benefit level
+from what we would rather expected and takes us to a lower state for future
+years going forward. It really did have a
+somewhat significant effect. This slide we don't really
+spend a lot of time on. I think most of you are familiar with this sort of takes
+a little bit more of an historical perspective of what you can see with the
+blue here is our age, sex adjusted,
+disability incidence rate going back to 1970,
+it moves up and down. Not surprisingly, roughly
+in consonance with what's going on with the recessions. But again, what
+we're dealing with now at this point is
+something that is beyond what we would
+have been expecting from a session from the
+earlier slides. Just wanted to point out also in terms of disability
+prevalence rates, this is almost back to the
+point earlier where we had almost 200 percent
+increase between 1980-2010 in the number
+of disabled workers. The prevalence rates went up somewhat during
+that period of time in the future we're reprojection
+prevalence rates to be about the same. However, we're showing
+prevalence rates to be going up a little
+bit in the future. This will be contingent
+on what really happens with the incidence
+rates in the future. If we are now moved down to a permanently lower level
+of incidence rates, then the level that
+we are currently still assuming for
+the ultimate level, which is quite a bit
+above what we've had very recently than these
+prevalence rates are being overestimated
+now, time will tell. To that point, just
+wanted to share with you, because prevalence rates and our numbers of integration will be determined by what happens
+with incidence rates. We wanted to share
+with you on the little red with a
+little red dots. These are the ultimate
+disability incidence rates per thousand on an
+age adjusted basis, of course, that we've had over the last several
+trustees reports. You can see, and I think it was the
+2012 trustees report. We jumped from about a 5.2
+up to a 5.4 level based on recent experience and lots of people concerned
+about disability. Maybe not the smartest move
+in the world we did that, but you can see also on the
+other little lines here, the solid lines, you could
+see over the past, 10, 20 and 30 years, historical moving averages,
+what has been happening, What's interesting is
+while the numbers, especially for the
+tenure average, you can see went
+way up what was at a high level back in 2012, the impetus for people
+thinking maybe we're going to have a
+permanently higher level. The 20-year and third year, had not been so high
+at those points, and all now have moved
+down and converge, 10, 20 and 30 year histories
+to about a 5.2 level, which begs the question of where do we think we
+will be in the future? Are we in a temporary
+little hole here on disability incidence rates and it's going to come back up, or are we in a quasi new normal? Nicole Maestas: I'm going
+to talk a bit about this decline in SSDI Awards, which I think is a
+really really big deal. It was a bit unexpected and it is in some ways the
+biggest thing to happen in the DI program in recent memory. What I'll do is offer
+my thoughts on what those reasons for the
+decline might be, implications for research, and give you my
+opinion about what the future outlook will be; is this the new normal, or are we going to revert
+back to the prior? If I had to tell you, what were the three
+big things that are driving this decline
+in DI awards? This is what I would pick.
+I would say demographics, the economy, and
+then SSA policy. By that I mean this ALJ
+Reform of the hearing level, and the ways in which
+administrative law judges, ALJs make and document
+their decisions. I'm going to focus on the
+latter two: the economy, and the ALJ reforms in part because they're
+rather intertwined, and I think you need to get a handle on both
+of those to really understand what's
+been happening here, and what's going to
+happen in the future. Demographics are also important. I think Steve and Karen
+showed that very clearly, the power of demographics here. They're also not as hard to understand because there's
+somewhat predictable. Starting with the economy, we've known for some time the SSDI applications
+are countercyclical. This is a picture produced
+by Kathleen Mullen and Alexi Strand and I looking
+at the Great Recession. Just like in prior recessions, you see that as the unemployment rate spiked
+up in the great recession, we're showing here the
+monthly unemployment rate in blue, so did the number of
+disability claims. The Great Recession was really, in some ways no different than prior recessions in that regard. Here we're showing the number of claims relative to
+their baseline level. The system was
+getting about 120,000 disability claims per month
+prior to the recession, and that rose by about 20,000-30,000
+additional claims as the recession progressed. But what we didn't know is did this translate to
+awards in quite the same way? That was because we hadn't yet been able to
+follow recession, induced claims over time
+to track how many of them, eventually, often many
+years later, get awarded. That's what we did.
+You see here when you organize those claims by the date at which
+they were filed, and relate that to the
+unemployment rate, you see that also awards spiked with the
+great recession as well. Now, in the paper here, we used the fact
+that the recession played out differently into different degrees of intensity, and different timings
+across different states. We use a state
+month variation in the unemployment rate to estimate the elasticities
+underlying here. We found that the elasticity
+of application with respect to
+unemployment was 0.25, so with that, to get a
+sense of that magnitude, at the peak of the recession, when the unemployment
+rate had doubled, the system was getting about 25 percent
+more applications that month than usual. It was also getting more awards, about 19 percent more
+awards than usual. We calculate using these
+estimates that the recession led about 1.4 million workers to apply for
+disability benefits. About a million of those were new in the sense that had
+there been no recession, they probably wouldn't
+have applied. But a sizable chunk, about 28 percent would
+have applied anyway. We obtained this
+finding by estimating the dynamics of this effect. They would have applied any way, but only a few months later. What that implies is that it is not the case that
+the reason we have such low applications
+now is because they were all shifted forward in time during the
+Great Recession. In fact, the same pattern
+exists in Awards. There were over 500,000
+induced awardees. About 400,000 of them probably wouldn't have come in had economic times
+have been better, but 100,000 of them
+would have come in any way just a little
+bit later in time, only 1-2 months later. Now, what's as big as
+these effects are? They are big and they've had important cost implications
+for the system. In the scheme of things, those induced applications
+were only 11.6 percent of all applications that
+were received by the disability
+system at that time. Between say, 2008 and 2012, and induced awards were
+only 8.9 percent of all the awards made to applicants during
+this time period. The recession was important. But, it can't possibly really be a major explanatory factor behind the decline
+in the award rate. It's going to play a role, and it plays an important role. I'm going to show you how
+it affects the award rate. The key thing being that recession induced
+applicants are of course, a little bit healthier than
+the average applicant. One other fact that I think is useful to keep in mind
+in thinking about, well, what happens when the economy
+takes another downturn, what's going to happen here? The Great Recession actually had relatively little impact
+on the initial award rate. The disability examiner
+on the initial review, didn't change their
+behavior very much. But the pellet awards
+increased by a lot. Actually, they increase at both reconsideration and
+at the hearings level. As a result, about
+53 more than half of the recession induced
+beneficiaries were allowed on appeal. Much higher than what you usually find in a typical year, which is more like 37 percent of beneficiaries being
+allowed on appeal. The important thing here is
+that the administrative of law judges were particularly influential in driving the
+effect of the Great Recession on the DI application
+or DI award rate. It is true also this was
+the fourth point here, that the induced applicants had less severe impairments
+than average. Their allowance
+rate was actually only 42 percent
+compared to an average, about 54 percent in these data. It is also interesting
+to consider what has been happening then
+to employment. There has been a
+very corroborating, thus the significance of
+these business cycle effects. There has been a very
+interesting recent turnaround in the employment of
+people with disabilities. Here I'm plotting focus on
+the colored lines here, the orange line is
+data from the ACS. The blue line is from the CPS. The gray bars show the
+last two recessions, and we're looking at the
+employment rate measured in those survey data sets of
+people with disability. Disability is defined by those that six question
+disability sequence. You see that as with the
+retirement programs, employment declined and
+declined for many many years. Then in the mid '90s we saw
+a turnaround in employment. We're seeing a very similar turnaround in the
+employment of people with disabilities
+occurring in about 2014. If you drill in to
+the monthly data, and look at men and
+women separately, the orange line at
+the top is men, the red line at the
+bottom is women, and here we're showing
+the monthly jobs data 2008 to June, 2018. It's actually quite
+pronounced and that increases on the order of about
+5 percentage points. That's a relatively large gain
+in employment compared to the base employment
+rate for this group which hovers in the
+mid '20s to mid '30s. On to SSA policy. The ALJ Hearing Reforms, I think are a much bigger
+deal than the business cycle, and possibly the
+most important and least heralded least discussed, least understood SSDI
+policy reform of our time. What did SSA do? The Appeals Counsel use
+data analytics to identify ALJ's who were making
+non-policy compliant decisions. What that meant was that it turns out
+there's something like 2,000 different outcomes of a disability case that can
+be entered into the record. For many of those outcomes, there is decision tree pathing that needs to be followed. If you want to allow somebody
+on a particular basis, that applicant has to
+satisfy say three tests. If they pass the three tests, then you can award
+on that basis. What they found
+was that many ALJs were not following
+the decision trees. Using their data analytic tools, they were able to
+identify those ALJs, and give them feedback. They were also able to identify the ALJs who had outlier
+allowance rates. Either they weren't
+they were allowing statistically far
+too many cases, statistically far too few cases. They gave feedback
+to those as well. As a result, new training for ALJs was introduced in 2011, and the training focused on policy compliant
+decision-making, and ensuring that the ALJs
+were actually documenting all the required
+regulatory steps into the judicial record. They also simultaneously hired many many new ALJs
+into the system, and all of the new
+ALJs were immediately trained under the new
+system beginning in 2011. What you have then is massive turnover in
+the judicial core, and also retraining of all the incumbents
+and the new entrants. Hillary Hoynes, Alexi strand and I have been
+digging into this, trying to understand the
+nature of these reforms, and so far what we're finding is that the ALJs who stayed, that is they didn't retire. They had actually lower pre-period
+allowance rates than the ones who left. The new ALJs had substantially lower allowance
+rates than the ones who left by as much as we're finding seven percentage
+points lower. Even the peers, even its
+interesting spillover effects, the judges that
+were targeted for feedback that would not
+occurred if a judge in your office had
+received this feedback then the other judges in the office also reacted by reducing their allowance rate. We're still trying to parse out these effects and understand how much of that decline in the hearing level allowance rate could this possibly explain. But we think it
+has the potential to account for a pretty sizable
+share of the decline in the hearing allowance
+rate simply because so many of these
+judges were treated. I think if you look
+at the judicial core today post-2001, it is a very different core than it was before that time, both in terms of the
+people deciding decisions, but also the ways in which they're making
+these decisions. Here, what this is showing, this is putting these
+two things together. This is back to the study with Kathleen Mullen
+and Alexi Strand. You can see why it's
+been difficult to sort out what's due to the reforms at the ALJ level
+versus the Great Recession. What we've done here
+is show in blue what the actual hearing
+level allowance rate has been since 2007. Well, these are
+applications filed in 2007, so the allowance rate
+itself is coming from allowances made in future dates all the
+way through 2013. Then we use our estimates from the other work to net out all of those recession-induced
+applications and awards to compute a
+counterfactual allowance rate. What would've been the
+allowance rate had we not had the Great Recession? What you see is that the
+allowance rate would have stayed relatively high and flat until about
+the applications that were filed in 2010, which hit the hearing level in about 2011 when they
+rolled out these reforms, and then it comes
+down, and it comes down quickly and sharply. But with the recession-induced
+applicants in mix, recall that these people
+had lower allowance rates because they were healthier
+than your average applicant. It's been very hard
+to really say, well, could it possibly have been these ALJ reforms or not? There's more to do
+here, of course, to try to figure out, well, how much can we really
+attribute of that decline in the hearing level award rate to the specific ALJ reforms, but I think we're making
+some good progress on that. I think this set of findings offers up a
+number of implications. For one, internal policy changes can make a really
+big difference. There was no act
+of Congress that changed the screening level
+of the disability system, and yet we have seen
+what amounts to about a 20 percentage
+point reduction in the hearing level
+allowance rate. That's the first thing. Two, many people with disabilities appear to have work capacity. In other work, we found
+that about 40 percent of SSDI applicants have some
+degree of work capacity. What this suggests to
+me is that we just need better measurement of the
+specific work capacities that people have and
+better linkage of those specific work capacities to the specific demands of jobs. At this point, our
+system is rather blunt. I think we know a
+lot more about what jobs demand and
+we're much far more capable of measuring
+work capacity than we've been able
+to in the past. Three, increasingly, people with disabilities
+are working and for many people, work is an alternative
+to SSDI participation. I think one implication of the economic business
+cycle effects that you see with respect
+to the Disability Program, and also this latest increase in employment by people
+with disabilities, is that people with disabilities benefit from excess
+labor demand. When the labor
+markets are tight, they work. Employers hire them. I think these demand pressures
+are likely to continue as population aging intensifies. Population aging itself will
+just put more pressure on the labor market as labor
+force growth slows. Fourth suggests that
+there is a need for greater understanding
+of the employer role. We tend to, I think research to date has really
+largely focused on the "moral hazard
+problem of the applicant." But there is also a possible
+moral hazard problem on the employer side. That is that employers don't fully internalize
+the cost of not accommodating somebody who
+has a disability and instead allow them to just go
+on to the SSDI program. We have begun digging into this. It's been rather hard
+to study because we don't have data that links the characteristics of the
+firms that people come from in a very easily
+accessible way. But what we do observe and we've turned
+to IRS data to do this large differences across industries and the DI entry
+rates of former workers. Here's just a little picture
+from this work which is a little hard to read, but let me tell you
+what you're seeing. What we're graphing here is the SSDI entry rate of
+former workers by industry. You see quite a
+lot of variation. The top industry for sending
+workers to the DI program. These are people
+who were working three years prior
+and were observed to be receiving disability
+benefits three years later. Mining is the number
+1 at 1.86 percent of former mining workers
+enrolling in SSDI benefits, followed by transportation, management of companies, administrative support,
+construction, health care, all the way down to a low of 0.77 for
+educational services. That's variation of
+more than two-fold in these DI entry rates
+across industries. Now you might say, well mining, of course, it's mining on top. But there are some
+surprises in here, for example, management
+of companies. That's the number
+3 at 1.7 percent. The top occupations in
+that industry are things like bookkeepers,
+managers, accountants, administrative and
+support also it has a range of managerial and
+janitorial positions. Construction, of course, you
+might expect to see that. But it turns out
+actually that much of our intuition about
+which industries should be on this list is
+formed by what we know about injury rates from the worker's
+compensation systems. We've done a little
+bit of arraying those against this list, and this is not going to be a perfect correlation at all. Of course, that makes sense. We have a workers' compensation
+system to handle those. DI claims are not
+necessarily work-related. They can be, but
+they're not always. In the future, I
+expect that some of these employment gains could be reversed during
+the next downturn. But I think there will be less impact of a future
+recession on the SSDI program, impact because of these
+appellate reforms. Recall that the hearing level, the appellate system was really a big factor in driving the number of people
+who came onto the program during
+the Great Recession. That really, I
+think, has changed. This improvement in
+judicial decision-making, I think is a permanent change. Literally, the humans making the decisions
+are largely different. There are all kinds of new data quality analytic tools
+that have been deployed to both improve the consistency of decision-making
+across the decisions and also help measure and track productivity
+of the workforce. The question of attorneys
+always comes up and there was a very prominent bankruptcy of the firm Vendor&Vendor
+a few years ago. Some have speculated that perhaps the reduction
+in attorney activity could have something to do with the decline
+in award rates. But this, I think, is actually a consequence of the change in the hearing level allowance rate and not the cause of it. If you think about it, when the award rate declines, attorneys lose money,
+they're less likely to get compensated on
+cases since they're compensated only if they win. Lastly, I do think we
+should see some benefits of technological progress
+in the future that should make it easier for some people with
+disabilities to work. But this too is an area
+where we simply need far more research
+and investigation to understand how that is playing out and how
+it might play out in the future as automation continues to
+increase. Thank you. Jeffrey Liebman: I want
+to make three points. The first is that it's pretty
+remarkable how stable DI, incidence rates and DI
+spending as a share of GDP has been once you adjust for the business cycle
+over the last 25 years, it's going to be the first
+point I'm going to make. The second is that stability masks big offsetting
+changes in both cases, it's more a coincidence than some natural
+feature of the program. It means that I think
+looking forward, if some of the big
+forces that have been in going in
+offsetting directions, one turns out to go
+faster than the other. We wouldn't necessarily
+expect that kind of stability going forward. Third, I'm going to agree with Nicole about
+the importance of policy implementation
+and present some findings in that direction. These are two pictures from my 25th drove economic
+perspectives piece. They show the incidence
+of disability insurance, meaning the percentage
+of eligible workers who were awarded
+benefits in each year, and as has come
+up several times, it's tricky to look at
+the raw numbers because the age distribution
+is changing and because of business
+cycle effects. What happens in the right
+graph on the right, is there I have age-adjusted, and I've also controlled for the unemployment
+rate and the lag done unemployment rate
+within five-year age ranges. What you can see, is there are these big policy reforms that first tightened eligibility and then listen
+to them again in the '80s. But since about 1990, male incidents has
+been incredibly fat. Once you take out the
+business cycle effect, we have about a 20,
+25-year period. Now, if you look
+at the later data that they actually put forward, where the incidence rate
+just for the business cycle, has been incredibly flat. But that downturn in
+2010 is interesting. That's showing that the
+take-up of DI during the Great Recession was lower than we would've expected based on previous relationships
+between unemployment rate. In other words, the
+cyclical sensitivity was less than we would expect, which I think is consistent with Nicole's evidence
+that something else was going on there. I wrote this paper
+before I knew anything, at least about any
+of this ALJ stuff, but something we already knew something needed to
+be explained there. I think Nicole has probably
+just explained it for us, which is something that
+happened that offset the normal rise and take up partially offset
+during the recession. For women, in a data science, have been converging toward men. I don't want to
+argue that that's literally what's going on. Because there are different health
+conditions going on here. But the basic trend
+here has been that in this period where
+male incidence was completely constant
+during the '90s, female incidents
+was converging just numerically toward the
+male incidence rate. One of the remarkable things in Steven Karen's slides, I
+don't think they highlighted, but we are in the slides if you got to get a sneak
+peek ahead of time, is that actually male
+and female incidents are now equal for
+the first time. The female fully caught up
+in that is a I don't know. I guess that's a milestone
+that means something. We had this incredible
+stability here. The other thing that's been
+incredibly stable has been spending on DI as
+a share of GDP. Or more accurately, spending for males as being incredibly constant and then for
+females as they entered the labor force and become more eligible if there isn't a bit. Here's a figure that
+the darker band there, the darker part of
+the bottom is DI, spending on male benefits
+as a percentage of GDP. This isn't adjusted
+for anything. This is just the
+absolute spending. You can see it was 0.4 of
+GDP in the late '70s, 1980. It was 0.4 of GDP on the
+verge of the Great Recession, female spending
+has been going up. There's more females have
+been in the labor force and covered here this is in numbers. You can see the average and late seventies
+point for one, the average in right before
+the recession, 0.441. Total has gone up about 1/2 percent of GDP to 0.68 percent of GDP on the verge
+of the recession. During the recession with
+the cyclical increase in claiming spending went up
+to 0.87 percent of GDP. It's already come down to 0.74 as the economy
+has recovered and the actuaries are predicting
+that we're back to the pre-recession level
+of spending it at 0.69. Over this period, if
+you go back to 1980, so we're going over a
+close to 40 year period. The total increase
+in spending on this program is under
+0.2 percent of GDP. If you think of spending
+on Medicare and Medicaid, that goes up by 0.2 of
+GDP every two years. That's the total
+over 40 years here. There's no fiscal issue here. It's got up a bit as women
+entered the labor force, but otherwise it's
+been constant. So fairly constant incidence, fairly constant spending, but I want to argue
+that both of those are almost a coincidence and that some fundamental
+entity here. First of all, if you think
+about the constant incidence of male claiming of male
+receipt of DI benefits, what's happened is there's been a lot of health improvements
+in some conditions, like circulatory
+conditions, also true in cancer-related
+conditions. There has been an incredible increase in musculoskeletal, those that just
+happened to cancel. If one had gotten
+faster than the other, we wouldn't be talking
+about constant incidence. We'd be talking about it rising. Now, some of it could be, there are people who for
+a variety of reasons, the work is pretty crummy, they got bunch of chronic
+health conditions, they're claiming one thing
+versus the other because it's become easier to
+claim one than the other, and so maybe some of it is an
+offset of the same people. But some of this has gotta
+be just a coincidence that the sine of one
+health trend and the other happened to cancel. As we see things like incentives being surprisingly low
+the last few years, I think it's worth us
+starting to look to see if some of these health trends
+are no longer canceling. Maybe the increase in musculoskeletal conditions or mental health conditions
+has leveled off. We're still getting some of the other decreases happening. That could easily be
+part of the story that we should start
+looking for in the data when you have the more
+dis-aggregated story. I would argue the near constancy of incidences is a coincidence from two big offsetting changes. That's true in the
+GDP numbers as well. The spending as a share
+of GDP is of course, the product of the
+number of people getting benefits and the
+average benefit rate. The spending numbers
+aren't age-adjusted. You'd expect, we know the baby boomers all hit
+the high disability age. Why didn't we see spending go up proportional to the number
+of beneficiaries going up? The answer is that the
+average benefit relative to GDP has come down
+quite considerably. The reason for that is
+one, income inequality. The earnings level of a typical DI
+beneficiary relative to the overall earnings level
+has been going down. Secondly, the earnings share of compensation has
+been going down as health benefits or a bigger
+share of compensation. Third, worker compensation as a share of GDP has
+been going down. For all three of those reasons, benefit levels relative to GDP have fallen by
+enough to offset the increase in recipients
+as a share of GDP, and that's led to
+stability on spending. I think we know from
+the demographics that the number of beneficiaries
+going to be pretty constant. But there's no
+particular reason to think we're going to
+continue to have a decline in benefits relative to GDP
+that could change if trends in inequality or in worker bargaining power
+changed over time. That feature of the
+stability may not persist. Third thing I guess
+I wanted to point out is going back here. Steven Karen pointed out that the incidence rates over
+the last few years, which are down at
+about 4.2 percent, are really off the
+charts compared to anything we've
+experienced recently. Now when you look
+at those numbers, you have to adjust for
+the fact that we're at a strong part of
+the business cycle. If you adjusted that
+would be more like 4.7 or 4.8 if you increase them to the average point
+in the business cycle. But they are still quite low, which I think is
+certainly evidence that something beyond
+the business cycle has happened during this period, which in part is the ALJ story, but maybe something
+else going on as well, that we haven't all
+discovered yet. I think it's illustrative
+to compare what we've seen during and then the aftermath of the
+Great Recession to DI claims to what we've seen
+with SNAP food stamp claims. For SNAP, basically, there was a big uptake
+in benefits that was exactly what you would
+have predicted based on the relationship during
+previous recessions between SNAP take up and
+the unemployment rate. Unlike DI where there was a
+muted response and staff, it was basically in line
+with past claiming behavior. But as we've recovered
+from the recession, SNAP has not come
+down nearly as fast as we would have expected
+based on past recessions. You can see here that the
+SNAP receipt went from 8.7 percent of the US
+population up to 15 percent at the peak
+of the recession. Now it's come down
+only about halfway to about 12 percent. Whereas we saw DI come down further than we
+would have predicted based on past recessions
+to what is it, at least in modern history,
+a record low incidence rate. My best guess of what's
+going on differently here actually reinforces Nicole story that policy
+implementation matters. During the second Bush
+administration, during the 2000s, there was a deliberate
+policy initiative to make it easier for the working poor who were eligible for
+SNAP to receive benefits. In particular, it
+used to be that if you wanted to go get benefits and after
+you were signed up, you'd have to take
+a day off from work to go recertify
+every few months. That wasn't really
+plausible for a lot of people to do that and people would get
+cycle off of benefits. They did things like say
+you can just call on the phone to recertify, rather than have to leave work and show up in the
+welfare office to do it. More recently you can now
+apply for benefits completely online in most states. I'm guessing that the
+continuation of those, it's again, it's the policy
+implementation story, the making easier for
+the working poor and stay signed up for
+SNAP is again, so there's this underlying
+increased ease of application that's been
+going on over this period that's happening at the same
+time as the business cycle. Those two things combined
+are explaining why we have a different
+pattern over the cycle than we would've expected. Final observation. I'd like to make is that I think there are a
+lot of things in the USDA's system where the incentives are not
+perfectly aligned. Nicole referred to the
+employer situation. Clearly, there are
+incentives that affect individuals in their
+application decisions. They're screwy things in the way that SSA
+budget is designed such that the funds that are spent to figure out
+whether people should get benefits are on the
+discretionary side of the budget which is capped. But then the benefits are on the uncapped entitlement
+side of the budget. If you underspend on SSA
+administrative capacity, and then that
+causes you to spend more on the mandatory
+side of the budget, that's good from a
+congressional standpoint because we live within
+the budget caps, but we actually ended
+up spending more. There are whole lot of
+things that are messed up. It's been hard, I think, to make serious progress on thinking about how
+to improve some of these incentives
+in a period where everyone was talking about
+the system being out of control financially
+and it just made it much more contentious
+policy environment over the last 10-15 years, than probably it needed to be. Because of that, I think it
+was hard for anybody to say yes to the pilots and experimentation that
+has been needed. I'm hoping that in this
+period where it's pretty clear that there's
+no fiscal crisis, that if anything numbers
+are coming down, it'll be possible
+to work on some of the hard incentive problems. I think the hardest one
+is that if you look at the people who are
+marginal beneficiaries, it's truly got some
+work capacity, but they don't have a hell
+of a lot of work capacity. The potential earnings
+are like $15,000 a year, $18,000 a year on average for the marginal DI applicants who are the ones who
+if you turn down, they can still go back to work. If you think about
+interventions that might help those folks
+stay in the labor market, it's hard for them to
+pay for themselves if the incremental work
+capacity isn't that great. I think for many of the
+folks on the margin, they're actually better
+off if they can stay in the labor force. We offer people who are having
+chronic health problems, both physical and
+mental health problems and not well-placed in
+the modern labor market. Right now what we offer
+them is, here's the deal. If you promise never
+to work again, we'll give you a lot of money
+or you can muddle along. I do think that there are
+solutions out there that probably make the individuals better off by keeping
+the labor force. I doubt that they will
+pay for themselves. It's only if we
+actually think that the individuals being
+better off by still have not being socially isolated
+and not being out of labor force is something
+we're willing to pay for that it'll be worth
+doing these interventions. Because just given the
+potential earnings capacity, even with interventions
+isn't that high, it's hard. I think it'll be
+hard to make things completely revenue neutral
+on that side and we'll have to decide whether the benefit of helping people
+stay on their feet and stay in the labor
+market is something we're willing to pay for even if it might be cheaper just to give them lifetime benefits. I think that there's a
+lot of experimentation to do in that in that area. I'm hoping we're entering an era where those policy
+discussions are things that are more feasible than they've
+been in the last decade. 

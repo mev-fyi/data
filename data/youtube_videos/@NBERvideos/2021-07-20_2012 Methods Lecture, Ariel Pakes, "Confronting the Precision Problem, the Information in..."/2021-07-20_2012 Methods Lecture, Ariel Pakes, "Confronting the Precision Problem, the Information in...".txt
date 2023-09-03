@@ -1,0 +1,1243 @@
+Ariel Pakes: We're
+going to start again. This lecture has a fair amount that's related to
+demand systems, but not directly a demand
+system stuff, so I'll talk about the pricing equation a lot and its implications. The topics that I'm
+going to go are those. I'm going to talk about
+what are the sources of identification and
+market level data. Where is it really coming from? It's going to end up
+that there's going to be a precision problem
+most of the time. From just market level
+data you're trying to estimate a lot from
+not so much data. I'm going to talk about how you can get around
+the precision problem, how can you can confront
+it, so to speak. Then I'm going to go to the pricing equation,
+and that's going to be one way of confronting the precision problem I'll
+talk about it in some detail, including how you can use it to generate instruments
+in an "optimal" way. The optimal is in
+quotation marks. Then I'm going to talk about the pricing equation more generally because I think there's been a lot
+of confusion about hedonic models and
+their relationship to what we're doing here. I'll talk to it also and
+I'll use as examples, how you use it in the CPI, and how you would use it in
+evaluating amenities and things because it's behind all this and you
+might as well see it. It's only a couple of minutes. I was just saying this before, so we had 20 years of data, I don't know how good that is, it isn't the 1,000 markets, but it's 20 years of data on the auto industry
+where we think we have a fair amount of information because it's an industry
+that's been studied a lot. When we just tried to
+do the demand side alone we got nowhere. There would not be a BLP
+had we stopped there. We've got nowhere in the sense that we can get estimates, but they were so imprecise that they weren't
+going to be usable. There's a footnote in
+the paper to that. Nobody remembers that,
+but there's a footnote in the paper that
+have that in it. This is not unusual
+because what you're doing is if its a national market, however many years you have in the national market
+and you have shares of different products in those markets and from
+those simple shares, you're trying to get the
+whole distribution of preferences in the whole
+community that you're studying, in this case the nation and
+that's a lot task of just, if there's 50 products, 50 numbers over 10 years. The question is where is the
+information coming from? You can tell a little bit about where you can go this way, there's differences
+in choice sets across markets and time periods
+so what they're doing is if you held the characteristics of the population constant and you added new products and you compare the new
+product to the old product, say they were the same in
+all but one characteristic, you would see as the demand moved from one
+product to the other, what the preferences were
+for that characteristic. Essentially they're moving
+the choice set around, if you could move it wherever
+you wanted would trace out the distribution
+of preferences over characteristics. That's one source
+of identification of market level data, the other source of
+identification is, this is where the CPS and
+data sets like that come in. You know something about
+the demographic features of different markets
+or different counties if you're going cross sectional. You can see that
+if you think that the preferences are a
+function of income and family size, and stuff
+like that demographics. You see the same choice set in different places and you see different demographics
+in the different places, and you see Greenwich which
+has an average income of something like $200,000 a year and you compare
+it to Bridgeport, which has an average
+income of $30,000 a year and you see how people at 2,200,0000 cares about price relative to people who are
+at 30,000 care about price. You're tracing out that by
+moving the demographics around and tracing out
+the preferences over the same set of characteristics by moving demographics around. Now you might argue that
+neither of those are a lot of information and
+that's often true. If you look at national markets, usually there isn't a hell
+of a lot of variance in demographics over the time
+periods that you have. The nation's demographic
+distribution just doesn't change that much. You're looking at differences
+in choice sets over time. In some goods, if
+you took computers, there's a lot of differences
+in characteristics, overtime you'd really be
+able to trace out a lot. But in autos it would be very hard for you
+to separate out. When you get a difference
+in choice that there are many things that changes
+at the same time, be very hard to separate
+out the various effects. That's what was going on in BOP. If you do cross-sectional
+analysis like Aviv stuff, the serial stuff, and you've fixed the
+choice that there is quite a bit of variance
+in the distribution of attributes of demographics
+across counties typically. I showed you that in the first lecture
+remember when I showed? There is really
+quite a bit of that. You have to worry a little bit. See this as un-observable. It's everything you don't see. That's what it is
+it's like a residual. It may well be that everything you
+don't see in one county is different than
+everything you don't see in another county, and you
+have to worry about that. The unobserved part
+of preferences are differences across counties. That gets even more
+complicated if you think that in this case, the manufacturers are
+putting different products in different counties
+because they will put products that are good for the un-observable
+characteristics of that county, so you have to worry a
+little bit about it. Then if you're looking
+at demographics, the problem usually
+becomes there is a lot of variance in the demographic
+characteristics, but often there are other
+factors that determine choice preferences so
+if we were doing cars, it would matter very much whether you had a kid who you had to drive
+to a soccer game and had to have 10
+kids in the car because then you might
+want a minivan, or it would matter very much what your other car was
+that you could use. Those are things
+that we don't really observe often in our data
+sets so they're going into the un-observable
+preferences for one thing or another, and they may have different distributions
+over counties also. That can complicate things also. There are complicating factors, I don't mean to
+kill all of this. I really don't mean to, but I want to motivate the fact that we want to bring in
+more sources of information. There isn't a lot
+of precision in just market level data and you want to bring in more sources of information and there
+are two ways of doing this and it's always
+true in econometrics. If you've got something
+that's imprecise, you can do one or two things. You can either add
+data or you can add assumptions, and both of them
+will make it more precise. It's not always bad adding assumptions if they're
+good approximation. When you can add data, there's many different
+forms of this. Aviv said, "Well, what I'm going to do is add
+many different markets" which is one
+way of adding data, at least to BLP because we
+just use one national market. The other is to add micro data, so this is my favorite option but it's also the
+most costly thing and it often isn't available. By the way, when you say, I wanted to be very clear, everything we do in econometrics,
+it's an approximation. Nothing is exactly right
+and the question isn't, do you get it exactly right? We'll never get
+it exactly right. The world's too complicated. The question is, do you do it better than the next
+best alternative? Somebody is going
+to make decisions, I tell my classes
+all the time on the basis of something
+and the question is, are you doing it better
+than that something? Because if you are, you have
+positive marginal products so I don't mean to be too negative on this stuff,
+and I do it all the time. The real advantage of this
+class of models and adding micro data is it's a micro model, and then
+we aggregate it up. Aviv did it and I did it, we aggregate it up to so
+there's no new model required. The micro data can be used
+exactly the same model as the macro data, and
+they will be totally consistent with each
+other, is that clear? What happens in these models
+is because of that one, it makes it much
+easier to work with, but we've covered that in almost all of the markets
+that people deal with, they have the aggregate data. Market shares, prices
+and characteristics are typically easy to
+get, is that clear? When you have micro data, you also typically
+have aggregate data, product market level data. And so when we discuss this and I will discuss this tomorrow, I'm going to show you
+how to use both of them together because you
+always have them together, and you'll
+see there are sources of information in the aggregate data
+that really helped you with the micro data, and
+there's are sources of information on micro
+data that really helped you with the aggregate data, and using them together is the
+right way to think about it. When we do this, we'll
+use them together. It comes by the way, in many different ways, the microdata and I will go over a couple
+of them, at least. The one that Aviv showed was
+pennies or Kenny Goldberg, which by the way, was
+a very nice paper, especially at the
+time it was written. This was, I should say, maybe you should say
+this is your thesis. This is a student coming
+out in the market who did this before VLT was published
+and stuff like that. I mean, it was
+written before it. So it's quite impressive. I thought I wanted to
+come to Yale at the time. But she used the consumer
+expenditure survey. This is a survey that underlies the Consumer Price Index. It asked people
+what they bought. It's a small survey, too small to really
+think of using intensively as a micro
+data source where you actually had people
+choose a product. Because for most of the
+autos that were in, there wasn't anybody
+who chose it. It was just too small a dataset. But you can easily use
+this data, and a more Patreon did to get the covariance or
+the correlation between individual
+characteristics and household characteristics. You can see what is the actual correlation between price of the car, and the income of the
+family that bought the car? Or the income of the
+family bought a car versus income
+families who didn't buy a car; is that clear? That you can get fairly
+precisely and your model has an implication for
+that; is that clear? You can set some of the
+parameters of the model, but making sure the model is implementation is
+consistent with that data, and I will show you how
+to do that tomorrow. The other data, by the way, there's also
+privately generated surveys. A lot of people use this. It's usually from
+marketing firms. It's usually from for
+profit firm; is that clear? They usually don't give
+you the whole dataset. Again, they usually
+just give you the average income
+of somebody who bought car x or
+something like that. It's a very similar way to use it, and I'll show you how to
+do that tomorrow too. That data, by the way, typically they will not give you current data because
+they're selling it. Or it's to expensive, they will give it to
+you if you want to pay the right price in which
+you probably aren't. But they will give you
+older data that's not useful to them anymore at a very discounted
+rate frequently. Some of the stuff
+I showed you today will be from that data. The other data is micro data. What I call microdata is when you can match an individual to the product of the individual
+purchased exactly. It's fairly rare in our
+industrial organization, but auto data that
+we're going to use, the micro thing that has it. The home scan data on which
+of you are using home scan. It also [inaudible] . There's more and more of
+it and there's actually an increasing amount of it
+in public finance also. For example, the date on
+schooling choice actually lists the preferences of schools of different individuals in the
+Boston and New York system. That's exactly what
+you want to know. It's what was your
+first choice school, what was your second
+choice school. Indeed you'll see later on that having more than one
+choice is extremely helpful. It will nail things
+really very well. Having multiple
+choices is yet better. That came up data, the data on the auto industry has first choice, and
+then they asked prison, if you hadn't bought this car, what car would you have bought? That takes the first
+car out and looks at what's the closest thing
+to the first cart, which ends up being
+terrifically informative. I'll show you how exactly
+when we get there. That's tomorrow. Today I'm going to talk about
+adding assumptions. There are a number of
+ways of doing this, but the most prevalent, I think, is to add the pricing
+equation. We did that. But we did it because
+it had been long before many times,
+in other ways. It's typically a Nash
+in prices assumptions, sometimes people
+call that Bertrand. Every firm is setting
+their price to maximize their profits conditioning, and it's a full information
+assumption. I'm setting my price to maximize my profits and I know what the price of everybody else are at the time that
+I'm doing this. To implement that, I'm going
+to need more assumptions, so I'm going to bring
+more assumptions to bear on the problem. I'm going to add the
+Nash assumption, but I also need a cost
+function because prices, the model for prices depends
+on the demand system, but also depends on
+the cost function. I'm going to have to bring
+in our cost function. But the thing that's
+going to happen is the pricing equation. What's going to
+happen is now you have a demand equation
+for each good. You have J right-hand
+side variables, the number of goods
+that clear that have stuff on the J left-hand side variables
+and you have stuff. The pricing equation
+is going to double the number of left
+hand side variables. Because there's one
+for each product. That's the source of the
+additional information. You're going to have to also increase the number of
+parameters because you've got to get the cost
+parameters; is that clear? But the cost parameters
+you're going to do the play the same
+trick that you played. In the demand system,
+you're going to say there's J products, but there's a small number of characteristics that
+have to be costed out. It's going to be the same
+x's that are on top, and maybe some wage variables
+and rental variables. But it's going to be
+much smaller than J. That's the source that's
+going to come in to help you. I should say a couple of things. The assumption of
+national prices is an assumption which you
+can easily argue against. It just from a theoretical
+point of view, you can look up models
+were either demand or cost is dynamic for
+one reason or another. Demand could be dynamic
+because it's a durable good. If we sell a lot
+of Ford's today, the demand for Ford's
+tomorrow is going to be less because you just did. It could be a durable good, it could be what's
+called an experience good because I've tasted
+the product or tried it. I've changed my preferences. Because I know about
+the product now. It could be a network
+good like computers. There are lots of reasons why static Nash pricing
+assumption might be wrong. But the truth is, there
+is no model in almost any of economics that fits better than the static
+Nash pricing model, even where it shouldn't fit. I'm going to show you
+some numbers afterwards. It's an incredibly
+good approximation. I'm going to show
+you that for TVs, you get r squares on the
+order of 0.95, 0.96 fewer. I tell my classes if you were labor
+economists and you were doing the way a wage equation and you got an R-squared of 0.3, doesn't matter what was
+on the right hand side, you get an article in the JP. Because 0.3 is just
+huge and those stuff. Here we are getting 0.9.
+We know it's wrong. There's some sense in which
+you should be careful. But just the fact that the fit is so good is going to end up being very helpful in the
+estimation algorithm. The pricing equation. We're going to get to it in more detail because we're
+going to try and use it for hedonic and things like that, and
+show you what it is. It essentially amounts to price equals marginal
+cost plus a markup term. The markup term if you just
+did single unit pricing, there was this question
+last of V. The markup term is the inverse of
+the semi-elasticity of demand in this simple model. Is that clear? That's
+telling you that if our pricing assumption
+is anywhere near right, there is a lot of information on the demand system in the pricing equation
+because it's about the semi-elasticity
+of demand, which is one of the major parameters in the demand system. This is the information content that we're bringing to
+bear on the problem. What's in this equation? You're going to have
+the marginal cost. The marginal cost is going to be a function of the same axis typically that are in
+the demand system. If I have a larger car,
+it's going to cost more. If I have bigger MTG it's going to cost
+more, stuff like that. Those things will be in the
+demand system and hopefully interact with some
+determines of costs. In the car industry, the
+biggest determinant cost is exchange rate which doesn't sound like a cause, but it is. That's one aspect of
+this equation for price. What else does it depend upon?
+Why does it fit so well? First of all, you
+know that fits well. Why do you know that fits well? Because that's why people
+did hedonic regressions. They did hedonic regressions because they regress
+price on characteristic and they got high R-squares and then they decided, well,
+we should use that. You know from before me
+with court and gorilla keys and all these guys that at some level these
+things are fitting, but even if you just had that. But what are we adding to that? We're adding a markup term. The markup term just says
+a few things very clearly. It says if the car or if the product is in a very
+crowded part of the market, there are many cars that have the same characteristics of
+this car. Is that clear? Then if I increase my price a little bit a lot of
+people are going to leave, because there are cars
+that are very similar, that are right next door and that's what the demand
+system will tell you. What's the degree of similarity? That's one thing that goes
+into the markup term. The other two things that
+go into the markup term is, cars that are very pricey, they're going to be bought
+by people with high income, who don't care much about price. High-income people
+don't care much about price and they're going
+to be not very elastic. Which is going to
+generate high markups, which is exactly what
+generates the investment in the sunk cost to
+develop these cars. The economic intuition in
+these things is very clear. Then the third thing that
+goes into this markup term, is when there is
+multiproduct firms. I own two products
+instead of one product, what's the pricing equation? I increase my price a
+little bit, Epsilon. I lose some people, that's the loss and I gain the markup on the
+people who stick around. I keep on increasing
+the price until that's zero so that one
+balances the other. That's the national
+pricing equation. What's going to happen
+as I increase my price a little bit? I'll lose those people, but some of them go to
+my other product that I own because I own the second
+product now. Is that clear? They earned some
+of the money back, which means we can push
+prices up further. The other thing
+that we'll go into this markup equation is the amount of other products I own and how close they
+are to this product, which also comes out
+cleanly in the data. Maybe that we don't
+have the exact form, maybe more dynamic and
+everything else, is that clear? But the intuition
+is very strong. Even if it was wrong, I'll show you there are census
+in which it can help us very much
+as we go along. I'm going to now go
+through just what the pricing equation is. I think we went
+through part of this, but I guess I have
+to build it up. I'm going to do it for a
+multiproduct firm because typically each firm owns many products in the
+markets we study. I'm going to assume
+national prices, though you can do other things, and we've talked a little bit about other things. The national pricing
+assumption works well. Usually looks well as a
+predictor at least of price. May not be the right thing to interpret as the causal thing, but it works well as a
+predictor for price. But you could do other
+things. If you had other things like collusion, maximize the profits of
+these two firms together. You thought that was happening, you could bring up
+pricing equation for that to bear on the problems instead of
+what I'm going to do. Any pricing assumption you
+could replace this way. We need two assumptions
+to get going. We need an assumption
+on the nature of equilibrium, and an assumption
+on the cost function. The cost function is
+the typical assumption. Marginal cost is a function
+of these observable w's, maybe the quantity if there is an increasing or decreasing cost and an Omega term. The omega term is the analog of the c term
+in the demand system. It's whatever affects costs, which isn't in the
+w's. Is that clear? It's the unobservable
+component of a cost system. It could be productivity. Remember the c is
+missing from this term. If c is really quality, you might think quality
+costs something. Is that clear? The Omega would be large
+for large c products. You would want the c and the Omega to allow
+them to be correlated. The advantage of this, maybe I'm going to
+have j more left hand side variables
+and you want the w's, which are the observables to be. Presumably the number of parameters you're
+going to submit, it must be less than j by a lot. That's what's
+helping you in this. If I had another
+parameter estimate for every cost, I'd be in trouble. We're adding degrees of freedom. The other thing you
+should realize about this equation is that q, which is quantity, that's
+a function of both. Omega is a function of c, so anything that's a function of c is correlated with Omega. In addition, q should be
+correlated with Omega. Also, lower marginal cost firms should have a lower
+price and sell more. There is an endogeneity
+issue with q, just like there was with p. A lot of what people
+do is they write down this function and then modified a little bit to
+account for factors of the market that aren't accounted
+for well in this model. For example, the
+exchange rate thing. When we did exchange rates, we just put the exchange rate on the right-hand side of the
+equation going forward. Which is not quite right, because I know exactly
+the exchange rates, I know exactly the cost, so I shouldn't need to estimate a parameter on that separately. Is that clear? The reason we did it and people do this
+thing all the time, it's because we know
+there is also this phenomenon called exchange rate pass-through where it's not pass
+through immediately. We didn't want to force it
+to be a one coefficient. That's an example of
+how you would fix this up to modify it to fit
+the market better. It's not quite kosher, but it makes sense. What's the pricing equation? I'm going to assume Gamma
+q equals 0, if not, I need an instrument for q. I'm going to assume
+constant marginal cost, if not, I need an
+instrument for q. What the firm is going
+to end up doing? He owns the products in j, f, so j, f is just a subset
+of the whole products. They are the products owned
+by firm f. What it's doing is it's choosing price to maximize the sum of its profits. It not only takes into account the impact of the price of this good on the profits
+from this good, but it takes into account
+the price of this good on the profits of the
+other goods that it own. That's what's going on. If you write down the first
+order condition for that, you get this equation. Again, let me just come back. Everybody has seen this before, but just this answers
+the question before. If there was just one
+product, it will be priced. If every firm owns
+only one product, it has the familiar
+pricing equation, price equals marginal cost plus the inverse of the
+semi elasticity of demand. That's the markup. [inaudible]. The first equation, this one? Yeah, it should be
+capital M. Sorry, that's a typo. The M`s dropout. Sorry. That's an error. By the way, there's probably
+more errors than that. Though I got to admit
+somebody who looked over these things were supposed
+to pick up these errors. But I won't say
+who. Price equals marginal cost plus markup if we had two products of the firm. You get price equals
+marginal cost plus markup, and then you get this
+additional term, which is exactly what
+I told you before. It depends on if
+my price goes up, I lose certain people. The question is, how
+many of those people go to the second
+good that I own? This is the markup on the
+second good that I own. This is just the
+formalities of what I finished talking
+through you before. This markup in this
+equation here, and you can have as many
+products as you want. The intuition before
+it's not quite right. I should be a little
+careful here on two counts. One is, if you're going to use this stuff to do
+a counterfactual. You estimated the thing. There was a tax, so there was a policy change or
+there was a merger. You want to do counterfactual. There are two issues
+that you should realize. One issue that you
+should realize is that if I increase my
+price a little bit. If I merge, and
+increase my price, and response to that, everybody else's first-order
+condition no longer holds. Because everybody else's
+first-order condition depends on my prices
+too. Is that clear? There's really an
+equilibrium response, and you have to solve for
+a whole new equilibrium. That's true. The second thing is, you might think that that
+would screw up estimation. In fact, it doesn't. Because these are typically
+simultaneous move games. Everybody moves
+at the same time. They're often can be
+multiple equilibria, two simultaneous move games. If you go high, it might be
+optimal for me to go high. If you go low same for me to go low, so multiple equilibria. The estimation, though, it only relies on the
+first-order condition, which should be true
+in any equilibrium. The estimation doesn't depend on the multiplicity
+issue. It's correct. It just doesn't matter
+which equilibrium selected, how we got to it. Is that clear? What will matter is if I'm starting to do counterfactuals. If I'm saying what will be
+the price after they merge? Then the counterfactual depends on which equilibria you select. Is that clear? You can put on restrictions on the equilibria, and I'm
+not going to go there. There are different
+ways of doing that, but you should be aware
+of the fact that if you start using this for
+counterfactuals, this problem can emerge. There are other pricing
+assumptions except for that one. Aviv talked to you
+a bit about them. I'm going to skip that. Let me just give you the
+details of how this works. Now I'm going back to
+Aviv's first lecture. Aviv taught you
+how to use BLP or this estimation algorithm
+from just demand data. Now I'm adding a
+different source of data. I want to tell you
+how I'm going to modify the estimation
+algorithm to take account of this source of data. That's where I'm headed. I'm going to define
+this matrix Delta, which is this matrix you
+did define last lecture, which is DSI DPJ. It's the amount
+that the demand for the other goods goes up if the price of this good goes up. If the other good, and this good are both my goods. I look for all the goods
+that belong to this firm. I put on this row of Delta, I put on DSI DPJ for
+all of those goods. Which I can get from
+the demand system. Then for all the goods
+that don't belong to me, I don't care about them. The DSI, DPG, I just
+said it's zero, the Delta is zero,
+for those goods. If you just rewrite this pricing equation in matrix form, and make this pricing
+equation in matrix form. You get S, the vector of shares times the vector price minus vector of marginal cost times
+Delta equals zero. You can believe me, it's
+just a matter of putting things right place,
+and doing it right. That just says P minus Delta inverse S equals
+the marginal cost. They're just switching sides. Take Delta inverse over here. It's P minus Delta inverse
+S equals marginal cost. Marginal cost just equals
+W prime Gamma and Omega. What did Aviv do? What Aviv did when he was
+doing the estimation on Gamma. He said, "Look, there's this
+unobservable demand factor C. I'm going to show you how to solve for it through the
+contraction mapping in BOP. Once I have this
+unobservable demand thing, which is this XC. It's a function of Theta. The shares are a
+function of Theta. The inverse will be
+a function of Theta. XC will be a function of Theta. All I'm going to do
+is I'm going to say, "There are some things
+which are orthogonal Dixie, there are instruments that okay, I'm going to interact
+the instruments with XC, form an average over products, maybe over products,
+and markets. Choose the Theta that makes that as close as possible to zero. Because that's what an
+instrument supposed to do. That's one way of explaining
+the BLP algorithm. The hard part is getting
+C as a function of Theta. That's because XC is in the demand function
+in a non-linear way. You're used to doing
+instrumental areas where it's linear, it's not linear. What BOP had to
+do is they had to find a transform of the
+shares that needed linear. You could then do instruments. That's what was going on. Now what I'm going to
+do is I'm not going to find a transfer of the pricing function that's
+linear in the unobservable, and the pricing function. Do instruments against that, and makes them equal to zero. Once I have XC, I add
+JX, I average them. I hit them with an instrument. I got them. I found that
+Theta maximum zero. Now I'm going to
+say, well logP minus Delta inverse S,
+that's marginal cost. Marginal cost is W
+prime Gamma plus Omega. Omega is the R. If
+this is a true, whatever Theta is, one
+here is the true Theta, and this is a true Gamma, this is the true Omega. At Theta equals Theta note the covariance of that with the instrument better be zero. That's exactly the
+same thing we did on the demand side only now
+it's a little bit easier, at least if you know Delta.
+Delta is the hard part. All we're going to do is add to what Aviv told you
+another set of moments, which are the instruments
+interacted with Omega instead of the
+instruments interacted with XC. If you use exactly
+the same amounts, you get just double this amount
+of moments you're using. It's same instruments, it
+doubles the amount of moments. How much have we complicated
+the estimation algorithm? Every time we wanted
+to evaluate a Theta, we first simulated
+shares and then did the contraction
+mapping to get XCO. Now we got to do that. In addition, after we get XCO, we have to calculate all the first derivatives
+with respect to S to get the Delta matrix. That's the additional thing. Everything else is
+just standard method of moments after that. The only difference is that. That's how you add
+the pricing equation, that was my second
+goal in this thing. Again, you should note
+that you're adding the pricing equation to
+the other equations, you're actually
+adding assumptions. If you can get away without it, you like to not add assumptions, maybe test the assumptions, but not add them if you
+can get along without it. But the truth is that
+pricing equation often provides a
+lot of information, whether or not it's
+exactly right. The other thing about it is
+we do this for a reason, so you're doing all
+this demand stuff and then because you want to
+do something afterwards, you want to
+re-evaluate a merger, you want to find
+out a price index, you want to do something
+with the stuff afterwards. Many of the things
+that you end up doing afterwards will require the
+pricing equation anyway. If you do a merger analysis and you're interested in what's going to be the effect
+of the merger on prices, you're going to use a
+pricing assumption, whether you like it or not, because you have
+to figure out what the effect is going
+to be on prices. In that respect, there
+are three problems, there the problems
+where you don't need to re-compute where I'm interested in doing
+something which doesn't need to re-compute
+prices at all. They're putting on the pricing assumption
+might be costly, because if you screwed
+up, you're going to get. The biggest one for
+that are things like estimating consumer surplus from something, because it's just, you see the prices once, you see the prices and
+the products again, you calculate the consumer
+surplus difference, there's no necessarily new
+equilibrium price is needed. There's stuff and then there's stuff where
+the whole interest is in the new equilibrium
+price is like mergers often, and then there's
+stuff in the middle, you put on a voluntary
+export restraint, which is something we did
+in one of our papers. You put on a tax on gas, and you want to see what
+happens to the miles per gallon of the new car fleet. That's going to
+have a tax on gas is going to also affect prices. But you might think
+it's second-order, and that you would
+worry less about if Mac contexts and in a
+context where I'm really interested in the price affects my whole policy decision is going to be based
+on the price effect, which is the case,
+not totally the case, but almost totally the
+case with mergers, or at least the claim that
+that's totally the case. Sometimes you're going
+to need it anyway, whether you like it or not. I wanted to talk now
+the pricing equation, and the choice of instruments. I want to talk a little bit, I did talked about
+the instruments, I didn't talk about this part of that left it on purpose to me, told me it was going to
+leave this one to me, so I'm going to
+talk a little bit. Yeah, go ahead shoot questions, I'm happy with questions. [inaudible] I think what I would do if I had my druthers
+and usually I like DLP. We didn't we tried, we
+couldn't get anywhere. I would estimate the
+demand equation alone, and then the man occasion and
+the pricing equation, and I would see if they changed dramatically, the
+coefficients themselves, I would try and do a test
+to see if they're the same, the coefficients changed or not. If they didn't, I would use the added precision
+of the pricing model. What happened in DLP is
+you had no precision before you put it in
+the pricing model, so you'd accept anything. Then you have to and you're trying to do
+a pricing analysis, so you haven't real question
+of further exploration, but they might be
+different before, but wouldn't be, either you're assuming they were different before, but they won't
+be different afterwards. Is that clear? Or
+you're giving me another thing that will
+happen afterwards because you need some s model which will set prices if you're
+going to find out prices. I think I'm going to talk a little bit about
+this and it's here, but let me just say, you know
+as much about this as me, but I will just say
+for the advertising, people will often put it in as a right-hand side
+variable in this model, there's a real question
+if that makes sense. Because the question
+with advertising is largely, what's it doing? Is it changing my preferences? Is it changing my choice set? A lot of the issues
+that have to do with advertising this as well
+as I have to do with that. There's been a little
+bit of work trying to distinguish that, but not a lot, the amount of work on
+advertising, by the way, is very disappointing I think, advertising is just in
+manufacturing industry is as larger proportion of costs is R&D and there's tons more, and if you look at
+other industries that aren't manufacturing
+and it's much more. We know very little
+about it and it's part of the FTC's mission
+statement to worry about deceptive advertising
+and we regulate it a lot, and we do a lot of things and we know
+very little about it. One would hope that with
+these new techniques, you'll learn a little bit more. But there really hasn't
+been much work on that. You've had a second question,
+let me just say NI, there is this
+question of whether in Aviv's talk and
+in my talk earlier, there was this question
+where the XY and X are really independent,
+really mean independent. Is that clear whether
+the unobservables are really independent
+of x, okay? I can talk about that the answer actually answered the
+same answer I would give that there's really not
+much reason for me to say. But if they aren't, what I need is a
+choice function for X, as well as the choice
+sanction for price, so in the same thing
+with advertising, and there's nothing was
+saying I can't do that. The reason we just
+aren't there yet then you need typically what happens, at least in autos
+where we worked, the x's are characterized
+as a product at some level, they're chosen by the firm. Is that clear? Just like
+the price has chosen. They are chosen though before, typically it takes, at
+least in autos by there, this isn't true of all products. If you looked at chips, the characteristics of chips in the market change faster than the characteristics of
+the price of the chip, they'll typically put a new
+chip in it, an old price. Chris Moscow's thesis, you
+could see exactly they would, their big response,
+the quick response was the chip CPU, up to a maximum. There was always a maximum. For any given technology,
+there's a maximum. But something happened
+by a competitor, the first thing that
+move was not priced, but it was the CPUs that they were going
+to compete against. It's not always true that
+as in the auto industry, typically what you think of
+as you say characteristics, it takes three or four years actually in the minivan case, which we'll get to
+it took eight years, before the auto industry responds to a change
+in the environment, by putting a new car on the
+market, they respond first. But putting a car in
+the market that they like in the minivan
+kids took eight years. The characters are fixed for
+a longer period of time, and the XYs are moving around
+is people's perceptions of the car quality changes and other car colleagues
+competing with it change. You think that they're moving
+more and prices moving more, and they respond
+with price changes, so you worry about
+C being related to price more than you
+related to X, okay? Because again, there
+are industries, I know there are industry
+or that's not correct. But that's this first thing, if you want it in that context, if you wanted to do X, you
+really need a dynamic, more dynamic mode you need
+more forward-looking model because the thing is
+not going to get on the market for four
+or five years. They're not doing it in
+response to demand today, they know that
+they're doing it in response to many years for, so when we got the micro
+data from G and this is stories, and I'll
+stop it after this. One of the questions
+they asked us was what would happen if
+we put in a high-end SUV. Because nobody at the time had the highest SUV at the
+time was a Ford Explorer. We gave them answers and actually I'll show
+you the answers we gave them, and we said, look, this is what
+happens if nobody else puts in another
+high-end SUV. But in truth, if you look
+at between 1993 and now, every major car company has put in a high-end
+SUV because there was nobody there which meant
+that they were markups to be earned because there
+was nobody decided. It was a place where huge
+markups could be earned. I don't know a car
+company that doesn't have even a part of a car company that doesn't
+have a high-end SUV now. Our predictions, we told them, we predicted it would
+kill the market. Now you do just
+terrifically well, and they would have, had they
+not been a Mercedes SUV, a Porsche Cayenne, a
+Lincoln Navigator, and once you put that in, the whole game is over. Pretty good. Yeah. Think of body experiment just described which is starting
+with 280 product model where you know your
+drive close substance and then it [inaudible] What happens to this natural blow up. This is one of the
+problems with BLP. What happens in BLP
+as it can't blow up. The prices can't get too
+close to each other. That's what the epsilons do. That's why I pushed you on
+the pure characteristic law. That's exactly the case that
+the BLP doesn't work well. I should probably go
+on with this lecture. I'm going to derive the
+optimal instrument. There is in fact an optimal
+instrument formula. The question is, if I was going to instruments, the question is, and I say C and
+omega, or just C, whatever you like, Is mean independent of these variables. Is that clear? There is exactly an optimal
+instrument formula is due to Gary Chamberlain. All I have to do is translate
+it to this context. I'm going to do
+that for you now. But let me say before I do it, why doesn't everybody do
+this? Actually, we did do it. There's a lot of
+new work doing it. We didn't do it in BLP, we
+figured it out afterwards. But you're going to have the
+optimal instrument formula. It's going to depend on
+the pricing assumption. Because I need
+instrument for prices. It'll have to depend
+on the model for the pricing assumption.
+Is that clear? I t's going to depend
+on that assumption. The second thing is
+that it going to generate an instrument
+which is hard to compute. Now, let me tell you, this is a sense in which that's
+overstating the problem. Because what happens with
+the Austenesses formula. This is true for all
+instrumental variable things. If you have a right-hand
+side variable which you have to instrument,
+is that clear? You want to find the
+optimal instrument? I can give you the formula
+for the optimal instrument. Now, it depends on how that right-hand side
+variable is set because it's going to
+depend on the model for the right-hand side variable in order to get the instrument. But the good thing about
+it is if the model is slightly wrong,
+it doesn't matter. You still get a
+consistent estimator because it's just
+going to be a function of the same x's. All the x's which are exogenous. You're going to get a
+consistent estimator. The extent which you will
+be farther away from the optimal instrument
+is just on how close the prediction is from your model to the prediction that would come from
+the optimal instrument. It's just the correlation
+between those two things. We're in good shape with prices. You might not believe
+the pricing formula, but it really doesn't matter. We're going to make
+it as a function of things which are exogenous. If you believe the
+exogenated assumption. Is that clear? We
+know it fits well. From what I just
+told you before. Using the optical
+instrument point and makes a lot of
+sense and a lot of these cases. What did I say? I said, even if the pricing
+assumption is wrong, it's still going to
+give you a consistent and pretty nearly
+optimal estimate. At least in the pricing case. This is just me mimicking
+Gary Chamberlain's paper. There's nothing new in
+this from my point. I'm going to foreshadow
+the notation. I'm going to just
+do it with C. I have, what's my assumption? My assumption is that
+the expectation of C, given x and w is zero. It's mean independent Cystic. C is meaning these
+are my instruments, x and w. Gary's formulas, so that's my assumption, and beta zero and beta u. Those are the two sets of betas. One is from the delta term,
+and one is from there. This is a lose theta. We tried to get
+this all together. We spent the day
+together trying to get notation together and stuff, but we never quite made it. We actually talk
+the same language. People who don't talk the same language have a lot of trouble because of notation at least we knew each other
+we're talking about. But you'll have to excuse the fact that
+notation isn't again. That's it. What's the
+optimal instrument formula? What it says is, Look, I'm going to take the
+expectation of this c, given x and w. Then I'm going to take the derivative of f
+with respect to beta. The parameter I
+want to estimate. That's going to be my
+instrument for the x, the data is on for the beta
+that I'm going to get. For that particular beta. Again, if I have k betas, I have k instruments,
+exactly the same amount instruments
+as parameters I want to estimate. Which makes it easy, not
+a ton of instrument, just exactly the same amount as the optimal
+instrument formula. As just a conceptual issue. This is actually a
+pretty hard problem. Because this says
+that any function of x and w can be an instrument. I could have infinite
+numbers of instruments. I could keep on adding these things and maybe you
+would expect to do better. Gary's formula says no, you can't do better than one
+instrument per parameter. This is the
+instrument. Better in the sense of the
+variance covariance matrix are all consistent, but a better variance
+covariance matrix. This is the formula
+for each beta. I take the expectation of this thing of the
+derivative respect to beta, which is in seeing, the expectation is a linear operator, and so
+is the derivative. I can take the derivative inside and then just take the
+expectation of it. This delta here is
+that delta we get by inverting the shares that I
+have told you how to get. This formula has to be
+evaluated at beta equals beta naught at the true beta.
+To get the optimal one. Let me just tell you
+what the instruments are. Then you'll
+see what they are. If for an x in the projection
+of delta on x and p, Everybody with me? Those x's. Remember we predict the deltas onto x and p. Then
+there's the theta. It's just x itself. The instrument is x
+because it's exogenous, it's independent of the air, and nothing matches up with x better than x. It's
+it's own instrument. For the price in the delta
+projection on x and price. It's the expectation
+of price given x and w. That's where the
+problem comes in. Because that expectation
+may be hard to do. If you think of what's going on, even if you assume
+national prices, the expectation has to be
+over C and omega that I could have for every x w.
+It's a bit of a mess. For the beta U is just the derivative of
+delta with respect to x and w. You've computed the delta and you can just
+take the first row. You can do it
+numerically. You just take a perturbation either side and take the differences
+and divide it by two. You get a numerical
+measure of the derivative. If you're going to do this or two things that you have to fix. One is the the betas depend on the true
+value of the parameter. I don t know those. Essentially I would convert
+to a two-step estimator. I would do something
+simple first to get an idea of what the
+right values are. Then use those values to compute the instruments, and redo it It's a little bit harder. You have to do it twice. Again, the hardness of these problems with
+modern computing. We were talking about
+this in the break. The hardness is not the
+computational hardness. Maybe I know the guys who do emphatic and everything
+I think it is. But computers are
+pretty good now for most of the problems
+that hardness is writing the programs and getting them right without any
+errors in the programs. If once he had the
+program ready, doing a little more
+complicated model isn't such a deal with the
+computers that we have today I should say that it's a two-step estimator for those of you who
+know some econometrics. Two-step estimator is
+you usually have to account doing the variance
+in the first step, but the error in the
+first step estimator of beta naught, and this is what's called
+an adaptive estimator. That error will effect. You can just pretend that
+you got it exactly right on the first stage
+and you'll get the right variance
+covariance matrix. I'm not going to prove that,
+but it happens to be true. That eases things a little bit. Now the question
+is, the two steps, help you get around the beta
+zero, getting the betas. But I still have to
+be able to compute our EP given XW and
+E of this given XW. This I told you how to do. You're just going to
+do derivatives, okay? The problem with P is it's an equilibrium object. To calculate its
+expectation is pretty hard. I'd have to draw axis and Omegas for everybody
+and recompute equilibrium every time
+and then integrate out. But again, I'm going
+to go back this thing, as long as it's only a
+function of x and w, it's going to be a consistent
+instrument and all I really want to do is get it close to the optimal instrument. Because the closer
+I get, the more efficient my estimator is. What we did in this AR paper Onyx on voluntary
+export restraints, is we said, look at the
+first-order condition. Put cosine Omega equals 0, which is their mean and median, and just calculate what the optimal instrument would be with cosine Omega
+where 0, that's easy. You just look at the
+first-order condition, plug-in zeros for cosine Omega, and ask, it's not a function cosine Omega
+anymore, what's that number? That's going to
+be my instrument. There's a bunch of
+papers on this now, by the way, I'm doing
+this at different ways. There's this new
+paper by Verboten and I guess it's one
+of his students, where they do it slightly
+more differently, they estimate the
+cosine Omega in the first time then they
+take random draws from the distribution of
+cosine Omega and compute an average
+of the derivative, the average of the prices
+that they get from the equilibrium by putting
+in the random draws. They have extensive
+simulations results, Monte Carlo results
+on performance. They really like the
+optimal instrument. I hesitate to say that either
+us or the way they do it, actually I like the
+way they do it better. This goes back to one
+of the views comment. Every time I see a
+Monte Carlo experiment of something that
+somebody introduced, the thing that he
+introduced always wins. You can have a little bit
+of problems with that. The problem with Monte
+Carlo, by the way, is you have to decide where the characteristics
+are and things like that and it's not
+like you can draw randomly because again, their choice is byproducts. There's logic to
+them in the market and you can't just
+take random draws and say these are
+the products because that won't mimic what
+happens in real markets. It's actually pretty hard
+to do a good Monte Carlo, but I don't want to knock
+they did a lot of it. They come up with this, really winning, especially theirs. That's what I was going
+to say, I'm going to spend the next half hour on Hedonic functions
+and price indexes. I do this for two reasons. One, the Hedonic
+function is used all over and I think
+often misinterpreted. Seeing we've just went
+over the pricing equation, I can tell you exactly
+how it's misinterpreted. The second thing is that one of the applications of all of this stuff is in
+doing price indexes, like the consumer price index. I'm going to show you
+the relationship between the stuff we're doing now and the consumer price index,
+and how they look. The consumer price index, again, it's another application, it should be in principle, an application of
+demand system analysis. Because I will show you exactly what it
+should be right now. I'll first of all introduce consumer price index,
+and I'll introduce the Hedonic pricing equation and just show you
+what's going on and how to use it and
+how not to use it, and then I'll show
+you how Hedonic can help you fix the
+consumer price index. I'm going to do all
+that in half an hour. That's should be lots
+of time to do it. I'm going to do the CPI. You could do also the PPI
+or whatever you like. Let me remind you what the
+consumer price index is. It's the cost of reaching a
+certain level of utility. This is the expenditure or
+the minimum expenditure on these goods Q for
+this individual with characteristics Z_i
+to reach utility U bar. That's called the
+expenditure function, somewhere in your graduate or undergraduate
+days, you saw that. It implies that the
+expenditure function, the function of the choice set, the characteristics of the
+products that are there, your characteristics and the utility you're evaluating it at. What utility do I have to get to in the
+expenditure function? What the CPI is supposed to be, I'm going to look
+this, Laspeyres index, it is called Laspeyres
+index, and it says, "How much money do
+I have to give you today to give you the same
+utility you got yesterday?" You have E_i 0 was what you
+spent on goods yesterday and you've got utility
+U bar. Is that clear? What I want to know is, how much money do I
+have to give you today, the choice set has changed, the prices of goods have changed and the
+goods would change. The characteristic
+goods will change. How much money do
+I have to give you today in addition
+to what you spent yesterday to get to or
+maybe less than what I spent yesterday in
+order to get you to the same level of
+utility you had yesterday? That's what the CPI
+is supposed to be. That's called the
+ideal price index. Now the question is,
+how do they do the CPI? How they do the CPI
+is very simple. They take the weights
+of particular goods in the consumer
+expenditure survey from a particular year. Is that clear? The consumer
+expenditure survey is the same thing that
+Habib was talking about and the reason we have a consumer expenditure
+survey is to have a CPI. What they're doing is they're sampling people and
+seeing what they buy and it's a random
+sample of people. What we do is we take our base period weight of
+the goods they bought, what they bought
+in the base period and we figure out how
+much it cost in the base period, and how much it cost him to buy
+that same bundle of goods in the comparison period and that ratio is called the
+match model CPI. The expenditure
+things are grouped, things like computers and TVs. First of all, they
+have a random sample of people and what they
+buy and then they have a random sample of places
+that they buy them. The way they get
+the prices is they send what's called
+data enumerators to these stores and they give them a bunch of
+characteristics and they say, find something with
+that characteristics , what's it's price? The guy writes
+down the price and the characteristics so he
+knows what to come back for. Then he goes back in two months, writes down another
+price, is that clear? Takes the ratio of those prices for a bunch of TVs in
+a bunch of cities. Each one is called
+the price relative, they average the
+price relatives for TV and then put a weight on TV. That's how they
+construct a price index. Actually, that's not quite
+right. That's how they used to construct
+the price index, they've now gotten
+better than that. What's going on. Why is that
+a reasonable thing to do? Well it is a reasonable thing
+to do because remember, these are mostly, they started
+for entitlement programs. They were worried
+about people having a certain minimal level
+of standard of living. What would happen is, this is very simple thing to
+do and we know that if we give you enough money to buy the same goods you
+bought yesterday today, you can do at least as
+well as you did yesterday. Because the prices have changed you might be able
+to improve on that. But we have insured
+you your entitlement. That's where it started and this goes back to a Russian
+economists called Conius, who actually started this out. There was a big debate
+in United States, you guys probably
+don't remember this, but when I was in
+school, this was a big debate about what the CPI. Actually, this all
+started because, guys you know who Alan Greenspan , or you were really
+too young for that. Alan Greenspan, everybody
+knows who Alan Greenspan? Alan Greenspan decided that the CPI was overestimating
+the rate of inflation. Indeed, like I said
+in the first lecture, it was overestimating
+by one percent a year, we could kill the
+budget deficit. We should set up a commission. You wouldn't believe how
+pervasive use of the CPI is. It's all tax brackets or
+index of the the CPI. Every entitlement program in the country is
+indexed with the CPI. Every government wage
+is indexed by the CPI. It's just a number and a lot of private
+contracts are also indexed with the CPI. It goes on forever so
+it's a big number, you change it a little bit, it changes the economy. By the way, what happened? Interesting, which is he had this commission called
+the Boston Commission, by the way this is
+how I got into this. I was asked to testify before the Senate Finance
+Committee on this, which got me interested
+in the question. I was the young
+guy, I was younger then and everybody else
+was older than me. This Boston Commission
+was held by Boston and they went out and wave their
+hands a bit and said, "Here's the biases," they're 0.4 percent because
+of substitution bias. Substitution biases
+that it overestimates. They came up with
+a number of 1.1 percent or 1.2 percent,
+something like that. But it was overestimated,
+that's a big number. Because CPI is just
+the rate of inflation, those times was about 3 percent so there's a theory of the CPI. The third of the
+adjustment every year. They said it was 0.4 percent
+with substitution bias. That is, we gave you this and you can do
+better and you could do better by 0.4 percent
+and 0.7 percent was because of new goods.
+What's new goods? The issue with new goods is, when you do this procedure, you never allow a new
+good in the market. Is that clear? You're just
+following all goods over time and seeing how their price
+changed. Is that clear? A new good comes in and it
+is eventually evaluated, but just relative to
+its earlier price and never relative to the
+other goods in the market. You would assume that your
+good came in and some people bought it at that
+price because it was better than the other
+things in the market. There was a bias that way. They did a couple of things. One is faster sample rotation, I'm not going to
+go over that, and then they did something else. They said look, they
+didn't say it this way, but I'm going to
+say it this way. Maybe we can't account
+for new goods, but there's another
+problem that's very much related
+to this that we can account for using the
+characteristic space models. What's that problem?
+What happens when these numerators
+go to stores? Is sometimes they
+don't find the good on the shelves at the
+second period of time. You went to the store, you wrote down the
+characteristic of the good, you went back to the store
+two months later, by the way, it's two months and all
+everybody where it's at for LA New York and Chicago where
+it's one month intervals. But it's two-month period, you go back and it just
+isn't on the shelf anymore. So they just dropped that
+good. What's the bias? The bias is the goods that aren't on the
+shelf anymore are disproportionately the goods whose characteristics
+were obsoleted. What computers are taken off the shelf when Pentium comes on, the 431 chip goes away. Those characters
+they've been obsoleted. That's part of the reason
+they're taken off the store. When we look at price
+changes and we throw out those whose price
+changes of fallen, you're getting a
+bias positively. One of the answers at the
+BLS before I ever got there, it was, here's what
+we're going to do. We're going to do a
+regression function for price on characteristics, and then when the good isn't on the shelf in the second period, we're going to evaluate
+what those characteristics would have been priced
+at in the second period. Instead of throwing
+out the ratio, we're going to use the price
+relative from those goods. In truth, as long as there was a good like the other good
+around in the second period, this satisfies coleus bound, because people could have bought it and it could
+about this price. The big benefit of
+this is it partially controls for the sample
+selection problem, but you have to understand what it actually does and
+how you interpret it. I'm going to get to
+that. What much models, things do the problem with them. They don't
+use them anymore. They do use them for some
+things, and they try not to. What they do is they generate a selection problem
+by throwing out goods whose characteristics have been obsoleted relative
+to other goods are disproportionately
+goods that are two characters
+have been obsoleted. What the hedonic does, is it allows you to correct for the observable characteristics
+that have been obsoleted, but not necessarily for the
+unobservable characteristics that have been obsoleted because you can't condition on that. Just before I go into the thing, you should realize
+they're doing this, but there's still
+missing because the easiest way to
+think of the gains from new goods is the following. It's that say the price comes in very high
+and then falls. This is specifically
+two of technology good. Either way they commented
+very high price. Not all goods come in a very
+high price and then fall. The technology goods do. There are some goods
+that come in at an introductory price to
+get people to try it. But if that's true, then
+at the highest price, what you're missing is
+the infra- marginal rents of those who had bought
+it yet at a higher price. Because you'll never get that. You can never sweep that out because you
+don't have a price higher than that
+to find out what their real utility was. You know it's higher than the
+price that they bought at, but you don't know
+any more than that. You're going to miss that,
+the infra-marginal rent. But then what you will get
+is you'll get the fall and the benefit of the
+fall in price thereafter. The fallen price, by the way, is not only in the fall
+in price of this good, but because this good came in, other goods which are competing with will fall in price two,
+and you'll get those two. The advantage of the hedonic
+is it you're going to pick up the falls and prices of
+the goods that dropped out. Now, to figure out
+what you're doing and how you can use it and
+how you can't use it, I'm going to estimate
+price on characteristics. That's the hedonic function. I have to figure out
+what am I doing. What am I actually estimating
+and where does it work? These are the important
+details which I skipped, and I'll show you why
+they're important and this is why it
+started to work. Let me take the same dashboard
+channel pricing model that we think works pretty well. I'm going to assume
+single product firms. Price equals marginal
+cost plus the markup. The same elasticity of demand. What's a hedonic equation? Hedonic equation is the
+expectation of price given own product characteristics.
+That's what you're doing. You're guessing price on OEM
+product characteristics, I'm going to get the
+coefficients and predict the price for the
+good that dropped up. That actually is the
+sum of two regressions. It's the sum of marginal
+cost of the characteristics, plus the sum of the markup
+against the characteristics. This expectation is over the distribution of other
+products or characteristics. There are two important
+points to make from this equation which somehow I haven't gotten through to the
+rest of the profession. This markup term. It depends on the stuff that we've told you
+it dependent upon. It depends on the other products that are competing
+with the good, and it depends on
+the distribution of demographics and the markets
+that I'm interested in. If I go from Period 1-Period 2, I should expect the markup
+change to differ because new products will enter and old products of exit.
+That's the whole problem. This equation shouldn't be
+stable over time, moreover, it shouldn't be
+stable across markets because the demographics are different in different markets, and the demographics helped me determine what price
+I'm going to set. The easiest thing is the
+computer example Chip example, it's not that the
+utility necessarily of 400 series chip went down
+when the Pentium came in. It's just that there was another alternative that was there, the force, the price of 400
+series chip to go down. That's one lesson. If
+you're going to use this, you have to do a
+different regression for each time period
+in each market. By the way, what they
+did at the BLS to make this happen is they gave
+the guide, the numerators, when they realized
+what was going on, was they gave the numerators
+hand-held computers. They got the data in
+the daytime and they can download it onto
+a mainframe at night, and then you do the OLS equation to get the hedonic immediate and in real time because they needed to put the thing out by the end of the month. This simple thing of getting
+this changed the way they did the CTI, so
+that's one thing. Lesson to learn from this, so which is the one
+that I think got missed is the
+regression coefficients have no interpretation
+of themselves. They're not cost function
+parameters because they're mixed with markup parameters, and they were never intended
+to be utility parameters. The only indirectly through
+the demand surface. You cannot interpret
+the coefficient of a particular x to anything. If x goes up a little bit, it doesn't mean that the value of that characteristic as much. My favorite paper on this
+is a paper by Coburn. Coburn studied these drugs,
+so rheumatoid arthritis. I don't know what I
+told this in class. But rheumatoid arthritis is
+a very debilitating disease. You get sicker and sicker
+and it's really a problem. This means you had to go to
+the hospital and stay in the hospital for a few
+months to get rid of it. It was really very serious
+and one drug didn't. But the benefits
+of the two drugs, they are statistically
+independent, so both of them didn't
+work on some people, and if it didn't
+work on this person, it didn't matter if
+you had an equal chance of working on the second. The response of
+the drug industry to this was very clear. A bunch of companies ran in to produce drugs
+with the first type. They didn't have any
+serious side effects. Prices of those drugs went down dramatically because
+everybody came in, it was a whole generation
+of drugs. They came in. The other group, they will just wasn't enough
+demand to support. A lot of goods and there was essentially a monopoly provider. I forget which firm it was, but there was a monopoly provider. The price of the good that had the serious side effects was much higher than the
+price of the good. They didn't have
+serious side effects. He ended this canonic
+regression and it said, Price people like, if you believe the
+coefficients in hedonic to be interpreted with how much you
+value characteristics. People like being seriously ill. Because the
+price was seriously, oh, one was much higher than
+the price of the other one. It's a cautionary tale, but it tells you you don't
+really want to interpret hedonic equations
+without knowing the system that's generating
+the prices underneath them. It's the same when you value amenities and when you
+value anything else. The question is, if
+you're getting it from prices rather than
+from indirect survey, which often it is, you have to figure out what
+the pricing equation is, and then you figure out
+what the interpretation of the coefficient is. The two things I hope
+you learn from this is any procedure which requires the assumption that the
+hedonic function is stable across time or market is likely to be problematic, especially in fast moving
+markets like computers. Any procedure which you
+Carson interpretation of individual hedonic equation's coefficients of those equations. It's okay, you got the
+right prediction for price. You just don't have the
+right coefficient estimates, or you got close to the
+right prediction for price. We know our R-squared
+is on that. I'll show you one in a
+minute, are very high. You got close to the right
+prediction for price. But interpreting any single
+coefficient is wrong. Let me show you a few numbers , of you showed numbers. These are computers. Then I'll show you two sets of numbers and I'll go over
+them just a little bit. This is from this paper by
+Tim Erikson and myself. This is computers. These numbers aren't from
+the BLS's own data set, but they match up
+almost identically to the BLS own data set. These are the number of
+observations in 1995, 96, 97. That's the first row. The second row tells
+you how many of the 1995 observations were matched to the 1996
+observations. Is that clear? There's 44 matched to the 1996. You're throwing out 220 out
+of the 264 observations. If you think about selection
+biases, this is big time. This is not a little
+bit of biases. This is for a year or thing. If you did it for
+every two-month period is 20 percent of the products are not on the shelf again,
+two months later. You can see what's going on. It's clearly all the products, the Megahertz is going out, the Megabytes are going up, the gigabytes are going up. All the products are
+increasing over time. What's dropping out of this is the products
+that got obsoleted. If you look at table Number 2, these are the various indexes. What's interesting is you use the hedonic and you
+get these price falls. You actually get price
+falls for computers, which makes some sense. You get them from 10
+percent to 30 percent. If you use the match model, you get price rises. If you actually did this, you get price rises. The reason you get price rising, you get price rises more in the periods when the price is
+falling more dramatically. Why? What's going on? The only goods that go
+over the two years are the high-quality
+goods that came in a little early and their
+prices don't fall. The year is when everything, so when a Pentium chip came in, all the 400 chips went out. The only chips that stuck around were the
+Pentium chips that were put in just the
+month before it, and their prices didn't fall. When the Pentium came in, which is 97, 98, you actually got up an increase
+in the computer thing. You can do this many
+different ways. I wanted to just show
+you one thing just to make you a
+little bit careful. The thing about
+computers that's useful is the characteristics of computers are mostly observable. The things you care
+about are things like Megahertz, Megabytes, RAM, maybe the resolution
+of the screen. But many products have
+unobservable characteristics, including certainly
+serials and including TVs. I'll show you just the
+importance of this. Now I'm using exactly
+the BLS data. This is the data that is used
+to compute the TV index. Tim Erikson, the
+co-author on this paper, is the head research guy at the BLS. We could
+use their data. Unlike computers, most of the TV characteristics
+are dummy variables which are one or zero. Is that clear? You had flat-screen plasma
+picture and picture. There were like 10
+of them and they were all high-end things. What happened in this industry is the exit wasn't at
+the low-end below, and there are always
+these black and white TVs that sold for $80 or $100. All the movement was
+in the upper end. We were replacing
+flat-screen TVs with other flat-screen
+TVs with more pixels per inch and more this per inch. The picture and
+picture with sharper and everything else. Works out that in TV's, most of the important
+characteristics of the things that
+we're exiting. We couldn't control for. Indeed, after the
+Boston commission, there was a National
+Academy Commission on the price index problem because they were worried
+about the deficits stuff. I should stop stories, but what happened
+at the end with Greenspan is that
+the budget deficit, you guys probably
+don't remember this, but essentially got resolved. Once the budget of
+cigarette result, everybody forgot about the CPI. Maybe they'll get
+to it again now. But for the last
+10 years nobody's done anything under
+except for a few us who have written papers on which tells you something
+about political system. What happens in TVs is
+the exit is dispersity of high quality goods that are replacing other high-quality and there yet more high-quality. But we don't have in the dataset the number of
+pixels, and things like that. They're just aren't
+getting the dataset so we can condition on. They go into the residual
+and as a result, the TV market selection is largely based on
+these unobservable. When the National Academy
+of Science, whose members, all of you have heard
+of because they're all famous economists
+came and they said, okay, we know you were
+right on computers. But we're now going to choose some other things, among them, TVs and we're going to
+do a hedonic versus a match model. We're going to see what happens. This is what they got. This is not what they got. This is what I got when I
+recomputed what they got. But you can see the
+match model index fell by 10.1 percent a year when I had actually
+24 characteristics, which has a lot of
+characteristics. The hedonic fell by
+10.2 percent a year, which isn't very
+different. Is that clear? Indeed, you could never do a hedonic every period
+with 24 characteristics. There's too much cleaning
+that needs to be done. Just the data
+analysis is too much. You'd end up doing it with
+eight characteristics or something like that. Nine, I guess. There you see the rate of fall
+this done because even less than the match model. Which is exactly the opposite of what we got on computers. The economics of the
+selection problem, they're still there
+and still enforced. What's going on is that
+the match model index, it only corrects for the falls and prices
+of continuing goods, but it corrects for the
+fall in price also of the unobserved characteristics
+of the continuing goods. The hedonic corrects
+for everybody. But just on basis of
+observed characteristics. What was going on in
+this market was it was the unobserved
+characteristics that we're throwing out everybody. You have to be careful when
+you're doing this stuff. Let me just say if you did the regression function
+on just nine variables, just to show you,
+now, just summing up. The paper goes on
+to show you how to condition also on
+observable characteristics. It's not for this seminar, we're doing demand systems here. But what I wanted to
+say to you is these are actual data regressions on the monthly data at the BLS
+on five characteristics, 10 characteristics, and
+24 characteristics. This is without putting in
+all the markup term stuff. It's just price against X. I said it was a
+good prediction. These are real numbers. The minimum over the 36 months in the sample or
+whatever it was, was 0.896 with S, with five characteristics
+and went up to 0.96, the R-squared, That's
+the minimum R-squared. To that you're going
+to add the markup in, which always makes sense. I mean, just the intuition of it makes sense and
+it does make sense. These data are better than
+the data we usually use. They're just better. You're
+going to have noisier data. It's going to be a little less. But the pricing equation, if you put in the Bertrand
+Nash type pricing equation, are going to give you
+R-squares on the order of 0.9. Almost always. It's maybe wrong. But it's a good place to start to think
+about this problem. 

@@ -1,0 +1,999 @@
+James Stock: A
+couple of comments. First comment is
+every other topic that I'm talking about
+and I think for Mark, every topic that
+he's talking about, he's written a paper on every topic that
+he's talking about. I've written a paper on every other topic that
+I'm talking about, or multiple papers and every other topic that
+I'm talking about, but I've never written
+a paper on this stuff. This is kind of an
+outsider's view, but we did the best we could to try to figure out
+ways of not having to talk about DSGE econometrics in this. But then we kept thinking what's supposed
+to be what's new and econometrics time series
+for the last ten years. This is definitely something
+that's new and very, very interesting and I
+certainly learned a lot. I'm preparing this
+but at the same time, especially if I'm getting
+something wrong or making some nuanced errors or if there's something that
+you disagree with, I would urge you
+to speak up here. I should also say, I
+owe a lot of things to Anna Mikusheva who helped
+me with a number of things in some simulations
+that we'll see at the end. I'm going to talk a little bit about motivation for this, which has already been
+laid out reasonably well. I'm going to talk a bit about model setup
+and model solution. But the main purpose here is to talk about the econometrics. There are people who are
+experts on the particulars of model solution algorithms
+and that's an interesting actually, it's a mathematically and computationally
+interesting area. It's highly specialized
+and highly technical, and I don't think that's
+an appropriate topic for this more general audience. I'm going to focus on the econometric issues that come up. There really a number of
+very interesting ones. There is some that is known, a lot that is not known
+and there's a lot of interesting
+research to be done. In the grand sweep of things
+the DSGE models are I guess the new version of
+the models that were developed as a result of
+the coals commission work, which is to see if we can
+bring economic theory to bear, to provide some
+structured way to look at empirical relationships
+in the world. The important part of this and the major
+breakthrough that's occurred in the last few years
+or the last decade or so, is being able to take what at one point
+were very stylized, very simple models, and being able to push them through in terms of a
+level of sophistication and computation so that these models are now something that you can actually take to the data and
+estimate and assess empirically by a number
+of different measures. The reasons why you'd want to be using some structured model, I think are reasonably
+obvious to all of us. Which is that
+they're a framework for making policy
+recommendations, asking counterfactual
+policy questions for solving for optimal
+policy rules. One thing that in
+the VAR context, the best that we'd be
+able to do is say, what's the effect of this
+shock where the Fed by mistake raises interest rates by 30 more basis points because of a typographical error in transmission of
+the instructions. That's one policy
+question you could ask, but that certainly isn't the
+only policy question and then probably in a deep sense is maybe the most interesting
+policy question. The most interesting
+policy questions are, what are the monetary
+policy rules or the structure of the
+way that the Fed approaches its work in terms of thinking about
+optimal performance? Those are questions
+that you need more structure than
+a VAR to answer or at least I'd say to
+answer compellingly. That's completely fair
+because there are certainly attempts to answer those
+questions and VARS. But what I think, doing that in a completely
+articulated economic model is very appealing. You can also make conditional
+forecast from this, although you can use a lot of models to make
+conditional forecasts. As I mentioned, the
+big breakthrough has been able of providing the development of
+techniques that allow us to compute these models, to compute their likelihoods, or to compute moments
+from these models to estimate them and to solve out these
+models and to do that in the context of some
+large-scale things. The notable recent couple
+of important works as the Ireland and especially
+the Smiths voters paper that was able to take a really pretty large
+model to the data. We're going to be looking
+at in this talk just the econometrics estimation and inference associated
+with DSGE modeling. I'm going to focus on
+linearized systems and linearized models
+just because that's what the vast majority of
+the literature is about. Here's the general methodology, the general DSGE methodology, you specify some nonlinear
+optimization models. He set out some economic model
+with optimization in it, and various budget
+constraint-type things. You obtain the Euler equations, you log linearize it. You solve out the model, which is to say you solve
+out the expectations. The expectations in the
+model are going to be rational expectations which are determined endogenously
+within the model. You can solve those out. In particular, if you've
+logged linearized, there's a variety of
+algorithms for that. Then you can put these solved out models into
+state-space form. These first five items are
+what I would think of as the work of the macro modelers and the model specification. At this point, once you've put the model into state-space form, you're at a situation
+where you can start to do a number of different
+estimation things. I should mention and
+we'll talk about this, you can do estimation at the
+point of Euler equations, although to manipulate, to
+do much interesting stuff, you then will still need
+to solve out the model. But all you can estimate
+the Euler equations without actually log
+linearizing them. There's a variety of
+estimation options, moment matching, GMM, maximum likelihood
+and Bayesian methods. Then I'm going to
+talk a little bit about inference and evaluation. There's a couple of good
+recent references on this. There's a textbook
+or monographs, I guess by Canova and then another one
+by Dejong and Dave. Then Lally Christiano
+has some lecture notes online from a course
+that he's given. There's other references to
+it, but these are quite, quite good, especially
+these books are pretty comprehensive. I'm going to talk very
+briefly about model solution. Here's an example model and
+this model has already been, remember the first
+steps are formulating the model and then obtaining
+the Euler equations, and then linearizing or log linearizing and that's
+already been done here. This is a paper that
+was published by Golly Lopez-Salido and
+Valles in the JME In 2003. They have equations for three potentially
+observable objects. There's three potentially
+observable objects. There's inflation, there
+is an output variable, there's an interest
+rate and then there's some other unobserved
+variables in the system. There's some technology shocks, tastes shocks, and a real
+interest rate process. The pricing equation is New Keynesian Phillips curve without any of the
+lagged effect. This is a straight
+Calvin pricing equation. There's a monetary policy rule, a tailor tight monetary
+policy rule relating say, an output gap to end
+inflation to interest rates and it builds in some lagged
+interest rate response. Some slow movement of the monetary authority
+to its target. Then an intertemporal
+consumption equation. This derived from the
+consumption Euler equation with a
+budget constraint. That's the simple
+version of the model. A simple version of
+a model like this. There's many more
+complicated ones than this that are available, but this is the thing that you'd see and I think so what's
+noticeable about this? What are the key features? The key features are that
+has been linearized, we'll work with linear setup. It's got some
+expectations built in. The model involves some
+rational expectations. The expectation at time t
+of inflation next period and then there's another
+output expectation equation. Then it's got some shocks and these shocks are
+actually quite important. If you think about this from
+an econometric perspective. A model with fewer shocks than variables is
+going to produce a dynamic or stochastically
+degenerate system. These shocks are going to play an important role
+in terms of making the system nondegenerate and something that you can
+actually take to the data. Stochastically degenerate system is completely inconsistent with the data and wouldn't be supported by an
+empirical exercise. Once you've got a
+linearized system, there's a variety of
+different ways to solve out these systems and there's lots of methods
+and these methods are old. I'm not going to
+talk about that. Once you've done it, here's what the solution looks like. The solution is something that puts it into a linear
+state-space model. That linear
+state-space model says that there is some state vector, without loss of generality, if it observes according
+to a finite order process, we can always write
+it as a first-order process by stacking things. It evolves according to some first-order
+autoregressive vector, autoregressive structure. Some of these elements
+with this state vector are going to be unobserved. A lot of them are going
+to be unobserved. Some of them are going to
+be potentially observable. Inflation would be one
+of these things in here. Possibly and that would be
+potentially observable. Mark talked about
+the common filter and if you think about this in a common filter framework, essentially what's happened
+here at this point, since the whole model has
+been solved out so that it has current stuff depending upon past
+stuff in a linear way. Using a state vector notation, this is the state equation
+of the common filter. The common filter
+setup is going to be completed by adding
+an observer equation. The observer equation says that this is some
+vector of observables. In the previous example, we might observe some
+say, output growth or some other measure of x, inflation and an interest rate. We might have three things
+that we would observe that's related linearly
+to the state vector. Basically, this h matrix would be a matrix of zeros and ones. That would select out
+elements to the state vector. Then, potentially there's
+some measurement error depending upon how
+you set it up. There's potentially
+some judgment about whether you would include a measurement error
+term or whether that might be something that you will build into the
+state equation. That's the common filter setup. The key point here is that this solve model is going
+to have something that can map directly into this linear
+state-space representation that is amenable to use
+by the common filter. One point, which is an extension of
+a point that Mark made. But I'm going to
+just make it again. In this general setting is that this old result of
+state-space theory, that a linear state-space
+system such as this. Where there's going to be
+some unobserved elements of the state vector will have a Varma vector
+auto-regressive moving average representation
+of where it's a finite order autoregression and a finite order
+moving average. Let me go through that calculation in the
+simplest possible example. A simple example
+here is actually where we're looking at, this is supposed to be an s. This is a permanent
+transitory model where y is the sum of a transitory pit and
+a permanent bit. The permanent bit,
+this is supposed to be s evolves according
+to a random walk. You were looking at
+models like this, where this might be
+a slowly evolving mean with some
+noise on top of it. This model here is written
+in state-space form. There's two unobserved things. There's two shocks.
+There's one observable. This thing has a Ma, one representation in
+first differences, and the way to see that is just take the first
+difference of y. The first difference of y is the first difference of
+this thing which is s, which is simply Ada. It's Ada plus Delta Epsilon t. That just says if you compute
+the variance of Delta y, it's going to be the
+variance of this plus 2 times the variance
+of this from the Delta. If you compute the covariance. If these things
+are uncorrelated, which they are for
+this calculation, then the covariance
+is just going to come from the dependence of Epsilon t and Epsilon t minus 1 and that's going to
+give you a covariance of minus Sigma squared Epsilon. After you've gone more
+than one period lag, you have no correlation at all. This is an MA, one structure. It has a variance and one auto covariance
+that is non-zero. All the other auto co-variances are zero so it's an MA one in first differences or an
+Arima 011 in levels. That's just an example or the more general result
+for a state-space system here is that it's a finite order vector auto-regressive moving
+average system. I think there's some
+relevance to that, or this comes up in
+these discussions. This MA bit matters. You can see the MA
+bit is actually the only interesting
+part of what's going on in this example. If you're trying to
+approximate one of these models by a finite order
+of vector autoregression, that approximation is bound
+to be an approximation. It might be a good one or
+it might not be a good one, but it's going to be
+an approximation. Once you've got it in
+the state-space form, you can actually do a whole
+bunch of work on this model. You can do many of the things
+that you're interested in. You can construct impulse
+response functions. An impulse response
+function, for example. Suppose you're interested in, these are going to be
+structural shocks here. Suppose you're interested in the effect of a
+structural shock. You can just feed it
+through this system. The S's are going to evolve and then the y's are
+going to evolve according to this and then you can just
+pick out the effect on the y's of the structural
+shock, Ada. You can do a lot of calculations
+once it's in this form. There we go. You can do
+a lot of calculations once it's in this form. You can simulate data. If you wanted to compute
+some complicated moments, you can compute
+complicated moments. Some complicated moments
+that people might compute would be impulse
+response functions or you can just
+generate that through the whole data or can
+simulate it if you want to compute higher
+moments for some reason. This is just the
+example in that Gali, Lopez-Salido, Valles model. One way to set it up is to imagine that you could
+observe our pi and x. Then the state vector
+is going to be the combination of
+the observables and the unobservables. Then the f's are going to be the result of this
+solved system. Let me talk now for
+the rest of the talk, what I'm going to do is actually, talk
+about inference and econometrics in DSG models. A variety of methods
+that have been used or could be used
+here are simulated GMM, maximum likelihood, and Bayes. Let me talk about
+those in order. GMM, we spoken
+about quite a bit. There are actually three
+different ways that you could use GMM here, one of the ways
+you reduce GMM is by estimating order
+equations one at a time. We've looked at that in the context of
+yesterday afternoon, in the context of estimating a hybrid New Keynesian
+Phillips curve. We talked about that, that was this literature that is reviewed in that
+Kleinberg and Mabry, survey paper for example. That's just estimating, a linearized order equation or linearized new Keynesian
+Phillips curve using lagged values
+as instruments. This slide is just
+for completeness. We did this yesterday and this is just how
+you would set up and do the GMM estimation
+in this setting, then the usual asymptotics would give you this
+normal distribution. We've talked about all of those things already yesterday, so I'm not going to spend
+any more time on that. I guess one thing I would note is that it's a
+matter of principle possible to estimate the
+whole system by GMM. To the extent that there's
+these instruments are generated because of
+expectational errors, then the expectation
+layers are all going to be Martingale
+different sequences. That says that previous values
+of data could be used as instruments for all of
+these different equations. One could imagine gaining efficiency by doing
+the entire estimation by GMM and obtaining efficient
+estimation that way. That's not the way that
+it's typically done but I guess one comment that I'll come back
+to at the end, the most interesting part
+of looking way ahead, look the most interesting
+part of this whole area is the techniques that
+are being applied for estimating these models are relatively standard
+techniques of GMM and moment matching and
+maximum likelihood. But what's really interesting and makes this problem
+interesting from an econometric and tricky from an econometric point of view is that there's some
+really serious issues of identification
+in these models. We don't have good tools for understanding the
+identification issues, I think in maximum
+likelihood contexts, or at least as good
+tools as we do in GMM. An interesting
+suggestion or an idea, maybe not even a
+suggestion, is thinking about a system GMM estimation because at least we have
+more tools for thinking about identification
+issues in GMM, at least for now. This is sort of a
+GMM-related comment. Why would you want to use
+system GMM? It's in part. It's mainly the main reason is that you would
+be able to get, you'd get efficiency compared
+to individual equations. But potentially you'll have some efficiency loss relative
+to maximum likelihood. I should mention that this
+setup that I have here for GMM if you have errors that
+are serially correlated, that's going to induce additional efficiency losses
+because you'll need to use further lags of the instruments depending upon the setup. Okay. GMM can also be used in just the old-fashion
+method of moment setting for matching moments. One of the econometric ideas that's been proposed is instead of estimating DSGE parameters by maximum likelihood
+or by system GMM, you might match only a
+few moments of interest. This I suppose conceptually
+goes back to the idea of calibration where you would just try to
+select a few moments. If you select enough moments then you might want
+to do something a little bit more formal and
+estimate things by GMM. An example of that is this
+Christiano, Eichenbaum, Evans JP paper which estimates a structural
+vector autoregression and identifies one shock, a monetary policy shock, and then tries to match that impulse response function that's obtained
+empirically to impulse response functions
+that are obtained from the DSGE and then see if that provides enough information
+to estimate the parameters. That technology is actually pretty straightforward
+application of GMM where you would have a moment that would
+be depending upon. There would be empirical
+or a function of the data which is this
+empirical impulse response from an SVAR and then you're
+matching that to an impulse response from the theoretical model, the DSGE. Technical aside, if you think about matching an impulse response function, if you're doing it over
+a lot of horizons, this is actually a
+really reasonably large moment vector. Then there's a question about how many moments you would actually want to use and
+there is one paper that provides an
+information criterion selection approach to try to think about how to improve that or to get around
+the problem of actually using too many
+moments when some of those moment is providing
+very little information. Simulated GMM. The situations that
+I talked about for applying GMM are
+situations in which these models would deliver analytically implementable
+moment conditions like the New Keynesian Phillips curve conditional
+expectation equation or consumption CAPM
+expectational equation. You can write down examples
+in which you don't get those convenient
+analytical expressions but you still can
+generate data from the model and you'd
+want to maybe match moments using a GMM approach. In the New Keynesian
+Phillips curve equation for example, let's suppose that there's one more variable
+in there which is a cost-push shock and you don't observe the cost per
+shock and it might have some long dynamics and so some exogenous variable
+that you don't observe. Well, if that's the case then because of the long dynamics you're
+not really going to be able to implement
+an expectational error based GMM but you can still simulate the
+whole system and so you can still see how the system evolves and
+because you can simulate the entire system you
+can compute a variety of different moments so
+you can try to match those moments to
+empirical moments. That approach is
+something called simulated GMM or simulated
+method of moments. I thought I would spend
+a minute just talking about the approach or
+simulated method of moments because there's some aspects
+that are a little bit unusual at least for macroeconomists who
+haven't seen this before. I'm going to give you a
+really simple example of simulated method of moments. You have to suspend belief. You have to be really dumb
+to use this estimator. Somebody tells you that you have some data
+that's normally distributed around a mean and a variance and they
+haven't told you the variance, so the variance is one. Your job is to estimate
+the mean of the normal with the variance being one
+using a sample of data. Now, I think when
+my daughter was in fifth grade I think
+they worked on sample averages and so you
+just compute the average. But suppose you don't
+know how to compute a sample average but you know
+how to use the computer. We're going to do
+something really idiotic. Here's the idiotic
+thing we're going to do is, I know
+what a normal is, I know a normal random number
+generator in the computer. I don't know any
+statistics but I know probability in computing. I know the normal
+random number generator how to run it in the computer, so I'm going to draw
+random normals. I then get a vector
+U of random normals, ID normals zero ones. What I'm going to
+do is I'm going to then compute the mean
+of that simulated data. I'm going to compute the
+mean of that simulated data. I take the vector U, I add to it a number, I then compute the mean of that. Now what I want to
+do is I want to choose that number such that the mean of my simulated
+data is as close as possible to the mean
+of the actual data. Does this make sense? I probably haven't
+explained this very well. It's such a simple example you can't imagine
+why you would do it. What I'm really wanting
+to do is I have a distribution here and the
+real world that's normal with some mean and
+I'm going to take some data of the same
+length maybe and I'm going to have that normal with
+another mean and then I'm going to compute the
+average of this and compute the average of this and see if they're close
+to each other. I want to adjust the
+mean of this thing so that these two averages
+are close to each other. Well now, what I've
+done is really stupid because I could have just computed the sample average and I didn't need to
+add all that noise, I've added noise to the problem. Here's how this works. The simulated method
+of moments estimator, then what I'm going to
+do is this X-bar is the random normals that I've
+generated the computer with this mean and Y-bars in the data and I'm going to say
+I want these two moments. That's the sample
+moment of the data to be as close to the moment of the artificially
+generated data which is a function of Theta using a quadratic
+loss function. Well, in this particular case the sample average of
+the data is very simple. It's U bar, it's the average of my artificially generated data from the computer plus Theta, so I want to
+minimize this thing. If I go through this in a
+grid search numerically, what I will do is because
+I don't know calculus, so I'm just going
+to go through it in a grid search. I'm going to numerically
+minimize this thing. It turns out then I'm going to minimize this at
+Y-bar minus U-bar. That's going be my minimizer. My estimator from
+simulated method of moments will be
+what I should have used all along and then
+I've got noise added in. The noise added in is because of the way I simulated the data. If I subtract Theta hat
+minus the true value, well, Y-bar is a normal centered
+at the true value. It's going to be Y-bar minus Theta but then I've got this
+additional noise. What's that mean?
+Basically, what have I got? I've got a normal here and then I've got the
+additional noise of a normal. How much noise do I
+have in this normal? Well, it depends on
+how many observations I drew in my computer. If I drew M observations in my computer then this is going to have a normal distribution and this will have a normal
+distribution. In fact, if I'm drawing the
+data in my computer using the same known
+variance for the error term, these two normals will be the same distribution which is normal zero or Sigma squared. When I put all these
+pieces together and I add these two
+normals together, this S is supposed
+to be a Kappa. When I add these two normals together which
+they're independent, so I get a normal zero and then Sigma squared Y but then I
+have this additional factor. Well, this additional
+factor depends upon the amount of
+simulated data that I used. If the ratio of the number of observations in my simulation to my actual sample size is Kappa, then I have this additional
+adjustment factor of 1 plus 1 over Kappa
+times my variance. That's the penalty that
+I have to pay for using this idiotic procedure
+of generating this U, adding to it Theta,
+and then doing a grid search to find
+the best value of Theta. I didn't need to add to it all that fake data that
+made life worse for me. It made life worse for me by a penalty factor of
+1 plus 1 over Kappa. You know where this is going. I certainly didn't
+have to do this in this example but in some examples, you
+might have to do this. This is the variance you get. It's a standard GMM
+or GMM variance with a penalty factor
+of 1 plus 1 over Kappa. The reason that you get
+that 1 over 1 plus 1 over Kappa is essentially this. What's the GMM asymptotic
+is going to be? You're basically going to take some really complicated function of some high dimensional
+parameter vector that doesn't have this nice property
+of just addition but if it's local parameterization you can linearize everything. There's going to be some
+derivative in there. The derivative is going
+to be the same as the derivative of this
+true bet because you're generating the data under the correct model and if you're using the right error
+variance matrix and efficient way
+to generate it, the two pieces are going to have the same covariance matrix. They're going to be
+independent because one is in the real world and
+one is on the computer, you add them together
+and you get this factor. That's simulated GMM. It's right here, it's optimal GMM, efficient GMM with this additional factor. The way I described it and the way it would actually be done in DSGE models is
+exactly as I described. One comment is that
+this little factor, this nice formula here
+doesn't always apply, and problems can come up, they don't have to, it
+depends on how you do things. Digression, if you want to
+do things when variables are discrete or you have complicated problems
+with discontinuities, then you may or may not get
+this answer and you may or may not want to do
+it this way and you should read a textbook on us. But that's not relevant for
+us because we're working in situations where
+the variables are continuous and the objective
+functions are continuous. Comment number two is, instead of drawing a single
+long path and then computing the population moment from the fake data with
+a single long path, you might choose to
+compute a bunch of paths, all of the same sample size. The reason you might
+think of doing that is, suppose you're trying to
+match an AR coefficient in impulse responses and
+vector autoregression, if we know those have
+finite sample bias, you might do a better
+job of approximating the relevant sample moment
+that you're supposed to fit by generating a bunch of t length observations
+on each one you fit an impulse response
+and then you average them together rather than
+competing one long dataset, and then computing
+the impulse response, you might do a
+little bit better on the finite sample bias. I think that's a folk theorem, not a theorem. Another comment on this is
+in terms of how you do it, this is actually important. If you understand this comment, then you understand
+this procedure. You should use the same seed every time you go
+back for a new Theta, so seed means random
+number generator seed. The random number
+generator seed, random number generators,
+they're not random numbers, they are computed by some algorithm and
+that algorithm has to start somewhere, and that's the seed
+that you use to start the algorithm to compute these
+random number generators. You can control the
+sequence if you just compute from Gauss or
+MATLAB or whatever, a random number generator or random numbers is going to be a different number every time, but if you set the
+seed to be 27, and then you compute the
+random number and then you set the seed again to be 27, it's going to be the same
+number each time, that is, it's going to replicate
+the random numbers that are going to be produced by
+random number generator. You want to do that
+in this setting, and the reason is that
+suppose that you move Theta. Let's go back to
+this dumb example. Suppose I've tried a value of Theta and I said that's not
+my favorite value of Theta, I'm going to try
+another value of Theta and I'm going to try that value of Theta
+by adding u bar to Theta and then computing
+my objective function. If I change Theta
+just a little bit, and I compute an
+entirely new set of random numbers then
+this objective function are going to change
+in a huge way, it's in fact not even
+going to be continuous, to be precise, it's
+not going to be stochastically equicontinuous,
+which is what you need. To make it continuous in Theta, you actually want to use
+the same u bar every time. It's the same random
+number generator seed. That's going to allow you
+to achieve a maximum. That maximum is
+not going to be at the right place because
+you're using u bar, you've thrown in
+this random stuff, the fact that it's
+not necessarily at the right place, sometimes
+it's going to be too big, sometimes it's going
+to be too little, it's going to be
+corrected by this factor. If you use tons of m, if m is 100 times t, this factor is negligible, if you use a really short simulation that's going to make a big difference so that's
+simulated method of moments. Maximum likelihood. You guys know how to do
+this because remember, the model has been linearized
+or log-linearized, it's written in state-space
+form after it's been solved so if it's
+state-space form, you can apply the
+common filter or the common filter can compute, among other things,
+the log-likelihood. These are the common
+filter equations from Mark's slides, I just block copied
+them and then this is the log-likelihood
+for Mark's slides. If you run the common filter, one of the things
+you could choose to compute is the log-likelihood, so you've got essentially a subroutine or a
+function or a proc, where you're passing
+it the data and Theta, and it's coming back
+with the log-likelihood. Built into that are the system matrices Hs and Fs and
+sigmas and all of that, those are in a very
+complicated way, functions of the underlying
+deep parameters of the DSGE. You come back with a log-likelihood for a
+trial value of Theta, you don't like that
+value of Theta, you then pass it
+another value of Theta and so forth and then you
+maximize the log-likelihood. That's really all
+there is to it, this is just a formula for the usual asymptotic variance of the quasi maximum
+likelihood estimator. Quasi maximum likelihood allows for the possibility
+that perhaps there's some misspecification in
+the likelihood function. This is completely
+non-trivial in the context of DSGE estimation because these likelihoods can be fairly complicated and
+we'll come back to that. Finally, Bayes estimation. Bayes estimation actually I think I don't know the
+first people who did it, but certainly, that was
+an important part of the Smiths routers paper, and it's probably
+the dominant method, I guess in this literature
+for estimation of DSGE models and so I'm going
+to talk about that a bit. A little bit of Bayes basics. The basic idea of Bayes
+procedures is you're conditioning on the data
+and you're going to treat the parameters as
+random variables. If they're random variables, they have to have
+a distribution, and until you look
+at the data there, distribution is your
+prior distribution Pi. What you're interested
+in doing is using Bayes Law to compute the distribution of Theta given all of the data
+and the way you do that is through Bayes Law. Then you might be interested
+in computing the number of objects but primarily, I guess you'd be interested in computing a posterior mean, which is usually
+the base estimate. Although I'll digress some, I think that primarily
+for numerical reasons, sometimes the mode of the posterior
+distribution is reported. But usually, I guess the recommended base procedures to compute the posterior mean. A posterior mean
+is just the mean of the posterior distribution. The implementation
+of these methods is when you were first
+taught based methods, you work in a normal
+problem where you then have a conjugate
+prior and then you can do all of the work
+analytically and you can compute posterior means just by analytic integration of
+posterior distribution. That's in general not going
+to be possible and it certainly isn't possible
+in this context. In this context,
+integration has to proceed not by analytic methods
+but by numeric methods. I would say one of the big breakthroughs
+in all of statistics, and Marcus talked about this, but one of the big breakthroughs
+in all of statistics in the last 15 years has
+been the development of fast methods for numerical
+integration that can be applied to very
+complicated base problems. This is what's often referred
+to as the MCMC revolution. The MCMC revolution is something that did
+not start with us. We're the last group
+to look at this. This is huge in genomics and in applications,
+signal processing, and applications where you
+have very large datasets, where there's a
+structure that you can put or place on the
+entire dataset and it makes sense to have some exchangeability-type assumptions on this dataset. You're not going to
+be able to implement frequentist methods in a
+very convenient fashion, and instead, you can implement some of these Bayes methods through these
+numerical techniques. This is actually
+an example where these Bayes numerical techniques make a lot of sense because although we can compute
+the likelihood and the likelihood is a
+function of the parameters, that likelihood is
+really a nasty object. We can only compute
+it numerically. It's a nasty object in terms of its functional relationship
+to the deep parameters. We don't have any way that we can do analytic integration. Remember the textbook problem with the normal
+and the conjugate prior those parameters like worked out and you could play games in the exponent of the normal and then you
+could do an integration, then you get an answer. But that's not available to us when we only have a numerically
+evaluated likelihood. Instead, these
+numerical techniques were used for
+numerical integration. Numerical integration
+is not a big mystery. In principle, all you
+need to do is if you have the object that if you have your prior and
+you have your likelihood, all you need to do is
+basically sample from the entire space of Theta, and then you evaluate
+what those things are going to be and then you
+do your integration. But the problem is the
+dimensionality is really high and that would be incredibly inefficient
+computationally. In high-dimensional systems, this is what the
+MCMC revolution is, is there's techniques
+that have been developed for doing
+that very efficiently and those are embodied and
+those are what are used in this literature and they are among other things
+implemented in this. This software is
+one of the sets of software that I guess is
+used pretty frequently. Dinar air is used
+pretty frequently in to estimate these DSD models. That's implemented in here. In the Bayesian framework, once you've got your posterior, you can do a number of things. You can do the mean or the mode. The mode I think the reason that you want to do it is if you feel like you're not really sampling over the entire space, and maybe you don't
+have a credible way to compute the posterior mean. You still might be able to
+find the highest point. You can compute things called
+Bayesian credible sets, which are versions of
+confidence intervals. I mentioned those last time. There's a very nice
+survey and a perimeter around this by Ann in 2007. I thought I would
+digress a little bit to talk about Bayes's methods at
+a general level. I think it's easy. Here's one reason why you
+would want to be a Bayesian. A reason why a graduate
+student might want to be a Bayesian is that they want to do their research
+program in Dinar, does MCMC, and that's what's
+in the published papers, so that's what they do. That's one reason
+to be a Bayesian. But I think there's
+deeper reasons either to or not
+to be a Bayesian. I thought we would
+spend a few minutes talking about those. I'm going to give
+you some reasons. These are all reasons that are put forward to be a Bayesian. I'm going to disagree
+with most of them, but I think some of
+them have merit. Here's the first one and I'm going to disagree with this. It's something called the
+likelihood principle. I'm going from the most
+extreme to the most practical. This is the most extreme. There's an axiomatic
+reason to be a Bayesian. The axiom is that all inference should be based on the
+likelihood function. If two datasets, let me say it precisely. All the relevant information in the data is embodied in
+the likelihood function, two different mechanisms
+that will yield the same likelihood function to yield identical inferences. Now that sounds
+really plausible. Here's the counterexample. For me, a counterexample. Think about the
+following, the two experiments that
+are written here. The first experiment is, these are both have to do with Bernoulli trials and
+they actually have to do with stopping those
+Bernoulli trials. The first experiment
+is you give five patients an experimental drug, and you observe whether
+they live or die. We're looking at whether
+the drug has bad effects. You observe whether
+they live or die. Then we observe 01001. We observe two successes, deaths, and three failures. You know what I mean? We observe two heads and three tails. Experiment two has a
+different protocol. The protocol is we're
+going to keep giving patients the drug
+until two of them die. Then it turns out that you get the fifth patient is
+the second one to die, and you have two heads
+and three tails. If you come from a frequent
+perspective or if you're a doctor or a medical scientist and you think about
+experimental design, those are two very
+different experiments. Actually, the FDA treats those
+experiments differently. There's a class of procedures in experimental
+design and the medical area where you would stop and
+experiment when there's a certain number of deaths and based on the fact
+that you stop it, you have to adjust
+your inference. There's another way you
+just proceed to the end of experiment and you
+see who lives and dies or the equivalent. Those are analyzed differently. There's in a sense
+some selection bias, is one way to think about
+it by the ones where you stop early because
+people are dying. The likelihood principle
+would have you treat those two datasets
+exactly the same. You would not take
+into account that the fact that those experimental
+designs were different. Just drive the likelihoods. I think this is one reason
+you could be a Bayesian, but I think it's
+not a good reason. That's an opinion. Here's another reason
+to be a Bayesian, which is in some
+ways a good reason, in some ways, a
+less good reason, which is subjectivist
+Bayes decision theory. If you have to make a personal decision
+about your investment, the best thing that you can do is you can use your loss and all the available
+information to you and your prior information to
+make an optimal decision. That will be the best
+thing for you to do. To be more precise about it, the best decision
+that you can make for you is a Bayesian decision where you minimize the expected loss computed with respect to
+your prior distribution. That's a general principle
+of decision theory. In fact, there's
+a huge literature on decision theory which has a very substantial
+conclusion, which is that, in some specific sense, all optimal decisions are Bayes decisions and
+I'll make that precise. I'm going to use all of this tomorrow when I'm talking
+about forecasting, so let me just go through this. Here's a quadratic
+loss function. Here are the four key elements of Bayesian decision
+theory, a loss function. I'm going to be
+interested in making a decision about a
+parameter Theta, and that's some true value. A frequentist risk
+function says that if I have some estimator Theta, then I am going to look
+at the expected value, where it's the expected value
+over the distribution of y given Theta of my loss. The risk is the expected loss, in this case, would be
+Theta minus Theta hat squared in the quadratic case. This actually depends on
+the true value of Theta. The Bayesian says, I actually
+don't care about this because I don't think
+there's such a thing as a true value of Theta, I think that Theta is a random
+variable so I'm going to integrate this risk with respect to my prior
+distribution. The Bayes risk is
+the frequentist risk integrated with respect to
+the prior distribution. That's going to take
+into account how likely different outcomes, different Thetas are, different
+states of the world are. The Bayes decision rule it says, I should choose my
+decision procedure, my estimator, my decision rule, to minimize my Bayes risk. That's fine. That is what
+the individual should do if you're making a decision
+for yourself with your loss function, with
+your prior information. One of the basic results of
+Bayesian decision theory, is this thing called the
+complete class theorem. The complete class
+theorem says that not only is it the best thing
+for you to do personally, but it says that any
+admissible decision rule is going to be
+either a Bayes rule, a Bayes decision rule or a limit of a Bayes decision rule. That's actually a
+huge challenge to a frequentist
+perspective because it says that the best
+you can do is, in a sense, being a Bayesian. The key phrase here
+is admissibility. Admissibility says that
+your risk function is somewhere not dominated. Essentially what's
+going on here is where your risk function
+is not going to be dominated on those
+priors that are putting great mass
+on this one region. That's what's going
+on underneath it. But it does say that this
+is a logical reason to, at least, from a
+decision-theoretic perspective, be a Bayesian. My view is that a problem with this approach is this
+prior distribution, and this makes sense from a subjectivist
+Bayes perspective. If you're the decision-maker, if you're the policymaker, if it's your money
+that you're investing, it's quite different if it's a scientific enterprise where it's a matter of
+communicating information. This really is not the object. A scientific enterprise
+is not going to be minimizing the Bayes
+risk with respect to, say, your particular prior. Here's another comment, which
+is James-Stein estimation. This is all also related to what we'll be
+talking about tomorrow. It turns out if you have a
+particular loss function, which is this inner
+product loss function, you're looking at the
+average squared deviation, that OLS under this loss
+function is actually inadmissible if the dimension of Theta is at least three. You can actually
+construct estimators like a James-Stein shrinkage
+estimator that is uniformly better than OLS. It's strictly
+better than OLS for some values of Theta and it's
+no worse everywhere else. You can also achieve that
+using Bayes estimators. It says that OLS, in this particular case, is not even an estimator, under this loss
+function would be something you'd want to use. In a way I will
+explain tomorrow, this is actually a loss function that's relevant for forecasting. This is essentially a
+forecasting loss function. This is a first cut at a very good reason why if you're interested
+in forecasting, you might want to
+think of moving towards Bayesian procedures
+or shrinkage procedures. It's actually not at
+all the loss function we're interested in for DSGE's. Basically what's going on
+here is you're willing to trade off variance with bias. You're willing to say, I
+don't mind having a bunch of bias in some of my estimators if that's going to
+reduce the variance. I don t think that's
+where we are at all in a DSGE setting. These are supposed to
+be deep parameters. We'd want to know what
+that deep parameter is and it's not clear
+that we're willing to trade off a whole bunch of bias for an overall variance
+reduction of a forecast. This is a forecasting problem, not a parameter
+estimation problem. Priors formalize the
+use of prior knowledge. Well, this is in
+some sense true. The only comment I
+would make on this, I suppose when we say we think the discount
+factor is 0.99, we have some reasonable
+way to think about that. When we say, my prior
+knowledge based on previous research is that the Calvo parameter
+is something. My guess is that all of that previous
+research was done on the same dataset
+that you're fitting. Now, so you're
+disagreeing with me? FEMALE_1: They use micro
+datasets [inaudible]. James Stock: Well, if
+you can use micro set, maybe that's not
+the best example. If you can use a micro dataset
+to calibrate your prior, then that's actually an
+excellent motivation. That is really bringing in
+prior information. Yeah. MALE_1: Another example
+would be a country that only recently or 20 years ago
+started [inaudible]. James Stock: That's fair too. Using information
+from other countries, using information
+from prior data so those are completely legitimate. I agree with that. Another argument
+that sometimes made, this is an argument to
+be based and this is more an argument that
+doesn't matter anyway, which is this Bernstein
+Von Mises theorem. What the Berstein Von
+Mises theorem says in related work says,
+loosely speaking, that inference based on a posterior and posterior
+means is going to be essentially the
+same as inference based on the maximum
+likelihood estimator, at least asymptotically, in a well-identified system. This is actually completely correct and in textbook examples like
+inference for the mean, you can just see how
+this drops out that the prior ceases to enter into the inference unless it's dogmatic in a very
+straightforward way after you acquire
+enough information. The concern about
+this in practice, here's some other references about how this is also true for walled hypothesis tests and confidence intervals
+and stuff like that. There is some delicacy
+to this result. There's an interesting paper in the analyst statistics by Friedman that talks about a high dimension problems of it. I think what really
+the issue here is actually in some sense the opposite of the
+previous issue here. If you have information
+from prior sources, you would actually want
+to bring that to bear. In this latter point, it says that that information should be irrelevant and you should get the same inferences whether you're Bayesian or not. I don't think that's necessarily the situation that one finds. A final point is that as
+a matter of convenience, and this is the graduate
+student using dinars, that you can solve identification problems
+using Bayes methods. But whether if that
+identification is solved by using information
+that's truly obtained, say from other data sources, that's one thing
+but if it's just mathematical device to get around a poor identification,
+that's quite another. When I was running these slides, I didn't realize it
+would sound so grumpy. The only thing I'll
+say is that tomorrow I'm going to take this view and this view very seriously and provide you with some Bayesian angles on
+forecasting that I think going to be quite
+remarkable and I think will be new to some of you at least. I'm sorry, please. Yes. FEMALE_2: Simply this
+comment I want to react to. A truly scientific enterprise won't minimize
+[inaudible] thing. If it doesn't do that,
+what does it do? James Stock: That
+comment was related to the question of communication. That's a long digression
+is to think about what the issues are in terms of actual scientific communication and scientific discourse. This just gets back
+to the question of sensitivity estimators to priors and if you publish a table that has a posterior distribution
+that's based on your prior. If Bernstein Von Misses applies so that your
+prior is irrelevant, then we all know how
+to interpret it but if Bernstein Von Misses doesn't apply so that your
+prior's informative, then it really
+becomes problematic because that's only
+providing one way to look at the data
+and we need to see other ways to look
+at the data as well. Confidence interval,
+plus or minus 1.96. We all run a confidence
+interval and we come back, 95 percent of us will have the true value in
+our confidence set, we know what that means. As a matter of scientific
+communication, it's well understood
+and I think that's what seminars are able to handle
+in a convenient way. I think that this is more problematic as a matter
+of communication, but that actually gets me to a point here which
+is that there's our formal methods for
+handling this concern and these formal
+methods are something called robust Bayes Theory. Of which I am sure that many of the most sophisticated
+practitioners in this DSGE area
+are familiar with, but perhaps could get more play. What robust Bayes is all
+about is it's about examining the sensitivity of your results to the priors that you're using. There's a couple of ways you
+can think about doing that. Of course, one way is
+to say I'm going to do a robustness analysis
+and so I'm going to change my prior a little
+bit or change it and do one set of estimates
+with one prior and another set with another
+prior and produce two tables. But if you really want
+to be systematic and if the dimensionality is high,
+which of course it is, that's not very satisfactory because you don't want
+to produce 200 tables and so there's actually some pretty interesting
+ideas that are available in the robust
+Bayes literature where they've developed parametric
+and non-parametric methods with contaminated
+priors and bounds on priors and mixtures
+of priors and things like that that provide a formal way to look
+at robustness and I think that has some
+potentialities. I'll come back to
+empirical Bayes tomorrow. So let me talk a
+little bit about identification and inference. I think one of the
+interesting things in this literature from an econometrics perspective
+and it's clear that all of the papers and all the practitioners were aware of it, is that there's really
+very interesting questions about identification involved. I'm going to spend
+most of this time just talking about
+identification and DSGEs. One of the things
+that's very interesting about it is that it's
+very hard to actually get a handle on this because the link between
+the parameters and the mapping from
+the deep parameters to the likelihood function is pretty complicated
+and so it's very hard. There really don't seem to be analytical tools to figure out whether things
+like Hessians or expected values of those are singular or anything
+along those lines so any of the ideas that we might bring to bear about identification
+are really complicated in this setting because the mapping
+is so non-linear and it's so difficult
+to get a handle on. This is clearly a theme
+in this literature and so I think what I'm going
+to do is I'm going to talk about a couple of approaches. First of all, try to document some of this and just show
+some of this evidence from this literature
+try to highlight the nature in which this
+week identification is clearly a problem and then maybe talk about some ideas about
+how to get around that. One of the ideas is to think about GMM
+estimation because at least there's tools such as
+the tools I talked about yesterday that are
+available for estimation, inference when you have
+weak identification. I'm not sure that's necessarily a great idea because you might be losing some efficiency, but at least it's
+one possibility, one possible direction to go. Another possible system, GMM, another possible direction to go and this is related to something I'll talk
+about tomorrow, which is to see if you can
+get an order of magnitude or two orders of magnitude
+more data from the macro data that's
+available and that's using much larger datasets and this ID in this Bo
+van genome paper. That would be
+essentially trying to, this first one is saying, you've got weak
+identification how can you do inference in it in
+a credible way? The second is, how can
+get more information? I'm going to go through
+just three examples of some indications that there might be some weak
+identification here. These are only examples. This is just not as worked out as the stuff I was talking about yesterday. These are three indications that are out there in the literature that their
+identification issues. The first one is a paper
+by Canova and Sala, and there's a couple of
+versions of the paper. The early version
+had some problems, but I think they've been
+fixed in this version. They did a study of
+likelihood of, excuse me, objective functions
+and a little bit of Monte Carlo simulation of what happened of GMM estimation, where you're doing a
+moment matching and impulse response
+function matching exercise using a
+small three equation, DSGE that's very much like that. Golly Lopez Toledo, DSGE, and then matching it to
+impulse response functions. The only thing that I am
+going to show you from that paper is this one plot of objective function contours. The thing that's
+interesting about this plot of these objective
+function contours, and this is a pretty fine grade, is that these were
+pretty non-quadratic. If you go back to thinking
+about the GMM expansion that we did the other day from the perspective of the
+objective function. What we were focusing
+on are hoping for, for the large sample
+asymptotics to be good, is for the objective function to be well approximated by a normal with a non-random matrix. Now this is just one realization so we can't say anything
+about whether it's a non-random curvature or how well that approximation
+is but we can at least look at whether
+it seems to be an approximately
+quadratic approximation. At least in some of
+these dimensions, it seems as though there's some reasonable curvature that give some evidence of this surface not being well approximated
+by a quadratic. Let me give you another
+hint in the same direction. This is a Monte Carlo study
+that Anna Mikusheva did. If there's anything
+wrong with it, I'll take all the blame. This is a variant of this Galle Lopez Toledo
+Vallis model and this was run using Dinar and it's
+an ML estimation procedure. It's a Monte Carlo study of this model which
+has 11 parameters. Two of these
+parameters are fixed, so the discount factor
+was fixed to 0.99. This elasticity was
+fixed at one and the other parameters were estimated so it only had
+nine estimated parameters. It has three shocks
+and it has three observable we treated three
+variables as observed, Pi, r and x and y
+to see what we got. These are just the
+parameter values, very small number of
+Monte Carlo repetitions, but enough to get some sense
+as to what's going on. I think I'm looking at a
+number of different things, which is the lift in a maximum
+likelihood estimator for each element of Theta fixing
+the others with the true and so that's just
+one way to see whether there's something
+really bizarre going on. This should work
+pretty well if you fix everything else
+that the true and it's a one-dimensional problem, it should work pretty
+well and it does. Then we looked at
+unrestricted MLEs and t-statistics
+and coverage rates. This is the situation
+that should work, which is estimating one
+coefficient at a time where all the others are fixed. In fact, these work really well. The Wald statistic has size, it's right around five percent. Remember this has got a
+very small number of draws, so this is just great. It has virtually no bias. The MLE is just working perfectly well in this
+very simple setting. The more complicated, the
+more interesting setting is when all of the
+parameters are estimated. These are the parameters
+in the Taylor rule. This is the lagged value of interest rates and
+the Taylor rule is the curve of
+pricing parameter. These are some
+persistence parameters and then these are
+the shock variances. This is based on maximum likelihood estimation of all of the parameters
+and what you see is that you start to see some really significant
+size distortions for the t statistics
+so for example, some of the worst
+behaved happened to be these Taylor rule
+coefficients where the size of the five
+percent significance t-test is 25, 46 percent. In some instances, it
+seems to be working okay. In other instances, it's working really quite poorly in
+terms of the size of the T statistic
+part of the problem is that the coefficients
+seem to be pretty biased. For example, this
+coefficient on lagged an output in the Taylor
+rule equation is 0.15, the bias is 0.44, so it's huge bias on the
+coefficient on price, on inflation as well. Some of these seem to
+have much less bias. Why that is, I don't know. The standard error seemed
+to be messed up as well so between the bias
+and the standard error is the t-statistics are wrong
+in a substantial way and the confidence intervals
+are off by quite a bit. This is some distributions
+of t statistics with this very small
+number of observations. Some of them look reasonably
+normally distributed, some of them don't look
+very normally distributed. This is a small number
+of MC draws so it needs to be done more carefully or more thoroughly,
+I should say. I think it was done carefully
+but not completely. But it gives you some flavor that there's some
+issues involved. This is distribution
+of these estimators. They're supposed to be
+normally distributed. Not all of them look
+normally distributed. Let me make a few
+final comments. A few final comments I
+think in the references, so this literature is
+really exciting and it's really interesting
+and there's an awful lot of important developments in it. A lot of those econometric
+developments are technical how do you
+evaluate the posteriors? How do you do develop non-linear solutions
+to these models? There's some evidence that
+the non-linear solutions are going to yield better identification
+than the linear models. There's a lot of
+interesting numerical work that goes in to this. I think there remains to be a lot of interesting
+numerical work. A lot of interesting work on the econometrics and the
+inference side of this as well. I don't have, unfortunately of all of the different talks, I don't have any
+clear recommendations coming out of this other
+than this general warning. I guess I have all of the different things that we looked at maybe doing Monte
+Carlo studies seems to be a particularly good idea and producing those
+if you're going to do the Bayesian root producing those posterior prior plots
+like Smithson voters did, it seems to be a
+particularly helpful way to communicate where you're getting information from the model
+and where you're not. Thanks very much and I'll
+see you tomorrow afternoon. 

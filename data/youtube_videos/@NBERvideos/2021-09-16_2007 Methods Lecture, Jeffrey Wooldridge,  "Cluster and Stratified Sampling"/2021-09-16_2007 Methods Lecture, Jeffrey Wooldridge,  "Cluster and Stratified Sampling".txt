@@ -1,0 +1,709 @@
+Jeffrey Wooldridge:
+Actually, the notes have material on
+stratified sampling. I'm going to focus on the
+cluster sampling here. Actually, tomorrow
+on missing data, I'll talk a little bit
+about stratified sampling, but there's been a lot
+of interest lately in how one does inference when you have a cluster structure. This actually covers
+two situations, and I'll talk about some recent theoretical work and how it applies in each case. We might have a real
+cluster sample where there's no time series
+element to the dataset, but we have
+individual-level data that's naturally
+grouped into clusters, or later on this afternoon, when talking about difference
+and differences methods, I'll consider more
+specifically the case where we have individual data
+within a particular group, within a particular time period, and these results that
+I talk about now will have applications to
+that setup as well. I broke this down
+into four sections. The linear model with
+cluster effects, and that's the
+fairly basic stuff, but I'll just go through it
+and emphasize a few points. In particular, talking about what's been learned
+recently about applying this so-called cluster robust variance matrices and test statistics, in cases where you
+don't necessarily have a large number of clusters
+with small group size. Then specifically talk
+about the case where you have a small number of groups or clusters and large group sizes, and then what happens if you have large or moderately large. Both of them and
+then say a little bit about nonlinear models. In the linear model,
+the notation here is aimed at the case of
+clustered data, not panel data. But as I said, this literature certainly
+has implications for what happens with
+panel data as well, and I've mentioned several times about making inference robust
+when analyzing panel data. This will formalize that to
+some extent, but mainly, I want to focus on these more
+difficult cases to handle. The setup is again, a set of draws on y, x, and z, where g is the
+group or cluster, and then index is the observations within
+the cluster or group, and we have M_g unit, so this would be like
+an unbalanced panel. Cluster samples usually come with different group sizes
+or different cluster sizes, so certainly, we
+need to allow that. Or this could apply to
+an unbalanced panel, although I will be
+talking tomorrow about unbalanced panels and when you can ignore the fact that there are
+unbalanced and so on. For now, we're just
+viewing this as sampling. We have observations that
+come in clusters or groups. Then the explanatory variables are divided into two kinds: X_g, these vary just at
+the group level, and then Z_gm, these vary within group, across individuals or
+whatever the unit is. Applied to a panel dataset, m here would be the time period, and g would be the
+cross-section dimension. If we start with Equation 1, which is just a basic linear
+model for cluster data, then in order to figure
+out how to proceed, we need to know a
+couple of things. First of all, are we
+mainly interested in the parameters on the
+group level variables, or are we mainly interested
+in the parameters on the covariates that
+vary within group, across individual. Depending on the answer to that, we would use different kinds of estimation methods or at least that opens the door to different kinds of
+estimation methods. The other issues are going to be about
+the error structure. In this error term here, do we have a so-called
+group or cluster effect? If we don't, well, then
+things are a lot easier. We're mainly concerned with the case where we do. Usually, that's written as
+an Equation 2 where we explicitly write the
+cluster or group effects C_g, and then there are the
+idiosyncratic errors, U_gm. G could index something
+like a school here, and M could index
+students within the school where we might have a lot of schools
+and a few students, or maybe even lots of
+students per school. But in any case, we think of the school as the natural cluster
+for the students. The other issues are the regressors
+appropriately exogenous. Of course, that will certainly determine how we
+estimate the parameters. Then the key issue that's
+been looked at recently in theoretical literature
+and certainly has been a concern
+for some time is, what are the relative sizes of the group and within
+group samples? Do we have a large number
+of groups with small sizes, or is it the other way around, or is it somewhere in-between? This determines how well some of these robust procedures
+actually work in practice. There's been recent
+theoretical work that essentially confirms what people have noticed for a while. I'll try to summarize
+how that applies to both cluster samples
+and panel data sets for the various configurations
+that come up. I'm going to explicitly consider two kinds of sampling schemes. One is the easiest to deal with, and that is where you think of having a large
+population of clusters, and then you pull these clusters at random
+from the population, and then within those clusters, you get data on individuals. This would be a case
+where you're looking at a large population
+of schools and you draw several 100 at random, and then within those schools, you get information on lots of students or
+something like that. But the key is you have
+a lot of clusters. It makes sense to think of doing the asymptotic analysis as the number of clusters
+is getting large. There are some other examples, or families, or firms, or classrooms, and so on. A different way to come up with a dataset that has a similar structure is to actually, think of
+partitioning the population into a fairly small number of groups and then sampling within those strata or subgroups, and this leads to a
+dataset where you have usually just a few groups, but you might have a lot of observations within each group. Of course, even though that data structure looks
+similar to the first kind, it matters whether you have
+a large number of groups or a small number of
+groups when you decide how to do inference. I'll first cover the
+case where the inference is relatively
+straightforward just to make sure we understand
+that if you want to try the same inference
+on other cases, you have to be aware of what's known and what's
+actually not known. A fair amount is known
+by now actually, so we can avoid
+certain pitfalls. With large group
+asymptotic, as I said, the idea is we have a large number of
+groups G. Technically, G goes off to infinity. We fix the group sizes. This is certainly the
+appropriate setup for panel data where you have a large number of
+cross-sections and relatively few time periods
+for each cross-section. Again, it's relevant for certain kinds of cluster samples where you have lots of clusters. How should we proceed? Well, if the covariates
+at both the group level and the unit-specific level, the individual level are exogenous in the sense of three, then we can actually
+just use pool though, unless of course, by pooling across clusters and
+within clusters. There's nothing new
+or exciting there. Under that exogeneity
+assumption, you get consistency and
+asymptotic normality, and again, as the dimension
+of the groups gets large. Of course, we can estimate
+the parameters on both the group level
+variables as well as the unit-specific
+level variables. In the panel data case, that actually does allow for non strictly
+exogenous variables. However, if we think there's this cluster effect in
+V_gm, then of course, we're assuming that everything is uncorrelated with
+the cluster effect, and that makes that comment
+a little less useful. But still, one does see pooled OLS applied
+to cluster samples. Often, the reason that's done is because
+there is interest in the effects of the
+group level variables X_g. We'll talk about so-called
+fixed effects in a minute, but of course, we don't
+want to eliminate the X_g if those are the variables that we're
+actually interested in. Of course, when we do this
+pooled OLS estimation, whether it's on a panel dataset where we've left the
+unobserved effect in the error term or
+whether it's on a true clustered data set where we've left the cluster
+effect in the error term, it has the same effect of making the inference invalid
+unless we adjust it and allow for correlation in computing standard errors
+and test statistics. We can afford to do
+this quite generally. This is why this
+is the easy case because with a large G, we don't have to impose
+any structure on the correlation within a group. We simply estimate a
+variance matrix that allows for arbitrary correlation within cluster or within observation
+in the panel data case. That pretty much
+takes care of things. Of course, it's not
+efficient to use pooled OLS, usually in this case, but it's easy and we know how to do inference
+that is approximately valid. The variance matrix is this sandwich form that's
+given an equation for where, again, the averaging, the right way to think
+about the averaging in this particular case is
+across the number of groups. Then we don't have to impose any structure in
+estimating all of the pairwise covariances and variances in the middle
+part of the sandwich. Of course, this is the
+variance matrix that's now reported rather
+routinely by just adding cluster with an
+identifier to tell you what the grouping is and always can be added onto lots of different commands,
+say in Stata. This is of course,
+easy to do these days. If we strengthen the
+exogeneity assumption to that in Equation 5, so the difference here is that we're now
+putting the full matrix of regressors that change within group Z _g into that
+conditioning set. Now we're not just assuming that everything is uncorrelated
+with the cluster effect, but we're assuming that the
+regressors for one-person within the cluster are
+not correlated with the errors for another
+person within the cluster. This assumption, unless
+it's been modeled directly, would rule out things like
+peer effects and so on where you assume where you might allow that somebody's x's, or in this case, I
+should say somebody z's actually affect the
+outcome of a different person. There are ways to
+model that, of course, but at this particular
+level, we're not accounting for that. If this assumption is true, then we can do something else. Of course, we can do
+a DLS-type procedure, which generally will be more efficient than doing pooled OLS. The most common
+thing to do would be to specify a so-called
+random effects structure. This is of course, in general, a random effects structure on an unbalanced dataset because we don't want to assume that the cluster sizes are the same. The variance matrix in the
+case of where we actually take the cluster setup
+seriously is given in six. That would mean
+that we're assuming the idiosyncratic errors are uncorrelated within a cluster, that we have common
+variances within a cluster. Then the Sigma squared sub C is actually the variance
+of the cluster effect. With that particular
+structure, of course, the so-called random effects
+estimator suggests itself, one should always be aware
+that even if you believe in this particular structure
+of the composite error. If I go back up to Equation 2, even if we believe
+this structure where the use are uncorrelated
+with the cluster effects, we have constant
+variances of the U's. There's always an
+assumption that those variances don't
+depend on the regressors. It's not just enough, of course, to assume that the
+unconditional variance is given as in Equation 6. We also need to
+assume that that is the conditional variance, if we're going to use the usual random effects inference. In other words, if we're going to estimate
+random effects and then use the standard errors and test statistics that are
+reported as a default, then we have to assume that the so-called system
+homoscedasticity assumption, which means that the
+conditional variance is equal to the
+unconditional variance. In addition, that the
+unconditional variance has the structure in six. If that's not true, while there it is right there, Equation 7, that's
+the so-called. Of course, even if we relaxed to the random effects structure and did a GOLS analysis
+that was unrestricted, say in a panel data case, you still are assuming seven, if in fact, you're using
+the usual inference. Again, the random effects estimator has
+well-known properties. As the number of
+groups gets large and the group sizes are fixed, its root g asymptotically normal and inference is
+straightforward. Now, one point that is sometimes overlooked is that there are good reasons to make
+the inference fully robust, even if you've done
+random effects. This is especially true in
+panel data because of course, the idiosyncratic errors could be correlated over time and the usual random effects
+assumptions don't allow that. Even if we're doing random
+effects as a way of accounting for the serial
+correlation to some extent, but might want our
+inference to be more robust than we can compute a fully robust
+variance matrix that doesn't take the random
+effects assumption seriously. This, by the way, is with cluster samples where it doesn't make any
+sense to talk about serial correlation in the
+idiosyncratic errors. It's, I think the case for robust inference is a
+little more subtle. But there is a case to be made. If we start with
+Equation 8, for example, which is similar to some model that we
+talked about before, it's a random
+coefficient model where the coefficients vary
+at the group level. This is the random
+coefficient right there, Gamma_g. Right now I'm violating the
+convention I mentioned before when I said that Greek letters would
+always represent parameters to estimate
+some of this. This is now a random variable that is not to be estimated, but it has a mean that we
+would hope to estimate. If we then plug in its mean, which I've called Gamma, see the ideas we have a
+large number of groups, so we're not,
+necessarily going to try to estimate these
+Gammas for each group. But we hope to estimate something which would
+be the mean of them. Then in effect, what happens is this gets put
+into the error term, and the presence of that would generally
+cause correlation within cluster and correlation that depends on the regressors. This is a case, a random
+coefficient model where you actually, ignore the fact that the coefficients are random, go ahead and apply
+random effects or some other GOLS method
+that it makes sense to them to make the inference
+fully robust because the system homoscedasticity
+assumption certainly fails in
+this particular case. Now it may be a minor problem, but it doesn't hurt with
+large G to at least compute them and to see whether it makes
+much of a difference. Of course, one way to handle group affects or cluster
+effects is to get rid of them. We already talked about this
+in the panel data case. This is a good idea when
+we're really interested in the coefficients on the
+individual specific variables. Then the easiest thing to do is to remove the cluster effects. Of course, that allows
+those to be arbitrarily correlated with
+these covariates, so it affords us
+some robustness and inferring some sort of
+causality in these estimates, so differencing out
+the cluster effects. This is now a within group D, meaning that we're doing and that leaves the course that takes the cluster effect
+or the group effect out of the error term and then we just apply pooled OLS
+to this equation. Again, this is a case where
+certainly with panel data, it's pretty obvious
+that you might want to make the inference fully robust. With cluster sampling, it's a little less
+obvious that that's true. But again, there are cases, and I'll bring back this
+random coefficient, this random slope case, where we already saw in the second lecture
+how fixed effects could actually still
+be consistently estimating the average
+effect of Gamma. But in fact, even if it does consistently
+estimate that it leaves this term here
+in the error term. Even for cluster samples where we would normally assume that the idiosyncratic errors are independent or at least
+uncorrelated within cluster, this neglected
+heterogeneity could also, cause that to be untrue. They said these days, of course, doing the robust inference is a very standard thing to do, and the main point here is, it may make sense
+to make it robust even for a pure cluster sample. There's the formula just
+so it's the same formula as before except
+there are no x's. These are now just the z's and they've had the within-group
+average is taken out. Then those U_g hats are the so-called fixed
+effects residuals. Now as I said, the case for doing
+this with a large number of groups and small group sizes is
+fairly clear, I think. The more interesting case is
+what happens if you don't have a large number
+of groups and you may have large group sizes? Just because the
+original theory was worked out for the large GK's, doesn't mean that applying
+these formulas to other cases is a bad
+thing but we should have some justification
+for doing that and there certainly was
+simulation evidence that suggested that these
+work reasonably well in the case where you have
+reasonably large group sizes, as long as you also had a reasonably large
+number of groups. Well, it depends a lot
+actually on whether you take out the
+group effect or not. I'm going to summarize
+some work that recently that formalizes what I think we pretty much had good
+intuition about and some simulation evidence but it's useful to actually summarize the
+theoretical results. The question is, should we use the large G formulas
+with large M? Where large, of course, is always a matter of interpretation because
+we don't really know in any particular
+application how large these dimensions have to be in order for the
+results to kick in. Chris Hansen has written
+two papers recently. We'll talk about the
+second paper later on when we talk about
+difference in differences. The first paper
+basically looked at this issue about what happens when we have these
+various configurations with g and the M_g's. I'll just summarize what
+comes out of that work. It actually makes a difference, certainly not for the theory, but I think in
+understanding what are the practical implications
+of his results, to separate out the real
+cluster sampling case from the panel data case because
+of course with panel data, there's this notion
+that you could have serial correlation that
+because of the time ordering, it makes sense to talk about that correlation dying out
+as you get farther and farther away in time and with cluster sampling that
+doesn't make as much sense. First, consider the so-called
+true cluster samples. He has a theorem that says
+in effect that if you let g and M_g's both get
+large at the same time, then the inference that's
+based on that matrix that I wrote down
+for the pool though OLS estimator is valid, even if there's arbitrary
+correlation within group. I should say, this
+is all based on the assumption that there's
+independence across groups. The question is, what about the dependence
+within a group? With a cluster effect, there is a lot of
+dependence within the group when you leave
+that in the error term. But the results are
+for the case where there's independence
+across the groups. In a panel data that would mean independence in the
+cross-section dimension. The usual inference that's based on fully robust variance is valid even if there's arbitrary correlation
+within the groups. That means that even if you
+have pretty big group sizes, as long as you have a fairly
+large number of them, then you're on
+pretty safe ground in terms of getting
+appropriate inferences, at least that has the
+right size asymptotically. If you had a 100 schools and 100 students per school,
+you might say, "Well, can I really appeal to
+this theory that is based on a large number of groups with small group sizes?" His results say basically
+the answer is, yes. This is important because
+on these applications, you're often interested in the effects of
+school-level variables like spending per student or something like that
+and so you can't use a fixed-effects
+transformation to eliminate the school effect because it eliminates the variable
+you're interested in as well. As I said here, probably
+in these examples, you're leaving the
+school effects in the error term because you're interested in a
+school-level variable. The bad news is that his results don't apply to the
+case where g is small and the group sizes are large. We'll actually discuss what has been proposed in this case. But this is the case that
+doesn't follow from his work. If you have a small
+number of groups, and they're somewhat
+large and you try to make the inference fully robust to arbitrary correlation
+within the groups, you shouldn't expect
+it to work very well because you're
+trying to basically estimate a lot of correlations with a few number of
+group observations. Now, of course, he has some simulation
+evidence that shows, well, maybe it's not so bad, but it's also true that
+if g is really small, a handful in the group
+sizes are 30 or so, then it's not going
+to work so well. We shouldn't expect
+this to work very well and his results don't
+apply to this case. We'll talk about what to do. Now, that's assuming that
+we've done pooled OLS, so that we've left the cluster or the group
+effect in the error term, then we can't expect
+that to do well. Of course, if we take
+out that cluster effect, then we've now greatly reduced the correlation within
+groups and the errors. In fact, in some sense that makes sense to just assume
+the correlation is zero. If we do so-called fixed effects and we have just a
+small number of groups, well, in his setup, you can pretty much just
+treat the estimates of the cluster or group effects in this case as
+estimated parameters, different intercepts
+we're estimating for each group because we only have a few groups or
+a small number of groups, and we have a lot
+of observations per group and so we can estimate those things fairly precisely. If you take that point of view in the context
+of his results, as it turns out, he does have results that show a certain inference
+is valid in that case. It's not as general
+as his other results, so there are some restrictions. But you can do
+something and that is, you can essentially
+adjust the degrees of freedom in the t distribution
+that you use and actually, you also have to do
+an adjustment to the robust variance
+matrix estimator also. If you use the fully robust
+cluster variance matrix after having taken out the
+group effect and you do it, I don't know for one
+of those reasons I mentioned because you
+might think there was a random coefficient that you omitted but it turns
+out that it's not, then you pay a price for being
+conservative in this way. The price you pay is, you basically have to
+use a t-distribution with g minus 1 degrees of
+freedom to do inference. If you had five groups, now you have to compare your t-statistics to a t with
+four degrees of freedom. Well, what we would
+normally do is you would use a standard normal
+distribution because you'd be assuming the asymptotics
+are working for you in the large number of groups. The reason I say you pay
+a big price for that is because if you didn't compute the robust
+variance matrix estimator and you really do have independence once you take
+out the cluster effect, then in fact, all you'd have to do is make your
+inference robust, at most a heteroscedasticity, and then you could use
+large sample asymptotic because the group
+sizes M_g's are large. I probably didn't say
+that especially well, but if you take out the cluster effect by basically treating them as parameters
+and estimating them, then you have data
+that are independent. They're not identically
+distributed, but that doesn't
+matter for applying these large sample results. Under that scenario
+then you should be legitimately able to use
+large sample analysis where the number of observations is large because the
+group sizes are large. If you say, but I'm
+nervous about this and I'm going to use these robust
+variance matrices anyway, then his results show
+that you have to use a t distribution
+with g minus 1 degrees of freedom even though the underlying data are
+actually independent. There is a cost to doing that
+and it's basically that. By the way, this multiplication
+by g over g minus 1 to that formula that
+I had way back where? That. As it turns out, packages like state, I do that correction
+automatically anyway, so that part of it, you don't have any extra work
+to do but certainly using the t distribution with a small number of
+degrees of freedom is the thing that costs you in terms of the certainly
+confidence intervals if you use that distribution
+to construct them. Notice that the g here is fixed in his
+asymptotic analysis, and it's done with the number of group observations
+going to infinity. What about panel
+data applications? Just quickly, the results
+that I mentioned for the cluster case suggests
+that the fully robust or the cluster robust inference
+should work well when the cross-section and
+time series dimensions are similar and not too small. You can do pooled OLS, the so-called unobserved
+effect in the error term. That's very similar to
+the cluster effect case. There is a somewhat subtle point though and that is if
+you're going to do the common thing
+though and in addition to so-called fixed effects
+in the cross-section, you allow time effects. Now, you have to have both
+a large cross-section and a large time series and
+you have to assume that any serial correlation that's leftover is of the
+weekly dependent kind. So that it's dying out as you get farther and
+farther apart in time. I guess that's all
+there is to say. If you're in the standard case where you want to control for aggregate time effects as well as cross-sectional
+fixed effects, then these results apply, as long as you have a reasonably
+large size of n and t. You don't have unit-roots left over after you've taken those
+things out basically. Then there are simulation
+results that basically verify. Some of the simulation
+results came before his theoretical work and the Bertrand et al paper that showed that these
+things work reasonably well, as long as you have a reasonable number of cross-section observations
+and in that case, you have weak
+dependence across time. What happens if we have a small number of groups
+and large group sizes? We're interested
+in doing inference on the covariates that change
+only at the group level. Because as I said, if
+we're interested in doing inference on the covariates that vary within group, then the
+easiest thing to do is just to estimate the group
+effects and go from there. Well, the news is not good depending
+on how you look at it. Donald and Lang recently
+considered this problem, actually, the paper was
+recently published. They considered it actually
+several years ago. This is related to the
+so-called Moulton problem from how does one do proper inference in the
+presence of cluster samples. Donald and Lang were
+really focused on the case where you really have
+a small number of groups. Just a handful or even a couple. They set the problem up so that you have this
+unobserved group effect, just as in the model
+we talked about. I'm going to consider first the very simple case
+where you just have, let's just say a
+single covariate, it might be a policy
+variable 0, 1 variable, and you have a cluster
+effect and the question is, how can one do inference
+in this setup? That's in Equation
+11, right there. You can write that in two ways. This cluster effect C_g, which you don't observe, another way to think
+about it is that there's this cluster or
+group-specific intercept. Even if you assume that the cluster effect is
+independent of the x's, it's difficult to do
+inference in this setup because we only have a
+small number of groups. As I just mentioned, since we can't take away
+the cluster effect by estimating them or doing
+within transformation, we are leaving that
+cluster effect as part of the error term. As I just mentioned, the standard errors don't work in that particular case and we shouldn't expect them to. What did Donald and
+Lang propose to do? Well, in this particular case, we don't have to
+consider the case of the same group sizes. Let's just consider the case where the group sizes actually, they don't have to be the same. There is a result that
+requires them to be the same, but not the basic problem. They actually recommend studying the problem using the
+regression in 13, which is to take
+the group averages. There's only one thing that varies within group
+in this case, and that's the
+response variable. The x only varies across group and the response
+variable varies within group. In this case, the solution
+is to basically just use this regression where you regress the group averages on, well, in this case, a constant
+and a single covariate. Now, you can see what the
+issue is here because the x's, because they are exogenous, you can just condition on them. If you write down the equation in terms
+of the average wise, you can see that they're
+getting their distribution from the average of
+these composite errors. But the composite error depends on this unobserved
+cluster effect with large group sizes, the extra effect that's coming from that
+idiosyncratic error is actually usually
+insignificant relative to the variance of
+the cluster effect. The contribution, if you will, from adding more
+observations within cluster, is really just in how it
+changes the mean of y. It doesn't really add new
+additional information. In fact, this is exactly
+the same estimate. This is where the same number
+of groups comes into play. This is identical to
+the OLS estimate, where you pull across both groups and within
+groups and just do OLS. This is the same thing as regressing the averages just on this intercept in the single
+explanatory variable. It's not as if it's a different estimation
+method really, it's just how one is actually going to
+go about inference. How can one do
+inference in this case? Well, remember, the problem
+is that g here is small. Well, you can only
+do inference if you add some fairly
+strong assumptions. The most important
+assumption is that the cluster effect has
+a normal distribution. That's given by this at the top. It's independent of x and it
+has a normal distribution. Once we have that, then we can decide
+whether we want to do approximate inference
+or exact inference. In the case, if we want
+to do exact inference, then we can assume that the individual specific
+errors are also normally distributed
+but we would also have to assume that the group
+sizes are the same. In that case, this
+averaged error here, would have this
+normal distribution and because the group
+sizes are the same, it's a homoscedastic normal distribution and
+then, of course, that means that this
+model written down in 14 is a classical linear
+regression model. That's basically the solution, is to treat this as a classical
+linear regression model. Now you can see
+that this is very costly because if g is something like
+five again or three, then you're doing inference with a t distribution with a very small number of
+degrees of freedom. By the way, again, changing the assumption that that is
+different across groups, basically what you're
+doing then is just saying that you're
+going to ignore the contribution to the
+idiosyncratic errors and just assume that it's large enough so that the
+average is normal, and you're going to ignore the heteroscedasticity
+that it implies. If you think about this, this is quite different
+from what you would do if you ignored the
+cluster sampling. It's more than just
+not computing cluster robust standard errors
+because there you would do it and then you would
+use the wrong degrees of freedom in the t
+distribution anyway. This is a matter of using G minus 2 in
+the t-distribution, which again is going to give you very wide
+confidence intervals compared with what
+you would get if you use the standard
+normal approximation. The question is, is this the
+solution to this problem? Well, it certainly is a solution and if you really like to
+be conservative then it's, I guess the way to go. This can be extended
+to the general model, so if you allow x to be
+a vector and you allow some individual-specific
+covariates, then basically you're back to estimating the so-called
+between regression where you just use group
+level averages and then you treat this as a classical linear
+regression model. Unfortunately, of
+course, in this case, you're going to need
+the number of groups to be bigger than the number of parameters that you're trying to estimate in this equation. But if you have that, then you can carry
+out inference. There are applications
+where you might have G equals 50 states
+or 30 regions or something like that and you're trying to do this
+with a fair number of right-hand side variables
+and then this just says that you shouldn't use
+asymptotic analysis, you should use finite
+sample analysis in doing this even though of course it requires normality
+and everything. This strategy is not
+uncommon by any stretch people often just
+do this as a way to check the results using
+the individual level data. The question is, how are
+you going to do inference and Donald and Lang
+suggest, well, you do inference with an exact t-distribution
+or at least an approximate t. Now, I do want to point
+something out here. I think this observation
+is a really good one, but it does also have the
+implication that it basically rules out some staples that we're taught way back
+in introductory statistics, we're doing policy analysis. In particular, if
+you have two groups, Donald and Lang's setup implies that you
+can't do inference. Suppose you just have two
+groups and you've collected a large number of observations
+within each group, what would the Donald and Lang estimator be in this case, it would be the difference
+in means that we would compute from a
+basic statistics course. Of course there, if you
+do a comparison of means, you would be left with doing
+inference probably based on the standard normal
+distribution because you have groups of a couple of 100 each or
+something like that, or even maybe as low as 50 or 30 and so
+then you would say, "What's the approximate
+distribution of this difference in means?" Well, it's approximately normal, and you can estimate
+the variance. In the Donald and length
+framework their estimate would exactly be the
+difference in means, but you'd have zero
+degrees of freedom, so you couldn't do any
+statistical inference. In fact, anytime you basically have parameters that are just identified in this setting, you can't do inference. This, as we're going to see
+later on this afternoon, in this typical difference
+in differences setup, it basically says you
+can't do inference if you are worried about this
+kind of cluster structure. One wonders whether
+you should just assume that you can't
+use a comparison of means to study the outcome of what might be a pretty good
+randomized experiment. I don't know. If you
+took two schools and you had sampled lots of students per school
+and there was some intervention at one school, then it seems like
+you should be able to compute a change in means in some test score or something
+like that and then do a simple t-test on the difference as a test of whether the policy
+had an effect. I'm still not
+entirely sure that we should just throw
+that thing out. Even in the case where
+you can do this analysis, just as an example, suppose you had four groups, but you were still back in
+this case where you just had a single policy indicator
+and let's suppose two of the groups
+are control and two of the groups are treatment. Then, what Donald
+and Lang would say basically would be
+to run a regression of the averages on this indicator using the
+four observations that you have and then using a t with two degrees of freedom
+to do your inference. Again, the estimate
+is quite familiar. What would the estimate
+be in that case? It would say to average the two outcomes for
+the treatment group and subtract off the average
+for the control group. Of course, if you had lots
+of observations within each of the four groups, you might think
+that Beta hat has an approximate
+normal distribution but that's not what would
+happen in this case, you would use a t
+distribution with two degrees of freedom in
+the Donald and Lang setup. Basically, the reason that
+comes about is because it may be that the means within each group are not the same. That would be the role
+of adding this C_g term basically onto the end
+of this equation is that Mu_1 and Mu_2
+might not be the same, and Mu_3 and Mu_4 might
+not be the same also. But should we necessarily reject 16 as having an approximate normal distribution because of that? Well, I don't quite have the complete answer
+for that actually. Essentially what happens
+in this example, where you have four groups, but two are treatment
+and two or control, is that implicitly in some
+ways the restriction is being imposed that Mu_1
+and Mu _2 are the same and Mu_3 and Mu_4 are the same. If you were to impose
+that restriction and use a minimum distance
+procedure you would exactly get the estimates
+that I wrote down. One way to view this problem is that restrictions are being
+imposed on parameters. Of course, those are
+testable restrictions, if you choose to test them. On the other hand, you
+might choose to not care about whether those means
+are the same and just say, "I'm going to define essentially
+the treatment effect as being the population analog
+of this thing right here." If you did this to two schools treatment
+and two schools control, sure this might not be the right weighted average
+to use in terms of what the best estimate of the effect on the
+average gain is, but it's not clear
+you want to just say, I can't tell whether that's
+significant because I have to use a t-distribution with
+two degrees of freedom. But there are differences of opinions on this
+particular point. The notes talk about
+how this can be done in a minimum
+distance framework. This has been used by, I have one reference here, Loeb and Bound when they had 36 groups and then basically, they treat
+these parameters. Actually, they had
+group-specific slopes as well. The idea is to
+think of these x's, these group-level variables, as imposing restrictions on the parameters in this model. The idea is with a
+large number of groups, you can estimate these
+things fairly precisely. Then basically, you can test whether these restrictions
+are satisfied. Now, these are restrictions
+on just the intercepts, which is the common case, but you can do it for
+the slopes as well. If you set this up as a
+minimum distance problem, then the estimation is
+straightforward because you just estimate these intercepts and slopes within each group. Then you can impose
+the restrictions using the efficient minimum
+distance estimator and then test the restrictions
+that are being imposed. Of course, if you reject
+those restrictions you may actually, wind up back using the Donald
+and Lang approach, if you are worried about those
+restrictions being true. It's justified because, in fact, you can ignore the estimation
+error in the parameters that you've generated using the first within-group
+regressions. In other words, if we have large group sizes then you treat the estimated intercepts as if roughly they're basically
+the true intercepts. This is the term, if it really is there, which is going to
+dominate anyway. You can now just analyze this
+equation 20 as if, again, it's a classical linear
+regression model, at least under the assumption that this thing has a
+normal distribution. This is a procedure that is
+fairly widely applicable. If g is not too small, then this is likely to give
+very acceptable estimates. Then you don't have to
+really worry about why these intercepts are different across the groups as
+long as, of course, you're willing to assume
+the deviation here is uncorrelated with
+the policy variable, x_g, which of course you might question
+certainly in general. But if it's a good randomized experiment,
+it's perhaps not. It looks like the last thing
+I can actually say is, what happens if the group
+sizes are both large? Well, there we have more
+flexibility because in addition to ignoring the first
+stage estimation error in Delta g hat, which I argued that we can do when the
+group sizes are large, now in the second step, where we have this
+equation here. Well, if g is large then we can apply the central
+limit theorem and don't have to assume that this cluster or group effect
+has a normal distribution. If you have a large G and
+the large group sizes, then of course that
+should be better than having only one of them large. That comes from the fact
+that as G is large, it's not going to matter if we use the t-distribution there. It's also going to be robust to heteroscedasticity and non-normality in
+the group effects. In fact, there's one version
+of this method that Barry, Levinson, and Pagus
+have suggested for analyzing structural
+models of the markets. I guess I mentioned
+this later on under nonlinear models, but since I'm going to have
+to stop I'll mention it now. One of their procedures is to
+basically estimate models, like multinomial choice models, on individual-level data. Then there are
+estimated intercepts. Then in a second step, those are modeled as functions of either product
+characteristics or market characteristics. In effect, if you have a large number of
+individuals to estimate these Delta hats then
+in the second stage you can more or less ignore
+the estimation error that is obtained in
+the first stage. The one important
+difference in what they do and this is that they actually are worried
+about correlation between this unobserved market effect or product effect and
+these attributes which include
+things like prices. In their second
+stage, they're using instrumental variables
+type procedure, but it's justified in this setting because you don't have to assume
+normality here. We can use large G asymptotics
+and then we can ignore the fact that we estimated the Deltas in the first stage. Now their analysis is much more sophisticated because
+they actually have a full formula for
+accounting for the first step estimation
+as well as the second step, as well as simulation
+error that comes about because the first
+step estimation often requires
+simulation methods. But as they noted, that usually this
+particular error in estimating the Delta
+G can be pretty much ignored because
+it's swamped by everything else later on, either the simulation
+error or the variation in these
+unobserved market or product attributes across G. I will not be able to
+cover nonlinear models, I guess, but the comments are actually very similar
+and you can do very similar things using these two-step methods because well actually, the
+Barry, Levinson, and Pagus stuff is an
+example of that in fact. Questions? Yes. MALE_1: [inaudible]. Jeffrey Wooldridge: You really
+want me to go on record throwing out some number? Well, let me try to
+dodge that a little bit. But suppose we were
+thinking of this as a regression model and suppose that we just have two
+parameters to estimate, let's actually act
+as if we really do have a large number
+of individuals. The first stage estimation
+can be ignored. This is a simple
+bivariate regression. When do we feel comfortable saying normality is not critical in that case, 30
+observations, 50? Of course, it hinges critically on what the
+distribution of this is. Is it heteroskedastic? Is it close to normal? The usual inference
+is going to be okay. Once cap G starts getting
+up to 50 or 60 or so, then you don't even really make a distinction between the
+t and the normal so much. I don't know. Fifty,
+let's say 50. 

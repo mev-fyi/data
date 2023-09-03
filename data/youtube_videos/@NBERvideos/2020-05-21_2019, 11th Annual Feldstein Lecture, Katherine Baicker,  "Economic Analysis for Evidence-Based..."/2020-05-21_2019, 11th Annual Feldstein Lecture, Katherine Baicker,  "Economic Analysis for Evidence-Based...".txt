@@ -1,0 +1,779 @@
+Katherine Baicker: It's
+really an honor to be here to give this
+lecture and there's very little that I can add to the wonderful things that
+you've heard about Marty, except to say that it's very
+personal for me as well. I got to meet Marty my first
+week of graduate school when he was assigned as my advisor and I
+went to the NBER, which seemed like a
+terrifying thing to do. I got to work with Marty as a research assistant and then
+as a teaching assistant for AK1420 and eventually
+I got to lecture with him in AK1420,
+which was surreal. I remember throughout
+graduate school, Marty's amazing dedication
+to his students. He did so much. He was this world leader and advisor of presidents
+and chancellors. I would occasionally get a
+phone call from Jerry Johnson. I think I saw her in the room early and say Marty
+would like to see you because it
+had been a couple of weeks and I hadn't
+gotten that much done. Marty was on top of this and cared so much about his
+students success and the amount of time
+and energy he devoted in so many of us for
+our whole careers. I feel so lucky to have had
+the opportunities that I have working at the Council
+of Economic Advisers, working with corporate boards, working in different
+universities. I know how important
+Marty's support and sponsorship of me for
+all of those activities was. I would not have had those
+chances were Marty not the dedicated supporter that he is for the whole profession
+and for me personally. I feel incredibly lucky to be here to have had the
+experiences that I've had and particularly
+honored to be able to give this
+lecture this year. Without further ado, I want you to note
+that the title for the lecture, thanks to Jim, calls on a title from one
+of Marty's early papers, and I will draw on some of
+Marty's work throughout this. I'm going to talk today
+about the economics of evidence-based health
+policy and how we have and haven't contributed
+to driving forward a better dialogue on what really works in the health care
+system and what doesn't. I'm going to start the lecture just by talking
+about what I mean by evidence-based health
+policy and then talk about our strengths and
+weaknesses as a profession. Although of course, now
+that I'm a dean I don't talk about anybody's
+having any weaknesses, there are just opportunities
+and challenges. Then I will highlight
+some of the key issues in the current reform debate
+and try to draw out the ways that the profession
+has and has not been able to speak to what some
+of those central issues are. We've had amazing
+opportunities to draw out the features
+of what seem like very disparate policies and bring analytical insights that
+come from the strength of our economic toolkit and to highlight the
+trade-offs that we face in making decisions about competing challenges
+in health policy. There are winners and losers of every policy option on the
+table and economics is a particularly adept set of
+tools at highlighting what those trade-offs are even though we don't always see those discussed in the policy
+debate in the same way. Of course, achieving
+impact is not just about economics,
+it's about economists. You can't see that
+down in the bottom, but it's really about
+economists and health policy. You know the old saying about
+guns don't kill people. Economics doesn't
+make good policy, economists make
+good health policy. I'm going to start off
+just by fixing ideas. What do I mean by
+evidence-based health policy? You think this is
+uncontroversial. Everyone is in favor of
+evidence-based health policy, and we're against fraud
+and were pro puppies, but it's not as uncontroversial
+as it might sound. Because the minute economists
+stand up in public and say, what does that actually cost? As you saw in some of
+those wonderful cartoons, someone inevitably says, you can't put a price
+on your health. Well, economists tend to be the skunk at the
+garden party and say, not only can you put a
+price on your health, you in particular want to
+put a price on your health, which is not a very
+popular thing to say, but you have to put
+a price on health. Because you can't make
+a decision about what's more important
+investing in health, investing in kids education, investing in transportation
+or infrastructure. If you're not
+willing to quantify those things and
+make trade-offs. That often sounds
+cold-hearted, but of course, bringing evidence to bear, to direct resources
+to where they actually produce the
+most public good, I would argue is a much more compassionate
+way to approach a problem than to just
+take something that sounds like a good idea and pour a
+lot of resources into it, whether it works or not. What do we mean by
+each of these terms? First of all, policies
+need to be specified. Slogans aren't
+policies and we hear a lot of debate
+about things like a single-payer
+health care system or investing in
+population health. Now, that can be a useful
+rallying cry to draw out certain worldviews
+that people have when they say they're in favor
+of single-payer health, or they're in favor of
+market-based answers. They're conveying a lot
+of different things. What they're not conveying
+is the details of a policy that you could
+actually analyze. When you start to look
+at something like single-payer health care
+or Medicare for All, you realize that people
+who say they're in favor may mean very
+different things. When we say a
+single-payer system, is it the Medicare program, is it Medicare fee for service, is it the Medicare
+Advantage Plan? Is it a premium
+support check that you can use to buy your
+own private insurance? Those have very
+different implications for the health care system. By peeling apart what
+people actually mean, we can then evaluate with the policy on the table
+achieve that goal or not. But if you're not specific, it can mask all ills underneath. Also, it's important to distinguish once you've
+specified a policy, what goal you're trying to
+achieve with that policy. People may be in favor of policies for very
+different reasons and the evidence may
+be then supportive or not supportive of
+those different reasons. For example, there's a movement to pay more for
+care coordination. You want to pay primary
+care doctors so that they can manage patients health
+care throughout the system. Well, if your goal is to improve the coordination of
+care for chronic conditions, to keep diabetic
+blood sugar under control or to reduce obesity, coordinating care seems
+pretty important for that and there's some
+evidence to support it. But if your goal is to lower health care spending by
+reducing duplicated tests, by keeping people
+out of the hospital, there's very little
+evidence that paying for coordinated care
+achieves that goal. If you're going to be in
+favor of coordinating care, it better be for a reason that
+supported by the evidence, not for another reason
+that also sounds nice. Then the flip side
+of that is that the same goal can be achieved
+with multiple policies and figuring out which one
+is most effective is really important in directing resources to where they're going
+to do the most good. For example, that same paying
+for care coordination. There may be other
+ways to reduce bad coordination of
+care and bad handoffs. Maybe instead of paying a primary care provider
+to coordinate, you want to promote electronic health
+records so that when patients go from site to site, whether they've had a test
+or not goes along with them. That might be an equally
+or more effective way to achieve that goal. Bringing evidence to bear
+requires specifying what the policy is and what you're trying to achieve
+through the policy. Now, evidence then. How do you bring
+evidence to bear? Of course, economists
+are notoriously bad at understanding what
+actual human beings think, so our introspection is probably the least effective
+way to approach this. We have all sorts of theories that predict the effects
+of different policies, and those theories are
+incredibly useful. It gives us an analytical
+framework to be able to interpret often
+conflicting evidence, and I'm going to
+come back to that. But even with the
+best of theory, even demand slopes
+down, we're really, really sure of that one, it doesn't tell you the magnitude of the effects
+you're likely to see. In so many policies situations, there are effects that go
+in opposite directions, and so you really need empirical evidence to say
+what the net effect on health care utilization
+or management of diabetes or any one of a number of policies
+is likely to be. We know we need data,
+and then of course, no one study gives us the
+answer to these questions. That's why we're all
+still in business. Thank goodness, there's
+still plenty of work to do in health policy. There's always a set of studies that speak to any given question and being able to
+interpret that, the analytical
+framework is really helpful for pulling
+the pieces together. But the challenge that we face is interpreting
+the evidence through a lens of the quality
+of the underlying data, the generalizability
+of the study, not based on our prior views about which policies are best. This is not a
+universally held view. In economics land where I am
+happy to live with you all, it's pejorative to call
+something a piece of advocacy rather than
+a piece of research. That's not the way
+every discipline views the distinction between
+advocacy and evidence. I like to think that keeping your own policy views
+out of your reading of the evidence generates
+a better body of evidence and makes you a more reliable reporter to translate
+research to policymakers. I think there's a real
+strength in policymakers not necessarily knowing what
+your personal views are when they read
+your research. When I read an article
+and I say, well, the author of this
+study is clearly in favor of policy x because
+of a set of preferences, that undermines, in my view, the persuasiveness
+of the research, and I think policymakers really value that as a profession, we have a reputation for being
+able to translate work in a way that separates out preferences from what the
+evidence actually says. Well, does that actually work? That all sounds nice. Sometimes it's true,
+but there's of course a reality of
+political constraints, and that's another
+important thing in generating evidence
+that's actually useful, is we have all of these
+budget constraints and other first-order
+conditions, second-order conditions, political constraints have
+to enter into that calculus. This is one of the things
+that Marty was so adept at, was understanding what are the first-order concerns that people have and how do policies actually play out in reality
+and letting that shape an analysis of the options that are actually on the table. This is one of Marty's more recent working
+papers on the topic, and because NBER has
+gone all digital, I had to color it yellow
+because I couldn't find the little yellow
+jackets anymore. But I colored it
+yellow and imbalancing the goals of
+healthcare provision. He was an expert at being able to pull together these
+different threads and say, what does it say on net? Now as a profession, we have a number of strengths in this, as a discipline, we have
+a number of strengths. We have a really
+high causal bar, and that is an incredibly
+valuable thing to be able to differentiate between
+associations and correlations, and what we can really identify as the causal effect
+of different policies. We're really good
+at pulling apart other people's arguments
+that healthy skepticism, I think it is a
+wonderful treatment for everything that
+sounds like a good idea, deserve support, impulse that I think that we all
+feel as humans. Now, we also have this deep understanding
+of markets and of incentives and how we pay for things drives
+what we end up getting, and that's going to be
+particularly important in the healthcare example
+that I'll go through, but also of the
+incidents of things. The way you write down a
+tax rate on paper does not necessarily translate
+to who pays the tax rate. The price that you write
+down as a gross price is not necessarily the net
+price that people pay. Understanding the true incidence of these policies
+gives insight into distributional
+consequences that I think might otherwise
+go unnoticed. Now, of course, we have some shortcomings
+as a profession as well. When advising policymakers,
+it's hard to put aside that academic lens that we spend all of our time on
+as academic researchers. There's a very different set of expectations once you
+translate to the policy world, it's helpful to
+be more decisive. Nobody wants to hear
+the 1800s caveats that we normally expect
+in an academic paper. It's also helpful
+to be timely if results come out years
+after the policy debate, we may be really sure of
+the answer and it may be much too late to
+impact legislation. Putting aside
+second-order concerns and focusing on
+first-order problems, again goes against
+the grain of what makes for a successful
+academic paper, but it is crucial for
+successful policy influence. Then last,
+translational efforts, being able to spend the time to take something
+that is perfectly comprehensible to
+somebody else with the same academic background and bring it to
+other disciplines, or bring it to the policy world, that takes time away from other things that
+you might be doing, and there's not a
+lot of reward in it, especially for junior
+researchers and being able to spend the time to make
+something into a white paper, to write an op-ed, to spend time translating to
+reporters and policymakers. That means one fewer paper
+that you're going to write. Making that trade-off is something that's
+very hard to do, and something I think
+about especially now from a policy school
+lens where you think the whole raison d'etre
+of a policy school is to have some impact
+on public policy. Can we be advising junior
+people to spend time doing that instead of just getting one more paper before
+it's time for tenure, I don't think we have a
+great answer for that. Now I want to turn to the
+current policy debate. I want to highlight two goals
+that a lot of people have when they discuss
+health policy reforms. There are, allocative
+goals and there are productive goals in terms of driving more efficient
+health care delivery. Allocation, access to care
+and coverage in some ways, that's the easy one. One of the main goals
+of health reform was to expand insurance to
+cover more people. We know how to do
+that pretty well. You can expand Medicaid, you can give subsidies
+for private insurance. You can have a mandate. It can come with a penalty. There are lots of
+trade-offs in those, but we have a much
+better sense of how that works to expand coverage. Where there is a little less
+reason in the discourse, is the rationale for doing that. I think it would be easier
+if we were trying to expand insurance because it
+somehow benefited everyone. I'm better off if
+Jim is ensured. Well, you could say, Jim could be spreading disease and if he's insured
+and he gets treated, then I'm not going
+to get his cuties. That does not seem like a very persuasive rationale
+for expanding insurance. Fundamentally expanding
+insurance to people who can't afford to buy it on
+their own is about altruism, and it forces a
+real wrestling with the distributional preferences
+that drive that policy. Redistribution as a matter
+of preferences rather than something that
+the data can speak to, and there's a lot of
+discussion about whether healthcare is a right or
+not in today's debate. That's the wrong
+question in my view, and that health care
+is not one thing. When we talk about
+a right to housing, we usually talk about a right to adequate housing
+or when you think about food stamps it so that
+people won't go hungry. If we think of
+healthcare as one thing, do you have a right
+to it or not? That spans a very different
+debate from if you say, how much health care
+do we want to be sure that even
+low-income people have? How much redistribution
+do we want to do? Until you're willing
+to unpack that, I think you can't answer
+the tough questions of what public insurance
+should look like. How much should be subsidized, not just who should
+be subsidized. I think it's helpful
+to fix ideas about where we are in health
+insurance coverage. The vast majority of people in America still get their insurance
+through their employer. We know this is the relic
+of the tax code and that this is preferred relative to other forms of compensation. You get a lot of public discussion about
+insurance premiums on the health insurance exchanges
+and how well they're functioning and whether they're
+going to implode or not. It's worth noting, there it is, that that is actually a very
+small share of the market. That little sliver is
+health insurance exchanges. It's important a
+lot of those people were not insured otherwise, and there's a real discussion about how different forms of public insurance
+expansion may or may not crowd out
+other insurance. But I think that that gets a disproportionate
+share of the discourse. The ACA in 2014, you can see a pretty
+sharp drop off in the share of the population
+that was uninsured. I think born out
+in all analyses, It's worth noting that
+there is still a pretty widespread in insurance coverage based on demographic
+characteristics, based on the states
+in which people live. There has been a huge gain in the number of people
+having insurance, but it has not been
+uniformly felt. That first goal, I think is much easier
+to wrestle with than the second goal of
+improving the efficiency of healthcare delivery or the
+production of health care. There is very little
+disagreement that we spend a lot of money
+on health care. But there's a lot
+less discussion on how we can improve the value that we get
+out of the system. As an economist, there are all those questions you
+get on the plane like, what stock should I invest in? My answer to that
+is always, if I knew I wouldn't be
+with you in coach. Then people say, I say, no, I'm not that kind of economist. I'm a health
+economist, They say, so how much of GDP should we
+be spending on health care? The answer is, I don't know. It depends how much would be efficient to spend
+and we don't live in a world where we're allocating our resources all
+that efficiently. We're spending pushing
+close to 20 percent of GDP on health care. Is that too much? Well, not if we were
+living forever, that'd be pretty good. It's easy to spend less money
+on health care if you just eliminate big public
+programs like Medicare, you spend a lot less
+money on health care. But nobody would
+argue that that's good policy because in fact, health insurance is really
+good for people's health, as I'll get to in a second, and big programs like Medicare and nobody would
+suggest eliminating. Rather we should be focusing
+the debate on how we can actually get more health
+for every dollar we spend. Now that doesn't mean the
+share of GDP is irrelevant. As we know, the amount
+of money that we publicly fund drives
+deadweight loss, and it's a real constraint for policymakers to know
+how much you would have to raise taxes to pay for 30 percent of GDP if half of it is coming
+through public programs. It's really important to
+understand how we finance this. Where's the money come
+from? Where does it go? This is sources of
+spending for health care, most of our dollars are coming
+from private insurance. Here too, is worth noting that that bottom layer there is
+out of pocket spending. There's been a lot
+of discussion about the rising share of spending
+that's coming out of pocket. It looks pancake flat though. What is happening with that? Well, that flat level, I think masks two different
+things that are going on. We're getting a lot more
+people covered by Medicaid, which has very low cost sharing. At the same time then employer plans are introducing
+more cost sharing. There is a change in
+the composition there, but the debate is probably
+still disproportionate. If you look at the public
+attention focused on out of pocket spending versus what's going on with our
+public programs, it's a remarkably stable share. In terms of where the
+money goes, again, it's very interesting to
+contrast the pattern with where we actually see the
+public discourse that, my little arrows aren't
+working very well. The next to top slice is
+prescription drug spending. Where again, you
+can see the share doesn't look like it's
+growing all that fast. It's growing faster
+than other shares, and there are lots
+of good reasons to focus the debate on
+prescription drug spending. But it's worth noting that list prices look very
+different from net prices and the profession is working
+hard to accumulate the additional data that would
+help us tease that apart. But the bulk of our
+health care dollars are going to hospitals
+and physicians. There's just not a lot of
+attention being paid to how we can rein those in or how much value we're getting
+out of those as well. Now we spend a lot more
+than other countries. This is dollars per capita. The graph looks almost the same if you look at share of GDP or even if you adjust for income differences
+across countries. Why do we spend so much more
+than those other countries? This is another great example of where the analytical
+framework of economics has actually helped
+to inform the discourse. First thing that you want
+to do when you think about total spending is decompose it into prices and quantities. We know that spending is
+price times quantity, and there's a wide literature
+coming from lots of different disciplines looking at how much is prices and
+how much is quantities. You would think this
+would be a pretty easy decomposition to do, but it's not because
+quality is very hard to measure and if you
+can't measure quality, you can't measure quantity, and if you can't measure
+quantity and you're saying, well, let's see which
+part is pricing, which part is quantity, you're decomposition is
+already problematic. It's really hard
+to measure quality because a night in the
+hospital means something very different in
+a more intensive setting versus a less
+intensive setting. Even if you could
+measure quality, though suppose we
+had great measures of prices and quantities, and the answer, despite [inaudible] it's very
+memorable paper, it's the price is stupid. I still think it's some of each, which probably means
+I'm really stupid, but I think it's some of each, even though the quantities
+are hard to measure, but that doesn't tell me what
+policy I want to implement. You can't really have
+a policy that says, there shall be lower prices without having a profound
+effect on quantity. It's interesting to look
+at surveys of the public, public opinion polls, where they ask people what's wrong with the health care
+system and people say, I want prices to be lower. Well, yes, if you could
+get all the same stuff, but pay half as much, I vote for that too. It's just that it's
+not in our choice set. Because when you
+change the prices, the quantities are likely
+to change as well. Understanding the
+underlying source of variation in
+price or quantity is it because of differences in the competitive landscape
+on the provider side, is it because of differences in insurance coverage on
+the patient's side? Understanding those
+fundamentals is crucial to then
+being able to make good policy about
+how you might want to change the marketplace in which these things
+are happening, or the subsidies for different
+activities that would result in changes in prices
+or changes in quantities. All of that is about how much we spend on health care but I started off by saying we
+should care a lot about value, not just how much
+we're spending. Again, it's really
+hard to measure the health that each of
+those dollars produces. I spent several years in
+my career at Dartmouth, so I'm contractually
+obligated to put up maps everywhere I go. This first map is showing us how much Medicare spends for
+fee for service enrollees. They have the same
+Medicare benefit. In different parts of
+the country you can see that it varies by
+a factor of two. This is adjusting for age, sex, race, price levels. There's just huge
+variation in how much of the same insurance
+program spends. On the right, you see how often Medicare beneficiaries
+are discharged from the hospital for ambulatory
+care sensitive conditions. You can think of these as bad discharges where people shouldn't have been in the
+hospital in the first place. If they gotten
+better primary care, they wouldn't have had
+to be hospitalized. Think of that as a marker of inadequate primary
+care provision. If you look at that,
+you can squint and do the regression in your heads. That's what year three of
+grad school is all about, and you can see that those are correlated such that
+the parts of the country where we spend the most are the parts of
+the country where Medicare beneficiaries
+are the least likely to get that
+adequate primary care. Now, we're probably
+not spending money for the purpose of avoiding giving diabetic
+patients eye exams, something else is going on. This correlation isn't telling
+us the underlying problem, nor does it tell us what
+the policy should be. It's tempting to say
+geographic variation is bad, we should stamp that out. But, of course, leveling down versus leveling up
+looks very different. The answer shouldn't be a policy targeting
+geographic variation, although that's exactly what
+we got out of these maps. But the answer is
+probably understanding the underlying causes of the geographic variation and the likely inefficiency
+that they signal. Now we're also seeing wide variation in
+private spending as well and there's new data that economists have pulled
+together to be able to assess the degree to which private payers have
+huge variation in spending across areas. I should have said
+at the beginning, I'm criminally under
+citing because everybody in this room has generated all of
+this literature, and I realize I just didn't have the time to call out
+all of the papers, so you should all consider yourselves really well
+cited in all of this. Each one of you produce
+all of these papers. Really, it points
+to the importance of how we pay for health
+care as a key driver. I'm going to talk briefly
+about the patient side levers, the provider side levers, and the competitive marketplace
+in which they do or don't interact as avenues for trying to drive towards
+higher value spending, and then I'm going
+to try to wind down. Again this was the earliest
+NBER paper that I could find of Marty's and it's the effect of national
+health insurance on price and quantity. Marty, early on was one of
+the promoters of thinking about how we pay for value instead of paying for
+quantity of care. In terms of expansion, I showed you that the
+ACA expanded the number of insured people pretty
+substantially in 2014. Now, most of that came from Medicaid expansions
+rather than from some of the other avenues like
+the exchanges or through the coverage of dependence or the expanded
+coverage of dependence. Although those were
+important as well. We have an experiment going
+on now in understanding how powerful a mandate is
+with and without a penalty, because, the underlying
+economics would suggest that a mandate that has no
+penalty doesn't do anything. Behavior economics says people actually pay attention
+to those mandates. In fact, not only the
+people who are mandated, but other people who hear about it come out of the
+woodwork as well. There's something to that and I'll come back to that in a sec. These different
+mechanisms, Medicaid, private insurance, they look different as insurance products. They have different
+types of coverage and they have
+different implications for whether healthy
+people are likely to be insured in the pool, sick people are
+likely to be insured. How much risk pooling there is. All of that plays out
+very differently based on the subsidies and the underlying pricing
+of the insurance. Like most things, the
+effects of expanding coverage are
+theoretically ambiguous. That is my actual mug from my first internship at the
+Congressional Budget Office, I was so excited to get that mug and that is the only
+form of payment that I received for my hours of most
+excellent alphabetizing. Super diligent. But of course,
+expanding insurance can have lots of different
+effects, costs, and benefits nice buckets
+that we put things in, the main cost of
+expanding insurance or subsidizing that expansion is
+increased health care use. Now, most non-economists
+don't think of increased health
+care use as a cost, they think of that as the
+point of expanding insurance, that's why we have these
+programs in the first place, but of course, nobody
+actually wants health care, people want health
+and health care, the resources you expand
+to get that health, if we could get the health for
+fewer health care dollars, that'll be a good thing. Now, I just spent a
+little time saying how demand slopes down and
+being really proud of myself, so you would think
+this seems really obvious that when you
+expand insurance, you took something that was
+expensive and you made it free and therefore you should
+see more health care use. On the other hand, people make the argument that the uninsured use health
+care really inefficiently, and then if you
+expand insurance, you can get people out of the emergency department
+into primary care, there'll be so much healthier
+they can go back to work and pay taxes and it
+all pays for itself. There are arguments
+that people make that are not atheoretical, that expanding insurance
+could actually reduce health care
+spending in the long run. Now on the benefit side, there are two main benefits, one of which is really underappreciated in
+the reform debate, and that's insurance
+is supposed to protect you against
+financial risk. Having health insurance policy should not only get you
+access to health care, but she keeps you from getting evicted from your
+apartment because you couldn't pay your rent because you've had a hospital bill
+and this is one of the frustrations of listening to the current reform debate
+is people say things like, my health insurance
+plan was useless, so I didn't even use it at
+all and you think I don't say my homeowners insurance was useless because my
+house didn't burn down, I'm just glad my house
+didn't burn down. But with health insurance, people don't see the
+insurance protection value of it upfront, and similarly, insurance is about risk
+pooling and people say, well, the people who need
+health insurance the most are the sick and uninsured. It's a little too late to get insurance once you are
+sick and uninsured, you don't need health insurance, you need health care and
+that's a very different thing. Understanding the
+insurance value of insurance ought to inform the debate about the value of expanding Medicaid or
+what Medicare looks like, but then, of course,
+the real punchline is what happens to people's health and does it actually change health outcomes. Now, again, for each of these, there are theoretical reasons that could go in
+either direction. In terms, especially
+with Medicaid, where you might think
+that the uninsured have very little opportunity
+to consume health care, they're just not
+getting a lot of health care and in fact,
+once you have Medicaid, maybe you have more access, maybe you can incur more debt once you have access
+to providers, so for each of these, you actually need to see the
+data to know what happens and a lot of different strategies for
+answering these questions. I gave myself one Oregon slide, which seems fair,
+I put a lot on it, but it just one Oregon slide. Think about the effects of expanding insurance
+on these costs and benefits and what we found in the Oregon health
+insurance experiment, where we had this
+opportunity to take advantage of a
+lottery and Oregon to allocate a limited number of available spots and Medicaid, we think of these randomized
+controlled trials as the gold standard. Amy told me a story
+of telling Marty this we have this new
+gold standard approach, Marty saying the gold
+standards, bad fair point. This really good way of
+isolating the causal effect of expanding insurance and what we found was, in some ways, I think consistent
+with what people expected and in some
+ways less consistent, the consistent part is that Medicaid did in fact expand
+people's health care use, they were more likely
+to go to the doctor, they use more
+prescription drugs, they got more preventive care, but they also went to the
+emergency department more. I think that this was
+surprising to a lot of public policy analysts
+who were really hanging their hat on Medicaid, reducing emergency
+department use, getting the uninsured out of the ED and into the
+doctor's office. Now, to put it back into our
+usual economics framework, what you're implicitly
+saying when you think that expanding Medicaid is going to reduce emergency department use, is that cross-price elasticities are bigger than own
+price elasticities, by which I mean, you took
+something that was expensive, the emergency department,
+you made it free, that should make people
+want to go more, but then people on the
+other side say, wait, you also took the doctor's
+office and made it free. That makes people go to
+the doctor's office more, if these are really
+strong substitutes, then the net effect could be a reduction in emergency
+department use. We find no evidence that
+having Medicaid makes them more substitutable
+and in fact, we find that the increase in emergency department
+use persists for at least the first 2.5 Years in which people have
+this new insurance plan. It looks like making the emergency department free was the dominant effect there, but this goes along with people being much more
+financially secure. Just because you can go to the emergency department
+when you were uninsured, didn't mean you didn't
+get a giant bill at the end of it and in fact, when people got Medicaid, they were 25 percent less likely to have a bill
+sent to collection, which is a really bad
+outcome for people. When you have a bill
+sent to collection, you not only have
+a black mark on your credit report for
+getting a mortgage, but for renting an
+apartment or getting a job, this is a really bad
+outcome for people that was averted by
+having Medicaid. But then the
+punchline on health, what actually happened to
+people's health outcomes when they got Medicaid? Well, there's a bit
+of a mixed bag there, their rates of depression
+dropped substantially, which is a major health
+improvement for a population where depression was a
+substantial unmet health needs, but we didn't see any
+detectable improvements in blood pressure in cholesterol in diabetic blood sugar control. It looks like those
+are much harder to manage and that
+a Medicaid policy alone is not sufficient
+for bringing those back to normal levels, so I'm going to come
+back to what all of that means for health policy, but spend a minute on what we
+think cost-sharing does for patient outcomes
+and what it does for patient health
+care utilization. Now again, theory tells us
+some very strong things about what copayments should look like in a health
+insurance plan, it should balance
+the insurance value of having protection
+against financial risk with the moral hazard that
+comes along with using more health care services
+when they are free as we saw, even the term moral
+hazard I think means something
+very different in English than it does in economics and that's
+challenging to convey, but we have some
+strong ideas about how copayments should be structured to balance those
+competing effects. Medicare has surprisingly lousy financial
+protection on its own, a basic Medicare
+plan, parts A and B, leaves people exposed to almost
+unlimited financial risk, which is why most people have a Medigap plan or a wraparound
+plan that keeps them from being exposed to
+any financial risk and that limits policy
+options on the table. Of course, they're also
+well-known distortions on the employer side, where because employer-sponsored
+health insurance is favored in the tax code, people have first coverage
+with very little cost sharing, although that's
+starting to change, that drives excess utilization. That suggests the importance of removing that
+employer-sponsored insurance preference and this is my, another example of where
+economists agree on something, but it takes a little bit to
+translate it into policy, this is one of the
+few examples where economists on the left
+and the right all agree. The current system
+makes no sense, we favor employer-sponsored
+insurance with low copayments relative to all the
+other things that people might want in forms
+of compensation. This is inefficient because
+it drives excess utilization, but it's also really
+regressive because it favors people with the
+most generous plans, the highest incomes, and the highest
+income tax brackets, so there are very few options
+where you can both improve efficiency and improve
+distribution with one policy, so economists also,
+you got to fix that. But that just sounds wrong when you stand
+up and say to people the solution to your
+excess health care costs is taxing your health
+insurance benefits, it's going to make
+everything better. Just does not sound
+right and in fact, it went over like a
+led balloon until somebody had the genius
+idea to say, oh no, we're not taxing the holders
+of expensive benefits, we're taxing the insurers who issue that and people thought, that is right, I
+hate my insurer. Thus the Cadillac tax was born, not really having the durability
+that one might expect. Although it's back in the
+debate again, saying, is this actually
+going to come into effect in the next few years
+as it was supposed to? There's a lot of
+distributional politics that goes on in that, running into headlong into
+policy versus politics again. I am going to just say a sentence about the
+behavioral approach to this. I've talked about how we
+might optimally structure cost sharing in the
+traditional economics model. There is mounting evidence that does not adequately
+capture how people behave. We see overuse of healthcare, we see underuse of healthcare. Overuse sounds consistent
+with moral hazard. It's hard to explain underuse of things that have
+enormous health benefit. We see five dollar copays
+dissuading people from using things like anti organ
+rejection medications, when people have had
+transplants or medicines that avert heart attacks and have
+very limited side effects. If five dollars is dissuading
+you from using those, something in our traditional
+rational agent model is not capturing people's
+behavior all that well. That suggests an alternate
+raft of policies, not just high
+deductible health plans or alternative payment models, but also potentially
+value-based insurance design, safe harbors for
+certain kinds of care. These are all fundamentally
+motivated by paternalism, but match what we see in actual behavior much more
+closely than the usual models. Providers are price
+sensitive too. We see overuse of things like antibiotics for ear infections
+on the patient side, we also see providers being very sensitive to the reimbursement that they get for
+different procedures, and acting like human beings as well where providers
+are much more likely to provide antibiotics for ear
+infections where they are not warranted at the end of a long shift than
+at the beginning. They get fatigue with just
+saying, no to patients. If we could line up
+patient incentives and provider incentives, we could probably promote
+more efficient use of healthcare both by stemming
+overuse and underuse. I'm going to zip
+ahead a little bit. Economists, you heard about Marty's forays
+into new fields and setting up whole
+new endeavors of applying the economic
+toolkit to new policy areas. Economists are starting to pay a lot more attention to
+healthcare delivery, working with physicians and other clinicians to
+try to think about how we can inject the right incentives into
+that resource allocation. We're using a lot
+more randomized controlled trials and
+clinical settings, which is a wonderful
+opportunity, but opens up the need to communicate those results
+in a different way. I want to end with the thought, does all the evidence that we're accumulating on
+the patient side, on the provider side, actually change the debate? These are all headlines
+from newspapers. The day after one particular
+Oregon paper came out. This was the paper that
+had that mixed bag of findings on the
+clinical outcomes. Some of the headlines are
+saying that Medicaid works, some are saying
+Medicaid is terrible. My favorite one is
+that one right there. How do you use the
+Oregon Medicaid study to your ideological advantage? Is like, wow, I'm glad
+somebody actually said it out loud because
+it's frustrating. Looking at Amy who spent years of our lives and millions of other people's dollars to try to generate all of this evidence, and then this is what you get. You might think,
+well, wait a minute. What is it all for? On the other hand though, these are some headlines
+from long before the study. Just examples of things
+that people were saying, they were unduly optimistic, and things that were unduly pessimistic about the
+value of Medicaid. If you naively look at the mortality rate
+of people who are on Medicaid versus the uninsured, people on Medicaid have
+a higher mortality rate. Is this because Medicaid is
+killing them? Probably not. You get on Medicaid by being poor and being poor is
+bad for your health. That seems like an unduly
+pessimistic thing to say. That people who are
+on Medicaid are worse off than if
+they were uninsured. My little animations
+aren't working very well. We can eliminate that
+unduly pessimistic view. People who are on Medicaid are substantially better off
+than if they were uninsured. They have better access to care, better self-reported
+health, lower rates of depression, more
+financial security. They say their health
+is much better. But we can also eliminate the unduly optimistic
+view of the program, which is it's so wonderful that it's going to
+get people out of the emergency department
+and back to work and we're actually all
+going to save money. When you expand
+public insurance, you don't save money. People use more care
+and that costs money. You have to find a
+way to finance that, which is going to pit
+interests against each other. I return then to
+the strengths of the approach that we bring
+to these thorny trade-offs. The people who are better off, Medicaid enrollees
+are different from the people who are paying
+for the program, taxpayers. Not exclusively, but
+for the most part, these are the interests
+of two different groups and you have to weigh
+them against each other, and that requires an
+analytical framework. Now, I think we've
+had more success than one might feel from just looking at
+the latest tweets. If you look there,
+there's in fact a new law focused on foundations for evidence-based policy
+making that came out of a commission that economists
+played a key role in. You hear lots of
+congressional testimony, you see people cited in
+Supreme Court cases. Of course, I'm speaking about our profession
+because we're all here. This is clearly not unique
+to economics and it's a broader statement about
+evidence-based decision-making. There's some hope, but oxygen is scarce for
+this kind of debate. I cut that brings me back to end on the amazing role model that Marty really
+was for all of us. It's an aspirational ideal to be able to educate students, to be able to educate
+policymakers, to be able to move
+back and forth between cutting edge
+academic scholarship, policy advice, and dissemination through
+broad media sources. Marty really embodied
+that rare combination of abilities that I know I strive for a
+little bit every day and I suspect most of the
+people in the room do as well. Some days are good days, some days are less good days, but because of Marty
+and the bureau, we all have the resources and
+the network to be able to strive towards that
+very worthy ambition. I will stop there and
+take a handful of questions until Jim says it's time for everybody
+to get dinner. 

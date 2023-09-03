@@ -1,0 +1,1148 @@
+Lawrence Christiano:
+This is Dynare or something that we all want to. How many people are
+familiar with that program? Or I should say,
+how many are not? We're going to play
+around with Dynare, and partly, those of you who
+are not familiar with it will figure
+out how to do it. But then the other
+thing is in the process of playing around with it, we're going to illustrate
+some ideas that I think that are
+fun to talk about. That is to say we're going to be talking more applications now. Let's get into the
+new keynesian model to use as a vehicle for
+carrying this stuff. The new keynesian
+model is now king. There is no other model. The only understanding
+that people have, I'm going to keep saying
+things until somebody objects. The only existing
+framework for thinking about what's been going on for the last couple of years is
+this keynesian framework. There is no other framework. The fundamental language, the fundamental concepts,
+the fundamental fears, the things that policymakers when they wake up
+in the middle of the night and they are
+terrified of things, that image that
+they're afraid of is something that's articulated by this new keynesian model. We may get into that
+as we go forward today or if you like me
+to explain that more, we can talk also about
+it in breaks any event. I'm going to talk about
+the simplest version of that model now. What I'm going to do
+is I'm going to derive the non-linear equilibrium
+conditions of that model. We need the non-linear
+conditions. If for example, we're going to study what's called
+Ramsey optimal policy. Now, some of you are familiar with that already,
+some of you are not. Both either way, will be more precise about what
+that is in a moment. In fact, even if
+we want to study Ramsey optimal policy
+by doing linearization, we need the non-linear
+equilibrium conditions associated with the model. You'll see that when
+we get into that. The non-linear
+equilibrium conditions of the new Keynesian model, which are not typically
+written out and some of you may not have seen them
+before are very important. We're going to derive those. Maybe explain moment
+here what Ramsey is useful for one is for
+defining the output gap. One of the most, possibly, maybe the most
+important concept in macroeconomics is
+the output gap. Whereas the economy relative
+to where it ought to be, should be something.
+The output gap. In order to define
+the output gap, you have to define what's not hard to
+define where you are. You're just going
+to measure GDP, but you have to define
+where you ought to be. That's the other part
+of the output gap. One definition of
+where you ought to be is the Ramsey
+equation equilibrium. Ramsey will be used to
+define the output gap. When we talk about a
+positive model for the positive version of
+the new keynesian model, I'll be using a Taylor
+rule and we'll need an output gap in there and in order to find
+that output gap, I need the Ramsey equilibrium. Then also if we got at the end, which I
+don't think we will. We talk about the
+timeless perspective and various other things that we need and we want to do Ramsey optimal
+policy in real time, then we also need Ramsey. Therefore we'll
+need the non-linear equilibrium conditions. Of course, it's obvious you need the actual equations
+of the equilibrium, if you're going to do
+higher-order perturbations like we've talked about
+at the beginning. I don't know why the word
+non-linear has to be added. We need the actual equilibrium
+conditions for the model as opposed to the
+linear equations that most of you
+are familiar with. Then the other thing
+we're going to do is study the properties of the new keynesian
+model using Dynare, we'll show various
+properties in that model. I'm associating with
+Claida-Gali-Gertler, but probably it should
+be Woodford too, I'm not sure it's
+the right thing. I always put this reflexively, but I'm sure that's not
+correct. Exactly correct. It's certainly a model
+that they emphasize in their famous papers
+in the late '90s. The model is, there's a representative
+households that maximizes this utility function
+of consumption and labor and then there's
+this preference shock. The budget constraint
+is the simple model, so there's no capital in here. We'll be able to
+illustrate tons of great stuff with this model. I urge you everyone
+in your back pocket, always leave a little space
+for this particular model. As questions come up, you can pull it out
+and answer them. Even while you're
+riding on the bus or just hanging around, not sure what you're doing, this model is a fantastic
+model to ask all kinds of interesting questions
+and many of them, the answers you
+get do generalize actually to the more thing. One of the equilibrium
+conditions associated with this model is the first-order
+condition here for labor, that the cost of working, which is the utility cost
+of working measured in consumption units
+has to be equal to the benefit of working, again measured in
+consumption units, which is the real wage. Then we have the inner
+temporal order equation, because this is a non-linear
+equation. There you go. Nonlinear equation. You have the intertemporal
+Euler equation, that's this equation here. I will have occasion to look
+at the linearized thing. Let's just quickly
+write that out so that in the log case we have the consumption growth here. Then write this everything
+in terms of log like that. No, problem yet. Now I
+just committed a crime. I moved the e through the exponential
+operator because this is a convex function, the
+exponential operator. There should be
+another term here, positive term, but
+it's very small. I'm going to ignore it. I'm appealing to the
+first-order approximation is actually justifying that thing. There's a little
+term missing here, has to do with the variance of the one-step ahead uncertainty
+in these variables, which is a tiny number in macro variables like that and take the
+log of both sides. Then we have this intertemporal
+order equation that the expected change in consumption has to equal
+the real interest rate. Okay. But still this is the
+non-linear equation here. That's the approximation. There's a tiny
+approximation involved. I'm going to use this equation a bunch. This is the log linearized intertemporal Euler
+equation here. We'll be using that
+equation more later. There are some final
+good firms here. This is the basic
+structure of this model. They buy all these
+intermediate goods. They buy them at prices PI, then they sell them, and then the final good
+producers sell Y at price P. This is their profit
+function here, they use this to produce this stuff and here is
+their production function. This is the standard setup here. Then the first-order
+condition for these characters gives
+you the demand curves that the suppliers of
+the ith good are facing. You put all those Euler
+first-order conditions into the production
+function and you get this aggregate
+condition on prices. This is an equilibrium
+condition. The prices have to satisfy this relationship
+here at the bottom. This is one of the
+nonlinear equations that characterize
+the equilibrium. We're going to try to compactify this down to six equations. When you start at the large set, this is one of the
+equilibrium conditions. The intermediate good firms, they face the demand curve. They realized that if they raise the price on their good, then the final good firm
+will buy less of it and so on according to that pattern there and that's
+their demand curve. The technology that
+these people have is this simple linear
+production function. Notice I specified the
+growth rate of a to be a positively [inaudible]
+ar1 process. One of the things we're
+going to see is whether it's a growth rate or
+the level of a makes a huge difference for really
+good economic reason, makes a huge difference to the dynamic properties
+of this model. Then we have that
+there's a Calvo price-setting frictions
+at the Ith firm. Either optimizes its price, sets it to a price p tilde. There's a typo here, this
+should be the lag price. Or alternatively, they set their price to the lag price, lagged value of their own
+price with probability Theta. The p Tilde doesn't have an I index in it because every intermediate good
+firm has the same state, and so when they optimize, they make the same decision. That's why there's
+no I over there. That's their problem. One of the equations,
+it's a variable, it's going to matter a lot in this problem is the marginal
+cost of these firms. There was no price
+setting frictions, given the constant
+elasticity demand curve, they would always set
+their price equal to fixed markup over marginal cost. Marginal cost would matter if there were no
+price frictions, and then with price frictions, marginal costs still
+enters the picture. Marginal cost is an
+important variable and I'm going to define
+this thing lowercase s, as the real marginal cost of production for the Ith firm, which is well, the usual thing if
+the numerator is the cost of an arbitrary
+selected input. In this case, there's
+only one input. It's the cost of a worker divided by the
+productivity of a worker. That's the thing up there. I'm imagining that the cost of a worker is the real wage, but they're getting a subsidy. For reasons that
+are too boring to go into in great detail, I'm going to set
+up this model so that at least in
+the steady-state, all the equilibrium
+allocations are efficient. The model has two
+sources of inefficiency, the New Keynesian model. One source of inefficiency stems from the assumption
+that there are price setters. That is to say, from the
+assumption that there's the monopoly power that you need in order to rationalize
+price setters. That monopoly power
+causes them to restrict output and makes the aggregate
+level of output too low. That's a drag on the economy, keeps it away from
+being efficient. That inefficiency
+we're going to remove by subsidizing these guys. What we really should do
+is pass a law that says that you dare restrict
+output, we shoot your ass. But what actually
+we're going to do is we're going to give them a subsidy to produce the amount
+that they're supposed to. The second source
+of inefficiency in the model has to do with
+the price setting frictions. The price setting frictions
+have the implication that, if aggregate prices
+are moving around because some prices can't
+move and others can, it means that there are price
+differences in the economy. When there are price differences the given amount of labor is not allocated equally to all these production activities, and because of this
+production function, this production
+function here has the property that
+if you have, say, 100 workers and you allocate them equally
+to all the tasks, then you get the most out of those workers
+you possibly can. If you have 100 workers
+and you allocate four to this I and 50 to that I and 60, well you can't do that.
+It doesn't add up to 100. But if you don't
+allocate them equally, then you get less Y. There's two sources
+of inefficiency. One is the price frictions which cause a misallocation
+of resources and cause you to get
+less final output than you might otherwise get, and the other one is the inefficiency
+coming monopoly power. This economy is going to
+be set up in such a way that if the shocks
+are all turned off, eventually all those
+inefficiencies disappear. The first step I'm going
+to have in doing that, I'm going to subsidize
+these guys and I'm going to subsidize them exactly
+at the right rate so that we get the
+efficient outcome. This is the definition of
+real marginal cost and it includes in there the subsidy that I'm giving these people. The firm is required to satisfy whatever demand
+materializes at its posted price. The only decision this
+firm really has to make is how to adjust its price and that's
+going to deliver other equilibrium conditions. However, they're a pain in
+the butt these conditions because of this weird
+cowbell friction. Let's have a look at that. Here's the problem of the
+intermediate good firm. By the way, we know
+what the answer is going to be in the
+end is that they're going to set their
+prices as a function. The guys who are optimizing
+and I set their prices as a function of marginal cost today, tomorrow and the future, they're going to look
+at marginal cost for all time because
+they realize there's some chance that that
+price they're setting today is going to be the
+price that we're going to be stuck with tomorrow. If there was no chance
+they will be stuck, they would just
+set price equal to a markup over current
+marginal cost. They wouldn't care about
+future marginal cost. But because they know they might be stuck with
+their current price, they'll care about
+future marginal cost. That's going to be the
+ultimate answer here. But we have to get
+it in a compact form that we can stick
+into a computer. Here's the objective
+of the firms. This is their time
+t plus j profits, this is their costs. Notice there's no
+I in this cost. Because of the linearity of
+their production function, the marginal cost for
+every single firm is independent of how much
+stuff it's producing. There's no I in there anywhere, and as a consequence, when you look at the
+profit function, there's no I inside this s here, there is an I there, that's
+how much they produce. Then this, of course, this is the aggregate price index
+that reflects simply that this s defined as
+having been divided by p, so this gives you
+the nominal cost and this is the nominal
+revenues and this is the value of profits
+at the day t plus j. That's our objective. The
+ones that are maximizing that objective are
+only worried about the future states
+of the world in which they're stuck
+with the same price, which means there's a subset of paths through the
+future event tree that they worry about, and that subset of paths
+has probability Theta j. That's the probability.
+Their objective, they can ignore all
+the other paths where their prices change. The price, the guy
+who's optimizing and choosing pt tilde is looking
+at that objective there, the one with the Theta^j. This expectation here includes all the idiosyncratic
+expectations about adjusting prices. That expectation only involves the aggregate uncertainty and the idiosyncratic
+uncertainty is incorporated by the Theta plus Theta^j there. Now we just work this thing out. They're required to
+satisfy the demand curve, so that's the first
+thing I did was I, substituted out the
+demand curve here and I get this expression. I got rid of the Yi and substituted it out
+using the demand curve. Then I differentiate with respect to the price they
+are trying to choose, and then we get some
+nasty-looking expression. Turns out to reduce down
+to this thing here. Then the next thing is we work with that
+expression a little more. That's just a copy
+of the previous one, and you end up with, in the end this expression here where I have defined
+this little price, this p tilde, which
+is the ratio of the actual price they choose
+to the aggregate price. There's an inflation term that has to show the p. This guy here to write this
+guy in terms of this, you need an inflation term to take into account that
+this t plus j is not equal to t. You've got the same ratio here and this
+involves the inflation term. This is just a rewrite of
+this first-order condition. Having rewritten
+that, there it is, we can now solve for p tilde and p tilde is just
+the ratio of the, you're just looking at
+the future marginal cost, which is exactly
+what you expect. These guys are setting
+their prices today as a function of the discounted
+future marginal costs, so it's a ratio of two things. This is not convenient, this expression because it involves an infinite
+number of variables, and when you type stuff
+into whatever [inaudible], you can only type in a
+finite number of variables. We have to write this. We have to express. We've got this
+price that they're setting in terms of a k and an f. But that's good news because there's
+only two variables. Bad news is k is an infinite order present
+discounted value. However, there's a simple recursive representation
+for that stuff. You start at the top over there, write out what k is, and then you do a
+bunch of substitution, take into account the
+recursive form of this X guy and you go and you scramble and then you sprinkle
+a little lemma on there. Lemma is the law of iterated
+mathematical expectations. Then you go like that, and then boom, you see that you've got
+the exact same thing on the right that
+you had on the left, except at a different
+date so we got a recursive formulation
+for this thing. It only involves that present discounted value
+can be expressed in terms of a very small number
+of variables. There it is. I want to get rid
+of marginal cost. We can do it in that way. It'll be important for us to notice this a little bit later. Real wage is equal to the
+marginal cost of working, again denominated in
+consumption units. That's been substituted
+up there because this guy here is going to cancel by the construction
+of the subsidy. What we get is that the price is the ratio
+of those two things, that the numerator is
+this recursive thing and the denominator is the
+same recursive thing. It's actually a
+little bit simpler. F is just this. We're now getting that into
+some very simple variables, but this p tilde, we're going get rid of that too. The name of the game
+here is get this to a small set of equations. We have equations that characterize
+optimization by people, but we need the aggregate
+consistency conditions here that we don't have. We have individual optimization, but I don't have anything that looks like a
+resource constraint. I don't have anything
+like the restriction across prices and
+stuff like that. By the way, one of the
+things that's tricky about this model is that there is no aggregate
+resource constraint, which is the regrettable thing. There is not a simple
+relationship like for example, that y_t is equal
+to e to the a times n. We don't have something called aggregate production
+function in this model. What I mean by an aggregate
+production function is an equation that relates aggregate outputs as a function just of
+aggregate input. Why don't we have that? Well, as I said earlier, the distribution
+of inputs matters. If this economy was
+efficiently organized, we would never contemplate
+the possibility of unequally distributing
+labor across sectors, but because we have these
+price-setting frictions, that will happen all the time. The prices of intermediate goods that are low are going
+to attract more labor, prices of intermediate goods
+that are high are going to attract less labor and so
+that would be all the time. That would be the
+relationship if all the laborers were
+allocated equally everywhere, but in practice,
+they will not be, and so that is not, for example, the production
+function in this model. Let's get into this stuff. Let's talk about the
+price relationship here. We got a problem
+here because we have an infinity of
+prices and infinity of variable is not a good
+idea with this sort of stuff. If you look at this infinity, you can see that
+there's a subset of the i's associated with firms that optimize and then there's the other subset or the
+ones that don't optimize. Now, the beauty of
+the optimizer ones is that they are all
+setting the same price. This is just a constant
+times the fraction of those people that they are, but this is one nightmare
+looking thing because this thing will have a
+whole distribution of prices in it because there's some people that changed
+their price yesterday. They all have one
+price yesterday. There are other people
+who haven't changed their prices for two periods. They will have a different
+price and so on. The ones that don't
+change their price, they come in every shade
+and color and size. Sorry. The first substitution here comes down to there and the real issue
+is this one here. In principle, when you
+have models like this, you actually have to
+characterize the distribution of those prices because that will matter for what
+that integral is, and then you also have to
+characterize the law of motion for those prices as it goes from one period to the
+next and how it's perturbed by
+realizations of shocks. That's the problem, in principle, you would face. However, and this is why I guess the name Calvo
+gets attached to this stuff, is that there's something very
+simple about those prices, which is they were
+drawn literally at random from the population
+of prices yesterday. The whole Calvo price
+stickiness mechanism is a random mechanism. No matter who you are, your probability of
+getting your price being allowed to optimize or not optimize your price is the same, which sounds like a
+terrible assumption, but it delivers thing because what that integral
+is doing is you're integrating over a
+random selection of people from the population. Let's take as an example. Suppose we go to a
+large population, India or China and
+there's a distribution in those countries
+of men by height. There's a true distribution
+of men by height. Now, once I go to China and I pick 200 million Chinese males totally at random and I ask, what is the distribution of
+those males, their height? Well, how does that compare to the actual Chinese distribution? It's basically the same. If I had been selecting, I'm only going to
+choose males that are four months old or there's
+some selection thing, but no, if you take them totally randomly and the
+ones you select, they have the same distribution. The distribution of
+the P_is that are in that integral is the same as the distribution of all the
+prices in the previous period because people are randomly selected to be stuck
+with their old price. That's fundamentally
+the reason why that integral looks a lot like the same integral of
+yesterday's prices, i.e. yesterday's price. This is what that
+integral looks like, although you have to
+shrink it down by Theta. Now, normally, I would have 17 more
+slides to explain this, but that's the basic insight, is because of the random price setting that this equation here, which is a nightmare, this aggregate price equation up there is one
+nightmare equation. It's not clear how you're
+going to integrate that into your computer program
+because these people were randomly selected to not be allowed to
+change their price, that integral turns out to boil down to just
+yesterday's price. Now, we only have two
+different distinct variables, P tilde and P. Now, I'll do a little division. This linear
+homogeneous equation, divide, no problem, and boom, I got an expression in terms
+of the inflation rates and non-linear expression
+in terms of the inflation rate and the price of the
+price setter guys. There's a simple connection
+between those people. Now, this is the thing for
+the price relationship. Let's have a look at output. Technically, as I said before, there's no aggregate production
+function in this model. There's no rule that says, we got this many inputs, this is how much aggregate
+output you're going to get. There is no such equation. You don't know by knowing how many people are working
+what output is going to be, and that's because of
+the price frictions. Now, Tak Yun wrote a paper in the JME which explained
+what I'm now going to show, wonderfully simple
+argument that he made. Although, it can't
+be that simple, because when he first
+did this thing, there were people who were
+whispering, he has mistake. Mistake. That mistake, yeah, told you. He didn't actually get a lot of action on the job market. Actually hurt him big time. That's a mistake and rumors. People initially
+couldn't understand what the hell he
+was talking about. But now his name
+is in bold print. I'm going to describe his argument for you and
+you're going to wonder, why would even smart people say that there was something wrong with what Tak Yun did? Now he did this in a much more general setting with capital and stuff but the basic logic is no different for
+what I'm doing here. Anyway what Tak Yun was, he derived the
+aggregate relationship between outputs and inputs to take into account
+the fact that you need to know something
+about distributions. What he did was he said, okay, let's just define this
+crazy variable Y star. No real economist would actually talk about
+something like Y star because notice I'm adding up over the
+intermediate inputs. These are different
+goods and I'm not weighting by the prices. It seems like a mistake
+right off the bat. But let me do that anyway. I'm integrating over the prices. Of course, this is a
+wonderfully simple relationship because if I substitute in
+the production function, this thing really is a times n because I'm just
+adding over everybody. On the other hand, that's
+not aggregate output, it's not adding over things the aggregate
+output doesn't add, it adds weighted by prices or it adds through
+the CES function, whichever you want to do,
+it's the same actually. Then the next thing
+I do is I take the demand curve and I substitute out that the YI in
+terms of the demand curve. Then I get, again, I shouldn't
+cough too loud because I blow your ears
+out a little bit. Then I take the demand curve and substitute that out and I
+write this in that form. The next thing is, I'm going to define
+this object as P star. The actual expression for the aggregate price index looks a lot like this
+crazy thing here, except it has a different power. I'm going to call
+this thing P star. This looks like the thing,
+but it's not the same. It's a different
+weighted average of all the price is P star. This thing will have
+the same law of motion. This is Mr. Calvo
+steps in over here. This weighted integral involves a fixed number of
+things on one hand, but then all the non changing
+prices on the other hand. But the Calvo insight
+still works and we get a very simple expression
+for Mr. P star here. If we go over here now and turn this stuff
+around a little bit because y is the
+variable of interest, Y star is something that only a non economists
+would ever think of doing because it's adding up
+things, apples and oranges. Turn it around and you
+get this expression here. Then express this as a little
+lowercase p and presto. Now what you've got is
+a relationship between aggregate output and
+aggregate inputs that's distorted by something and that something has to do with
+differences in prices. What does that mean? Well,
+look at the numerator, it's one weighted average
+of all the prices. The denominator is a different weighted average
+of all the prices. What you can show is that
+all the prices are the same, by the way the linear
+homogeneous averages. If all the prices are the same, then P star over p is 1. If there's any difference
+among the prices, now this part is not so obvious. Then the P star over
+P is less than 1. P star over P is a function. This little P star guy is a function of the
+distortions among prices and it has this feature here that it's always
+less than or equal to 1. It looks a little bit
+like I don't know. You guys have
+probably heard, no, you could almost surely have
+not heard of Okun's gap. No one here. Has anybody here ever heard of
+somebody named Okun? No. You don't want to
+admit that though. You have to be a little
+older to know about Okun. Okun's gap, see. In fact, this corresponds
+to an idea that people used to have all the time and it seems to me it's
+still a good idea. I don't know why
+they got rid of it. There was an idea about
+economics that the way economies work is they try going
+along and they're efficient and boom, all
+of sudden they go down. Then they come back up
+again and then boom, the Great Depression
+was viewed as an exam. That's why they do
+trend through peaks. Has anybody ever heard
+of trend through peaks? You calculate potential GDP
+by doing an envelope of actual GDP and that idea that the economy is normally
+traveling along okay. Then those drops that we see are inefficiencies actually fits in nicely with that whole thing. Bob King used to call that
+the Okun's gap variable. The problem is that in fact
+it doesn't move very much. When you actually plug in
+plausible parameter values, it doesn't move very much, but it's an interesting
+thing, the inefficiency, it's a one-sided inefficiency, can only go down and
+it has a max of one. Let's bring these
+equations together. Let me say, I'm
+going to give you a bunch of equations here. Here's that Number 1. I'm going to give you
+six equations that characterize the private
+sector equilibrium. Equation Number 1 is the numerator in the price
+setter guy equation. Equation Number 2 is the
+denominator in that equation. Equation Number 3
+is this thing here. Remember this is p tilde
+equals that thing there. I'm going to get rid of p
+tilde and replace it by k over f because we got that from the
+first-order condition. The first-order condition
+of the firm setters gives you one
+relationship for p tilde. Then the cross price restriction gives you another relationship for p tilde the
+substitute amount, you get this as k
+over f is equal to this thing here that
+involves inflation. Another equation here
+is the P star equation. You get that from here. By manipulating this
+thing here you get a nice little recursive
+expression in the nominal prices. Then by just dividing by big P and converting this
+to the little p guy, you end up with this equation here for
+the price distortions. This is a law of motion
+for the price distortions. It's an absolute miracle. You don't need to
+know anything about the distribution of prices
+among individual people. All I need to know is
+I need to know what yesterday's price
+distortions were. I need to know what the
+current inflation rate is and that tells me what today's
+price distortions are. You see there's nothing else in that expression there besides inflation and lagged
+price distortions. Maybe you can also see that if pi bar is the
+aggregate inflation, it's a gross inflation rate. If there's no inflation, that pi bar is equal to 1. Maybe it's too much to see. But that's a stable
+difference equation. If there's no inflation, eventually the price
+distortions go away. But they can't go
+away right away. But they will eventually
+go away because eventually everybody gets
+to change their prices. Eventually, what will happen is that see when there's no inflation then suppose
+nobody has changed. Suppose all the prices are the same and there's no inflation. Well then all the prices
+will remain the same. If the prices are different and there's no inflation then the adjusters will be moving in the direction of
+making all the prices the same and eventually
+become the same. Okay, whatever. Here's
+the inter-temporal, a condition for the
+households and there's the aggregate inputs
+and outputs and boom, we now have six equations
+in eight unknowns, which is actually a little
+bit disappointing because it sounds like it's
+too few equations. But it's not disappointing. Because Number 1, notice I've included new as an unknown, which is crazy because I already told you it
+was 1 minus Epsilon. I actually, I over-counted
+the number of equations. Does it bother you that
+we're short one equation? Lawrence Christian:
+Suppose this was six equations and six unknowns. Would that bother you?
+It will bother me, because I haven't
+said something. This is an economy
+with an interest rate, I haven't said even
+about monetary policy. There's a relationship I've left out of the stink and big. It can't possibly be closed. There's another equation
+that's knocking at the door and wants
+to come in too. If we could solve the model
+without that equation, that will be a sad thing
+for that equation. It's actually not surprising, that's six equations
+in eight unknowns. Number 1, and I'm not sure why I left the new in
+there as an unknown. I know why I left it in as unknown you'll see in a second. Number 2, it's clear that
+I've left out something. Monetary policy or
+something like that. I've left that out because I got this nominal interest rate here. The system in effect is
+still under determined, but it's not under
+determined because I forgot something about
+the private sector. The private sector is
+a closed system here. We got equations and variables. It's under determined because of something on the outside
+that I left out. In some sense, we have two
+policy variables here, the interest rate and new. I'm going to now
+describe two ways to pin down those two
+policy variables. I'm going to pin them down
+by supposing that policy is chosen optimally
+and the other way, I'm going to suppose is that policy is follow some
+rule like a Taylor rule. Now it's going to turn
+out that I need as an input to my Taylor rule, I need something
+called the output gap and that will
+involve optimal policy. In order to even think
+about the Taylor rule, I'm going to have to think about the optimal policy first. We're going to do that now. Now we're going to talk
+about Ramsey optimal policy. I now have an economy, I've completely characterized the private sector
+equilibrium conditions. But I have one or two degrees of freedom depending
+on how you count, whether it's include
+the new or not, the two degrees of freedom. You got eight variables
+and six equations, it's like you have
+multiple equilibria. You know what I mean, there's
+like many settings for the eight variables that
+satisfy the six equations. What optimal policy is, is it's the setting for
+the variables that's best among all the
+possible settings. I guess this is what
+I'm saying here. So the Ramsey optimal
+thing is to choose the six variables to maximize utility but satisfy
+the eight variables. I guess you can't do that, well, you can but this is
+cheating in some sense. I know people who
+would not do this. They would say it's
+wrong to change that. Once you put that six there, you have to suffer
+the consequences. Anyway, so it's eight. You have eight variables
+and there's a space, so think about an
+amoeba if I would draw a big thing and there's a space of possible values
+of those eight variables, which is defined by the six
+equations and I'm going to go looking in that space for the best setting for
+those variables. We'll define that problem as a simple Lagrangian
+problem. There it is. So the Ramsey problem is, to try to get the
+highest utility, go hunting through this space
+of possible settings for the eight variables to find the setting for those variables that has the highest utility. You see the max there,
+there's eight variables over there and I'm maximizing utility subject to
+my six equations. My sixth private
+sector equilibria, and that's called
+the Ramsey problem. By the way, this is
+the way although I mentioned this wants to
+[inaudible] and he denied it, but I'm going to
+claim it and he's not here now to deny it. [inaudible] does this
+at the Riggs bank. He takes the Taylor
+rule out of here. If you have a Taylor
+rule in your back pocket when you walk into Riggs bank, they have a special Taylor
+rule detector when you go and they will remove
+it from your pocket. You're not allowed in the
+building with a Taylor rule. So their systems are
+under-determined, and so the way they
+compute policy, the way they solve the model, models, is they solve
+models this way. No Taylor rule is
+allowed in the picture, so the systems are fundamentally underdetermined and so
+when they solve a model, they're finding the solution
+to the Ramsey problem. Although, not with one major
+provisory which is that, the utility function of the agents in the model is
+not what's used up there. The analog of the
+Governing Council at the Riggs Bank is
+put up there instead. They're picking in the set of all the possible equilibria, the one they privately prefer the most and that may not be the same as the representative
+agent's utility function. By the way, is there
+a rationale for that? I'll give you a hint. It begins with the letter R, but that's too difficult. So the next letter is O, rule. I'll give you three
+letters, R-O-G, Rog. R-O-G-O. Speaker 1: Rogoff [inaudible]. Lawrence Christian: Yes. Rogoff. So that perspective on policy is that it's actually a desirable thing for reasons that are not
+included on this slide, to appoint a central
+banker who does not have exactly the same preferences as the public and it's
+a desirable thing to have that central
+banker at work, in your central bank. In any event, I don't know what Lance [inaudible] view about
+this, but in any event, what they do and the
+Monetary Policy Committee is that they in effect
+have to figure out a way to aggregate their
+preferences and it's actually an interesting
+discussion exactly, how do they do that and they do it in a very interesting
+and intelligent way. They'll write down. Then it's not technically a Ramsey problem because Ramsey always refer specifically to the social
+welfare function up there, but it's mechanically of
+course the same thing. You're maximizing
+some criterion, slapping on multipliers on all the equilibrium
+conditions that are given to you by private economy, optimization,
+market-clearing, etc. Notice we're putting in
+the actual equations here, including tachyons
+adjustment down here, and including of course, also the law of motion
+of that adjustment. There is one constraint in
+here which is so stupid, you just have to get rid of it, which is the linear
+constraint on the resource on that C, that's just the
+linear constraint. Anybody who solves things, they'd see a linear constraint
+that's odd to hear. Anything linear is out, so I just substitute it out. See here, we've got the N, there's the N and the P-star because it was log C up there. Then everywhere this
+thing is written, you got all this stuff going on. Actually a more sensible
+way of thinking the problem is this way. So this is a Ramsey
+optimal policy problem. This problem has actually quite a maybe
+shockingly simple solution, which actually gives
+us a little bit of insight into the
+whole model here. So for example, look at the
+first equation, Lambda 1. Let me ask you the question. Is that a binding restriction? Is there something about Lambda 1 that inhibits the ability of this problem to
+maximize the criterion. Notice that inside Lambda
+1 is a variable RT. Notice the variable
+shows up nowhere else. It's not in the
+utility function, it's not in any of
+the other equations. So somebody who is maximizing
+this thing would say, Lambda 1 that's a stupid
+constraint because I can always choose RT to just
+make that equal to 0. In particular, we expect
+that Lambda 1 is 0. We expect that it's
+non-binding on that problem. Now let's have a little peek at some of the other equations. For example, Lambda 3. You might conjecture
+that Lambda 3 is also non-binding because
+you can just use it to define F, what the hell? F, well, it does appear
+somewhere else there. But we can make Lambda
+5 non binding too. The P-star equation, not obvious that'll be non
+by, in fact it's binding. In fact, intuitively is binding. If I see that there are big
+distortions in prices today, can I achieve the no
+distortion state tomorrow? Say if I'm the
+monetary authority? Yes or no? The answer is no. Why? The answer is, that's 150 zillion
+targets you're after. If you want to make
+all prices the same, that means you got to make this price equal to that
+price equal to that price. That's too many
+targets and there's only two degrees of freedom
+in this system R and new. You can't. The P-star intuitively, it has to be binding thing, but it has to be
+bidding because it also restricts how much
+you get to consume. So P-star matters. It's in the utility function and so on. By the way, one of these
+times I'm going off, so I might as well say goodbye now because I won't
+have the opportunity. Lawrence Christiano: We
+can conjecture that we can think of the Lambda_1
+is simply defining r, the guy there
+defining f. Lambda_4, we can just think of
+that as defining Nu. Then you might say, Nu
+is a constant, fine. Make Nu a function of t.
+Think about Nu as a function. It'll turn out that Nu
+being a constant was just. Conjecture would
+be that actually this problem boils
+down to this thing. This problem boils
+down to that thing. That it's that
+optimization problem and that's a staggering problem. Because notice, first of all, there's nothing forward-looking
+in that problem, which tells me that the Ramsey optimal policy is probably going to be
+time consistent in this. There's no forward-looking variable, so there's no reason to say, "I'm going to do this in
+the future," and then not do it because there's no forward-looking
+variable that you're influencing by any
+such announcement. Any event there's the maximum. Now, you can think of
+this as a conjecture. I'm conjecturing that all
+those multipliers are zero, and then we could verify
+ex-post and in fact, that conjecture was correct. By the way, if we go
+back to this thing, are there any
+circumstances where you think it's obvious that ex-post that conjecture
+was not correct? Yeah. Speaker 2: [inaudible] Lawrence Christiano:
+That's exactly the one that I had in mind. Now, I don't have the
+inequality constraint on there. I probably should
+have written it in and then it would
+have been true that, that might have been
+a binding constraint. In effect, I was assuming the zero bound are really
+not very relevant, which it isn't in
+a neighborhood of the steady state of
+any reasonable model where you'd have 2.5 percent inflation so the
+nominal interest rate will be 2.5 percent higher than
+the real interest rate. But you're totally right
+that, that's a little bit. If you were solving the model, you would want to
+check to make sure that you're computing
+positive interest rates. If you're not, then you
+have to slap that on as an extra constraint and
+then actually life gets more hard than what
+I'm about to do here. This is a very simple
+optimization problem. Calculate the
+first-order conditions. You end up with
+this and then you do a little bit of
+scrambling around. You get this simple
+little law of motion for the price distortion and then you end up in the end with
+this simple solution. This is the solution to the Ramsey optimal
+problem in this case, which is that the
+price distortions evolve in this particular way. The inflation rate is not
+going to be zero right away. What happens is that, well, the price distortions are
+going up towards one, obviously they're not
+going to go down. That will be weird. Why would you get
+crazier or something? Any event, we're going to go
+up from low to high to one, they're going to
+asymptote to one. But the fact that
+they're rising means that the inflation rate is, tomorrow is higher than today, but tomorrow is in the basement, so the inflation rate
+it's going up from below. It's very hard for me to
+think up, down, sideways. I'm much more straightforward. Positive number, I can't think of numbers
+in denominators. P is bigger than P minus 1. Whatever. You can
+figure this out. There's a definite
+implications for inflation. The level of employment
+is that thing there. By the way, that's an
+interesting result that the level of employment
+is that thing there, because this is the first
+best level of employment. You can easily work
+out that if you bring in a plan here who
+never heard of markets, who never heard of
+private ownership, who never heard of any
+this thing will only sees utility functions
+and production functions, that planner would
+choose that thing there. Notice the planner does
+not involve responding to technology shocks because income and substitution
+effects cancel here. Then they do respond to negative preference shocks
+because people get backaches, it's a good idea for
+them not to do that. The solution to this
+problem involves setting the subsidy in the way
+I did earlier anyway, and then consumption is
+equal to this expression, and eventually asymptotically, consumption will be equal to it's efficient level
+because asymptotically, the solution to
+the Ramsey problem involves getting rid of the
+price frictions altogether. Can't get rid of
+it in one period because there's
+too many targets, but over time, you
+can get rid of it. Here's a simulation of
+this law of motion here I started at the P
+star equal to 0.8, and then I simulated
+it up and it's monotonically stable converging thing up to the number 1. The solution to the
+Ramsey problem does not involve going to zero
+inflation instantaneously, and it does not
+involve getting rid of price distortions
+and instantaneously, but it involves getting rid of those things asymptotically. When you get there
+asymptotically, you get to the first best
+level of consumption, you're always at the first
+best level of employment. I'm going to refer to
+the Ramsey allocations as the natural things. The equilibrium of the Ramsey is the natural equilibrium. Among people, there's
+a difference there. Some people like to call the natural equilibrium as the flexible price equilibrium. Anyway, I'm referring it to
+as the natural equilibrium. The natural equilibrium is
+the Ramsey equilibrium. What I mean by that is that the natural equilibrium
+is what you would get if you had optimal
+monetary policy. Not what you get if you
+have flexible prices, because flexor prices, that's
+part of the technology. I don't want to ask, what would the world be like if we
+had flexible prices? Because that's part
+of the technology. If I was allowed to
+play with technology, I might as well say make
+the endowment contract because they liked get rid
+of the production function. Why don't we have to work
+so hard all the time? This define natural output as what you get from
+an endowment economy. Well, of course that's goofy, but getting rid of
+sticky prices is analogously goofy because
+it's a reduced form thing, but it's a reduced
+form for something. Just assuming it goes away,
+I'm not sure what that means. I'm defining a natural
+equilibrium as the equilibrium that's
+associated with the efficient monetary policy. It's an achievable
+equilibrium and so on. The fun thing about this is
+that it's time consistent. There is nothing about the Ramsey optimal
+policy in this model, that would make the planner
+later if they re-optimize, come up with a
+different decision. Basically, because the
+binding constraints are only forward-looking in this
+thing or put differently, there's two distortions, and there's two policies,
+you can nail them. There's no advantage
+to surprising people. Time inconsistency comes from advantages to fooling people, but there's no advantage to
+that here because they're two instruments
+are enough to get them to the efficient outcome. If we had sticky wages then the Ramsey problem is not
+time consistent anymore. I guess I should pay
+attention to the time. What time do we break for lunch? Now, that has to be a
+binding constraint. Here are the equations for the New Keynesian model under
+the Ramsey optimal policy, the natural equilibrium and I've written them in log form. N star is the log of employment. It's equal to this. The natural equilibrium has a wonderful property in this model that it's
+independent of a, and that will be very
+useful for intuition later. It's a very useful benchmark. It's a property of the
+fact that I've assumed balanced growth preferences
+here and that there's no intertemporal
+technology so that the cancellation of income
+and substitution effects, which with capital, would
+only occur asymptotically, happens every period in at least in the
+efficient equilibrium. N is a function
+only of back pain, not of a, of little a, and then this is
+output is a function of little a because n is
+not a function of little a, so output responds one for one with a but then, of course, it also responds to back
+pain because people are working less when
+they have back pain. Now, in the natural equilibrium, remember the natural
+equilibrium is an actual market equilibrium. We can define market
+prices and inflation. Those are well-defined things in the Ramsey equilibrium
+so there's also going to be an intertemporal. All the equations
+are satisfied here, and there's a linear
+representation of the intertemporal Euler equation in the natural equilibrium, in the Ramsey optimal
+equilibrium, is that thing there. It's the same thing
+that we got in the first diagram
+a long time ago, the first slide a long time ago although I didn't
+have stars on stuff. Actually, I think I
+had c over there. But now, c and y are
+the same thing in the natural equilibrium
+because I'm imagining enough time has gone by so
+the P star is equal to 1. In the natural equilibrium
+at the very beginning, P star is not equal to 1, but I imagine that
+time has gone by enough so P star is equal to 1. That's c and y are the same thing in the
+natural equilibriums. Inflation is, I see, I've got the phrase eventually, I'm assuming we're in
+the eventual situation. Now we can get a very
+simple expression for the natural
+rate of interests. The natural rate of interest is the interest rate in
+the Ramsey equilibrium. By just substitute
+alpha y star here, now that's just
+exogenous variables, and we have one
+endogenous variable here, our star, we can now
+solve for r star. There it is. R star is equal
+to that crazy thing there. Now, that expression is wildly
+important in this model. If you look at r star, notice that it's positively
+related to Delta a. If the growth rate of
+technology is positive today, it means that r star
+is going up. Why? What's the intuitive
+reason for that? Our star is the interest rate. That's the net nominal
+interest rate, which will cost the same in the natural equilibrium as the net real interest
+rate because inflation is zero in the natural
+because we're assuming that the initial
+period is gone by. Our star is the nominal
+or the real way, whatever you want
+to think about in the natural equilibrium. Why would it be related
+positively to Delta a? Well, because I've assumed that Delta a is positively
+out of correlated. If there's a positive
+Delta a today it means that A is going to
+be higher in the future. But in this economy c
+is proportional to a. As a goes up c goes
+along with it. If people see a big
+Delta a it means they're seeing big
+consumption in the future. But that's the future,
+not the present. It's like you're
+approaching Christmas time. That means you can open your
+presence in the future, but you're not supposed
+to open them today. Consumption today is equal to today's a not tomorrow's a. You might want to consume more, you're going to have
+more A in the future, you might want to
+consume more today, but that's not the
+efficient thing to do. Oh, why not? Why isn't it efficient to open your presents before Christmas? In this model, if a is higher in the future it means
+the productivity of labor is higher in the future. If you try to consume
+more today like in the future why is
+that not a good idea? Speaker 3: Because you
+have to work more. Lawrence Christiano:
+You have to work more. It's not very efficient today because a didn't go up
+today it went up tomorrow. That's what we're talking
+about. Our star has to be high in order to discourage people from doing this
+inefficient thing. Because of log utility they want to go to the bank and
+borrow and so on. But the efficient thing
+when we're talking about the efficient
+equilibrium here is to discourage that by
+raising the interest rate. By the way, that interest
+rate is very important because if you think about the monetary authorities as their policy is picking
+the interest rate, well, our star is really the thing that if they did it they would
+achieve the right thing. That our star has a
+very special status. In central banks at some level that's all anybody
+ever talks about. They may not use that language, but they're always saying,
+oh, what should I do with the interest rate?
+What does that mean? Well, one way of thinking
+about what that means is where's the natural rate to which I should be setting
+my interest rate to? Now notice here that Tau
+Lambda is less than one. Tau is a negative coefficient. What the heck's that all about? Well, when Tau jumps then
+consumption is going to be low. Where does Tau go in
+the future if it jumps? Tau is assumed to be a first-order
+autoregressive process. If it jumps it comes down again, it's going to dissipate
+as opposed to a. If a goes up it keeps
+on rising because it's Delta a that's
+positively autocorrelated. But Tau is a stationary thing so when it goes up
+it will come down, which means that when
+my consumption goes down is going up in the future. Did I say 1 minus Tau Lambda
+is a negative number? I think I did say that. But it's not, it's
+a positive number. Because Lambda is a number that's less than one
+in absolute value. It's a positive number, 1 minus lambda is positive. Why would you raise the
+interest rate when Tau goes up? When Tau goes up today
+consumption is low today, but where is it today
+compared to tomorrow? But tomorrow they're not going
+to have so much back pain, so consumption in the
+future will be higher. We're going off a low base, but still by comparison. People want to bring that future higher consumption
+to the present so you have to raise
+the interest rate to get the efficient allocation. Because the efficient allocation involve low consumption today, high consumption in the future, not efficient to
+consume a lot today. Why? Because people
+have back pain, they don't want to
+work. It's painful. Not a good time to raise
+consumption. It's inefficient. Now I've described the natural
+thing and natural stuff. You can think of
+natural output will be y star and the natural
+rate of interests. These are all the objects
+in the natural equilibrium. Now we go back to the
+New Keynesian model with a Taylor rule and put
+everything together. I'm going to rig up
+the Taylor rule so that in the steady state
+inflation is going to be zero. I'm going to rig it so that if you turn off all the shocks the Taylor rule will deliver a zero inflation
+rate asymptotically. Of course, if we have a zero
+inflation asymptotically and we set our new the way I
+said we're going to set it, then what happens is that
+asymptotically we have an efficient
+equilibrium that has big advantages technically which I don't
+want to talk about. I could talk about
+it this afternoon if we did the Ramsey
+optimal policy, but we're not going to
+do it this afternoon. We could discuss it
+separate outside. I'm going to rig
+the Taylor rule and the new thing in such a way that asymptotically if you
+turn off the shocks in the model it's going to go to
+the efficient equilibrium. All the problems are
+going to have to do with responses to shocks. Now we get the famous
+New Keynesian IS curve. We know that in the
+actual equilibrium the log linear approximation to the intertemporal
+Euler equation is given by that
+thing over there. We derive that from
+the first period, except in there I had not y, but c. I had not y but
+c, but it's consumption. Consumption comes out of the inner temporal
+order equation because it's the
+marginal utility of consumption that's in it. The derivation many slides
+ago had y not c. Now, is there a difference
+between y and c in the actual equilibrium? No. There's nothing
+else to do with output other than consumer.
+They're the same thing. When we derived it for c before we did it for y as well
+because c is equal to y. That's the basic
+resource constraint. Where things get
+confusing is when you relate y to aggregate inputs. In the natural
+equilibrium we get that equation over there. That's the Euler equation. Inflation is zero. You don't see it in there. Now subtract the two. Boom. There we get one of the standard equations in
+the New Keynesian model, which is you get the output gap, you get an intertemporal
+Euler equation in the output gap. It has this funny natural
+rate hiding inside of it. Well, it's happening because we took the
+difference of the two. Often analyses of the
+New Keynesian model will begin with this equation. Just write this thing
+down in terms of the gap natural
+rate of interest, but we didn't do that. No, we couldn't do that.
+That would be too easy. If we look now at the output in the New
+Keynesian equilibrium, the aggregate output
+relationship, of course, in the equilibrium y is equal to log of p
+star plus n plus a, where p star is the thing that
+we've been talking about. Now, this deserves a little bit of
+discussion, this p star. I don't have a diagram
+to do this so you're going to have to
+visualize this thing. On the horizontal axis I've
+got price distortions, on the vertical axis
+I've got p star. Wait. Do I have a
+picture of this? I don't think I do. No, I was planning to draw this. Distortions are over here and then in the middle there's no distortions where are the prices
+are the same. At that point p star
+is equal to one. Then as I go away from
+one the thing comes down. It's a mountain like that. Now, in this model in the steady-state what are
+the price distortions? The Taylor rule makes inflation zero in the steady state. What are the price
+distortion is going to be in the steady state? Suppose that everybody
+kept their prices constant, is that feasible? Yes. Because the idiots
+weren't changing their prices. Well, they're not
+changing their prices. The clever people who aren't changing their prices
+what are they doing? They're not changing
+their prices either. If you have zero
+aggregate inflation, because the non optimizers are doing zero inflation
+on their own prices, in that case, all the
+prices will be the same. If we think about this diagram, where are we in
+the steady state? In the steady state we're at the point where
+there's no inflation. We're at the top
+of this mountain. Vertical axis is p star. Then if you have a
+memory like mine if you see something it's
+gone almost immediately. Gold fish apparently I
+remember it three seconds. When I draw this figure, if you're like me you see it, but as soon as my hand
+is done it's gone. In actual fact, it is gone because it's just
+in the space there. Anyway, there's p
+star over here, and then there's the
+distortions here, and at zero distortions
+here at the top, and then you come
+down both ways. No matter what's happening
+in the distortions, whether they go this
+way, that way, whatever they're always coming down. Now, I'm going to give
+you a little hint. Mr. Tolkien he said that the relationship
+between distortions and the p star is differentiable. Suppose I have a curve that reaches a top over here as differentiable, it comes down over there, what's the slope of it there? Zero. Suppose I do a first-order approximation of that curve there
+in steady-state? It's a straight line. The slope is zero, it's just
+a constant term. If you do first-order
+approximation, because we're assuming that
+the non optimizers are not changing their prices and the steady-state
+inflation rate is zero because of that one thing, because the price distortions are efficient at
+the steady-state, the P star to a first-order
+approximation is just equal to one and
+is not changing. It's not changing
+in a neighborhood. Now if we change any one
+of those assumptions, like if we made inflation
+2.5 percent per year and we made the non-optimizers
+not change their prices, well then the
+steady-state will be over here and the slope, there will be a slope there and then you would have the
+P star will be a living, breathing biological
+creature that evolves and has
+to be included in your equations but as long
+as you're supposing that in the steady-state there
+are no price distortions to a first-order approximation, you can pretend that it's
+always equal to one. Now by the way, you
+might want to check that. How would you check that? Well, you just type in the non-linear equations
+that we did here. Go to Dynare, do a
+second-order approximation, see if it makes any
+difference and I tell you right away what the
+answer is going to be. It makes no difference for the types of fluctuations you
+see in the United States. The first-order stuff really is first-order and the second-order stuff actually is second-order. To a first-order approximation,
+we can ignore this. By the way, let
+me say something, when we do Ramsey, I can't do that. Now we have a simple in this
+first-order approximation, I have this, this is my
+resource constraint. I now actually have an
+aggregate production function. I guess I can write y as a direct function of
+the aggregate labor and the aggregate technology. Then there's this whole
+nightmare of equations here associated
+with price setting. You've got the numerator,
+the denominator, get all those equations
+associated with price-setting, you sit down and you take a linear approximation
+to all those equations. Take out a big soup
+spoon and you stir. It might take you several days because you're going to
+make so many mistakes. You'll make more mistakes, more than there are
+lines on the page. Anyway, you keep on stirring
+and stirring and stirring. You keep stirring
+and eventually, you're going to start
+asymptoting to this. This is the expression here. This is the standard
+little guy here and the amazing thing is
+that this guy doesn't that prices are
+efficient in the stea just come out of nowhere,
+it comes out of here. One of the things
+that's vital in the derivation there isdy-state. So if you have an
+inflation rate that you have the non-optimizers are raising their prices by
+that inflation rate, that's crucial for
+this derivation here. Anyway, what do we
+get out of this? So far we got this
+little guy here. We call this the IS curve, then we have an aggregate
+output relationship because we're doing a
+first-order approximation which allows me to set P star
+equal to 1 so the log of P star is 0 and then I do the linear
+approximation on that. This, of course, takes
+a little bit of work. It's not obvious
+by looking at it, but you do it and you end
+up with this expression. Well, I guess there's
+a derivation here on this handout and then
+here's my Taylor rule. The Taylor rule, this is in log. The thing at the
+left-hand side is the interest rate in
+the actual equilibrium. It's a net interest rate equals Alpha times the
+interest rate and then you have, this is Pi. I guess you can read this too. Then this thing here
+is the output gaps. I'm imagining they're
+looking at the output gap. This is a standard thing
+that people write. I must say, I have no
+idea what they mean by this because if you knew
+what the output gap was, then you could probably
+calculate what the natural rate of
+interest was and you wouldn't have to
+do any of this Taylor baloney but any event. At the top output
+gap in their feet. To compute the output gap, I need to know what the
+efficient level of output is in the economy and it's not obvious how to
+figure that one out. Here are the equations. If you go back and look at the equations that I had
+at the very beginning, I had six equations
+and eight variables. One of the eight
+variables I nailed by just making new efficient. All of those equations
+have been worked with in order to get down
+to these equations here. This Phillips curve
+actually summarizes a whole bunch the equations
+on this earlier page. This is three
+equilibrium relations are summarized by
+this Phillips curve. Of course, we substituted out f and we got rid of a
+bunch of variables. Oh my God. I didn't know that
+letter G does not. There's the policy rule, the IS equation, and then
+this is the natural. One thing that's fun
+and surprising about this thing or there's a bunch of things about this
+that are weird. Let me just tell you
+because none of you know about real business
+cycle models, probably. Me, I think of that
+as the standard model but slowly as time goes
+by, no one remembers. Like the dinosaurs, who remembers the
+dinosaurs anymore now? No one. Same thing with a real
+business cycle model. Anyway, a real
+business cycle model has three equilibrium
+conditions. There's the intertemporal Euler equation, resource constraint, and maybe the labor equation if you have that equation
+in there, three equations. Those three equations, you
+could completely describe and discuss them in
+about 34 seconds. After 34 seconds, you're
+just repeating yourself. There's just nothing there. It's like just trivial stuff. This thing here, I actually didn't even do
+all the talking I could do without repeating myself
+to derive these equations. It's three equations.
+Well, it's actually four. It's four equations, but there's an immense amount of stuff
+behind these equations. Anyway, I'm not sure
+why I said that, but I just did so it's too late. There's another interesting
+thing about this, which is that in the model
+there are two shocks, Tau and A, and if you look inside here, you look at the actual
+equations the Phillips curve, IS equation, you don't
+seem to see it anywhere. Where the hell are those things? They're all sneaking in
+through this little R-star. I can't tell you why I
+find that interesting I'll admit but it's a weird thing. You'd have thought it come
+in a more blatant way, but they're all
+coming in through the natural rate of
+interest in this model. Now that I said I
+realized it's not a very interesting remark. I wish I hadn't said
+it, but it's too late. Now let's solve this model. We don't have to linearize it anymore because we
+already linearized it. When you work with Dynare, you'd actually type in
+the actual equations and well actually, this afternoon we'll type in
+these linearized equation. Well, we won't type them in because I already
+typed them in for you but we'll have
+these equations here. I'm pretty sure that
+Jesus will have examples. Yeah, he has a real business
+cycle model example so he's going to have the
+actual equations and then Dynare will do
+the linearization. We're going to plug
+these things in. We have the actual equations, so we don't have to
+linearize them anymore. Well, we did linearize
+them. But now I want to set them
+up and solve them. I'll use this canonical notation that I used at the beginning, well at the end of the
+previous lecture or whatever, and here it is. I took all the equations
+and I write them. These are the variables
+whose values are determined at a time
+t. This here is z_t, inflation output gap, r-star, all of these things,
+and this is t plus 1. Then we also have
+some shocks in here, s these are the
+exogenous shocks. This is the law of motion. This guy here is
+this equation here. Now what I want to do is
+I want to find a solute. There it is. The whole system is there. That upper equation is all the equations on the previous slide and then you have the law of
+motion for the shocks. Now the solution
+is a matrix A and matrix B that satisfy the
+equations I put up before. Now there's one thing
+that's fun about this, which is that if we go back
+and look at this system, notice that there's
+one equation here. It's got this one
+lonely little guy. In fact, if you look at this, you'd think this is all zeros. You wouldn't even notice that. After you notice
+them, you realize he's there feeling bad and lonely because
+absent this one thing, it's all a bunch of zeros. In particular, if we
+look at this system here, this Alpha_2 here, if we set Alpha to zero, this Alpha_2 would be equal to zero and if you look at this, can you see, can
+you see a solution? If Alpha_2 is zero, how many people in
+this room would need a computer to find a
+solution to this thing? A equals 0 is a solution
+in that case which makes sense because the
+system is so profoundly non, what is it,
+internally dynamic or something because there's
+nothing in the economics. If this Alpha_2 is 0, there's like nothing
+backward-looking in this system so it's
+not surprising if the solution would not
+be backward-looking either. Now you still have to
+worry because Mr. Dynare see is a very serious
+person and Mr. Dynare, remember what I was saying
+is they're going to take that polynomial and they're
+going to put it up, they're going to stick
+it up all over the wall, all the a's that
+satisfy that equation. The fact that you know that
+one of the solutions is a equal to 0 doesn't mean
+there can't be other ones. We know that a, I shouldn't
+say a because that's a. A solution to this thing
+is a equals 0 but there may be other solutions we still have to worry about
+that possibility. But it's obvious that in
+the case where there's no endogenous persistence and if we get rid of the endogenous persistence
+in the Taylor rule, where's the Taylor rule here? If we get rid of this guy here, then there's just nothing
+that's backward-looking in this system and then a is 0 and then z is simply a function of the current realization
+of the shocks and all of the persistence of z and the endogenous
+variable that's coming 100 percent from the persistence of the exogenous shocks. 12:15 is the time. 

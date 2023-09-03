@@ -1,0 +1,945 @@
+Isaiah Andrews: In
+particular, what we know after Jim section is first that conventional t-test based
+confidence intervals can undercover the true
+parameter value when the instruments are weak. Moreover, we know that the effective first-stage
+F-statistic provides, at least in principle, a
+potential guide to bias. But as Jim was discussing at the very end of his section, we also know that
+screening applications on the F-statistic can
+induce size distortions. In particular, if we only pursue applications where the first-stage F
+is bigger than 10, the size of five percent test in published specifications may actually be worse than
+it would have been if we just had always used
+the t statistic. I'll come back to this point in simulation in
+the next section. In this section,
+I'm going to talk about an alternative
+to screening procedures on the
+first-stage F-statistic or worrying about
+identification strength at all. Which is just to use identification robust
+confidence sets. When I say an identification
+robust confidence set, what I mean is a confidence
+set that ensures correct coverage regardless of the strength of the instruments. Because these procedures are valid even when the
+instruments are weak, if we use such confidence sets, there's no need to screen on the first-stage F-statistic. This allows us to entirely avoid this pretesting
+bias problem, but also lets us avoid throwing away
+applications where we have a valid instrument just because the
+instruments are weak. Moreover, it's worth computing these confidence
+sets because they can be informative even when
+the instruments are weak and so even in cases
+with weak instruments, we can still learn something. To discuss these issues, I'm going to continue
+to think about the normal model that Jim
+introduced in his section. In particular, I'll think of the reduced form in
+first-stage OLS coefficients, which I'll denote
+by Delta hat and Pi hat being jointly normally distributed with
+means Delta and Pi respectively and a known variance-covariance
+matrix Sigma. Recall that the IV model implies that Delta
+is equal to Pi Beta. The IV coefficient is just identified as
+the constant of proportionality between the
+reduced form OLS coefficient and the first-stage
+OLS coefficient. Now, an initial question once we say that we have
+this problem with weak identification invalidating the usual t-test-based
+confidence intervals, is whether there's some
+way to correct coverage by just adjusting
+our standard errors. In particular, any
+standard error adjustment of this form that
+you can think of in the context of this
+model is going to ultimately give you
+a confidence set of the form Beta hat, our estimate, plus minus some function b of
+Delta hat and Pi hat, where since I'm
+treating them as known, I'm suppressing
+dependence on it, but this b can also
+depend on that. Unfortunately, though,
+you can show that no approach that yields
+a confidence interval of this form can ensure correct coverage unless
+b can be infinite. In particular, this follows
+from results from Gleser and Hwang 1989 and Dufour 1997, who show that for any
+robust confidence set with coverage at
+least 1 minus Alpha, meaning that its
+probability of covering the true value of Beta is
+at least 1 minus Alpha, no matter the true value of Beta and no matter the
+true value of Pi. We must have that this
+confidence set has infinite length with strictly
+positive probability for all Beta and all Pi. The intuition for this result is actually pretty
+straightforward. Let's start out by thinking of the case where Pi is equal to 0, so there's absolutely
+no first-stage and the IV coefficient Beta has no effect on the observable
+distribution of the data. Well, in that case, because we know
+the IV coefficient doesn't affect the distribution
+of the data at all, if the coefficient Beta can be any number
+in the real line, it must be that the confidence set to have coverage
+1 minus Alpha covers each value
+in the real line with probability 1
+minus Alpha or more. But that's only possible if the confidence set
+has infinite length with positive probability. I can't give you a finite
+random interval that covers every number in the real line with probability 1 minus Alpha. The fact that the same
+is then true under all possible values
+of Beta and Pi, just comes from the
+fact that the normal distribution has full support. Any value of the
+data that can be realized when there's
+no first stage, can also be realized when
+there is a first stage. As a result, we get this
+result from Gleser and Hwang, which tells us
+that if we want to be fully robust to
+weak instruments, adjusting our standard
+errors isn't going to be enough and we're going to
+have to do something else. Now, the leading something else, the leading alternative in the literature is what's
+called test inversion. The idea behind test
+inversion is that I'll start out by defining
+a family of tests Phi, where I'll let Phi
+Beta naught denote the test for the null hypothesis that Beta equals Beta naught. Phi Beta naught equals 1 if
+I reject that Beta equals Beta naught and Phi Beta
+naught equals zero otherwise. Let's suppose that
+Phi Beta naught has size Alpha for all Beta naught, meaning that the probability
+that we incorrectly reject that Beta naught is
+the true value when in fact, Beta naught
+is the true value, is less than or equal to Alpha no matter the value of Pi. If we then form a confidence
+set by collecting the set of non-rejected
+values, that is, we let CS denote the set of values Beta such that Phi
+of Beta is equal to zero, then by just rearranging the definition of size up there, you can show that this
+confidence hat has coverage at least 1 minus Alpha. This procedure where I start out with a family of tests and then collect the set of
+non-rejected values to get a confidence set is
+called test inversion. Based on this argument, in order to form
+an identification robust confidence set, all I need to do is form an identification robust test for the null that Beta
+equals Beta naught. For the rest of this section,
+I'm going to talk about testing and confidence set
+construction interchangeably. To implement this recipe, I need to find a test. In particular, the
+key to constructing identification robust
+tests will be defined restrictions on the
+distribution of the data that hold regardless of the
+strength of the instruments, that is that hold for all values in the first-stage parameter Pi. The key such restriction in the IV model is this
+proportionality restriction. In particular that Delta
+minus Pi Beta is equal to 0. The reduced form is equal to the first stage times
+the IV coefficient Beta. In particular, using this fact, note that under the null that
+Beta equals Beta naught, if I look at the difference, Delta hat minus Pi
+hat Beta naught, that difference will be
+normally distributed with mean 0 and a variance-covariance matrix Omega that
+I can calculate. Running that depends only on
+the variance matrix Sigma, which I've assumed is known, and of the null
+value Beta naught, which is, of course, also known. This gives me a restriction on the distribution of the data that holds regardless
+of the strength of the instruments and that
+I can use to form a test. In particular, building
+on this restriction, I can introduce the
+Anderson-Rubin statistic, which just looks at
+that difference, Delta hat minus Pi
+hat Beta naught, and computes the square of its variance
+normalized length. The statistic was originally
+introduced by Anderson and Rubin in 1949 for the
+homoscedastic normal case, but here, I'm just
+going to focus on its generalization to the
+non-homoscedastic case. This Omega is our variance estimator Sigma for the
+variance-covariance matrix, as Jim said, could
+allow for clustering, heteroscedasticity, serial
+correlation, whatever. We can still compute
+this statistic. Now, under the null that
+Beta equals Beta naught, the Anderson-Rubin's
+statistic will be chi-squared distributed
+with k degrees of freedom, where here k is the
+number of instruments. This holds regardless of the
+first-stage parameter Pi. Using that restriction, we can form the Anderson-Rubin test, which rejects the value
+Beta naught if and only if the Anderson-Rubin's
+statistic evaluated at Beta naught exceeds this
+chi-squared k critical value. Well here, I'm using
+chi-squared k 1 minus Alpha to denote the 1 minus
+Alpha quantile of a chi-squared k distribution. Likewise, we can form an
+Anderson-Rubin confidence set by collecting the set
+of non-rejected values. It shouldn't be too
+surprising given that this distribution for the
+Anderson-Rubin statistic held regardless of
+the first stage. Both this Anderson-Rubin
+test and confidence set will be fully robust
+to week instruments. In the sense that our
+probability of covering the true parameter value will
+be exactly 1 minus Alpha, whether the instruments
+are weak or strong. Now that's the good property of the Anderson-Rubin
+confidence set. A perhaps less
+intuitive property is the forms they can take. In particular, if we think about the just identified setting. Number of instruments
+equal to one, and as in Jim section, I'll assume unless I
+say otherwise that the dimension of the endogenous
+regressor is also one. Then the Anderson-Rubin
+confidence set can take three forms. The first is a bounded interval, that's intuitive, that's what we expect a confidence
+set to look like. The second is the real line. It just includes
+every possible value. The third and perhaps
+least intuitive, is the real line minus
+a bounded interval. It's minus infinity
+to some value A and then B up
+to plus infinity. In over-identified settings, the Anderson-Rubin confidence
+set can also be empty, which is awkward and in over-identified
+non-homoskedastic settings, it can take additional
+forms over and above these. Now, the fact that the Anderson-Rubin confidence
+set can be infinite, may look strange, but it actually is a
+natural explanation. In particular, this
+theoretical result from Gleser and Hwang
+that I mentioned earlier, shows us that any fully identification
+reverse confidence set must have the ability to be infinite with
+positive probability. The behavior of the
+Anderson-Rubin confidence is certainly
+consistent with that. It actually gets more
+intuitive though, because you can show that the limit as Beta_0,
+the null value, goes to plus minus infinity of the Anderson-Rubin statistic, is equal to k times the identification robust
+first-stage F statistic. But what this means is that the Anderson-Rubin confidence
+set is unbounded, that is, it includes arbitrarily large and arbitrarily small values, if and only if, k times this robust
+first-stage F statistic is less than this Chi-squared
+k critical value. But that means
+exactly that we can't reject that the first
+stage parameter Pi is equal to 0
+at a level Alpha based on a heteroskedasticity
+robust F-test. What this tells us is that the Anderson-Rubin confidence
+set is infinite if and only if we
+can't reject that the model is totally
+unidentified. But if we can't
+reject that the model is totally unidentified, it seems reasonable that
+we actually might want our confidence set to include arbitrarily large
+and small values, because we can't
+conclude that we have any ability to
+identify anything. Now, the fact that the Anderson-Rubin
+confidence set can be empty is more awkward. This arises from the fact that the Anderson-Rubin
+test effectively looks at the restriction that
+delta is equal to Pi Beta_0. But if you think about
+that restriction, there are two distinct
+ways in which it can fail. The first is that our parametric restriction might be violated. That is, we might have some value Beta_0 equal to Beta_0. On the other hand, the over-identifying
+restrictions might be violated in models with
+more than one instrument. In particular, this vector delta might not be proportional to
+the first stage vector Pi. In which case, there's
+no value Beta, which makes this
+relationship hold. Note though that these
+over-identifying restrictions are only present if we have more
+than a single instrument. Empty Anderson-Rubin confidence
+sets can be interpreted as a rejection of the
+over-identifying restrictions. In principle, this doesn't
+necessarily sound so bad. It's not the worst thing
+in the world to test our over-identifying
+restrictions depending on how we're thinking
+about our instruments, but what makes this bad is that these things
+behave in a continuous way. A small Anderson-Rubin
+confidence set could arise either
+because the instruments are just very informative or because the instruments nearly reject the over-identifying
+restrictions. In those two cases,
+we might want to draw very different conclusions
+about the parameter Beta. The fact that the
+Anderson-Rubin confidence set looks the same in the two cases, is an unfortunate property. Note though, that these
+issues don't arise in the just identified
+case where there are no over-identifying
+restrictions to test and the Anderson-Rubin
+confidence set is non-empty with
+probability one. In fact, in the just
+identified case, you can say more
+and you can show that the Anderson-Rubin
+confidence set is optimal. As Jim was saying in
+the last section, this just identified case is quite common in practice
+and represents, for example, 101 out of the 230 specifications
+in our AER sample. Specifically in this
+just-identified case, Moreira 2009, shows that the
+Anderson-Rubin test is uniformly most
+powerful, unbiased. Which is the same optimality
+property we have for the t-test asymptotically in
+well-identified settings. In some sense, the
+Anderson-Rubin test has the same optimality property
+that justifies the test we usually use if we assume
+the instruments are strong. Moreover, if the instruments
+are in fact strong, the Anderson-Rubin
+confidence set is equivalent to the two-sided
+t-statistic confidence set. We don't sacrifice any
+efficiency if we use the Anderson-Rubin
+confidence set but the instruments turn
+out to be strong. In just identified settings, there's a very strong case for using this Anderson-Rubin
+confidence set. It's optimal among
+confidence sets, robust to weak identification, but doesn't lose any
+power relative to the t-test if the instruments
+turn out to be strong. To examine this practical
+impact of this recommendation, let's go back to our AER sample. Here, I'll limit attention to just identified
+specifications with a single endogenous
+regressor so that we can apply these
+optimality results and then we'll also limit attention to cases
+where we can estimate the variance-covariance
+matrix of delta hat Pi hat, because these are the
+cases for which we'll be able to compute the
+Anderson-Rubin statistic. This yields a total
+of 36 specifications. In these specifications,
+if we compare 95 percent t and Anderson-Rubin
+confidence sets, we find infinite Anderson-Rubin confidence sets in two cases. Now, from what I just said, remember that this means that
+in these specifications we actually can't reject that the model is totally
+unidentified. These are cases with
+extremely weak instruments by any reasonable
+standard, I would argue. In the remaining cases, we find that Anderson-Rubin
+confidence sets are 56.5 percent longer on average than our t statistic confidence sets across all specifications. But if we limit attention to specifications where
+the first-stage f is bigger than 10, that difference drops
+to 20.3 percent. That 56 number is largely
+driven by specifications for the instruments look pretty weak by conventional standards. If we then further
+limit attention to specifications for the reported F statistic is bigger than 50, this difference drops
+to 0.04 percent. In that case basically the Anderson-Reuben and t
+statistic confidence sets are essentially
+indistinguishable. This is consistent with the sufficiency result when
+the instruments are strong. Based on all these arguments,
+as Jim was saying, there's a very strong
+argument for reporting Anderson-Rubin
+confidence sets in just-identified settings. They are optimal and
+weak instruments, they don't sacrifice anything
+under strong instruments, they're very good overall. Unfortunately though,
+Anderson-Rubin tests and confidence sets perform worse in over-identified settings. We've already talked
+about one aspect of this, which is that
+Anderson-Rubin confidence sets can be empty. Another problem is that they're inefficient under
+strong instruments. This comes back to the point that I already mentioned that the Anderson-Rubin
+test effectively tests both the parametric restriction
+Beta equals Beta_0, and the over-identifying
+restrictions. But if all I care
+about is power against violations of the
+parametric restriction, which is how we usually evaluate the power
+of say, t-tests, then the Anderson-Rubin
+test is going to be inefficient because I'm
+wasting degrees of freedom, also testing the
+over-identifying restrictions in this
+strongly-identified case. If we want a procedure that's
+robust to weak instruments but doesn't sacrifice efficiency in the over-identified case, we're going to need
+to do something else. One natural possibility to
+think about is whether it's possible for us to still do something based on
+the t statistic. In here, I'll let t Beta _0 denote the absolute t-statistic. Absolute value Beta hat minus Beta_0 normalized by
+the standard error. Now, why might we want to do something based
+on this statistic? Because we know that t-tests are asymptotically
+efficient under strong instruments
+so maybe if we base a weak IV robust procedure
+off of the t-statistic, we'll retain that property. I'll show you that
+in fact will be the case or I will state
+that will be the case. There's immediate problem here which is that the
+distribution of the t-statistic
+under Beta equals Beta_naught depends on the
+first-stage parameter Pi. This is the first thing Jim started with at the
+beginning of his lecture, the distribution of the
+t-statistic even when the null is true depends on the
+strength of the instruments. This was the whole
+thing generating problems for the t-statistic. Because the first-stage
+parameter Pi is unknown, this means it's not clear what critical values we should
+use with the t-statistic. We don't know what a
+big or small value of the t-statistic is if we
+don't know its distribution. To deal with this problem, Moreira (2003)
+introduced this idea of conditional critical values to solve the weak
+instruments problem. As with the
+Anderson-Rubin statistic, Moreira originally
+introduced this for the homoskedastic case. Here I'll talk about
+the generalization to the non-homoskedastic case. The idea behind these
+conditional critical values is to try to find some
+sufficient statistic, say D Beta_naught for the nuisance parameter Pi
+under the null hypothesis. What efficiency will mean
+is that if I look at the conditional distribution
+of the t-statistic, conditional on the
+sufficient statistic t, that conditional
+distribution will no longer depend on the first-stage
+parameter Pi under the null. That's just an immediate
+implication of sufficiency, but that means that
+once I condition on D the distribution
+of the t-statistic under the null is
+actually known. I can just compute a
+critical value say c Alpha where because of
+this conditioning argument, the critical value
+will depend on D. To implement this
+recipe in practice, the question is, how do I find this sufficient
+statistic D? The idea for finding the sufficient statistic is to try and separate the parts of Delta-hat and Pi-hat that do and don't depend on the
+first-stage parameter Pi. Specifically, let's
+define g Beta as the difference Delta-hat
+minus Pi hat Beta. This is the same difference
+that was going into the Anderson-Rubin
+statistic and that has mean 0 when evaluated at the
+true value of Beta. Let's then define D Beta as Pi hat orthogonalized with
+respect to g Beta. Essentially, you can
+interpret this D Beta as the residual from a
+population regression of Pi-hat on g Beta. These variants covariance
+matrices here are just the usual OLS
+regression algebra matrices. Under the null that Beta
+equals Beta_naught, g Beta_naught and
+D Beta_naught are going to be jointly
+normally distributed with means zero and Pi respectively and
+variance-covariance matrices we can calculate. Importantly, they're also
+going to be uncorrelated. Because they're uncorrelated and jointly normal we know
+they're independent, so the conditional distribution
+of g Beta_naught given D Beta_naught is just going to be its unconditional
+distribution; it's going to be this normal
+zero Omega distribution, but g Beta_naught
+and D Beta_naught are a one-to-one transformation
+of Delta-hat and Pi-hat. If you give me g and D, I can reconstruct
+a Delta-hat and Pi-hat by just reversing
+the steps that I use to construct g and D.
+Once I condition on D, the distribution of g
+doesn't depend on Pi. That tells me that
+once I condition on D, the distribution of
+Delta-hat Pi-hat doesn't depend on Pi. This tells me that I've found the sufficient statistic
+that I wanted. D is a sufficient statistic for the first-stage
+parameter Pi under the null. Now, once I have the
+sufficient statistic, I can implement this recipe. In particular to construct the conditional distribution of the t-statistic given this sufficient statistic
+D, what do we do? We can just do this
+by simulation. Let's fix the
+sufficient statistic D at its observed value. Let's then repeatedly draw
+g-star from this mean 0 normal distribution with variance Omega Beta_naught
+that we can calculate. This is just the
+conditional distribution that I showed you
+on the last slide. Given g-star and D, we can then construct Delta-hat
+star and Pi-hat star. Again, just reverse the
+recipe that we used to construct g and D. Finally, we can calculate a
+t-statistic t-star based on Delta-hat
+star and Pi-hat star. You can show that if you repeat this recipe a bunch of times, the distribution of
+t-star is going to be exactly this conditional
+distribution for the t-statistic given D
+Beta_naught under the null. We can simulate our conditional
+critical value as the 1 minus Alpha quantile
+of these t-stars. Now, once we have this
+conditional critical value, we can construct a
+conditional t-test that rejects if and only if t Beta_naught exceeds the
+conditional critical value. That's this test here. You can show that
+this test is fully robust to weak instruments
+in the sense that its rejection probability is exactly equal to
+Alpha for all Pi. That size control
+argument just follows from exactly the sufficiency
+we were already using. Now, while I've introduced this idea of conditioning using the t-statistic, it's actually not at all specific
+to the t-statistic, and we could use this argument with any test statistic
+as we wanted. In particular, given
+any test statistics, we can construct a corresponding
+data-dependent critical value where the critical value will depend on which
+statistic we're using. By comparing the statistic
+to the critical value, we obtain a test
+that controls size. What this says is basically we have a recipe for constructing a weak instrument robust test that works with any test
+statistic you want. Size is no longer a problem, and to choose among
+these test statistics, we should probably be
+thinking about power. Now, there are a whole bunch of statistics as proposed
+in the literature. For example, there's
+the t-statistic which we already talked about. There's this Kleibergen
+case statistic which the exact form
+is an important, the main thing to note is it's just a particular
+score statistic that uses the sufficient
+statistic t. We could also, use the
+Anderson-Rubin statistic that we already introduced or the likelihood
+ratio statistic for testing Beta
+equals Beta_naught. That is, comparing
+the likelihood maximized over Beta and Pi to the likelihood evaluated at Beta naught
+maximized only over Pi. These different choices of
+test statistic are going to imply different
+conditional critical value c Alpha of D Beta_naught. In particular for both the t and likelihood
+ratio statistics you can show that
+the distribution under the null depends on Pi, and so we need to use these data-dependent
+critical values. On the other hand,
+it turns out that the conditional distribution
+of the AR statistic given the sufficient statistic
+and the K statistic given the sufficient statistic doesn't depend on the
+sufficient statistic D. The conditional
+distribution is the same no matter what value of the conditioning statistic
+is realized. In particular, the
+conditional distribution of AR is always chi-squared K, the conditional distribution of Pi Bergen statistic is
+always chi-squared 1. What that means is that
+for those statistics using conditional critical values
+just reduces to using chi-squared k and chi-squared 1 critical values respectively. But remember the Anderson-Rubin task we introduced earlier was comparing the
+Anderson-Rubin statistic to a chi-squared critical value. If we use the
+Anderson-Rubin statistic with this conditioning approach, we just get back the Anderson-Rubin
+task we already had. Now, in addition to having
+different critical values, these tests also differ in terms of their power properties. In particular, you can show
+that the conditional t, K, and likelihood ratio tests are all efficient under
+strong instruments. By contrast, as we
+already talked about, we know that the
+Anderson-Rubin test is inefficient in over identified models
+even though it's efficient in the just
+identified case. These procedures also have different power properties
+under weak instruments. In particular, while the
+conditional t-test is fairly intuitive looking it turns out to have pretty
+poor power properties, and in particular
+some simulations by Andrews Moreira and Stock (2007) showed that,
+that's the case. I'm actually going to jump here. This is the power of the conditional
+likelihood ratio test which is one of
+the other options, and then these are
+the power curves for a whole bunch of the
+conditional t-tests. The main point to note
+is that the power of the conditional t-tests are over most alternatives much worse than the power of the conditional
+likelihood ratio test. Basically, it's plots like these which led people
+to conclude that the conditional t-tests doesn't look like a great
+idea in practice. In addition to those negative results for the t-test, you can also show that the key tasks sometimes
+has poor power. By contrast, this conditional
+likelihood ratio tests, that was the one I was
+comparing the t-test to in the simulation
+results I just show, turnout to perform quite well, at least in
+homoscedastic settings. Specifically, Andrews
+Moreira and Stock, 2006, showed that the CLR
+test is near-optimal in the homoscedastic model with a single
+endogenous regressor. In particular, they
+show that the power of this test is close to the upper bound on power for
+a natural class of tests over a wide range
+of parameter values. As a result of the simulations, basically, the consensus and
+the literature is now that the CLR test is a good test to use in homoscedastic
+settings. Of course, the
+problem with this, which Jim already
+alluded to earlier, is that we generally don't think homoscedasticity is
+a great assumption. There is a question
+where we go from here. Motivated by these
+good properties for the CLR test in the
+homoscedastic case, there have been a
+variety of extensions of CLR proposed for the
+non-homoscedastic case. All of these yield procedures that are asymptotically
+efficient under strong instruments
+but our evidence for their performance under weak instruments is basically limited to a collection of simulation results and we don't have any strong
+theoretical guidance for choosing between these
+different proposals. An alternative procedure to try and get something
+that does have some demonstrable theoretical
+optimality properties are tests that maximize
+weighted average power. The idea here is I'm going
+to put some weight function over the non-null parameter
+values and then I'm going to try to find
+a test that achieves the highest possible power integrated with respect
+to those weights. Different weights
+are proposed in different papers
+in the literature, but the test that you get out of this approach depends
+on the weight you use. Again, there is a
+question here of what's the right set of weights
+to use and again, there is not a consensus in the literature at this stage. To summarize what we know for
+non-homoscedastic models, there are a whole bunch
+of options out there, but there is not really a
+consensus on what we should use for the over-identified
+non-homoscedastic case. In just identified cases, we know that we should
+use Anderson-Rubin. While in over-identified
+settings we know that we should
+use something that's at least efficient under
+strong instruments so we don't sacrifice strong
+instrument efficiency. But the literature hasn't reached a consensus beyond that. But the good news is there
+are bunch of procedures available that at
+least clear that bar. One other point I
+want to note is that these robust confidence sets are not all that widely
+used in practice. In particular, when
+they're used in practice, it usually seems
+to be only after authors find evidence
+of weak instruments. For example, in our
+AER sample, there are two papers that report identification of
+robust confidence sets. In these two papers, the minimal first-stage
+F statistic is 2.3 and 6.3 respectively. Now, if we only report robust confidence sets when the first-stage F
+statistic is small, you could think of
+this as constructing a confidence set in two steps. First, I'm going to look at the first-stage F statistic
+and then if it's big, I'll report, say, a
+t-statistic confidence set. While if it's small, maybe I'll report
+something robust. In that sense, you
+could actually think of this two-step procedure as an alternative to the
+screening on the F statistic. Rather than killing
+an application when the first stage is small, maybe I instead report a
+robust confidence set. Jim talked about at the
+end of his section, and I'll talk in
+the next section. We know that screening
+applications on the first stage F
+statistic can generate very bad behavior
+and so there is a natural question of whether two-step confidence
+sets do the same. If we assume that the
+errors are homoscedastic, if we put ourselves in
+the homoscedastic case, you can actually get
+some positive results based on Stock and Yogo, 2005. Specifically, you can show that this two-step procedure won't distort your size by more
+than a given margin. Unfortunately, there
+is a negative result for the non-robust F statistic used in the
+non-homoscedastic case based on Montiel Olea
+and Pflueger, 2013. There is a negative result for the robust F
+statistic along with conventional critical
+values in Andrews, 2018. However, I should note that
+these negative results for this two-step procedure are based on extreme forms
+of non-homoscedasticity, trying to find a
+worst-case bound and it turns out that the worst-case
+bound is really bad. There is an open
+question of how badly these two-step procedures are actually going to
+perform in practice, which is something I'll
+try to speak to when I get to the simulation
+results later. The last thing I want to note is that implementations for some of these weak-IV tasks are available in the state
+of package weak-IV. Also actually the
+implementations for the Montiel Olea and
+Pflueger procedure that Jim was talking about
+in the last section are available in the Stata
+package weak-IV test. This weak-IV package is not focused on detecting
+weak instruments, but instead on constructing
+robust confidence sets. In particular, they offer
+versions of the CLR, Anderson-Rubin, K, and other tests applicable
+to non-homoscedastic models. They can accommodate
+fixed effects, clustered standard errors. All the usual complications
+are allowed by this package. If you're interested, there
+is a stated journal article describing the previous
+version of the package, which is Finlay and
+Magnusson, 2009. To summarize what we went
+over in this section. There are a number of
+tests and confidence sets available that are fully
+robust to weak instruments. By using these procedures, we can both avoid pretesting bias and avoid
+discarding applications. Moreover, many of these procedures are efficient
+under strong instruments. If we use them unnecessarily, if the t-test
+confidence interval would have been valid anyway, these things don't
+sacrifice power. In the just identified case, there is a very
+strong case for just reporting the Anderson-Rubin
+confidence set. This just identified case covers nearly half of the
+applications in our sample. In the over-identified case, things are unfortunately
+less clear. There is a strong recommendation from the literature to use the conditional
+likelihood ratio test if we assume the errors
+are homoscedastic, but there is not much of a consensus for the
+non-homoscedastic case. Other than that, we
+should use something that's efficient under
+strong instruments. But the good news is that some procedures that
+are efficient under strong instruments
+have already been coded up and are available. In this section, I
+want to talk about open issues and recent research. In particular, the
+two main goals for this section are first to examine the
+practical importance of the issues we've covered so far. The way we're going
+to do this is using simulation specifications
+calibrated to our specifications
+published in AER. Second, we're going to discuss some other open questions and recent research on
+weak instruments. In particular, to assess the practical importance
+of weak instrument issues, we calibrate simulations to these specifications
+from AER data and in particular the sample
+we're using are specifications from articles
+published in the AER, excluding papers
+and proceedings, published between 2011, 2014, and 2018, that first were published in the main text and that, second, allow us to estimate the full
+variance-covariance matrix Sigma of Delta hat and Pi hat. Because we're going to
+need this full matrix to run the simulations. This mostly means papers that had replication
+data available. But there was one case
+where we were able to back out Sigma from
+published results. Altogether, this yields 124 specifications
+drawn from eight papers where it just happens to
+be the case that all of the specifications have only a single
+endogenous variable. All the results I'll
+be talking about here only apply to this case. Before launching
+into these results, I do want to just say again, these results reflect
+an incredible amount of work by Sophie Sun, who's an MIT PhD student and so everything that
+we learned from this is thanks to her and
+she's also a co-author on the review article that we're writing
+to accompany this. Now, to focus
+attention solely on weak instrument issues, I'm going to keep using this finite sample normal model that I already introduced. I'm going to say that the
+reduced form and first-stage coefficients are jointly normal with known variance Sigma. To match these to the AER data, I'm going to fix Beta, Pi, and Sigma at their
+estimated values. As Jim mentioned at his section, we know that OLS coefficients are asymptotically normal with consistently estimable
+variance under what we think are
+reasonable conditions. You can think of this as coming from an asymptotic
+approximation. Nonetheless, those
+approximations are not perfect and finite samples
+and in particular, our results here are
+going to abstract away from both non-normality
+of Delta hat and Pi hat and estimation error
+and the variance covariance matrix Sigma. The fact that when we use
+this in practice we have to estimate our variance
+matrix and maybe that's noisy. These are potentially
+important issues and I'm going to come
+back to them later. Because we're using this finite sample
+normal model though, we shut down any other thing that could be generating
+problems for our IV estimates. We know that any distortions
+we see here have to be coming from weak
+instruments essentially because we've turned off
+every other channel. Using these simulations, I'm going to go back over the various theoretical results
+we saw in the lectures. Let's start with the
+distribution of t-statistics. In particular, we know from theory that t-statistics
+can perform poorly when the instruments are weak in the sense that the distribution
+of t-statistics may not be centered at zero and the
+rejection probability for supposedly five percent t-tests may in fact be much larger. To examine this issue in each of our 124 AER specifications, we're going to simulate first
+the median t-statistic, and second the size of
+five percent t-tests. We're then going to
+plot these results against the effective
+first-stage F-statistic; the average effective
+for stage F-statistic. When we do this, we
+find little action for specifications where
+the average effective first-stage F-statistic
+is bigger than 50. To make the plots viewable, I'm just going to cut things off at effective first-stage
+F-statistic 50. This yields 106 out
+of 124 specification so most of the
+data is down here. This is the first plot. Each dot on this plot
+corresponds to one of these 124 specifications
+published in the AER. The horizontal coordinate
+corresponds to the average effect
+of F-statistic in that specification while
+the vertical coordinate corresponds to the
+median t-statistic. For example, the dot that my cursor is hovering
+around here is a specification
+where the average effective for stage
+F-statistic is about five, and the median t-statistic
+when evaluated, the true parameter
+value is nearly 1.5. This blue line is
+just the 0 line. If the usual approximation to the distribution of
+t-statistics were reliable, all the dots should just
+be clustered at zero. Then this red line is effective for stage
+F-statistic of 10. The main point to
+note in this plot is that if we look at specifications where the average effective for a stage
+F-statistic is small, say less than 10, we see a lot of dispersion
+in the median t-statistic, ranging from say, minus
+1.3 to almost plus 1.5. Since these are t-statistics, some of those are
+pretty big values for the median of a t-statistic. Once on the other hand we look at specifications where the average effective for a stage F-statistic is bigger than 10, we see that the normal
+approximation isn't perfect. It's not the case that all of these dots just lie on the line. But the normal
+approximation is much, much better and
+looks like it gets still better as we look
+at larger values of the average effective
+first-stage f. This plot just repeats
+the same exercise, but now for the size
+of five percent tests. This is what's the
+probability that a five percent t-test rejects
+the true parameter value. We see that there are
+some specifications where the nominal five
+percent test in fact rejects with probability
+north of 30 percent. Again, we see that almost
+all of the action here is for cases where the
+average effect of first-stage F-statistic
+is smaller than 10, and once we look at cases where the average effect of
+F-statistic is bigger than 10, we don't have any
+big distortions, and the distortions gets still smaller as we move
+further above 10. To get back to Steve's question to Jim at the end
+of the last talk, we actually quickly looked at the distribution here for cases where there's only
+a single instrument. It actually turns out that in cases with just a
+single instrument, you don't get any of these
+big distortions up here. Basically, the
+worst-case distortion over cases with a
+single instrument in this specification is
+about 7.11 percent. So very much consistent with Steve's statement
+that basically it seems like the
+cases where you get big distortions are the cases
+with multiple instruments. What do we learn from
+these specifications? First, it does look like weak instrument
+issues are relevant for some specifications
+published relatively recently in the AER. In particular, when we calibrate simulations to these
+specifications, we see some where the
+median t-statistic is far from zero and some where the size of nominal
+five percent t-test is much larger
+than five percent. We also see that these problems appear largely limited to specifications where
+the average effect of F-statistic is small. Specifically, we see no
+large distortions for specifications with average
+F-statistic bigger than 10. In that sense, the population
+rule of thumb that declares the instruments week if the average F-statistic
+is smaller than 10, seems to actually
+work pretty well. I should emphasize though that's very much not a theorem. This is just a statement
+about what we see in these particular
+simulations calibrated to this particular dataset, and does not establish
+that there cannot exist applications where the distortions
+could be much worse. To summarize, weak
+instrument issues definitely look relevant for some recently published
+specifications, but only in cases where the average effect of
+F-statistic is small. Now, given that these weak
+instrument issues basically seen limited to cases with
+small effective F-statistics, it seems pretty tempting to just screen applications on the
+effect of F-statistic. For example, to only
+pursue applications where the effect of F-statistic is bigger than 10 or some other threshold. In fact, the distribution of F-statistics that
+Jim showed earlier in the AER sample suggests that this looks pretty common. We saw a whole lot
+more F-statistics just above 10 than just below 10 which is a pattern
+that you would expect if there's this
+screening going on. Unfortunately though, doing this screening can
+actually induce large size distortions for the distribution of
+published results. To illustrate this, let's go back to our AER specifications. For each specification, we're going to
+calculate the size of five percent t-tests conditional on the effect of F-statistic
+being bigger than 10. That is if the effect of
+F-statistic is less than 10, we throw out that
+draw of the data and we only keep those
+ones bigger than 10. Here is again the same plot, but for this specification, where again on the vertical
+axis I've got the size of five percent t-tests conditional on the effect of F-statistic
+being bigger than 10. Note that the vertical
+axis now runs up to one, whereas previously it
+only ran up to 0.5. In particular, what
+do we see here? We see that there are
+some specifications where after screening on the
+first stage F-statistic, the size of nominal five percent
+t-tests exceeds 60 percent. Worst-case, size distortion
+is actually got worse. If we look around
+this threshold of 10, we also see that the
+specification around here now have size 10-15 percent. Whereas if we go
+back to the case where we just always
+use the t-test, we weren't screening,
+those specifications have size more like
+5-7.5 percent. In addition to these cases
+where it made the size huge, it also made the size worse
+right around the cutoff. I should note actually
+that in this case, if you limit attention to
+the just identified case, so cases with a
+single instrument, that doesn't help you. The worst-case size for specifications in the
+just identified case here I think is
+25 to 30 percent. Even though in the
+just identified case, in these designs, you
+would have been fine just always using
+the t-statistic. By screening on the
+first-stage F-statistic, you mess everything up. What do we learn from this? We see that screening leads to much larger size for
+some specifications. I should emphasize that
+this result is not specific to the effect
+of that statistic. If we instead use the
+non-robust F-statistic or the robust F-statistic, we get exactly the same
+pattern of results. Likewise, it's not specific
+to the threshold of 10. If we move that
+threshold up or down, we get distortions in
+the neighborhood of whatever the new cut-off
+is that we choose. The overall message here
+is that screening on F-statistics can make published
+results less reliable. Now, as I suggested earlier, an alternative to screening
+applications on the effect of F statistic is to compute
+robust confidence sets. In particular, we know that
+these confidence sets are guaranteed to have
+correct coverage regardless of the
+instrument's strength. For illustration here I'll
+just look at Anderson-Rubin, but you could equally
+well look at any of the other procedures
+I mentioned. In particular, I'm going
+to plot the size of Anderson-Rubin task for
+our AR specifications. The point of this plot is just that there's nothing going on. The size is flat at five percent regardless of what the strength of
+the instrument is, which shows that I didn't make a mistake in the derivation
+I did in the last section. Anderson-Rubin test totally
+solves this problem. As I emphasized in
+the last section, it's also efficient in
+the just identified case, so we don't lose anything there. Now for over-identified models, the Anderson-Rubin
+test isn't efficient, but there are a variety of robust tests and confidence sets that retain efficiency in the
+strongly identified case. If I were to repeat
+this exercise with those alternative tests, the picture would be
+exactly the same size flat at five percent, so that didn't seem a very
+efficient use of the slides, but you get the idea. To summarize, what we see here is that robust
+confidence sets eliminate size distortions from week instruments as
+expected from the theory. Now, the last point
+I want to touch on are two-step confidence sets. We know that this robust confidence sets
+as I mentioned earlier, are not widely used in practice. But when they are used, it of10 seems to be because some form of weak
+identification is suspected. When we use the first stage
+F statistic in this way, you could view it as
+an alternative to screening on the first
+stage F statistic. Where if the first
+stage F is big, we're going to report
+the t-statistic, if first stage F is small,
+we're going to use AR. We could use the rule
+of thumb cut-off 10 or we could use these Montiel Olea and Pflueger critical values. Now from theory, we know that this screening may
+introduce size distortions. But as I mentioned earlier, it's not clear how large these distortions are
+likely to be in practice. Again, let's go and look at this in these AR specifications. Here on the vertical axis, I've got the size of the
+five percent two-step test. That if the effective
+F is bigger than 10, reports a t-test. If the effective F is smaller than 10 reports Anderson-Rubin. What we see is there are
+some size distortions. It's not like the
+Anderson-Rubin plot where everything was flat
+at five percent. But those signs distortions
+are pretty small. Mostly just seemed to happen in a neighborhood of
+this cutoff of 10, which is where we
+switch back and forth. In particular, the
+true size is never above 10 percent in
+these simulations and the results are really
+quite similar if we use the Montiel Olea and
+Pflueger critical values, although then the distortions arise in a neighborhood
+of their cutoff. Again, though, I
+should emphasize that these simulation results
+are not a theorem. We have not shown that doing this two-step procedure based on the effect of F-statistic
+is guaranteed to work, though it seems to work
+pretty well in a variety of simulation designs based on recently published
+specifications. What do we learn from
+these simulation results? First, we see that weak
+instruments do indeed appear to be a problem in some
+published specifications. Second, we see that bad behavior appears
+largely limited to specifications with average effective F
+statistic smaller than 10. We also see that screening applications on the effect
+of F statistic can make the problems worse and that robust confidence sets fully
+eliminate size distortions. Finally, we see that if we split the difference
+between screening and using a robust procedure
+and choose whether to report robust confidence based on the effect of F statistic, this introduces
+some distortions, but they're not huge, at least for these
+simulation designs. The simulation results
+actually suggest a couple of theoretical
+questions of interest. In particular, for good
+behavior we observe, is it possible to formalize
+the conditions under which that can be expected
+to hold more generally? Specifically, the theoretical
+justification for the Montiel Olea and Pflueger
+effective F statistic only addresses bias. The derivations Jim
+was going through only really talked about bias. However, in our simulations, it also seems to do
+a pretty good job of diagnosing size distortions. There's a question
+of whether and under what conditions that
+can be formalized. Second, we see that the
+two-step confidence that's based on the effective
+F statistics seemed to work pretty
+well in simulations. But again, there's a
+question of whether and under what conditions
+we can formalize that. Now, an issue I
+promised I would come back to is this
+normal approximation. Specifically, our simulations
+took Delta hat and Pi hat to be normally
+distributed with known variance. The reason we did that
+was to focus attention solely on problems arising from this week instrument issue. However, there are recent
+results from Young 2018, which suggests that this
+normal approximation can be problematic in a number
+of applications. In particular, Young reaches this conclusion based on
+a sample of papers from AEA journals which is larger than but overlaps
+with AER sample. Specifically, Young finds that a small number of observations appear to have a
+large influence on estimates and
+p-values and a lot of these published
+specifications that the variance estimates Sigma hat are often extremely noisy in simulations and that as a result of these noisy
+variance estimates Sigma hat, Anderson-Rubin task can have large size distortions in
+over-identified settings. Taking these results together, they suggest that this
+normal approximation we adopted where we said
+the coefficients are approximately normal
+with known variance, may not be a good one. The coefficients may not be well approximated by a normal and
+perhaps more importantly, the variance estimator
+for Sigma may be very, very noisy and maybe
+we can neglect that. At this stage basically, that raises some questions about this normal approximation. We don't have a solid
+answer to that, but we think these
+results suggest that further exploration
+of the interaction between weak instruments
+and these issues raised by Young are of
+considerable interest. It'd be really interesting
+to know what's the right thing to do here
+and I don't feel like we do. Another point that I promised
+I would come back to is models with more than
+one endogenous variable. Now it turns out that most
+of the specifications in our AER sample only have a single
+endogenous regressor, but 19 out of the 230
+have more than one. Now, most of the tasks
+that we've discussed so far extend to joint tests of the
+dimension of x by one vector Beta in settings with multiple
+endogenous variables. If I want to test
+a joint hypothesis about all of the
+coefficients Beta, I can use these
+procedures to do that. Then I can invert those tasks in order to form
+a joint confidence set, though as we were
+discussing at the end of the last section that test
+inversion can get very, very hard if the dimension
+of Beta is high. Because you have to evaluate
+this task at many points in a high-dimensional space and you run into a cursive
+dimensionality. However, even in the
+low-dimensional case where test inversion is fine, joint confidence sets are rarely reported in strong
+instrument settings. This basically corresponds to reporting the
+confidence ellipsoid, say for both coefficients simultaneously whereas
+in practice we usually, just report
+point estimates and standard errors for each
+coefficient separately. Which in the week
+identification robust setting you could think
+of as decomposing the parameter vector
+Beta into Beta 1 and Beta 2 and saying I want a confidence set
+for Beta 1 alone. Now, if I assume that the instruments are
+strong for Beta 2, this has a simple solution. When I say that the instruments
+are strong for Beta 2, what I mean is that
+the instruments are strong if I treat
+Beta 1 as known. In that case, what I can do is just for each value Beta 1, calculate an estimator for
+Beta 2 taking Beta 1 as the true value and
+then plug that into an identification
+robust test statistic. You can show that that
+basically resolves the problem. I can form the identification of robust confidence set for
+Beta 1 in the usual way. On the other hand,
+if the instruments are weak for Beta 2, that is the parameter
+I don't care about is potentially
+weekly identified. This is actually a pretty
+hard problem econometrically. One option for that case, it's what's called the
+projection method. It can form a joint
+confidence set for the whole vector Beta simultaneously and then collect the implied set of
+values for Beta 1, the parameter I care about. I know the reason this is called the projection method
+is geometrically, you can think of
+it as I'm forming the joint confidence set. Then I'm going to
+project that down on the axis corresponding to
+my parameter of interest. The problem with
+that though is it can have very low power. For example, in the
+strongly identified case, this corresponds to using a squared t statistic against a Chi-squared with degrees
+of freedom equal to the total number
+of parameters, not just the parameter
+you're interested in. To deal with this,
+several recent papers have proposed ways to try
+and improve the power. In particular, Guggeberger
+et al discuss how we can use smaller critical values for the Anderson Rubins
+statistic and the homoscedastic case if
+we're doing projection. While Chaudhuri and Zivot
+and Andrew's discuss ways to modify the projection method
+to try and reduce the inefficiency in the
+well-identified case. Maybe we can't guarantee efficiency under
+strong instruments, but we can at least make
+sure we're not losing too much if the
+instruments are strong. This is, however, very much
+an active area of research. Either this list might be much longer if we looked at
+this in a few years. Now, in this setting, we can turn back
+to implementation. The state of package
+weak iv that I mentioned earlier can compute joint
+confidence sets for Beta, it can plug in estimates for strongly identified
+nuisance parameters Beta 2, and it can also implement
+the projection method. Alternatively, a new state
+of package by Sophie, which is talked about in a forthcoming stated
+journal article called two-step weak iv and it's available on SSC and GitHub, implements the refined
+projection method of Chaudhuri and Zivot 2011. In particular, this allows
+nearly efficient inference on the parameter Beta 1
+under strong identification. It also implements
+two-step confidence sets with guaranteed coverage. What alternative to the
+screening on the S statistic? All of the results
+I've discussed here apply directly
+to linear GMM. If instead of thinking
+about the linear IV model, we want to do linear GMM, meaning GMM with moments
+linear in the parameters, all these results go through. On the other hand, if we want to think about nonlinear models, some but not everything
+generalizes. In particular, there's
+no known analog of the first stage F statistic applicable to nonlinear models. There's not a direct
+generalization of the usual way we try to assess the strength
+of identification. However, an alternative
+approach for detecting weak identification
+in nonlinear models is discussed in Andrew's 2018. The good news though is that
+even for non-linear models, there are a lot of
+different procedures available for robust inference. In particular, most of the procedures that
+I talked about for the linear model generalize directly to the
+non-linear model. 

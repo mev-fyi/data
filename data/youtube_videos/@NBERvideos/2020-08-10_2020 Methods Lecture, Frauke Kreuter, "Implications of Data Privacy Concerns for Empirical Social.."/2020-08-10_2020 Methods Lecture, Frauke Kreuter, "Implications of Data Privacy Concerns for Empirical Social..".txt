@@ -1,0 +1,359 @@
+Frauke Kreuter: This is the perfect orchestration
+that you have there. Danny started us
+high up and then we did a deep dive
+into the tech pod. Now I'm trying to bring us back up and talk about something that we have been thinking about a lot for the
+last two years. Seeing what is going on, not just in the legal world, but in the social science world, pretty much a heated
+debate around the use of differential privacy and its implication
+for social science. For those interested
+in reading up on this, it's freely available on the Harvard Data Science Review, this commentary that I'm
+going to present now. What is interesting is if
+you follow the debate, those social scientists
+that have been vocal on voicing concerns about the application of differential privacy and
+those that argue with them, it becomes clear pretty
+quickly that at the core of this disagreement are
+different beliefs about risks and different beliefs on how to mitigate those risks. At the core, the statistical
+disclosure limitations, as the name indicates, they want to make sure that they can assess the
+risk given current evidence. As you heard in all
+the presentations, differential privacy really
+tries to remove any type of risk even if we currently can't even imagine
+what that risk might be. I think that's very
+important to keep in mind because that goes to show that this disagreement cannot really be assessed
+with evidence. It doesn't matter what data
+are out there currently that are suited for
+an attack or whatnot. If your mission is to
+remove all the risk, even those that
+comes in the future, then you're just in a
+different belief system. I want to post up front for
+everybody to keep in mind. I do think this is a necessary debate and it's
+important that we have it, and it is also important to
+understand what it means for the social scientists that
+might feel threatened or uncomfortable by the development
+that we [inaudible]. For these reasons, in this talk, I want to highlight five consequences of the
+applications that we've just gone through through the
+lens of social scientists, and then discuss this a little bit differently with three different data types, so data use cases in mind. Finally, point to some social science issues in examples that
+you've seen before, but again from a
+slightly different lens, and I want to end with open questions coming
+back to Danny's call, that there are lots of
+open questions that he might be able to
+fund the research on. Looking at these
+five consequences for the army of social
+scientists out there. The first one that I think it becomes pretty
+clear here is that differential privacy
+through the randomization and the various algorithm
+application that you've heard can sometimes create biases when we estimate
+relationships. To quote Danny one more time, not here to revoke licenses, but it does mean that social scientists will
+need to routinely employ measurement
+error corrections to obtain unbiased estimates. To the extent that that
+isn't currently already part of the workflow
+and their doing, or our doing, then
+this is certainly a strong implication for
+the work with these data. Now you've also seen on
+the various examples, and in particular, when Ian was just talking about the different university
+sizes, for example, that there is a precision in sample size issue
+going on here, and the amount of noise over privacy budget
+that we have here. For many of the
+research questions, one can anticipate that
+social scientists will need to drastically
+increase the number of people their sample
+have to achieve both privacy and
+acceptable powerful tests if they want to test, for example, differences
+in means between groups. This is not unusual, we have seen this
+in other ways of social science data collection. Complex surveys have
+this feature tool. We have a trade-off. For sample statisticians
+research have certain sampling
+schemes that enlarge the variance factors
+and require, in a way, a larger sample size
+to create the same power. Now on this notion though, if you think about social
+science data collection, and for some of you who
+are not deeply involved in doing this directly, some figures here you can estimate an average,
+size, lengths, survey in the social
+sciences to cost about $50 per case
+when asked via mail, $250 per case completed case
+when asked per telephone, and about $1,000 completed
+case when asked face-to-face. Now that is a lot of money so any algorithm disclosure
+avoidance mechanism that we apply that have an effect on sample size needs to have
+these costs in mind. I'll come back to this when I talk about the three data types. Very early on in those
+methods section, you heard about Google and Apple and big data applications, there an individual data
+point is comparatively cheap. This is a different scale
+that we're dealing with. Leading me to the
+third implication, that at least researchers
+that study small groups may find the current methods
+to no longer be sufficient, and meaning that they
+will likely require new research designs with
+increased costs if they know down the road
+differential privacy will be used to analyze the
+data or share the data. The fourth one, the
+change in workflow. I already alluded to this a little bit when I spoke about applying
+measurement error models. But also one has to keep in
+mind that pre-processing, data cleaning, and imputations, things that deal at
+least with data that are collected through
+primary data collection such as surveys often do, they also will drain
+the privacy budget. There are still
+places that spend months cleaning
+the data and doing queries and looking for
+inconsistencies and whatnot. A separate methods debate that we're not going
+to have today, whether and to which
+extent that is necessary, there are rumors out for some that there's an
+issue of editing. But by and large, for a lot of big surveys, this is an important
+process and it requires going back
+to the original data. It requires iterative
+procedures. In short, it can, if this is not working on an individual case without showing it any of
+the other cases, but if it is comparing
+individual answers to distribution and then
+fixing, for example, via imputation missing
+data problems, then that is something that counts against that
+privacy budget. If we're not dealing in
+a sample survey case, then the solution of just increasing the sample
+size in order to make up for some
+of the problems, some of the increased
+variances that we have, won't work if we deal
+with census like data because we can't just
+increase the population. Census like data, I mean data that have to us known population of which we
+have records for everybody. This could be
+administrative data or company data
+or what have you, but basically, you do
+analysis on everybody. Which means that for
+social scientists, we might very well be
+in a situation where there's a limit to the type of research question
+that can be answered, which I have to say might not
+necessarily be a bad thing. We've all seen the
+discussion of p-hacking. We have all seen the
+debates on questioning how much should be pre-specified before going into an analysis, and how much exploration
+should be going on. It's certainly a debate
+that in the light of the peer gets
+every new angle. Now we saw this at the very
+beginning and here, again, emphasizing that at the heart, differential privacy is about limiting the sensitivity of one's conclusion on the presence or absence of one
+person in the analysis. Cynthia Dwork and her colleagues
+said already in 2015, one could just think of it
+as a robust statistics, which is also a good thing. However, in the workflow
+that we are used to, outliers can have a
+very different role. At least in many social
+science research applications that I've been involved in, outliers often led to the
+next set of hypotheses for the next set of research
+that people have been doing because they realized
+there is a relationship, there is an omitted variable
+that was so far not clear, but now we're going after
+that and including that. There are angles and versions
+of social science research that need to be changed or likely look slightly
+different in this context. Finally, to release data for general usage with differential
+privacy guarantees, the party that releases
+the data must weigh the privacy requirements against the unforeseen
+usage of the data. Meaning for the
+social scientists, they will have to be explicit and limit
+the type and scope, and the number of questions they ask of any given data-set. We spoke about that before that they're an anticipation of a privacy budget necessary
+for these endeavors. However, if you think about privacy-protecting
+measures such as GDPR, the General Data Protection
+Regulation from the EU, that's already in place. There too is the
+requirement for, at least most data collectors, to be very specific
+on what's done with the data and
+have clear plans. So it's not entirely out of
+scope and out of spirit. Enjoyed if implemented widely, there's no question that this will substantially
+transform social science and researchers will need to use more complex statistical methods to account for
+non-sampling errors, something we probably
+should already be doing in many cases and look
+the other way. Then we will often need
+to increase sample sizes. In particular, if we are
+interested in small groups. We're comparing small groups. Then we mind to have explicitly limit the scope
+and the complexity of the research question and therefore work with more
+precise research questions. Now, again, I'll leave it to the debate and the
+discussion and we might have a couple of
+minutes for that at the end, whether that's a good thing
+or a bad thing but for now, just discussing
+the implications. I want to bring up the questions to the
+panelists and the audience. If the same prediction
+really is needed and should be planned for or if
+different solutions are maybe in order for
+different types of data. So far, we've looked at broad launched scope
+projects and as they come out of the US
+Census Bureau and it's admirable what has
+been done there. A lot of social science
+researchers many of you know, deal with data sets
+that are much smaller. They are samples
+of the population. They deal with
+administrative data sets, launched databases that are currently in statistical
+research data centers. Then increasingly an
+interest in big data or log data or whatever
+your favorite term might be and those likely are quite different in what they
+need in the handling. Let's look at the
+sample surveys first. These are the type of
+data that usually are available right now
+publicly at no cost. They are publicly funded. One big example is the
+European Social Survey, or the World Values Survey, or the General Social Survey. Depending on where
+you're located, you might have your
+favorite of those. Of course, panel
+studies like PSID, or Health and Retirement
+Survey and the like. For these types of data, differential privacy
+in our opinion, on my opinion, representing that here but on behalf of
+me and Danny is risk, it can probably only hurt because looking from a
+social science perspective, no evidence of a
+privacy risks surely. One could imagine one that's
+currently not present, but one has to keep in mind that the sampling itself for the
+small sample size we have here likely creates already
+a form of protection that might be sufficient for the purpose
+that we have here. More importantly though, a lot of these surveys have attitudinal questions in them and for anyone who studies
+measurement error, it's probably no
+surprise to hear that the answers we get
+to these questions are often not as reliable as
+we would like them to be. So it is not necessarily
+likely that we would get the same set of answers from the same person in a different
+source and the like. Of course, to the extent
+that their behavior, or traditionally called PII data available in those surveys. That's a different story
+and I'm only talking about the kind of data as
+they released right now were those removed. The second set is closest to what the examples were
+that we've seen here, Confidential
+Microdata of Launch. Sometimes the entire group sums up the entire population, such as the census or social security
+administration record, texts record, and the like. So far, still beloved model is to have trusted
+researchers that can access the data in a secure
+computing environment and they often pass a lot of impressive number of hurdles and that's exactly
+the reason why these concepts of differential
+privacy are in a way attractive if that were to remove such hurdles
+to use these data. However, for certain
+research problems, we still experience as more and more of these
+administrative data become available, that there is quite a bit off pre-processing still needed even after data are put
+into these enclaves. Because the meaning
+and values of these administrative
+data are often not as well designed
+as they are in service and only when
+doing certain analysis, it becomes clear
+what is missing, what might need to be changed, and which feature
+needs to be generated, and doing that on data that are ready differential private might be another challenge. But as I said, it could be very interactive to think about how differential
+privacy can be used here in a way that
+everything that leaves the enclave fulfills
+the requirements so that the differential privacy is applied to the results, not necessarily to the
+microdata to begin with. I know that that
+does not fulfill the strict requirements
+because there are people working on these microdata in the enclaves but it will
+be interesting to see in a debate if for certain datatypes such hybrid
+will be necessary in order to even know what the actual meaning might be of the values
+they're looking at. Then finally, data that are generated through
+the interaction with platform and devices, such as postings on Facebook to take the prominent example that social science
+one is working on, but also geo-location purchase data transactions
+and their like. They're raw data out of researches availability
+to begin with, so applying the principles of differential privacy will be of great use for social
+science and research. So despite having to increase your toolkit and learning some other aspects
+in this case here I think there's a big
+advantage because it opens access just like it might increase the speed on the research data science and to get access here it will make it possible to get access to data that would
+otherwise never be available for social
+scientists to do research on. So I think that this is paired with the
+fact that these large volumes of data. So the sample size
+problems we have been discussing before
+do not apply here. It's certainly an application
+area where we can only say the social scientists
+community should embrace the development of these differential privacy techniques. Now, this all said, privacy itself,
+we're thinking about privacy is also a social issue. It's not just the process
+of having the data, doing an analysis and
+having an output, but we have the people that
+are providing the data. One of the big
+arguments and certainly when we saw the press release is around differential privacy with respect to the census, one of the hopes
+too was that, okay, maybe we can have a mechanism of protection and insurance that will make it easier
+and more comfortable for people to provide their
+data to researchers. Danny was introducing
+randomized response early on and we got more detailed explanation
+of it as we went along. But it is interesting to see that every statistics
+department I've dealt with, and now we're learning this is to be found
+among economists too. Everyone loves randomized
+response technique as a mathematical tool. It's an incredibly
+charming trick to do. It's convincing and I'd like to teach it when I teach
+questionnaire design and whatnot. The problem is in practice when you try to do
+it in the field, it actually often doesn't work. The problem is, some of the studies that I
+mentioned here have shown that people just don't trust the
+randomizing device. It seems black boxes. It seems weird what
+happens there in for an individual respondent
+no matter how good the math is
+behind the technique, the always best thing is to not reveal the
+sensitive information. Then I don't have
+to trust the math. I can just lie. Then I'm safe. So there is a false negative
+tendency in particular, in settings where the
+questioning happens. In a bit of hard to trust build environment. We have seen these conscience here by a variety
+of researchers. They're certainly setting
+in which it works, but there's no guarantee that respondents will be trusting just because the math
+works out that way. We've also seen this
+tendency to see items and topics as more sensitive if we are self experience
+and negative behavior. These are, as I said, it depends on the mode
+of data collection. What do you see in this chart is the percentage of people that perceive a certain
+item as being sensitive, and these items were also
+their college history, whether someone
+dropped the class, DOF, put on warning
+or probation, or has a GPA of them
+is smaller than 2.5. Those respondent had, according to administrative record, these things happen to them. You see here their values on their perceived
+item sensitivity in inactive voice
+responses were moved the interviewer on a web survey and in a telephone survey. The involvement of a person, maybe such person
+that can explain the randomized
+response technique leads to a greater perception
+of items sensitivity, in particular, among those that experienced this
+undesired behavior. Another piece of
+evidence that it might be hard to change
+the perception no matter how we change
+the technique on these fantastic surveys that the Census Bureau is putting out for years on beliefs about data being kept confidential and the
+federal statistical system. It's a remarkable stable. Actually I'm very curious to see how this only until 2018, but I need to reach
+out to Jenny Charles. I believe then you
+data on this series and certainly big shocks like we experience right
+now might have an effect, but it would be interesting
+to see to which extent the public perception was already sufficiently there
+before COVID started. We only have the new
+information about a DPP being used.
+Hot off the press. Another angle to this,
+also COVID-related. At the core of it is the question on how willing
+people to share information. Are they willing
+to share this only under these strong privacy
+preserving protection while other situations
+in which sharing is, how should I put
+this more desirable? If you read the work
+from Helen Nissenbaum, Privacy and Contexts or her theory or a framework
+on protection integrity. You will see that there's a strong argument made that
+it depends on the type of information they use put to these information and who is
+the recipient in the data. Instead of parameters that shape willingness to
+share and with that, the need for privacy protection, or in some cases even if preference for not
+protecting the privacy. Because then for example, my doctor can help better
+in my medical problems. Now, what do you see here? I only bring this
+with me because it shows how quickly
+this can change. Again with trust in data
+recipient in this case, this is the difference. What do you see in each chunk is the willingness to share personal health information on the left and the willingness for data to be re-used on the right. Data collected by the
+environment forum. The data collection
+happened in March and June. Compared to March, the willingness to share personal health
+information remained relatively stable
+for personal use. But it dropped quite
+a bit on data being re-used to make sure that
+system information is learned, research is being
+done live or not. The willingness was very high at the beginning
+of the pandemic, but then dropped down when in many countries the immediate threat somewhat disappeared. We have seen the same
+in research we did on pre-COVID and measures of willingness to share
+health information to fight virus pandemic and
+then doing this via COVID. The contexts in
+which this matters, so how important is it that you most accurate
+data is used and my data is used for
+certain purpose, will certainly shape
+private perception. Now one more angle on this
+social science perspective on differential privacy and
+how well can that work, If you think about
+typical invitations, here is a survey invitation. We tend to invite participants to join a survey by saying
+your answer matters. It's really important that you as an individual contributor. If we then say the estimate will be the
+same with or without you, as we advertise
+the notion of DP, then that's probably
+not going to fly. Of course, this is an
+exaggerated and we will not do these in
+the introductions. But what I think
+is an important to keep in mind that
+while DP implemented, when implemented revised they changed social science research. Certainly can enhance greatly social science research
+for specific data types. In order to change the
+public perception, we will likely have
+to work a little bit more and not stop at the
+chairman techniques. The public outreach, not
+just among the scientists and thank you Emily for
+creating the forum to do so, to reach a wider
+audience of researchers, but also to the general public. That will be an
+important element if we think it is
+important to get any data release that people
+understand or at least trust enough that the data
+is used to certain way. There are still many
+open questions. For example, what if
+data linkage is desired? What if I have a panel
+survey like P is ID in this downstream data
+that I don't even know yet? What is then the set of data and my criteria for
+applying Epsilon on, in these kind of panel settings. Similar with other
+hierarchical data, such as household data. We saw earlier
+applications where this is starting
+to being tackled. The general question of how to deal with complex
+survey samples is one that needs more attention and we've seen the
+Census Bureau, I know this, making
+great efforts to solicit people to work on. 

@@ -1,0 +1,1583 @@
+Jim: We're delighted to welcome you by long distance
+and the floor is yours. Yacine Ait-Sahalia: Thank
+you very much, Jim. Sorry for not being
+there in person. I've had some
+traveling difficulties yesterday trying
+to get to Boston, but it's really amazing
+that people at MIT and here at the European
+Institute managed to get this working on short notice. [inaudible], thank
+you very much, and Clayton at
+MIT, thanks a lot. When I was a student at MIT, we used to shout LSC sucks
+whenever the technology was failing during the evening
+movie stuff for the students, but you definitely rock instead, so thanks a lot for that. What I'm going to try to do in this lecture is survey some of the recent results that pertain to estimating continuous time models
+using likelihood methods. It's necessarily a small and self-contained topic and I'm not going to make any attempts at completeness of coverage. I'm not going to talk about every possible
+estimation method, nor even within the
+likelihood context will I try to cover
+every possible method. For example, I will
+not talk about simulation-based methods
+except for mentioning them, but there's a wide
+variety of methods. I will also put most of the emphasis on
+frequentist methods, leaving aside the very
+important class of Bayesian inference
+techniques for those models. I will give you a survey
+of one subset of the work that exists there
+that is based on doing close form likelihood
+inference for those models, including diffusions with
+jumps and related models. Where do we start? Like
+most of us at pricing, what I'm going to talk
+about starts with work that Merton
+did in the 1970s. I'm going to go to
+slide number 2 now. That work really of course
+made continuous time modeling one of the main tools that we use in asset pricing. Clearly, theoretical models in asset pricing are based on
+continuous time models. They tend to be written
+in continuous time, at least for some of them. Now, when we write these
+continuous time models, they grade from the
+theoretical standpoint. We can do lots of things,
+we can price derivatives, we have a well-defined
+derivative pricing theory. We can also construct
+optimal portfolios. We can write models for
+all sorts of things that are interesting from an
+asset pricing perspective. The main drawback
+of those models is on the econometric side. If one wants to estimate a model of this type
+with discrete data, without making
+assumptions regarding the nature of the sampling, meaning without
+assuming immediately a discrete approximation
+to the model, then one almost immediately
+hits a roadblock. The reason one hits
+a roadblock is that any econometric method for continuous time models
+or in fact, AD model really requires that one
+knows something about either the density
+function that is implied by the model or
+some function of it. For example, the
+characteristic function or a well-chosen set of moments. If we think about
+in generic terms, any econometric method will necessarily require
+that we end up with an expression of some nature for the
+density of the model. Now, what do I mean
+precisely by the density? These models are
+Markov processes. Really, to characterize
+the model, all we need is the one-step ahead transition
+density from the process. Meaning that because
+they're Markov processes, all we need to do is condition on the current state
+of the process. In other words, if you
+write a diffusion model like the one that you see
+in front of you on Slide 2, this is a Markov process, so the evolution of the state
+vector x going forward in time is conditioned entirely on the current
+value of the state. There's no path dependency. Conceptually, one has a relatively simple
+object to play with, which is the function
+that I write, p_X here. What's that? That's the
+conditional density of going from state X_0 to state X in an
+amount of time Delta. Now, this is
+econometrics and I'm going to focus to a large
+extent on parametric models. There's a parameter vector
+Theta which floats around in the dynamic model so
+that the equation that's stochastic differential
+equation has some unknown parameters, Theta. The rest I'm going to assume you've specified
+that's your model. The functions Mu and Sigma, I'm going to assume that those functions Mu
+and Sigma are known, but there's an unknown
+parameter vector Theta. Now, that's what we're
+trying to estimate, Theta. What you have really
+on that first slide, slide number 2 here is the
+source of the problem. The source of the problem, which basically
+explains why one has to construct methods
+for doing this and it doesn't follow immediately, is that the link between the stochastic
+differential equation DXT, etc., and the
+conditional density is not available,
+so it's broken. In other words, there is a mathematical link
+between the two. One implies the other
+and to some extent, the reverse is true as well, but we don't know how
+that link operates. In other words, if we write
+down our tree model for X, then in general, we won't to know what
+that transition density is and that is really what those methods
+that I will talk about are designed to address, is how do we
+construct or restore that form of link
+between these things. I'm going on Slide
+3 now, please. The density is the object that is basically the
+density function. We are going to assume that at time t we're at level X_0, so there was a batch. Then we're asking by
+time t plus Delta. Now, in most cases
+throughout this lecture, Delta will be the amount of time that separates
+successive observations. In other words, you see the process every
+Delta unit of time, and all the econometrics are going to be done on the basis of data that are observed
+every Delta unit of time. That could be one day, one week, one month, one quarter, whatever, but that's
+the main variable here. That density p_X is the conditional
+density that tells us how we're moving from
+one state to the other. Now, the title of that lecture has
+likelihood inference in it, so if we can go to the
+next slide, please. It has likelihood
+inference in it because there is a direct
+connection between knowledge of the
+density function p_X and being able to do
+maximum likelihood. Within this class of models, we tend to think of
+mathematically of this class of models as being relatively
+different from others. The calculus is different. If we want to differentiate, Ito's lemma tells us, well, there's an
+additional term. These models are different in many ways from other
+types of generic models. On the other hand,
+once we are at the level of doing inference on them or doing
+econometrics on those models, they really behave exactly the same way as anything else. In other words, once
+we have the density, we're going to the maximum likelihood in the
+exact same way. We're going to maximize
+the likelihood. If you want to do GMM, you're going to be able to do GMM using conditional moments. The problem, of course,
+is where do you get those conditional
+moments for this model? Mathematically,
+it's more or less the same problem as getting
+the transition density. Maximum likelihood estimation. I'm on page 4, you have data sampled every Delta
+units of time. You have n of those data points, Delta is not necessarily small, so the constraint here is that we're not necessarily
+using high-frequency data. We could do this with
+macro data, for example. Within those data, we might have random times as long
+as the randomness is not connected to the
+underlying price process. If you think of x as being
+a price or whatever X is, X is the state
+variable of interests as long as the randomness
+in the sample, to the extent that the
+sampling mechanism is random is not connected to X. To make it simple, let's suppose there are
+two independent. There they are independent, then things work
+more or less the same if you have random times. When you run into problems, is if the random times
+are informative about X. One way for this to
+happen, for example, might be if the Granger cause the C process which
+financial data, especially at high frequency, might be something
+one might think is a legitimate concern to have, but in any event, the form of the
+likelihood function is actually quite simple and quite directly linked
+to the function P_x. If we go to the
+next slide, please. The reason being that if
+we use Bayes' rules and the Markov property if
+you write down what is the probability when the parameter vector
+is Theta that you will observe the set of data
+from x_0 to x_n Delta, well, you can condition
+and use Bayes' rule. Take the last
+observation condition on all the previous
+ones and then multiply by the
+joint observations of all the previous ones. Then, because this
+is a Markov process, we have the second
+equality which says that the first conditional
+probability is in fact simply equal to the
+conditional probability using one step
+ahead transitions. That is simply because
+it's Markov process again, given the present, the
+past is irrelevant. We do this, we repeat this, we multiply this and
+what we end up with is a likelihood function
+that is the product of all those one step-ahead, conditional
+probability densities. Time of course at the end, the density of the
+first observation. That is one known, that's
+a very simple calculation. If we know the function p_x, then we can maximize
+the likelihood or equivalency, the
+log-likelihood. If I go on page 6 now, please. On page 6, we look at
+the log-likelihood if we ignore the
+initial observations, which asymptotically we
+can always do because it's asymptotically
+irrelevant if you have n observations and just a
+single initial observations, the statistical weight
+of the first observation washes out when you go
+asymptotics on ends, you can ignore the
+initial observation. You are left with
+maximizing over Theta, the sum of the logs of the transition density,
+the function p_x. This would be very
+straightforward, except that of course, for most models of interest, we don't know p_x in close form. That's where things
+stop. What do we do? Well, one option is to look if we go on the
+next page please, page 7, one option is to
+look at the few models, which of course are
+extremely important in finance because we happen to be able to do lots of calculations with them
+on the theoretical side. If we look at the celebrated
+models in finance, which are basically the
+Black-Scholes model in continuous time,
+I said pricing, that's what I mean by
+celebrated models here. If you look at the
+Black-Scholes model, the Vasicek interest rate model, or the Cox-Ingersoll-Ross model, they are basically effectively
+the three models for which we are able to find the function p_x in close form. If you look at the
+geometric Brownian motion, for example, where Beta and Sigma are constant parameters, then that is going to imply blog normal transition
+density as is well-known. The Ornstein-Uhlenbeck
+process with mean reversion into drift
+and constant volatility, that model would imply
+Gaussian transition densities. Finally, Feller's
+square root process, which is using those CIR model, we would imply non-central chi-squared
+transition densities. Why is it important to know the transition
+density for these models? Well, statistical inference is what I'm going to talk
+about but of course, from asset pricing
+point of view, knowing the transition density opens the door to all
+sorts of applications. For example, if you imagine that those models are written in
+their risk-neutral version, for example, for the
+Black-Scholes model. So you think of Beta as being
+the risk-neutral drift, in this case, simply
+the risk-free rate minus the dividend
+yield of the asset, then knowledge of the
+transition density allows us to price
+derivatives because we can simply integrate the payoff
+of the option against the risk-neutral density. If we know the risk-neutral
+density that corresponds to the model then we have got
+some derivative pricing effectively and that's how we get the
+Black-Scholes formula. What is that's one
+of the many ways of getting the
+Black-Scholes formula. The reason we get close
+form option prices in the Black-Scholes case or
+close form bond prices in the Vasicek CIR cases is because we get effectively those
+densities in close form. Now for many other models
+that are relevant, for example, for interest rates to transition
+function is unknown. These are what you have
+on page 8 now please is an example of some
+models that have been proposed in the
+literature for interest rates, including, for example, the affine models and
+in the general case or the CEV model that
+is often known as the CKLX model that's the
+third model on page 8. On that model, we
+don't know what the transition density is, so we can't do maximum likelihood for
+the same reason that we can't do completely close
+form derivative pricing. We can do these things, for some of these models, up to an integral for example, but not fully in close form. What I'm going to do and
+if we go to page 9 is, I'm going now to survey
+some of the developments of those closed-form likelihood
+expansions that I have been involved with that can be easily
+implemented in MATLAB. There is a MATLAB library that's available for doing
+these things. If you go to page 10 please. In particular, I'm
+going to talk about a variety of extensions
+of the work. Some of the extensions involve doing this in
+the multivariate case, which is particularly
+important for applications in asset
+pricing in models where one may have multiple
+explanatory factors or for term structure models with multiple yields or
+multiple factors, most term structured
+models that are employed these days tend to be
+multi-factor or of course, for stochastic volatility or stochastic mean
+reversion models. I will talk about
+what happens in the general multi-layered
+diffusive case. Now, I will talk also about other extensions that have been developed over the years, if we go to page 11, please. Those other extensions involve models that are
+time inhomogeneous. Those are models where one has time as an
+explicit variable, so the drift changes
+through time or the Sigma function
+changes through time in a way that makes basically the
+model timing homogeneous. They are interest rate models
+of this type, for example, that are often used in
+practice when people are interested in giving rise to a model that
+can be calibrated in real time to say the yield curve or some form
+of bond volatility curve, for example, the cap curve, or simply the bond
+yield volatility curve. Time inhomogeneous models are quite often used
+in that context. Extension concerns models that allow for drugs. So unlike the diffusions
+that I started with, those are models where you
+may have either pure drugs, but you may have a
+diffusive case plus drugs and being able to do
+close form inference, close form for
+likelihood inference for those models is important. In a Bayesian setting, those methods have been
+proved to be useful as well and in particular, there has been work
+involved in how to sample from a mono
+like he's using the transition density as opposed to sampling
+from the model using a discretization of the process. That is
+important when one, for example, uses MCMC type of methods and I've listed a
+couple of references there. Then diffusions finally, concerns situations
+where the process has very specific boundary behavior which are not covered
+by typical expansions. If we go to Page 12 now, I will mention that
+while I will focus on unlikely would inference, basically the method as
+it is also applicable to other estimation
+strategies so you're not tied to maximum likelihood for some reason you want
+to do something other than maximum likelihood for any method that requires an expression for the
+transition density. For example, Bayesian
+methods where one wants to a posterior distribution
+for the parameter vector Theta or more if one wants, as I've mentioned in MCMC, types of scenarios
+where one wants to generate simulated paths at the desired frequency from the continuous time model
+or in methods such as EMM, the direct inference, or simulated efficient
+method of moments. If one wants an auxiliary model that is simpler than the model that one is
+interested in estimating, then one can
+basically write down an auxiliary model and get directly its transition density. You may have, for instance, a very complicated model with latent variables and
+jumps but you may use an auxiliary model that is considerably simpler and has
+a simple density function. Now, other methods that are not directly related
+to econometrics, but rather to financial
+applications, such as option pricing also require the
+transition density. If you write down the
+equation for the state variable not under the
+physical probability measure, but under the risk-neutral
+measure then again, knowledge of the
+transition density of the risk-neutral
+that corresponds to the risk-neutral stochastic
+differential equation allows us to price derivity. Now computations using, if we have a piece of x
+that is density function, that is if we go
+to Page 18 place, if we have a piece of x
+that is in closed form, then the computations
+are going to be really fast because everything is
+going to be in close form. Now, if we compare these two alternative way of getting an
+expression for p_x, there are basically three main alternatives way of doing this. The first one
+consists in solving numerically the partial
+differential equation, which is known as the father of Planck Kolmogorov equation, that p_x must solve. P_x, the density function, solve a PDE whose
+coefficients are functions of the functions
+Mu and Sigma and their derivatives and that
+can be solved numerically and Angelo propose to do
+this some time ago. If one wants to solve for
+one function p_x into perfectly feasible method one can very easily employ an efficient algorithm
+for doing it. The issue for the specific
+case where one wants to maximize the likelihood
+function is that one wants to do this
+as a function of the parameter vector
+and what that means is that every time the
+parameter vector changes. Of course, the parameter
+vector is unknown, as we try to maximize
+the likelihood, one has to move the parameter
+vector along and try to set the parameter vector to a value that will
+maximize the likelihood. As we to try to maximize
+the likelihood, we need to resolve
+numerically for the density function every time the parameter vector changes. We also need to do
+this for each value of the state variables that are in the sample
+and you may have 2, 3, 4,000 observations. For each conditioning value, one needs to get the right likelihood
+function and each value of the
+parameter vector. If you're in a situation
+where the model is unknown to the extent that you don't know the value of
+the parameter vector, then this can actually be quite computationally
+expensive to implement. The second class
+of methods that is available to get to the
+transition density involves simulating paths from the model and then effectively Monte-Carlo integrating the
+density function. The way one Monte Carlo
+integration density function can be refined and
+literature has developed to the point where
+they have a lot of very clever refinance
+that allow us to cut down quite considerably
+on the number of sample paths that
+are required to achieve a given level of
+accuracy but nevertheless, the same problem remains, which is that every time the
+parameter vector changes, one needs to get new
+simulate this whole path. Because the simulations
+themselves depend upon the value of the parameters. As a result, this can
+also be expensive, if we are in the contexts
+where one tries to maximize the likelihood with
+unknown parameter vectors. Finally, one can do binomial or some other three
+types of approximations, trinomial for example, where basically
+when approximates the dynamics of the model. Since the work of Ross in the 70s and as well
+as COX-1 loss. In Rubinstein, we
+have effectively convergence results that
+allow us to basically get to an approximation
+technique that would say that as the
+number of steps in the tree increase and the
+sample size increases, one can basically get convergence to the true
+transition density. Problem again, is the same. Looks like we're back. What I was saying about trees is that they have the same constraint
+in the likelihood context. Which is that if we
+don't know Theta, then we need to redo the tree every time we change Theta, which can happen many, many
+times as we do the search. By contrast, if we have a closed form
+expression for p sub x, then effectively we are going to have to do that
+calculation once and for all, and then it's an
+exact expression that needs to be maximize over Theta. The calculation is done once and for all for a given model. As I said, it's a misnomer
+MATLAB library for existing models with
+models added as requested. How does that work if we
+do go to page 14 please, how does that work at least first in the univariate case? In the univariate case, the intuition is really
+quite straightforward. The intuition is to transform first the data into
+something that is amenable to an
+explicit correction around the leading term. In a sense, it is
+the same intuition as correcting the central
+limit theorem for the fact that the
+sample size into some central limit theorem is really never quite infinity. It's exactly the same intuition. It's not the same technology, but it's the same intuition. If you think about the
+central limit theorem, what does the central
+limit theorem says, it says well, you have some data, you average it, you
+standardize it, and then asymptotically as the sample size
+goes to infinity, this converges to a normal 01. Now, in reality, the sample size is
+never quiet infinity, and of course, they
+are well-developed and well known
+techniques for adding correction terms to the
+asymptotic normal distribution that are typically
+functions of one over n, one over n squared or one
+over square root of n, one over n, one over n
+to the three-halves, et cetera, that are
+Edgeworth expansion, shall you expansions
+of the item. Now, we can correct the central limit theorem
+in this particular case. The analogy here is
+that we're going to transform the data
+into something that has a known
+limiting distribution is the sample size is small. In this case, the
+limiting distribution, at least in the purely
+diffusive case, which is the case where
+we have a pure diffusion. At least in this case, the limiting distribution
+is going to be a normal 01 after
+transformation. Then just like the
+central limit theorem, we attempt to
+correct for the fact that the sample size
+is not infinity. In this case, we're going to
+correct for the fact that the sample interval
+is never quite small. We're going to add
+correction terms that basically allow us
+to correct for this. Now, technically speaking, it's not a network expansion because in a network expansion, we want convergence
+of the expansion as n goes to infinity, as the sample size
+of this infinity, that's when the
+expansion converges, not as we add terms. Whereas here, I don't want convergence as the
+sample size goes to 0, which is the equivalent
+of n going to infinity. I want convergence as
+more and more terms either and I will show you evidence that
+convergence happens very quickly with typically
+two or three times, at least for the
+sample size that we use in practice in finance. If we move to the
+next page, please. We're going to see that we now transformation
+things don't work. If you just say, look, I'm going to say W is
+approximately normal, and so I'm going to say P sub X should be
+approximately normal 0 with mu being the drift giving the mean of the process, and sigma being the
+volatility giving us the standard deviation,
+that doesn't work. In fact, even in the simplest case of a
+Geometric Brownian motion, the Black-Scholes model, the right tail is
+too thick and a simple pension of this
+model around the normal, you can actually
+show quite easily. It's an explicit calculation because the density is now that, that expansion would
+actually diverge. One needs to actually, it's actually important
+to do transformations. If you go to page 16 place, so the main idea is to do successive transformations
+of the data, so going from X to Y to Z, so Z is the original data. That's the model. You
+wrote a model for X. Then you're going to
+transform that to some Y and then to a further Z. Do it in such a way
+that this Z is actually sufficiently close
+to a normal density to a normal random variable. Then what I'm going
+to do is construct a series approximation for the density of Z around
+the normal leading term. Now, from that point, we have an approximation to
+the density to prominence. Now, is not the density
+of the data we have, but this is the density of a
+transformation of the data. We need to do then
+is we need to revert the transformation
+from Z back to X. Then as we do this, that's going to give us an
+expansion for the density, but as we will see, the transformation will actually result in a deformation
+of the normal. The leading term in general of the expenditure will
+actually not be normal. If we go to page 17, please. Let's take a look at the
+first transformation. The first transformation. If you look at the
+equation that is right below by lemma, that equation gives us the dynamic of the first
+transformed variable. X is the original model. Why is the transformation? We transform X into Y. We transform X into Y in such a way that Y doesn't
+have any sigma function. Basically, there is
+no sigma function in front of the Brownian motion
+in the equation for Y. Why do we do this? The reason we do
+this is that what X, distribute the density
+function for X, non-normal. What makes density function
+for X non-normal is the interaction between sigma when Sigma is not constant. When Sigma is not constant, sigma depends on X. X is random and it's the
+mixing that happens in sigma of X DW that makes the distribution of
+X potentially not normal. What we do is the first thing
+we do is we take that out. That's what this transformation, which is sometimes we'll do
+land property transform, but it's been used in many,
+many different contexts. Usually, when you
+want to transform a process into another process. Why is some explicit
+function of X? It's the integral of one
+over sigma all the way to X. By Ito's lemma, if we do this, then the equation for Y would have basically no
+term in front of DW. That's going to make
+it a lot closer to a normal because it takes out the interaction between the Sigma
+function and DW, that is the cause
+of non-normality. Of course, we pay
+a price for this, which is that we mess
+up the drift of Y, compared to the drift of X. If you look at mu sub Y, the last equation on page 17, shows us that we basically have typically a
+complicated function, but it's an explicit
+grid function. Now, Y has a local
+unit variance, but still it's not close
+enough to a normal. The reason it's not
+close enough to a normal is because
+when delta goes to 0, well, I mean by normal, I mean here normal 01. When delta X goes to 0, the density of Y shrinks
+around the initial value Y,0. That's simply because the model, if you give them all or
+very little time to move, then the limiting
+density function is going to be a
+point-mass with the stock. The second transformation
+is simple enough. It simply takes away Y is 0 and divide by rate at which
+that density shinks, which when the process is
+driven by Brownian motion, is simply square root of delta. What I do now is I do a, what one might think of as a
+standardized version of Y. Where you take Y and
+you standardize it by subtracting what you think
+is the starting point Y,0, and divided by square
+root of Delta. Now, I'm not going to require
+that delta equal to 0. If you are willing to assume
+that delta goes to 0, then the distribution of Z will converge to
+that of a normal 01 but I'm not claiming that one needs that delta goes to 0. However, what I'm going to claim is that Z as constructed by the transformation from
+X to Y and then Y to Z is actually
+sufficiently close to a normal 01 random variable for an expansion to be
+able to be constructed for the density of Z
+and then converge. That's what I'm going to do. If we go to page 19, please. If we go to page 19, what I'm going to do is
+I'm going to construct an expansion for the density of Z that is around a normal 01. Now, if you have a normal 01, the natural expansion to
+construct is one that uses water on the
+orthogonal polynomials for the normal 01 density. Those are called the
+Hermite polynomials. The HJ functions that you see up on the first
+equation on that slide. and if I call Phi of Z
+the normal 01 density, a Hermite expansion for the density function
+of Z at order J, meaning which stops
+at the chain, is written as the last
+equation on this page. It's an expansion for the
+density of Z for fixed delta, a fixed starting value Y,0, and a fixed data. It's an expansion, basically that is viewed
+as a function of Z. Now, everything is
+known in this expansion except of course the
+coefficients of the expansion, so far we really
+haven't done anything because we don't know
+what the Italians, hey, coefficients are going to
+be and their functions, the functions of Delta, the functions of Y,0 and
+the functions of Theta. What are we going to do? Well, we're going to need
+to figure out a way of calculating those
+coefficients across form. That's what we are going to need to do and it
+turns out that we can actually get those
+coefficients in close form. If we go to page 20, please, what we have, and that's the key result that comes from using an
+orthogonal or whatnot or normal expansion what we have is the fact that
+the coefficient, if you integrate the expansion against the jth
+Hermite polynomial, the only value in that integral, the expansion is a sum but the only integral in
+that sum that is not going to be 0 is the one that corresponds exactly to
+the jth coefficient. That's because the integral against the normal density of the kth polynomial when
+j is different from k, is actually going to be 0, that's why they are
+orthogonal polynomial. What that means is that we can recover the jth coefficient Eta j as the integral of the jth Hermite polynomial against the density
+of the Z process. Now this is the
+transition density of the Z process and what
+that means is that this is simply the conditional
+explanation of the jth Hermite polynomial taken with respect to the
+law of the Z process. This is the key
+thing that makes it possible to compute these
+coefficients explicitly, which you will be
+doing in a moment. For now, let's just
+assume that we can get those coefficient Eta j
+explicitly for a moment. Really, what I'm
+trying to do here is convey how this
+is constructed. The calculations
+themselves have to be done using some explicit math package like Maple or Mathematica, I did Mathematica myself. But these things can be done in Maple because there's a lot of differentiation
+involved, if you start with
+these are polynomials, if you go to the 4th 5th, 6th polynomials,
+there are powers, we need to take integrals. It's a lot better to do them with something like Mathematica, as you will see once we get
+to some of the expressions. Let's go to page 21, please. Now, let's assume
+for now that we have obtained the expansion
+for P_Z at some order J, where J is the control that will control the number of
+terms in the expansion. We've gotten that far.
+Now what do we do? Well, that's the density for Z, Z is not the data, Z is some transformation
+of the data and it's problematic because
+it's a transformation of the data that
+involves the parameters. If you recall, for example, the integral all the
+way to X, 1 over Sigma. Well, the function Sigma
+contains the parameters, so Z will actually be a transformation that
+is parameter dependent. What that means is
+that there is no way within a likelihood
+maximization search to actually calculate Z if you have X unless you are given
+the parameter values, which defeats the purpose
+because we're trying to find the unknown
+parameter values. What we're going to do is now write down the likelihood
+for Z but somehow figure out the likelihood of X is knowing the likelihood of Z. Now that's easy to do
+because we've done an explicit transformation
+from X to Y to Z and we know what the
+transformation is. If I have the density of X, I can find out the density of Z but I can also do the
+same calculation in reverse and go from
+the density of Z back to the density of X. That's simply using
+the Jacobian formula. The Jacobian formula
+say something as simple as suppose that
+you know the density of Z and now you're looking for the density of Z
+squared, for example. Well, you apply the Jacobian formula and you
+have your answer. There is a determinant
+of the transformation in front and then
+simply the density evaluated at the
+function up to again, the Jacobian determinant
+term in front. The two equations that
+you see here on page 21 are basically the
+Jacobian formula applied going from Z to Y so the equation in the
+middle gives you the density of Y given
+the density of Z. Now that transformation is
+a linear transformation. The Jacobian in front is
+simply 1 over square root of Delta because the transformation
+from Y to Z is linear. The last equation on this
+page is the transformation from Y to X and that transformation is potentially
+nonlinear in fact it is non-linear if the function Sigma in your model
+is not constant, and what I call Gamma on this
+equation, if you recall, was defined a couple
+of slides ago and Gamma was the integral
+of 1 over Sigma. If Sigma is constant, then Gamma is linear because
+if Sigma is constant, if we go to please the
+next slide, page 22, Gamma is the transformation
+going from X to Y and it is a non-linear transformation of X unless Sigma is constant. In which case, of course, if Sigma is constant, Y is simply X divided by the
+constant parameter Sigma but in general, because
+Gamma is not constant, because Gamma is
+not linear in X, in general, actually, we may go back one
+slide to page 21, if you think of the leading
+term of the density for P_Z, the leading term of
+the density for P_Z is Gaussian. So the leading
+term of the density for P_Y is also Gaussian
+because it's P_Z evaluated at the
+linear function of Y but then if we go to
+the last equation, if the leading term of
+the density for P_Y on the right-hand side is Gaussian the leading term of the density of P_X is not going to be
+Gaussian. Because it's going to be a Gaussian evaluated at Gamma
+of X and Theta, so it's what one might call
+a deformed normal density. Because the leading
+term is a normal but evaluated at a non-linear
+function of X. Instead of having e to
+the minus X squared, you're going to have
+e to the minus Gamma squared as the leading term of that particular expansion. If we move up one
+slide please to page 22 and then basically, the last point is what
+I was just saying, which is that in general
+the leading term of the density is
+not going to be Gaussian because
+it's a Gaussian term evaluated at the non-linear
+function of X Gamma. Now, convergence of
+the density sequence. Once we do those
+transformations we have a result that basically
+says that things converge. Things converge uniformly in the parameter vector,
+which is important. It's important because it means that quite easily follows from the fact that if we
+maximize the sequence, instead of maximizing
+the true density, we're going to get
+maximizer that basically shares the property of the maximizer of the true density. Now, what's the maximizer
+of the true density? Well, it's the maximum
+likelihood estimator but of course, it's
+unfeasible because we don't know what P_X is so all we can do is maximize the sequence of
+approximations to it. But because the objective
+function converge basically all that this says is because
+the objective function converges to the true
+objective function, the maximizer of the
+approximate objective function will also converge to the maximizer of the
+objective function, which is the maximum
+likelihood estimator. What we get is the result
+that is on page 24, which is that maximizing the approximate likelihood
+function results in an estimator
+which is going to converge to the exact MLE and it's going to inherit all
+its asymptotic properties if we choose a sequence
+of approximations, well, so we can just
+basically increase the number of terms
+as the sample size increases and what
+we're going to end up with if we go to the next page, actually let's just stick on
+that page 24 for a second, we are going to obtain an
+estimator that inherits all the asymptotic properties
+of maximum likelihood. Now, what are the
+asymptotic properties of maximum likelihood? Well, now, once we have
+the likelihood function, we can forget about the underlying continuous
+time model. This is now a
+discrete time model for the data that
+are right in front of you in that
+equation, Xi Delta. What we have is we
+have effectively a discrete time model. What we have is it's likelihood function
+we maximizing end, it's a Standard Time Series
+Model and we're going to get standard asymptotic
+distributions of course, standard if the
+model is stationary, non-standard if the model is non-stationary, for example, has a unit root or in
+fact is explosive which can easily happen with those type of
+continuous time models. But at that point,
+we basically have the same implications as we
+would in a regular model. In particular, we're going to have the Cramer-Rao
+lower bound, which says that
+estimator is effectively the one with the lowest
+possible asymptotic variance. Now if we go to the
+next page, page 25th, an important caveat is that if we're in a situation where the data are close
+to the unit which happens, for example, quite a bit
+with interest rate data, that mean we went
+over long periods and mean we've had very slowly. For example, if we try to calibrate
+autoregressive of order 1 model to US
+interest rate data. You might be getting
+an AR coefficient, which is 0.95, 0.96, 0.98. It's very close to a unit width. In that context,
+it is well known, thanks in large part to the
+work that Peter Philips has done over the years, that the distribution from the standard asymptotic theory that assumes stationarity, and the model is
+actually stationary because strictly less than one, it's actually can actually be a bad approximation to what
+one gets in small samples. As a result, one may, in this particular situation, want to do small sample
+bias corrections. Peter Philips and Yu as
+well as Tang and Chen have worked out for those maximum likelihood
+approximations. What the small sample
+bias correction would be in the situation where the speed of mean reversion parameter
+is near unit width. It is actually possible to do better or small
+sample asymptotic distributions than what stationary the base
+asymptotic theory would suggest for those maximum
+likelihood estimators. Now, if we go to page 26 now, one thing that I have left out, if we move up a couple
+of slides to 26. One thing that I have left out is how do you actually get the expression for
+the coefficient eta j? What I've said so far assumes that we somehow have a
+way of calculating them, and that's what I want
+to briefly describe now. It turns out that as I've
+mentioned, the expression, unlike an edge with expansion, will actually converge as the
+number of terms increases, not as delta goes to 0. What I'm going to do is
+effectively calculate the coefficients using
+the orthonormality and using the fact that as
+we discussed a moment ago, using the fact that
+the coefficients are conditional expectations of
+the Hermite polynomials. I'm going to tailor expand
+them in delta using the infinitesimal generator
+process and that's the calculation where really
+Mathematical is useful. The reason one needs
+something like Mathematica is that this only requires the
+ability to differentiate, but it requires the ability to differentiate multiple times, and typically multiple
+powers and so on. It's a very mindless calculation from the conceptual
+point of view, but it is unbelievably
+tedious to do even for simple
+model by Pi, I have. Pun intended the likelihood of making a calculation
+error is actually quite high when manipulating
+all those derivatives, even though it's
+straightforward. That expansion is
+what's going to be calculated using the generator, and it's an explicit expression that's simply uses the fact that we can approximate as
+a Taylor series in Delta, any conditional format using to generate out the process. When all the dust settles, and that gives rise
+to those expressions. Now, those are not the
+mathematical expression. Mathematical expressions are
+the ones that implement, what is on page 27, where what we do is
+we take the model, we take the density of y, which has this
+leading normal term with the density Phi that you see right in the
+middle of the slide, then there's an exponential of a term that depends
+upon the drip of y. Then you've got the
+correction times C sub k. The correction terms are
+obtained in close form, so they depend upon
+the drift of y, which now summarizes everything
+since y has no Sigma, so both the Mu and Sigma of x are now in the drift
+of y, which is Mu_y. These are basically
+integrals that one needs to simply
+differentiate and integrate, and that's what Mathematical
+will do for us. Now, of course,
+Mathematica is to be used only once for a given model
+because once we've done it, we have the expressions, and once we have
+the expressions, we put them in MATLAB, then we can just use
+MATLAB or whatever. Fortran and C plus to maximize
+the likelihood function. That's what I've mentioned, that there is a MATLAB
+library that does that. It's doable. Let's go to page 28. Then let me just
+briefly describe what, how it works in
+practice and with other comparison results
+that some people have. There are three
+comparisons studies that people have done
+that I'm aware of, that I've been done by
+Jensen and Poulsen, Hurn and co-authors
+and Stramer and Yan. What I'm showing you on the
+next page, which is page 29, is a comparison of
+the accuracy and computational times from the
+Jensen and Poulsen study. What we have here is
+what it takes to do maximum likelihood using any one of the methods
+that I've described. The three methods
+that I described, plus the error approximation. The approximation basically
+takes the expert says and say dx equals mu
+d t plus Sigma dw, that is approximately a
+normal density function with mean Mu Delta and variance
+Sigma squared Delta. If you do that, you get
+an error approximation. It is extremely simple, you see that it is by far the fastest method to calculate, which you have on the
+x-axis on that page 29 is the time it takes to get to a maximum likelihood
+estimator in a univariate model. If I recall correctly, this graph from
+Jensen and Poulsen is the average obtained from estimating three different
+models for which we know the densities which are
+Black-Scholes or linebacker. Most general and back on track and fellow
+square root of CIR. We can actually get an accuracy number for
+these models because we have a close form expression. What you see is that for alternative methods, it gets computationally very expensive
+to get more accuracy. The reason it gets
+computationally expensive is because of the
+tedious nature of maximizing the likelihood
+function over Theta when you have to recalculate
+the objective function every time you change Theta. That's the key aspect of maximum likelihood that
+will slow you down. By the way, it's the same
+thing that will happen in GMM. In GMM, you will maximize
+the objective function, which is quadratic form
+of the moment functions. It's not the
+likelihood function, it's a quadratic form that
+also needs to be maximized. If the objective function is not explicit with the exact
+same problem occurred. I mean, I don't mean to suggest that this is a maximum
+likelihood specific problem. By contrast, if you
+have any experience nearer which is,
+as you will see, looks like a term of order j equals 0 will work very well, but it's not very accurate, especially once the model has any form of departure
+from normality. If you move away
+from [inaudible], you're going to have problems
+doing an order expansion. You look at the details from the Black-Scholes
+model, for example, there's a very fat right tail in geometric Brownian
+motion, for instance. My contrast here, if we
+just go with three terms, we get something that's
+actually really accurate. Again, that's the Jensen
+and Poulsen study. Perhaps we should
+take a break now before we look at
+the examples and then look at the
+multivariate case and look at the case we jumped, or perhaps we can just
+continue to go through the examples and then
+the break after that. Would you just tell me if it's a good idea to take
+a break now and maybe go on for another 15
+minutes before the break? MALE_1: We'll have 15. Yacine Ait-Sahalia:
+Have 15, okay. Yes. Let's take a look at a few examples and see what
+the density is look like. I'm going to try to get
+you examples that are not the standard ones
+so that one can actually see this happening
+in different cases. Yes, we're now on page 30. That is actually a
+standard example in that it is an often
+newline back process. One has a normal
+density function, and this is simply
+illustrating as the number of terms in delta. This is the order of
+approximation k. This is the absolute maximum
+error one makes and as one S terms, you see that the
+density converters very quickly to the true answer. Next page is page 31, that's the Cox-Ingersoll-Ross
+and most well-known that the density of this is
+actually not normal but in practice, if you
+calibrate the model to us data, you will typically get a density function that one
+is actually not normal. It's not that
+incredibly different from a normal density. This, if you want
+departures from normality, this won't serve with typical US interest
+rate parameter values. This won't actually get us
+to crazy non-normality. Here's another example
+that will actually be more different
+from normality, but still not dramatically. So would be what one gets
+on page 32, please, where you get the CLV model or the CK ALS model with a
+parameter of constants, of elasticity of
+variance gamma here, which was nothing to do with the gamma transformation
+that I do. This is just our
+parameter of the model. It's not that far from
+normal as you can see, the order approximation
+will not do that badly. Of course it's different, but it's not, it
+won't do very badly. But compared to this, we don't have a
+close form density, so we don't know
+this from density, but if you compare
+it to what the expansion with just
+one terminates, you see that you actually do have some visible differences, even approximately plotting. There are some differences between the two densities
+in this particular case. Now, here's another
+model that has some strong nonlinearities
+on page 33. That's the model that I worked with a while ago
+for interest rates, that I propose for
+interest rate that had basically the features of
+having no drift in the middle. In the middle, things
+looked like there was no mean reversion
+whatsoever, so locally things like
+they were [inaudible] but then at the extremes, they were strong
+mean reversions that interest rate is kept
+into a corridor. Which at the time,
+I thought of that as a model of what Central
+Bank would be doing, which is to add whatever. Do nothing when interest
+rates are in the middle, then interest rate
+become either too low or too high within percent. That normal now starts to get bigger deviation
+from normality. What you see here is the
+difference on page 34, the difference between the error approximation
+for that model and the approximation
+for the density for this model with
+just one time. Now you see that maximizing an error approximation for this model would actually get us to really maximize the density that is actually
+visibly different from this particular model. In other words, there can be quite significant differences in the density and it does
+make sense to think about, not just writing down
+the normal density. Now on page 35, please. Now, what I have here is a model that isn't really
+used in finance, but that has some application
+in the physical sciences. It's called a double well model. It's a model where there is
+no volatility structure. I'm on page 35 but there is a trick which is Alpha x minus some other
+parameter x cubed. The drift looks like this. It's a third order
+polynomial, obviously. You have Alpha three positive, Alpha one positive.
+It looks like this. Now weather you notice, if you look at root function, you notice that
+the base function crosses the horizontal
+axis three times. It crosses the horizontal
+axis at minus 1, at 0, and at plus 1. It crosses the
+horizontal axis with a negative derivative
+at minus 1 and plus 1 and a positive
+derivative at 0. What does that mean? Let's suppose you
+start at minus 1. If you start at minus 1, if you x 0 your starting value. If you starting value is at
+minus 1, you start there. Then the Brownian motion, of course, an instant later on, the Brownian motion moves and so the Brownian motion will
+get you away from minus 1. Well, in a model like this, if you go up, if the Brownian motion makes
+you go up from minus 1, you're going to be in the territory where
+the drift is negative. The drift is going to pull
+you back towards minus 1. Which means that
+locally near minus 1, you have mean reversion. Because if you start
+at minus 1 and now the Brownian motion makes
+you go below minus 1, the drift is positive there. Since the drift
+is positive there, that's going to push you
+back up towards minus 1. You have locally because the derivative when the drift
+process minus 1 is negative, for this model, locally you have mean reversion
+around minus 1, which means that minus 1
+is a stable equilibrium. If you start at minus 1, the process is going to start spending some time near minus 1 because it's going to be relatively hard to
+escape from minus 1. On plus 1, exactly the same thing. If you start at plus 1, you go up, the
+drift is negative. You pull back towards plus 1, you go down that plus 1, the drift is positive, you're being pulled
+up towards plus 1. Plus 1 is again stable. By contrast, zero is unstable. If you start at zero, the Brownian motion makes
+you move above zero, the drift is
+positive above zero. When x is above zero, the drift is positive, so you move away from zero. Similarly, if you start at zero and you go to below zero, then the drift below zero is negative and since the drift
+below zero is negative, that pushes you away from zero. Page 36 please. If we go to page 36, what does that imply? That implies the following stationary density
+for this model. This model has a stationary
+density that has this shape. The stationary
+density, by the way, because of the
+local time formula, it is linked to the
+occupational time formula. It's actually linked to the
+amount of time that you should expect the process
+to span near each value, since it's stationary normal, the stationary density
+will tell you on average how much time you should expect the process to span
+the near each value. What you see here is that you have two modes
+in that density near minus 1 and plus 1 and
+you have a track near-zero. The process tends to spend
+more time near minus 1 and plus 1 and
+less time near zero. Now that's the long-term
+density value. The transition densities, which is the one, this is
+the unconditional density. The conditional density, let's take a look
+at page 37 please. If you look at the
+conditional density, let's take a look at
+what happens if we condition to starting the
+process at value zero. If you condition the process
+to start at value zero, you are conditioning
+the process to start at a value
+which is unstable, so the process will want
+to move away from that. If you look at the density that you're getting
+for this model, it's the solid curve on page 37, it looks like a normal
+density except that you took a hover at zero and pushed the mass away
+to the two sides. It's like you take
+a normal density, you push on the mode, and then push the
+mass away to the side because the process doesn't
+want you to stay near zero. That's the density
+that's very far from normal and the error
+approximation of this is where the dashed
+line is that would be approximating this model
+with a normal density. It wouldn't capture
+that particular effect of the hammer on top of zero. Let's go please to page 38. If now we condition on
+starting at say, 0.5, which is right in
+between zero and the unstable equilibrium and plus 1 the stable equilibrium, then we're going to have a very strong skew
+in the density. Because if you start at 0.5, the drift is positive there. Since the drift is positive, the process actually wants
+to move to the right. This is what the conditional
+density tells us. The conditional density
+has this very strong skew with the mode of the distribution
+tilted to the right. Now, the other approximation is actually by
+definition symmetric, but it's symmetric, but the
+mean is tilted to the right. The mean is tilted to the
+right because the mean of the error approximation
+is the drift. The drift of the model
+locally is positive 0.5, so the mean is
+shifted to the right, but it's symmetric, whereas as you see
+that expansion gives you something that
+looks actually much more likely a skewed density and doesn't do a
+tilt of the mean. For now, we go to
+page 39, please. I will stop here
+right before getting into multivariate expansions
+and then the case with jumps and then some
+other applications of those methods for
+conditional densities. It's just about a
+quarter to 03:00. We should resume
+at three o'clock after a 15 minute
+break. Thank you. MALE_2: [inaudible]. Yacine Ait-Sahalia:
+Thanks, David. Now, are you back?
+Do you see me again? MALE_2: Yes. We see you again. Yacine Ait-Sahalia:
+Good. Thank you. The bottom line from the
+applications perspective is that we can still calculate again expansion in closed form for arbitrary
+multivariate models, so we won't have any
+problems with those but the theory involved in getting them depends
+upon two cases. There's one case, which is what I will call
+the reducible case in a moment where
+things were pretty much exactly as in
+the univariant case. Just like usually when we do a multivariate
+extension of something, it involves replacing things by matrices or something by
+matrix inverse things. In the reducible case, that is more or
+less what happens. The second case which is the irreducible case is
+slightly more involved and that you will see
+in the reducible case, things are a bit
+more complicated. Now, if you look
+at the univariate, every univariate
+diffusion could be transformed into one
+with unit diffusion. In the univariate case, the way the expansion was
+factored was we went from X to y and what we did for y, was we created y so that it will have
+a one in front of the w and not a Sigma function. Then we did that so
+that the density could be approximated
+around a normal 0, 1. Now, this is no longer the case for
+multivariate diffusions. If you have a
+multivariate diffusion, it no longer is the case that you can automatically transform a process X into a process
+y within a diffusion. There a lot of models for X for which this can't be done. What I'm going to talk about is talking about diffusion
+for which it is [inaudible] and those
+are the ones that are going to be
+called reducible. The reducible ones are really, so in this case
+reducible is really reducible to unit diffusions. The reducible ones are really the ones for which it's possible to do the same thing as in the univariate case
+and effectively that means we're going to get a
+Taylor series and Delta. In the case of the
+irreducible diffusions, you have to do a
+further expansion step. This time, you have to
+expand the coefficients into not just Delta but
+also X around x_0. It's the first one with a reducible case just
+like in the univariate. What we have is we have
+an expansion in time. Now we're going to have
+an expansion that is both in time and
+in state so it's a double expansion
+but we still have reasonable convergence
+results that still show that it converges
+to the true density. What are reducible diffusions? When we have a
+reducible diffusion, we're going to have a
+reducible diffusion when there is a y such that the matrix Sigma y is the identity matrix so we basically have only
+ones in front. That's the natural
+definition in this case, and if you may go
+to please page 41. If you go to page 41, what we have in the reducible case is
+you have sexual lives. That's just a definition. It doesn't tell us
+very much because all it says is you
+can transform. The problem is that depending
+upon what Sigma matrix your model for X
+has depending upon what model you decide
+to work with basically, so you write the model dx
+equals some drip dt plus some Sigma matrix double u depending upon what
+model do you write, your model may or may
+not be reducible. If we go to page 42, please. Fortunately, there's a relatively
+straightforward test for whether something
+is reducible or not. That test is basically
+based on checking the condition for the inverse of the Sigma matrix that you
+decided to work with. Your Sigma matrix is whatever you decided your model
+was going to be. The inverse of that is Sigma minus 1 and there
+is a condition on the derivative of the inverse Sigma matrix that needs to be satisfied if the process
+is to be reducible. Basically, reducibility
+means that you can tilt the axis of the process X in such a way you
+need to compress one, expand another in such a way that you end up with
+an identity matrix. It can be done or it
+cannot be done depending upon whether that condition on the Sigma matrix is satisfied. This can be checked for
+your model of interest. It's a condition,
+it's what it is. We check it, we see, and then we have two situations, one is rudicible the
+other one is not. Let's go to page 43, please. On page 43, I'm going
+to show you an example which is quite simple which is the case where we have
+a diagonal system. If you have a diagonal system, that means that there are no off-diagonal terms in the Sigma matrix
+and that means that the inverse of the
+Sigma matrix is simply putting one over each diagonal term
+on the diagonal. As you multiply that
+by the Sigma matrix, you get the identity
+by contraction. Now, the condition says, if we now go back to page
+42 for just a moment. We go back page 42,
+the condition says, if you now apply the condition only to the diagonal term, so you set i equals j
+on the left-hand side, the condition says
+the derivative of the inverse of the diagonal term with respect to any
+other k is equal to 0. That's because if k
+is different from i, there is no Sigma i k minus 1. That has to be 0. The derivative of the inverse of Sigma i i with respect to a variable other than I and then the ith viable has to be zero. Which means that each
+diagonal term in the Sigma matrix must depend
+only upon its own viable. Now, immediately you
+see that this will rule out stochastic volatility
+models, for example. Because in a stochastic
+volatility model, if you make diagonal so you
+exclude any leverage effect, so there are no cross
+terms in the Sigma matrix. If you take a stochastic
+volatility model, then by definition, the volatility of say the first variable is a function
+of the second variable. If the second variable is stochastic volatility and
+the first variable is say, the asset price,
+then the volatility, Sigma 1, 1 depends on X_2. That's the definition of a
+stochastic volatility model. In that case, we are
+basically ruling that out or at least meaning that we don't have a reducible model. For example, if you have a
+stochastic volatility model, if we go to page 44 now. If we jump straight to page 44 in a stochastic
+volatility model, on page 44, you
+look at that model, it's a diagnal systems so
+there's no leverage effect and the diagonal terms are dependent only upon X_2 which is the guessing
+volatility viable, then this is not reducible. However, if you include
+off diagonal terms, then it's possible to
+have a reducible model because if the
+stochastic volatility comes from the same
+one in motion, the W_2, and not from
+the W_1 and the W_2. This is all to say that
+some models are reducible, some model are not reducible. Now, what can you do if
+we go to page 45, please? What can you do if the
+model is reducible? The answer is more or less exactly the
+same thing we did in the univariate case with the provision that things
+become matrices and the like but other than that,
+it's the same thing. What we can do is what I'm writing now is I'm writing now directly to avoid having matrices and exponential
+of the like, I'm writing directly
+the expression for the log of the density. If you want the expression
+for the density, you just take the exponential
+of that obviously. One advantage also of expanding the log instead of
+expanding the density is that if you want
+the density for Bayesian or other
+sampling purposes, then by construction, you will get a positive density
+if you take the exponential of the expansion as opposed to the expansion
+of the exponential. That will actually
+automatically produce a positive density if
+that for some reason is something that is particularly relevant in an application
+which it can be, of course. Is particularly when you are
+sampling from a density in a Bayesian setting because
+you're going to solve everywhere in particular
+for that in the tails. If your expansion becomes negative, going to
+have a problem. It's not a problem for
+maximum likelihood but is a problem for frequencies
+likelihood inference but it's a serious problem for Bayesian inference because you may run simulations
+MCMCs for a while. Then boom, they hit a negative
+number and they stop. Exponentiating the expansion, in this case, is
+a good solution. With that form of the expansion, it's exactly the same format, the expansion as we had in the univariate case and we simply need to calculate
+the coefficients. Now, I'm not going to bore you by showing you how it's not, I'm just going to
+give you the result which is on page 46. It's exactly the same
+technology except that is in the
+multivariate case. The coefficients are explicit. Again, you see the
+coefficient of minus one. The reason I put this the
+coefficient of only minus one, we go back one slide for
+just a second, please, to slide 45 is that it's the coefficient
+of one of the Delta. I call this Taylor
+series but it's really Taylor series including a negative power in Delta but other than that, it really is very much
+a Taylor series. The coefficient of
+one over Delta in the reducible case is very much a Gaussian-like
+coefficient. If we go now to page 46
+again, for a second, the coefficient of
+order minus 1 which is the first equation at
+the top of this page, is really basically the
+Euclidean norm of y minus y_0, 1/2 minus 1/2 of that. It's exactly what
+you would get from a Gaussian term with
+a identity matrix. In the reducible cases
+that you will see later, the Euclidean norm
+doesn't work anymore for this because
+when the matrix, when you come
+transform to identity, the expansion will have a
+different form in that regard. For the rest of it,
+the terms come, the calculation of the terms is really very much the same, you just go through
+the calculation into recursive calculation
+we need to integrate. Again, this is the kind
+of [inaudible] does. The MATLAB library
+that now exists, goes all the way to dimension 3, although when I mentioned
+some applications later on, there's two applications
+that I'm aware of that when they calculated those things in dimension four. That's as far as anybody has
+done as far as I can tell. Then the MATLAB library has standard models in dimension 2 and 3 including, for example, the [inaudible] models but also [inaudible] models
+such as to save models and things that the
+other people have employed. Those are the terms. Now, what can we do if we
+go to page 47 now? What can we do in the
+irreducible case? Now, in the irreducible case, what we have to do
+is, unfortunately, more work, and that more work means not having
+information from X to Y. The reason we didn't have
+the transformation from X to Y is well, because
+it's irreducible. If it were, if we had the Y, then we would be in
+the reducible case. What we do is we postulate a form
+for the expansion. That is, what one could have obtained for x if y had existed. Including an unknown
+[inaudible] term, but also a coefficient that
+is a form of 1 over Delta. Now what we're going to
+do is we're going to Taylor expand those
+coefficients in x around x_0. Before, in the previous case, we were able to get
+exact expression for these coefficients. Now, in the irreducible case, all you have to do is get Taylor expansion for those
+coefficients in x around x_0. Now, those expansions in
+x around x_0 must have an order of expansion
+for things to work asymptotically that is linked to the order of the coefficient. In other words, the order
+of the expansion must be, what I'm trying to
+say here is that if you think intuitively, x minus x_0 is the order
+square root of Delta. You want to control the error you're making when
+you're Taylor expanding in x around x_0 such that the error is not any bigger than the next
+term in the expansion. Otherwise, it doesn't
+make sense to include the next term if the next term is smaller than the error you're already
+making in the previous term. That's what one has to do
+in a double expansion. It turns out that
+the coefficients of that expansion can also
+be calculated explicitly. The expressions, in
+order to balance things, we need to expand the kth coefficient at
+an order which is 2K, which is the total
+order of the expansion minus k. Which means that the first-order coefficients
+get expanded at a higher degree of precision than coefficients that are
+further down the road. That's all it takes. Now, again, this is all done and the
+results are in MATLAB, the expressions are there. All that this is doing is really basically saying
+how this is done, but from the perspective of an application, it
+doesn't really matter. Now, in a reducible
+case, these things are, again, determined if
+we go to page 49 now. I'm just keeping pace with 48 and we're going
+straight to page 49. The coefficients are going
+to be determined one-by-one, starting with the leading
+term of order minus one. Then, given the term
+of order minus one, we go to the term of order 0, which is calculated explicitly, and so on, and we
+just keep going. It's a straightforward
+recursive calculation. We'd get the higher
+order coefficient, from the higher-order coefficient
+get the next one, etc. Now, given this, here is an example. Now, in that example,
+you might say, "Why am I starting
+on page 50 with an example which is a
+univariate example?" The reason I'm starting with a univariate example is that even though every univariate
+diffusion is reducible, in some cases you
+may not be able to integrate easily the
+function 1 over Sigma. That is the case for the model that I worked
+with a while ago, which has a complicated
+Sigma function. Because at the time that
+seemed to make sense but anyway, that's a
+complicated Sigma function, but the thing is in front of dW. You cannot integrate 1 over
+Sigma even though it exists, but you don't have a
+name for this function. You can't do it.
+What can you do? Well, if you can't do it, then you can treat it as if it were an irreducible diffusion and Taylor expand
+that univariate model in x around x_0 as well, and that's one possibility. Another possibility, which was done earlier by Bakshi and Ju, was to skip altogether
+the integral of 1 over Sigma and basically
+express everything, leaving that integral of 1
+over Sigma explicitly and showing quite cleverly that would actually
+disappear in the end. So the fact that
+you couldn't get it explicitly as an integral
+didn't really matter but if you want to
+do brute force, you just do the
+irreducible method, and if you do the
+irreducible method, then, bypass the need for the
+X, Y transformation. The expression looks like this. I'm going to show you
+explicitly to get a sense, a feeling for what is actually inside those MATLAB libraries. For this particular model, the expression would
+look like this. There's a coefficient
+of order minus one, a coefficient of order zero, a coefficient of order one. That's because I'm
+taking K equals 1. Since I've found K equals 1, the coefficient of order minus one has to be expanded at two times K minus k.
+That's 2 times plus 1, minus, minus 1, that's 2 times 2, that's 4. This is why at the
+bottom of slide 51, you have a coefficient of order minus one which is
+expanded to order four, so it's C, 4 minus 1. Now, the coefficient of
+order zero is expanded at order zero and the
+coefficient of order one is expanded
+at order zero. Coefficient of order
+zero at order two, coefficient of order one
+at order zero, that again, is 2 times K minus
+k. This is what the coefficients look like for a generic Mu and Sigma function, so this is not just for
+this particular model, the coefficient would
+look like this. Basically you have
+Mu, you have Sigma. You want the expansion,
+in this case, all you need is to plug in whatever your Mu
+and Sigma function was and this gives you the
+coefficient of the expansion. Bakshi and Ju and co-authors
+have a paper where they use expansions using
+that transformation to estimate models for
+stochastic volatility, treating univariate
+models for volatility. It's stochastic volatility, but reading qualitatively
+as observable. These are certainly
+amenable to applications. Again, this thing is in MATLAB. Let's go to page 53. I was just in page 52
+and let's go to page 53 now where I'm now looking
+at a bi-variate model. Probably what is the
+simplest bi-variate model that one could write down, which is a bi-variate
+Ornstein-Uhlenbeck model or a two-factor model with mean reversion in the
+drift constant volatility. Why is it so simple? Because it has
+Gaussian transitions. Since it has Gaussian
+transitions, it's quite easy to
+work with this model. Now, this is model is
+reducible, of course, because the Sigma
+function is constant. You just take the inverse
+of that Sigma matrix, the inverse of that
+Sigma matrix gets you immediately an identity
+matrix in front. There's a y, that's
+the bottom equation in page 53 written
+now in matrix form, you look at an identity
+matrix in front of dW, and then a vector Gamma
+and a matrix Kappa, which are both
+constant coefficients. Y is effectively an
+Ornstein-Uhlenbeck model with identity matrix
+in front of dW. That's what transformation
+gets you the identity. We go to page 54, please. These are the coefficients of
+that particular expansion. This is what they'll
+look like in the term of order minus one is, again, Gaussian term. Then the term of order
+zero looks like this. If you go to page 55, that will give you
+a view for how higher-order
+coefficients look like. We have functions
+of the parameters Kappa and Gamma of the model. That's a likelihood function, in order to maximize
+it, it's very simple. MATLAB would just maximize this over the Kappas
+and the Gammas. The model, the Kappas, and the Gammas are functions of the parameters of
+the original model. These are what came out of the transformation
+from X to Y. That's what these
+things look like. Now, let's look at a
+more challenging model, which is a stochastic
+volatility model that I think actually
+David worked with an exponential
+term in the volatility. What you see here, this is a stochastic volatility model because if you look on page 56, the equation for X_1, the volatility of X_1 depends upon X_2 and there's
+an exponential there. Now, that alone doesn't
+have a closed-form density, but it's also not reducible. The reason it's not
+reducible is what we discussed earlier regarding
+the diagonal case is because the volatility of the first variable depends upon the second variable
+as it would in stochastic volatility
+and diagonal model. It's not reducible, so we have to calculate
+an expansion. What I'm showing you now, actually I'm not showing it here but the expansion for this
+model would actually get us something that we can't do
+because it's not Gaussian and it's not something we
+could do without expansion, if we wanted to do
+maximum likelihood. Of course, we could do other
+things with this model, but if you want to do straight maximum likelihood inverse form, an expansion would
+be a good solution. Of course, I'm leaving
+out also methods that involve filtering
+of volatility, things that David has worked on. I'm literally just talking about closed-form likelihood
+implemented without filtering, without alternative
+methods for this, I'm just doing for
+now X_1 and X_2, you just assume you
+have data for that. That's quite a
+different problem, and David has worked
+on different methods for this particular situation. Let's take a look at
+the case with jumps. The multivariate case, again, things are non-reducible
+or irreducible, and we have an expansion
+in both cases. Again, it's coded in MATLAB
+in dimensions 2 and 3, going to dimension 4. Again, challenging, but it's been done in
+a couple of cases, which I will mention later on. Let's go to page 57 and let's look at expansion for
+models with jumps. Now, that's an
+important, of course, case in practice because
+there's plenty of evidence for jumps in financial data and many models that people use these days is doing true jumps. I'm going to talk only about the case for finite
+activity jumps, meaning that in a
+finite amount of time the process can only generate
+a finite number of jumps. The jump process is basically parameterized by its intensity. That's the function Lambda, that's the function
+that controls how many jumps you would expect
+to see per unit of time. Then once you get a jump, the jump is drawn from a
+particular jump measure, which I will call new and
+is also parameterized. Now, by Bayes rules, the density function depends
+upon the number of jumps. You can condition on how many jumps you
+have and then multiply by the probability of
+getting that exact number of jumps and then sum
+over that, of course. A formula that would
+be very explicit if you're looking at
+Merton's model where you have an arithmetic
+Brownian motion plus a compound Poisson process
+with Gaussian drops. If you look at
+that Merton model, then the convolution is
+going to be explicit, so both terms, the
+density conditional, how many jumps you have is going to be an explicit formula, but what we have here is since we want an
+expansion in Delta, one can remember the order of the terms of how many
+jumps we'll get it. Most of the probability
+is on getting no jumps. The probability of getting
+more jumps as a function of Delta has a specific
+order in Delta. That's the key that makes an extension of the theory
+variable for chance. Since the original expansion is itself a Taylor series in Delta, it's actually possible
+to do an expansion in the case of jumps
+because we can gather terms of similar
+powers in Delta. [inaudible] has shown
+in his work that it is actually possible to
+extend the theory to cover the case
+where we have jumps. He's shown that the
+formula one obtains in this particular
+case looks like this. If yo go now to page 58, please, the formula looks like it begins unlike the density for the case in doubt jumps, and then it adds. So that's the first two
+lines in the formula that you see on page 58. Then you add an additional term, which basically captures
+the role of Charles. In that term, it's interesting
+to notice that it is a straight terms in powers of
+Delta without exponential. You directly get the density
+without the exponential. That is quite natural in that contribution of
+the jumps do not have the Gaussian like terms or deformed Gaussian terms that come from the diffusive case. Because once you have
+jumps, you don't get that. Coefficients are
+announced CK and DK. The DK are the new coefficients that reflect the
+presence of the jumps. They will capture the
+different behavior of the Delta in this
+particular case. We go to Page 59 now. The principle of the
+calculation is also recursive, just like in the diffusive case. John Yu has given explicit
+formulas for doing this. It's interesting to
+note that you do not have any form of separation. You do not have a
+situation where the CK coefficients depend
+only upon Mu and Sigma, and the DK coefficients
+depend only upon the characteristic
+of the drum test. Things are actually
+mixed together in this situation once you
+get beyond Order 1. The leading terms of order
+minus 1 and 0 are separate, so meaning that the coefficient depends only upon
+the diffusive part, the others dependent
+only upon the d part but the other coefficients mix both to defuse its component and the trend component. If we go to Page 60,
+this is, for example, what the formula looks
+like at order k equals 1. Not surprisingly, it's
+a formula that he's also quite easy to implement in Mathematica because
+all you have to do to implement that formula is basically plug
+in the integral, so it's doable in Mathematica. Just like the other one was. It's quite nice that this is available for jump processes. Again, because of the importance of jump processes
+and applications. If we go to Page 59, the tails
+are not exponential in y. Again, there are no exponential
+tails in this case, hence the absence of a factor
+exponential of c minus 1, 1 over Delta in front of the summation of
+the DK coefficient. If you wonder why
+this is the case, it's because the
+tails are no longer driven by a different
+Gaussian tail but again, that
+is a key insight. Again, page 60 gives you the formula mixing
+both of these things. The diffusive under
+jump coefficients, but the leading term of the
+jump part of the expansion looks like what you would guess from the
+Poisson distribution. The first coefficient
+is simply Lambda times the jump measure. It's a natural thing to guess
+from a question of time. The higher-order
+coefficients are obtained recursively from
+the preceding ones. We go now to Page 62, please. I'm going to mention that
+there is a natural connection to the saddlepoint
+approximation from this in that it's possible if you do saddlepoint
+density approximation, it's actually possible
+to do it using more or less the
+same technology by replacing the
+characteristic function by an expansion in Delta. Saddlepoint approximation
+are approximation for densities that are based on the
+characteristic function. That the characteristic
+function is in a moment. The characteristic
+function is the moment of exponential of IXU, where U is just the variable of the characteristic function. Since it's a moment, you can use the generator to Taylor expanding just
+like I did when I calculated the coefficients
+Beta j will now see J Taylor series
+expansion in Delta. One can do exactly the same
+thing for this saddlepoint. That's all I will say about
+saddlepoint approximation. If we go to Page 63, let's think about what
+happens when the state is partially observed,
+not using filterings. Not attempting to create a time series for the
+observed firewall, but doing an alternative to the work that
+David has on that looks instead at the
+unobservable variable by some other variable. Not another variable
+whose path is computed from the path
+of the first variable. Many cases, of course,
+in applications, one has a state vector which
+is only partially observed. Your state vector maybe XT, and you may have S and V. I would write using
+notation here, Madison suggests that
+stock and its volatility. You've served the part
+S of the state vector, you don't observe the part V. Two typical examples. Again, on page 63, stochastic volatility models but term-structure models are
+actually quite challenging in that regard because
+if you implement them in certain ways the entire state vector
+is unobservable. If you write down a model where your factors are
+not yields but are some random factors as is for example done
+in that manual domain then you don't
+observe anything of other state vector because state vector that drives
+the model is totally later. In this case what would you do? In this case you have
+observations on yield of bonds of different
+maturities and the relatively
+naive approach that one can do is to write down in close form the expansion
+for the log-likelihood of the state vector that
+includes everything, includes the observable
+components then every summation state
+by adding variables that are both observed
+and functions of X. You need those dual
+characteristics of having some other things you can add to your state vector that is a function of the state vector, but also is observable. In the stochastic
+volatility case the thing that might be natural would be an option price or an option implied volatility, is going to be a function of the state vector
+and is observable. In the term structure model you might want to
+have as many bonds that have yields that are
+observed as there are factors. Then what you do is you take the observed state to be
+ST and CT. That's meant to suggest the
+stock and the tall and that now becomes a
+function f of xd and Theta, but that function
+of course involves the option pricing
+model in this case. Then write down the likelihood
+for G instead of X. Since G is a
+transformation of X, our friend Jacobian
+formula comes back into play in order to give
+us that transformation. That transformation
+in this case would involve the option pricing model which can be quite complicated. If you have a model that has a computable option
+prices such as say the Heston model then you can do that relatively
+straightforward, but if your model is very
+complicated than getting that Jacobian
+transformation might actually be quite an
+endeavor in itself. This is not by far any
+universal panacea. It's a solution that is only
+applicable in situation where the transformation
+f is not tractable. If the transformation x is not tractable you really have to do filtering or some
+other technique, but you can't really do
+what I'm suggesting here if the transformation
+f is not tractable. In the case of stochastic
+volatility models if you don't use the call option with an implied volatility
+and you are willing to make some further assumptions
+or approximations rather, then it's possible to do some transformations that would allow us to do this in
+a more general fashion. If your volatility
+for example is instantaneously uncorrelated
+with the stock price, I'm now on Page 66. If the volatility is
+uncorrelated with the stock price then we
+calculate option prices by taking expected values of the Black-Scholes
+option price over the probability distribution
+of the total volatility. That was shown in
+particular by Hauling White in the 1987 paper. If not then the price of the option is a
+weighted average of Black-Scholes price
+is evaluated at different prices
+and volatilities, and then it only depends
+upon the distribution of the stochastic volatility
+process that you have used. Term-structure models
+on Page 67 are a different class of
+application altogether. If you look at affine
+models I find models are going to make the
+short-term interest rate which is the equation in
+the middle of Page 67, an affine function of
+the state variables. It will also make the yields affine function
+of the state variables. Now why is that useful? That's useful because
+that means that the function f of x
+t is very simple, it's an affine function. That's a situation where we have explicitly the
+transformation from the unobservable factors to the observable state
+variables which are the yields in
+the affine case. In the affine case, we can very simply do maximum
+likelihood method of just replacing the unobservable
+state variables by observable variables that are direct functions of the
+unobservable state variables. That's what I find models
+would be like, Page 68. Again because in
+our finite models as has been shown in the
+work of Dai and Singleton who have characterized
+all of them up to arbitrary dimensions, it's actually possible to
+do that transformation, and that's been
+done in work with [inaudible] where we went
+all the way to dimension 3. That gives us nine
+canonical models and models of this type
+including dimension 4 actually, so then having calculated
+separately have been used by Thompson and worked by Egorov
+and [inaudible] who have used models in dimension 4, but basically the mentioned three expansions
+are already quite wrong but it's
+possible to do them in dimension 4 as well. In this particular case, one can do this. Lots of course other situations where one could use
+something like this. For example in term
+structural modeling with macro factors you might have factors that are
+directly observable, but you may have inflation. That's a different tradition of term-structure models
+that are more from macro than from the standard
+as the pricing condition, but in that case of course
+things become observable. If things are
+observable than one can go back on our
+feet and we're back in our feet and we can
+directly get the likelihood and do maximum likelihood
+in that context. All this to say that there are potential
+applications of this. The theory that I've
+outlined is messy in a way, but from the perspective
+of an application it's a MATLAB file
+in MATLAB library. One has a model, for
+example the CV model. When one wants to
+estimate the CLV model, just call the right
+MATLAB function, maximize the likelihood,
+you're done. From the perspective
+of an application, it's not any different than maximizing the
+Gaussian likelihood. Well, it's a slight
+exaggeration to say so because the likelihood
+function is more complicated but fundamentally, your computer
+doesn't really care. [inaudible] one doesn't really need to know about why the
+expansion is at this order, or that order, or whether
+it's reducible expansion, or in the reducible expansion. From the perspective
+of an application, it's a straightforward
+MATLAB file that will feed into a maximization routine and when it's
+done that, that. I want to talk now about two further applications that are not maximum likelihood, so if we may go to
+Page 69 please. The two further
+applications are one, specification testing and two derivative pricing and
+then I will conclude. In specification testing what
+one asks is I have data, I have them all. Is this a reasonable
+model for my data? In other words, given my data, currency prices, interest
+rates, inflation, is it reasonable to
+use the CEV model for example or should one use a more complicated model
+with a non-linear drift? Could you use a model
+that has multiple modes? What is the right model? One way to approach that
+question is to go to densities. Let's say you remember
+before the break, I showed you that double bimodel that has a density
+that looked like this, that was bimodal, stationary
+density that was like this, and the transition density that was very skewed and so on. If you look at your
+data and your data look like they have those really far departure from normality, then the idea would
+be that you want a model that can
+produce a density that looks like the density that
+is implied by the data. That's the idea behind
+specification testing. Then one needs to choose a distance measure to see whether those densities
+are close enough, and that's how specification
+test come about. There have been lots of
+different ideas about this. I'm on Page 17. There's been a work by
+Schneider and Egorov, Thompson, Hong and Lee who haven't looked at different ways
+of calculating, proposing, constructing
+test statistics. For example, Hong and Lee have looked at the
+fact that under the null hypothesis where
+your model is correct, the random variables which are the probability density of your data need to be of a sequence of IID
+uniform random variables, and that's something
+that's testable. What they've done
+is they've used the expression for the density that's implied by the model. Evaluate the density
+at that data and check whether the result
+is actually i.i.d uniform. If they are, then that means that you have
+used the right density, that your model
+is the right one. That's a clever idea. It's completely
+non-parametric because the fact that if you
+have the true density, the true density evaluated at the data must be i.i.d
+uniform is universal. There's also been work by Chen and co-authors and whether that it's Corradi and Swason
+that looks at this. An alternative that
+I've worked on recently at the bottom
+of Page 71 or Page 72 looks more naively
+directly at whether the non-parametric density looks like the parametric density. Your model implies a
+parametric density. You have a non-parametric
+density for the model. You compare the two. We used an empirical likelihood
+which we actually borrowed from Chen
+and his co-authors. Basically, we look at the likelihood ratio
+under the null and alternative and
+we look at whether those two densities
+are close together. If you have a parametric model, the method that
+we've talked about earlier gives you the
+expression for the density. You compare that and
+parametric density that gets you there and you can see whether
+these things are different or not.
+That's on Page 72. Now, let's go on Page 73 to my last application before we can discuss and take
+questions and the like is to close-form
+derivative pricing. I'm now on Page 73. As long as Delta
+is not too large, the convergence has an
+upper bound on Delta, which depends upon the model
+and the parameters, etc. Then let's say your model is not under the actual measure but it's under the
+risk-neutral measure. Now, what you have is the transition then
+you're interested in the transition density that corresponds to the risk neutral dynamics that [inaudible]. You've specified your model
+using risk-neutral dynamics. Perhaps you started out with
+physical dynamics and you decided on a particular
+market price of risk and that's how you got your
+risk-neutral dynamics or you started directly with risk-neutral dynamics
+and you don't care about the physical dynamics
+because you're not going to calibrate your model
+to actual data. You will calibrate your model
+directly derivatives data. I mean to actual underlying data you re-calibrated directly
+derivatives data. As is well known for
+my surprising theory, the value of derivatives that
+you call option is simply the expected value of
+the payoff function G under the
+risk-neutral dynamics. In other words, if
+you have a way of getting the
+risk-neutral density, then you have a way of getting the derivative prices
+up to an integral. That's all that it says. If we go to Page 74, that idea was implemented by [inaudible] a long time ago, almost 20 years ago. In fact, 23 years ago almost
+with the following idea. What they did was
+they basically said, look, we want to expand
+the Black-Scholes model. If you go back to
+Page 73, of course, if for P x star you plug in the log normal density and for G you plug in the payoff
+of a call option, on the left-hand
+side you're going to get the Black-Scholes formula. Going back to Page 74, please. If we do this and say the log normal density gives us the
+Black-Scholes formula, how about if we use a more richly parametrize
+family of densities? You might use, for example, a family of density that allows for skewness and kurtosis because you are concerned about large potential deviations in your underlying asset price. What you do is take a family
+of densities that allow for fatter tails than log normal density or for
+some further asymmetries. You plug that in the integral, you're going to
+get a formula for the call price that reflects the parameters of that density. The issue with this though, is that by doing this, you've broken the link between the call option
+pricing formula or the derivative pricing formula and the dynamic model
+for the asset price. If you do this,
+you no longer have a dynamic model for the
+asset price because you've taken the density but you
+don't know that this is the density that corresponds to a particular Mu and Sigma. What you've done is
+you've broken the link, which is perfectly fine if all you want is
+a derivative price but if you want to maintain
+the connection between the derivative price
+and the dynamic model for the underlying asset price, that link is now broken. By contrast, if you take
+your model and you calculate the expression for
+the density that corresponds to that model and you plug that into the integral, then that link is going
+to be maintained. In other words, the parameter
+that you're getting, the option price will be the same parameters that
+were in your Mu and Sigma that you began with in your dynamic model for the
+underlying asset price. If I go to Page 75, that is going to be in
+close form and it's going to make it possible to do
+comparative studies, etc. The big drawback of this though, is that it's an
+expansion in time. It's an expansion in Delta. You will have to
+do this only for relatively short data options because the expansion again, has a finite radius of
+convergence in Delta, which is with
+typical application of the order of a few months, which is perfectly
+fine for doing maximum likelihood inference but not necessarily for doing derivative pricing
+where you might have a one-year or
+five-year option. With a one-year or
+a five-year option, you'd be most certainly at
+reasonable parameter value. You'll most certainly
+outside the radius of convergence of the expansion but on the other hand, it can be implemented with payoff
+functions other than those of call or put options. To wrap up, and that will give us plenty of time for
+questions and discussions, let me conclude by
+saying that on Page 76, that these methods make it
+possible to estimate and test continuous
+time models using financial data consisting of either observation on
+the underlying asset or on derivative prices, if you again expand
+the state space. In either case, the
+transition density of the process is really the
+key variable of interest for this because it's the step
+that allows you to move from the infinitesimal or the stochastic
+differential equation. It's [inaudible] from continuous
+time model or at least maintain the link between continuous time model and the discrete data that we have. If somehow we want to
+maintain that link, then that's a way of doing it and doing
+it in closed form. That moves us a basic
+constraint that basically has limited range of models for which those calculations, whether derivative pricing or maximum likelihood
+when possible. Thank you very much
+for staying with me. Let's just take questions and discuss whatever
+you want to discuss. David: A question
+of clarification. With the reducible models
+when you were talking about the inverse variance
+covariance matrix, is that an element by
+element and version or just inversion of
+the entire matrix? Yacine Ait-Sahalia: No.
+I'm sorry my notation is misleading in
+that what I call Sigma ij minus 1 is the ijth
+time of the matrix inverse. David: Thank you. It's been a long day, so I guess everybody's worn out but I'd like to thank
+you very much, Yacine for coming through despite all your difficulties and giving us a very
+interesting lecture. Yacine Ait-Sahalia: Thank
+you very much David. [inaudible]. Thanks a lot for being there and enjoy the rest of
+the lectures tomorrow. David: Thank you, Yacine. Yacine Ait-Sahalia: Bye. 

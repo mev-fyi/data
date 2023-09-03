@@ -1,0 +1,587 @@
+Jeffrey Wooldridge: This Lecture 4 continues panel data methods, and many of the definitions and issues are the same
+as the linear case, although not
+surprisingly, it's more difficult to handle
+nonlinear models. I think they're just
+about as many slides, so I guess I'll have to
+move along more quickly, but a lot of the
+discussion about exogeneity assumptions
+for linear models carries over here as well. I'm going to start with some stuff that's not
+so new and try to make a bridge to the way that the econometrics literature is thinking about some
+of these issues. There still are large classes of models where we don't have
+any great solutions to handling heterogeneity in a
+completely unrestricted way, and so some simple
+strategies have been used, and again, they have been looked at from a different
+perspective somewhat recently. Before talking about
+estimation issues and model, you have 15 seconds to leave
+the room before it blows. Before we talk about parametric
+models and assumptions, I think it's very useful to just start at a
+general level and ask, what it is we should be
+interested in when we look at nonlinear models
+with heterogeneity? It's easy to say, well, if we have a
+parametric model, we're interested in parameters, and we're interested
+in the distribution of the heterogeneity. But in some leading cases, those two things
+are not separately identified, and in fact, there's no real hope
+of estimating each, and so the issue becomes, what can you learn
+when that's the case? The starting point is to again specify what looks like a contemporaneous
+relationship in one, where d denotes distribution, so this is conditional
+distribution. Conditional on some
+observed covariates, and then some heterogeneity. Again, x at this level could contain lag dependent variables, it does not contain things
+that we would typically call simultaneously
+determined or measured with error because we're
+conditioning on them, so we assume that this is
+the object of interest. Tomorrow when I talk about
+control function methods, we'll look at the kinds of sources of endogeneity
+that this rules out. If we look at some feature
+of this distribution, say the median or the mean, and we're going to focus
+on the mean for now, we're usually interested
+in partial effects and into I just defined the partial effect of the conditional mean function m with respect to one of the x's, and of course, if xj
+is not continuous, then we'd be just
+looking at differences. This partial effect in this nonlinear model depends on the unobserved heterogeneity. Immediately we have
+to ask the question, well, even if we
+knew the function m, and we can observe
+the covariates x, so we know which values are interesting to
+plug-in for the x's, what should we do with the
+unobserved heterogeneity? Of course, if we know a lot
+about the heterogeneity, for example, it's
+complete distribution, then we can plug in
+values that are sensible, like the mean or quantiles, or certain number of
+standard deviations away. One common partial
+effect is to say, well, we're going to estimate
+the partial effect evaluated at the
+average heterogeneity, which would be in Equation 3. Notice that this is defined
+for different values of x's. What we're doing
+here is trying to figure out what to do
+with the heterogeneity, not the covariates, because we know what
+to do with those, we presumably have
+interesting values that we are going to
+eventually plug in. We may do some averaging
+out of those later on, but that's easy, compared to the
+problem of what to do about the unobservables. Now, it's pretty widely understood that evaluating
+something at a mean, and a nonlinear function at a mean and taking the mean of the nonlinear function
+are not the same thing, that they can be
+quite different, so this other quantity of interest which has
+various names, it's been called the
+average marginal effect, the average partial effect. That's in Equation
+4, which says, we have the partial effect as this function of
+unobserved heterogeneity, and now let's just average
+across the population. The first place I
+saw this was in Gary Chamberlain's Handbook
+of econometrics chapter, and he actually made the point that four seemed more
+interesting to him than three, because three essentially
+applies to none of the population if heterogeneity is
+continuously distributed. What are you estimating
+really in three? You're putting in some measure
+of location or as four at least takes a quantity and then averages out across
+the heterogeneity. It just so happens that you can identify four much more often than you can
+in three anyway. As it turns out, focusing on these
+partial effects, where you average out
+the heterogeneity leads to situations where you can
+actually learn something, whereas in Part 3, often we won't
+actually be able to either estimate
+the heterogeneity, the mean of that distribution, or we won't be able to identify
+the regression function, separately from the
+heterogeneity distribution. As I said, there's an identification issue that
+we'll be talking about. This average partial effect
+is closely related to what Blundell and Powell called the average
+structural function, which it's just a
+matter of taking the derivative through the
+expectation, basically. They just say, let's start
+with a mean function, average out the heterogeneity, that of course leaves us
+with a function of x, and then when you
+take the derivative, you just pass it through and then of course you get four. These for practical purposes
+are the same thing. If you want to look
+at discreet changes, then you look at
+discrete changes in the average structural function, instead of taking derivatives. There's some consensus that this is an interesting
+quantity to look at, and certainly one of the
+benefits of it is that, it's something that
+we'll be able to compare across lots
+of different models. Basically in any model
+where we specify the same covariates in the same response
+variable, because now, we have something that just
+depends on observables, and so we can ask, if we use a linear model, what are the partial effects? Usually they don't
+depend on heterogeneity. Then we can compare
+a nonlinear model, average out the
+heterogeneity and see how things stand there. As we know, it's trying to compare parameters
+across nonlinear models is often not an especially
+useful exercise. We know now that you don't just compare
+magnitudes of probate and logit coefficients without doing some adjustment to
+account for the fact that they have different
+implicit scales, and the same thing is
+true here as well. If we go back to standard
+parametric models, how do these
+definitions compare? A very common setup is the so-called index specification, such as in six, where the x's are assumed to appear in a linear index form. So x_t Beta is plus
+c is the index, so everything is additive, but it's inside this
+nonlinear function g, certainly binary
+response models take this form as do lots
+of other models. Then of course the partial effect is just given in seven. If we know that cap g is something like a strictly
+increasing function, then of course its
+derivative is positive and the coefficient Beta j gives us the direction
+of the effect. If we take the ratio of
+the two partial effects, we get the ratio
+of the perimeters. We can't learn about
+the magnitude of the effect of xj specifically, but we can take two continuous
+variables and ask what the relative effect is that's given by the ratio
+of the coefficients, and certainly we get
+the sign of the effect. But if we want to know something about how big the effect is, you can see that in Equation 7, the heterogeneity
+still is there, and we have to do
+something with it. We can try plugging
+in arbitrary values, but we don't know
+whether we would be in the interesting range of distribution of heterogeneity
+in the population. We have to have some way of figuring out what
+to do with that. I shouldn't say we have to. There's actually a huge
+body of literature in econometrics that actively
+asked the question, how do you estimate Beta j without making distributional assumptions
+on the heterogeneity? The idea there is to find ways
+to estimate directions of the effects and relative
+effects without actually trying to seek the
+magnitude of the effect. Lots of semi-parametric, so-called semi-parametric
+literature actually has that as its goal, and I'll mention the distinction again as we go through this. Now, even more recently, Altonji and Matzkin, have defined what they call
+the local average response. Unlike the average
+partial effect, which could be called x post, I suppose a global
+average response, this looks at the
+partial effect. If you look at the piece in Equation 8 without
+integrating it, then that's just what
+I called Theta_ j, as a function of the covariates
+in the heterogeneity. What the average
+partial effect is, is it averages across that
+the entire population, it averages out
+the heterogeneity. Whereas this just averages
+out the heterogeneity at the value of the
+covariates x_t. This is a local effect
+in the sense that, you're just averaging out to heterogeneity for
+units that are, literally in this case at
+the value x_t already. Not surprisingly, this
+is harder to identify, but the Altonji and Matzkin
+paper shows how to do that. I'll talk about that
+a little bit with focusing more on flexible
+parametric strategies. Again, let me just remind you at this point, none of these definitions of partial effects depend
+on whether the x's, we haven't assumed
+any exogeneity assumptions on the middle. Whether we're in
+a dynamic context or even later
+tomorrow when I talk about models with
+contemporaneous endogeneity, how you define the partial
+effects doesn't matter. The question is, how
+do you estimate them? Then, of course, that's where various assumptions
+come into play. I can run through the next
+stuff pretty quickly, I think because instead of
+being stated in terms of conditional means or
+linear projections as in the linear model, we just state things in terms of conditional
+distributions. The strict exogeneity
+assumption is given a nine. Again, once you condition on the heterogeneity
+and the time t xs, none of the other xs matter. The sequential exogeneity
+assumption is 11. Again, now we're
+just conditioning on the xs up to time
+t. It's certainly a more palatable assumption
+in a lot of applications because it's often intended as opposed to the strict
+exogeneity assumption. It really gets hard to allow for just sequential exogeneity
+in nonlinear models. Unfortunately, the strategies
+that are available are basically to write down joint likelihood functions
+and then grind them through. Basically, we'll see
+why that's true there, except in special
+cases there are no simple differencing
+operations that will eliminate the heterogeneity
+leaving you with some simple moments to use in a method of moments procedure. Now, an assumption that I didn't talk about much, actually, I guess I mentioned
+it in the linear case is the so-called conditional
+independence assumption. The reason I didn't mention
+it much in the linear case except by way of referring to making inference robust to serial correlation is because
+it really doesn't affect one's ability to estimate
+either the parameters of the regression function
+or if you wanted to. Well, actually that's not
+true. It doesn't affect that. I suppose it would affect
+the ability to estimate features of the
+heterogeneity distribution. But see the partial
+effects don't depend on heterogeneity
+in that case, and so you're much
+less interested in that particular exercise. In nonlinear models, what's happening over time plays a key role in
+whether you're able to identify the heterogeneity
+distribution and the parameters
+in the model or not. In fact, this is, I think one of the main
+reasons why when you see models such as random
+effects probit used, typically the full set of conditional independence
+assumptions are used because that way you can
+identify all the parameters. The conditions stated
+generally is in 12, which you can relax
+as depending on the nature of the
+model but this is the most straightforward
+statement at a general level. That is the ys are
+independent once you condition on the observable xs and the unobserved
+heterogeneity. Of course, if you don't
+condition on the heterogeneity, then the ys generally won't
+be independent because the heterogeneity is there time period after time period. This is analogous to imposing the no serial correlation
+assumption in the linear case. As I said that assumption
+plays a key role in being able to separate out heterogeneity
+distributions from parameters. Then we basically
+covered this also the so-called random
+effects assumption is that the heterogeneity is
+independent of all the xs. Interestingly, this identifies the average partial effects. Not surprisingly, because in fact the average
+partial effects are obtained from the regression of y on the observed covariates. If the heterogeneity is
+independent of the xs, you can't really
+tell the difference between having heterogeneity there and just having a
+different functional form for the mean response. It'd be quite surprising if somehow you weren't
+able to identify something interesting
+just by adding in heterogeneity that's
+independent of the covariates. The question is, what is the interesting thing
+you can identify? The answer is the so-called
+average partial effects. In the leading cases, as I mentioned, random
+effects probit, random effects Tobit with normally distributed
+heterogeneity, the very standard
+models you can't identify the things you want without conditional
+independence, and then specifying a parametric distribution
+for the heterogeneity. I mentioned before
+a middle ground between so-called fixed
+effects and random effects. This is typically called the correlated random
+effects framework, where you restrict
+the distribution of heterogeneity given
+the xs in some way. Depending on the model and what assumptions you're
+willing to maintain, it leads to different procedures
+but the common feature is that there's some restriction placed on this distribution. There's a trade-off between how flexible a function can
+be in terms of the xs in all of the time periods versus how many restrictions
+you have to place on the shape
+of the distribution. In fact, in 15, I show a restriction
+that is sufficient for identifying the average
+partial effects without further restricting
+the distribution. The key restriction is that the distribution
+of heterogeneity depends only on
+the time average. It doesn't depend on the deviations from that separately. It's a restriction. You don't have to make
+this restriction and linear models to get
+anything interesting. But we'll see the role it plays in estimating
+partial effects. Of course, as you get more
+and more time periods, you can allow heterogeneity to be correlated with more features than just the time average. This is one of the insights
+and the tangent and Matzkin paper is to allow the heterogeneity to be
+related to other features of the time series properties
+of the covariates. You could imagine, instead of just saying the
+heterogeneity depends on the x is through the mean it could depend on them through the mean and the variances or the mean and some
+trend parameters. There are lots of things
+you can do to then free up these restrictions
+that are common in standard applications of the correlated random
+effects probit and Tobit and so on models. Of course, if you have a
+small number of time periods, what you can do is limited. In 16, this just states this general idea that
+if you have a set of, essentially think of these
+as sufficient statistics for the distribution of the
+covariates over time, putting them in w, If you think that you
+have that such that describes the
+relationship between the heterogeneity and the xs then there's a lot you can do. The so-called fixed
+effects assumptions, they really fall
+into two classes. One is that you find a sufficient
+statistic to condition on so that you eliminate
+the heterogeneity, and the other one is
+that you actually treat the heterogeneity as
+parameters to estimate. Or if you're not really
+thinking in that way, you're doing it because
+you don't want to specify anything about the distribution
+of the heterogeneity. I'm going to mention
+hopefully at the end some recent work that's
+been done on that approach. The non-parametric
+identification of the partial effects. I wrote this example. I'm just going to state quickly what the point of
+this example is, it's a probit model with
+unobserved heterogeneity. The standard textbook take
+on this model is that, if you omit the heterogeneity, c, and do a probit, then you get an attenuation bias and the resulting
+parameter estimates. C is independent of x and normally distributed,
+and you think, if this were a linear model, whether you had c in
+the model or not, it could reduce the
+error variance but it wouldn't cause bias
+in any parameters. But in the probit
+model what happens is, you get this scale factor
+once you integrate out c. In 19, it shows the probability that you can actually
+estimate and of course that means you're
+going to estimate these scaled coefficients. It seems a little hard that somehow things break
+down in this case. As I said, how can adding heterogeneity that's
+independent of the co-variance really cause serious problems in this model? The answer is, if you focus on the perimeters themselves, then you're I think
+misled into thinking that there's some bias here
+in what you've done, when in fact if you focus
+on the partial effects, you see that in fact
+the attenuation bias is exactly what
+you want, that is, it is exactly the scaled
+parameters that show up in the so-called
+average partial effects. I suspect not many
+of you have actually worried about this problem
+in estimating a probit, is the unobserved heterogeneity
+that are causing? Well, maybe you have
+but the point is don't because it's a red herring. Focusing too much on parameters is not necessarily a good thing. The other example here is actually one that Gen Han had in a comment on a paper by Josh Angus and he basically
+introduced it as a puzzle, and that is that,
+if you start with the unobserved effects
+probit model in Equation 20, and then basically make the strongest assumptions you possibly could, which is that, the heterogeneity is
+independent of the x's, two time periods, you could even have
+the x's always be one in the second time period and always zero in the first, in fact, that's what
+his example did, but don't make a
+distributional assumption on the heterogeneity. The question is, what can you identify under those
+very strong assumptions except dropping the
+heterogeneity assumption? The answer is, Beta is not
+known to be identified. You can't estimate
+Beta basically. But this seems a little
+strange because you've imposed these strong
+assumptions so the question is, what can you identify? The answer is, you can identify the so-called average
+treatment effect and a consistent estimator is just to use the difference
+in means estimator that we would use from
+a basic difference in difference analysis. The point is, in
+nonlinear models, it's quite easy to get too
+tied up on parameters. There is a third example
+but I'm going to skip by it because I'm not going to
+have a lot of time as it is. The question is then, if we can't identify parameters and sometimes
+it's wrong-headed to try, then what should we be
+doing or what can we do? One answer is that we
+can actually identify the so-called average
+structural function quite generally which means we can identify the average
+partial effects. The argument is quite simple. In fact, it's so simple, I wrote it in three
+lines, and that is, that if we're assuming that the heterogeneity
+distribution, conditional on the x's depends in those x's in a
+restricted way, so in this case on just
+the time averages, then you can use
+a simple iterated expectations argument
+to show well, what you can do is condition
+on those observed things, the x_i bars, and then you average those out. Averaging the x_i
+bars out as easy because those are observed. You take the problem where you had unobserved heterogeneity and you basically turn it into one where the x_i bar in a sense is a proxy for that
+heterogeneity. Of course, if you started
+with a structural model, making that replacement
+does not leave you with a function that's
+going to in any way necessarily look like the
+original model you started off with but the point is don't
+be so uptight about that. Just say, I'm happy
+to estimate this. I should say this
+is a view that is not entirely embraced in the econometrics or
+economics profession. We like parameters. The point is, if we have this, then the way the average
+structural function can be estimated is down in 22. The question is, what? How are we going to estimate this function or this
+conditional mean function? As it turns out again, the argument is simple
+and it's just given in a few lines leading to 23, is that this function
+that we're trying to estimate which identifies the average partial effects is in fact just the mean
+response of y conditional on the observed things which we can estimate using a
+variety of methods. We could use parametric methods, we could use
+non-parametric methods. Once we know that the
+expected value of y, i, t, well actually what
+we're going to use as an equation 24 is the regression of y at time
+t on the x is at time t, and in this case,
+the time averages is exactly the thing that identifies these so-called
+average partial effects or the average
+structural function. This is liberating
+and one should embrace it I think
+and say, look, all I have to do is estimate this thing and then I'm
+going to average out the x_i bars and now I have something I can compare
+across different models. Instead of saying, my parameter is changed by a factor of two, what should I do here when that comparison usually
+isn't very meaningful? As [inaudible] pointed out, you can now identify these
+average structural function by just having one time period as long as you can get the
+time average on the x's. You could do with
+one year of data on y because it's identified by 24. Of course, you can see
+immediately you need some time variation in the x's, this all depends on the fact that you have
+some time variation. You can always add things that don't vary over time but then how you interpret those
+partial effects is not clear. When I mention briefly
+the specific examples, it will suggest things that I think may seem fairly
+radical and that is to just take the usual functional
+forms and make them more flexible in ways that
+make sense and are easy to estimate and then compute, then average out whatever
+sufficient statistics you've conditioned on
+to get to that point. Now with dynamic models, things are pretty much
+the same in terms of what we want to estimate but there's this additional
+issue of how we account for heterogeneity and
+its correlation with the so-called
+initial condition. In the notes, I've
+pretty much focus on the case where
+there's a single lag of a dependent variable
+and then there are strictly exogenous
+explanatory variables. In addition, that's just
+more or less notation, of course, as you add lags, you need more time periods. The question is, how
+does one deal with the heterogeneity
+in this situation? Basically you can try to treat them as
+parameters to estimate. That doesn't work so
+well in dynamic models unless you have a fairly
+large number of time periods. You can try to estimate the parameters using a
+conditioning argument on a sufficient statistic. It's quite a bit harder in the dynamic case
+although there are a couple of specific models
+that you can do it for. Or you can use a correlated random
+effects approach which is to either
+approximate the distribution of the initial condition
+and then model the distribution of the
+heterogeneity given the strictly
+exogenous variables, that's what's in three up there. This is the likelihood
+so you have a joint likelihood conditional which includes the
+initial condition. Or you can specify just this and then once you
+integrate that out, you get a model of the distribution conditional
+on the initial condition. As it turns out, out of these choices, four is the easiest for
+the standard models because you can trick random effects software in
+to estimating for example. At some level the question is, we're trying to model
+the relationship between something
+that's unobserved, conditional on something
+that's observed. It's never restricted
+by the structural model because the distribution of the initial condition could
+basically be anything. You have some choices and you can choose something
+harder or easier. In terms of applications
+to specific models, the so-called unobserved
+effects probit models starts with equation 27. Again, ideally we could estimate the parameters under
+that assumption or the partial effects more precisely but actually that probably should say
+conditional on all the x's, I don't state that separately, so there's a strict
+exogeneity assumption there that isn't evident
+from that equation, and then the so-called
+Chamberlain men lack device is to model this in a, the relationship between
+the heterogeneity and covariates in this way, it looks pretty
+restrictive actually. In fact, Chamberlain
+suggested not imposing the time averages in that equation but allowing the x's and all time periods to depend to have their
+own coefficient. Remarkably, when you do this at least in a
+couple of examples, even though the
+coefficients are all over the place when you actually
+compute partial effects, it turns out that it
+doesn't seem to matter whether you allow for
+that generality or not. In the linear case,
+we know you would get exactly the same answer so
+there's a hint there from the linear case that may be how you do that is not
+terribly important. Then under the assumption
+of cereal independence, you can estimate all
+the parameters and then compute partial effects
+at any value you want. As I mentioned before, the so-called average
+partial effects are identified more generally. The thing we can drop is, we can drop this assumption
+of conditional independence. Chamberlain made
+this point and he of course didn't call it
+a name because why should you call something a name
+that's fairly obvious. But basically in 29, when you work this through, these so-called average
+structural function depends exactly on the scale parameters
+that you would estimate if you just
+do a pooled probit. Instead of doing a full
+maximum likelihood, joint maximum likelihood
+where you would estimate the variance
+parameter separately from the regression parameters, this just estimates the
+scaled coefficients directly. Again, you might say, does that not give you the estimate
+of the thing you want? It does give you estimate
+of the partial effects. You can see in that sum there, what's being averaged
+out as xi bar, xt is the fixed argument
+that we're going to take derivatives or
+changes with respect to, and so the xi bar just
+gets average out there. Those coefficients, those
+scaled coefficients, they can be from a
+random effects probit but they could also just
+be from a pool probate, and then you have dropped
+the assumption which is a pretty strong assumption that conditional
+on heterogeneity, there's no serial correlation. That's the nature
+of the assumption which we see violated
+all the time in linear models so
+there's no reason to think it might be a
+nonlinear models. One comment is that, this all goes through
+if you were to replace the binary response with any variable that could have unexpected value that is
+like a probit function. A fractional response. In that case full analysis is quite difficult because
+it's not even clear how you want to model
+that distribution whereas this method using quasi
+likelihood is trivial basically. More radical suggestion
+would be to say, I just went through
+this argument that you can estimate
+the average effects if you just estimate
+this expected value at the very bottom of the
+slide and average out. Again, so a radical suggestion
+would be to say, look, I don't really know
+the probit function and the structural
+model is right anyway, it's just an arbitrary choice, so why not make the assumption of a probit model
+when it's convenient, that is, one side condition on xi bar instead of on the
+unobserved heterogeneity. Again, I'm perhaps
+extrapolating more than Al tangy that was
+intended but I think this is completely in the
+spirit of saying, look, once you know that the
+partial effects are coming from that thing
+on the left-hand side, averaged out across xi bar, why not just estimate that in some flexible way and then see what the partial
+effects are? Then that becomes comparable, whether you put fee there or the logistic function or some
+more complicated function, everything is going
+to adjust to make in many cases the estimated
+partial effects quite close. Whereas the parameter estimates would of course be
+all over the map. Let me just give
+you one example. There's a table in the notes that lists all of the various trade-offs with
+the different methods. I'm not going to talk about so-called fixed
+effects logit here since I'm really
+running out of time. But let me just give you this one example from the notes. It uses data from [inaudible] on women's
+labor force participation. The variable I've
+focused on here, which of course is being assumed to be strictly exogenous conditional on the heterogeneity is the number of children. If you do a linear
+fixed effects analysis, you get that estimate
+at the bottom. That's the effect
+on the probability of having one more child, of being in the labor force controlling for
+unobserved heterogeneity. If you do pooled probit without accounting for
+the heterogeneity, you get a much larger effect. If you do the pooled version of Chamberlain's correlated
+random effects probit, you get spot on the same estimate you
+get with a linear model. Now this is averaged across all of the x's in all
+the time periods. This is truly one
+reported number. It's an average effect. Certainly this would change
+if you go out in the tales of the distribution
+a little bit. But when people like
+Josh Angus say, "Well for estimating
+average effects, the linear model is
+as good as anything. Well. When you see numbers
+like this which are now comparable across all
+models, you wonder. If you do the full maximum
+likelihood the magnitude of the effect is
+a little bigger, but certainly not
+statistically different from the linear model or the pooled probit with
+heterogeneity. Then the fixed effects logit
+coefficient is minus 0.644. But see you don't know
+really want to do with that. It's a coefficient on
+a discrete variable. It doesn't make
+any sense to say, I should be using logit
+because that number is bigger. That number just tells us
+the effect is negative, and it's not a
+continuous variable so you can't really
+take the derivative and compare it somehow. I like the other
+estimates myself because I want to
+know basically, if you have one more child, what is the effect
+going to be on the probability of
+being in the workforce? I will jump. The same strategy
+as I mentioned, can be applied to
+a dynamic model. In Equation 35, the assumption is
+exactly the one that allows you
+to basically plug in an extended set of regressors and use random effects probit. Now, the argument for being able to do this is a bit subtle, and I invite you
+to read the notes or find the reference
+in the notes on this. But it works out. The method is to add
+the initial condition, and then the entire history of the exogenous covariates
+to the probit, and basically they're estimated by random effects probit. Now in this case
+there's no relaxing the no serial
+correlation assumption. This assumes that
+the dynamic model is correctly specified. Then as it turns out, as luck would have it, the coefficients you
+estimate from this turn directly into average
+partial effects. Just to give you
+an example of what happens with this [inaudible]. Now this model has a
+lag dependent variable, which is labor force
+participation. You want to get an
+estimate of how big the state dependence is. Those are given at the bottom using a model that accounts for unobserved heterogeneity
+as in Equation 35, gives state dependence
+of about 0.26. What that means is, when you look at the probability of being in
+the labor force at time t, conditional on being in the labor force at
+time t minus one. Then you average out the
+unobserved heterogeneity, and the observables,
+it's about 0.26. If you don't account for the
+unobserved heterogeneity, it jumps up to 0.837. This is this widely
+recognized fact that usually if you don't
+account for heterogeneity, what you estimate as the
+amount of state dependence is much stronger than when you do account
+for heterogeneity. Of course, what I can't
+tell you, at least not yet, is how this compares
+two different methods. I also can't tell you the
+standard error for that because the bootstrap takes a long time to run in this case. Well, I guess I'm just going
+to jump way over to comment quickly on this method of so-called estimating
+the fixed effects. There are many more methods for particular non-linear
+models that are described in the notes. Clearly, I was way too ambitious
+for this set of slides. Recently this has
+made a comeback because you can't get very far trying to condition on sufficient statistics to get rid of the heterogeneity. I guess what I'm
+arguing here is, even if you could do that, as in the logit case. If you don't assume a lot, sometimes you can't
+learn very much. I would argue that even if you could find a
+sufficient statistic, the question is, does it
+deliver what you really want? Well, one possibility
+is to just say, we're going to see
+what happens if we estimate the fixed
+effects as parameters, acknowledge that there's this incidental parameters problem, and try to fix it in some way. The problem is we're
+trying to estimate a heterogeneity for
+each individual with a relatively
+short time period. Well, as it turns out, there are some recent results
+on how you can do this. Then you can do a
+Jackknife bias correction. [inaudible] look at the problem of correcting the parameter
+estimates themselves. This is a Jackknife estimator, what you do is you obtain Theta-hat using all of the data. Then you obtain each of the
+things in the summation using all of the time
+periods except the one. If the bias terms have
+the same leading terms, this will eliminate the bias up to order t to the minus two. This is an interesting
+area to watch because people are trying to
+relax assumptions, and unfortunately it's
+only known to work so far for not dynamic models, no serial correlation
+in unobserved errors. Of course the regressors are assumed to be
+strictly exogenous. You can't have time dummies
+in your model either, which to me is quite a
+limitation because as soon as you allow any
+heterogeneity over time, leaving a time period
+out is suddenly going to change the bias
+properties of the estimator. If you have
+stationarity over time, and no dynamics then
+leaving a time period out is going to be fine because you have this
+strong assumption. But as a practical matter, I'm not sure we
+should hang our hats on this yet because it
+rules out dynamics, it rules out time dummies, it rules out serial correlation. As much as we hate to use things like correlated random
+effects models, they have shown to
+be somewhat useful. 

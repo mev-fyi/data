@@ -1,0 +1,600 @@
+Steven Kaplan: Wow. Well,
+thank you very much for that introduction, Jim. We were at the Bureau actually
+at the same time back in, it must have been,
+1979. Good afternoon. I am privileged and delighted to deliver the 2012
+Martin Feldstein lecture, honoring Marty's
+outstanding tenure as president of the NBER. As Jim said, it is
+particularly special because Marty gave me my
+start in economics research. He hired me, I think,
+after my sophomore year to work at the Bureau and then was my undergraduate
+thesis advisor. So, Marty, thank you for
+hiring me, and for inspiring me to become an economist and professor, and for
+helping me along the way. Thanks. Today, I'm
+going to explore some commonly held
+perceptions of executive compensation
+in corporate governance in the United States. There are three general
+themes to these perceptions. The first, CEOs are overpaid and their
+pay keeps increasing. Second, CEOs are not
+paid for performance. Third, boards are not
+doing their jobs. In their influential work,
+Lucian Bebchuk and Fried conclude that flawed
+compensation arrangements have not been limited to a
+small number of bad apples. They have been widespread,
+persistent, and systemic. So in my talk today, I'm going to consider the accuracy of those
+perceptions today. What are the facts
+about CEO pay levels? Is it true that the typical CEO is not paid for performance? How much, and how well do public company boards
+monitor their CEOs, particularly for
+poor performance? More generally, is our corporate governance
+system broken? The recurring question
+that I'm going to try to address is, what are the drivers of
+CEO pay and governance? Is it driven by the power that CEOs wield over their boards, leading CEOs to be
+overpaid? Is pay driven by a competitive market for talent and CEOs are paid appropriately, or is pay driven by some combination of those
+two forces and others? Once I've addressed
+those questions, I'll discuss the implications
+and challenges they pose for researchers,
+boards, and shareholders. Let's begin with the
+first perception. CEOs are overpaid and their
+pay keeps increasing. To answer this, you first have to
+define what CEO pay is. There are two ways
+to measure CEO pay. The first is estimated
+or grant day pay. This includes the CEO's salary, bonus, the value of
+restricted stock issued, and the estimated value of the options issued to
+the CEO that year, usually calculated
+with Black-Sholes or some option
+valuation formula. This is the compensation package that the board has awarded the CEO, and it's the appropriate measure for assessing the effectiveness
+of board governance. It's what the board thought
+they were giving the CEO. The second measure
+is realized CEO pay, and that includes salary, bonus, the value of restricted stock, and the value of the
+options the CEO exercised. Because it uses
+actual option gains, not the theoretical values, the second measure is
+a better measure of the amount of money the CEO actually takes home
+in a given year. Accordingly, realized pay is the more appropriate measure for considering whether CEOs are
+paid for firm performance because the firm's
+actual performance affects the value
+of the options. So now let's see what happens when we look
+at estimated pay. Again, that's the pay awarded
+by the board to the CEO. Let's look at how
+that's moved over time. What I'm going to begin
+with is the CEO of S&P 500 companies
+from 1993 to 2010, using data from Standard and Poor's executive comp database, and these are the largest
+publicly-traded US companies. Now, the question is, what has happened to average estimated CEO pay adjusted for
+inflation since 2000? Has it gone up, has it stayed the same,
+or has it declined? I'd ask you now, but I'm not sure what
+you will answer. Let me tell you what happened when I've asked other
+people this question. I asked this question
+to a group of corporate governance
+academics a little while ago, and I asked the question to a number of public company
+chief financial officers. In both audiences,
+somewhere between, let's say 50 percent and
+2/3, said pay had gone up, about 1/4 or 1/3 said
+pay had been flat, and a few people said
+pay had gone down, and I think the
+perception is pay keeps going up. What happened? While average CEO
+pay increased, and the blue lines are average,
+and the red are median, while average CEO pay increased markedly from '93 to 2000, it declined by over 46 percent from 2000 to 2010. Median CEO pay also increased
+markedly from '93 to 2000, peaked in 2001, and has
+declined slightly since then. That convergence
+between the means and the medians suggests
+that boards have begun substantially less
+likely to award large and unusual pay
+packages to CEOs since 2000. So the first perception
+that pay keeps increasing, which is a perception
+that is widely shared, even by public company
+chief financial officers, turns out to be a misperception. Now, that doesn't mean
+there are still not some outliers, and the
+outliers do receive attention. There were three CEOs
+in 2010 who received over $50 million
+in estimated pay, and those are hard
+to understand, but the means and
+medians indicate that they're outliers and
+not the general rule. The executive comp
+database also includes the CEOs of more than a
+thousand smaller companies, not in the S&P 500, and average estimated
+pay for these CEOs, like those in the S&P 500, increased in the '90s and
+declined in the 2000s. The increases were smaller
+in magnitude than those for the S&P 500, both the magnitude of the increases
+and the declines. Like the S&P 500 CEOs, the average pay levels today of the smaller
+companies' CEOs are roughly where they
+were in 1997 and 1998. So overall, estimated CEO pay, which is the pay that boards
+are expecting to pay, peaked in 2000 and 2001
+for both groups and has returned to roughly the level
+it was in 1997 and 1998. Now, while average
+pay is declined, it remains quite high. In 2010, the average S&P 500
+CEO received estimated pay of just over $10 million, and the median was just
+over 8.5 million. Of course, these
+amounts are much greater than the income of
+the typical US household. Average CEO pay peaked
+in 2000 at over 350 times the median, and while it's declined to
+roughly 200 times, that multiple is
+still very high and undoubtedly contributes
+to the perception that CEOs are overpaid. Now, there's one
+other element to the comparisons of CEO pay over time that are
+worth mentioning. The average lengths
+of CEO tenures today are shorter than
+they were in the past. As a result, comparing
+CEO pay in the 2000s to CEO pay in the
+1990s and earlier is not exactly an
+apples-to-apples comparison. In the '70s, '80s, and mid-'90s, roughly 10 percent of CEOs of large US companies
+turned over each year, not counting takeovers. That implies a typical CEO
+tenure of roughly 10 years. Since 1998, that turnover has increased to about
+12 percent a year, which implies a decline in CEO tenure from 10
+years to eight years. When takeovers are included, the tenures have declined from roughly eight
+years before 1998 to about six years now.
+What does that mean? The decline in tenure
+implies that the CEO job has become riskier, and the shorter expected tenure arguably offsets
+20 percent or so of the benefits of the
+increase in CEO pay over this period. In other words, the
+true increase in CEO pay since the early '90s is lower than the compensation
+figures alone would suggest. Now let's look at how public company CEO pay compares to other
+highly paid groups. Although estimated CEO pay and CEO tenures have declined, it's clear that CEOs are highly paid and have done very
+well since the early '90s. The important question is
+why they have done so well. Gabaix and Landier argue that market forces can explain
+the increases in CEO pay. In a simple competitive model, they show that CEO
+pay will be bid up as firms become larger because larger
+average firm's size increases the returns to
+hiring a more productive CEO. They find, empirically,
+that the increase in CEO pay since 1980 can be fully attributed to the increase in large
+company market values. So Gabaix and Landier, as well as Friedman and Sachs,
+and Murphy and Zabojnic, focused on the market for top executives of
+public companies. But the same people also can become executives at
+private companies, become or remain consultants, and earlier in their
+career, become lawyers, investment bankers,
+or investors. In a competitive market
+for talent, similarly, talented individuals
+should have done as well as CEOs over the
+last 20 or 30 years. This very familiar graph from Piketty and Saez
+shows that there was a big increase in the share of pre-tax income earned by
+very high earners over the last 30 years is consistent with a number of groups
+doing very well. This is the top 0.1 percent
+of adjusted gross income. So what I'm going
+to do is compare the average estimated pay of S&P 500 CEOs to the average adjusted
+gross income of taxpayers in the
+top 0.1 percent. In 2010, the average
+adjusted gross income of that group was just
+under $5 million. It's a group that's
+comparable to the CEOs. Because there are roughly
+140,000 such taxpayers, the 500 S&P 500
+CEOs are not going to affect the average
+for that group. Let's see what happened. Average estimated pay for
+S&P 500 CEOs relative to the average adjusted gross
+income of the top 0.1 percent in 2010 is about
+what it was in 1994. So overall, over this period, S&P 500 CEOs have seen
+very little change in their estimated pay relative to where it was in
+the early '90s. Smaller company CEOs, the non-S&P 500 CEOs, have actually done slightly
+less well over time. In every year, the
+average non-S&P 500 CEO was not in the top
+0.1 percent, and today, they're worse off relative to the top 0.1 percent than they were in
+the early 1990s. So over the last 20 years, public company CEO
+pay relative to the very top has remained relatively constant
+or even declined, and those patterns
+are consistent with the competitive
+market for talent. They're less clearly
+consistent with managerial power
+over that period, and that's because the
+other top income groups, not subject to
+managerial power forces, have seen a similar
+growth in pay. What about the longer term? Right now, I've just
+looked at pay since 1993. What's happened since the 1930s? To do this, I stapled
+together three data sets. I used executive
+comp from 1992-2010. I used data from
+Hall and Liebman for large company CEOs
+from 1980-1992, and I used data from
+Friedman and Sachs for very large public
+companies from 1936-1980. I compared this long time
+series of estimated CEO pay, again, to the average AGI
+of the top 0.1 percent. Over the long term, estimated CEO pay
+relative to the pay of that top 0.1 percent, it's fluctuated but has remained stable averaging
+roughly 1.9 times. The average is actually
+particularly low in the 1980s. It goes to the historical
+average in the mid-'90s, got unusually high
+in the late 1990s, and in 2010, it's returned, more or less,
+to its long-term average. Now the unanswered
+question is, what drives the fluctuations over time? But there seems to be a
+tendency to stay around too. Now the next slide shows the ratio of average
+estimated CEO pay to the average market value of the top 500 publicly
+traded companies. CEO pay was a much
+higher fraction of market value in the '30s, '40s, and '50s than
+it was after 1960. This replicates the findings
+in Friedman and Sachs. Since 1960, however,
+the ratio of CEO pay to market value has remained
+much more stable, averaging about 0.04
+percent of market value, and the ratio in
+2010 was a little bit below that at 0.036 percent. Since 1960, the
+data support this simple Gabaix and Landier story of a competitive
+market for talent. The unanswered question is why the pattern is so
+different before 1960. Taken together, the long-run patterns suggest that a combination of the market for talent and firm scale have been meaningfully
+associated with large company CEO pay
+over a long period of time. I've now compared CEOs to the average income of people
+in the top income brackets. It's also possible to
+compare the pay of public company CEOs to the pay of specific
+groups in those brackets that are likely to have similar opportunities
+or talents, particularly non-public
+company executives, lawyers, and investors. In a recent paper, Bakija, Cole, and Heim studied
+IRS tax return data between 1979 and 2005. They tried to compare
+public company and private company executives
+by distinguishing those who received the majority of their income in salary and wages from those who
+receive the majority of their income from
+self-employment. The former are more likely to include public
+company executives, while the latter are
+most likely to include executives of
+closely-held businesses. What you find is that
+the pay of executives of closely-held
+businesses increased by more than the pay of salaried
+executives from 1979-1993 and again from 1993-2005. Furthermore, closely-held firm executives increased their representation in the top 0.1 percent from just under nine
+percent to 22 percent, whereas salaried
+executives went down, going from 38 percent
+to 20 percent. So what you see there is that the public company executives, those who should have been more subject to managerial
+power problems, saw their pay and relatively standing increase less
+than the executives of closely-held company businesses that are by definition
+controlled by large shareholders
+or the executives and are subject to
+limited agency problems. That's notable
+because many of the salaried and
+closely-held executives presumably come from the
+same general executive pool and presumably can move between public and private
+company employment. Bakija, Cole, and Heim also distinguished among
+taxpayers were employed as business executives and financial executives,
+and in their data, the income share of
+the top 0.1 percent increased by a factor of
+more than three times. The business
+executives increased by roughly the same three times. Taxpayers in finance
+did even better. They increased their
+share by five times. So now lawyers. Lawyers
+at top firms are another useful comparison group, and they're not often mentioned. But much of the work
+these law firms and lawyers provide is
+for corporate clients. Because the law firms
+are partnerships, and their fees are negotiated
+in an arm's length manner, partner pay at those
+law firms is arguably market-based and not subject to managerial power concerns. Lawyers at top law firms
+also are interesting because the general counsels of large public companies are
+often former law partners. Accordingly, there's some
+overlap in the market for talent between top
+executives and top lawyers. What's happened to
+top law partner pay? It's also gone up quite
+a bit from roughly $700,000 a year to almost
+$1.6 million in 2010. The ratio of S&P 500
+CEOs' estimated pay to average profit per partner has remained roughly the same. If anything, that
+ratio has gone down, meaning top law partners have done slightly better relative to public company CEOs over this period. Now, another very highly paid
+is top hedge fund managers. Since 2001, absolute return
+in Alpha Magazine has published an annual rich list of the 25 highest paid
+hedge fund managers. They estimate the annual
+income of those managers from fees and from their capital
+invested in the funds. This is going to overstate the income of the
+hedge fund managers attributable to their employment because it also includes
+some investment income, but nevertheless the results
+are pretty interesting. The average income of the hedge fund managers
+in millions of 2010 dollars grew
+from $134 million in 2002 to a peak of over a
+billion dollars in 2007. Those are obviously
+much higher than the $10 million averages
+for S&P 500 CEOs. To put this in perspective, you can compare the combined
+or total incomes of the 25 highest paid
+hedge fund managers to the total estimated pay
+of the 500 S&P 500 CEOs. Since 2005, those 25 top hedge
+fund managers as a group have earned 2-6 times as much
+as all 500 S&P 500 CEOs. In other words, hedge
+fund managers have done quite a bit better than CEOs. Now, what does all this mean? The point of these comparisons is to confirm that. while public company CEOs earn a great deal, they are not unique. Those other groups with similar backgrounds
+and talents, private company executives, corporate lawyers, investors, and others, have seen significant pay
+increases where there's a competitive market
+for talent and no managerial power
+problems exist. As some people look
+at the higher CEO pay as evidence of managerial
+power or capture, you have to explain why these other professional
+groups that don't have those issues have had a similar or even
+higher growth in pay. Instead, it seems more likely that a
+meaningful portion of the increase in public
+company CEO pay has been driven
+by market forces. Now, what are those
+market forces? In our work, Josh Rauh
+and I concluded that some combination of
+changes in technology, along with an increase in the scale of enterprises
+and finance, have allowed more talented
+or fortunate people to increase their productivity
+relative to others. That seems relevant
+for the increase in pay of lawyers and investors. Technology allows
+them to acquire information and trade large
+amounts more efficiently, as well as CEOs, where
+technology allows them to manage very large
+global organizations. Under this view, as
+firms have become more valuable, and
+technology has allowed CEOs to
+affect that value, boards have responded
+by spending more to attract and motivate talent. So that's pay levels. Now, let's move to the
+second perception that CEO pay is not tied
+to firm performance. According to the
+managerial power story, managers control
+their boards, and boards are too friendly
+to management, and boards do not pay
+for performance or fire CEOs for
+poor performance. Now, the key question
+on pay is whether CEOs who perform better earn
+more in realized pay. Again, realized pay includes
+option exercises and is a better measure of what
+the CEO actually takes home. For each year from
+1999-2004, in our paper, Josh Rauh and I took all the firms in the
+executive comp database, sorted them into five
+groups based on assets. We did that because it's well-established that
+larger firms pay more. Within each size
+group for each year, we sorted the CEOs
+into five groups based on how much compensation
+they actually realized. Then we looked at how
+the stocks of each group performed, relative
+to their industry, over the previous three years. What we find in all the
+different size group is that realized
+compensation is very highly related to firm
+stock performance. So in every group, firms with
+CEOs in the top quintile of pay are the top
+performing quintile, relative to their industries, and firms with CEOs in the bottom quintile of pay are the worst-performing
+quintiles relative to their industry. The magnitudes are
+relatively large. The bottom line from
+this is that there is pay for performance when
+you look at realized pay. Similarly, Friedman
+and Sachs studied the correlation between executive wealth and
+firm performance, and they find that CEO wealth has been strongly tied to firm performance
+since the 1930s and that relationship
+strengthened considerably after the mid-1980s. Kevin Murphy, in
+his recent survey, reports that the
+equity at stake, which is the change
+in CEO wealth from a one percent change
+in stock price for the median S&P
+500 CEO was almost $600,000 in 2010 and has been at that level or higher in all
+but one year since 1998. Overall, the evidence is consistent with
+realized CEO pay and CEO wealth being strongly
+tied to firm performance. In their surveys, Kevin
+Murphy, as well as Carola Frydman and Dirk Jenter, reached
+similar conclusions. Now, the more difficult
+question, which I think is not clear, is how much pay for
+performance is optimal and whether the
+current practices can become more efficient. Some argue that pay
+for performance is too low and
+should be increased. Others argue that some pay
+for performance incentives, particularly in
+financial services, are too high and
+should be lowered. Pay for performance is also criticized because
+pay is based on absolute or actual
+performance rather than performance relative
+to a firm's industry. In other words, CEOs and
+executives are paid to some extent for general
+economic conditions or luck. While the lack of explicit relative performance
+evaluation is a puzzle, it's worth noting that
+private equity investors, who we know are strongly
+motivated to make profits, do not appear to use relative performance
+evaluation for CEOs of their companies. If relative
+performance evaluation were meaningfully
+more efficient, you might expect to see private equity investors
+make more use of it. Now, to the third perception. Are boards doing their jobs? Critics contend that boards have become too friendly
+to management. As I mentioned earlier, the turnover result
+suggests the opposite. CEO turnover levels
+appear to have increased since the late 1990s,
+meaning CEOs can expect to be CEOs for less
+time than in the past. It's also the case that
+CEO turnover has become increasingly related to poor
+firm stock performance. So the CEO job is riskier, and CEOs face significant
+performance pressure. That's actually consistent with the corporate governance system that has performed
+better since 1997. Now, there's a recent
+paper by Jenter and Lewellen that presents additional evidence
+consistent with this. They look at CEO turnover in the executive comp
+data from '92-2004. They find that boards
+aggressively fire CEOs for poor industry
+adjusted performance, and that that turnover
+performance sensitivity increases substantially
+with higher-quality boards. So what you see there is in the first five years
+of a CEO's tenure. CEOs who perform in
+the bottom quintile relative to their industry
+lose their jobs about 60 percent of the time, and the CEOs on the
+top quintile lose their jobs only 18
+percent of the time. So there's a very
+big spread between companies that perform well and companies that perform poorly. When you focus on
+boards that are more independent and have
+greater stock ownership, that spread increases to
+more than 70 percent. As with pay for performance, the more difficult question is whether those differential
+departure rates are optimal and whether
+the current practices can become more efficient. Now, it would be useful to know what shareholders
+think of all this. I'm not sure if "fortunately"
+is the right word, but fortunately, the Dodd-Frank Wall
+Street Reform and Consumer Protection Act
+of 2010 mandated that all firms with more
+than $75 million in publicly traded stock hold a nonbinding
+shareholder vote on the compensation of the
+top five executives, and those votes are known
+as say-on-pay votes. The law went into
+effect in 2011. The supporters of the provision believed that by increasing
+shareholder power, the say-on-pay
+votes would reduce the CEO pay spiral and would increase
+pay for performance. This is, more or less, the
+view of those who take the managerial
+power position that CEOs have captured
+the pay process. Under the alternative view
+that pay levels and pay for performance are
+largely determined in a competitive market, the say-on-pay votes
+would be a non-event. So the say-on-pay votes
+set up a useful test of the managerial power view versus the market
+for talent view. What happened? The
+votes in 2011 were overwhelmingly in favor
+of existing pay policies. Roughly, 98 percent of companies received
+majority support. More than 73 percent received a favorable
+vote above 90 percent, and fewer than eight
+percent of the companies received a favorable vote
+of less than 70 percent. To this point, the 2012 votes have followed a pretty
+similar pattern. The few companies that didn't
+receive majority support, as well as some of
+the companies with a substantial
+minority of No votes, suggest that some CEOs
+undoubtedly exert managerial power,
+and some boards are perceived to have problems, but they appear to
+be the exceptions. The No votes from shareholders
+actually highlight those exceptions and put
+pressure on boards to fix them. At the same time, the positive
+shareholder votes for most companies seem
+inconsistent with the view that CEO and top executive pay are driven largely by managerial power, rather again, the votes
+are more consistent with a market based view
+of top executive pay. Given the negative perceptions of CEO pay and
+corporate governance, you might also think that corporate performance
+has been poor. Let me conclude by
+taking a look at that. US economy has gone through a financial crisis
+and recession. The S&P 500 has declined
+from its peak in 2007. At the same time, we saw
+CEO pay has also declined. What's happened to the
+operating performance of the S&P 500? When you look at that,
+S&P 500 companies, it's the green line
+on the top there, have weathered the downturn
+surprisingly well. Media and operating margins, which is operating
+income to sales, increased from '93-2007. They dropped in the crisis, but then recovered to their highest
+levels in the period. Net debt also declined pretty substantially over this period. This includes some financials. The performance of
+nonfinancial companies has been even stronger. On the average, particularly for
+non-financial companies, average operating
+performance has improved while average compensation
+has declined. To summarize, I've
+considered the evidence for three common perceptions of US CEO pay and
+corporate governance: CEOs are overpaid and their
+pay keeps increasing, CEOs are not paid
+for performance, and boards do not penalize
+CEOs for poor performance. The evidence is somewhat different from
+those perceptions. While average CEO pay increased substantially through the '90s, it's declined since then, and CEO pay levels relative
+to other highly paid groups today are comparable to their average levels
+in the early 1990s. In fact, the relative pay for large company CEOs is pretty similar to where it
+was in the 1930s. Furthermore, the ratio of large company CEO pay to
+firm market value has remained roughly
+constant since 1960. Second on average, CEOs are paid for
+performance and penalized for poor performance. Finally, boards do
+appear to monitor CEOs and that monitoring appears
+to have increased over time. So Kevin Murphy
+concludes what is a very impressive and
+detailed survey of executive compensation
+with the conclusion that executive compensation
+is affected by an interaction of a
+competitive market for talent, managerial power, and
+political factors. That conclusion is very
+hard to disagree with. There have been corporate
+governance failures, for sure, there've been paid
+outliers where managerial power is
+surely exercised, and the pay levels
+are very high. Those are sources of
+the common perceptions. That said, a meaningful part of CEO pay appears to have been driven by the
+market for talent. In recent decades, CEO pay is likely to have been
+affected by the same forces of technology and
+scale that have led to the general increase in
+incomes at the very top. Now, for researchers, this still leaves a
+number of questions. In particular, it would
+be useful to quantify or nail down the relative
+contributions of the market for talent, managerial power, and
+other considerations. There's certainly
+room for more work on understanding what incentives are appropriate under
+what circumstances. For boards, the evidence
+explains why compensation and the role of boards
+are likely to remain challenging, if
+not controversial. The market for talent puts
+pressure on boards to reward their top people at
+competitive pay levels in order to both attract
+and retain them. At the same time, boards are affected by the accurate perception that
+pay is high relative to the median household and by the negative publicity from
+pay and governance outliers. These perceptions and the current
+lackluster economy create political and
+popular pressure to reward top people less. Thank you for your attention, and I look forward to any reactions you
+might have. Thank you. MALE_1: Thank you very
+much. We have time for some questions and answers, and I will let Steve open the floor and
+take it from there. Steven Kaplan: Eric. Eric: You briefly
+talked in the middle Steve: there about
+how incomes have gone up from [inaudible]
+percent, and you alluded to some forces
+that maybe driving that. Could you elaborate a
+little bit on what you see is behind that? Steven Kaplan: I
+think the forces which you and I
+talked about earlier, technology allows a CEO to look over a much larger corporation than he or she could have 10, 20, 30 years ago. It allows a trader or
+investor can manage billions of dollars where
+you couldn't have done that 20, 30 years ago. You see it in athletes. I didn't point that out here. Athletes have gone up, actually, a little bit
+more than the CEOs. That's also
+technology and scale. Technology scale, I
+guess globalization, troll buzzwords, I can't nail that down other
+than to say the fact that these increases are across all these different groups. It suggests it's
+something that's, rather than being
+governance-specific, it seems like it's a
+more general phenomenon which obviously many
+people have written about. Yes. MALE_2: The same question. About the distribution of
+compensation [inaudible]. Steven Kaplan: The question
+is, what's the proportion of stock-based versus fixed? Stock-based compensation
+has increased markedly over this period, really starting in the '80s. That big jump up in the mid-'90s was a big
+increase in option pay, and since the 2000
+options have come down, and they've been replaced
+by restricted stock, I think the majority is
+restricted stock and options, so it's very much
+equity-based, and much more so today than it was 30 years ago, where it
+was much more cash-based. MALE_3: [inaudible] Steven Kaplan: So
+the question is, it's this greater emphasis on shareholder value. Again, what's interesting here, is it's not unique to
+the public company CEO, as it seems to be true across
+these different groups. I suspect this could
+very well have had something to do with what you've seen over time with the substitution of
+technology that's certainly consistent
+with what we see. Greg. Greg: The general theme
+of what you're saying is that it makes sense to pay the top guys in this
+super valuable organizations a lot to get the
+right talent there. University presidents
+also [inaudible] organizations, and they get paid
+one-tenth as much. Does underpaying the President of University of Chicago and not getting good
+talent up there? MALE_4: The President of NBR. Steven Kaplan: The
+President of NBER was even manning the camera earlier. That's a
+really good question. There is also this question, you don't see the CEOs
+get paid as much in Germany or Japan as
+in the United States. That's a much harder question, which I can't answer with this. What I can tell you
+with this is that all these groups who are for-profits and motivated
+for profit, it's systemic. The university presidents,
+which is a very hard job, are paid less, and that's
+not part of this group, although their pay has increased quite a bit over
+the last 30 years on a relative basis. It's not clear
+that you would see anything different
+there. Yes, in the back. MALE_5: [inaudible] CEOs' pay
+include severance payments? Steven Kaplan: The question
+is about severance payments. No, it didn't include
+severance payments. There's a nice paper, I think Goldman and
+Huang, that looks at S&P 500 CEOs who've
+lost their jobs, and the median severance for S&P 500 CEOs are reeling over the last 20 years. The median is zero. The average is, I think, four-and-a-half million dollars, which is about
+half a year's pay, if you take the
+$600 thousand value at risk, with about an eight
+percent stock movements. Severance would affect
+this a little bit, but the pay for performance, would not be affected
+very much by sticking that in. Chester? Chester: Steve, you
+commented that compensation doesn't have much of a relative
+performance component. Could you elaborate
+on that [inaudible] ? Steven Kaplan: I
+misspoke on that. I shouldn't say I misspoke. There are people in this room, Lucian and Luigi would be two of them, who would say
+that pay should be explicitly or some
+portion of pay should be explicitly tied to
+relative performance rather than the absolute
+stock performance. Most companies don't do that, and it turns out there's a lot of variation. It's
+cross-sectional. So when you look at
+industry-adjusted performance, which we did, you find pay is definitely related to
+industry-adjusted performance, but there is some sense in
+which pay is related to industry performance or the general performance
+of the market, which some people think.
+and rightfully so. it's a little bit of a
+puzzle because, as CEO, you can't control what the
+overall stock market does. So that's the sense in which it will be a little
+bit of a puzzle. Again, private equity investors don't make that adjustment. Some public companies
+are pushing that way, but I'll leave it at that. There's clearly
+compensation based on industry-adjusted
+performance, but you also have the industry and the
+market in there. Yes. FEMALE_1: I'm just curious in that first look you took at
+the S&P public companies, did you happen to
+just dice it up by financial versus
+nonfinancial and [inaudible] later on in performance? Did you see whether there was a significant difference in pay for financial
+institutions versus none? Steven Kaplan: The question is, were financial institutions different from the
+nonfinancials, and what you see? Financials in the
+S&P 500, I think they're about 15, 20 percent. It's less than 20.
+It's more like 15. and the pay for the
+financials went up by more, and now it's
+come down by more. It's moved a little bit more with what
+was happening in finance, which is, again, would be consistent with
+a market for talent. Antoinette. Antoinette: [inaudible]. Steven Kaplan: The
+question is explaining the level of differences
+across countries. I agree with that completely that the US is higher, although not so much
+higher as it used to be. The UK, actually to
+some extent, caught up, and some of the other
+countries did as well. But some of those level of
+differences are puzzles. I think I'll just agree
+with you and say, I don't have a good answer
+for that. [inaudible] ? MALE_6: [inaudible]. Steven Kaplan: I think Kevin
+Murphy has a paper where he has, with a couple
+of co-authors, where they control for firm size and control
+for other things, and they still find
+a premium in the US. It's not as big as the premium you just compare by means, but it's still there. He adjusts for stock options and says they're riskier, and he actually gets it closer. But that argument is one that you may or may not agree with. It's 5:30, and I think it's
+actually good. Thank you. 

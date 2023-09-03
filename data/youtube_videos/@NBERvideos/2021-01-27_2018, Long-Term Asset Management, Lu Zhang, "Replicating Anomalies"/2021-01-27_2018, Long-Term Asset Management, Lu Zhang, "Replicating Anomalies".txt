@@ -1,0 +1,276 @@
+Lu Zhang: We are trying to make the point in this paper that most anomalies in the
+cross-section failed to replicate. In particular, we
+replicate the bulk of the published
+anomalies literature within total 447 variables. We can show for
+micro caps by using NYSE breakpoints and
+valuated returns. Basically for each of the
+447 anomaly variables, we form deciles using NYSE breakpoints and we calculate valuated
+portfolio returns. We calculate the high
+minus low average return. If that average return, is significant that the
+traditional t-cutoff of 1.96, and we view that as a
+replication success. Otherwise, it's a
+replication failure. We are not taking into account the multi testing aspect
+of a baseline case. In total it turns out that 286 out of 447 anomalies
+failed to replicate. In other words, 64 percent of the anomalies failed
+to replicate. This is why we argue most
+anomalies failed to replicate. In particular, if we impose
+our Harvey Liu and Zu paper, have been advocating for multi testing adjustment by using a t cutoff value of three. It turns out 85 percent of the anomalies
+failed to replicate. In particular, in addition, even for replicated anomalies, their economic magnitude
+is much weaker than originally reported in
+the original studies. Our result is not driven
+by our extended sample. We repeated all our
+replication tests in the original studies. In original samples in original study is used
+by original authors, it turns out our
+replication results are quantitatively similar. If anything, slightly
+higher failure rates have been documented. Due to the time constraint, I'm going to go straight to
+what we do in this paper. I'm going to skip
+the motivation. I'm going to tell you what we define as
+replication procedures. I'm going to walk you
+through our long list of 447 anomalies and then report
+the replication results. We emphasize NYSE
+breakpoints and evaluated returns and in the paper we report other procedures as well. We call a less around the
+Fama French as well in this paper by emphasizing
+the danger of micro caps. They are in their 2008 to
+turn off finance paper. They document that
+micro caps are so abundant account for 60 percent of names
+floating around, but owning three percent
+of total market cap. We updated their evidence and it turns out
+that going forward, standing the end of our sample, which is 2014, only
+1.4 percent of total market cap it's
+accounted for by micro cap. This is really tiny corner
+of the market place. We're not talking
+about small firms, we're talking about tiny firms. There are many ways to overweight micro caps and micro caps have the
+highest average, equal weighted returns, largest cross-sectional
+dispersions returns, as well as anomaly variables. Oftentimes, when we use NYSE, AMEX or NASDAQ, breakpoints or what we call all breakpoints bundled with
+equal weighted returns, your extreme deciles are
+going to be populated by at least 60 percent
+of the market caps. Sixty percent of the stocks
+are going to be marketed cap seeing extreme deciles and you get overweighted that way. Hundreds of papers
+have been using cross-sectional
+regressions by imposing a linear functional form. Because OLS is minimizing
+sums of residual squares and that's regression slopes end up being very
+sensitive to outliers. Those are most likely
+belonging to micro caps. In other words,
+cross-sectional regressions, overweight micro caps even more. Now what is replication? In the paper we
+followed the bulk of the replication
+literature in economics, in particular, Daniel Hamermesh had influential paper 2007, Canadian Journal of Economics. He distinguished
+pure replication or the scientific
+literature course, reproduction, which is to do something again
+exactly the same way. That's another
+what we are doing. We are doing what Dan calls
+scientific replication. That is different sample, different population, similar but perhaps
+not identical model. In fact, we are using
+different sample as Y as the same samples in the original studies we're
+using the same population, which is Chris Compustat, but we are using similar
+but not identical models. Dan argues that while this
+is more suited in type to our methods of research
+because at the end of it most of us are doing
+observation of sines. I understand that big portion of our profession is doing experimental economics,
+but most of us, we don't get to run experiments
+and collect our data, which it's probably
+a good thing. Dan argues that because of observational nature of
+our economic sciences, we need to emphasize scientific
+replication to evaluate the reliability of the body of scientific evidence
+that we thought we knew. See also the May
+2017 issue of AR, last year AR published eight papers in that issue on basically progress reports on different fields
+of economics, on replication,
+labor developmental, and we're all using the same
+definition of replication. 447 anomalies. We grouped them into
+six categories. Momentum, value, our investment and
+profitability, intangibles and
+trading frictions. I'm not going to
+go through every single one line carefully. In momentum category
+we have 57 variables, including the classic
+earning surprise, price momentum,
+industry momentum, as well as somewhat obscure like the 1984 Financial
+Analyst Journal article that uses analysts
+forecasts change. It turns out to be very
+powerful predictor, a much more powerful
+than earning surprise. We also use somewhat the newly discovered
+momentum variables, including 52-week high
+segment momentum, customer momentum, supplier, customer
+industry momentum, value versus broad category, we have 68 variables including
+the classic of course, book-to-market and very
+nice AQR paper Asness and Frazzini talking
+about using more updated the market information to form our value versus
+growth variables. We follow their insight as well. This includes carrying
+the book equity. We also include a lot
+of monthly sorted to value-minus-growth variables based on quarterly
+accounting data. That's why we have so many. Net pay out of the
+yield five-year sales growth from Lakonishok, Shleifer and Vishny
+and the price multiple operating cashflow
+accounting literature, intrinsic value to market, different versions of
+it, equity duration. Investment category we have 38, including not only
+the real investment, but also cheerleaders
+influential work, net stock issues, equity issues, a
+composite and Ken's earlier work with Zhang,
+composite equity issues. Inventory, operating cashflow
+Richards Sloan's early, very influential work and
+total accruals as well as different components
+of total accruals and discretion and
+percent accruals. Profitability, 78 of
+them return on equity, different versions annual
+version, monthly version. Our way at DuPont
+analysis profit margin, you can decompose our way into a leverage book, profit margin, as a turnover Fama
+French version, operating profitability and
+the rainbow and coauthors have been talking about their cash-based
+operating profitability. Piotroski's fundamental score, failure probability at
+financial distress, basically a profitability with a negative sign in front of it. Intangibles wound
+to the three of them; organizational capital, advertisement, R&D, price delay, financing constraints,
+different versions are highly influential literature in accounting on accrual quality, and earnings quality and different aspects of
+earnings quality. Dispersion of analysts forecasts very nice
+paper by Heston and Sadka documenting pretty exotic and looking
+seasonality variables. We managed to replicate
+them all and none of the factor models can
+do anything about them. This is really cool
+paper. Trading frictions. The last category heads
+into the 102 variables, including most of what we traditionally call liquidity
+and frictions variables, different versions
+of volatility, idiosyncratic volatility, total volatility,
+systematic volatility, and the market Beta, and different
+versions that again, short-term reverse
+offshore turnover, dollar trading volume, zero trading days and maximum daily return,
+total skewness, tail risk, liquidity Beta and different versions or liquidity
+Beta, bid-ask spread. Took a while to put the
+data library together. Can you imagine. Do I
+still have time yet? Good. Replication results. Despite our overview
+pretty lenient hurdle of t cutoff for 1.96 in total, 286 anomalies are
+insignificant, or 64 percent. If we impose Cam
+Harvey and coauthors, higher t cutoff value of
+3, that's 85 percent. Across different categories, it turns out the trading
+frictions liquidity category is hit the heaviest. It turns out that 93 percent of them turned out to
+be not showing up. Our interpretation is that, if you use a reliable set
+of empirical procedures, it turns out the most anomalies never existed, to begin with. An alternative interpretation
+is that anomalies existed but traded away
+the ones publicized. It's not exactly what
+we see in our results. We repeat all our
+replication tests in the original samples used by original authors in the
+original published papers and turns out 293 anomalies are
+insignificant or 66 percent at the p-value over
+traditional level of 5 percent hurdle and we
+impose t cutoff of 3. It turns out 86.6 percent
+failed to replicate that. Again, the liquidity, the trading frictions category, and 91 percent of
+them fail to show up. To evaluate to what extent using equal weighting and
+all breakpoints, actually, mostly equal weighting can "inflate" the magnitude
+of anomalies. On this slide, we report that all breakpoints and
+equal-weighted returns. It turns out if you
+do the replication tests in this way, there's this like
+in that setting of portfolio source this is
+most generous to micro caps. You're trying to sell
+steel 40 percent of the anomalies fail to replicate and 54 percent with a higher t cutoff
+value of three. Even with equal weights, we still see 61 percent
+of the trading frictions liquidity of variables
+fail to replicate. On average, if we look
+at the high minus low average returns
+spread magnitude of that, it turns out the average
+inflation rate is 42 percent vis-a-vis
+our benchmark procedure on NYSE break-point
+evaluated returns ranging from 27
+percent to 56 percent. Before we start, we'll go
+through specific papers. Kobe and I always like to
+acknowledge at this point, both Kobe's name and my name
+showed up in our Table 3, which report anomalies that
+failed to be replicated. Both of us think we have reported the false
+positives or results before. This isn't much of a
+self-critique as well. In the moment and category, so standardized
+unexpected earnings with six months holding period, where we are documenting
+19 basis points per month, but the Chan, Jegadeesh, Lakonishok, they reported 1.13 percent per month
+with the equal weights. Tax expense surprise, which
+is tax expense momentum, we are looking at 28
+basis points per month, and Thomas and Zhang
+reported a 1.3 percent per month with
+the equal weights. Value versus growth,
+a famous paper, this highly influential
+paper, Lakonishok, Shleifer, and Vishny report the 0.61 percent per month
+with equal weights, and we have 20
+percent basis points. Net debt. We're looking at
+31 basis points per month, which is another small but
+nothing to write home about. In Penman, Richardson, and Tuna, they reported 73 basis
+points per month. Investment category,
+total accrual. We only get to 23 basis points per month and he said 1.6. But being a highly
+influential paper, Richardson, Sloan,
+Soliman, and Tuna, they reported a 1.11 percent per month with all breakpoints
+equal weights. They also use
+size-adjusted returns, but the precise benchmark
+portfolios that sells are evaluated but adjusted returns the formula and
+equal-weighted instead. The same procedure
+was also used in the 96 Solona County
+and review paper. Then NSF stands for
+external financing, net external finance, and net equity finance. We're looking at 27
+basis points per month and the original article reported a 1.29
+percent per month. Profitability. Failure
+probability, we're getting to only 38 basis points per month. These tests 1.3, not a small
+but with a small t state, but the original
+paper reported that 81 basis points per month or with a
+different sample period, and o score we're getting 0, z-score 0 as well. But that original paper
+reported 1.18 percent per month with this somewhat
+unconventional procedure. intangible category
+famous paper dispersion and as forecast, 79 basis points per month, and we're only getting
+24 basis points and he said below one. Corporate governance,
+I should mention, we come close in replicating
+composition metrics, original number in
+their sample period. They it turns out this
+is a case in which extending sample actually
+killed their significance. But the overall 30
+variables switch from significant
+to insignificant. But on the other hand,
+37 other variables switch the opposite way, so we end up concluding overall from the metal
+science perspective with sampling variation, place relatively limited role
+in our overall conclusion. Accrual quality,
+we're getting 0. Idiosyncratic volatility. We looked at the 16
+different versions defining volatility in different ways,15 out of 16 measures
+are insignificant, but the original
+article reported about the 1 percent per month
+and that's about three. It turns out in this case, all breakpoints versus
+NYSE breakpoints are the key difference. We are all using
+valuated returns. In fact, in the paper, we also reported
+that all breakpoints and equal-weighted returns, so those numbers are even smaller than the
+valuated return. We end up concluding that
+the low volatility anomaly, it's not reliable. Traditional liquidity variables. Turnover, Darla trading volume, one over share price, 0 trading days, absolute
+return, price impact, absolutely return to
+volume and the net debt and even
+short-term reversible, we're only looking at 26
+basis points per month, t Stats 1,93, and also different versions of Chai or Peterson
+liquidity variables, liquidity Betas, they
+are not replicated. If we impose t value of three, 100 percent of them
+failed to stand up. We were scratching
+our heads and we couldn't figure out what
+exactly is the difference. It's noted that we also reported the
+equal-weighted results, are still 61 percent of the
+variables fail to replicate. Then we read the original
+literature very carefully. Turns out that
+most of the papers use cross-sectional regressions. When portfolio sorts
+are being used, owning equal-weighted
+numbers are reported. I should try to be fair. [inaudible] world
+of respect for him. The short-term reversal,
+we're only looking at the 26 basis points per
+month, and the India ink, his original sample period, that that number
+is 66 basis points per month and t-stat is 2.5. Shattering reversal is a case of being weakened
+by extended sample. Replicated that normally
+stay economic magnitude is actually much smaller
+than previously reported. Momentum abnormal returns around the earnings announcements
+and 98 versus 30. I should mention that the
+momentum variable with the classical
+momentum variable is the best-performing
+variable in our exercise, 1.1 versus 0.82
+percent per month. Investment or asset,
+I said growth, both the Q factor model and occasionally known as
+the five-factor model, we are both building on
+investment to assets. We're looking at the 46
+basis points per month. But their original
+paper reported that 1.05 using different
+breakpoints, and using equal-weighted
+returns as well. Operating accruals, 27
+basis points versus 87. I'm ready to conclude. In this paper, we
+replicate the bulk of the anomalous literature
+within total 447. Our variables, we can
+show for micro caps by using NYSE breakpoints
+and evaluated returns. We documented, in
+total 286 anomalies, or 64 percent of the anomalies are not significant or
+failed to replicate. If we impose the value of 380, that's 85 percent of them. Even for replicated anomalies, their economic magnitude
+is much weaker than originally reported in
+the original studies. Our result is not driven, overall conclusion is not
+driven by our extended sample, and because in the
+original sample the results are
+quantitatively similar. We end up concluding capital markets are more efficient than
+previously reported. 

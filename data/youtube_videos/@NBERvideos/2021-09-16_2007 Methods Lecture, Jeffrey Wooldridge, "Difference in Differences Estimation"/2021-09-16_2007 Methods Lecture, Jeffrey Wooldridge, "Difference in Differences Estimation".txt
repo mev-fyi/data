@@ -1,0 +1,629 @@
+Jeffrey Wooldridge: In terms
+of the basic methodology, I suppose it's almost offensive to cover that in this group. But one thing to comment on is that in the setup where
+you have two groups and two time periods and then
+you have a control group that isn't subject to the intervention in
+either time period, and then the treatment
+group is subject to the intervention and
+the second time period, this of course can be set up
+in a regression framework. As in Equation 1, it of course has a long history in the analysis of variance. This used to be called ANOVA, I suppose, before we called it difference in differences. Because it's just basically looking at linear
+combinations of means, in this case among four groups, so of course the
+notation differs a lot. But one way to think about
+it as just in Equation 1 without specifying y as being drawn from any
+particular group, but just letting dummy
+variables pick out the right means in effect. If you label the two
+groups, A and B, where A is the control and B is the treatment and
+the two time periods 1 and 2 where the treatment happens in
+the second time period, then of course the
+coefficient of interest is Delta 1 on the interaction term. Of course the way to estimate this as by
+ordinary least squares or equivalently just
+compute the means and form the difference in differences as in Equation 2. I'm going to come
+back to this briefly. This is one of those
+cases where I was talking about the Donald
+and Lang approach to inference where
+their estimate in this case would be exactly
+watts in Equation 2. But we wouldn't be able to
+do inference because again, there are zero degrees of freedom according to that setup. In order to do inference, basically we have to
+have more control or more treatment groups than we have parameters to estimate. But in this
+framework, of course, like the comparison
+of means case, often we do have fairly large sample sizes in each group. So you can estimate these
+means reasonably precisely. That doesn't mean
+we can always get a very precise estimate
+of the treatment effect. I'll do a simple
+example later on. Now, of course, in
+the simple analysis, the assumption is that the paths would have
+been the same in the treatment and
+control groups in the absence of intervention. Of course, that
+might not be true. What became popular was the so-called difference in
+differences methodology, and I've actually seen, I think four differences used, where you actually get yet a different control group
+and an example is laid out here where you may be looking at some change in policy
+at the state level, say it's some health
+policy change that's supposed to affect
+people over 65. You look at a state where
+the change happened and a state the change didn't happen and then you choose
+as a control group, younger people in both states. But then you're assuming that
+there wouldn't have been different than the paths in the absence of
+the intervention. There is one state initially, and then you have the young group and the old
+group both before and after. The point is, there could be reasons why
+you see changes in the health of the older
+group relative to the younger group
+that have nothing to do with the intervention. Of course, one way to
+get it that is then to use a nearby state
+or something like that and use the
+older population from that state as an
+additional control. If you write the equation
+out as in Equation 3, you get the dummy
+variables for the state, the group which is E
+stands for elderly, the second time period. Then when you put in
+all the interactions, the coefficient that you're
+interested in is Delta 3, the so-called difference
+in differences estimate. You can see what
+happens is for the elderly in the state with
+the policy implemented. That's the change in means here. Then this is the difference with the elderly in
+the other state, and this is the
+difference for the young or the non-elderly
+in the treatment state. This is the estimated
+effect in the DDD case. Now, of course, you can add covariates to
+this and that's why this formulation is
+especially useful because all you
+have to do is add covariates to it
+and then go ahead. Of course, the estimate
+won't be in this form. But nevertheless you
+interpret it as the same way. The idea is that if there
+are compositional changes, you can at least control
+for that to some extent by adding covariates
+to allow for that. Inference in this case, again, it's standard if we assume that all the uncertainty
+comes through the estimation error in basically computing
+all of these means. Of course, that object is
+simple to use as long as we assume we have large sample
+sizes and are going to treat that as being
+approximately normal. Now, before we go
+on to considering the multiple groups and
+multiple time periods case, there's this issue that came up with the last talk and that is, how should we view uncertainty
+in these settings? The standard approach is, again, the analysis of variance
+approach where the uncertainty comes through the
+estimation error in the means of each group. A lot of these
+examples do have lots of individuals per group. That's where the
+uncertainty comes in. The Donald and
+Lang approach that I talked about last talk is one example of where extra uncertainty is basically inserted into the problem. You can certainly
+make a case for that, especially if you're thinking of the treatment
+and control groups being drawn from a
+bigger population of possible treatment
+and control groups. That's certainly one
+way to think about how there's this extra uncertainty
+due to this group effect. Now, in some sense, these are philosophical issues. What is the right
+way to think about how your sample is
+being obtained? Does it make sense
+to just condition on the state that has the policy change and then choose a state
+that's next to it? Or should you think about
+the uncertainty being, what if you had chosen a different state as
+the control group? Or what if you had chosen five different states
+as a control group? At the end I'll talk about this work by Abadie Diamond and Hain Mueller where they basically allow for that
+kind of uncertainty. In fact, that's the
+focus of their work, is uncertainty
+really about how you choose the set of control
+groups when you're looking at these
+aggregate policy changes. The Donald and Lang
+approach is certainly one way to introduce
+uncertainty. In fact, for the most
+part, as we saw, the uncertainty is
+assumed to actually swamp the sampling
+error that you get from estimating the individual
+means because we saw in the case that we call these small g case and use
+this Donald and Lang method. The way to apply that, you have to use a classical
+linear regression model, and you basically have to assume that the estimation
+error can be ignored where you are or at least the variation at the
+individual level. As I said that one
+way to think about the uncertainty is that it should reflect the
+uncertainty about the quality of the control
+groups in the analysis. I'll come back to
+that at the very end. But like I said, in the case of the
+standard difference in differences setup, if we really just have two
+groups and two time periods, we don't have any degrees
+of freedom to work with. There's this question
+of whether we should just say we can't learn
+anything in this case, or whether there's enough
+uncertainty there to say there really is a lot of enough uncertainty just in the estimation of the
+parameters to treat this as a classical problem in statistics and to do the
+inference accordingly. Just as one example of this, there's this application
+by Meyer Viscus in Durban, looking at the effects of benefit generosity
+on the length of time on a worker spends
+on workers compensation. It's the classic difference
+in differences setup. In the main analysis they
+use the state of Kentucky. They have information on duration on worker compensation
+both before and after the policy change and policy changes to
+increase the generosity of the benefits by raising the cap on
+earnings that are covered. If you are a high
+earning person, then the difference before
+and after the policy changes, after the policy change, more of your earnings
+are covered by or four. In this case, more
+earnings recovered if you are on workers
+compensation. Of course, if
+you're a low earner than the increase in this cap should have
+no effect on you. What they do is they just use the treatment group as
+the high earners and then the control group
+is the low earners. When they use this
+data on Kentucky, which is 5,626
+observations in total. They estimate a large policy, they estimate a large
+effect of 19 percent. Actually I forget offhand what the increase in the
+cap was of course, whether this is a big
+number depends on that. But this turns out to be
+a big economic effect. That workers are on, workers comp 19 percent longer than they would have been
+without the policy change. The t-statistic is 2.76. It's certainly
+statistically significant, but it's not overwhelmingly
+significant. If you do the same analysis with the state of Michigan
+data that they have, which is a smaller
+dataset, 1,524, you get essentially the
+same point estimate, but you get a much
+smaller t-statistic. In this case, this is not
+statistically significant. In this case, it seems a little hard to argue
+that somehow there's not enough uncertainty here
+and that we should really impose more
+uncertainty on ourselves. Especially if it means
+basically saying, we can get this estimate, but we can't put any
+confidence interval around it because we don't have
+enough degrees of freedom. I guess that's the question
+is in these examples, should we conclude
+that we really don't have any way to do inference in these particular cases where you wouldn't claim this is
+a really small sample size, yet, there's certainly is plenty of uncertainty
+in the estimate, which means that having
+more data on the within each particular control
+treatment group pair certainly helps
+with our inference. But if we have many groups
+and many time periods, then it makes much more sense to actually allow for other sources of uncertainty through
+group time level effects. What I'm going to turn to next
+to this set up down here, where now there are
+three times subscripts. This recognizes that the
+data are often come at the individual level within
+a state or group over time. One way to write
+this model then is, as in equation 5, where it's a fairly
+general model. There are time effects, there are group effects. There are variables that
+change with group in time and then there are these individuals
+specific effects. These are the policy variable. Compared with what
+we did before, there are now two
+subscripts instead of one. Now the data, I represents
+the individual, G represents the group or state often and t
+is the time period. Then there's this effect which varies at the
+group time level. Then there's the
+idiosyncratic component and the ideas we have m_g, t individuals per group. I already said that full set
+of time effects and so on. As in the cluster sample case, we can write this as an
+individual specific level model where the intercepts
+differ across g and t. Then we can think of
+the intercepts than being determined
+by that other part of the equation that
+just has quantities that vary by t or g or both. It's useful to break
+this down because if we have a lot of
+individual observations per group time pair, then we can estimate these
+Deltas and a first stage and then essentially ignore the estimation error in them. Then analyze this equation
+in a second stage, which then becomes a
+standard panel data analysis at a more aggregate level. Now, sometimes these
+things are not allowed to vary across group and time
+in an unrestricted way, so that the way this would be estimated then
+is there would be dummy variables for
+every group time pair. Then maybe some of these
+are allowed to vary or not. But the point is, once we, if we assume that we have a large sample size within
+each group time pair, then really doesn't
+matter how we estimate these intercepts because we're going to ignore the estimation error in the second stage. Now, I should say I'm going
+to talk about some work. Again by Chris Hansen, where he does actually consider the case where you can account for the
+estimation error in this, but that's of course
+much more complicated. In practice, if this is going to swamp
+the estimation error, then it's going to be
+the most important thing anyway and he clearly focuses on the case where we act as if we can analyze
+this equation. Once we do that, once we say we're just
+going to estimate this by ordinary least squares, putting in a full set of dummy variables
+for group in time, then we, as I said, are back to the panel data case. Now, the unimportant
+contribution of the Bertrand at all
+paper was to show that if you just take
+this equation down here, this is a standard
+panel data model. Then of course, if you
+assume that there's no serial correlation in this error term and
+there really is, then the inference is usually
+off and it can be off by, by quite a large amount. This notion of
+clustering, in this case, is clustering to account
+for serial correlation in these errors that are
+at the aggregate level. By the way, this, again, there's an asymmetry
+here and that we assume independence in the
+group dimension and then the question is, how do you deal with correlation
+and the time dimension. It's tough to allow for correlation in the group
+dimension in addition to this, so these quantities here
+are independent across g, but possibly correlated
+across time. Now, how can we
+analyze this in light of the cluster sampling
+stuff that we talked about. I already talked about this, so this is how this is being handled doing OLS
+in the first stage. By the way, as
+Hansen points out, this setup can be studied
+using a result by [inaudible] a Mamiya with this structure
+on doing a full GLS. If you start with
+this model here, and let's suppose that this is actually
+homoscedastic across all IG&T and then we add this structure on the intercept and we do a full GLS analysis. Well, in fact that's
+the same thing as doing GLS in two separate stages. Meaning, in some ways, if you wanted to analyze
+the full problem, that would come
+down to analyzing GLS in the second stage, and the only issue is if
+you're going to account for the estimation uncertainty
+in the first stage. I'm going to proceed here
+as if we're ignoring that. As I said, we're going to proceed as if these things
+are large enough to ignore. Here's the equation down here that you actually
+estimate in practice, you get the estimates
+of these intercepts, and then these are
+the policy variables, there may just be
+a dummy variable that takes on the value zero for some states in every time period and then it's turned on for some of the
+states and later time periods. But at this level of
+these could be anything, provided there aren't
+too many of them. One thing we can do is apply the results of Hansen
+that I mentioned before, and one key here is that it does make sense to include
+a full set of time effects and group effects, and so if we're going to
+apply Hansen's results, allowing this to be
+serially correlated, then we really do need a large G large T type
+framework in order for the inference based on the cluster robust standard
+errors to be valid. The only restriction
+really then, other than that G and T
+are both reasonably large, is that the serial
+correlation in this error term here has to be of a weakly dependent
+kind, that is, it can't have unit roots in it, it has to have
+correlation that dies out as you get farther and
+farther apart in time. This really just
+takes us back to the cluster sampling case
+except applied to panel data, where we have a full set of
+time effects, group effects, and then what's leftover
+here is not persistent, it's dying out over time. That's why in the simulations, in the Bertrand et al., work and then Hansen's theory and simulations
+basically show that these robust cluster
+methods work pretty well even if there's a fair amount of serial correlation
+in the error terms. But there can't be really strong serial
+correlation or it breaks down. Now, Hansen's follow-up paper to this was to point out that, well, yes, you can just do cluster robust inference in this setting. When the simulation
+shows certainly, of course g equals
+50 is a focal point because of the 50
+states in the US, and then they use various
+numbers of time periods to show that even as the number of time periods
+approaches 30 or 40, that it still does
+reasonably well. But if you really think there's some parametric serial
+correlation here, then we should be able
+to do better in terms of inference by using
+some GLS procedure. The question is, what would
+be a good model for this? Certainly autoregressive
+models come to mind. In fact, even an AR1
+model has got to be better than assuming or at least ignoring the
+serial correlation in the estimation of the
+coefficients of interest, which are the Betas. There are two issues here. One is, suppose you
+take the case where you have a reasonably
+large G, say 50, and you don't have a very
+large number of time periods, let's say 10, or maybe
+even fewer than that, but let's just say 10, and suppose you want to model
+this as an AR1 process. Well, as it turns out, the standard thing you would do, which is to estimate the
+equation by fixed effects, that is time effects,
+group effects, and then estimate the
+Betas as well, of course, in the first stage and then get these residuals
+and then just use these residuals in a
+standard auto regression to estimate a Rho, to get Rho hat and then to do the standard GLS transformation. As it turns out, the Rho hat isn't very well-behaved in terms
+of estimating Rho. This is a problem that goes back at least to the mid '80s, noting that there's this bias in estimating an autoregressive
+coefficient in the case where you
+have a large number of cross-sections and a small
+number of time series. In fact, even if the V, G, Ts are actually
+serially uncorrelated, but you use the so-called
+fixed effects residuals to try to estimate
+that correlation, it's on the order of 1 over
+the number of time periods. Even though the
+underlying errors are serially uncorrelated, essentially it's that within
+transformation that induces serial correlation in them and so you can imagine, of course, if the true process is an AR1, then using the fixed
+effects residuals with a small number
+of time periods is not going to produce a good estimate of the
+autoregressive coefficient. What that means is that
+you can try to do GLS, but you'll be using
+a bad estimate of Rho in the AR1 case and
+generally you're going to use a poor estimate of it in more general
+autoregressive cases. One thing that can be done, of course, is you could say, well, I'm still
+going to do this. I know I'm not getting
+a very good estimate necessarily of the
+autoregressive coefficient. But I'll use it to do a GLS or what some
+people might call a quasi feasible GLS
+in the sense that you know you're really doing
+the transformation without a good estimate of the
+variance covariance matrix. Then the way to
+handle that is to then make the inference robust. That is a valid
+thing to do because essentially if you
+think about this in the context of Hansen's
+previous work, the Rho hat is not
+estimating the right thing, but it is estimating something, and so as G gets large enough, you can basically just
+treat this as a GLS problem with wrong estimate of
+the variance matrix. As I mentioned before,
+with random effects, there's no reason after you've estimated random effects that you necessarily have to take the variance matrix seriously, you can do robust inference. The same thing is true for
+an autoregressive model. You can do this in
+a pure time series. Case 2 is say, well, I'm going to do an autoregressive
+transformation but then not take that
+seriously in doing inference because maybe it
+was an AR2 or an ARMA 11 or something that I'm not
+really accounting for. That is certainly a
+sensible thing to do. But Hansen's work shows that that is inefficient relative to something
+else you can do. It's not surprising
+it's inefficient because you're doing GLS with the wrong
+variance matrix. What he does is
+he actually comes up with some ways
+to adjust the bias and the estimate of Rho and I'm not going to try to
+show those formulas, but the idea is that you can actually figure out up to a certain order what the bias and Rho hat is and
+then do an adjustment to get a less biased estimate and then use that in GLS estimation. There's some nice
+theoretical results here and in the case where we're doing the simple thing
+should work reasonably well, that is when T gets large, because as T gets large, the bias from doing this particular thing and
+just ignoring any adjustment, it should work well
+because, again, the bias is going away. He has an iterative
+method which goes back and forth between
+estimating parameters and autoregressive
+coefficients and then doing the bias adjustment. It has the same asymptotic
+distribution as doing the simple thing, and moreover, it actually has the same
+asymptotic distribution when G gets large and T is fixed as the
+infeasible estimator, which would require
+knowing what Rho is. In the case when G and T
+are both getting large, it doesn't lose
+anything relative to the more standard method. In the case when G is getting
+large and T is fixed, it's actually the same up
+to first-order asymptotics as doing the infeasible GLS, and of course doing
+the usual thing is not the same as
+doing infeasible GLS because with T
+small that coefficient, the Rho hat is actually biased. There are some more
+theoretical things that you're invited to go read, such as the fact that you can show that if you look beyond the standard square root of
+the sample size asymptotic then this method actually has
+some attractive features. The question is then if you have this setup where G
+is reasonably large, T may or may not be large, you could just do the usual
+cluster-robust stuff, or you could apply this
+recent work by Hansen, and try to do something
+that's more efficient. His simulations do
+show that there are non-trivial
+efficiency gains to be had in the standard cases
+where you have 50 states, and 10-20 time periods,
+something like that. Of course, there is a catch. You don't get something for nothing usually when
+you're doing GLS especially when a time
+component is involved. As in any case
+where you're doing a GLS correction that is accounting for
+serial correlation, you have to impose more
+on the regressors and the restriction
+that is needed is that they have to be
+strictly exogenous now. This means in a time
+series setting, as we were talking about in the more traditional
+panel data setting, that there can't be any feedback between
+the errors at time T, and these x's in
+future time periods. Of course, if you
+just do pooled OLS, and use cluster-robust
+inference, you don't have to worry about the strict exogeneity
+assumption. The source of the
+efficiency gain does come at the expense of the stronger assumption on
+these explanatory variables, which since this was called
+difference in differences, we're typically
+thinking that these are measures of policy changes. As a practical matter, if we have a setup where we have some states
+where there wasn't a policy, and in some states where there never was a policy acting
+as a control group, and then another set
+where there's no policy, a policy is implemented, and then it's there forever, then the strict
+exogeneity assumption is palatable because you don't get this idea that
+the policy is being changed based on what's
+happening in the past. On the other hand,
+if these are x's where they can be manipulated, and they are manipulated, then you would
+worry about seeing policy changes in future
+values of these because those might be related
+to what's happened to the outcomes in the past. But this is just
+the usual story, and what's always difficult in these situations is if
+you've done pooled OLS, and you've done
+this feasible GLS, whether you've done the
+bias correction or not, and you get different answers
+in a practical sense, then do you attribute that to that OLS was
+really inefficient? That it's confidence
+interval is very wide? Or do you attribute it to some failure, like
+strict exogeneity? That's always a tough
+call to make it. One thing that's true
+is you can't just immediately assume
+that something's wrong with the
+pooled OLS analysis because in some sense, it's the more robust procedure
+and that it delivers consistent estimators under less restrictive assumptions. But that's again, always pretty much
+the case when we're dealing with time-series data and doing serial
+correlation adjustments. Now, one other possibility that was studied by
+Kiefer some time ago, and then has been
+looked at by Hausman, and Kuersteiner
+more recently is, instead of worrying about making very specific assumptions about the serial correlation
+in the errors, is to use an unrestricted
+variance matrix. In the standard
+panel data setup, this is the same as dropping one time
+period and then doing GLS on the remaining
+time periods where you allow the variance
+matrix to be unrestricted. This is attractive
+because you don't have to make an error or an assumption
+or anything like that. It works reasonably well if you don't have too
+many time periods. But since this matrix, which would be, well, in the case of T equals 10, really becomes a 9-by-9 matrix. By the time you get
+up to T equals 20, it's an 19-by-19 matrix that once you drop
+the one time period, and so it gets difficult
+to estimate that many parameters with just 50 cross-sectional observations. There are some size
+distortions from doing that as the number of time
+periods grows. Of course, one way
+to account for the estimation error in the
+first stage is to, well, not do the estimation
+in the first stage, but basically put
+in the averages of the individual
+specific variables. Of course, that changes the time series properties
+of that error term now because if you really account for the
+fact that this is there, but in principle, you
+could do a GLS analysis. It's also true though that
+this is weekly dependent, so you can just do the usual fully robust
+cluster sample analysis. Let me just talk briefly about individual
+level panel data. I'll talk about this in a more sophisticated way in just a minute, but of course, if you start with individual
+level panel data, and just have two time periods, then this is a very common model where you explicitly have
+unobserved heterogeneity, and then you have the
+binary treatment. This is, of course, once you difference away the unobserved heterogeneity and do least squares on what's left, if this is the case where
+there's treatment in the second period for some units but not treatment in
+the first period, then you just wind up
+with this equation here. This is a difference in
+difference estimate, but it's based on panel data where of
+course we're looking at the average change for the same units over
+the two time periods, and then differencing those as the estimated
+treatment effect. There are other things
+of course to do. We talked about
+these a little bit. If you have lots of time periods that might make
+sense to allow for a so-called random
+trend or random growth if y is in logs and then the way you
+estimate this equation. We talked about this. It depends on what
+you think about the serial correlation
+properties here in the idiosyncratic error. After you difference, you can difference again to remove this, or you can use something
+like fixed effects. If you write down a model
+like this these days, I think you're
+considered to be a little old fashioned
+because you're just writing down
+a panel data model without any counterfactuals
+or anything like that. But it's fairly straightforward to set this up in a
+counterfactual framework. If you start with this as the counterfactual outcome
+without treatment, and then yt1 is the counterfactual
+outcome with treatment. The question is, how
+would you sensibly define an unconfinedness
+assumption in the context of panel data. Well, this is one way where you allow for heterogeneities
+that would affect the outcomes in the two different
+states differently. Then the key assumption
+would be that once you condition on
+that heterogeneity, which is unobserved than
+treatment in this is the full time series of treatment outcomes is not related to the
+counterfactual outcome, whether it's in untreated
+state or the treated state. Not surprisingly, if you set
+up the problem like that, then if you work it through. Let's say you assume linearity here where you allow for an additive time effect and then this unobserved
+heterogeneity. Then you get models
+like this down here. Where now yt is the
+observed outcome. There are time effects. There's an individual effect, and then there's a
+treatment effect which may or may not
+be changing over time. That's under the assumption that there's no heterogeneity in the treatment effect. There is none that depend. Well, there's no
+unobserved heterogeneity. If you allow that, then you wind up with
+a model like this. Again, the equations
+are simple to work out. It's done in the notes. But the key thing that's
+interesting about this is if you allow
+the individual, the treatment effect to
+be individual specific, then you wind up with this
+random coefficient model, which we talked a little
+bit about before. This is a full case where you would have an interaction
+with the observed things. But then you also have
+an interaction between the heterogeneity
+and the treatment. Then the question is, what can you do about this? Well, in this case, if you're really saw
+on the notion that the only heterogeneity is on the treatment variable itself, then there are a bunch
+of things you can do. One that turns out to work is that you can
+actually just treat. Let's consider the case where we don't have them
+changing over time, but we allow them to
+change across individuals. Then we can just treat them as parameters to estimate
+for each individual. Of course, that turns out
+not to be a good estimate of the treatment effect
+for each individual, but the average of them is a consistent estimate of the so-called average
+treatment effect. That's certainly one way to go. Of course, there are
+formulas for getting the right standard
+errors of these things, or you can do it by bootstrapping the
+panel data outcomes. As I said, that's a
+quick look at how the old-fashioned panel
+data stuff can be viewed from a more modern perspective
+if you choose to do that. You can allow pretty
+much full heterogeneity and the treatment
+effect doing that. Now back to more modern stuff. There are semi parametric
+and non-parametric approaches to treatment
+effect problems as well. One setting looked at by
+[inaudible] and [inaudible]. We'll go back now
+to the case where there are two groups
+and two time periods, and I'm using their notation
+as much as possible. The two time periods are
+011 and the two groups are 011 with no treatment in
+the first time period. The treatment happens for
+group 1 in time period 1. Then we have these two, the counterfactual
+outcomes without treatment and the counterfactual
+outcome with treatment. What they do is they
+basically relax the linearity assumption that is implied by the usual
+treatment effect model. The way they do that is they
+think of the time period, they just index this with
+an eye observations. In other words, you can
+think of just drawing from this population of people and a time period comes with each individual unit as
+well as group membership. Then the assumption is that the counterfactual outcome is this function of the time period and then this unobserved
+heterogeneity. There has to be some restriction
+on this function here. The function is that the
+restriction is strictly increasing in its argument for each possible time period. Now, one thing that is not in
+here is group memberships. The idea is that the outcome of an individual for a given level will be the same in a given time period of this level regardless
+of group membership. That's a restriction. Then the distribution of the heterogeneity is allowed
+to vary across groups, but it doesn't vary over
+time within groups. That's a stability assumption
+on the population. You can express the
+standard model in this way. That's the sense
+in which this is an extension of the
+standard model. Because of course,
+this has u appearing additively and then time
+appearing additively as well. There are no interactive
+effects or anything like that. Clearly this is
+monotonically increasing and u and satisfies the
+other assumptions. Continuing with the usual linear model can be expressed like this, where this error term
+V is independent, not just of the
+group assignment, but also the time period. Now you don't have to have
+full independence here because of the linearity
+assumption so that would work. Then of course you get
+back to this equation 31, which is just a
+different way of writing the standard difference
+in differences model. Where now the TIs and the GIs pick out the time
+period in the group. What happens is that under the Atheist and
+Ben's assumptions, you can actually recover the full distribution of the counterfactual outcome
+without treatment, conditional on being in
+the treatment group. Now of course, if I put one
+here that's identified from the data because we know the outcome in the
+treatment case for the treatment group. I'm running out of time here, but the interesting
+result is, well, there are several
+interesting results is-that this distribution function can be recovered from things we
+can estimate with the data. These are all
+distribution functions. This is for F10 is the CDF for group one
+in time period zero. This is group zero
+and time period zero, this is group zero
+in time period one. All of those things are
+estimable given data and so you can actually
+estimate the CDF of the counterfactual
+without treatment under the assumption
+of treatment. Let me just mention
+one other thing that you can do with panel
+data because it relates to what Guido talked about
+yesterday in terms of inverse waiting to
+estimate treatment effects. That is this work by our body. He considers both the case where you don't have panel data. But also it's a little
+more straightforward to actually see what happens
+when there is panel data. He focuses on the average
+treatment effect for the treated where- so this is conditional on
+having received treatment. This is the outcome
+under treatment. This is the outcome
+without treatment, that's the one and zero. You can also take away this conditioning if you want the average treatment
+effect itself. What's interesting is that it actually turns out not
+to be terribly surprising, but the average treatment effect in this case can be written as a function of the
+observed data and the propensity score
+as an equation 39. Now, the way this differs
+from the formulas that Hirano talked about is that this is the change here. So this is a difference
+in the outcome over the two time
+periods as opposed to just in a
+cross-sectional context where you have the
+outcome itself. This allows essentially for heterogeneity that
+gets differenced away. Yet there could be
+some other source of confoundedness in the
+treatment assignment. This becomes something
+that is easily estimated or fairly easily
+estimated because this is, again, we observe
+this for each unit. We observe the treatment
+status and we can estimate the propensity score. This becomes one of the
+inverse probability weighted estimates
+in this case for the average treatment
+effect on the treated. Now, like I said, this is a formula that
+follows from earlier work. It's just derived now in
+a panel data context. Of course, instead of just
+using this estimator, regression adjustment
+can also be used in addition to this. Or if you look at
+the work by Heckman, Chimera, Smith and Todd, you can just use regression
+adjustment if you want. A regression version that, Hirano pretty much
+said you should never use would be to do this. The main reason I'm writing this down is to compare this- this is at least
+preferred to something that you sometimes see. We're regressing the change in the outcome on treatment,
+the propensity score. Typically this should
+be interacted with, if you want at least
+a more flexible specification where this Rho Hat it's just the sample
+average of Wi and then you look
+at this coefficient for the average
+treatment effect. This of course imposes some strange functional
+form assumptions. But it's clearly
+preferred to doing this, which is a regression where
+you use the level of y. Because this isn't
+even as flexible as just doing the simple fixed effects analysis
+for this problem, which is to use differences. Because you're just putting
+in a propensity score here and this thing
+doesn't change over time, so this propensity score is just estimated conditional
+on some covariates. If you are just adding something that doesn't
+change over time, that's less general than just putting in a fixed effect
+and differencing it away. What's happening really here is that there's a differencing
+that goes on followed by a propensity score adjustment and that allows for
+more heterogeneity. Of course, if you have
+panel data then you should be able to handle more heterogeneity and that's what our bodies approach does. I guess I will have to stop there and then
+take questions. Yeah. MALE_1: [inaudible] . Jeffrey Wooldridge:
+Is Hirano here to answer that question. Is there any work
+on long differences versus short differences? MALE_1: [inaudible] Jeffrey Wooldridge: I knew. MALE_1: [inaudible] Jeffrey Wooldridge: Would
+you please repeat it in direct report. MALE_1: [inaudible]. Jeffrey Wooldridge: Maybe
+it's something we should take up afterwards. Sorry, I wish I had
+an answer for you. 

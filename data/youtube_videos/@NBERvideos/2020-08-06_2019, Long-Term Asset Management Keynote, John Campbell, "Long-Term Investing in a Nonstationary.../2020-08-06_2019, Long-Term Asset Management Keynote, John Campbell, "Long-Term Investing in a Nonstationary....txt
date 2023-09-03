@@ -1,0 +1,486 @@
+John Campbell: When
+Jim asked me to speak to this conference, it's a very intimidating
+assignment. As he mentioned in our previous dinner
+speakers, Steve Ross, Bob Martin, Larry Summers, this is hard acts to follow. I thought, well, I can just be a convex combination of Bob
+Martin and Larry Summers. I will try to relate ideas from Bob Martin about long-term investing in
+intertemporal hedging, with ideas from Larry Summers about persistent changes in rates of return or as Larry would describe it,
+secular stagnation. Hence my title, long-term investing in a
+non-stationary world. Let me start with
+something that I think anybody who's
+done empirical work and macro or finance
+can relate to. I'll call it Murphy's laws
+of economic time series. Murphy's first law is that
+things that we always thought were constant
+suddenly stopped moving. There are lots of examples. There's, for example, the labor share which we
+always thought was constant back to Kaldor in 1957, hence Cobb-Douglas
+production function constant labor share. Well, we now know it
+seems to be moving. Or to take an example
+from finance. Gene Fama wrote a paper in 1975 arguing that the
+nominal interest rate is a constant real
+interest rate plus inflation and the short-term real interest rate
+and never moves. It was true in his dataset, but immediately after
+he published his paper, Murphy's first law kicked
+in and it started to move. Now Murphy's second law of economic time series is
+that things we've not yet observed but that we
+confidently expect to be constant, turnout to move. Milton Friedman, in advocating
+floating exchange rates, famously argued that
+the exchange rate would be stable because it would reflect a
+long-run equilibrium and so it wouldn't
+move very much. Now, coming closer
+to home for me, before, tips were issued
+in the late 1990s, Bob Shiller and I wrote
+a piece about it and we argued that the long-term
+real interest rate should be stationary because short-term real rates move but they're stationary so the long run yield should
+be pretty stable, it won't move very much. Boy, were we wrong? Here's
+the history going back to the late 1990s
+of the 10-year tips yield and we all
+know this history. I do just want to say that peak there right
+around the year 2000, that's the peak of the
+first tech bubble. That was the moment
+when Jim Peterborough, I gave me the most fabulous
+investment advice to buy inflation indexed
+savings bonds. But the real twist in his
+advice was to do it on the treasury website using a credit card with airline
+frequent flyer miles. That's when I learned to really value Jim's investment advice. But as you can see, this
+decline is very long-lasting. It accelerated after the
+global financial crisis in the late 2000s, but it's a much longer and more persistent trend than that. People like Larry Summers have highlighted this and
+there's been a lot of discussion about
+what might cause it and what we might
+see in the future. I'm not going to have too
+much to say about that, but let me just emphasize that it's really
+a global phenomenon. In fact, US long-term
+real interest rates at about one percent today are considerably higher
+than they are in many other countries. In most continental
+European countries we're it still talking negative real rates at about minus 50 basis points and then the extreme
+outlier is the UK, or we have an extremely
+negative rate. This is really a
+global phenomenon. Now, this by itself has fascinating implications that I think are really important. Basically, we all know that wealth and income don't
+have the same units. It's always annoying
+when people say, such and such fund
+is worth more than the GDP of such
+and such a country because then you're comparing
+wealth with income. But when the real rate of
+return is relatively stable, we can use a constant
+adjustment factor to go between wealth and income. But when the real
+interest rate is moving as much as we've seen, that shift is that relation. Here are a couple
+of observations. One is that as real
+rates have declined, claims to a long stream
+of safe real income, such as a defined
+benefit pension that becomes much more valuable relative to asset holdings which of course is what defined
+contribution tensions are. I think this helps to explain
+political conflicts over public sector pensions
+in places like Wisconsin and many other places. Another point is there's
+a lot of talk now about how the central banks have blown-up asset markets
+and hugely benefited the old at the expense of the young because the
+old own the assets. There's some truth to that
+but we need to remember that what the young
+own is human capital, and we don't look at
+the value of that. The value of that will go up because these real rates
+of return have gone down. Or we could put it the other way and say that
+the high value of these financial assets owned
+by the old now delivers a lower income stream
+than it did before. That's an offsetting effect. I don't want to argue it's
+completely offsetting, but we need to be very careful about our units now
+in this environment. Now let me come back to
+Murphy's laws and let me give you Murphy's third law
+of economic time series, which is that things that were stationary become
+non-stationary. Now, I've really lived through this because I'm
+going to show you the two examples
+that I've worked on, the dividend price ratio and the cyclically adjusted price
+earnings or cape ratio, which again, both Bob Shiller and I worked
+on this in the late 1980s. Here's the dividend
+price ratio on the S&P going back to
+the late 19th century, the famous Shiller dataset. When did I start working
+on this time series? Well, right around 1984, which is about the
+last time that that series crossed
+the red line. The red line is the mean. Of course at the time, there was a lot of concern about unit roots in the macro economy. Dividends, profits, prices
+all had unit roots, but we thought, the ratios of these things
+will be stationary. The ratio of dividends to
+prices will be stationary. We can use co-integration to model things and then
+Bob and I showed that the correction to
+the mean that we see in the history typically
+came through price adjustments and it corresponded to return
+predictability. That was all great,
+except that Murphy's law kicked in and the thing no longer looks as
+stationary as it did. Here's the cape
+ratio same point. I got into the analysis of
+this series around 1984. If you look at the
+history before that, it looks much more stationary
+than it has since. It is a very striking
+fact that even at the bottom of the global
+financial crisis, the cape ratio fell a little bit below
+its long-run mean, but not that much. It's been almost
+exclusively above that mean since the early 1990s. That's 25 years now. I think it's plausible
+now to think that there's more non-stationarity and by that I just mean unit routes. I don't mean turtle
+regime shifts, but unique routes that are floating around
+in financial markets. I want to think about
+non-stationarity of returns. I think it has
+profound implications for investors and I'm going
+to discuss three of them. Forecasting returns,
+intertemporal hedging, and reaching for yield. I'm going to start with
+a sensible stuff and then I plan to get more and
+more funky as it goes on. I was counting on the fact that you all are drinking wine and so your critical faculties will be diminished by the end, but I hadn't counted on
+the thing being taped and put online, so too bad. Let me talk now about
+forecasting returns. As you may know Bob Shiller and I did work on this
+back in the day, we argue that you could
+predict returns from the dividend price ratio
+or the cape ratio. If the ratio is way away from its mean it will tend to return to its mean and most of that adjustment will be
+associated with prices. However, if the ratio is
+itself non-stationary, that isn't a mean that it's
+going to come back to. I think we have to take
+some account of that. Now for tips you can just use
+the yield and use that as, and it is of course, a forecast of return over the next 10 years if
+it's a 10-year bond. But certainly that's an object that you could forecast into the longer-term future and you might treat it as a random walk. Now, it's a little harder
+for stocks but I'm going to argue that it may be worth using what I call
+a drifting steady-state model that generalizes
+the Gordon growth model. We're going to make
+the extreme assumption that the log dividend
+price ratio is not just non-stationary but it actually follows
+a random walk. Let's think, what
+would the world look? If that's the world,
+what follows? I'm going to use one
+other assumption, which is the dividend
+is determined one period in advance. That's the conventional
+assumption of the Gordon growth model and
+pretty good empirically. Then it turns out you
+can derive this formula, which looks almost exactly
+like our old friend, the Gordon growth model, D/P equals r minus g but
+the key point here is that we've got the difference
+between two expected logs, the log of the gross return, that's r, and g is the
+log dividend growth rate. This formula holds in a world where the dividend
+price ratio follows a random walk whereas
+the traditional Gordon growth model requires that thing
+to be constant. If you rearrange, of course, the expected log return
+is the income from the dividend yield plus the expected log
+dividend growth rate. Now why am I emphasizing
+the need to use logs here or geometric averages? That's because the
+volatility correction that takes you from a geometric
+to an arithmetic average is different for returns
+and dividend growth when the dividend price
+ratio varies over time or equivalently when the expected return
+varies over time. To go to an arithmetic
+return you're going to have to add one-half the
+variance of returns, which is greater than one-half the variance
+of dividend growth. Now just as a little
+reality check, in Jeremy Siegel's book, Stocks for the Long Run, he uses the Gordon growth
+model and he reports the real geometric averages
+of all these things over the Shiller
+historical period. It lines up very
+well with the model, basically 0.1 percent there in the bottom equation
+is the residual so just 10 basis
+points of residual. The average is lineup and income accounted for two-thirds of total return over that period. Now, you can also forecast returns using the
+earnings yield. I won't go into the
+detail but just as in a static model there's a payout ratio that relates
+dividends to earnings. Growth comes from
+profitability or ROE and the reinvestment rate. Of course, the payout ratio and the reinvestment
+ratio sum to one. I'll show you some forecasts
+that come from that. Essentially, if you
+use this approach, the high profitability
+of US companies in recent years implies
+higher growth and hence higher return, which partially
+offsets the decline in the earnings yield. He has an implementation,
+of course, different implementations
+will give you different numbers but this
+is just to illustrate. We see much less of a trend
+in this thing but we see some long slow movements with peaks in downturns like the tech wreck
+in the early 2000s, the global financial crisis, and then a drift
+downwards since then. Of course, if I put together the stock return and the tips yield I'm going to see this
+view of the equity premium. I should emphasize, this is an arithmetic equity premium, so I've done the one-half
+variance correction. It was very low
+in the year 2000. It wasn't actually negative
+but it was extremely low, 50 basis points of equity
+premium at the moment when Jim was telling me to buy those inflation
+index savings bonds, but much higher today, around five percent, but declining recently with the rise in the market
+until very recently. Then if you want to think
+about an endowment, let's say you've got
+an endowment portfolio that's 60 percent stocks, 40 percent bonds, the bonds get the tips yield, the stocks earn what
+I just showed you, then you'll get some drift down, more like a percentage point
+down over this period. That was return forecasting. I think there's some merit
+to using this type of framework rather than predicting a return to a historical mean. Now, my next topic is
+intertemporal hedging. I want to show you
+that basically, intertemporal hedging, the idea is really simple
+in a world like this. I'm going to do two cuts. The first cut is to observe that if the
+expected return is a random walk then a
+constant spending ratio is not sustainable because if the expected return drifts down, your constant spending
+rate is going to run down the value
+of the endowment. Well, what would be a
+sustainable spending rule? Well, the obvious first
+thing you think of is you'll spend, you consume the expected
+return on the endowment. This is the expected simple
+return times wealth. That will imply that wealth
+is a random walk because the expected return
+is consumed and only the unexpected
+return moves wealth. Now then you take the
+log of that thing, c is log of C, you'll get the log of the expected return
+plus the log of wealth. Now, key point to observe
+here is this log of expected return is not what we usually
+call a log return. Usually the r is the log
+of the gross return. This is the log of the
+expected net simple return. It's the log of one percent, or two percent, or
+something like that. Well, what's the
+conditional variance of log consumption? How much risk is there in your spending and how
+much you could spend? Well, lead the consumption
+equation one period, take conditional variances. It's super easy. The variance of consumption
+is the variance of that expected return in
+the log expected returns, so the proportional
+variability of that, plus the variability
+of log wealth, which is just the variance
+of the unexpected return, plus twice the
+covariance between them. For any given conditional
+variances you can reduce the risk to spending if you have a negative covariance
+between the two. That is Merton's idea of intertemporal hedging and what I think is the simplest
+possible form. It's just very immediate. I think this simplicity
+is valuable. I mean, here's a typically
+forthright quote from John Cochrane saying, this dynamic incomplete
+portfolio choice theory, it's really hard, we
+can't solve the model. It's ignored. Hedge funds don't do this. Nobody cares. Why?
+Because calculating partial derivatives
+of unknown functions is hard and nebulous. People hate these black
+boxes. Fair point. I think he's got a fair point, but I think in this
+random walk world, it's actually easier to think about them than he makes out. Now actually the first cut
+isn't quite good enough. Maybe I should have
+just cut it from the torque. Why isn't
+it good enough? Because you should object
+like a random walk, expected return can go negative. I mean, maybe the
+above spending rule then implies negative
+consumption. Also, I stated,
+and that's right, that wealth is a
+random walk with zero drift in this model. But it turns out consumption has a drift with the sign
+of that covariance. If you successfully into temporarily hedge and
+reduce your risk, you're going to have
+consumption drifting down, which you may not
+like. To fix that. It's not too hard. We
+can just go back to the previous drifting
+steady-state model that Gordon Growth Model and just reinterpret dividend as
+consumption and price as wealth. Because we know that
+you can always think of consumption as the
+dividend that you take out from a
+wealth portfolio. For an arbitrary
+portfolio consuming it, your intertemporal
+budget constraint is just mapped dividend to
+consumption, price to wealth. Let's see what happens
+when we do that. Let's assume, as we did before, that the log consumption
+wealth ratio follows a random walk. Then the drifting
+steady-state model says that the consumption of wealth ratio is expected log return minus expected
+consumption growth. What was a sustainable
+spending rule be? It would set expected consumption
+growth equal to zero. That will imply that
+what you consume outer wealth is actually
+the expected log return. Now, if the log of the
+expected log return, if that is a random walk. In other words, if
+expected return is a geometric Brownian motion, the whole model will be
+internally consistent because the log consumption wealth ratio will then be a random walk. This is sort of like
+Fischer Black's model in the short-term interest rate as a Geometric Brownian motion. Of course, if that's the model, the expected return
+has to be positive. Consumption is positive and it's a nice model in that way. Here's the second cut version
+of intertemporal hygiene. It's basically the same
+thing as I said before, except we have to do, I mean, it really is the same
+formula as before. The consumption variance is the variance of this change or innovation in the log
+expected return plus the unexpected return variance plus twice the covariance. Now, let me just give you some numbers that I
+calculated off that 60, 40 endowment portfolio
+that I showed you before. If I take the expected returns that I showed you and I look at the volatility of the unexpected
+returns on the assets, I find that the
+standard deviation of expected return in proportional
+terms is 15.7 percent. That's not percentage points, but it's percent of its value so proportional risk to
+that expected return. Then the standard deviation of the unexpected return on the portfolio is
+about 10 percent. That's because it's got
+a lot of bonds in it. The correlation between
+the two, the Rho, the correlation between the ER, and the W is minus 0.4. That comes both
+from the tips where there's a huge negative
+correlation and from stocks where there's also some
+negative correlation because it's built into
+the Gordon Growth Model. The implied standard
+deviation of consumption is 14.5 percent. Now, actually,
+that's higher than the single period returns standard deviation
+of 10 percent, because it's a tough
+world that we live in when the expected
+return is varying. But if you didn't have
+the negative correlation, it would be even higher. You'd have a standard
+deviation for consumption growth
+of 18 percent. What this tells you is that the risk-return trade-off for a long-term investor
+critically involves this correlation between realized and expected
+future returns not just the variance
+of realized returns. Final observation. What would it take to get riskless consumption
+in this model? What you would need, the
+elasticity of wealth with respect to the expected
+net return to be minus 1. In other words, the consumption is a product of two things. You have to get them to
+perfectly offset one another. There has to be a
+negative 1 elasticity. Now, I could restate
+that as saying that the negative
+elasticity of wealth with respect to the
+expected gross return, that's duration, it has to be 1 plus expected return
+divided by expected return. As the expected return falls, the duration has to go up. If we're back in the late 90s and tips yielding
+three-and-a-half percent. The duration will be 30 years. If we now have a long-term
+interest rate of one percent, the duration has
+to be a 101 years. That may help to explain
+why there is demand for very long-term bonds in a stable inflation environment with low real interest rates. Now, the final part of the talk, I want to get a little bit more creative and a little bit funky and so throw out something
+and see what you think. Counting on the fact that
+you've been drinking wine. I want to talk about
+reaching for yield. The first I want to make is that this is sustainable spending, that can be pretty painful. I've proposed the rule. Consumption is expected
+logger turn times wealth. It's sustainable
+in the sense that the expected
+consumption growth is zero under this condition random walk for the
+log expected return. Wealth is also a
+logarithmic random walk. You don't expect to run
+down the endowment, you don't expect to run
+down your spending. You expect to keep it the
+same in a logarithmic sense. But of course, when the
+expected return falls, you have to cut your spending
+rate. That's very painful. In practice and dominants are extremely reluctant to do that. Harvard, for example, has had a target spending
+rate of five percent, basically forever
+for the whole time I've been at the university. If you've never been adjusted, a related phenomenon, I think, is the way in which public
+pension plans have been slow to reduce the rate at which they discount
+their liabilities. Now, we know that under bizarre accounting
+rules in this country, public pension plans can use their expected return on assets to discount their liabilities, even though the liabilities are supposedly
+riskless promises. If they reduce the
+discount rate, then they will worsen their reported funding status and they're reluctant
+to do that. This is a table taken from a recent paper by
+Lipschitz and Walter, which shows the average
+discount rate used by the 25 largest
+public pension plans in this country over
+the last decade or so. Visually this looks like they're cutting
+discount rates a lot, but it's all just
+because of the scale, you have to look
+carefully at the scale. Actually, they've gone down by about 60 basis points on
+average over this period. When tips yields, of course, have fallen by much
+more than that by two and a half percentage
+points and the 60, 40 portfolio, even there, the expected return has fallen by a lot more than
+60 basis points. I think there's a
+demonstrated reluctance to do the actual spending adjustment
+that is called for. Let me now try to see
+what happens if we combine this sustainable
+spending idea with utility theory. Think about an investor who has an absolutely standard
+power utility function with a time discount rate and a risk aversion
+coefficient but who is constrained to follow the
+sustainable spending rule. That's a non-standard
+formulation of the investment
+problem because we normally think you can
+spend whatever you want according to your
+utility function. But I think that the
+constraint may actually capture the situation of
+some long-term investors, particularly think about
+a university endowment or any endowment
+for that matter. Giving to the
+university is a way for the donors to
+achieve immortality. The university says,
+"You are going to be supporting spending into
+the indefinite future." The donors recognize
+that there's some risk, the endowment is
+invested riskily, but the university
+promises not to plan to run down spending. Equally, they're not
+promising to run it up. They just say that what
+you can buy today in expectation you will be
+able to support tomorrow. But of course, the
+university is also an entity that has
+spending needs and risk aversion and the
+university community may discount the future
+in the usual way. What if the university has
+a power utility function, but faces this constraint? It turns out interesting
+and funky things happen. To make this analysis tractable, let's go back to the simpler original
+Gordon growth model world where investment
+opportunities are constant, so that each year, little r is just Er
+is just a constant. The consumption-wealth
+ratio is constant. There is no intertemporal
+hedging now, asset returns are iid. Log consumption is a random walk with no drift because of the
+sustainable spending rule. Now, I can solve the portfolio choice problem and it's got some standard
+features that pop right out. If you've got log utility you choose the growth
+optimal portfolio that maximizes expected log return and therefore it also
+maximizes current spending. If you're risk averse, more risk averse than the log, you choose a more
+conservative portfolio. No surprises there. But the solution also has some striking
+non-standard features. The first one is that as the investor becomes
+more impatient, the investor takes more risk. Why is that? It's
+because the benefit of risk is a higher
+expected log return, which means higher spending today and we get
+that immediately. The cost is more volatile future consumption,
+but that's delayed. If I'm impatient, I just
+want a high spending rate. I want to do whatever investment
+strategy will justify a high spending rate and
+get me resources now. In the limit, an extremely
+impatient investor will hold the growth
+optimal portfolio regardless of risk aversion, because that's the
+way you get the highest possible
+current spending according to this rule. Now, another, even more, I think, interesting non-standard
+feature is this. Let's consider a one-time
+unexpected change, sometimes called an MIT shock to investment opportunities. We were in the
+constant return world, all of a sudden the return goes down and now it's going
+to stay down forever. Let's suppose in particular that the riskless
+interest rate declines but risk premia remain constant. In response to this shock, a conservative investor with risk aversion greater
+than one will reach for yield and
+take more risk. Even though in the standard
+problem they wouldn't, because risk premia
+haven't changed. This is just a change in the interest rate.
+How can that be? Well, the first
+intuition would be that a given proportional
+increase in consumption, which is what has a constant
+utility value to you that requires a given
+proportional increase in the expected
+portfolio return. If the riskless
+interest rate is low, getting that it requires a smaller increase in risk than when the riskless
+interest rate is high. In other words, if I start with a 50 basis point safe return, I can double my
+expected return easily by just taking enough risks
+to add 50 basis points. But if I start with a three
+percent interest rate, the only way I can double
+my return is to take three percentage points worth
+of risk and that's hard. That involves a lot more risk. That's the first intuition. Another intuition would be this, at a lower riskless
+interest rate, an investor with a constant
+discount rate wants higher expected marginal utility in the future relative to today. That's the usual
+first-order condition for intertemporal choice. Now, normally we think
+you achieve that by increasing consumption today
+relative to the future, you tilt your consumption path. But if you're not
+allowed to do that, you can achieve it
+by taking more risk. Almost the opposite of
+precautionary saving. Precautionary saving is adjust your consumption path
+in response to risk. This is adjust your risk because you can't adjust
+your consumption path. Taking this funky perspective, risk taking is short-termism. Is basically a conflict between a sustainable spending
+constraint and a utility function that
+discounts the future. In the usual portfolio
+choice problem, the interest rate moves, time discount rate
+remains constant. Investor responds by tilting the plan consumption path
+but if that's prevented, the investor might
+use portfolio risk is another indirect way to trade off the present
+versus the future. Chris Anderson who was here at the conference and here
+tonight, he's right over there. In his job market paper, he makes the related point that anytime there's an
+arbitrary consumption rule, an investor who manages the financial portfolio
+taking that is given, it alters the usual
+things we know and love and in particular in
+his job market paper he shows that it alters
+the usual formulas of consumption-based
+asset pricing in a way that looks like
+long-run risk models. That's Chris' paper. The point I'm making here
+is in a similar spirit. I think that we're actually short of models
+of reaching for yield. It's hard to get these models but considerations like
+this might be helpful. I'll finish and come back to a theme, I
+touched on earlier, which is this whole point
+about wealth versus income. In a non-stationary world with persistent changes
+in rates of return, the level of wealth and the permanent income or
+sustainable spending generated by that wealth can move in very different ways. I think this creates
+problems for long-term endowment managers who face outside scrutiny that focuses entirely on the
+value of the endowment. I had the pleasure of having lunch with Vagard Vic
+and our sponsors from Norges Bank
+Investment Management and we were talking about this, the fact that there's
+a lot of pressure on the fund to report the values of the fund and risk are naturally conceived off by the
+Norwegian public, the government, the politicians, outside consultants
+as the volatility of the endowment value. Of course, reporting
+that is what the accounting profession exists in part to measure wealth, to market accounting,
+to provide outside auditing of what the
+value of the fund actually is at any
+point in time. But if you take the perspective that I've adopted this evening, what we also need is measures of permanent income and
+you can get that from wealth if you can measure the expected return
+on the endowment. Now, notably, this permanent income is quite different from
+current income. This is nothing to do
+with what's paid out as a dividend or a coupon on a
+bond or anything like that. Current income is relevant
+for tax purposes, but in the absence of taxes, I would say it basically has very little economic meaning. The difficulty is that
+permanent income and expected returns are hard
+to measure unambiguously. I showed you plots
+with expected returns, but they came out of a model
+on some assumptions I made. You might have your
+own favorite model and might give you
+a different plot. It's going to be very hard
+to do this unambiguously, but I would argue
+that the benefits are large enough to justify
+a substantial effort. This is really what
+we want to be able to measure and if
+we could direct the attention of
+ultimate investors more on permanent income
+or sustainable spending, and less on current values, I think it would be easier to make the right
+investment decisions. 

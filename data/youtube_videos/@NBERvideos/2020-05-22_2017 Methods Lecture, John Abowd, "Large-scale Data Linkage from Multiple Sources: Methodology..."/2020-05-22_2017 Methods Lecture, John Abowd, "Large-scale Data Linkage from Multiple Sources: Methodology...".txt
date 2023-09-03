@@ -1,0 +1,806 @@
+John Abowd: You
+don't have to read. Then my acknowledgment of a huge debt to two
+people, Lars Vilhuber, with whom I have worked
+since we hired him at the Census Bureau in
+1999 to be part of LEHD, and Bill Winkler, whom I've
+known for about as long. Bill is the guru
+of record linkage at the Census Bureau, and Lars is the guy who figures
+out how to implement things that other people have been puzzling over for
+quite sometime. I will motivate this talk. Then I'm not sure what you
+learned in the first week, but I want to make sure
+that you understand the classical Fellegi-Sunter
+record linkage model. Because it's at the core of the production record
+linkage systems that we use at the Census
+Bureau that are used at most national
+statistical agencies and is deeply embedded in a lot
+of commercial software, but without the
+tuning opportunities that you might have for
+better or for worse. Then I've got to get
+into the meat of it. Most of this talk
+is to peel back the layers of the
+onion and show you what's going on when
+you do record linkage, especially what's
+going on when you do multiple data source
+record linkage, talk about the kinds of
+errors that you encounter, and then show some
+examples about why we should worry about them. I will go straight
+to my main takeaway. I think it's incumbent on us, especially as excited as
+we are about using many of these new linked data
+sources to learn how to do the kinds of diagnostics and robustness checks
+that we would be routinely doing on data
+that are better understood. Just because some of the mechanisms aren't
+as well understood, I don't think excuses us
+from thinking about them. Before he passed away, Steve Feinberg used to bend my ear regularly about
+whether we would ever be publishing things at
+the Census Bureau about the quality of our various production
+linkage systems, so I will show you
+the papers that had been written about those
+systems so that you can see that that discussion
+did not fall on a deaf ear. Here we go. I'm going to
+show you some examples. Some of these won't
+surprise you. Probably none of these
+will surprise you. There are large-scale record linkage projects that
+are either already underway or substantially
+in production. To classify them, I want to remind you that there's lots of different ways in which
+record linkage gets used. Some things are really
+deterministic record linkage. There's an exact ID. The keepers of the
+underlying data have a strong economic incentive
+to curate that ID, their tax collectors and
+that ID is associated with the taxpayer or their
+beneficiary suppliers and they will be audited. For a variety of
+reasons, we think that the Social Security number on many administrative
+records is well-curated, and we think the employer identification number
+on records that are used as part
+of task collection processes are well-curated. That's what I mean
+when I talk about exact or deterministic
+record linkage. I don't mean the name
+matches exactly and the address matches exactly.
+That never happens. Most record linkage
+is model-based, and the predominant model is the Fellegi-Sunter probabilistic
+record linkage model and its enhancements but the massive increases in computational power are now relatively easy to access. Even at the Census
+Bureau, we're getting Cloud-based computing because
+the 2020 Census is being done in the Cloud. So
+that means we have authority to store titled
+data on the Cloud, which opens up those
+doors for us too, but there are other
+distance-based model methods. In particular, posterior predictive
+models, which I'm going to spend a
+lot of time on today. The Longitudinal
+Business Database is the single most
+requested database in the federal statistical
+research data centers. I usually don't make
+that mistake anymore. We have lots of partners now. How do they work? The Business Registers,
+formerly known as the Standard Statistical
+Establishment List, is the list of businesses that
+the Census Bureau knows about from a variety of administrative sources, and the Longitudinal
+Business Database, LBD, links these over time using primarily exact
+identifiers supplemented with probabilistic
+record linking. You can see the issue when you do this linkage
+is if the ID changes, so this X_1.1 goes
+all the way through. It has an ID change, and
+you have to find that with the record
+linkage techniques. This X_2.N2 to X_3.N3, this is a birth here
+and a death here, so your startup and disappearance statistics are going to matter from the quality of the
+record linkage. The Bureau of Labor
+Statistics does essentially the same thing with the ES 202 longitudinal
+data. They're quarterly. James Spletzer gave
+me this example. That's a birth because it's the first year that's
+known, first quarter. Now that's a birth
+and the deaths, that one died sometime between here and
+here. That's a death. Those affect how you
+allocate the various jobs that are created
+and destroyed by those businesses to
+the various functions, whether it's a new business or a dying business or whether it's a continuing business
+that changed. They have important
+policy implications which I'll talk about later. No surprise here. I found the simplest diagram of the LEHD infrastructure
+that I could find. The vast majority of this
+record linkage when it is with Census-based data is
+probabilistic record linkage associated with substituting a protected identification key, a one-time pad-encrypted
+Social Security number but when things come from, say, the UI wage records, those have Social
+Security numbers on them. But the early years, the Social Security
+numbers weren't well curated because these data are not used to collect taxes. These data, the ES 2O2 data, are used to collect
+taxes so that employer identification
+numbers which come from the state UI systems are
+well-curated on those. At various points
+in this assembly, one system is using one
+set of identifiers and switches and the
+other system switches at a different point in time. As you might
+imagine, that causes the automated record
+linkages to hiccup. Finally, probably the one that you expected me to
+talk about the most, the Census Longitudinal
+Infrastructure Project, which is in support of the
+American Opportunity Study. Mostly it's using
+probabilistic record linkage across the top here to connect the decennial censuses and the American
+community surveys. Then it's using exact
+identifiers to connect most of these administrative
+data and again, probabilistic record linkage to bring in our other surveys. There's a lot of large-scale
+record linkage going on. Most of it uses the classical Fellegi-Sunter
+record linkage algorithm, especially for operations
+known as, sorry, I took English seriously
+as a high school student, unduplication, but it's deduplication in all the
+technical documents. Deduplication,
+which means you got a list that you're going
+to base the frame on. A frame is what you
+sample from when you're actually doing
+the survey as opposed to the mathematical notation that you use to describe
+it in your articles. So you want this frame to
+have unique entities in it, and you want it to cover
+your target population. You're bringing lists from
+lots of sources, and you deduplicate them so that there's no duplicates on the list.
+Then you integrate them. That's called frame management. Then if you're doing
+something like a census or sometimes a very
+large-scale survey, you'll do a coverage
+measurement estimation, which means you will send the enumerators out to the
+same physical location twice, and get what
+is supposed to be the same data twice, and then
+link them back together. Many of these methods
+at the US Census Bureau were developed and refined
+for these operations, particularly deduplication
+of the decennial census of population and housing and coverage measurement
+in that same census, first implemented in
+1990 by Bill Winkler. Lots of refinements
+are extremely well-summarized in the
+textbook that Herzog, Scheuren, and Winkler
+published in 2007. I'm going to do most
+of my summary from a computer science article
+by Christen and Goiser. Christen does a lot of work for the Australian Bureau
+of Statistics and is an internationally known
+record linkage expert. Goiser maybe too, but
+I don't know him. There's a little bit
+of math in this talk, it's not a [inaudible]. You've got two records, and they have this particular structure. They've got N_A
+rows and N_B rows, and they've got K
+variables in common, and then K prime A variables that are
+extra on A and K prime B variables that are extra
+on B. Everything but K, N_A, and N_B can be null. You have what is known
+as the comparison space, which is the cross
+of all the records in A with all the records in B, which has N_A times N_B records by this many columns. A record in A is a_i.
+A record in B is b_j, ab_r is a record in the comparison space matches our strict subset of
+A cross B and that matches a strict
+subset, if you have unclassified observations and exactly the
+complement, if you do not. In most of today's talk, I'm going to assume it either
+matches or doesn't match. I won't talk very much
+about clinical resolution, although that doesn't
+mean it's unimportant. It just means I
+don't have as much new to say about that. What do you do? In a
+standard application, you use comparator
+functions, and anybody in the audience who's done
+one of these knows there's lots of
+comparator functions. They deliver a zero or one, but they don't
+necessarily insist on equality between the records. There's lots of fuzzy ways
+to do the comparison. If there are K variables
+to do comparisons on, then there are 2^K
+possible comparisons, and the Fellegi-Sunter theory is based on this agreement ratio. In the numerator, frequentist. In the numerator, it's the probability that a particular comparison on
+the Earth record can occur given that. So the
+probability of a one on the correct
+probability statement on that comparison vector, given that the record
+belongs in the match set, and the denominator is the probability that
+will occur given that the comparison belongs
+in the unmatched set. So this is something, like, for these records, do
+the first names agree, do the last names
+agree, do the street numbers agree, do the addresses agree, do the sex and dates
+of birth agree? That's a particular
+agreement pattern. Now, the numerator is the
+probability that that would occur if the record
+belonged to the match set. The denominator is
+the probability that it will occur
+if they belonged to the unmatched set.
+Fellegi-Sunter has never been implemented it with
+this agreement index. It's implemented with this one, the one that assumes
+conditional independence, but conditional on knowing
+the true state of the record. You can factor this probability into the probability that the agreement function for the first variable
+would be 0, 1, given that the record
+is matched through the agreement function
+for the kth variable, and that r star will
+take the logarithm of, and that's the agreement index. Now we need to
+build a classifier. The classifier works by finding an upper bound T and a lower bound L that
+define the match set, so if your index is
+above or equal to T, you're going to be put in
+the classifier match set. If your index is less
+than or equal to L, you're going to be put in the classifier unmatched set. There can be a positive
+distance between these two, and indeed there has to
+be a positive distance between these two if you
+implement this algorithm as it was originally published and implemented with controls on the false positive and
+false negative rates. The false match
+rate is defined as the probability that you put
+the record in the matches, but it belonged in
+the unmatched, and the false non-match rate is the probability that
+you put the record in the unmatched. You should have put
+it in the matched and the full implementation I'm not going to show you
+the rest of the algebra. The full implementation
+of the Fellegi-Sunter estimates Mu and Lambda
+as a part of the process, along with estimating all of these conditional
+probabilities as a part of the process and delivers an optimal in a
+frequentist sense, T and L but they will always have a gap between
+them because that gap is determined by how tightly you control the false match rate
+and the false non-metric. The tighter you want
+to control them, the bigger the gap will be. How big that gap
+actually ends up being depends on the empirical
+qualities of the data. I have an example coming. In fact, here it is. Now I apologize for the poor
+quality of this visual. I got some grief at the Census Bureau
+when I put it up but it's the original
+residual from Sheuren and Winkler reproduced in their
+2007 book from the original. It has never been
+digitally cleaned up. On the x-axis is that
+weight the logarithm of the conditionally
+independent agreement index and this is real data. It's from the 1988, dress rehearsal for
+the 1990s census. The 2018 end-to-end test for the 2020 Census
+begins in August, which is just a
+few days from now. Every single one of these was clerically
+reviewed multiple times, including sending the enumerator
+back for cases that had contention at the
+numerous and they were multiplying clerically
+added and re-interview. We, therefore, know the truth. The truth is what it shows. If you see a plus,
+that's a true match, if you see a zero, that's a true non-match. Here are the Fellegi-Sunter upper and lower limits. Over here, these are
+the false matches here, and over here, there's
+some mixture with zeros, but the pluses over here
+are the false non-matches. These data are nicely separated. That means that the
+agreement score, the weight, does a good job of putting the records that
+should be linked on the right and the
+records that shouldn't be linked on the left, and many things
+that are good about record linkage work particularly
+well in this situation. Although, you don't get a truth set to know whether you're
+in this situation very often and estimating the
+false negative and false positive or a false match
+and false non-match rates is a very labor-intensive
+exercise. Except in cases where the conditional
+independence assumption can be shown to be valid. I'm going to do mostly
+Bayesian record linkage today, which won't seem so strange to the younger economists
+in the audience. Of course, is going to be
+Bayesian record linkage but it was not well received when it
+was initially proposed. Bayesian record linkage
+does, is say, well, we don't really care
+about the probability of the data given the model. We care about the probability of the model given the data. So this is the
+probability that I ought to set the record
+AB into the match set, conditional on what I observe
+in its agreement function. This is the probability that I ought to
+put that record in the unmatched that
+conditional on that and there's a
+complimentary probabilities. So in the two file case, I can just use a logit
+or likelihood ratio of those two probabilities. The classifier estimates these conditional probabilities, usually using Markov chain
+Monte Carlo methods, and classifies it as a match when this one's bigger
+and has a non-metal when this one is smaller.
+If you want to be super technical and you can flip a coin when
+they're at equality but I didn't bother to
+put that in the slide. I've already said that
+we have lots of uses of classical record linkage,
+deduplication, frame updating. I'm going to show you
+some of those now. This is really a
+nice flow diagram which I adapted from
+Christen glacier. You've got two datasets. Well, in deduplication,
+those are the same dataset. You're going to put them
+through cleaning and standardization and actually, I promised the
+census folks that I would talk about cleaning
+and standardization, but I didn't get two
+hours, I only got one. I'm going to say that
+you really want to go to Herzog et al. 2007 to get a very good discussion of what you should be
+doing in cleaning and standardization,
+and you should know that the household standardized
+or at the Census Bureau, when compared to
+household standardized, there's that are commercially
+available is quite good. It's better than any
+of the ones that are commercially
+available in the US. Say as, by the way,
+encrypts is what I have heard rumors that that might not be an unbreakable
+encryption. Then you send them over to
+an operation has a lot of prior judgment and I'll be talking a bit about
+that prior judgment. It's usually done by blocking, which means you declare
+some of the variables to be exact and you match on
+them and then you classify, classify our space gets shrunk. I'll show some examples of that. A more modern way of doing that is to index
+these two datasets, which allows there to be overlap in the blocks basically. This part, you can now
+do in parallel of you blocked or index and so
+as rapidly as you can, you do all the
+pairwise comparisons and the different blocks. You don't compare a record
+to itself for D duplication, and then you send it into
+one of these three bins. It goes into non-matches, then in the case
+of D duplication, the non-matches are the same as records
+that are over here, so we're not going
+to worry about them. When we find a duplicate, we're going to
+delete the duplicate from A and get A star, so that is the D duplicated
+version of the list. Whether you do clerical
+resolution or not, which will be grayed
+out and most of these slides is usually a resource question and
+many of these operations, especially when they're
+doing the decennial census, have to run in
+real-time unsupervised, so the clinical operations are kept to a manageable level
+have been times when there have been large
+armies of clerics at the Jefferson Villa national
+processing center doing the resolution for
+the coverage survey. What's classical frame updating? You have to
+de-duplicating data sets, A star, B star, you put them
+through the same process but when you get a batch or
+a clerically resolved match, you're going to retain A
+star and add the data to it that came from B
+star. Oh, I'm sorry. This is classical
+frame updating. In classical frame update, the variables are the same here I should read
+my own headers. When you get to the non-matches, you're going to add
+the non-natural A star because
+this list contains duplicates of this list and uniques and I only want
+to keep the uniqueness. So that's classical
+frame updating. This is Classical
+A-B File Matching, which does what I just said,
+but I'll say it again. You put them through
+the same engine, and when you come out
+with the matches, you add the data from
+B-star to A-star, so every unmatched record in A-star is missing
+the B-star data. What do you do with
+the non matches? Well, you can either
+ignore them if you believe that you have a
+well-represented universe here, or you can use them
+to update A-star, in which case all the A
+variables are missing from the records that were
+contributed by B-star. What do we do now when we
+process multiple files? We declare a master file, the one that the
+reference is going to be duplicated and regularly updated so when a new file comes in, it's linked to A, just like B was linked to A. Then the data from C-star
+are added to A-star, and we would generally ignore, rather than upstanding,
+A-star with the C-star. Now A-star has got data from A, data from B and data from C, but a B is missing
+those variables that were unique
+to the B record, if it doesn't get linked
+to C it's missing the variables that were
++unique to the C records, so there is potentially a
+lot of incomplete data. That will figure prominently
+in the Bayesian example, but I'm not going
+to spend a lot of time on how to fix it. Here's what happens though when you've got lots of files, but you can match B to C
+too. You got the engine, you might as well do it, and you get the matches so you
+add the data from C to B. What happens then? Now we have this problem that record
+a_1 links to record b_1, record b_1 links
+to record c_1 but record a_1 doesn't
+link to record c_1. This is called transitivity, and most people think in most
+record linkage operations, the multiple file record
+linkages should satisfy transitivity because
+you're trying to build evidence about an entity. So the evidence should either be about that entity or
+not about that entity. Because these are all done with an algorithm that selects
+the best link and discard the rest of the data. It's hard to resolve these, but the case happens frequently in business
+and household data. It really happens frequently
+in business data. We had one audit done of
+the system that clip uses, that suggests that it's not as uncommon in household
+data as we thought. The Bayesian methods
+can handle either case, so it's on you to declare what you are correctly
+configured match set looks like, but I'm going to talk today about the cases that
+enforce transitivity, and they enforce
+transitivity across all the linkages
+of all the files. How do we get record
+linkage errors? To talk about record
+linkage errors, we have to distinguish
+between the entity space, all the things that are
+at risk to be linked, and the comparison space, all the combinations that
+you're trying to link. I'm going to talk about some suggested rate
+measures and do an extended example from
+Christen and Goiser. This is the entity space
+in their notation, but it's so similar
+to mine, I decided not to wide out from
+the subscripties. You have this A file and the B file you're
+trying to link it to, and this true match set
+is the intersection, and this unmatched set
+is the complement. The union of these two
+is the entity space, so it's all the objects that you could treat as
+separate entities. The comparison space is
+all the records in file A, crossed with all the
+records in file B, after you blocked, which means that after you've
+made some assumptions that make this not an A times
+B file most of the time. In this hypothetical example, these crossed hashed cases
+are the true positives. The true matches extended
+all the way up to the diagonal 1-1 through 12-12. These are all true matches. The marcher found these nine
+and it missed these three. Every empty one is
+a true negative, and if it's empty, the marcher didn't try
+to do anything with it, so it's a true negative but every time you see
+a classified match off the diagonal or above 12-12, that's a false positive. These are things that were matched but
+shouldn't have been. They've been labeled as
+matches there in M squiggle, but they belong in U. Those are the sources of error, and when you're in
+comparison space, the universe is in
+this case 25 times 20 all possible
+record comparisons. The usual standard for describing these is to put them in what's called a
+confusion matrix. This is a nice simple
+confusion matrix because it's a two-by-two case. The rows are the truth, should match, should not match, the columns are what you
+classified as a match, classified as a non match. I will fastly switch between true match
+and true positive, false non match and
+false negative, false match and false positive, and true non match
+and true negative, but all the notation is in TP, FN, FP, FN terms. A lots of different measures
+have been proposed, but three of them get used, but are somewhat problematic. The accuracy is just
+the true positives plus the true negatives
+divided by the universe, and this is dominated
+by the true negatives. The precision is
+the true positives divided by the true positives
+plus the false positives. This is a very
+heavily used measure, usually because it's defined
+as one minus itself, the false discovery rate. You can see that it does not depend on the true negatives. A common way to make
+decisions about the classification is to set the precision equal to the true positive
+rate or the recall, and that's called the
+Precision-Recall Breakeven point. Some authors prefer
+the F-measure. If you're into ROC curves, then you are into things like the Specificity
+and the False Positive Rate. The ROC curve is the
+False Positive Rate against one minus the specificity, the
+true positive rate. It's too optimistic
+because of the dependence of the false
+positive rate on TN. All of these measures
+require that you have an estimate of the true positive rate and
+the false positive rate, which is easy to construct
+in audited examples. There are these things for this comparison space,
+all calculated out. The accuracy is essentially 100 percent even in this
+really small problem, because most of
+the TNs are right but the precision is
+only 72 percent and it doesn't matter whether
+I calculated from the comparison space
+or the entity space. Usually, these are
+preferred measures, but the ones that
+don't depend on TN are the same whether I use the entity space or
+the comparison space. The false positive rate and the false negative
+rate, where did it go? Now jumping on. The first positive rate and one minus the
+specificity are often used even though
+they depend on TN. What does it look like when
+we have multiple files, but we don't change the theory? If we're not going to
+change the theory, we have to continue
+to use something that looks like Fellegi-Sunter. Now, I'm not going to do
+a lot of the details, but Sadinle and Feinberg did a principled extension
+of Fellegi-Sunter to the multiple file case. It works exactly the same
+way as Fellegi-Sunter except it's exponentially
+more complicated because you have to do
+the outcomes properly. Once you understand how the
+outcomes are done properly, then you can see why it gets computationally
+complex in a hurry. Here's the notation. I've got three files
+in this example labeled here in the author's
+Notation 1, 2, and 3. This notation means
+that I should put them into their
+own universes. One doesn't link
+with two or three, two doesn't link with
+one or three and three doesn't link
+with one or two. The next possible outcome
+is one links with two, but neither link to three. One links to three, but neither link to two. Two links to three,
+but neither link to one, and all three link. Notice the transitivity has been imposed in this outcome space. It's easier to see in
+the connected graph, all possible three-point graphs are the outcome space here. What the Fellegi-Sunter
+generalization is going to do is it's going to predict probabilities
+and the frequency sense for each of these outcomes, compare to unclassified, and do the same thing as Fellegi-Sunter does
+with the two case. The two case is a
+special case of this. It's going to get the smallest possible
+unclassified space for a controlled error
+rate across all of these five classifications
+in the three-person case. What does this comparison
+space look like? This comparison space
+is very complex and here I'm showing
+it to you blocked. In their example, they
+have two examples, this is a census data from Columbia and they've
+blocked it on, I believe these are
+metropolitan areas. This is my speaker notes. It's homicide data for a particular set of
+Columbian towns. The homicide data are blocked by sex and the census data, they're being linked to
+are blocked by the town. The comparison space
+just consists of the grayed-out squares here
+and I'm not going to do the example if these dark
+gray ones represent. The comparison
+space, we didn't see all the other ones
+that are eliminated. I don't put the third cross
+on here because you can see all the comparisons
+that need to be made in this two-way. How do you implement it? The classifier chooses a predicted match
+by basically making an agreement index for each of the outcomes associated
+with the K-tuples. This is a three tuple. There are five
+possible outcomes. If it's a K-tuple, there are the Kth bell
+numbers possible outcomes. If you know what the
+Kth bell number is you're in good company with
+respect to the speaker, but the formula is in the paper. If you do know what it is and you've probably
+done this and know more about these
+algorithms than I do. I'm not going to
+draw these methods, I'm going to pass directly
+to the Bayesian case, but when there are
+only two files that specializes right
+back to Fellegi-Sunter. It's the same theory
+applied to multiple files, except that the linkages
+are always transitive. Here's the guts of the talk. I want to talk about Bayesian methods and
+virtual populations. The key insight here is that record linkage is
+fundamentally a Bayesian problem. You're trying to
+collect information to make an inference that you're observing
+data on an entity. You might not even know that that entity exists
+before you get the data, that you don't have
+any such thing necessarily as a master list. You're trying to accumulate data evidence about the
+existence of an entity, either a household, or persons, or business, or an enterprise. What you have to
+do is you have to specify and estimate
+a linkage structure. You need to allow all of the pairwise comparisons
+to deliver to you a link which says this pairwise comparison goes to some entity in this
+virtual population. The virtual population goes from 1-J and you don't know cap J. These methods allow for
+errors in measurement, all the classifying variables, and extreme error in
+measurement that it's missing so that that
+case is covered. The exact likelihood function
+I'm not going to show you, so you can berate me for the fact that
+everything is discrete, but I will tell you
+that the Census Bureau itself has never
+published a real number. It has published discrete
+data for all outcomes. Some of those discrete
+spaces are large, but there are no real numbers
+in any of our data files. It's implemented via
+Markov Chain Monte Carlo. It's amenable to large-scale
+parallelization, and so problems that seemed impossible five
+years ago are now relatively straightforward. I'm hoping we can ramp up like that but the best thing is you get the full posterior distribution and you can do the
+error assessments. You can estimate the error rates that you need to estimate
+in order to adjust your statistical analysis for the fact that you didn't
+know an exact identifier on every case and
+completely replicate your frame with every file that you linked in on every variable. How does it work? We've
+got K files indexed by i. Each file has data. There is no loss of generality
+by saying they all have M variables because there's a date of distortion indicator. If it's one, x_ij is distorted and the extreme case of
+distortion is it's missing. If z_ij is zero, then the data that you observe for the ith file on the jth person and the lth variable is the
+right data for that person. Notice that if you don't
+have this distortion and all these variables are exact, then you just do exact record linkage and
+then you have to make a different set of probably discussions when
+you have incompleteness, but if there's no
+distortion indicator bring completeness either
+so the best you can do is exact record linkage
+join on your M variables. The size of the latent
+population is a minimum of one. There are duplicates
+in every file, and they're all duplicates
+of exactly the same person. A maximum of the sum of the number of rows
+and all K files. Here's the key variable, the linkage structure,
+which is latent. In the ith file, the jth observation
+should be linked to some entity from 1-J. The latent data is associated with the linkage structure by a method that I will
+show you in a second. The actual data's latent, the linkage structure's latent, and the population
+size's latent. What do you observe? You
+observe this matrix of records. What do you do? You need to estimate the posterior
+predictive distribution of the latent linkage structure, the latent data,
+and the latent data fuzzing or data distortion matrix conditional
+on the real data. Trust me, you do it with
+Markov Chain Monte Carlo, a variety of different implementation
+tricks and outcomes, an estimate of the
+probability that any record ij likes to any other record i prime
+j prime conditional on x, which you can just
+estimate by summing the instances of the
+indicator function over the sampled values of Lambda ij for H draw from the
+Markov Chain Monte Carlo. That doesn't get you
+all the way home, because it's still
+difficult to publish the posterior predictive distribution of latent linkages. We want to publish one linkage, and then use the
+posterior distribution to assess its quality. To do that, we're
+going to define an arbitrary set of records as ordered pairs ij that
+draw one element from the file list and one element
+from the record list. If everything has
+been duplicated then it's one and
+only one element from each of these two lists but if they haven't been, then a j can have lists
+that include duplicates. There's a de-duplication
+version of this algorithm. That's a fine point. We have to define the
+maximum matching set. The maximum matching
+set is the set of records where every
+one of them says, I belong to person j prime and no other records in the comparison space
+belong to j prime. That's the maximal matching set. I can estimate the
+probability of every maximal matching
+set using this posterior, in fact, using this equation. I can estimate the most
+probable maximum matching set. That is the set that has
+the largest value for the posterior probability of the matching set given the data. That still doesn't solve everything because
+a record can be in two most probable
+maximum matching sets. There's a refinement that says, I want the most probable maximum matching
+set that shared. It's the records ij. Where for all the
+records in this set, i, j and i prime, j prime are the same
+maximal matching set. Basically, you isolate
+all the records in a shared most probable
+maximum matching set and know those records don't appear in any other shared
+maximum matching set. Now we've got everything
+we need to use this engine to do multiple final record
+linkage and to use the same engine
+to assess errors. How do you do the multiple
+file record linkage? You take this estimated
+linkage structure and you assign the data
+into the latent entities. This shared most
+probable maximal match set puts record X_11
+and X_22 in Latent Entity 1, it puts record X_13, X_21, and X_34 in
+Latent Entity 2. You can go through and create
+all the latent entities. When you're all done with this, if you've got straggler records, they just get put in
+their own latent entity. You can do a confusion matrix, but the confusion matrix
+is more complicated. In this example, it is the 1982, '89 and '94 waves from the National
+Long-Term Care Survey, which have been classified by sheer most probable
+maximum match sets. On the x-axis is the
+true pattern of matches. These had Social Security
+numbers in them, so the Social Security
+matches taken is true. The record only comes in '82, only comes in '89, comes in '82 and '89, '94 only, '82 and '94, '88 and '94 and all years. The heat map shows the
+relative probability of the shared PMMS being in that true pattern versus the same thing on the
+estimated pattern. The vast chunk of the mass
+is sitting on the diagonal. These off-diagonals are the various classification errors that this multivariate
+one can make. There's not two, so it's not as simple as false positives
+and false negatives, but this is the
+complete confusion matrix for this problem. Classical analysis of the
+effects of linkages on statistical models focuses on errors associated with
+the false match rate, errors associated with
+the false non-match rate, frame errors that are due to a faulty correspondence between the linked data and
+the conceptual frame, and specification
+errors which are due to compromises that you
+make in the implementation. That conditional
+independence assumption or various other assumptions
+such that you're not actually using the complete likelihood
+function for the data. These are really the
+original figures from Scheuren and Winkler's
+original investigation. The problem here is, how do you estimate that
+true positive rate, or false positive rate,
+and false negative rate? You need the false positive rate mostly for these
+regression corrections. You can use a method called
+maximum likelihood with expectation maximization
+algorithm to estimate it while you're
+doing the Fellegi-Sunter, but it only really works well if the data are cooperative
+with the Fellegi-Sunter. This is an example
+simulated data. The Fellegi-Sunter
+agreement variables on the x-axis and
+the match frequency, the frequency of this
+particular index value is on the y-axis. Over here are matches, over here are unmatches. These are mostly zeros, these are mostly pluses, this is nicely spread out. It's also single humped, so things work well. This is considered ideal data
+for using Fellegi-Sunter, you can estimate the
+false positive rate from these data directly as a part of the
+matching algorithm, and it will be accurate. This is a typical case. There's a lot of overlap. When there's a lot of overlap, that means when you
+draw in your two lines, you either have to put
+them pretty far apart to control the false positive rate and the false
+negative rate. That means you spend a
+lot of clerical time or you put them close
+together and you accept larger error rates. Here, they're right
+on top of each other. You should think of this
+as the prototypical case for linking business data. I know you can't read this
+table and I was heckled badly for it when
+I gave my dry run but what it basically says
+is that in the good case, you can estimate the false positive rate
+quite accurately. The estimate that comes
+out of the EM apply to the Fellegi-Sunter data agrees with the true one quite closely. It's okay in the case of
+the mediocre overlap and it's not okay in the case of the data all
+stacked on top of each other. What do you do with this? There are regression
+adjustments that you can use the false
+positive rate to fix the bias and the standard error and the regression
+coefficients that's associated with having
+false positive rates. If the matching scenarios
+are good or mediocre, they're not
+particularly important. If the matching scenario is
+poor, they are important. Those techniques were refined by Lahiri and Larsen
+in their 2005 article, and they also fix the estimation
+of the standard errors. Playing labor economist,
+now we do standard errors. I didn't hear heckling last
+night where that comes from. Lahiri and Larsen correction,
+which basically says, take the output from the Fellegi-Sunter
+estimation and use some of the rejected matches to
+estimate your false match rate. You need false match
+rate to do this right. If you do that, then their simulation
+cases are nicely spread out and not so
+nicely spread out, and they nicely spread
+out a simulation Case 1. In that case, the Scheuren and Winkler
+correction works okay and Lahiri and Larsen correction
+works much better. This says that the 90
+percent confidence interval covers the true value properly. In the case where the data
+aren't so well-behaved, the Scheuren and Winkler
+estimator does okay, it does better than naive, but naive means you
+didn't do anything, but robust means you thought you were correcting
+the standard errors. Lahiri and Larsen,
+is you're doing the correction that's based on estimating the false
+positive rate. It's a little more
+complicated than that, but that's a good summary. The takeaway from this is it
+does matter that there were linkage errors when you're doing even a simple statistical
+analysis like a regression. It matters a lot when you're
+linking establishment data. This was one of my
+thesis students at Cornell, [inaudible] Zheng. This is a chapter
+from her thesis. See I didn't list me
+as a co-author because I'm not a co-author of the
+chapter of her thesis, but I might be
+responsible for some of these calculations
+nevertheless. This is a hand audit of the lengths of the
+establishments and the LHD data to the links of the establishment in the
+census business register. In the top panel is
+the false match rates, the false positive, and on the bottom panel is the false non-match rates,
+the false negatives. What you can see is that essentially 900 cases were done at the employer level, 900 cases were done at
+the establishment level, and then from the non-matches, 900 were sampled
+from both of those and handle audited to
+estimate these rates. The false match rates at the establishment level
+are not particularly high. They're not in the
+troublesome range. At the employer level,
+they're higher. The false non match rates
+are actually quite high. That's 44 percent, 63 percent, 73 percent. What that did was that detected and here are
+the blocking assumption, not one you can do a lot about. You only know the
+state on the LHD side. You're looking in the same state on the business register state. You're blocking on state. Blocking variables and errors and blocking variables are what inflate your false
+non-match rates. Remember, say all the
+words every time. They inflate your
+false non-match rates. What do I mean by frame errors? A frame error is when you
+take the data, you link it, and then you analyze it as if it represents the population
+you thought it represented. This has every single social
+security records from the LHD data all the way back
+to the beginning of time, all the way to 2013. This is the inequality
+measures 99 to P1, 95 to P5, etc., and the variance, and it looks like they've all been
+flat since 2000, except for possibly
+the variance. Those are all the data, but the correct frame is workers. A lot of these Social
+Security numbers have unusual providence because the records
+are not ones where the administrator of the data has an incentive
+to clean them up. Some of the uses of the data
+might not have an incentive to pay any attention at all to the Social Security number. These are all the
+records that were thrown out because they failed various conditions in valid Social Security number. The person was less than five, between five and 13. This you might have
+want to put back in, but it doesn't make
+much difference. There probably aren't six
+million 13-18 year olds who had Social Security numbers. These people we took out of the universe, so they're removed. These people held more than
+12 jobs during that year. There's a nice
+clean break between holding more than three
+and holding more than 12, and these last ones are others. When you take them
+out, sure enough, this is a properly
+constructed frame with all the flows in and
+outs properly manage, and sure enough, inequality
+has gone back up since 2000 and spiked
+during the Great Recession. It does matter that when
+you're done with your linkage, you still want to
+make sure your frame covers the right population. Jim Splicer supplied
+me with this example. When the business
+employment dynamics series was being constructed
+by the BLS, he was the primary
+researcher in charge, they tried lots of
+different methods of doing the temporal linking
+of the establishments, and each one produced much different entry
+and exit conclusions. They documented this and he says not very well-cited
+technical paper, but it's clear that behind
+the scene decisions about how you block and how you implement the record linkage strategy
+had a big influence. It's exactly those. What do you call a new business and what
+do you call it dead business that I showed you in the original linkage example. Specification errors. There are very large differences in the validation rates, depending on whether
+you use person and housing characteristics when you link to the American
+Community Survey. Your regression sample of the
+completed data is not the same as your regression sample
+of the incomplete data. You need to deal with the data that are missing
+due to the linkage. You can do that by
+either adjusting the survey weights or you can use multiple imputation. Changes were made when
+this was well-documented, changes were made
+to the PBS process. That's the automated record
+linkage that the census uses to produce clip,
+among other things, that attenuated the
+regression bias from the failure to link that's related
+to characteristics. The Bayesian analysis is also able to handle this neatly. Here's another example. By using sampling from the posterior predictive
+distribution, this is a national time series constructed from the LHD data in the quarterly
+workforce indicators and the colored areas of the standard error
+bands that account for some of the linkage
+errors in those data. This is an excellent example
+from Italian statisticians. In the record linkage
+and regression model, they have a true Beta, it's true, and they allow
+the record linkage on the regression model
+to be estimated simultaneously with
+Markov Chain Monte Carlo. It does a nice tight
+job of fitting the correct Beta coefficient. If you just use the
+regression model and plug-in the data from the record linkage model, it's still okay. It's centered on
+the right place, but it's not very tight. We don't want to talk
+about these other two methods because
+two is over here. The same thing is true
+if you're trying to estimate the true
+positive rates with the Markov Chain
+Monte Carlo data. In real data, it also matters. This is the regression
+coefficient from the true data. This is logarithm income of
+2008, logarithm income 2010. Now, the linkage process dragged the distribution
+of Beta to the left. They don't have a particularly
+good correction for that, but it's important to know
+that that is what it did. Then they have some examples of ways you might be
+able to correct it, taking logarithms helped a lot. No surprise to the
+labor economists. I'm going to finish
+with some food for thought for the clip data. The successful matches
+are very high. The false match rates
+are very low when you're using the full set of linking
+variables and passes, but the false match
+rates can be troublingly high when you only use a subset of the linking variables. Commercial data doesn't link as successfully as
+administrative records, and there are no estimates of
+the false non-match rates. There are estimates of
+the false match rates. What you want to look at,
+is you want to look at a study that we
+commissioned from NORC, and Mulrow is the lead author. In the posted version
+of these slides, the references will be in there. These are all the
+validated match rates and you can see they're
+all up in the '90s. They do link substantial
+portions of the records. That is to say
+you're able to find a pick for substantial portions, which means they are linked
+to that master file, a star that I started
+off this discussion. Here are the false match
+rates, the false positives. I forgot to put
+it into my notes. Somebody in the audience
+expand meds for me, I forgot to put it in my notes, it's administrative
+data from the CMMS. It's false match rate
+when you've got access to all the data is a
+trivial 0.005 percent. That would not trouble any of the algorithms that
+we're working with but if you can only
+use spatial data, which was true for a substantial
+fraction of the cases, then it creeps up
+to 1.7 percent. If you can only use named
+data, it's 0.2 percent. If you can only use
+date of birth data, it's 0.177 percent, those are still pretty low. The commercial data has much
+higher false match rates when you have incomplete
+data and much higher ones, although they're still
+not particularly troublesome, that
+one at least isn't. This one might be, when you're using incomplete variable sets. These are the false match
+rates at the cutoff. They are the false match rates, which in these data, are auditable because the Social Security
+number is actually on the data right at the cutoff. What I want you to take away, it's time for us
+to consider doing sensitivity analyses
+when we use link data. It's what Steve Feinberg was
+trying to get me to fess up to when he would corner
+me periodically. I agree. We actually have
+put a task force in place at the Census
+Bureau to do that, to develop usable measures of the linkage
+error and to adjust quality standards
+so that we report such unusable measures of the linkage error and you can use them in downstream analysis. We want to estimate to
+the false match rates. Use those estimates to assess
+regression like models, address the representativeness
+of the analysis, that requires supplying some master frame
+information along with the linked data and perform the analysis with alternative linking strategies. There needs to be some
+robustness with respect to the assumptions that go into some of these
+linking strategies. We also need to begin full-scale experiments with
+virtual population models. Now, we're getting ready to hire an expert on
+those to help us with that. 

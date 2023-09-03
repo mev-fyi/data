@@ -1,0 +1,400 @@
+Dr. Mustafa Al-Bassam: Okay, so yeah, I'm
+gonna present a kind of like end-to-end transaction flow of what a typical
+transaction on Celestia will look like. And we've done this every onsite and
+it's important that we go through this again, but only for the new team members
+to understand what we, what are we building as a product, but also for the
+existing team members so that they're reminded regularly and so that the big
+picture can fit into everyone's mind to see like how what you're working on
+fits into the big picture of all the other components in the modular stack. But I'm gonna be kind of like presenting
+on this from a very specific angle. I'm gonna be presenting what the
+end-to-end transaction flow will look like, specifically for optimistic
+rollup on Rollkit that uses Celestia as a DA (Data Availability). But obviously there's of course
+other rollup frameworks like, like Sovereign SDK, for example,
+OP Stack and so on and so forth. They might have slightly
+differing architectures, especially if it's a zk rollup. But this should still help you
+understand the general concepts. So let's say you have a, let's start
+with from the perspective of the user. What does the end user
+ideally run on their machine? Like a user that wants to use a rollup. So, first of all one of the core
+components of Celestia is this idea of light node, so like unlike most other
+blockchains, like Ethereum for example, the way you interact with the chain
+is that you run a Metamask wallet, but you connect to a centralized service. You have what's called a centralized
+RPC endpoint, like Infura, and that centralized server runs
+a Ethereum node and tells you what the state of the chain is. But also that's one of the kind
+of like biggest problems that need to be solved with Web3 right now. The whole point of Web3 is that
+it's supposed to be trust minimized and that users should be first
+class citizens of the network. So that's why we've kind of like put a
+heavy emphasis on making sure that people can run  light nodes that connect directly
+to the network and can get information directly from network instead of having
+to connect to some centralized service. So the first thing that the
+user expect is expected to run. And the user, by the way, could be
+like an exchange or a company or a custodian or anything like that. The first thing they're expected
+us to run is a Celestia Light Node. That's the first thing. And then Celestia Light
+Node does a few things. It connects to the Celestia
+peer-to-peer network. And you can interact with full nodes
+in the peer-to-peer network to ask it for the state of the network,
+like what the latest blocks are. And it also performs something called
+Data Availability Sampling (DAS). So you have this Celestia Core
+network which I'll draw that in blue. And then in this, in this
+Core network , you have these Celestia full nodes, so like, or I can call them, they could be
+validators as well, but I'll refer to full nodes as a general concept
+that also encompasses validators. Yeah, Rene Lubov: I feel like we should
+just call the consensus node Dr. Mustafa Al-Bassam: but I also do want,
+I'm also referring to who, storage node. So like they all Rene Lubov: inside the consensus network. Dr. Mustafa Al-Bassam: Cause they don't,
+they don't sample that light nodes don't sample from consensus nodes. They sample from storage nodes. Rene Lubov: Yeah. Dr. Mustafa Al-Bassam: Yeah. So, so I'm just gonna refer this
+to them as full nodes for now. And these full nodes are connected to
+each other in the peer-to-peer network. And these light nodes they can sample
+block headers from the Celestia network. So the Celestia network
+produces Celestia blocks. What is inside the Celestia block? A few core components. But like the most important component
+is this, this concept of a, of a data root commitment called a data root. So, which we call data root. And what this data root is, is basically a
+Merkle tree of all the data on the chain. Like in the leafs of these Merkle trees
+are the data that people have submitted this Celestia these are called data blobs. Data blobs could be different lengths. So like a, if you have like a data
+blob that consists of like three pieces in, in the tree or like two pieces. So like all of these distinct
+things are like data blocks. And you can, you, and like light notes
+can prove, can check proof that they can receive these data blocks and
+check a proof that they've included it in the data route via Merkle proof. So now let's go back to the end-to-end
+transaction flow and it's gonna become more clear how the light
+node interacts with the network. When you run a Celestia light
+node, you're also presumably also gonna bea user of a rollup. So there's also gonna be
+like a rollup network. And this rollup network
+also has its own full nodes. That that also connected to each other. The user also has to run on the
+machine, not only a Celestia light node, but also a rollup light node. Let's say that the user wanted to
+submit transactions to the network. So let's look, let's look at
+what the transaction flow is. Like, where does that go? The user constructs the
+transaction, let's call it like TX. Let's put TX on their local machine. And then they send that transaction
+to a full node on the rollup network. So they say they send it to a full
+node on the rollup network and that full note gossips it the other full
+nodes and then they all receive like the pending transactions on the chain. Does anyone have any questions so far? Someone said something. Okay. And then what did the did the full
+nodes do with this transaction? They make it into, they put it, or
+they sequence it into rollup blocks. So I mentioned that there's
+Celestia blocks, but there's also another, another thing called the
+rollup -- also has its own chain. And that chain get the data of that
+chain, the blocks of that chain gets, gets posted into celestia. So a rollup is basically
+like a chain inside a chain. And to visualize that. So let, let's see what,
+what that looks like. So, so the full nodes
+collect these transactions. And these full nodes could be sequencers. And then they produce these rollup blocks. So let's say like this latest block,
+it contains the user's transaction, TX. So then they've created
+this latest rollup block. What do they do with the block? This block has what's called a commitment. There's a, there's a let me
+see how, how to describe it. Yeah. Let, let's just call it a
+data commitment for now. This data commitment. What is this? This data commitment
+is also a Merkle tree. So let's say, let's see
+what that looks like. So let's say like it, it is just a Merkle
+tree of four, and like part of that Merkle tree could be the user's transaction. Now, the key thing to realize is
+that what happens is that the rollup sequencer, they post this block
+data into the Celestia network. So, this block, it gets posted to
+the Celestia network and then it gets included inside the Celestia block. So, and then this rollup block could be
+inside the actual Celestia block, for example it could be one of the blobs
+like here, so like it's color-coded red because this data is inside that there. And then the key thing to realize is
+if you look at this data commitment, the state commitment is a tree, is a
+Merkle tree in itself, but it's, it's actually a subtree in this bigger tree. So like for example so this is four. So let's say this is,
+this is the data blob. So like this, so this smaller tree
+is actually inside this bigger tree. Like this data here in the
+tree is the same data as that. Does that make sense so far? Does anyone have questions? Yeah. Matt Sevey: The reason, reason you can
+kind use that like one-to-one mapping is because of namespaces, right? So because it's a namespace, you kind
+are locking into like all of this block data can stay together in this namespace
+out of that subtree versus if you had just like, put all the data together, it
+wouldn't necessarily map to like the same. Like it might bleed over
+into other, other trees? Dr. Mustafa Al-Bassam: Well,
+the namespaces aren't actually a necessary component for this to work. The namespaces are more like an
+optimization to make it possible for people to later download this data to know
+where it is to, so instead of them having to search the whole block, they only have
+to search the namespace for that data. Matt Sevey: Mm-hmm. Does does it have - It doesn't
+have any impact on the way that the like block tree is balanced? Dr. Mustafa Al-Bassam: That's an
+implementation detail basically. Yeah. Nick White: The thing is that
+the, the leafs in the data route are the chunks, right? Yeah. Whereas the leafs and the data commitment
+at the top are the actual transactions. Dr. Mustafa Al-Bassam: No,
+they're actually also chunks. They should also be chunks. Nick White: So the rollup chooses
+to commit to its transaction data in the same chunks? Dr. Mustafa Al-Bassam: Yeah. This is like, this is what the new
+blob module API is supposed to achieve. There's this new blob module API in
+celestia-node where you can add data to it, you can certify the data and yeah,
+you can like call a function called commit that computes the commitment for
+you, but it commits what this, what this subtree root is so that you know when
+you post it to Celestia, you know it's, you know it's gonna be in the tree. Does that make sense? Nick White: Mm-hmm. Dr. Mustafa Al-Bassam: So that's,
+so the third part of this, and then, so this is kind of like,
+and then the user transaction kind of ends up in Celestia here. So to summarize, I've, so far
+I've described the entire read flow, like, I mean the write flow. How does the user write data to Celestia? To summarize like the user submits a
+transaction to a rollup network, to the sequencers of the rollup network, they
+make a rollup block, and that rollup block gets included inside this Celestia block. And then that transaction, the
+data of that transaction is inside this Celestia block. That's the kind of write flow so far. But now let's look at the read flow. Well, what do I mean by read flow? Like how does the, how does the user,
+now we've talked about like how does the user add data to the chain, but how
+does the user read data from the chain? Like how does it read
+its balance, for example? So to understand that we also have to
+understand that the rollup's blocks have something called a state commitment. So like I'll do it in a different
+color to solidify that this is the read flow, I'll do it in green. But first of all, what
+do we mean by state? This is assuming an optimistic
+rollup, but like, what do we mean by the state of the rollup? By state we mean, it's like kind of
+like a imagine like an Excel spreadsheet that says what everyone's balance is. It's like if you imagine it's like
+an Excel spreadsheet and then like you have you have like two columns. The first one is like name, and
+then like the second one is balance. So like like you might have Alice and
+Bob and then like, let's say they have like five coins each or something. This is what we mean by state, like
+the user might wanna see, "okay, please tell me what Alice's balance
+is or what, what is Bob's balance." And that's what we mean by state. We know what we need to know what
+the state of the chain is and the rollup block, they commit to
+the state of the chain using a Merkle tree,  using a Merkle root. And it's kinda like, it's very similar
+to this data commitment Merkle route. But instead of committing to the
+transactions that happened, it commits to the state of the chain. So like it might look something like this. So like this is like a very basic example,
+but like if it was a sparse Merkle tree let's say it's like a four leaf tree. Like part of the tree might say
+like, okay, Alice equal five, and other part say like, Bob equal five. And that kind of like
+it commits to the state. This route commits to the state
+of all the balances in the rollup. Now, how does the user kind of like
+know what Alice or Bob's balance is? So what happens, like what happens is the
+roll-up networks, full nodes, they need to be able to synchronize new rollup block
+headers posted to the Celestia chain. So then there's, it's kind of like
+read flow back from the Celestia chain back to, to the rollup network. So like these block headers, they
+are read by these rollup full nodes. So it's like this, there's this kind
+of information flow going this way. Rollup block header or the
+actual rollup blocks themselves. How do these rollup full nodes, how do
+they actually, what kind of query do they make to get these rollup blocks? So in Celestia we have
+this concept of namespaces. Where each like when you post the data
+blob to Celestia you can, you can specify what namespace is associated with a blob. You kind of think if it like
+a Twitter hashtag or like a channel on a walkie-talkie. So like if you tweet something and then
+a specific hashtag, people can a search for that hashtag to see what people
+have tweeted under hashtag and like anyone can tweet under that hashtag. So a namespace is kind of like
+the same thing for a blockchain. You can post data to a chain under
+a specific namespace, and then people can later search the chain
+for data under that namespace. So that rollup has like a specific, that
+rollup has, chooses a namespace, and then it calls a API called selection
+node called GetDataByNamespace. Yeah. GetDataByNamespace. And then, and the rollup follows,
+they send the header of the rollup and by header what we mean by
+header is the actual rollup block. Everything, everything about the
+rollup block, everything inside the rollup block except for the
+actual transaction data itself. So they send to the light client,
+basically like a rollup header. What does that consist of? It consists of the state
+commitment and data commitment, And then because light nodes have this
+state commitment, they can also ask the full node, "Hey, can you please
+tell me the, the balance for Alice?" And then once, once the the full node
+responds to the light node, it has to prove that that's Alice's balance. And how does it prove that? It proves that by using something
+called the Merkle proof, the rollup full node can't just tell the light
+node, "Alice's balance is five. Believe me." You can't just do that. What it needs to do is to
+say, "Alice's balance is five, and here's a proof for it." And the proof is basically like
+what's called the Merkle proof. It's like it shows that it shows
+a path from the root to the leaf. It shows that this commitment is
+actually committing to the fact that Alice's balance is five. The problem here, which is kind
+of like why Celestia exists, does anyone know what is? Nick White: Data availability Dr. Mustafa Al-Bassam: Yeah. But before that, like what could
+the rollup full node do maliciously in this flow when telling the user? Nick White: Fraud Dr. Mustafa Al-Bassam: Yeah. So what could happen is that, what
+happens cause the trust assumption for rollup network is that we need to assume
+that the full nodes are dishonest. All that means is that  the
+full nodes might be committing to invalid rollup blocks. They might be generating
+invalid rollup blocks. And what does it, what does it mean
+to generate invalid rollup block? It means like they might introduce
+like a malicious transaction in the block that, like, for example,
+prints  more money and gives it to them or like steal someone's balance. But for example, they might like, they
+might like have a malicious, they might add their malicious entry to the state. I say like Charlie or something
+and then he put the balance is like, like a thousand or something. But according to the rules of
+the rollup, there's no reason, that's not a valid thing to do
+according to the rules of rollup. You can't just give someone money
+that doesn't exist, but they might create a rollup block that
+has such a transaction in it. Because we can't assume that they're
+honest because the whole point of rollups is that they're trust
+minimized so that you should be able to create a you should be able to
+have a rollup with a single node and you don't have to trust that node. Cause the whole point of a rollup
+is that you can create your own blockchain without, without
+having a secure validator set. So what, so the way that optimistic
+rollups is deal with that case is that they they use fraud proofs. And the general idea for fraud proof
+is that like it's like a, it's called like state transition fraud proof. If you assume that each, every
+rollup has something called a state transition function. Let's, let's say like STF for short. You, you can think of the state transition
+function is basically a black box. What does that black box do? That black box takes in two things. It takes in two things. You, you put two things in that black box. The first one is new transac. Like, let's say one transaction and
+the second thing is that you put the state inside that black box. The state, again, as I said, is
+this, is this spreadsheet that tells everyone's what everyone's balance
+is and then what is the output? It outputs then new state,
+this, or an error basically. And it returns the error. If you put an invalid transaction. Like if you put a transaction that like
+says like "give Charlie a thousand coins." Let's say the input transaction is like
+like "give Charlie, increase his balance by a thousand coins or something." That's like a, it could be like an
+invalid transaction, for example, but in that case, that state transition
+function should return an error. It shouldn't return a new state,
+where Charlie's balance is a thousand. So it turns out like you can prove to
+a light client that, that the rollup full node, committed to an invalid
+block and it's pretty easy to prove it to them by giving them the right data. The data that you need to give
+them is the following: it's like, what does a fraud proof consist of? Like how do you prove that some rollup
+block has an invalid transaction with an invalid state commitment? You give them the state commitment
+of the chain before the transaction. This is what we call the pre-state root. You them the commitment to the
+state of after the transaction, and then you give them
+the transaction itself. Then you also give them
+what's called witnesses. But that's not that, that's, I'm
+not gonna go into that right now. It's not, it's, it is
+not an important detail. But if you give a light client this
+information, what they can do is they have the information required to put
+these things inside this black box and see what came out of the black box
+is not the same as what the full node said should come out of the black box. And they say it doesn't match. So you can tell that the full node
+is being malicious, like if that black box should actually return the
+error, but rollup full node says, actually it doesn't necessarily
+error, it returns this new balance. They can compare the output of this
+black box and see it does not match what the rollup said it would match. Yeah Jacob Arluck: Can you give a
+gist of how the witness works? Dr. Mustafa Al-Bassam: So the
+witness is basically, you have to give a Merkle proof of all of the
+state that the transaction accesses. Like in this case, like you
+might have like this is kind of like a contrived example. But you might have like
+a, like a key for Charlie. Cause you are accessing Charlie's key. So you would give them a
+Merkle proof for Charlie's key. And I say, this is kind of a
+better example, this is kind of like a contrived example. But let's say, let's say the
+better example is like this, what this transaction does. It subtracts a thousand coins from Bob,
+and it sends a thousand to Charlie. That's like a straightforward
+transaction the way you're sending money. But what the fraud proof would look
+like in that case is you would have to give a Merkle proof for Bob's
+balance and Charlie's balance. So like it would be like this. And then the state transition function
+returns an error because you can't subtract a thousand coins from  was Bob's
+balance, because it's only got five coins. Does that make sense? Jacob Arluck: Yeah. Dr. Mustafa Al-Bassam: Yeah. So the other questions, like,
+so now we understand any other questions about the fraud proof? Okay. So now assuming that we have this fraud
+proof, who  generates this fraud proof? So we have this other actor on the
+chain called well it's not, it's not a specific actor, but like basically
+any full node on the rollup network can generate these for proofs. Like anyone can join the rollup network
+and become like a fraud proof generator or like a watchman of the chain. So like if there's a fraud proof,
+and let's say this is this, say this node is honest, they can send
+a fraud proof to the light node. And if light node receives a fraud
+proof for a rollup block, it does not accept that block as valid. It rejects that block. It it like, it pretends
+it was never there. And you could also, like for example,
+like punish the fact you could like slash for example, the full
+node that generated that block. You could have like a rule where we
+say we wanna slash them because maybe they put up some bond or something. Now, so now I've explained like
+how fraud proofs work, but now there's another problem, and
+this is where Celestia comes in. Does anyone wanna describe that problem? Yeah, so the problem is that just
+because we know how to generate fraud proofs does not mean that the data to
+generate that fraud proof is available. Cause like what could happen is that
+if the, like, if the Celestia network or the data, if the underlying data
+availability layer is malicious, what could happen is this, what could happen
+is that the validators of the data availability layer, they might only
+release the block header, but they might not release this, the actual data
+that is pointing from the block header. Like they might release this block
+header, they might release the data root commitment, but they're
+not, they might not tell you what this data actually commits to. So you don't know what
+data is in the chain. You only know like here's what the
+commitment is, but you don't know like what the actual data in the chain is. And if you don't know what the data in
+the chain is, you can't challenge anyone. You can't challenge your rollup blocks if
+they're fraudulent cause you don't know if they're fraudulent cause you don't
+know what the data is in the first place. And this, this is obviously problematic. This is like why rollups need
+the data availability layer. Cause rollups can't be responsible
+for their own data availability because you then you have to trust
+the rollup operator and the whole point of rollups is that you shouldn't
+need to trust the rollup operator. So does that make, does
+that make sense so far? I think, I think there's
+like a good analogy for it. Something to do with football
+or something, do you want? Do you wanna do? Nick White: Yeah. The analogy is that if I think of the data
+availability layer kinda like the cameras that are recording like a football game
+and when something happens and people want to see like what actually transpired,
+they can like rewind and like look at the video recording basically, and if
+the referee is like saying that there's something fraudulent that happened on
+the on the field, people can actually go and inspect and like verify that fraud. Dr. Mustafa Al-Bassam: Yeah,
+another analogy is kind of like, it's kind of like the court system. It's like if you wanna accuse someone of
+murder or something, the best evidence, like you should have CCTV evidence. But like if you have CCTV evidence,
+then you can't really prove it. So like, this is kind of like if
+there was, if no one is recording or if there's no footage, then
+you can't prove the fraud. Mm-hmm. Yeah. Jacob Arluck: Can you explain also for
+people why it's needed for ZK as well? Dr. Mustafa Al-Bassam: Yeah. So we've described why it's
+needed for fraud proofs, but only optimistic rollups use fraud proofs. So like why is data availability
+also needed for ZK rollups? Because ZK rollups don't use fraud
+proofs, they use validity proofs. So ZK rollups, you don't need to,
+you prove ahead of time using, using zero knowledge cryptography
+that the rollup is valid. So it's like, whereas optimistic rollups
+are kind of like, they're kind of like in innocent until proven guilty. Validity rollups are like
+guilty until proven innocent. You only accept the block if
+you know it's valid, because the ZK proof proves it's valid. So there is no fraud proofs. So then why do ZK rollups
+still need data availability?. The reason why they need data
+availability is just because you can prove to someone that the state
+is correct does not mean that they, they actually, you have actually
+told them what the actual state is. And this could be problematic. So for example, like a ZK rollup might
+say you might like, advance the state, but no one knows what the actual state
+is like users don't know what, what their balance is, or anything like that
+because the transactions behind that state transitions have not been published, so
+no one knows what the actual state is. And that's, that's basically
+like a massive liveness failure. But it could also be, it's also
+potentially a safety failure if you assume it could be used for blackmail. Because like the ZK sequencer could
+like blackmail people by saying, I'm not gonna hold you what the state
+is and therefore you, no one else can advance the chain except for me. Until you, unless you pay
+me or something like that. So in summary, like you need to know the
+ba, like you need data availability for ZK rollups, cause you need to know what
+people's balances are for other people to build on the chain and advance the state
+and to know what the balances are and to even use the chain in the first place. Does that make sense? So, yeah. So I, I'll describe like how do the light
+nodes, so that means like when the light node receives a rollup header, they can't
+just accept it as valid immediately. They also need to make sure they have some
+kind of guarantee that the data behind that data commitment in the rollup header
+was actually published to the network. Cause if they can't verify that
+it's pub--, if they don't know if it's published network, then they
+don't know for sure if someone can generate a fraud proof. Cuz the whole security for all, the
+whole security of a light node relies on the assumption that you, the light
+node knows for a fact that if something is wrong someone can generate a fraud
+proof, but you can't generate a fraud proof if the data is not available. So before the light node accepts
+the rollup header into its into its software, it needs to first of all
+check in the first place to have some kind of assurance or guarantee that
+the data behind the rollup header is available so that it can be audited by
+someone that can generate a fraud proof. And so there's like different levels
+of security that you can do that. Like the most for like what we
+call like a super light client. The way that they would do that is
+because the the, by way slightly wrong, this, these, these arrows
+should be going into the rollup like node, not the Celestia light node. But the way that they would do
+that is that the, the Celest--, the user, remember the user is
+also running a Celestia light node. So the user also receives the block
+headers of the Celestia chain. And so they have these block headers
+and they also know the data root of every block in the Celestia chain. And so like remember I said the, the
+data for the rollup block is like a, is like a smaller tree in this
+bigger tree in the celestia block. So all they have to do technically
+to check that, that data equipment is theoretically available is check,
+is receive a Merkle proof that this big, this smaller tree, the root
+of this smaller tree is inside this bigger tree using a Merkle proof
+that it's inside the data root. And the Merkle proof is just a path from
+the root to the root of this smaller tree. And that proves to the rollup,
+that the data behind this rollup is actually inside the Celestia block
+without needing to actually download all the transactions of the, in that
+rollup because they don't download all the, the entire transaction data. They just need to get the root node
+of the tree and check that it's inside, inside the bigger tree. Does that make sense so far? Yeah. Ismail Khoffi: But that implies
+that the rollup header or like the rollup data commitment is always
+exactly the same as the Celestia? Dr. Mustafa Al-Bassam: Yeah. Ismail Khoffi: Like rollups are not
+supposed to use an NMT (namespaced Merkle tree) or something. Right? Dr. Mustafa Al-Bassam: They
+can use, yeah they can. Ismail Khoffi: Do they have
+to use, or is it optional? Dr. Mustafa Al-Bassam:
+They will have to, yeah. But there's other ways of constructing a
+rollup that does not involve this thing. But I'm just doing this, explaining this Ismail Khoffi: Because
+it's simple to explain. Okay. Dr. Mustafa Al-Bassam: This is the
+base case to explain like there's other ways to do, for example, like instead
+of the rollup block, committing to a specific data commitment, they could
+commit to say, instead of committing to this tree, they could just commit
+to say, the data for this rollup is actually at this location in the block. So instead of committing to the root,
+to the actual commitment of data, they commit to a specific location. So like they say, like the data is at
+location number five from five to 10, like in the, in the Celestia block. But it's, this isn't important
+for the sake of this explanation. So now I've explained like I've explained
+why, how do the light nodes verify that these transaction, that these Rollup
+blocks are inside the Celestia block? Now the way that I've, I've the
+process I've described so far it only works if you assume that the
+Celestia validator set is honest. Like there's a, two-thirds
+of them are honest. If the Celestia validator set is
+dishonest, then they might, as I said before, they might just release a block
+header, but not actually release the data root, the data behind the data root. So they might like, say, like, so
+the light client might receive a proof that this data is inside the
+data root but the validators haven't actually published the data for real. So this is fine if you are, if, if you
+trust the validator set of Celestia, but this is not scalable cause the whole point
+of blockchains is that you don't, the, the usual threat model for blockchain
+is that Bitcoin and Ethereum have, for example, is that you don't need to trust
+the validator set for safety guarantees because if you trust the validator
+sets for safety guarantees, then they're, you're basically giving the
+validator set the power to like make invalid state transitions or change
+the policy of the chain or like print money or like steal people's funds. And that's not usually the
+threat model of blockchain. So the threat model of blockchain is
+usually like, you're not supposed to trust any, you're not supposed to trust
+the validator set or the third parties. It's supposed to be a decentralized,
+trust-minimized network. Because of the fact that users can
+actually run, run nodes that verify the state of the chain and verify that it's
+correct, like so no one has to trust the validators, but to achieve that in
+this case, the, the obvious, the naive way to achieve that would be simply to
+require rollup Celestia nodes to have to download every single transaction
+in every single Celestia block. And that's obviously not scalable
+because the more obviously the more block data you. The more resource requirements
+that full that nodes need to have. And that's not, that's kind of
+antithetical to their value. Where users should be first-class
+citizens of the network. Cause if users have to download the
+entire chain, no one can run, people are not gonna run nodes on their
+computer or something like that or anything cuz they don't have, they
+could only run nodes on servers. So to fix that that's where, that's
+where data availability sampling comes in and data availability sampling is
+a technique that allows light nodes to verify that a hundred percent
+of the data in a certain block has been published by only downloading a
+very small percentage of that block. And it does that by using this
+mathematical primitive called erasure coding, which I won't grow into now. But the general idea is, the light
+node downloads random chunks from that block and by after downloading
+enough random chunks, they have a very high probability guarantee that the a
+hundred percent of data is available. So like after like 16, if you download,
+if you download like 16 chunks, then you have like a 99% guarantee. If you download 32 chunks,
+it's like 99.99% guarantee. And then after a while, like if
+you have a hundred chunks, you have such a high guarantee that the
+probability of a you being tricked is lower than a hardware failure. Like it's more likely that like a,
+a photon or something will hit your RAM and flip a bit than it is for
+like the data availability sampling to fail, if that makes sense. Yeah. Yeah. So that's the, so that's the
+end-to-end transaction flow. So now let me know if
+anyone has any questions. 

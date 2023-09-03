@@ -1,0 +1,1008 @@
+Robert C. Merton: Well,
+this is a great treat. I'll tell you what I'm
+going to talk about. As you can see,
+finance, science, innovation, and
+long-term investing. After all, that's what
+this whole thing is about, but we are here in the
+Royal Society of London. As you heard from Jim, this is where modern
+science system. I have to say a word
+about finance science. Everything I'm saying
+here is not scientific. It's my judgment or my belief. I think finance is
+a science for sure, but I think it was not a
+science until the 1950s. Before that, it
+had no real data, so how can you have
+a science if you can't really test anything? Two, the only controversy was whether you should
+use present value or internal rate of return. If you look at fun today, that's an afternoon's
+discussion to settle. Because the only way you
+can test the internal rate of return if you haven't
+done is to first compute the present value
+to see if it's giving you the right answer so that
+tells you what the answer is, but it was just a bunch
+of accounting again, but I labeled the beginning of the 1950s and if I had to
+pick one piece of work, it was Harry Markowitz's
+portfolio 1952. That was beginning.
+She had organized model definition of risk, something was quantified, there was a theory there, and it was put together. I'm not going to go
+through the whole list, don't worry, but you
+could fill it out. Second, I would say in time was Ken Arrow's 1953 paper on
+the role of securities. You could go through
+Modigliani-Miller, Tobin, addition to Markowitz's, all the way through the '50s, and then you could go into
+the '60s and of course, on the data side was the
+incredible crisp data that was put together every stock
+price from 1926 to the '60s. Never been done
+before and the first thing, and I won't go
+through all of that, was I don't know if most number here probably could remember it. Most of you weren't
+even born then, but the point is that the
+first thing they did, which is not surprising, they had all this data
+on all these stocks, so they just asked and answered the question
+with the data. If I took an average
+stock or a random stock, how much would I
+have earned through the roaring '20s, depression, World War II, the
+whole nine yards, and I remember it
+was 9.3 percent. Now, if I'm wrong by
+a tenth of a percent, doesn't change the story. You say, okay. That was
+a shocker from the data. That was more than
+any trust department, or professional money
+management through that period, remotely
+anybody knew. Now, I don't mean they
+didn't have all the data. This really became a science
+because then it was a little unfair to compare
+a random stock to the trust departments because
+it was a risk difference. Along came the CAPM and said, how do you distinguish risk? If it says lower risk, you shouldn't expect
+it to do as good as an average risk. You
+see what I'm saying? By the end of the '60s, we had all of these.
+It was a science. It was organized, it was a
+set of principles, theories, and serious data, so you got science. Now, since that time, and it is mentioned here, Jim mentioned it, the Royal Society hasn't
+been too friendly. No disrespect to the
+social sciences or anything in terms of
+having things done here, but they did allow finance
+to come to do a whole day. It wasn't just that they
+published the paper. They published the
+whole day here. That, I think, is
+one certification. The other is look
+at the number of economics Nobel Prizes that, at least part, if
+not the whole thing, cited finance work.
+It is pretty high. I don't think we have to argue whether it's the science or not. If it looks like,
+then it does it. That was what I wanted
+to say, but they transition to what I want
+to talk about tonight is that one of the
+things that happened in the 1970s was that the
+highest level research, highest meaning the
+most sophisticated research in theory, and empirical work became inextricably linked with
+mainstream finance practice. Prior to that, some
+firms had some Klants. You know what they
+did with them? They put them in a room and when they
+brought clients in, they said, here's the Picasso. They opened the door,
+here are the Klants, close the door. They
+felt a little alone. That's where the
+Cube Group came from if you know what
+the Cube Group is, which is now very establishment, but there was a bunch of
+people getting together who felt a little left out,
+if you know what I mean, in their profession, but what
+happened in the '70s was there was an enormous set of shocks that came
+to the system. The oil shock, Bretton Woods, 10 percent inflation
+in the United States, 10 percent interest rates
+in the United States, nine percent unemployment
+with 10 percent inflation. How would you like
+that in the 2008 if you were a central banker? What do you do? There
+were a lot of that, but the effect was very
+different from 2008. 2008 is you surely will say, well, it's the reactions, let's contrast innovation,
+slow it down to do it, we don't need it, it's
+bad, it can't help us. 1970s reaction was
+just the opposite. You had an acceleration
+that I don't think has ever been quite done
+that started in the '70s, went well until the '80s, in which you had
+enormous innovations that are still affecting our societies today like the
+national mortgage market, like all the options and futures markets that
+we take for granted. Somebody was talking
+about institutions. Until May day of '75, institutions paid
+the same commission per share as you would. If you got a 100,000 shares, you paid 1,000 times the commission than if I
+bought a 100 shares. It was a monopoly
+and they got rid of that and I think that opened the door to the
+institutionalization. I won't go on. Arissa, the first index funds, national mortgage market,
+all of these things were, and that happened in
+the United States. What I would point out to you, just to finish it, what
+happened after that? Certainly, every developed
+country, but virtually, even emerging markets
+created the same markets. They have futures markets, they have options
+markets, et cetera. We may have made
+a mistake putting all these derivative markets
+in during duress in the crisis, but you
+can't explain why every country has
+adopted them when they weren't under any
+duress unless you think they're all crazy,
+which is possible, but I think that [inaudible] this forever, or at least
+up until this moment, created a bond between
+finance science, not people trained in finance. I mean the science
+itself, the models, the things that you produce,
+and mainstream practice. The option model came out exactly the same time the
+option market was created. There was absolutely
+no experience in trading options anywhere because they never were traded
+at anything except at the money. They had no choice. It was need. Had
+it not happened, I believe that's the
+source of where this has happened and it's been going on ever since
+and of course, it's exemplified by
+this wonderful event for which the NBER, bringing all of you
+scientists in and, all you from [inaudible]
+the largest sovereign. You're managing the largest
+sovereign wealth fund in the world and you're here, not just because you're
+being nice to academics. Because there has been this unusually
+tight relationship between academic research, high level, so forth, and use. I couldn't resist putting that out to you-all
+because you're part of this and I
+want you to know. I'm going to get to
+what I'm going to do. I'm watching the
+clock, don't worry. You should worry, but what
+was I going to do tonight? I decided that I was going
+to try to do something in the exemplifying
+this tradition I just described between practice
+and research and science, real science, not right on the edge of doing practical work for people
+as your after hours, but your science that you
+do, cutting edge things, looking at problems, bringing your full creativities to it. I wanted to do that. I'm going to talk about
+this evening what I would call a middle-range approach, which is not the most sophisticated empirical
+science and certainly, I'm not going to tell
+practitioners how to do practice because they actually do it. It's true that a plumber probably knows more about electricity than
+a random person, but if you need electrician, get an electrician,
+not a plumber. I know a little bit
+about practical world. I play it, been in it, but they do it all the time, so I'm not going to
+try to replicate that. I'm going to be
+somewhere in between. I'm going to try and show you
+things I hope that you may have thought about before
+and if you haven't, you're going to do it,
+and exemplify this, but before I do that, I always have a
+footnote, or saying. I have a couple
+of things. First, I wanted to talk about in the
+spirit of this mid-range, you-all know my papers, or at least you may
+not had to read them, but you know them. They exist. You know that I
+know how to do it. I'm talking about what I
+think about if I'm thinking of a big institution that has
+to organize itself to run. Not three guys in a hedge fund, or something, but a
+large institution. My way of thinking about, which is not exactly
+wrong with theory, but it's not a 100 percent
+rigorous all the time, is what you do is you create the optimal
+combination of risky assets. I mean by that literally the definition of the highest
+sharp ratio of portfolio. The thing that you
+do mean variance, or the thing you're
+doing, the CAPM. You create that portfolio. Now, there are different
+ways you can do that. If you have no information, if you have no special
+knowledge, what do you do? The CAPM says, hold
+the world portfolio. That's not the same
+as an index portfolio because we can't
+trade everything. It's a little more clever. But I call that the
+well-diversified portfolio. By the way, I say that,
+especially because I know Steve Ross spoke last year. We all lost very
+important person to us as well as people we really cared
+about and a good guy. Steve's arbitrage theory
+in that sense said, look, when you get down to it, the CAPM is saying, hold the best-diversified
+portfolio that you have until we go to Venus,
+that's the world portfolio. But of course, since there's
+so many things missing, any one index MSCI,
+SOP doesn't matter. You should realize those indices are not the best estimate. Indices have a role. It was touched on
+this afternoon. They need it for benchmarks,
+and by their nature, to be a benchmark,
+they have to be specified precisely
+as they're awaiting. That doesn't mean
+they're the best one. Tracking error to
+an index doesn't mean you somehow are losing. It's important to
+measure performance, but not important economically. I want to be clear on that. I think Steve's was
+a much better idea. If you have 12 or
+14,000 different stocks and you collected
+them reasonably, yet, that's a
+well-diversified portfolio from around the world, whether they have
+the market weights. I'm more impressed
+with that than a 200 stock portfolio
+this valuated. I'm just telling you
+that it's my view of how to read the theory. That's what we're building here. Then if you can
+add Alpha to that, and I'm very precise
+what I mean by Alpha, because Alpha gets
+used for everything. You have 16 factors in Alpha. I mean, the literally
+the original Alpha. Alpha exists means I can create the optimal
+combination of risky assets, which has the highest
+Sharpe ratio portfolio. I can produce something better
+than the market portfolio. That's all it's telling us. I'm not going to
+go into Alpha now, but you all have said, "This is by the way, there's three ways
+to manage risks." I'm telling you this, you
+know it, but I'm reminding you. Diversification,
+hedging, and insurance, if you've got a fourth one,
+tell me, luck doesn't count. I don't know how to
+produce that reliably. If you do that, here's where the
+diversification comes in. If you had no information, that's what you're doing, holding the best
+diversified portfolio. Where does hedging come in? Hedging, which is
+different from insuring, is where you give the upside
+and the downside both up. That's when you mix
+with a risk-free asset. This is standard portfolio there that gives you some optimal for. Now, we have a couple
+of more steps, which is what I want
+to get to here. We know in a more
+expanded theory that there are other variables
+which could be price, that is to say,
+other risk variables that are not diversifiable, that matter to people. Same ideas, the
+market portfolio, but in other dimensions. Interest rate risks, Sharpe ratio risk are you going
+to be an environment with large high
+Sharpe ratios and high interest rates or flat Sharpe ratios and
+low interest rates. That's a risk every
+investor has. It's a risk you can't diversify. It's always been there
+and always will be. Does that sound like a risk
+that you're familiar with? That's the story, you say, why there's a
+market risk premium? Will the risk premium
+always be the same? No, it is not the same
+always for the market, which we know there's one
+there; that's a fast pass. We know we have hedging, and then where does
+this insurance come in? That's when we modify
+the portfolio. We now have the most
+efficient portfolio in terms of we're getting the
+most bang for our dollar. Then we've maybe adjusted for
+exposures to other things. But now, depending on
+your objective function, you would say preferences, that's when insuring comes in. Say you want a floor, you have to have an
+absolute minimum. But then the upside. What's that shape?
+It's non-linear. You can't get that from
+a simple portfolio. That's a put option
+or a protective put. That's insurance.
+That's non-linear. It's different from hedging and it's different from
+diversification. That will be determined, you would say preferences. Now here's where I move
+to the middle range. I won't ask you, but you don't really
+know the preferences of all the current and
+future generations of Norway who we were responsible for looking after
+or helping out. Even if you did,
+even with big data, that's a lot of computing. Where would you get
+their utility function? What I think happens is, at least for the
+moment, is that, if the other hand,
+you don't throw up your hands and say look, we'll just do some
+rule of thumb. I think you can say,
+you establish goals. Let me give you the
+fastest example that big and long-term investors, pension funds, a pension
+fund is set up to do what? Meet the liabilities that
+have been committed to it. What is the goal of
+the pension fund? Its goal would be to pay 100
+percent of the liabilities. If it did that,
+it's done its job. This is not somebody's
+personal portfolio. We're talking about it. Why do I have this portfolio? Because I've had this
+portfolio to try to get rid of the liabilities, my goal is to do 100 percent, not 110 percent,
+not 120 percent. Would I want more money? Sure, if you give
+me everything I want and I'm supposed to be
+looking for, plus a boat. Even if I don't have a boat, I would give it away or sell
+it if I get it for free, but it never comes for free. I'm trying to remind you that even if you don't
+know the preferences, you tend to set goals, the best goals that we know. This is how DB plans are run. They have a goal of trying
+to get 100 percent. They may say 80, but that
+just changes the level. They may have a floor. We want to try to get
+100 percent funding, but we can't get less than 50. That's a typical way of
+describing the goal. The goal is 100, but you have a constraint. Do you understand what
+I mean by a goal? I can have another goal, which is to pay my
+taxes in 90 days. Do you understand what
+I mean by a goal? The goals are
+implemented by bringing in what we call non-linear
+derivatives, options. Now, if you're not
+allowed to trade options or they aren't an
+option straightaway portfolio, what do we know from finance
+science and experience? There is a replication form, and it says there's always a dynamic strategy to
+match every derivative. You can run it either way. You can use the derivative to match derivative strategy
+if you're trying to minimize a transaction tax or if you can't find
+the derivative, you can do the
+dynamic replication with error and so forth,
+but you can do it. This is just another way
+to say they're going to be dynamic mixes of those
+two instruments. What if you go back
+to the basic finance? I'm doing continuous time here. Let me do it. You've got
+to pick a time interval. Sorry, I picked continuous time. What do we know? We know
+from the ICPM type thing you always want as one
+of your portfolios, a mean-variance
+efficient portfolio are called the growth optimal portfolio; it's the same thing. In continuous time, it's
+just different scaling. It's the same mix. But then you mix hedging things with it. You're always going to
+want this portfolio, but you mix it to deal with all these other instruments so you can replicate the goals. All right, so everybody has
+said, that's the process. Now, what's the next
+thing I want to say? Goal-based investing is a way
+of improving performance. I'm just going to demonstrate
+fast because I got a lot to do with you tonight and
+you want to get out of here. I know. Let's just
+say I have a goal. Would you mind?
+You're my client. He's my competitor. He's done good. In fact, I can't get a Sharpe
+ratio better than his. Normally, everybody shows
+you where they show you out. I can help you get a
+better Sharpe ratio. That's what you pay for mostly
+outside managers and so. I know you have other things, but that's what a lot
+of money is paid for. I can't argue that, but
+I want you to hire me. How do I do it? He's got
+as a good a Sharpe ratio. You've told us that you
+want the best portfolio, best risk-return, but
+you've got a floor. If you don't like
+the number of zeros, you can put nine or 12 zeros after this so it
+gets your attention. We have a payoff. You've told us, both of us, we have to have a 95 minimum. We have to deliver that. You see, we have to have a put. It's the only way we
+can get that picture. Both of us are going to pay
+for a put with your money. He thinks he's actually got
+a little better Sharpe ratio. He thinks you've got
+to hire him. He goes home. I stay with you and I say, let's talk some more. I say, tell me about what you really want to do
+with this portfolio. I tease out of you, so I'm
+actually talking about. I'm not talking
+about the weather. You tell me actually, if I can get to 190, I'm done. That's my goal. Think of that again
+in the tenths of a pension, 100 percent financed. Now, you would like more, but your purpose of this portfolio is you
+want to get to 190. It's like if you hire
+your travel agent to fly you to San Francisco, if they also give
+you a free ticket to go to Dallas afterwards, if it was free,
+you would take it what you really want to
+get to San Francisco. If you get there
+cheapest, fastest, and most comfortable,
+you're happy. Do you understand?
+You say that to me. Now I say to you, hire me. I'm going to do
+better than he does. By the way, you don't need
+to bring your consent. You don't need to
+do any simulations. Let me tell you what
+I'm going to do. Instead of what he and I do, this is what he does. He gets you to the floor. and gives you the upside, the best Sharpe ratios. It's all there. But of course, he has to pay for the insurance, that's hedging and
+diversification of free, but insurance that you pay for, so he can't give you
+the 45-degree line. He gives you displace one
+because he has to use like, I do some of the money to
+pay for the insurance. Instead of investing a 100, he's going to invest
+95 Sharpe ratio and buy the insurance for Phi. Well, I have to buy
+the insurance too. Let's just say we had
+the same Sharpe ratio, in fact, the same
+portfolio underneath. I have the floor. But what I do is I sell off a call with a strike
+price equal to 190. Do you understand? I
+just sell the call. I get paid for that,
+that's insurance. How much? I've
+made them the same price this picture
+would be easy for you. I get $5 for 100 call, which allows me to
+pay for the put. It's a different price, you should get a
+different picture. You see I took in more money. Why? I gave up your upside. Well, what did I get you? I put you on the 45-degree line. Now let me summarize this. You can tell this from
+this picture. You don't even have to know the
+probability distribution. That's why we don't have
+to do any simulation. Let's look at all the
+outcomes that matter to you. I say this portfolio has a higher probability
+of getting to the goal than his.
+You know what? If we don't get to the goal, for every outcome, I'll have a smaller shortfall
+than he does. Does that sound like
+better performance? In the whole range
+you care about, you've told me, I
+didn't tell you. In every state, you're
+better off with me than him. That's pretty good sales and I didn't need one simulation. Now I know I'm simplifying, but what does this tell you? I took the trouble to find
+out what her goal was. That was the real work. I said, if you
+agree to that goal, if that's what you really want, I can outperform him, not because I have a
+better Sharpe ratio and I'm not faster,
+quicker, smarter. What I am is, I tailored it to what you need and what I
+did is get rid of payoffs that weren't
+important to you to enhance the chances of getting
+what is important to you. That's like preference function, but I'm using goals because
+I think that's the way the real world
+describes these things because it's too complex. Think of goals as
+a simplification of having a whole
+preference phase. That's why goal based investing
+can improve performance, and I believe by the way, with all the compensation
+for Sharpe ratios, I won't ask you to define, but when you get down
+to two finalists, pretty hard to
+tell which one has a better Sharpe ratio
+I'll bet; I'm guessing. Because if you make
+it to the finals, it's like who's going to win the 100-yard dash
+in the Olympics. What's the difference between the first and third guy is hundredths of a
+second difference, but it's pretty tough. That's goals based. Now, next thing I want to do because
+I got to watch the time. MALE_1: We're fine. Robert C. Merton: What I
+want to say, actually, is this is for you, this is all about long-term. I have three things I want to talk about
+long-term investing, but I wanted to
+point out one thing before I get to
+the three things. Three is always a good number. Two is boring and
+one is too singular. Now this is a case
+of a pension fund, or importantly your
+individual DC account, which I may be managing
+for you in fact, under QDIA is always if
+you're in a default, you don't know what
+you want me to do, you won't even tell
+me your goals. I have to make the
+goal up for you. But what do I do?
+What's a good goal for you? I don't even know you. How about a good retirement would be being able to
+live the way that you've become accustomed to living in the latter part of
+your work-life and live that way for the rest
+of your life. Not too bad. Of course you'd like more, but I can promise you, you're a young group, but when you get there, you're not going to want less. Unless you're not well, and then you need a lot more money. If you accept that, I
+could set a goal for you and this is what DB
+plans have done. They asked with Social Security
+in this, if you live off, this is for working
+middle-class people. Don't do introspection. You're not working middle-class because you're in finance, which is wonderful but don't do introspection when
+you're building these systems or
+making judgments. What we do is we list
+the balance sheet of all the retirement dedicated assets and
+then the retirement liability if it were a pension
+fund of a corporation, is it a real liability? But if it's your DC plan, it's still a liability
+to yourself. Just because we'd go from DB to DC doesn't mean your
+preferences change. Everybody seems
+to like DB plans. Do you know of any employers
+who have marched on their employer to get rid of
+the DB plan and replace it? I know of no one in the world. You give me an
+example that'll be as Paul Samuelson used to say, the exception that
+proves the rule. But the point is, your tastes don't change. This doesn't matter
+whether it's DB or DC. What's happening is you want to look at the assets
+that are committed only that because this is only about retirement
+and not your whole, and what are your liabilities? You may have a minimum and you're trying to
+get to a desired, that goal of a good retirement. Now, why do I put this up there? By doing it as a
+risk balance sheet, it's not just the magnitude
+of these numbers, it's the risk characteristics. If I'm trying to match
+your standard of living that you enjoyed in the latter part
+of your work life, this is very low-risk, future contributions even though your wages may be uncertain, because it's relative value,
+it's Modigliani life cycle. If your wages go down,
+that's the bad news. Your standard of
+living goes down but so does the amount that
+you want to retire at. You don't keep the retirement at the same level. You balance it. If you're doing this
+for many generations, you're balancing
+the generations, you're not saying
+we're going to make the third or fourth generation
+from now in Norway. We have a target for
+them no matter what else is happening but I thought there was the idea was to try to conceptually balance
+many generations. The concept is the same
+and if you have that, then actually future
+contributions, you can have disability
+or something, but it's actually
+pretty low-risk. Why I say that without
+knowing the goal, you can't possibly even
+know what's risky. That's pretty dangerous. Quickly, for long-term
+investing like pensions, what's the next one?
+Sovereign wealth fund. Well, I suggest the
+balance sheet you look at is the government and I
+include the central bank with all respect because when our Fed buys from the
+Treasury and back-and-forth, if you look at it
+as the government, it has reason to
+keep it separate, but you want enough for this. What we do is put
+all the assets of the government and
+they're very different for different countries. Some have very big government owned
+enterprises, actually, some pretty big ones in different parts of
+the world that's big. In Singapore, they don't have too much oil that I'm aware of. They have a lovely harbor. But that is part of
+the balance sheet. Here's the wealth fund
+and then maybe you have a specialized pension fund
+which has its own goal. Over here you have all
+the liabilities in order of what I
+would think is there are things that
+you would default on your debt before you would do it like national security.
+That's all this here. We've got the base. You see, I've put
+everything in there, foreign currency debt, pension liabilities, and then
+all the guarantees we've written as a government. Then we have what's left. What is that? That's basically the
+total value of what the government has for
+society that is not committed and you can put multi-generational
+liabilities up there as part of those other items. Say, we want to make sure
+that the next 20 generations or as a perpetuity
+we are going to pay that. You understand? In some ways, the noise is back and I'm thinking of a pension fund
+because they're two very long-term investors and I think they're interesting because yours is
+closer to a perpetuity because I think as I
+understand your goal, whereas if I have a pension fund personal or
+not, it's very lifecyclely. In other words, I keep getting closer to when I'm going to cash in and so it has the life cycle effect whereas
+if it's a perpetuity, you don't. We all know that. I thought I'd choose those
+and by looking at these risks,  you can first decide what should the sovereign
+wealth fund do. Now you've got debt
+management going on here, you've got currency reserves, you don't want to
+centralize that. You let them all do
+whatever they want. But somewhere in
+that balance sheet, there has to be something
+that thinks about the risk of this because
+that's what matters. If you're doing a
+bunch of other things, somebody has to
+say, wait a minute, we're taking too much risk
+for the whole government for the long term and
+maybe we do it and that's how you can figure out maybe what the
+sovereign wealth funds. The easiest example is
+sovereign wealth fund is if you have a big amount of oil
+on that balance sheet, you're probably not loading up with the market weight
+in oil, I'm guessing. You don't have to
+tell me, but I know it's on the computer. You make everything public so I'm not talking
+out of school here. Well, that sounds trivial,
+but think about that. You're not going to be
+impressed if someone says, we have four models, here are four sovereign
+[inaudible] . If you are of this
+size and this shape, we put you in this bucket, you wouldn't put up with that. What you'd want to do is
+go through all of this, figured out the strategy,
+and then optimize. Remember where the
+optimization is coming from? It's dynamic mixing
+to optimize the goal, making that optimal
+combination of risky assets. We're all okay? Now, let me quickly
+move forward. One more, this long term, since many of us are from universities and if you
+were taking Harvard or MIT, I'm being very provincial. You know that gifts and so
+forth are important part of the portfolio and
+I always say if MIT didn't have $1 of
+its endowment in tech, it's got a big tech investment or the Harvard Business School. If you don't take
+account of that, by the way, if
+you're interested, someone did a back
+of the envelope, and I'm pointing at him because I know he's at
+Harvard Business School. I know the Beta is 0.6
+on giving to the S&P. You think you have a
+little exposure and try it on your publishing, which is trade books,
+very sensitive. Executive education. HBS is loaded with big Beta. MALE_2: Operating leverage. Robert C. Merton: Yes,
+and operating leverage. I'm not going to
+go through these. I showed you is the
+risk balance sheet is one way to
+simplify your lives. Because if you just
+do it without that and you put the
+sovereign wealth fund, the thing you're managing
+is the only thing, then you got all these extra hedging terms because
+you're going to say, but they really have oil, so we ought to do
+a term for that. It gets very disappointing. Here is a unified
+way of doing it. You list everything, you may not be able to evaluate perfectly, it will be going fine.
+Do you understand? Then you can use
+a simpler model, a more general model, a more standard model to do the optimization once you've taken account
+of all the assets. Now, of the three things I'm going to say in
+my last minutes. So I'm going to talk about
+the risk-free asset. This is going to
+be a boring talk. It may be already, but it's
+going to get more boring. What's the two things
+that nobody ever wants to talk about when you're talking with professional
+investors, money managers, and probably most
+academics working here? The risk-free asset gets about 10 seconds
+discussion, boring. The second most boring
+is diversification. I mean, global diversification. I mean, the passive part. Boy, they're boring,
+but I'm going to say how we can
+improve performance, I think, with a few
+things we can do there. Then there's one more. Now let's talk about
+the risk-free asset. In my own thing when I first did the intertemporal model, I said, what's a
+risk-free asset? Well, I decided to
+define it technically. It was the asset that was for sure over the shortest
+feasible trading interval. If trading took
+place once a day, it's a one-day bill. If it takes place continuously, it's something that's t plus the t plus t_3. You understand? But it was defined technically
+in a sense, it just said, by definition, it's the asset whose return over the shortest
+trading interval. That's a long, much shorter than the horizon of [inaudible] bank. You see why it's technical? Now what's nice about
+it, it's unambiguous. I wrote my papers and derived the demand functions in
+the equilibrium with that. We got all these factors and other things that came out
+in the more complex case. But everybody knew what
+the risk-free asset was. I describe here what I
+would call, I don't know, maybe someone has
+a better name or maybe someone
+already defined it, the numeraire risk-free asset. Now what's that? That's the risk-free asset, it's the lowest cost asset, so there's nothing left in it, that would pay off all the
+payments in your goal. Remember, your goal, the 190. It pays all your payments. If you have many payments, it's a whole stream. All the payments in
+your goal for sure. Let's define. Look at your goal, look at all the payments, and put it in as for sure. That's what I would call the numeraire risk-free
+asset for you. Now, it has the feature that
+if it's actually an asset, it will turn out that if
+you use that numeraire, when you do your
+optimization of the goal, this asset in numeraire has
+a zero return and zero risk. Suppose your goal was
+shares of Microsoft, not price of Microsoft, shares. Then if we measure your
+numeraire shares of Microsoft, what's the change in the share of one share of
+Microsoft for one share? It's one for one.
+It has zero return and zero sigma.
+You all know that. If you have a numeraire
+which you can express as an asset price, it has zero interest rates
+and it has zero return. Now that's nice because now the risk-free rate is always in your actual calculations,
+a constant zero. It doesn't matter how complex the payout is in
+terms of this thing, because you've defined
+the risk-free assets. You don't have to make any
+approximation on that side. That's a good thing to use. In fact, it's really
+a good thing to use, like in a pension fund, you know what the risk-free
+asset is going to look like. It's some long-dated bonds
+with no payments if it's for one person or a stream of payments out to the
+goal, and that's it. What is the risk-free
+numeraire asset? Is it a treasury bill? No. It's a long-dated bond. The first thing you see is a
+numeraire risk-free asset, and I'm just stop
+calling it numeraire, the risk-free asset
+depends on the goal. If you think you're not
+a goal-based investor, whatever you use as
+a risk-free asset is de facto your goal. If you use a 90-day
+treasury bill, your goal is 90 days. Unless you use it technically. That's one reason to be interested in the
+risk-free asset. It's well-defined whether
+it exists or not. I may go to the
+marketplace and there is no risk-free asset traded. That doesn't mean it's
+not well-defined, it's just I can't buy
+it. I'll deal with that. Next thing is, and
+that's where I say, if it's not available we create a surrogate
+risk-free asset. I define that for you
+before we leave, I hope. I'm getting 10 minutes. It's going to be a
+fast one, but that's okay. I've done it. You're smart group.
+You're better than my students. Much better. They're good, as
+you know, because many of you are
+teaching the same ones. I can do this. The point here
+is, let me just finish it. The risk-free asset is
+dependent on the goal. Every one of you, Your numeraire risk-free asset
+in this room is different. If you're retiring
+on a different day or your a different gender, you have a different
+risk-free asset. Why? Because your
+life expectancy depends on your
+gender, for example. There's zillions of
+risk-free assets out there, but they're all well-defined and they're relevant
+to use with your goal because they have this
+nice feature that you know exactly what the risk-free asset is and you get all
+that cleaned out. You don't have to do all that adjusting that my model did, that I used the wrong
+risk-free asset, because your horizon is nothing like the shortest
+trading interval. You see what it does,
+it simplifies it. Now you know what's risk-free. Why is that important? What's risk? Risk is
+equivalent to non-linear. It's only defined as a complement
+to a well-defined set. The risk-free asset
+is well-defined. Risky is everything
+that's not risk-free. Linear is well-defined, non-linear is
+everything that's not. There is no general theory
+of non-linear equations, and there's no
+general risky asset. Risky asset is only defined
+by the risk-free asset. That's why it's important, even if you don't invest in it, you got to know what's risky. Let me just jump ahead
+because of this, to a couple of pictures that some have seen in
+a different context. I took here a typical 45-year-old who's
+going to retire at 65, and asked what is his risk-free
+or her risk-free asset. Well, I'm not talking
+about buying the annuity. What I do is I do a
+traded portfolio. This happens to be in tips, so it's inflation protected. I do a dynamics trading, and this has been
+done for 30 years, so this is pretty standard. Do dynamic trading and tips to replicate the risk
+of the annuity, because we don't want
+to buy the annuity, because you don't want
+to give all your money away if something happens
+to you when you're 42. What we want is hedge the
+price you pay for the annuity. I'll hedge that, which has nothing to do with your individual
+health or anything, only your age characteristics, because what the insurance
+company will pay for it. But then when you retire, you actually get
+the annuity because now you care how long you live rather than how long the average
+lives. You understand? This is a hedge
+portfolio, actually, run from 2003 to April 2012. Those are the monthly
+returns measured by NAV. Does that look like a
+risk-free asset to any of you? I doubt it. It's as volatile
+almost as a stock market. That's the monthly returns. What's the problem? I showed you the returns
+in the wrong metric, the wrong numeraire. This is dollars. That's like your risk-free asset was overnight treasury bill, or monthly treasury bill. Of course, it looks terrible. When I measure it in
+the right income units starting in 20 years, which is your risk-free asset, of course, if I
+did it perfectly, you get zero zero. No risk. Do those look
+approximately the same? How many people would you look at the
+real-world investing, either for DC or even for
+DB, but especially DC? How many people realize
+that as part of regulation, Department of Labor and SEC, we have to send the NAV to
+all the DC participants? This is what they see, and this is what they
+learn is risk for them. Now, here's the flip side. What's the gold
+standard for principal? Treasury bill. This is 90-days treasury bills real
+returns over this period. No vol, low return. This is what happens if you put treasury bill in a
+retirement account. You look at it and
+you think this area, it's one of the riskiest
+asset on the planet. I don't need to show
+you that since we swing short rates go from four or five percent CDs 12 years
+ago to 10 basis points. That's a 50-fold decline. Huge vol. Why is that important? Because regulation makes me
+send that to every member. I'm teaching every member that risk that matters is the NAV. I tell you what the
+perverse thing of this is, because of shortness of time. Because of that, you have these things called
+target date funds which are allowed not to be sued their recognition for DC
+plans, they have one feature. They put you more and more in fixed income as you get older. That's the requirement. It's
+supposed to make you safer. Here's what actually happens
+in the real-world because of this one way of looking
+and measuring the wrong way. What happens is I
+have a 62-year-old. They've made it. I put
+them 100 percent hedged. This if interest rates back up 100 basis points, he's going to see
+or she's going to be 15 percent decline. At 62 they're going
+to be on the phone to the HR department saying,
+what is going on? You've lost 15 percent
+of my retirement income. I want to find out who did this. I'm going to sue you
+and then shoot you. Sue first, shoot second, and then they get
+all their friends because since it's
+the interest rate, everybody has got
+the same impact. You put them in
+the safest asset. The phone's ringing off the
+hook at the HR department, they call you and say, what are you doing? I don't want to
+have our employee. You know what they
+ended up doing? Go and look at the data. They put them in
+three-year notes. Why? Because now you don't get the
+volatility and the NAV, you get this versus that. I'm trying to show you these
+are not trivial effects. This is not just
+measurement error. By choosing the wrong risk-free asset and writing regulations of what risk is because
+you've measured it wrong, you're actually making everybody systematically because
+these are QDIA, these are 90 something
+percent of I believe the DC money of this goes into these
+things because they're QDIA. You take  whole
+generations of people and you're putting them
+in riskier and riskier positions. You want
+to see how risky? Take a look at the difference. This is the standard risk return points, treasury bills. This crummy high vol, low return on asset that you saw there, and there's equities. Here's what it is when
+you measure it in terms of the relevant
+risk-free asset. It's as though T-bills have as much vol of us as
+the stock market, and they have negative
+returns to boot. That's about as band and
+asset as you can buy. I know this isn't high science. I'm trying to show you that these things that
+we're talking about, measuring it wrong, the
+risk-free [inaudible] wrong isn't just
+measurement error. When we make it raw, I can't even not
+show this to you. You know how people learn.
+They learn by doing. Well, surrogate risk-free asset. All I've mentioned there
+because of the time is don't let anyone tell you because there isn't an
+actual risk-free asset out there perfectly to
+hedge that therefore, might as well hold timber or
+stocks or something else. The right risk-free
+asset is you create a surrogate risk-free
+asset. What's that? That's the asset that
+comes close to tracking the true risk-free
+asset if it were their minimum tracking error. That's your criteria, and that's your surrogate. I guarantee you
+that it will not be timber and it won't be stocks, and it won't be commodities. It will probably be things like tips in different countries. But other things like that, it's not going to be those
+with very high probability. But whatever it is,
+you have a rule here. First, you find the
+portfolio that has the highest [inaudible] tracking
+error to what you want. Secondly, because it
+has tracking error, you have to put a reserve on it because you want to treat
+it as a risk-free asset. When you had hedge, you can't do anything more all you can do is
+put a reserve up. What you do is if I've
+got tracking error, it looks like that curve. Instead of pricing the
+asset at the market, I price it at enough
+reserve so there's a 98 percent chance
+I'll be able to pay. That means I have to
+create a reserve. That means if I'm pricing
+the risk-free asset, If I have a 10 percent reserve, then I divide the price by
+1.1 because you convert it. The beauty of this
+is this automatic. When you have low
+tracking error, you have a low reserve. You got to say, then you get credit
+for better tracking. For a 62-year-old, we can
+hedge that very well. For 28-year-old. But that's what you want. Don't let people do that. Well, I know I've
+run out of time. Sorry about that, gentlemen. I had two more, but. MALE_3: Don't worry. Keep up. Robert C. Merton: You
+can all leave though. I mean, except the bus probably
+won't leave without me. Let me tell you another
+one because this is real-world today, right now. I mean, others too. This is happening
+in the DC system. I mean, this is
+really happening. This is situation
+about diversification, the second most boring
+after the risk-free asset, and we're going to
+talk about China here, and as you're well aware, China has always had some degree of capital
+controls; it's not free. Chinese nationals can't buy
+assets out of the country. There's allocations, and after the 2015 decline in the market, after a big rise, they responded by a lot of things because, as they say, stability is more
+important than growth, and they felt they
+were just worried, so they shut down
+their futures markets. They put all restrictions on and largely got into
+capital controls more than they even were before. Now, I'm not to talk to you
+about capital controls. That's outside of my pay grade. But what do capital
+controls do with finance? Well, I wanted to show you
+a fast picture here that people can understand who
+are not finance experts, but are people
+making decisions on policy at the highest levels. First, you want to show what is the cost of capital controls? From a finance point of view,
+leave aside anything out. What I did is we know that the world portfolio is
+at least theoretically, I did this with MSCI World. Don't take the numbers literally because I'm
+illustrating a process. That's what my sister holds. My sister is very smart
+and very talented. She doesn't know
+anything about finance, so she just holds it in
+a passive portfolio. That's the ex post risk return
+of my sister's portfolio, who knows nothing about finance. Here's the return you would have gotten if you invested in China ex-post that period. You see the Sharpe
+ratio is a bit lower. Now it's not fair
+to compare those two because random draw, this is after the fact. What I did is a simple thing. I created an ex ante estimate conditional on what
+happened to the world. Which is essentially if
+China had been 0 Beta, neither over-performed
+or underperformed, what would you have
+forecast? That's this line. That's close to, it's
+not the most optimal, but it's easy to understand. That is the cost of
+not diversifying, but just holding China. Now I'm so glad you let
+me do this because I have a vested interest
+in the next slide, I'm looking at the two of you. You see, first of all, this
+establishes a problem. I mean, I'll tell you where
+you are on the frontier. If you did a rough estimate
+with these numbers for China, all the things,
+it probably costs China 300 basis points a year. Now the rule of 72,300 basis points doubles your
+money in 24 years, which is about one
+generation or little less. The way you might frame
+it to the people, a cost not saying
+you shouldn't do it. You would have twice as much money in your pension fund in one generation if you
+didn't have this drag, that's a big number for
+1.3 billion people. That gets attention that
+this is not a small cost, which a lot of times
+people think adds a few basis points or something.
+That's the first thing. But if you just show
+people a problem, you've got a problem
+and leave the room. I always tell my students that's a bad strategy with your boss. First, your boss probably
+knows that the problem's there,  and you seem to be
+telling the boss you should fix it. You always want
+to have a solution. Here's the solution from
+financial innovation. What we're going to
+do is right now, I'm assuming it's
+complete capital controls and then you can
+adjust it for how much. All the a shares, all of this just do it stocks. All the a shares
+are held in China. They have to be if you had
+full capital controls, and so they're all held in Sovereign Wealth
+Funds, pension funds, CIC wherever they are, even though CICs
+[inaudible] but they do. The return to those funds is the return on China a shares. Now what if they entered
+into a total returns swap with and I'm going
+to tell you who with, a total return swap where they pay the return on
+a shares and receive world. What do they have? They
+still are holding all the shares, their voting
+all the shares. The governance is all in China. You don't have
+to worry about that. All the investment
+is inside China. It meets government investment. All those policies that you hear are reasons to have
+capital controls. But now you're getting
+World portfolio in China. Pretty cool. We've picked
+up 300 basis points. But what about capital controls? Is there a problem with
+capital control? Answer is no. This is better than
+capital controls. It's not only not violated
+capital controls, it's better than
+capital controls. Why? Let me show you. Well, before that,
+answer the question. You all are saying the
+total return swap. If they don't do the swap, they just keep
+everything in China, they get the lower return
+by 300 basis points, and what's the risks they got? It's China risk, same thing. Inefficient. If they do this, we know they're getting the
+300 basis points, ex ante. That's good. What about
+for capital controls? But first of all, there's
+no money that flows. These swaps are exchange of risks on the same notional
+amount. There's no money. When you buy the swap, no money goes out of
+the country you're in, but then you have
+to settle the swap. Say you're suddenly it every
+six months or ever year. First of all, you know when
+the money is going in or out, you know the exact date. It's not like a big shock where people are pulling
+their money out. It either goes out, whether times are good
+or bad on a given date. But the most important thing is, what are the flows? When does China pay money out? That's what you're worried.
+With capital controls, you worried about
+money going out. Only when the
+Chinese stock market outperforms the
+world's stock market. Are those tough times for China? No. That's a good
+time to be paying. You don't need capital
+controls when you are outperforming the rest of the
+world. It'd be very rare. But what happens when you under-perform? When
+times are tough? Maybe none of your fault. Money actually flows in. It's actually more stable than the capital patrols
+when nothing happens, you get a higher ex-ante return, and you can make the
+case common sense. This doesn't require
+a lot of econometrics to show them that it's
+actually stabilizing. The flows are controlled
+because you know what day and you know
+what amounts contingent. You don't know how
+much. But let's say Chinese market craters, which way does the payment go? Let me just quickly
+on this point out. That sounds nice in theory. But the first question I got was when I showed this elsewhere, wonderful professor, where if we took all the a shares are
+big chunk of a shares, and we did this swap. Who in the heck is going
+to be the counterparty? We're going to have to pay
+through the nose to do this? What's the first thing I say? I know where your
+counter-parties are. What do we know? The best
+diversified portfolio is the World portfolio. If China is
+overweighted in China, what's true about the
+rest of the world? It has to be underweighted. Means there's demand
+there for China. I'm not talking about
+information trading. I'm talking about
+structured risks that you hold all the time. I'm not talking about playing
+market timing or anything. I'm talking about core holdings, a big core holdings of big
+long-term institutions. Something like the
+market portfolio. If you can't get Chinese
+A-shares you would like them. What do we say? I
+know where to go. I'm a teacher, I'm
+not a market here. I know where I'm going to go. I'm going to come to
+you and say, I bet you, you either have very
+expensive ways of getting the A-shares or you don't
+have enough of them, especially if it was
+full capital controls, you wouldn't have
+any of them really. You want them. Now,
+the next question is, what do we do about
+implementation? Can Goldman Sachs
+do these tens of billions or hundreds of billions of market exposures swaps. What if it's Deutsche Bank? My god, credit risk. I say you do not
+need Goldman Sachs. You don't need Deutsche Bank. This is a swap of
+traded securities. The pricing of that swap, you could get a
+first year MBA to do or more prudently and I'm not going to
+put a plug for him. What you may know, Gifford Fong from
+MIT. Gifford Fong for decades has had a firm
+that does risks manually. He'd hire something like
+Gifford Fong; I'm not pushing. Say we'll agree
+that Gifford Fong will compute the swap price. Very capable of doing that. The counter parties will
+agree Gifford Fong doesn't have and we pay him X dollars
+a month to do this or whatever. Pricing a swap on traded securities is
+not rocket science. You don't need Goldman
+Sachs or people get paid millions of dollars a
+year to figure out that. What about the transaction? I would guess, I don't travel,
+I'm not in the meetings, but I could name about 30 or 40 institutions in the world, sovereign wealth
+funds, reserve funds, even without going into
+private sector at all. Well, you all know each other? You all know your credit. You all understand
+this is not a trade. You all need the risk sharing. Why do you want to waste
+any money on that? Why do you want to
+have any credit risk? Just do it with each other. By the way, swap contracts had been used for
+decades, including, I would suspect most of the sovereign funds and others have used swaps
+from time to time. That contract legally has
+been already adjudicated. It's not like you got
+to wait 10 years to see if those things have
+been forgotten. These contracts that
+are out there, you see. Go through it. Now
+I've really run over, but if you'd go through
+it each of these things first of all I showed you
+was the right way contract. That's jargon meaning
+you pay when you do well and you get paid
+when you do poorly. In the real world markets, the same contract will trade at a different price if it's
+right way or wrong way. Meaning, if I have to
+pay when I'm down, which is typical if I borrow
+in a foreign currency versus a debt versus
+a right way contract, the prices are different for a good reason because the risk. Already. Half the
+time you owe money, which means half the time you're not even extending credit. On top of that, you're doing
+it with counterparties. We're the best counterparties
+in the world and you've eliminated all
+the transaction costs. By the way, you have a steady supply on both sides because both of you always will
+have that need, all of you. By the way, if China
+wants to bring some of this diversified
+stuff into China for distribution to people
+individually, like in funds. Then whoever your
+counterparties are can then sell it through contracts
+with internally. If it's with CIC or reserves or whoever they could
+do the contracts. They would sell off
+their risk of World. They would sell that off, let's say to local
+institutions who can then get distributed if
+you wanted to do it. Now I'm taking you through
+these nuts and bolts. Because what I want to
+see is where I think is a very strong feature of
+innovation when it's done well. Unlike an original piece of research that has to be
+some clever new tool. If this is a solution
+that hasn't been done and it hasn't and you
+have a big solution, then you love it
+because you're using tools that everybody knows
+that had been adjudicated, have been used enormous scale
+that the legals are there. You can point out
+how you can do it at virtually no transaction
+or credit cost. In both, there are also swaps are unlike a lot of
+things are reversible. If you change your mind, you can do a swap the other way, you're out, and you don't
+change anything around. I've gone on about
+as much as I can. There was a third one, but I'll leave that for another night. It's called Financial
+Service Alpha. All that saying is, I would say, since we've mentioned
+corporate finance today, I want to give. There are parts of
+your portfolio. I'm looking at you but
+because I don't see anybody in pension funds
+but you particularly. That's the price of
+coming to dinner. MALE_4: Special dispensation.
+You got five more minutes. Do this last thing
+and we end there. Robert C. Merton: You all
+got it. The only thing I wanted to say was that you can do
+financial services. By that I mean, I
+believe, actually as an aside that most hedge fund returns
+and I believe this one, I had a hedge fund and I
+told investors at the time. It's not a new theory
+of the week that most hedge fund
+returns come from financial services not being
+faster, quicker, smarter. We don't have to agree with me. But I'm saying a
+lot of the return, they're really
+financial institutions meaning they provide financial
+services in the market. But instead of steady fees, they earn a spread like a market maker because they do it through the capital markets. They register as an Alpha. There's nothing wrong with that. I'm just saying it's a
+true Alpha is just not an Alpha from being
+faster, quicker, smarter. The advantage of that is you can do it much bigger scale than information trading
+because it isn't an information trade and you have a comparative
+advantage. The way you what to think
+of financial Alpha is more like corporate finance
+because what do we know? Having an Alpha is
+the same as having a positive net present
+value project. Discount the cash,
+expected cash flow with the cost of capital. That's the same statement. We normally investing
+talk about Alpha. But in this case, I would
+suggest for financial health, you may want to think of it, you want like financial service. We're providing
+financial services. We get compensated
+for doing that. We are the best ones to do it because we have the attributes. A sovereign wealth fund, like a hedge fund is not
+regulated very heavily. You don't have
+capital requirements, you don't have all
+these other things. You don't pay taxes, you don't have
+liquidity demands. You're the ideal
+counterparty for financial services to
+institutions like banks, insurance companies,
+even pension funds who do have those rigidities. Even within your own, I'm using you
+because you're here, but within your own groups you have the current life
+cycle generation. That's all the people
+who are alive now. They may be very little, but if they were
+thinking about it, they see the end for themselves. They are thinking in terms
+of the you've got this goal and you want to get
+there for you 50 years. But when you get to retirement, that will be the thing. That's life cycle. You're not really thinking
+life cycle because you have all of those
+generations, it never ends. What can you do that they can't? The people that are not yet born that you're worrying about can't trade themselves with their
+life cycle people here. What you can do is create
+bonds and give her, or give me to do for her the bonds and she needs to
+hedge her risk-free asset. But you're doing this
+all on your portfolio because you're doing
+it for everybody. She's in your portfolio. Where do you get the
+funding for that? You get the funding from that from the generations
+in the future. What do you give them in return? They're writing insurance, they're writing this free asset. They're going to get
+the returns because she's capped;
+remember that goal? You're doing an
+inter-generational risk transfer and you have a way of
+thinking about that. It's not just doing it. That's a financial service. I think it's these numbers
+can be quite large, but you should think of it as a business because
+it's more like it's a positive net present
+value because you have a comparative
+advantage over others. That's the way to
+think about it. That's my third one. I think, we'll quit on that. Oh, one other thing is we're walking out of the room I know. I just recently sent
+out an innovation we're pushing which
+is called SeLFIES. I never made up the
+name on my own. My co-author. He's very good at titles. But what it is, it's a bond that doesn't pay
+anything for some number of years and then pays a level stream but
+no balloon payments. It's like a deferred annuity, but without the longevity. That's the perfect
+thing when this 45-year old's not going
+to retire, so 65. They don't need any
+payments before then. You give them a 0, but then they want something that's
+a stream of payments, that's a standard of living. They don't want the balloon. But we want it not
+indexed to inflation, which is a good idea. We want to index it to
+per capita consumption. That if you think about it, is even probably a better hedge. Why? Because it not only hedges your inflation, it hedges
+standard of living. If you're going to
+live a long time in retirement and I worked, would you really want to be
+using the televisions and the computers that you got when you retired
+at 65, when you're 80? Probably not. If you believe in relative
+utility and how I feel is relative
+to how everybody else is then that's another
+way of thinking of it. The beauty of it is if a
+government does that either with a sovereign
+wealth fund backing each other or does it directly, it has the perfect hedge, a VAT. It's easier to hedge
+per capita consumption. It is the hedge inflation because you've got a
+big revenue source, which is by definition, if it's working, consumption. In an economy where you
+don't trust the accounting, you could actually work out
+and take the VAT revenues, which at least are real numbers, and divide it by the tax
+rate; that will give you consumption and
+divide by the population. This is a really, it turns out, the government
+is a perfect case for this. That's the bonds you want
+to do because you're trying to equate standard
+livings. I believe. Your trade standard living
+as a measure by aggregate, not GDP, that's different. It's just like for
+inflation, you don't care about GDP inflation, you care about inflation for
+your consumption goods if you're a consumer and
+you're not working anymore. That I will quit on. But I think I got
+everything out there. If you didn't get it the
+first time I hear a song, I like, if I don't like
+the song, why do I care? The first time I hear someone I like she's saying, she's going. I don't know one
+word she's saying. I like the song. What do I do? I listened to it 20 times, 30 times; guess what? At the end of the 30th time, I know every word. If you didn't get all the lyrics tonight after
+dinner on the wine, after a long day, I hope you at least
+got the melody. Finance science,
+finance innovation. Go back and look at things
+that we take for granted. It's not thinking
+out of the box. It's actually using the
+foundational principles. It's nothing here that
+is radical, different. But it's enormously different from the way things are done. You can have big impacts, order magnitude
+impacts on events, not adding an extra factor, which is nothing
+wrong with that. You get paid for it and then it helps efficiency. I'm talking about
+very big issues, like the ones I hope you can see and are being
+addressed here. 

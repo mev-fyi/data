@@ -1,0 +1,781 @@
+John Taylor: Thanks,
+Jim, very much for your kind introduction and
+thank you-all for coming. It's an honor and a
+genuine pleasure to give the Marty
+Feldstein lecture, especially the first one. Marty is a good friend. I admire him greatly
+for many things. But since we're
+all economists for his insistence on
+using economic theory and results to improve people's lives and I've
+seen that many ways. But also to get
+involved in the fray, whether it's President
+Reagan's CEA or it's President Obama's tax
+for what it stands for us. Also political
+campaigns, etc. that I always remember this
+that I have a tie. It's called democracy is
+not a spectator sport and I think that really holds
+for economists as well. It's an honor and a
+pleasure to be here. Jim gave me pretty
+clear instructions and I wrote them down here a
+little bit to make sure I didn't depart too much. He actually mentioned
+them a little bit in the introduction. The Feldstein lecture will address an important question in applied economics with
+application to policy. It also will not make any
+policy recommendations. I'm going to put this
+up here at the top, especially during the Q&A
+to make sure I don't drift into the recommendations
+category. What I'd like to do is
+in terms of keeping with that overall goal
+or strategy is to think of this as a
+particular purpose, if you like, for the
+Feldstein lecture, I see I have a warning
+about a virus. It wasn't a gimmick as part of a teaching technique,
+don't worry. But actually, Jim, one thing
+you said about the grape. It wasn't actually a grape, it was a raisin. Some of you may remember, some of you older people there used to be a wonderful TV ad for California raisins and
+it'd be cartoon characters look like California
+raisins and they dance around the stage two Marvin
+Gaye's heard through the grapevine and it's
+really a terrific add. I had the idea one
+day that I would use this in my class
+to demonstrate government intervention
+and how it leaves the more intervention because
+this ad was designed to increase the demand for
+raisins and therefore reduce the cost of a government
+subsidy for raisins. That was the whole idea. I remember the first
+time I did it, it's like a scary thing to do. How crazy can this guy be?
+But it worked out okay. I don't do it anymore.
+That's for sure. But to get serious, so what I'd like to do is focus on macro economic policy. That's my field. Look at policy evaluation. During the period really
+since the fall of 2008, I think since the panic period
+of following the crisis. I want to compare policy with some counterfactuals
+and since the challenge of policy evaluation is to think of what the alternative
+was in terms of policy. It's very easy to say, well,
+that was a good policy, that was a bad policy, wasn't so good, this
+is wasn't so bad. But in a macro and I think especially all fields
+quite frankly, you need to think
+of a counterfactual in order to evaluate policies. A lot of this lecture actually is trying to become
+more formal about evaluating policies that we're still learning about
+using counterfactuals. As you'll see, I'm going to
+look a counterfactual for monetary policy and then I'll go look at it a counterfactual
+for fiscal policy. Each of those record a broad
+subjects in some sense and involve a lot of
+sub counterfactuals which I'd like to address. In some sense, this is
+a massive undertaking to think about an evaluation of monetary policy
+and fiscal policy since the panic of last fall. Although, every day
+you hear people pontificating about this
+was good and this was bad. But I think in principle, from our perspectives
+of economists, it requires a lot
+of careful study. It's real time, of course, and that's why I use the term because the crisis is ongoing. I want to emphasize
+real-time here is in a sense as a unifying theme. I think right now
+with this crisis, real-time analysis is essential. We have things
+changing every day. We have new policies
+being proposed. Presumably they
+should be based on analysis of things
+that are going on. I would say based on
+my own experience in the last few years, it's tremendously
+interesting to study this. It's a tragedy we're
+having this crisis. But you can't think of it more interesting set of
+data to look at, and you never seen these
+pint of policies before. It's an enormous amount
+of things to look at. I think it also raises
+questions about research. I'm going to emphasize we need
+more high frequency data. We need to figure out ways to
+do our policy evaluations. From the point of view of macro, I think it really is
+different and I want to spend a couple of
+minutes on that subject of why is real-time
+analysis like I'm going to discuss
+different from what we have done normally
+done in macro. I'm going to use a
+couple of examples. Now, first one is from my
+own work many years ago, where I tried to evaluate different types of
+monetary policy rules. The idea was to
+see whether, say, a fixed growth rate rule for the money supply was better
+than a feedback rule, always better than reality. That wasn't done in
+real time by any means. In fact, this paper
+published in 1979 focused on roughly 20 years
+from 1953 to '75, so that's completely
+not real time. It's partly publication lags, but partly looking at
+history if you like. For that work, I use a
+graph like this which I think illustrates this
+concept of counterfactuals. This is a graph which shows you a policy macro
+trade-off between how volatile the economy
+is in terms of GDP on the vertical axis and how volatile inflation is
+on the horizontal axis. Price stability,
+inflation stability, the two main factors
+we look at a lot of output stability
+and price stability. In this picture is this
+trade-off which can be calculated but optimal
+be on a trade-off because you'd like to have as low amount of
+both as possible. But you can also see
+the counterfactuals. One counterfactual is the
+constant growth rate rule and of course you see
+actual US performance. In this case, the
+constant growth rate rule looks actually a little better
+than actual performance. Not quite completely dominating, but since you've got such
+a much larger amount of reduction and output variance if you like
+it's preferred. That's an example of how macro research has
+and the same lines Marty and Jim stock in
+1997 published a paper which they looked at different
+feedback rules for M2. Again, they looked at
+the period '59 and '92, not exactly real-time
+methodology being quite similar. Steve to Chetty, some
+of his colleagues published a paper in 2006, the same strategy they're
+looking to see to what extent the great moderation
+could have been due to monetary policy
+looked at 24 countries, their sample period
+was '82 to '98, again, not exactly real-time. Then Ben Bernanke in a paper he published before he
+became chairman. He has the same concept. He's looking at
+what the cause for the great moderation was. He uses a diagram
+like we have up here, same picture essentially and says was the improvement
+in performance, that is movement
+towards the origin to lower variability of
+inflation and output due to monetary policy or to do some structural
+shifts that moves that trade-off curve
+to the origin. Again, it's really
+longer-term considerations. What policy would work well on average over periods of time? Not exactly real time. That's some of the
+way it's been. Actually, Lars Svensson just found out recently is
+doing something more in the direction of what
+I'm talking about here. That is to see if you
+could modify some of those techniques to
+actually do real-time. His paper has a picture, similar to the others. Here's what it is. But on the vertical
+axis you don't have the historical or
+theoretical variance of GDP on the vertical axis or inflation on the
+horizontal axis. You have the forecast
+by the central bank. In this case, what
+he's imagining is the central bank, this case, the Riggs Bank is considering
+different types of paths for the interest rate, say back in February. You can see what the different
+past deliver based on a forecast of inflation and
+output for the near future. In that sense, it's
+getting closer to a formal policy analysis, but really much in real-time. Lars paper, for example,
+published I think in March, is evaluating Riggs Bank
+policy in February using this. It's really I think
+reflecting what I think is a need and a
+trend to find ways to use these techniques
+which have been a very common in current analysis. I also want to say that
+when I think about my role here in terms
+of evaluating policy, I want to focus on only one part of the
+financial crisis. I think it's important
+to emphasize that I think of the financial crisis is best thought of as
+so far four stages. Who knows what the fifth will be or the sixth or
+seventh or whatever. But the fourth stage
+is, I think of as years leading
+up to the crisis, so that you look at
+the root causes of it. I happen to think
+through my real-time policy evaluation
+research that there was a great deviation in policy
+very low interest rates degenerated the
+excesses if you like. I'm not going to talk
+about that today. Then you have the period
+from the flare up in August of 2007 till
+September 2008, where things seem to just
+get worse if you like, at least did not improve with
+respect to the stability in the financial markets
+and I blame that on it. I feel like a great delay
+in the policy responses using real-time policy analysis. I'm not going to talk
+about that today either. Then finally, you had
+this incredible panic that we all know about. A couple of pictures
+of the panic. This is the S&P 500 index. A huge drop there is in September,
+early October period. I have some dates there for various
+things that happened, you have the TARP, the Lehman bankruptcy, etc. A huge issue here is still real-time about
+what caused this was Lehman was it policy
+scares or whatever, if you'd like the third aspect
+the panic and I actually think it was due to
+some scare by policy, so maybe that's the
+great scale run lock on to talk about that either. What I'm going to talk
+about is this last point, and that is the
+post-panic period. If you'd like, I'm going into some new ground
+for this lecture, and I'd like to try to examine, if you like, policy during
+this very recent period, I think it's very important to try to understand
+it as best we can using the best techniques
+and the best data we have. Now, the first thing
+you need to do policy evaluation is
+describe the actual policy. It's not easy, it's complicated, I'm going to take
+a few minutes on what the actual policy was. First of all, during the week of 17th of September,
+reserve balances, the reserves that
+depository institutions hold at the Fed increased, actually for the
+first time above the level required to keep the federal funds
+rate on target, I'll show you a picture
+about that in a minute. At that point, the
+federal funds rate was at two percent. First of all, first point here, this is quantitative
+easing in the sense it reserves rose above
+a level required to keep the rate at
+a certain point. Interest rates were not at
+zero at that point in time, interest rates were
+at two percent. Frequently you will hear
+quantitative easing occurred because the interest
+rate hit zero, that is not the way this
+happened you can see, so it's a different
+characterization, and you frequently
+hear, but I'll show you that that's actually
+what happened. I think you'll see that reserves were increased for a
+particular reason that it was to finance some
+loans first through a new loan facility called the Primary Dealer Credit
+Facility, the PDCF, so the Fed was
+making those loans that had to finance
+them by money creation, by crediting, through the
+deposits of the banks at the Fed and then
+of course also to purchase securities
+of various kinds. I think it's also important in terms of understanding this, and it deserves research, but I'm pretty convinced that these reserves were
+not increased as frequently people say to accommodate a shift in
+the demand for money. Increased demand for money
+or a decline in velocity, these are existing exogenous supply increase in reserves, so we need to be sure
+about that as well but I think I could be
+clear about that. Then, of course,
+reserves continued to increase through the
+end of last year, as additional securities
+and loans were made. This actually drove
+the interest rate to zero, as I'll show
+you in a minute, the FOMC ratified those
+declines to zero, and of course,
+reserves have remained elevated ever since. Now, here's the pictures
+that describe that slide. First of all, these are
+the reserve balances that I mentioned that jumped sometime during the
+week of September 17th. We don't have daily
+data unfortunately, to know exactly when, at least we don't have
+it outside the Fed, but at some time during the
+week of September 17th. You can see reserves
+jumped from a level which was being used to monitor
+the interest rate, started moving and
+got up to 800, and has been actually at
+that level pretty closely, we don't know where it's going, but it's hovered around that level with some ups
+and downs ever since. These are just another way to visualize this
+shorter period of time, you can now see if
+you look closely that the first jump there, which at the time was huge, It was $60 billion
+on September 17th, that was to provide
+for the loans through the Primary
+Dealer Credit Facility as far as I can tell, though, there's no record of why that decision
+was made anywhere. Then you have reserves
+increasing rapidly, the bar chart show you the weekly average
+is the black line, end of the weekend
+in Wednesday and you can see they go right through the most recent data
+at this high level. Some more visuals here, a couple of visuals,
+if you like colors, these are great but
+these try to give you a sense of the purchases
+that were made, that were financed through
+that reserve creation. By the way, the scale
+starts at 400 billion, so it's just cut off
+at the bottom but the very bottom is the
+treasury securities. If you go off to
+the very far right, you can see those starting to increase the very bottom one, those are the
+recent purchases of medium-term treasuries
+by the Fed, that's what that thing
+is over at the end. You have the term
+auction facility, which was created earlier
+in the crisis but expanded right after
+the panic dramatically, that's the green line. You also have what's
+labeled here, just private portfolio, I'll show you that in a minute, but that's expanded quite a bit. You have also the loans or
+swaps to other central banks, that's the yellow
+one near the top, and you have some of
+the other assets, it's a small amount
+at the very top. You can see these are things
+that were created and the reason for the
+reserve increase was to finance the
+purchases of them. This category which,
+if you can see it, the purple one, a
+private portfolio, here's the details of that one. What's in that private portfolio are the Bear Stearns securities, some of the AIG securities, and most significantly, the commercial paper
+funding facility which was generated
+during the panic, as very well-received
+program to get the commercial paper
+market moving again. Then the mortgage-backed
+securities purchases, which is very large now and it started since the
+beginning of this year and has expanded
+dramatically, of course, those need to be
+financed through reserve creation as well. That's basically the reason for the expansion of
+the balance sheet. Now the interest rate decline, remember it started at two
+and came down to zero, I just want to just show
+you that in this picture. What this picture shows
+you is the factor of federal funds rate
+during this period. You can see it was
+well above zero, two percent during this
+expansion of reserves. Again, this is not a sense
+in which the interest rates hit zero and the
+quantitative easing began, quantitative easing
+effectively drove down that interest
+rate towards zero. You can see the
+pattern very clearly, it seems to me, of course, by the end of the year, the interest rate was
+between zero and 0.25. Now, just a little bit of decision-making
+timing on this, so we can think this through. I've listed the three FOMC votes during this period about
+the federal funds rate, and all this is trying to show is that each of those votes occurred when the
+rate was already below what they were
+voting to bring it to. For example, on October 8th, the FOMC voted to cut the
+federal funds rate from two 1.5 from two percent but for the two weeks
+ending that day, the funds' rate was
+already 1.45 percent. Then on October 29th, they vote to cut it
+to one from 1.5, the rate was already
+below that, and so on. This is essentially
+a ratification of rates that had
+already been determined. That's the actual policy. The question is, was
+that a good policy? We don't know, how would we evaluate that policy
+one way or the other? Got to choose a
+counterfactual, so not easy. One general counter-factual, which I would have chosen
+before this if you like, is to think about what
+would have happened, is fairly standard, and that is fanner factor is when the optimal
+interest rate, tailor or whatever you want, hits zero, and let's just
+say slightly positive, something like 0.25
+makes more sense. Then the trading desk, this objective is to keep the level of reserves
+consistent with that 0.25 or 0.125 or whatever. Also on the side, make sure the growth rate
+of money does not fall, so in a sense, it's like a
+constant growth rate rule, at least it focuses
+on the money supply, but it doesn't expand the
+reserves a tremendous rate, it's quantitative in a sense, the focus is bringing reserves to a level consistent
+with the 0.25, but it's a much different type of zero interest rate bound policy, then it was followed. In some sense, this is how quantitative macro-monetary
+models are simulated, such as the ones
+that Volker Wieland presented here yesterday. Also, it seems to me it does avoid the Great Depression
+that Japan lost decade problem because
+it doesn't allow money growth to decline, you would not try to keep
+the federal funds rate from falling below 0.25 by
+reducing money growth, that's not what is meant here. Now, I think this is a good
+way to think about it, but quite frankly, I think in designing
+counterfactuals practically, probably better to get a little closer to what the
+actual policy was, and so that's really
+what I want to do, I don't want to go
+to that extreme, I want to consider a
+counter-factual which is closer to the actual policy. For that more specific
+counterfactual, I want to just do three things differently than
+the actual policy. These are some of the
+sub counterfactuals that I'm talking about. The first is that there are no mortgage-backed
+securities purchases, you saw that in the picture, rather than 500 billion is
+where they are about now, and are expected to
+rise to 1.2 trillion, just don't do any of those. Second, don't have the
+term auction facility, it is at zero billion dollars rather than something that rose to as much as 500 billion. The term auction facility
+is the way that banks can borrow from the Fed without going through
+the discount window, through an option,
+a special thing set up in December 2007. The third thing is no
+purchases of medium-term, longer-term treasury securities, so that's zero as well, rather than up to the 300, which they can do is
+now approximately 200, I understand. That's like a more
+modest counterfactual, that's what I want to think of here as my counterfactual, I feel like. What does that do? Let's first look at the charts. That's how things
+were originally with reserve balances,
+just a huge jump. This is how they would be with the counterfactual. Two things, we look at those, it's about half as
+much of an increase. It's substantial. They wouldn't have
+started increase, they would have been at a lower level for awhile
+because the fed would have been lowering the
+federal funds rate without expansion of reserves. Most important, they're
+already back to normal, if you like, back to
+roughly $8-10 billion is where they were before
+this expansion, already back. The questions that you sometimes hear that Rick Michigan was
+talking about this morning, the questions about
+the balance sheet of independence and
+all those things, they'd be gone by now
+if this was the policy. They wouldn't be increasing
+if this was the policy. Unless there was suddenly
+a big increase in demand for AIG type bailouts
+or something, which I'm assuming there's not. That's that picture. You can also look at
+it with respect to the just this little section
+here with the bar charts, it's the same picture. But if you feel
+like, but you can see how much different it is. This is more like a
+classic expansion of reserves on a temporary basis because of the crisis which
+are then pulled out of the system as fast
+as reasonable. Then here's what if you like does to those charts over there. These is the things that cause the reserves to increase the purchases of all
+those securities. This is what it would look
+like with my counterfactual. What you're missing, you see the Taft
+loans disappear. That's the green
+that goes away and the private portfolio
+gets much smaller. I call private
+portfolio purchases of mortgage-backed securities
+and AIG, etc. like that. That's much smaller.
+That's the biggest issue. Note also though,
+that towards the end you see securities
+going up again, those are treasury
+bills because this counterfactual
+reduces the purchases so much that the fed
+actually comes in and does regular open market operations through buying treasury bills, not long-term securities in order to keep the
+reserves from going below the level of
+consistent with the 0.25 target interest rate. Then finally, recall this
+was the private portfolio, and the big bulge there is the mortgage-backed
+securities and this is what it's going to look
+like with the counterfactual. Basically just chopping off those mortgage-backed
+securities. Question is, what
+would this look like? I'd say first of all,
+interest rate is not going to be any
+different, right? The interest rate path is
+the same in the factual, in the actual and in
+the counterfactual. Put that aside for
+the time being. But what's going to
+be a lot different are these purchases programs. The policy now has to
+look at each of those. If those all turn you
+have to say what's going on with each of those, how much different
+will the economy look because mortgage-backed securities weren't purchased, because the Taft doesn't work, because of no purchases
+of long-term treasuries? I've done a lot of work on
+these topics and I'm going to summarize them for you here. First, with respect to
+mortgage-backed securities. They were undertaken, those purchases in order
+to reduce mortgage rates. Purchase mortgage-backed
+securities increased the supply, you reduce the yield on the
+securities and many people, says almost conventional
+wisdom is that this did its job and the picture
+of that is here. This is the spread between 30
+year fixed mortgage rates. It's tabulated by
+Freddie Mac series versus 10-year treasuries. It's because of the
+30-year mortgages are paid back before 30 years, you use 10 years roughly
+as the maturity, and so that gives
+you your spread. You can see that, that did come down
+dramatically and here is the picture of the purchases of the
+mortgage-backed securities. You can see they're jumping up right there about the same time and they're going up
+towards the 500 billion. Of course, the timing
+is quite right. It looks just exactly like
+what you think it should be. You might just say, well, this is just did it. The question though
+it seems to me is, first of all, if you
+just did a regression, it's not going to
+help you very much because it doesn't explain the rise and the spreads in the first place, it's missing. Why did that surprise
+and spreads occur? If to me I say, well, if this is going to
+be the explanation, I, at least, need
+to find a way to control for something
+that may be causing that rise and perhaps the fall independent to those purchases. What might you use
+for that purpose? Well, one of the advantages
+of the CDS markets is there are CDS instruments
+and all sorts of things including banning
+free securities. The blue line is the CDS
+on Fannie Mae bonds. That's a measure, if you like, of perceived risk from
+these institutions during the period before they were officially part of
+the government, when they were just government
+sponsored agencies with some expectation of
+government rescue or bailout. That's the blue
+line. Unfortunately, because of the demise
+of Fannie and Freddie, we no longer have the CDS
+on Fannie and Freddie. The blue line stops at
+that point in time. I wish some over
+the counter guys would be doing some
+CDS is on this, but they don't so far
+I can't find any. What I have here
+is the red line, and this is simply the spread
+between Fannie Mae bonds, the bonds that they
+issue to raise funds and treasuries
+of similar maturity. It looks like a pretty
+good relationship between CDS measure of
+risk in some sense. Possible thing would
+be to simply take either a predicted
+value of the CDS or just take the spread itself, spread on Fannie Mae bonds
+and treasuries itself, as a measure of risk or perceived risk of
+Fannie and Freddie and use that in the
+analysis of the spreads. Well, not surprising if you're looking at these
+charts very closely, that spread explains
+a large amount of the movement in the
+MBS spread itself. Just look at it. Let me go back to the, that's the spread, the MBS spread that we're
+concerned about the mortgages. This is the spread
+between Fannie, Freddie is the same borrowing
+and treasuries. They move very closely. A statistical analysis
+regression or whatever, which includes the red
+variable there and explaining that red variable is
+going to do very well. Well in fact that when
+you include it along with the mortgage-backed
+securities purchases, suitably scaled or whatever. Mortgage-backed securities
+has very small impacts, hardly significant, hard to get the right sign
+quite frankly. But with the most
+reasonable regression, this is what we found. This is basically taking
+the estimated equation of the spread 30
+year fixed mortgage versus 10 year treasuries. Examining and a counterfactual
+of what would have happened had there
+been no MBS purchases. In this regression, there is an impact of the MBS purchases. But of course, it is very
+small on the order of 10 basis points at the most when you come to as
+the end of this. This would suggest that not
+much different would have happened if you'd
+take this statistics, if the MBS purchases
+had not taken place. Now, I'm sure there's lots of reasons you can bring that this may not
+be the definitive answer. To some extent, my purpose
+here is to show that you need to do something
+one way or the other to prove what is the right answer. I'm quite convinced
+to hear that there's something else going on and
+simply those purchases. The null hypothesis, of course, is that you have a
+term structure of interest rates and supplies
+don't matter that much, so in some sense, the null hypothesis
+from finance theory, term structure of interest
+rates even with risk, is that it's not going
+to have much effect. That's what the
+data seem to show. That's the first thing. Second thing is the TAF. I'm going to take to
+try to go through this a little more quickly, but in some sense a
+little more complicated. This is the only one
+picture for all this. This is the impact of the
+term auction facility. First of all, the
+green line is the term Auction Facility,
+amounts outstanding during this period. You can see that how they
+started and as I said, in December 2007, started to increase and then we'll ratchet it
+up by huge amounts of the amount that could be purchased and the terms
+and the maturity, etc. and they rose to a
+roughly 500 billion at the peak and now, starting to drift down. The other two lines,
+the blue line, in particular, focus
+on the blue line, if you like lowest, I call it. That's the Libor OIS spread. The spread between three-month, I use three-month,
+three-month inter-bank loans. That's Libor and OIS, the expectation of the
+overnight Federal funds rate during those three-month period. That blue line,
+early in the crisis, let's think was the
+best measure of the turbulence in
+the banking sector. In the fall of 2007,
+John Williams, a friend of mine to
+the San Francisco Fed and I did research
+on trying to explain the first little blip there and the blue line back
+in August of 2007 and we decided that the
+among explanations, it was most likely due to a counterparty risk
+problem between the banks, not due to a liquidity problem. One of our proofs of
+that was the red line. Red line is the spread between Libor and
+Repo, basically, unsecured credit Libor
+versus secured credit repos, repos secured by
+government bonds. You can see that since
+that moves so closely, our work really began
+before the panic, well before the panic, but it moved very
+closely so much that the term auction facility
+couldn't play much of a role. If you look really closely, the term Auction
+Facility started in December of 7 and started to rise and
+at that point though, Libor OIS spread did come down. Early on there was some
+positive assessments of that the term auction
+facility was working in terms of driving down the spread and the
+interbank market, but interbank market quickly deteriorated and even
+though the TAF went up. Then finally, through
+the panic period, you see that the Libor
+OIS rose dramatically. I think I have reasons for
+why I think that occurred, but put those aside
+for a minute. But you also have the red line moving up almost
+in parallel now, so at this point is
+absolutely no question that these Libor OIS spreads the turbines and
+the banking market has to do with
+counterparty risk, not just a broad measure of liquidity that would
+be provided through banks find it easy to borrow from the Fed through the
+term auction facility. This picture, it seems to
+me shows pretty clearly the term Auction Facility
+can have much of an effect on at least Libor
+OIS on this thing that the Fed would like to have lowered Libor in particular. It does stand up to a
+lots of econometrics. You can do say, econometrics that way, but I think the
+picture, in a sense, tells all a whole story. There is disagreement
+about this, I should say, some other work
+that's been done, so it is ripe for
+research and study, not for the purposes
+of this lecture, as soon as this picture
+makes it clear that the second sub
+counterfactual to have, maybe, we could have
+gotten away with two and maybe,
+come back to that. Then the third thing, the Fed purchases of
+medium-term treasuries. I'm going to have
+one picture here. This is tough to test. I have done the regressions. But here's the deal. The blue line is the
+cumulative Fed purchases of long-term treasuries. You can see those moving
+up and presumably continuing to move up till
+they get to 300 billion. We don't know what happened
+to the program after that. But you also see that
+10-year treasuries, which really the focus
+of these purchases. Remember, the spread between the 10-year treasuries
+was the basis for that spread of mortgages and so reducing treasuries would
+reduce mortgage rates, which is one of the
+reasons the Fed stated it wanted to
+do this program. When the program was announced, there was a good move in yield. You can see that
+over there towards the right before the purchases began there's a sharp
+drop in yields. That was the announcement. There's no question
+that in my view that that came because of
+that announcement. But then you will start to
+move up quite steadily. They got as high as for ease
+off a bit now as you know. Clearly, there's a real question here about the impact of this program on a gut feeling. Their course, there's
+lots of things to control for the economy, strengthens, picks up, there's concerns
+about inflation. If you do that, the timing
+of the purchases day by day, due do Delta's on the purchases and Delta's on the rates, you can't find any effect. Now, here it seems to me we
+got a lot of theory that's clear that should be suspicious about this having a
+big impact as well. You have the term
+structure theories, supplies generally don't tend to matter after a few days. Surprises can obviously matter, but ultimately, it tends to disappear and it seems to me, that's what you're seeing here. I would have been
+very surprised if you saw much else, but again, this requires an attempt
+at least to try to prove, I would say it this way,
+someone's got to be able to show to me that
+this is working. Right now, I don't say it.
+Here's the third thing. All three of these in
+some sense have had, at least by this analysis, by this policy evaluation, not had the effect that there are sometimes
+said to have had. In this sense, the counterfactual
+I have, I laid out, which I think has some
+appeal to it in a sense, we're off of the
+expanded balance sheet, monetary policy is close to what it would normally
+be operating. There was an expansion of reserves for the
+emergency programs that the consumer of the
+commercial paper market, etc. It's not a draconian in
+any way, shape, or form. It seems to me this is something a basis
+for saying that there are some alternatives
+that would have worked as well and we'll be leaving us
+in a better situation now. That's the monetary
+policy evaluation. Which I have spent so much
+time on monetary policy, I don't have much time on fiscal policy but maybe that's as well since I'm a monetary guy. But let's talk about
+fiscal policy briefly. Here's the question is, what should be the
+counterfactual? One natural one, of course, is no stimulus packages, no big counterfactual
+discretionary packages. Where it's only used the
+automatic stabilizers, which by the way are
+not trivial because the large reason that budget
+deficit has increased so much already are the
+automatic stabilizers is really the reduction
+in tax revenues, which has been huge and the increased automatic
+increases in spending. One natural alternative
+is to think about, if you like, no stimulus
+packages whatsoever. Now, quite frankly,
+although, people were trying to get
+out there and saying, this worked in that
+work and didn't. It seems to me, it's
+still too early. This is real-time economics. We really got to say, sorry, we don't have enough
+time in one way or the other but here's a
+preliminary look if you like. Actually, the first Look is
+a 2008 stimulus package. This comes from a
+paper I gave it the AAA meetings in January
+and this basically, tries to look at the
+stimulus package of 2008. In it, what it does is show
+personal disposable income as the red line from January 07 through the period of
+this boot summer of 2008. It's got the disposable
+income jumping dramatically with
+the rebates, etc., that were paid out as part
+of that stimulus package. The blue line shows
+what would have happened without the
+stimulus package. These are data that the
+DEA collects, I think, actually, they deserve
+a lot of credit for trying to put these
+data together. They just come right out
+of the Monthly Reports so you can get a
+good estimate of what the amount of the stimulus package and then
+you have PCE below that. You can see it's very
+hard to find any kind of impact if you like, no jumps starting a PCE that I can detect here whatsoever. Now, it is important
+to try to use regressions and
+things like that, and an analysis of this that I did do the regressions
+and it's hard to find significant effects of the
+stimulus package here on PCE. What about the second
+package, if you like? Well, here we go. Unfortunately, BA is
+continuing to do its work in adjusting personal
+disposable income. At the upper right
+part of the diagram, you see personal disposable
+income moving very rapidly. The last part is the $250
+payments to individuals. It's also the beginning of
+the Make Work Pay program, which is increasing income because those were tax
+credits to people. That's part of the stimulus
+package that's being passed. Without the stimulus package, personal disposable income will not be increasing so much, but it's jumped quite a bit. If you look back at personal
+consumption expenditures, of course, you see the
+drop during the panic, which wasn't in
+the first picture. The panic of last fall was a real collapse
+in consumption. It stabilized since then, but it's not picked up. There's absolutely
+no noticeable effect of this on consumption
+at this point in time. It's too early to tell,
+but it seems to me, we're very much are in here
+we go again situation. Not really surprising
+from the point of view of economic permanent
+income theory, which suggests the NPC
+would be quite low for these kinds of payments
+and indeed it's so low, it's hard to find it in
+these pictures at all. Real-time analysis, again, I think is useful and I
+would say to some extent, keeping out of the policy recommendation
+area for a minute, but this picture here would seem to me
+to have suggested, since it was available before the second
+stimulus package, would have suggested maybe that second stimulus package would not have been the
+right thing to do, but all we can do
+is continue to do our empirical work
+and present it to the policymakers and they
+will decide, so they decided. The last thing here about the stimulus package is
+government spending. I just looked at the reduction
+in taxes or rebates, and onetime payments, etc. But let's talk a little bit about government purchases and I want to refer towards
+the end here to some work I've done
+with [inaudible] and John Cogan and it got
+a lot of discussion, but I just want to just go through the numbers
+here with you. This gives you the stimulus
+package by year '09, 2010 fiscal year, the amount of increase
+in federal purchases, which is G in our
+models, purchases, and the transfers to state
+and local governments, and then the increase
+in the deficit, roughly speaking, the
+increase in the deficit, or for things that
+are not purchases or not transfers to state
+and local governments. For the purpose of
+figuring out how much of the increased state
+and local governments is actually a result in G, government purchases at
+the state and local level, we assume the rule of thumb that we have about 60
+percent of the 48, for example, or 60
+percent of 107. Based on that, you
+get an estimate of government purchases
+in its effect because that's what we're
+interested in here. What would be the impact of this plan of
+government purchases? Here's the picture for that. This was done before we got going with a
+stimulus package, so definitely real-time, and the blue line represents
+the estimates that we got, our research, of what
+the stimulus package would be quarter by quarter, using the 60 percent assumption and making some
+other timing things, trying to get an estimate
+on a quarterly basis of how much government
+purchase was to be increasing as a
+percentage of GDP, starting in the first
+quarter of this year, going several years
+into the future. The red line is the impact using a [inaudible] model on GDP. This is trying to just bring out the latest model and
+make the estimates. Again, it's still too early to tell any of these things, but one thing that's good
+is the estimates we used for the first quarter
+and second quarter are very close to
+the payout rate. There's really not a surprise, like things are going
+slower or faster than was the reasonable projections
+would be, so that's good. You don't want to
+complain it's slower than was it forecasted, you might complain it's
+too slow or whatever, but not slower than forecast. That's basically about right. It seems to me, given that it's pretty clear that at least
+from this thing, that the impacts
+are not surprising, they're smaller than
+observable at this point, so you'd only be getting 1.1 percent of GDP in
+the first-quarter and 0.3 percent of GDP in the second quarter and with all the other things
+that are happening, it'd be very hard to
+detect this in the data. But anyway, nonetheless,
+it seems to be consistent with the view that
+these are not big impacts, these are impacts,
+but they're not big, mainly because you have
+the government purchases, which is really what we're
+thinking about here. I looked at the transfer
+payments before, but the government
+purchases are spread out over a long period of time. This is having a
+small impact as well. As you can see, I'm
+trying to wrap up now, both my examination of the monetary policy and
+the fiscal policy in real time is linked
+to the conclusion that evaluating the policies, thinking of counterfactuals, counterfactuals in this case
+being no stimulus packages, are not having that big of an effect and
+therefore evaluating. That's the evaluation
+that I come to. I want to just
+conclude going back to my ultimate theme
+here and that is, what about this whole idea of policy evaluation
+in real time? What I think this
+is trying to show, and I don't want to say
+that my answers are definitive or the last word, well I want to
+convince you is that this is the thing that we should be doing in terms of evaluating monetary
+policy and fiscal policy. Unfortunately, it has to
+be done in real time. Our hope is that by
+doing the analysis, it will affect the
+policies themselves, and [inaudible] question, these are fast-moving events,
+unprecedented responses. The things I described
+with respect to monetary policy, unprecedented, the fiscal policy responses
+size of these packages, unprecedented, completely new. I think from the
+point of view of the way policy
+gets talked about, you've got this
+24-hour new cycle, you've got the blogs,
+terrific things. But in some sense what happens is the first idea
+that comes out of somebody's back of the
+envelope calculation, if you like, sometimes that's
+the best one in the end, but not where I would end, becomes the word, spreads around and that becomes
+what's happened. That's not what we'd like to do in research as economists, we like to have a better, more thorough, careful
+analysis with the best data. That's what I think we should
+be trying to do as much as we can, despite its difficulty. I quite frankly
+think that policy will depend on this thing. I also don't think
+this is going to change with the
+end of the crisis. I think the way we've
+developed policies now and responses that could be used even if crisis
+weren't so big, that's Federal Reserve Policies, for example, could come out. I think my experience
+with this in the last two or three years is that we have a lot of data, [inaudible] actually provides
+a tremendous amount of data on the financial markets
+on all sorts of CDS rates. We got a lot of data coming out. A lot of it is high-frequency. Of course, we have
+the capability of processing this data, which is miraculous, just getting these
+graphs up like this as extraordinarily illuminary, extraordinarily helpful in
+terms of understanding. I would say there's no reason to wait the long period of time, like I showed you in
+my beginning slides of policy evaluation, whether it's my
+work or the work of Marty and Jim I referred to
+or Bernanke or whatever. It's really possible I think, and I urge people to
+think of it this way. In particular, Friedman
+and Schwartz, of course, analyzed the Great Depression
+30 years after it was over and I don't think we need to be doing that or
+should be doing that. I do think, finally conclude, that we can do a lot
+better here, though. One thing, I find the
+high-frequency data more and more valuable to assess what's going on and of course, we have daily data for all
+sorts of financial variables where we have very little
+high-frequency data for real variables, if you like. I'm going to go back
+to my slides here. This period of the panic is awfully important to try
+to understand what happened. There is a view
+that it all started because Lehman Brothers
+was not bailed out. There's other views that there was scares because of the
+government's responses. It had a huge impact
+around the world, like [inaudible]
+showed you today. It stopped pretty
+much on a dime, it's bounding back in
+some other countries. What actually was
+going on there? I think you need daily
+data to really figure that out because the timing
+is very important. Could it possibly
+been Lehman Brothers? Where were it's speeches or
+testimony that generated it? I think that's a task
+for some institutions, not policy recommendation, but it's something
+to think about. I think improved techniques,
+I mentioned last, innovative ways to think about real-time
+policy evaluation. I think there's a
+lot of econometrics that is possible here. Finally, quite frankly,
+publication is important. Sometimes it's hard to
+get this work published, so I think maybe we
+should establish a journal of real-time
+policy evaluation. What do you think of that?
+Anyway, thank you very much. 

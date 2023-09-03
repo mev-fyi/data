@@ -1,0 +1,543 @@
+Lord Mervyn King: Jim,
+thank you. Ladies and gentlemen, good afternoon. It's a great honor to
+be invited to deliver the Feldstein Lecture for all the reasons
+that Jim gave you. I've known Marty and Kate
+for almost 50 years. I first met Marty in the summer
+of 1970 when I presented my first ever paper
+at a session of the Second World Congress of the Econometric Society
+in Cambridge, England. The subject, investment, and Marty presented a paper in the same session jointly with the late John Flemming
+and those were the early days of computer
+analysis of data. Paper tape had not yet given way to the new technology
+of punch cards. But the application
+of rigorous theory to quantitative empirical
+analysis was a heady and seductive
+combination as it remains today. A year later, I was a graduate student at Harvard with Marty as my mentor and as Jim described a
+few years after that, Marty took over the
+National Bureau and the first summer
+institute was held. "Oh to be in Cambridge, England now that spring is here" became "Oh to be in
+Cambridge Mass now that summer's here" and
+here we are at the 40th NBER Summer Institute. In the audience, I can see
+economists who were not born at the time of
+that first workshop. I want tonight in
+my lecture to trace the path that both Marty and I took from microeconomics
+to macroeconomics. In particular, I
+want to ask how far the so-called workhorse
+or canonical models of modern macroeconomics can help
+us understand what's been going on in the world economy for the past quarter
+of a century. And my focus as the
+title suggests, will be on uncertainty
+and large swings in economic activity
+of the kind we saw in The Great Depression
+and more recently in The Great Recession
+of 2008 and '9 and the unexpectedly slow and protracted recovery since
+the financial crisis. In so doing, I want to draw inspiration from
+what in my view, is one of Marty's
+greatest strength. His ability to combine a
+conviction that economics has a great deal to
+offer in thinking about almost every
+aspect of our lives, Marty's Freshwater
+characteristic and an imagination to develop models and new data sources to examine previously
+unexplored territory. His Saltwater dimension. The fundamental
+question that's divided economists since publication
+of the General Theory in 1936 is whether a market economy with flexible wages and
+prices is self-stabilizing. The recent financial
+crisis should have generated a more
+serious debate about that question but it takes a great deal to derail
+a conventional theory. As Keynes wrote in the
+preface to his great work, the ideas which are
+here expressed so laboriously are extremely
+simple and should be obvious. The difficulty lies not in the new ideas but in
+escaping from the old ones. The crisis didn't lead to
+an intellectual revolution. Instead, debate focused on the appropriate policy response rather than the
+theoretical basis of current macroeconomics. Indeed, the workhorse
+model taught in courses on macroeconomics and
+used by policymakers, survived the crisis better
+than did our economies. Even adding banks and
+financial rigidities with new first-order conditions did not change its basic property. The central idea is that the
+economy moves in response to stochastic random shocks around a steady-state or stationary
+long-run equilibrium. It's interesting to ask how the Stochastic One-Sector Models so much in favor today came to dominate
+macroeconomic thinking. Fifty years or so ago, models of economic dynamics and models of economic
+growth were quite separate. The former stimulated
+the construction of econometric models with empirically estimated
+dynamic responses. The latter were concerned
+with long-run steady growth and later expanded into multi-sector models of
+economic development. The first advance was to incorporate the ideas
+of Frank Ramsey into the formulation of
+optimal growth paths based on the maximization
+of expected utility. The second was the
+explicit modeling of expectations in a
+stochastic environment. It was natural to
+relate expectations to the underlying long-run
+relationships driving the economy and so rational expectations
+came to the fore. Multi-sector models seem
+to add rather little to the insights into
+behavior afforded by the rational
+expectations revolution and so attention switch back to one-sector models
+and the calibration and elaboration of
+stochastic shocks. We arrived at
+today's consensus on the centrality of one-sector
+DSGE type models. But these models have
+their limitations and two seem to be
+particularly serious. First and I'll discuss
+this more in a minute, Expected Utility theory has come to dominate
+macroeconomic modeling, even though its foundations
+are fragile when analyzing behavior in the presence of large one-off
+macroeconomic shocks. Second, the one-sector framework leads policymakers to focus exclusively on the level of aggregate demand rather
+than on its composition. And both features
+are in my view, problematic in trying to understand the world
+economy today. Let me illustrate some of
+this with a very rapid tour of seven slides on some
+of the relevant data. The proposition
+that the US economy follows a path described by random shocks around a
+steady-state growth rate is actually given
+support from figure 1, which plots GDP per head at constant prices from 1900-2016. A constant trend growth
+rate of 1.95 percent a year captures the upward path of GDP per head rather well. Obviously, by far the largest deviations from this path were the Great Depression
+and the boom experienced in the
+Second World War. It's noticeable that despite these large swings in
+activity from 1950 onwards, GDP per head resumed the
+path that would have been projected from an
+estimated trend from 1900 through 1930. Figure 2 adds data for the UK, the underlying growth rate
+is remarkably similar. Although unlike the US, the UK didn't experience
+the wild swings of the 1930s and 1940s but at the end of
+the First World War, the UK suffered a step down
+in the level of GDP per head and did not return to
+the previous trend path. This was when the
+United States took over the mantle of the world's
+financial leader. Figure 3 plots the distribution
+of percentage deviations from trend GDP in the US
+over that same period. Whatever else can be said, the chart doesn't look like
+a normal distribution. If the underlying distribution
+of shocks is normal, then it must be
+shifting over time, suggesting non-stationarity
+of those shocks. Figure 4 shows GDP per
+head for the US and UK over the more recent period
+from 1960 through 2016. And the chart also plots, in those dashed lines, the constant trend growth path for both countries computed over the period up to the beginning of the
+financial crisis in 2007. Almost exactly the same rate in both countries at just
+over two percent a year. Again, a constant trend
+growth path seems to fit reasonably well until the period beginning with the
+financial crisis. Since then, the
+pattern of growth has been very different
+from its earlier path. A persistent shortfall from that previous trend is evident. Something significant
+has changed and it's a matter of some
+dispute as to whether the underlying
+productivity growth trend has fallen or whether there is another
+reason for the pattern of persistently slow growth. Perhaps the most
+striking evidence of non-stationarity is
+shown in figure 5. It plots the world
+real interest rate at a 10-year maturity as
+calculated by David Low and myself from interest rates on government bonds issued with inflation protection from
+1985 to the middle of 2017. From around the time when
+China and the members of the former Soviet Union entered the world trading system, long-term real interest
+rates have steadily declined to reach their
+present level of around zero. Such a fall over a long
+period is unprecedented and it poses a serious challenge to the one-sector growth model. In order to salvage the model, much effort has been invested in the
+attempt to explain why the natural real
+rate of interest has fallen to zero or
+even negative levels. But there is nothing
+natural about a negative real
+rate of interest. I think it's simpler
+to see figure 5 as a disequilibrium phenomenon that cannot persist indefinitely. Part of the explanation for this but only part lies
+in saving behavior. Figure 6 shows the gross
+national saving rates in the US and UK from
+1980 through last year. From the mid-1990s onwards, there has been a decline again, symptomatic of non-stationarity. Figure 7 shows the
+saving rates for China and Germany
+over the same period. Their saving rates have risen, especially in the case of China, and especially more
+recently in Germany. Now what these charts
+show, I think, is that the experience
+of the past 25 years, it's not easy to reconcile
+with the outcome of a model in which stochastic deviations occur from a stationary process. The data I've presented provide a prima facie case for
+considering explanations based on a divergence from a sustainable growth path along which the composition and
+not just the level of aggregate demand is a
+key driver of growth. To understand this,
+requires going beyond the one sector workhorse
+model that has come to dominate macroeconomic
+teaching and policymaking. That model, even with modifications to
+first-order conditions to allow for various new
+frictions has two failings. First, it leans heavily
+on the assumption of forward-looking agents who optimize over known
+probability distributions of the shocks
+hitting the economy. But there is little empirical
+basis for computing the relevant probability
+distributions over events that are drawn from a non-stationary
+economic environment. Second, important movements
+in the world economy over the past quarter of
+a century can't be explained easily in terms
+of a one sector model. The minimum that's
+required, I think, is at least a two sector
+view of the world with both tradable and non-tradable
+goods and services. How else are we to make sense of the changes in saving
+and investment rates in major economies and the continuing current
+account imbalances? Now I don't want to suggest
+that we should abandon the workhorse model
+simply that we should be prepared to
+consider other approaches. Imagine that you
+had a problem in your kitchen and
+summoned a plumber. You would hope that he or she might arrive with a
+large box of tools, would examine carefully
+the nature of the problem and select the appropriate tool
+to deal with it. But now imagine that when
+the plumber arrived, he said that he was actually
+a professional economist, but did plumbing
+in his spare time. He arrived with just a
+single tool and he looked around the kitchen for a problem to which he could
+apply that tool. You might think he should
+stick to economics. But actually when dealing
+with economic problems, you might also hope that
+he or she had a box of tools from which it was possible to choose
+the relevant one. There are times when there is no good model to
+explain what we see. The proposition that
+it takes a model to better model is actually
+rather peculiar. Why doesn't it take
+effect to beat a model? Although models can be helpful, why do we always
+have to have one? After the financial crisis, a degree of doubt
+and skepticism about many models probably
+would be appropriate. Let me turn to the first of these two failings I mentioned. The limitations of
+expected utility theory. I believe that we
+need to face up to the challenge posed by
+radical uncertainty. The state of affairs
+in which we cannot enumerate all the possible
+states of the world, and hence cannot attach subjective
+probabilities to them. The only sensible answers
+to the questions, will President Trump still
+be in the White House in 2021 and will the US economy regain its pre-crisis
+trend growth path? I don't know. None of the possible outcomes represents a series of repeated events in a stationary environment in
+which it will be possible to construct probabilities based
+on observed frequencies. We have all grown up with a simple-minded
+methodological view that agents can be modeled as if they optimize the
+expected utility computed according to Bayesian updated
+personal probabilities. Although useful in some
+especially stationary contexts, the expected utility framework, fundamental to modern
+macroeconomics has serious weaknesses, which make it unsuited
+in my judgment to the analysis of major swings
+in economic activity. Let me give a simple example. It relates to my own experience when as Deputy Governor
+of the Bank of England, I was asked to give
+evidence before the House of Commons Select
+Committee on Education, and Unemployment on whether Britain should join the
+European Monetary Union. I was asked how we might
+know when the business cycle in the UK had converged
+with that on the continent. I responded that given
+the typical length of the business cycle and the
+need to have a minimum of 20 or 30 observations before one could draw statistically
+significant conclusions, it will be 200 years or
+more before we would know. Of course, it would be absurd to claim that the stochastic
+process generating the relevant shocks
+had been stationary since the beginning of the
+Industrial Revolution. There was no basis for
+pretending that we could construct a probability
+distribution. As I conclude it, "You will never be at a
+point where you can be confident that the cycles
+of genuinely converged. It is always going to be
+a matter of judgment." The fact that the
+economic processes generating growth
+and fluctuations do not exhibit stationarity
+is a fundamental importance. It is why so many empirically estimated model break down. The world doesn't
+stand still long enough for an
+observer to measure the frequencies
+that would enable her to construct estimates
+of probabilities. It's not only history that cast doubt on the plausibility of the assumption of stationarity, learning from experience, especially that of others experience and learning
+from others means that expectations evolve
+over time and induce a non-stationarity in
+economic relationships. Large swings and activity don't occur with sufficient frequency, nor within a stationary
+environment to permit a frequentist approach to
+estimating probabilities. There is no basis on
+which to construct subjective probabilities
+other than to succumb to the temptation
+described so clearly by Paul Romer to impose priors to resolve the
+identification problem. What does radical uncertainty mean for macroeconomics? Well, much of macroeconomics and finance lean heavily
+on models that assume either explicitly or implicitly complete
+Arrow-Debreu markets. As a result, those models
+are essentially static. What is less well
+understood is that a world of complete
+markets is in fact isomorphic to a world in which subjective probabilities can be assigned to all
+states of the world. In the mid-19th century, mathematicians started to
+develop an axiomatic basis for probability
+theory independent of observed frequencies. Economists have
+been happy to adopt this approach to
+uncertainty, even though its originators were
+conscious of its limits. In his 1954 treatise on The
+Foundation of Statistics, LJ Savage was careful to assess the realism of the axioms which underlay
+those foundations. They rested on a theory of decisions in which people looked ahead and anticipated
+all possible branches of the decision tree. Savage describe
+the world in which probabilistic reasoning
+applied in these words, acts and decisions like
+events are timeless. The person decides
+now once for all, there is nothing for
+him to wait for because his one decision provides
+for all contingencies. It is, "A grand decision." But this is exactly the world of complete
+Arrow-Debreu markets, where people buy and sell in a single Walrasian
+grand auction. The two worlds are the same
+and Savage was clear that the proposition
+that they describe a wide range of circumstances
+and decisions was, in his own words,
+utterly ridiculous. This isomorphism between
+complete markets and the axiomatic basis for probabilistic reasoning
+is no academic footnote. The world divides
+into two states. In the first, we can construct probabilities and
+markets are complete. In the second, radical
+uncertainty precludes the construction
+of probabilities and markets are incomplete. In the former, explanations for macroeconomic fluctuations
+reflect frictions in markets, in the latter, swings
+in activity or a natural consequence
+of incomplete markets. That is why Keynes thought his ideas were
+simple and obvious, even though they were obviously inconsistent with
+the world in which people thought at the time naturally as a world
+of complete markets. Now, in our economist toolbox, there is room for
+both approaches but in trying to understand
+large swings in activity, there's much to be
+said for the second. It's striking that the
+two major economist of the 20th century who took
+radical uncertainty seriously, Keynes and Knight, devoted their attention
+to the two features of a capitalist economy that distinguish it from
+Walrasian equilibrium. Frank Knight explored the
+nature of entrepreneurship, something that's
+impossible to analyze outside radical uncertainty
+and incomplete markets. Oliver Hart has
+pursued those themes. Keynes wanted to understand
+why a capitalist economy was subject to large fluctuations
+in output and employment. As Keynes was only too well aware an idea which is
+simple and obvious, but which is difficult to
+formalize mathematically, can be resisted
+almost indefinitely. The models used today assumed frictions of various
+sorts to explain why unemployment can persis
+yet it was this view against which Keynes fought
+so hard in the 1930s. He was adamant
+that even if wages were perfectly flexible,
+unemployment could persist. Now, in distilling the essence
+of the general theory, not an easy book to read, the most penetrating analysis
+remains, in my view, the 1975 review article
+by Don Potemkin. He highlights Chapter
+19 on money wages, in which Keynes describes
+why a reduction of money wages is not an effective way to
+reduce unemployment. As Keynes put it,
+the economic system cannot be made self-adjusting
+along these lines. Reductions in money wages increased desired
+employment, yes. But if they also reduce
+expectations of future incomes, then aggregate spending may fall and unemployment persist. As Potemkin put it, thus, the general theory is
+not a static theory of unemployment equilibrium but a dynamic theory of
+unemployment disequilibrium. Now, that's old fashioned
+language from the 1970s but it points to the centrality of the incompleteness
+of markets, which in turn rests on
+radical uncertainty. What's been overlooked
+in the discussion of monetary policy in the
+industrialized world today is that exactly the same argument holds
+for interest rates. Central banks have flirted with negative interest rates
+but for many economists, it's been a full-blown affair. The prevailing view is that the main obstacle
+to our achieving macroeconomic stability is the zero lower bound on
+nominal interest rates, the view which I believe is more than a little misleading. Negative interest rates, yes, have a substitution
+effect which raises current spending.
+That's in the model. But such a change in
+policy might also create expectations of
+future policy actions that would reduce incomes. An aggregate spending could
+fall rather than rise. Such a possibility
+is precluded by assumption in the
+workhorse model. Rational or more
+accurately, of course, model consistent
+expectations proved invaluable in avoiding
+false inferences about the impact of
+government interventions. But if markets are incomplete, it's easy to forget that expectations over
+future prices of goods or labor with where the futures markets for those goods are
+currently missing, will also respond to changes
+in government policies. The Lucas critique
+applies equally to incomplete as well
+as complete markets. A feedback from negative
+interest rates to beliefs about future policies and hence
+income cannot be ruled out. Now, when confronted with
+radical uncertainty, agents develop and evolve narratives to cope with the challenge of making
+one-off decisions. An entrepreneur thinking of launching a new product does not calculate subjective
+probabilities and then maximize expected utility. There is no current price
+signal to guide her decisions. She develops a narrative within which it is possible
+to understand the key parameters determining the likely success
+of the product and make some judgment. As Danny Kahneman put it, no one ever made a decision
+because of a number, they need a story. When the financial crisis hit in 2007 and took a major turn
+for the worse in 2008, the reaction of
+policymakers was not to update their prior probabilities with each new observation, it was to ask, what
+is going on here. Walter quote, Chuck Minsky
+in an MBR working paper have just two months ago, introspecting about
+how I revised my own macroeconomic
+expectations after receipt of
+new information, I often find it difficult to conjecture and explicit
+sampling process. Hence, I am unable to consciously update in
+the Bayesian manner. Now, time doesn't permit a
+discussion of narratives as a way of describing a
+macroeconomic events. I provided one for the responsive spending to the financial crisis in my
+book, The End of Alchemy. But I do want to emphasize that I'm using
+the word narrative in a very different sense
+from that deployed by Bob Shiller in his AEA presidential
+lecture earlier this year. For him, a narrative is, "A simple story or easily
+expressed explanation of events that many people
+want to bring up in conversation or on
+news or social media, because it can be
+used to stimulate the concerns or
+emotions of others." It contrasts with a
+rational view of the world. For me, a narrative is an entirely rational way to approach the challenge
+of radical uncertainty. It is a story that integrates the most important pieces of information in order
+to make a decision. Now let me turn to the other limitation of the
+standard workhorse model. Namely, it's one sector nature. When Martin Feldstein
+was a young man, multi-sector growth
+models were all the rage. The optimal path from an initial starting point
+was to move towards and then remain close to a balanced growth
+path along which all sectors grew
+at the same rate. The early literature
+was concerned with generating results
+on the conditions under which the
+optimal path would be close to the balanced growth
+path for most of the time, just as in a long car journey, the optimal route is to
+get onto the highway and stay with it until close
+to the final destination. Hence, such results
+were known as Turnpike theorems and they were proved under rather
+general conditions. Multi-sector models
+fell out of favor largely because of the focus on the steady-state
+of those models. If all the sectors were
+growing at the same rate, then the models
+didn't really add much to the insights provided by one sector models but their real interest lies in the adjustment path
+off the steady-state. Figure 8 shows an illustrative optimal path for an economy with two sectors, tradable and non-tradable
+goods and services. Notice the imaginative use of new technology in which with a couple of hours
+effort you can on a computer screen
+actually put writing, something which you
+could do with pen and paper probably in
+about two minutes. Now, the solid line OP shows the balanced growth path often known as the
+Von Neumann Ray, and the prices supporting
+that path are given by the slope of the line
+orthogonal to that ray. The dotted line AB
+shows the path of an economy steadily moving
+away from balanced growth, as I believe happened in
+the run-up to the crisis, along which the
+relative price of the two goods differs from
+its steady-state value. Having got to point B, the economy now
+needs to rebalance. Starting from point B, the optimal path BC takes the economy along
+the solid line which shows the optimal trajectory
+towards and then converging on the
+balanced growth path. Now for any initial composition of output such as point B, the optimal path,
+it will stay within a certain neighborhood of the Von Neumann Ray
+for most of the time. But starting from an
+unbalanced combination of tradable and
+non-tradable sectors, the interesting turnpike result is that in order to get
+back to a balanced economy, it pays to reallocate
+resources between the two sectors sooner
+rather than later. In a sector that is
+overexpanded that may require a contraction of output and writing
+off of capital, and focusing on
+the adjustment to the equilibrium path or the traverse in Hicks' terminology, brings an Austrian flavor to the analysis of growth in
+this two-sector model. Especially the possibility
+that it's optimal to discard capital invested in
+the "Wrong" sector. Along the optimal path, measured growth of total
+output will initially be weak relative to the growth rate
+along the balanced path. In the one-sector model, the problem doesn't
+really arise. Deviations from the
+steady-state path reflect random shocks which die away of their own accord. Now, this two-sector
+division between tradable and non-tradable goods is stylized but it
+captures, in my view, an important division
+reflecting the imbalances in the world economy prior to the crisis and the
+need to rebalance now. Where are we? We go back. Here we are, Figure 9. This is the relative price of tradables versus
+non-tradables in both the UK and Germany
+over the period 1996-2014. These are data supplied
+by Philip Lane, and now the governor of the
+Central Bank of Ireland. Lot of problems in constructing
+data of this kind, but I think there's a
+stellar message here. One of the remarkable things
+is the picture for the UK. It's clear that one of
+the problems faced by the UK in trying to avoid
+unbalanced growth is the steady fall in the
+price of tradable goods and services relative
+to non-tradables. Only following the
+sharp depreciation of Sterling during the
+financial crisis was that relative price stable. For much of the period, there seems to be evidence that an unsustainably high
+real exchange rate led inexorably to our
+current account deficit and the need to
+rebalance the economy. With the further
+appreciation of Sterling in 2014 and 2015, that fall in the
+relative price resumed. All of this puts the
+depreciation of Sterling since last summer into
+some perspective. In contrast, Germany has
+experienced, if anything, a rising price of tradables, and so it's no surprise that its current account surplus has risen to unsustainable levels. Figure 10 shows
+the route back to a balanced growth path for two economies with
+the same technology. One of which saw its
+tradable good sector expand too rapidly, and the other experienced a relative decline in its
+tradable goods sector. One could easily
+imagine that the former illustrates the challenge facing China and Germany today from point A going back
+to the Von Neumann Ray, whereas the latter
+going from point B, represents the experience
+of the US and the UK. For both types of economy, the task of
+reallocating resources, including fixed capital,
+may require a period of low growth and fold in
+output in some sectors. The real interest
+rate is important, but it's not the only
+relative price that matters in understanding
+slow growth today. The key insight
+from such models is simple but important. The composition of
+demand matters. Trying to understand weak
+growth in the context of a single commodity forces the debate into the arena of either weakness of
+aggregate demand or slower productivity growth. But the turnpike
+theorem suggest that weak growth can be
+the property of an optimal response to the need to rebalance the composition
+of demand and output, and I think that that is
+exactly where we are today. The next table shows the
+imbalances last year among the four major parts
+of the world economy in which current
+account deficits and surpluses are significant. Both the US and the UK had substantial current
+account deficits amounting an aggregate
+to around $600 billion. Rather, a lot of money.
+China and Germany had correspondingly large
+current account surpluses. All four economies need to move back to a
+balanced growth path. But I think too little
+attention has been paid to the problems
+involved in doing that. With unemployment low levels, the current situation of slower than expected growth is not insufficient
+aggregate demand, but a long period away from
+the balanced path reflecting relative prices away from their steady-state
+equilibrium levels. The result is that
+the shortfall of GDP per head relative to the pre-crisis trend path was over 15 percent in both the US and UK at
+the end of last year. Policies which focus only on reducing the real interest
+rate missed the point, we need changes in all the
+relevant relative prices. Now, there are many
+stories which purport to explain recent
+growth experience. There is the decline in growth potential emphasized
+by Robert Gordon, the secular stagnation advanced by Larry Summers and others. There is a recent NBER
+Working Paper by Fernald, Hall, Stock and Watson, which attribute slowing growth to a combination of
+a declining trend in factor productivity and a decline in labor
+force participation. Perhaps, perhaps not. Recent growth has
+been very similar over the past decade
+in both the US and UK. But in the UK, labor
+force participation has actually risen, not fallen. It is possible to reconcile
+low unemployment with weak growth as the property of a transition to a
+two-sector turnpike path, during which resources
+must shift from the non-tradable to the
+tradable sector or the other way around, depending on which economy
+you're looking at. Now no doubt other explanations
+will be forthcoming, and I think the only honest
+answer is that in truth, it is too soon to tell. But do not be misled into thinking that because
+unemployment is low, an unfortunate sequence of
+negative shocks has come to an end and normality is
+about to be restored. This figure shows the
+real interest rate that markets expect to hold 10
+years from now in the US, the 10-year 10-year
+forward rate, implied by the yield
+curve of real rates. The crisis put
+paid to hopes that real rates might go back
+to something more normal, and the current expectation of where 10-year real rates will be 10 years from now is only
+about one percent a year. Figure 12 shows the
+same implied rate minus the five-year
+spot real rate. Again, there's not
+much sign I think of market expected
+normalization. There's still a long way
+to go and we need to think about a wider
+range of models. The moral of my story
+is that it's important not to be constrained
+by existing models, nor to think that
+simply tinkering with those models provides
+an answer to the challenges posed
+by the crisis and unexpectedly slow growth
+over the past decade. I'm not suggesting
+that we should abandon our existing tools. It's a question of
+horses for courses, but the workhorse model does not constitute a
+comprehensive toolkit. Remember the lesson of the
+good economics plumber, carry many tools with you and
+always pose the question, what is going on here? Designing practical policies to improve public interventions is a continuing challenge and
+one that Marty has explored throughout his career in a wide variety of
+fields: health, taxation, saving,
+social security, monetary and
+macroeconomic policies, and even defense economics. Taken together,
+those contributions certainly add up to
+a life well-lived. Marty is still a role model for younger economists
+who want to be the economics' plumber that every family would trust
+with their kitchen. Even after almost 50 years, I look forward to
+a few more decades learning from my mentor. 

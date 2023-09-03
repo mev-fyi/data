@@ -1,0 +1,367 @@
+Michael Sinkinson: This paper
+is about common ownership in America, 1980 to 2017. Many of you have probably
+heard something about the common ownership hypothesis. It's been in the news
+quite a fair bit. But just to make sure we're
+all clear on the idea, economics usually
+starts with the premise that firms maximize profits. It's a very basic
+underlying assumption to most of what we do. It's very natural that
+they would do this. You would want to do this
+if you were a private firm. If you're a public firm, you also want to do this because maximizing profits
+will maximize the share price as that reflects
+discounted future profits. But another way to
+think about this is that you really do answer to your investors and
+that's what we teach our MBAs at business schools. The management is responsible
+to your investors and what are your
+investors want? Well, it might be the case that some large investors may hold stakes in you and
+your competition. We call those common owners. For example, if I
+have a big stake in Uber and a big stake Lyft, I don't want them spending
+a lot of money poaching drivers from each other or poaching riders from each other. The idea here is a common
+owner may not actually want you to solely
+profit maximize, they may want you
+to something more like industry profit maximize. This paradigm says, well
+maybe actually what firms do is they maximize the shareholder portfolio value. It's a one little
+tweak and assumption, and as you'll see, you get a lot out of this one little tweak. Now this has been in the news a lot lately with sensationalist
+headlines as well. Things like are index funds
+evil or stealth socialism. The idea there is because
+we're all putting our retirement funds in these big index funds
+like we've been told to, that we're creating a problem. Because we're all indexing, we're buying the
+market we're creating this common ownership idea and it may be resulting
+in less competition. I want to focus on this last
+quote here from Reuters, "When BlackRock calls, CEOs listen and do deals." BlackRock is of course
+one of the largest asset management
+firms in the world. People often question around this common ownership
+hypothesis. They say, well,
+how would you know these investment
+management firms actually communicate their
+desires with management? Well, just ask
+them what they do. There's no CEO that
+doesn't return our call because typically we're high up on the
+shareholder register. At the very bottom it says we are everybody's
+largest shareholder. This is the common
+ownership hypothesis in a nutshell and
+it's a concern. We have been thinking
+about this problem for a few years now and developed many agenda around studying this common
+notion hypothesis. The first output of it was a Brookings Institute
+working paper, where we basically
+do a lit review of the existing evidence, because there has been some empirical
+evidence purporting to find effects of common
+ownership on prices. The main point of
+that paper is to basically show all the
+data issues that exist, survey what methods are
+currently being used, and to basically point out why industrial
+organization economists are so-called cranky about the existing empirical evidence. IO is sometimes known as
+cranky about a lot of things, but in particular
+in this context, IO has had a lot of problems
+with the existing evidence. Most of today I'm going to spend talking of a macro-level view of what do these common
+ownership incentives look like in the economy? We're going to look
+at the S&P 500 over the past almost 40 years and
+try and figure this out. What's nice is we're
+going to look at this very differently from
+the existing literature. Then we're going to just focus
+on the firm's incentives. Just write down the
+firm's objective function and figure out where the common ownership
+incentives show up. We're going to then decompose
+some long-term trends in this and show you what's
+been going on. Then I'm just going to advertise
+that we're still working on a formal testing procedure to actually go to the data in differentiated
+product markets and actually assess whether
+it looks like there's evidence of common
+ownership affecting prices. I will not have time
+to get to that today, but I want to advertise, look for it in the
+next few months, we should have that
+working paper out. Just a quick preview what
+we're going to find. We do think the series, it's a self-consistent theory. It actually makes
+sense in some ways. There's a bit of some questions around
+corporate governance though, and we'll discuss
+those in this talk. One thing we want to emphasize, don't regress
+equilibrium object like price on other equilibrium
+objects such as MHHI. That's a bad idea
+and I'll show you exactly why that's a bad
+idea in a couple of slides. We instead study what
+we call the profit weights that are implied
+by common ownership. We're going to develop
+that in a few slides. In terms of the
+facts I'm going to show you from this paper, it's no surprise that
+institutional ownership is growing overall.
+We know that. But we're going to show
+you that the implied profit weights that we compute for companies
+in the S&P 500, have been increasing
+greatly over time. From 0.2-0.7, you'll understand in a few
+slides what that means. What is happening here. A lot of those sensationalist
+articles have tried to blame Vanguard or BlackRock
+or State Street and said they're the problem,
+that's what's going on. But as we show, no, they're just the
+latest incarnation of a trend towards indexing. It used to be the case
+that you'd make a bet. You'd say, I think Eastern Airlines is really going to win. I'm going to buy a big
+stake in Eastern Airlines. Today we know Warren Buffett has large stakes in every airline. It's this move towards
+diversification that's really going on. We then try and
+quantify the effects. We basically calibrate
+a model and say, well, let's turn this on. Let's assume everyone
+was being competitive in their pricing and
+then flip a switch and have them wake up
+and decide the price, taking into account this idea of maximizing
+shareholder portfolios. The answer is, it's
+big. Markups would increase pretty significantly, I'll show you exactly
+how much but more than double over the 40 year period. Then finally, we also
+show that if there's, say, a privately held firm, a maverick as we're calling it, if one firm is not going along with the common
+ownership in some sense, that can actually do a ton to discipline this whole effect. The fact that more of the economic
+activity is going on in private companies over time, might be a good
+sign that we need to worry less about this. Let me dive right in. The theory actually goes
+back to the '80s and '90s. But really why this took off and why the newspapers
+are paying attention was a set of papers that
+purported to find price effects in
+airlines and banks. That's the second bullet point. That has just
+unleashed a torrent of new work on this whole topic. We've seen replies
+to those papers, replies to those replies. We've seen papers
+proposing remedies. We should rein in index funds. That's quite an extreme idea. We've also seen papers start to think about, well, maybe
+it's not in price, maybe it's in
+investment decisions or R&D or something else. It's been a very active area of research. Let me
+just go through. This is about the
+only equation slide. Let me just walk through what is this model and what does it imply? Here's a little notation. Investor s in firm f has
+rights to profits Beta_fs. Think of that as what percent
+of the company do you own. If you have five
+percent of the shares, you have a claim to five
+percent of profits. Therefore, your investor
+portfolio is worth the sum across all of your
+investments of that Beta times that
+company's profits. That's just your
+portfolio value. Here's the first problem
+with the theory. I have many investors and they
+have different portfolios. They might disagree on what I should do in a given situation. To be concrete, suppose investor a owns a
+lot of American, a little United, and investor b owns a little American,
+a lot of United. Well, if you're American,
+those two investors would disagree on
+what you should do. We have to resolve
+this in some way. The way this is done is with a Pareto weight Gamma
+on each investor. I say, I care Gamma
+about investor a's portfolio. We'll
+come back to that. But now that we have
+these ingredients, we can just directly
+write out what is this firm's
+objective function? What are they
+trying to maximize? They're maximizing again, just the investor's
+portfolio values. If you write it out,
+it's the sum across all my shareholders of Gamma, how much I care about them, times their portfolio's value. That's not a very
+nice expression. Let's rearrange a little bit.
+I'm going to just pull out my own profit and divide
+by its coefficient to normalize.  If you go
+down a line, you see what I really want to do is want
+to maximize my own profit, that's the Pi f plus some weird weighted average
+of other firms' profits. In that weird weighting
+thing in front, that's what we're going to
+call the profit weight Kappa. The reason being is if
+you go to the right side, it all of a sudden has a
+very nice interpretation. I maximize my own profits plus the Kappa weighted sum
+of other firms' profits. What's great about this is it prices other
+firms' profits. This is my objective function. This tells me that
+if Kappa is say, 0.2 that if I can make one dollar
+appear in your profits, it's worth 20 cents
+in my profits. It gives me the price
+of your profits in terms of mine, very
+natural interpretation. How do we actually
+compute these? What is Beta? This
+is the good one. We know what Beta
+is pretty clearly because large investors
+have to file what they hold every quarter with the SEC in these form 13f filings. Beta is just what percent of the firm do you
+actually control. Mostly observable in data,
+not too controversial. Far more controversial is
+this Gamma thing. It's fundamentally a model
+of corporate governance. How much do I care about each of my investors portfolios? Theory gives us very
+little to go on here. But it does seem like there are a few obvious nice properties
+that we should have. For example, Gamma should
+be increasing in Beta. The more you own of me, the more I should care
+about your portfolio. Seems fine. We think that Gamma should go to zero as Beta goes to
+zero so you don't have weird discontinuities if I buy one share of your company. The literature to this
+point generally waves its hands at this problem
+and says we're going to assume what's called
+a proportional control. We're going to set
+Gamma equal to Beta. If you own five percent of me, I care five percent about you. It has some very nice math, but there's no real foundation to that. It is an assumption. What we do is we actually
+don't impose that, we allow for more flexible forms of Gamma being a
+function of Beta. What we do is we test
+a range basically. As you can see, we
+do square root Beta, Beta, Beta squared. As you go to the
+right in that list, you're basically overweighting
+your largest investors. If I put Gamma
+equals Beta squared, I'm caring just about
+my biggest investors. If I go to the other
+end, square root Beta, I'm underweighting my
+largest investors. This gives us flexibility around what this actual
+function should be. I just want to point
+out on a few things. Unlike these MHHIs that
+have been used so far, these Kappas that we're studying have a
+lot of advantages. I didn't have to specify a game. I didn't have to say
+what a market was. These are just very
+nice primitive objects in the firm's
+objective function. We think this is
+the right way to study this question
+as opposed to what other papers have
+been doing so far. I just want to drive
+home an example of why you should not regress
+price on MHHI. What we do in the paper is a really simple simulation
+exercise where we say, imagine we have linear
+demand and two firms, and they're just
+going to set prices according to the
+static Bertrand-Nash. They're going to ignore
+common ownership and pricing. They're not doing any of
+this common ownership stuff. But we're going to assume
+that we're sampling from across markets and
+there's variance in the a_1 term across markets. That's where we have
+differences across markets. We have one
+institutional investor. Rather than just
+compute the HHI, the MHHI from these samples
+and see what we get. Here's our little simulation. The figure on the left shows prices across markets as a function of that
+demand intersect. The X-axis is the
+demand intersect, the Y-axis is prices. What you see is prices are
+increasing to the right. We then plot the MHHI
+Delta in the right figure. It's this parabola shape. It's rising and then falling. Now, remember, firms are ignoring common
+ownership entirely. But notice the
+little green bars, we're going to call
+that Sample 1. If those are the markets you
+happen to sample and you ran a regression of prices which
+are increasing on MHHID, which is increasing, you get a strong significant
+coefficient. If you instead drew Sample 2, the yellow bars, prices are still increasing, but now you'd get a negative
+coefficient in MHII Delta. It's really a
+meaningless to do this. The market shares are
+confounding everything here. You don't want to include market shares on your right-hand side. Again, this is why we think
+we need to be studying this Kappa object,
+not anything else. Let me go to some main results. What we do is we
+actually compute this Kappa variable
+for universe of S&P 500 firms from 1980-2017. It's going to be
+pairwise. We're going to have an awful lot
+of these Kappas. For every pair of firms, we look at the overlap in
+the investor portfolios. We think this is useful
+because the S&P 500 is chosen to be representative
+of the US economy. It's a proprietary list maintained by
+Standard and Poor's, but they actually
+do try and make it look like the US economy. So we think this
+is representative. Again, I'm not making direct claims and outcomes
+yet. I'll come back to this. Some of these pairs of firms
+will be that Delta Airlines has a profit weight on
+Pfizer, which is silly. We understand that concern,
+we'll come back to that. We can show lots of
+robustness to that. But this is the headline result. What do these Kappas
+look like over time. I want to focus first
+on just the red line, just to fix ideas. The different lines are
+just different models of that Gamma parameter. But if you look at the red
+line, it goes from 0.2 in 1980 to about 0.7 in 2017. That's a huge increase,
+more than tripling, of this profit
+weight that I put on a typical other firm in the S&P 500 over this time period. One thing we really, really
+like about this picture is, notice that, for 2017, it doesn't matter which Gamma
+specification you pick. I can overweight my big
+investors or underweight them, it's still going
+to be about 0.7. It's just because everyone's holding the market portfolio. It's not about who I'm actually putting weight
+on so much anymore. This is first main result. Qualitatively, it doesn't
+matter which Gamma you choose. Quantitatively for 2017, it doesn't matter which
+Gamma you choose, they're all going to
+be the same answer. I'm going to just
+mention quickly, there are a lot of data issues. I'm not going to have
+time to go through this given the time allotment. But if you are interested
+to work with this data, our Brookings Paper has
+a huge data section that summarizes
+all the problems. I'm trying to skip
+a few slides and say what is driving
+that increase in Kappa? Well, we just went and
+computed similarity measures between investor portfolios
+and the market portfolio. We have an L_1 measured
+and L_2 measure, plotted them over time, and it's just because
+everyone's portfolio start to look more and more like
+the market portfolio. This is the main driver
+of what's going on. Just to emphasize this point, this started in 1981. There's no way this increase
+was all of a sudden in 2000 because BlackRock acquired
+iShares or something. It was not some step function, it was a very smooth
+increase over time. We wanted to understand
+how big this could be in terms of effects on, say, prices in markets. We just calibrated
+a simple model with eight symmetric firms and
+we have logit demand. If you're not aware of it, there's an excellent
+paper by Jan De Loecker and Jan Eeckhout about the
+rise of markups over time. What we do is we calibrated the 1980 value to their markup. We basically just then
+said, "Okay firms, behave as if common
+ownership is real and Kappa is increasing," as we see it increasing
+in the data. That is basically the blue line. You see that markups go from about 20 percent to
+about 55, 0.2-0.55. We also put on the red line, that is the markup increase that De Loecker and Eeckhout
+document in their paper. There has been
+some debate around that paper about whether
+it's measured properly, etc., but just to give a
+sense of the magnitudes, it looks like these Kappa
+incentives are big and could actually
+match the magnitude at the end of that sample. We're not saying these two lines lie on top of each other, I want to be clear about
+that, but we do want to put that up there
+for comparison. Another thing we did
+is, we looked at profits of these firms
+relative to competition. The blue line is, if you
+have these Kappas and you're actually behaving according to the common ownership model, and then we added a maverick
+firm and basically said, let's have one private
+firm in the market. That firm's not going to play along with the common ownership. Hypothesis, that firm is
+going to have a Kappa of zero and every other firms are going to have a
+Kappa of zero on them. If you do that, we find it just greatly disciplines
+this whole effect. Now, part of that could be
+because it's symmetric firms. You can quibble
+about the details, but it does seem to be the case, that if you have foreign firms, if you have private
+firms, they may act as discipliners in terms of
+the ability to do this. As I said, the S&P 500
+is big and diverse. What does it mean for
+an airline to have a profit weight on a drug company
+or something like that? In the paper, we
+actually do this within SIC code and
+across SIC code. It's actually slightly
+higher within SIC code, if anything else. We've also explicitly
+done some [inaudible] We did commercial banks,
+we did airlines. We've done ready-to-eat cereal. We feel it's pretty robust to different things
+around the edges like that. What we also do in the
+paper is we look at what are some of the
+determinants of these Kappas? We find that higher retail
+share means higher Kappa. The reason being,
+retail investors fall out of this whole model. Your Beta is very small and your Kappa is very, very small. Retail investors don't matter even if they're undiversified, and so firms of high retail share tend
+to have a high Kappa. That's generally correlated with market cap and so
+similar result there. The last big thing I
+want to talk about is the relationship to tunneling. I'm not sure how familiar
+people in the room with the literature on tunneling. But the idea arises when
+you have a divorce between cashflow rights and
+control rights. This is commonly
+thought to occur in a lot of developing
+countries where if you have high control rights and high cash flow
+rates in the other, you use the control rights to tunnel profits to
+the other firm. In the US it's not
+supposed to happen, although people have
+mentioned the word when Tesla bought Solar City or when Elon Musk's
+The Boring Company built it's tunnel
+on SpaceX land. You have these weird
+relationships. What's amazing is in our case, it's actually possible to have
+a Kappa greater than one. There's nothing about the
+math that precludes it. What does it mean
+to have a Kappa greater than one
+for another firm? It means you actually do want
+to tunnel profits to them. If Kappa gets high enough, you want to just shut
+down, maybe even. But in some sense,
+Kappa greater than one seems like a
+risk for tunneling. The last thing we do in the
+paper is we just say, "Well, how often is Kappa
+greater than one among S&P 500 firms during
+this time period?" This is one way
+where the choice of Gamma does matter a little bit. But let's just pick
+the red line again, which is the
+[inaudible] control. It's something like 10 percent of our Kappas are
+greater than one. That's pretty remarkable. If you do take this
+whole model seriously, this is a pretty important
+implication. Let me wrap up. This is the main paper that
+we're presenting here. The big takeaways are that
+this is an interesting model. There's a bit of a
+whole new sense of the corporate governance side of how does it all fit together. But the implications are huge and it's not a crazy assumption, you just think that
+firms are maximizing shareholder portfolio value. Once you do that, you get
+these incentive terms, these Kappa weights
+that you can plot. We do that, and we
+find that they've been increasing
+dramatically over time. It's not because of any one particular investor
+or anything like that, it's just because of everyone's buying the market like
+we've been told to do. In terms of magnitudes,
+from 0.2-0.7 is very big. One nice feature, a maverick
+could discipline pricing. Then as I just mentioned, there's some red flags
+around this tunneling issue. I'm out of time,
+I'm not going to talk about the serial paper, but if you're interested again, we are investigating
+how to actually test this in a differentiated
+product setting. It's progressing slowly as
+structural I/O work tends to. The initial evidence
+that we're finding, we have some more basic models, we're adding more layers
+of complexity, but so far, we're finding support for the standard competitive model among ready-to-eat
+cereal products. Very preliminary. We look for a working paper in another few months.
+Thank you very much. 

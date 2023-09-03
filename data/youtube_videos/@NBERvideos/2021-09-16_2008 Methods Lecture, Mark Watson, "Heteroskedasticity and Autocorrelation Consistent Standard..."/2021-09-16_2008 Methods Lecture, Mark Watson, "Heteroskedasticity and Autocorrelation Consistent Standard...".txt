@@ -1,0 +1,992 @@
+Mark Watson: But let's
+go. Let me give you a brief overview of what
+we're going to do today. Same schedule, of course, as always. My first
+lecture this morning. I'm going to talk about
+HAC standard errors. I learned a lot about them
+while preparing this, so it's fun and, at
+least, fresh to me. So that'll be the first
+set of lectures, and then I'll talk about some
+issues in forecasting. There's been a lot of work
+on forecasting and tools, some tools for forecasting but really tools for
+assessing forecasts that I will concentrate on in my part of the talk. So that'll be that
+lecture. Then Jim will come this afternoon and talk about models in which you have not only a
+long time series, we have lots of variables
+that you're studying, and he'll talk about
+some advances in forecasting that had been
+made in the context of those models using the rich
+cross-sectional information to help you forecast
+a particular series, and he'll also talk about how
+these kinds of datasets in this rich cross-sectional
+information. It might be useful
+for other things, structural vector
+autoregressions, DSD models, and some of the things he talked about
+yesterday afternoon. Let's just get going. This is the topic. What I'll do, I'll
+just remind you, we have done this already, and most of you have pushed, if you will, the
+Newey-West button at some point in your life. But I'll remind everyone why you pushed the
+Newey-West button, and that's in one or why you
+use HAC standard errors. Then I'll talk
+about actually why you pushed the
+Newey-West button and not some other button and why that might be a
+good thing or a bad thing. So that's parametric and
+non-parametric estimators. The Newey-West thing, of course, is in this non-parametric
+estimator group, and I'll talk about some
+parametric estimators as well that are quite natural. Then I'll talk about comparing these
+different estimators, and what are the important
+choices that have to be made, which estimator to use, and then within an estimator, some details about, lag length choice
+and stuff like that. I'm going to try and
+highlight here what I think, at least, in my reading of the literature has suggested are the important choices and what are the choices that aren't important or that are minor. Then I'll move to some
+really exciting work that's been done over
+the last several years on thinking about
+this problem in a different way and using inconsistent estimators
+for this thing. I'm sure I will do this historically in
+a sequential way, but at the end of the day, we're used to thinking about using inconsistent
+estimators. In some sense when you took
+your old Stat 1 course, you had 12 observations
+from a normal, and you were
+estimating a mean and constructing a confidence
+interval or a t-test, and you used the t-distribution, and you worried about this
+thing in the denominator being S squared and
+not Sigma squared, then you adjusted the
+[inaudible] of freedom. We've all done that, and this is just that where you have, in some sense, lots of data, you've got a long time series, but you don't have data information where you
+need the information. You really, at the
+end of the day, in some sense have
+12 observations, so you go back, if you will, to using t-statistics
+and t-distribution. That's the way I'm
+going to think about this. That's where
+we're going to go. This is just a reminder. Why do we do this stuff? What's it all about? Linear regression, y
+equals x Beta plus e, I called it e here. I don't know why I
+called it e, but I did. Beta hat is blah, blah, blah, and you can rewrite
+Beta hat minus Beta as, so this is, of course,
+the error that one makes, the sampling error in Beta hat, and the sampling error
+really has two bits to it. It's got this scale factor, if you will, the normalized
+x prime x inverse. Then it's got this part, x prime e, this average
+of the x's and the e's. We know, of course, for
+consistency, as we talked about, again, Econometrics 101, one needs regressors
+and error terms to be uncorrelated with
+one another for this term in some sense to
+have an expected value of zero for this thing
+to be consistent. But this is going to have
+some sampling variability. It's an average, so the sampling
+variability is going to be the sampling variability
+of the average. When one works out
+the distribution of this, what do you find? This is an average, so this estimator is going
+to be normally distributed with a variance which is the scale times the
+variance of this bit, which I called A here, I guess. What do we want
+to do to work out the variance of
+this thing which we need to do inference?
+What do we have to do? We have to characterize
+the variance of A, that's this thing called Omega, so we'll do that here, and we'll do that
+in the next slide. Then we have to think about
+estimating this variance. So we'll characterize the
+variance, that's simple. Then we'll estimate
+it, that's hard. If you will, this
+is Sigma squared, and this is Sigma hat squared, and we have
+to figure out what a good Sigma hat
+squared is. That's it. This is the HAC problem. What estimators should I use? Here's some notation
+I'm going to use. This is what we care about. This is the object that
+we want to estimate. What's the variance of this guy, and I might as well
+just call this guy, this is x times e. But rather than writing out x times e over and over again, why don't I save pixels
+and just call it w? So w is going to be x times e. What we care about is what the variance is of 1 over square root of T
+times the sum of these w's. Now, as a practical
+matter, of course, when we construct estimators
+for regression problems, we don't know what the e's are. The only way you can
+know what the e's are is to know what the Beta was so you could subtract and get e. If you knew what the Beta was, you wouldn't be going
+through all of this stuff. To begin with, we have to replace e with the residual
+or something e hat. Except for one little
+bit at the end, this replacing e
+with e hat is not important for the
+things I'm going to talk about for most of this. I'm just going to
+notationally run around with w, and an estimator would
+have a w hat in it. Those are going to have
+the same properties with one exception that I'll
+highlight at the end. You could imagine
+there are technical assumptions you would
+want to make about moments so that e
+and e hat can be treated the same way in the
+calculations I'm going to do. I'm going to construct
+an estimator. My estimator is
+really going to be a function of these w hats. But I'm going to write
+it or characterize it for most of the things as
+just a function of the w's. Omega hat is just going
+to depend on the w's. Omega hat is an
+estimator of Omega. What is Omega? Let's just write it out and see what the
+heck this thing is. We did this the first day. This is just a review, I guess. So what's Omega? Omega is the variance of this. It's the variance of a
+constant times a sum. So that's the constant
+squared, 1 over t, times the
+variance of the sum. The variance of a
+sum is the sum of the variances plus all
+of the covariances. So let's think about these w's as being covariant stationary. When I talk about covariance, it's the covariance
+between W1 and W2. It's the same as the covariance
+between W2 and W3, same as the covariance
+between W50 and W51. I've got the sum
+of the variances. All these guys have
+the same variances. That's Gamma naught, and
+there are T of them. Then the cross-products
+of the adjacent terms, they're going to be T
+minus one of those, W1 and W2, and
+then those things. Then T minus one of the W2, W1. I got it, if you will, two times the covariance, and I've written it like this. I don't know why, but instead of just two, it's because I've written this out so these guys
+could be vectors, in which case one would be
+the transpose of another. I should save it. Actually, when I do
+these calculations, I'm going to assume
+w is a scalar so I don't have
+to put transposes on things because I would forget half the
+time and that would just make this more confusing. You do this for
+all of these guys. Then notice you've got T
+and T and T and dot, dot, dot if you will, T. I've got a 1 over T out front. Part of this simplifies
+really easy. It's just all of the
+little T bits here cancel with this
+T, and I get this, the sum as J goes from T plus 1 to T minus 1
+times these Gamma Js. Then there was a minus 1 there, there's a minus 2
+there, dot dot dot, there's a minus T
+minus 1 there I guess, so I've got to keep
+track of that component. Now the key thing is
+if you look at this, this bit doesn't have
+a T in front of it. As T gets big, this just is going to behave like the spectrum. At frequency 0, it's
+going to be this one. This thing has a
+T in front of it, and as long as these
+guys don't go wacky, as long as the memory dies off sufficiently fast, that
+the covariances die out, you think about an AR model, they're dying out geometrically
+or exponentially, this term without the 1
+over T in front of it is going to be finite or bounded. I divide it by T, it's
+going to go away. This is the important
+component, and this is just little stuff that
+we're going to ignore. We can think about
+Omega, if you will, but the limit of
+this as T it's big. It's just the sum of all
+the autocovariances. From the first day, remember the spectrum.
+We had this formula. As I mentioned, stick
+in Omega is equal to 0, so the lowest
+frequency component. I get e to the 0, which is 1. I get really the same
+formula scale by 2 Pi. So this is the
+long-run variance. You can, of course,
+now immediately see the estimation problem. Whenever you're
+estimating something that requires you to have two times
+infinite amounts of data, or you need to estimate two time infinite
+number of things, and you've got a 150
+observations, you can't. Or it's very easy to construct examples in which any estimator you write down
+is going to be way wrong, as wrong as you
+can want it to be. Pointing out that G, this is really hard
+to estimate in certain circumstances. It
+is like here. We're done. That's that. Let's
+keep moving here. The first thing I'm
+going to do is we talked a little bit about what
+the spectrum was on Day 1. I guess I quickly went through what the spectrum is
+for an ARMA process. For an ARMA process, I wrote a little formula
+for what the spectrum is. The first kind of estimator
+that you might think about is G of W follows
+an ARMA process. I can deduce, calculate
+what its spectrum is. I can write out the
+spectrum in terms of the AR and MA coefficients. If I can do that, just take that
+thing, stick in 0, then I'm going to
+get the spectrum at frequency 0 for
+an ARMA process. It's just a function of Sigma Epsilon and the
+Theta's and the Phi's. I can go out and estimate Sigma Epsilon and the
+Theta's and the Phi's, stick those guys
+into the formula, and I got an estimator. So that's called a
+parametric estimator. Parametric because you estimated some parameters of
+the ARMA model. If you just looked
+at an AR model, it would be called an
+autoregressive spectral estimator. This is just jargon. If these were vectors,
+and you looked at a vector autoregression, that would be called a VAR
+spectral estimator, I guess. Here, associated
+with this problem, that would be called a VAR-HAC estimator, or HAC-VAR estimator,
+or something like that. HAC-VAR together is
+just that calculation. I guess that's what
+this slide says. So this slide says,
+suppose W is ARMA, and later we'll talk about
+suppose the W process can be approximated well
+by an ARMA process. The ARMA process has this form. Here's the little formula
+that I wrote down for the spectrum in Day 1. It seems like about a month ago, eight-and-a-half lectures ago. It feels about like
+eight-and-a-half weeks' worth of teaching ago. Anyway, never mind. At least, Jim and I get
+to walk around and talk. You guys have to sit there,
+and stay awake, man, stay focused. So what
+are we going to do now? We care about this
+guide frequency 0, so stick in Omega is equal to 0, e to the 0, zero is 1. So that says take these
+moving average polynomials and evaluate them at 1. Whenever you see an
+L in this formula, you stick in 1, and you
+get the formula for Omega. It's going to be
+Sigma Epsilon times 1 minus the sum of the moving
+average coefficients, quantity squared divided by 1 minus the sum of the
+AR coefficients, and I guess that traditionally
+would be called P. The AR order is different from the moving average order. The estimator just says stick in hats on things. Put
+hats on things. Go out and estimate an ARMA
+model and stick in hats. Now, if these estimates
+are consistent, continuous mapping theorem
+or Slutsky's theorem, I guess this guy is
+going to be consistent. We're done. We have a
+consistent estimator. VAR. Someone just said I
+had to mention VAR-HAC. I put this slide in which says VAR-HAC, and it's
+just the same thing. This is now a vector, these guys are now matrices, and then there's a
+transpose right there. This is 1 minus the sum
+of the AR coefficient squared inverse times
+1 minus the sum of the AR coefficient inverse, then that's the Sigma
+Epsilon, so same thing. So those are
+parametric estimators. When you think about
+parametric estimators, they're generally estimators
+that are constructed from parametric models that natural parametric models
+to use here are these linear finite order AR, or moving average, or
+some combination of them. We're going to see
+that these guys, in lots of circumstances, seem to have some
+very nice properties. Non-parametric estimators. A non-parametric estimator is, that's the guy you
+want to estimate. The natural thing to do, I guess, is to say that's just the jth
+autocovariance. I can just estimate that guy. You just estimate
+the autocovariance. That's the jth of those. You take that guy, you
+stick it in there. Then you say, I can't go to minus
+infinity and plus infinity, but I can go some of the way. You stick them in, and
+you go some of the way. You truncate this thing, and you stick in
+these estimators. Maybe we'll come back to this. Maybe you're going to say, I'm going to put some
+weights on those for reasons that will be clear
+in just a few minutes. These weights are like
+the Newey-West weights. These are non-parametric
+estimators. Let's talk about a
+couple of issues. Let's talk about some issues
+with these estimators. One thing is, this
+is a variance, and variances are nonnegative. It's nice if you have estimated variance as being nonnegative so you don't take
+the square root of a negative number
+because that's not good. It's nice if you can
+constrain the estimator, which is the function
+of the data, constrain that function
+to be nonnegative. We do that, of course, when we Stat 101, you write our estimator of
+Sigma squared is S squared, which is a function
+of a sum of squares. So that's never going
+to be negative. It's going to be
+useful if we can write our Omega hat as
+a sum of squares because then we
+have a constraint. We'll see that some of the
+natural estimators can't be written that way. So
+there's a problem. Then I guess we need
+something, like, how much memory are we going
+to allow in our estimator, in the AR models, or the
+moving average models? The way you think about memory, how much serial correlation
+you are allowing and how many lags
+you're sticking in? Is it an AR4, or an AR12, or you're throwing
+in an MA term, etc.? So we'll want to think
+about lag link selection in those models. In the nonparametric estimator, it's clear how big
+is m going to be. Where are you going to
+do this truncation. Then I guess also related, in the nonparametric estimator, what are these K weights? What are those all about, and what choices do you
+want to make there? So that's the kernel choice. So we'll want to
+talk about that. Then we'll talk about some robustness at the
+end to some things. So that's where we're going. The first one is this estimator, the true Omega, is positive semidefinite. It's a covariance matrix, so it's the estimator
+positive semidefinite. Here's a scalar.
+It's a scalar case. That just means
+it's nonnegative. If you think about our
+parametric estimator, it's a squared thing times a squared thing divided
+by a squared thing. This is as nice as can be. It's not an issue here. Of course, this thing is going to be positive semidefinite. This estimator isn't, and an easy way to think about this is just to think
+about the MA(1) case. Suppose your w's
+followed an MA(1), they really did follow
+an MA(1), and you knew that. So what
+would that mean? What's Omega? Omega is just going to have the variance in the first
+autocovariance in it. All the other guys are 0, and you know that. So then
+the natural estimator to use is just to estimate
+these three guys. Just stick them in. That would be the
+natural thing to do. Now, the problem is, of course, thinking about a
+moving average model with an MA(1) model, it so happens, of course, that the AR1 coefficient is less than or equal to the
+variance divided by two. You work that out. That's true, and that's going to
+be satisfied here. That guy is always
+going to be positive. So that's fine. But now, start adding some sampling
+error to these guys. You add some sampling
+error to these guys, and maybe this inequality is
+going to be violated. If this inequality is violated, boom, suddenly that guy
+turns out to be negative when that guy's positive. You got this
+embarrassing situation. You computed a variance,
+and it's negative, and you can't compute
+a t-statistic. Maybe you could do, anyway. This is an important problem in these non-parametric
+estimation. It was solved in this important and
+well-known paper by Newey and West in 1987. They said, if we choose these weights
+in just the right way, we can constrain this guy. This guy will be constrained
+to be nonnegative. They said, Here
+are some weights. This is called the
+Bartlett kernel. It turns out to be what guys do in spectral
+estimation. They had been using to make a spectrum
+is just the variance. To make estimated
+spectra nonnegative. So they said, let's use
+the same thing here, because after all, we're
+just estimating a spectrum, so two contributions
+to this paper. One is you can do this
+to make it positive. Time series guys knew that. These guys looked
+this up in a book. But then showing
+importantly that this guy is still going to give you a consistent estimator is a nontrivial calculation, and that is, technically,
+the hard part of this paper. Practically, the useful part of this paper is
+this guy delivers a consistent estimator
+in ways that it will be clear in a second, and it constraints this guy
+to be positive semidefinite. This was like 1987. Some of us were alive in
+1987, and this was big news. You probably remember this. This was really big news. You knew the guys. I thought I would list some of the other
+things that happened in 1987 that were reported. This just so happens
+they were reported on the front page of The
+Wall Street Journal. The Dow broke 2000. Texaco, remember Texaco,
+they're still around, but anyway, they
+filed for bankruptcy. Gary Hart was a sleaze. Gary Hart paid for
+being a sleaze. Some guy who is not on the Supreme Court is
+apparently a drug addict. Cal Ripken,. consecutive innings is broke. There was Black Monday too. But of course, you remember the most important thing
+reported on the front page of The Wall Street Journal
+was that Newey and West had solved this problem. If you look at the
+Wall Street Journal, July 21st, oh, this is 1986. I completely messed
+up this joke. It's because the guys at
+The Wall Street Journal, they're looking for scoops, so they're not going to wait for econometric to come out. They're going to read the
+technical working paper. There's discussion about the NBER technical
+working paper. This technical working
+paper comes out, so it's in this guy's front page of The Wall Street Journal 1986. Damn, I got to fix that. Does anyone remember
+this article? I remembered this and spent
+actually a long time, a couple of weeks ago, trying to find this particular article. It was one of these
+columns over to the right. It's this guy talking
+about all that junky gets, and he can never keep up on
+all his reading because he gets all this junky stuff. He says, "In particular, the NBER just sent me
+something called a simple, positive semidefinite
+heteroskedasticity, and we have our autocorrelation consistent covariant matrix. What am I going
+to do with that?" I remembered this and thinking, God, that's nasty. We started joking, but this was a really
+important paper. In the scheme of things, this was more important
+than Gary Hart. Who cares? Anyway, I got to fix
+this slide before this. Again, just a reminder; Newey-West are considering
+estimators of this form with this triangle kernel. What I want to do now
+is spend a couple of minutes talking about, it's not obvious if
+you look at this, why this makes this positive. Setting K is equal
+to flat doesn't. It's useful to do a calculation or to transform this so that you can see that this is just
+the sum of squares. It's a sum of some squares
+that are pretty nice. They are interesting squares, squares that are going to be
+hanging around for a while, squares of some objects. There are natural ways to think about this
+long-run covariance matrix. So let's do that. Let's start. What's our data? Our
+data are these w's. So we've got w_1 through
+w_T. Those are our data. Let's put that all in
+as a big vector, W. W has mean 0 and some
+covariance matrix. Remember this guy is
+covariant stationary, so the covariance matrix has a very special structure for this w. I'll come back
+to that in just a second. If I've got some w
+with some covariance, Sigma W, W. If I take W, I multiply it times
+T by T matrix H, I get U, and U is going to have some covariance matrix Sigma U, U, which is just this. I did it right. There are some ways that one could
+think about choosing the rows of H's so that the resulting covariance
+matrix of U is diagonal. So you can diagonalize
+this covariance matrix. We know there are lots
+of ways to do that. What we're going to do here is choose an H so
+that D is diagonal, and what's pretty nice about this problem is
+that this Sigma W, W matrix is special. The diagonal
+elements are all the same because it's
+covariant stationary. The first off-diagonal
+elements are all the same, and those are the transposers
+just below the diagonal. So this matrix has a
+lot of structure in it. It turns out that the H that you can diagonalize
+this matrix with, there's one H that works for all w's with this structure, or at least approximately works with all w's
+in the structure. That's going to be these
+Fourier coefficients. I'll show you them
+in just a second. The important thing about this, if you chose this particular H, is that the u's are really nice. Remember these u's have a
+diagonal covariance matrix, so these u's are all going to be uncorrelated with one another. If these were Gaussian, these u's would be
+independent of one another. What's the first one? They all have mean zero. The first one has mean zero. What's its variance? Its variance turns out to be the spectrum at frequency 0. That's just what we want. Now, what about the
+second and the third? These guys are going to be
+independent of one another, uncorrelated with one
+another, and everything else. They're going to
+have a variance, which is the spectrum, but evaluated not at 0 but at 2 Pi over T times 1. Now, if T is big, 1 times 2 Pi over
+T is really small, so this number is going
+to be close to zero. The variance of these
+guys is going to be pretty much like what we want. This guy is going to
+have U_4 and U_5; they're going to be uncorrelated
+with everything else, and they're going
+to have variance 2 Pi over T times 2. Again, if T is big, 4 Pi over T is pretty
+close to zero. So these guys are
+going to be useful. Then you're just
+going to keep going. I've done this for an odd
+number of observations, so I can use integers
+here in a nice way. You get down here to the bottom to the last of these guys. This is now asset T minus 1 divided
+by 2 times 2 Pi, so this is, I don't know, S at Pi or something
+as T gets big. That's not close to zero at all. So these guys aren't very
+important, but these guys are. Yeah. MALE_1: [inaudible] Mark Watson: I'll
+show you in a second. I could have used the
+cosine transform or some other transform in which
+I wouldn't have done that. I'll show you, and
+it'll be familiar. Now, here's some algebra that
+I'm not going to show you. This class of estimators, remember this guy, Gamma hat is a
+function of the w's. It's these autocovariances. If you mess around
+and do some algebra, I'll show you a little of the
+algebra on the next page, it turns out you can
+write this like this. This is going to be the
+periodogram ordinance. It's the modulus of
+this complex guy, so I want the sine part
+and the cosine part, so that's why I have two. That's the sine guy.
+That's the cosine guy. You can do this. Now, these guys are called
+periodogram ordinates. I'll show you some
+algebra in just a second, which tells you what
+those guys are. But now it's pretty easy
+to see what constraints you need on these K's to
+make this guy positive. These little k's
+are functions of the big K's in this H
+matrix, but that's fixed. I guess I need big K's that give rise to little k's that are
+positive or nonnegative. If I have any of these
+little k's are negative, then I got a negative times
+a positive, and I can end up with a negative estimator. So we can analyze
+these estimators by deriving the little
+k's from the big K's. These are Fourier
+transforms of these, so we could do that an easy
+way, and we could just look, you've proposed some big
+K's, I Fourier transform. I find the little k's, and
+I look at them, and I go, are any of them negative? If any are negative, I say, go back and try again. That's
+what we're going to do. Here's some algebra which
+just says what these u's are. I'm not going to
+spend time on this, but what's nice about this is
+this turns out to give you formulas that look almost identical to the formulas that we talked about
+the first day, relating spectra to
+autocovariances, autocovariances to spectra, [inaudible] little increments
+z to the observed data. These c's are transformations
+of the observed data. So these are like
+z's, if you will, in the [inaudible]
+representation. My u's are just the
+modulus of those guys, and those can be written as the Fourier transform of
+the sample autocovariances. Now, what's nice about
+this is, going back here, remember, the spectrum is like the sum of all of the Gammas transformed
+by the cosines. The true spectrum is
+the sum T, it goes from minus infinity to infinity, of true autocovariance
+times cosine. This puts in sample versions
+of those in truncates. So this is like a
+natural estimator of the spectrum at
+frequency Omega j. Let's go back here. These guys are both
+independent of one another. They have mean zero. So one way to estimate
+the spectrum, right here is to square that, that has expected value there square that, that has
+expected value there. Average those two things. So that's a natural
+estimator of the spectrum. Now, of course, it wouldn't
+be a very good estimator because it would be
+an estimator based on two observations, so it wouldn't be consistent, but it would be unbiased, and I guess if I wanted to construct an estimate
+of the spectrum at any other frequency, I could do the same thing. I'd have an unbiased estimator
+at that particular point, but it would be based
+on two observations so it would be highly variable. The periodogram, which is this, is a nice unbiased estimator of the spectrum, a
+natural estimator. But it's not very good
+because it's highly variable because it's based
+on just two observations. What do I want to say
+now? Now let's do this. Remember I told you
+the Newey-West thing, path-breaking because it implied these
+guys are positive. I guess what I should do
+is show you the little k's that come out of
+the Newey-West thing. Jargon, I'm sorry. I got ahead of myself.
+I got to rewind. Forget what I just said,
+I'll say it again. What does this slide say? I don't know, like
+I have to read it. You know what I wanted to do, I tried this yesterday. I wanted to see how far away I could get and still be able to change. You see
+I can do it there. I think you can do it from
+the back of the room, but the laser pointer
+quits, it moves out. Anyway, let me get back to work. This should be a zero
+right here, that's a typo. That should be a
+zero because that's the zeroth guy I think. No, that's right. By
+the way, I define this, that's right. It's
+a [inaudible] , I thought. So that is a one. Now remember what we had, let's go back here. This guy squared, u_1 squared is an
+estimate of what I want. But it's based on
+only one observation, so it's not going
+to be very good. If I square these guys
+and average them, it would be an estimate of this. This is not what I want, but it's close to what I want because, if the
+spectrum is smooth, the spectrum right around zero is going to look like
+this spectrum at zero. So these guys squared are an estimate of
+almost what I want. These guys right here, u_4 and u_5 are also an estimate
+of not what I want, but what I want. They're a little further
+from what I want than this guy, which is a little
+further from the truth. So as I go down here, these guys become
+more and more biased, become less and less good. So what do I want? I'm interested in estimating the spectrum frequency at zero. So it better be the
+case that when I think about these
+different estimators, as T gets big, I need all of this weight
+to concentrate around the spectrum at frequency 0 so that this bias goes away. Now there's some jargon here. You see this written
+down in papers and computer manuals,
+and different words are used for the same thing, and it's confusing sometimes. I've just listed some
+of these kernels. Sometimes kernels
+mean capital K. Sometimes kernels mean little
+k. When you see kernel, it depends on the
+context what it means. So that's bad, unless you're really
+into the context. These k things are sometimes
+called lag weights because their weight is on
+lagged autocovariances. That makes sense. For example, the RATS manual
+cause these K-weights, it says the word that you say, lwindow equals Newey-West, lwindow, lag window. That's why the
+RATS then calls it lwindow, which is natural. These little k weights are sometimes called
+spectral window. So that's nice. this
+is like [inaudible] This is one standard
+bit of jargon, so I like this lag
+window, spectral window. Kernels are confusing
+because it can mean either. But I'm going to
+use kernels too, when I talk about these. So now here's this kernel. This was this kernel which says, keep the first three or the
+first five autocovariances in your estimator and leave everything else out and
+weigh these all the same. This was like our MA(1) thing where we weighted
+things equally. If you compute, I guess, this
+was for m is equal to 12. You keep the first 12, and your weigh
+them all the same, so those are your
+capital K weights. If you compute the little
+k weights from those, you can see the key things that
+go below zero. These periodogram
+ordinates that are down here are going to
+have negative weights associated with them. If they turn out to be big, square things, you're going
+to have a negative estimate. Right here is the
+Newey-West thing, and lo and behold,
+the Newey-West thing gives you positive
+little k weights, which is why it is so famous. Next, so now, let's
+go. What's next? Implementing these estimators. We had two estimators
+we talked about. We've had parametric estimators, I'll call those AR estimators or VAR estimators because that's generally
+how they're done. I guess if you really thought
+something was an MA(1), you should estimate an MA(1)
+and use that, not an AR, but AR's are should typically easy to use because they're
+trivial to estimate. So you might want to use those. There are some choices. How big should lag length be? There's some theory
+which says, basically, if it gets long enough
+at the right rate, everything is great, that is, you get a consistent estimator just like Newey-West. So that's this famous
+paper by Berk. That really doesn't give
+you much guidance about how many lags you
+should stick in in your autoregression, probably something like AIC turns out to be not a bad idea. BIC, probably, for reasons I'm going to talk
+about in a little bit, is probably a bad idea because it probably
+chooses too few lags. The general rule
+that I guess that I want you to come
+away with this is, if you're used to using
+an AR4 to do AR stuff, don't use an AR4 here. Use an AR6. Stick in a few more lags for reasons that will be
+clear in a little bit. Put in a few more, and I'll show you why. There's a paper by
+Serena and Pierre about lag links in ADF test. Some of you may know that. This is a similar issue
+because part of what they're doing is
+estimating a spectrum of frequency 0 there, but there's also some bias that's going on in
+those situations, so it's slightly
+different. What you have here is the standard. If you put in few
+lags like you do BIC, you've estimated
+fewer parameters so you've got smaller variance, but the chance of omitted
+variable bias is high, you've left stuff out, so you get a larger bias. Longer lags, smaller
+bias, larger variance, so you might want to think about a mean squared
+error trade-off. I'll argue in a little
+bit that, probably, mean squared error isn't the right
+way to think about this. Bias turns out to be more important than mean
+squared error would suggest for some questions
+you might be interested in. So practical advice,
+choose lags a little longer and rationale. Anyway, I'll talk
+about it later. How should m be chosen? I'm going to talk
+about two things. I'm going to talk about, in these nonparametric estimators, what kernel to use? Do you use Newey-West? Do you use this
+truncated thing? No. You don't use a truncated thing because you get
+negative numbers. No one uses that. People use K weights
+that give them positive things,
+a bunch of them. Which do you use? Do you use Bartlett? Do you use quadratic spectral? Do you use Parson? Do
+you use Tukey-Hanning or Tukey-Hamming, or those things? I'll talk a little
+bit about that. How many lags do you stick in? Where do you
+truncate this thing? Let me talk about this, and let me just
+review a couple of results that are important, and again, that many of
+you have probably seen, which is an important paper
+by Don Andrews in 1991, in which he considers
+what kernel you should use and what
+m you should use, and another important
+paper by Whitney and Ken, in which they talk about,
+for the Bartlett kernel, what m should you use? Both of these papers talk
+about mean squared error. You want to get the most precise in a mean squared error
+estimate of Omega. Now, that might not be
+really what you want to do because, at the end of the day, what are you going to
+use Omega hat for? Maybe you're going to use
+it as the denominator, or the square root of
+it as the denominator in a t-statistic, and you're going to construct confidence intervals
+or something. So what you care about if
+you're using it for that is, when I stick it into the
+confidence interval formula, do I get confidence intervals
+with the right coverage? Not is this a good estimator in a
+mean squared error sense. If you're using this as an optimal weighting
+matrix in GMM, that's a different thing. Then that might be
+closer to "Gee, I want a good estimate of
+that weighting matrix." So that might be closer
+to a mean squared thing. Maybe that's a way
+to think about this. But let's just keep going. These guys are
+interested in how do I choose m to minimize
+mean squared error? Here's the formula
+for the estimator. We just talked about,
+if you make m bigger, you're averaging more points. Just go back to this. If you average more
+of these guys, you reduce variance
+because you average more independent
+guys. That's good. But if you've averaged
+a bunch of these guys, you've averaged a bunch
+of these guys that aren't particularly useful or biased, so you
+get a big bias. So there's this bias-variance
+trade-off here. Now, the variance
+is straightforward. You average more guys, you get lower variance. The bias is a little bit subtle. Suppose this process
+was white noise. If it was white noise, the spectrum would be flat. All of these guys would
+have the same variance, and they'd all have the
+variance that you want. In that case, there's no bias. You want to use
+all of these guys. You just want to
+minimize variance. The bias is going to depend
+on how flat this thing is. How close are these guys to the thing that you
+want to estimate? Is the spectrum real
+flat at the origin, or is it real curved? So that's what you need to know. To figure out what
+the lag length is, you want to know how
+curved the spectrum is, and to know that, I
+guess you need to know what its processes or something. That's what these papers
+carefully work out. Here, let me show you
+what happens as you change m in the
+Newey-West thing. Here's the Newey-West thing. It's the tent-shaped thing. The lag window is tent-shaped. Let's look at the
+spectral window. These are the little k's. Let's ask what
+happens as I increase m. Here m is equal to 5. What am I doing here? I want to estimate the
+spectrum at frequency 0. I want to put lots of weight on the guys
+around frequency 0. But I'm going to put some
+weight on these guys as well because I want
+to reduce variance. This guy is going to
+work pretty well if the spectrum is pretty
+flat around here because then putting
+substantial weight on these guys out here isn't
+killing the m variance. Here's m is equal to 10, include more of these
+autocovariances. What happens is these k weights
+get pushed towards zero, so when is this
+going to make sense? This is going to make sense. I'm a little bit more worried about the spectrum
+at frequency 0. I don't think it's quite as flat as I thought it was here. It's got more curve to it. I'm more worried about bias. So I'm not going to put
+very much weight on these guys out here because
+they're not what I want. I'm really concerned about bias. Here is m is equal to 20. It's being squished more. Here is m is equal to 50. This is where T is equal to 250. Now, here we'll come back
+to this guy later on. This is an example of
+something where you're putting lots of weight on just a few u's close to zero. That makes a lot of sense if you've got a lot
+of curvature there. So you're just going to include
+a couple of other guys. This guy is going to
+have big variance. But it's going to be very robust because it's not including these other frequencies
+which may be badly biased, which may not be close to what it is you want to estimate. So key thing that I want
+you to remember here is, as m gets big, you're putting more
+weight on just a fewer of these u's of these
+periodogram ordinates. Here are the numbers for
+the mean squared error minimizing values of m. They depend on how
+curved the spectrum is. These calculations are
+done for a W process, which is an AR1. As the AR coefficient goes up, the spectrum gets more steep right around frequency 0, so it's more curved. There's more bias. You want to use a bigger m, and put more weight
+on those u's. This is the formula that's worked out in
+the Andrews paper, and this is for the
+Bartlett kernel. It's also worked out in
+the Newey-West 94 paper. Here's the formula for the
+best m, you should use. Minimize mean squared
+error of Omega hat. You can see it increases with T because, as T gets larger, you get more and more
+precise estimates of the autocovariances so you can afford to use more of them, and it depends on
+the AR coefficient because as the AR
+coefficient goes up, the spectrum becomes
+more curved, and you want to use
+fewer of the u's. Here's the little formula. If T is equal to 400, if you've got white noise, set n equal to zero. Use everything. That just says, Lambda zero is Lambda
+zero. Just go with it. If you got AR coefficient
+of 0.25, you should use 5. There's a good
+undergraduate textbook that suggests this, and I think that probably
+isn't the best advice. But anyway, be that as it may. You can see here, of course, as this becomes more curved, more persistent, you want to use more lags. But even here, the number
+of lags isn't really big. It's only 12 for 400. That's because this
+is a means-minimizing mean squared error. You really care a lot
+about variance in a mean square error thing.
+We'll come back to that. Now I want to say, in
+doing these calculations, how important is it
+that you get m right, that you choose a good m? What if you mess
+up on m, and how important is it that you
+use the best kernel? These are the
+Newey-West kernels. But again, in these K weights, you can imagine other
+weighting schemes like flat and comes down. That's nonnegative.
+Inverse Fourier transform, that would
+give you the big K's. You could just start living down here in the periodogram world, then it's a nap, then it's just
+kernel regression. There are lots of things
+you could do down here. Both of these things
+have been addressed. Here's a picture
+from Don's paper. This shows the lag window, the capital K's for some
+different kernel choices. So here's truncated.
+Keep the first, forget about the bottom here. Just think about
+this as going from 0 to 25 or something with lags. So this is the truncated guy. It says keep the first guys and set everything else to zero. Here's the Bartlett kernel. That's Newey-West. It's a line. Then here are some other things
+that had been suggested. Here is the quadratic spectral kernel, which if you
+read Don's paper, it turns out to be
+the optimal kernel to use to minimize
+mean squared error. Here is Tukey-Hanning. Here is Parson. Now, don't steer
+too hard at this. I guess the only thing that
+I learned from this is that this guy right here looks a lot different
+than these guys. These guys say, "You know," and this guy says
+something different. Practically, all of these guys, for the kinds of data that I
+look at, it doesn't matter. It matters if I write down some. It doesn't matter. David. David: If you did the parametric kernel, what will it look like? Mark Watson: It's going to
+depend on obviously the values, but for a particular
+AR, I don't know that. It's going to be complicated. It's different because
+it's not really waiting. Let's go back here
+to what this guy is. What this thing says
+is, "I'm going to take a weighted average of
+these autocovariances," where these autocovariances are simple method of moments
+estimators of those. In a parametric thing, what I do is I compute the parameters by these squares, or maximum likelihood,
+or something. They're going to be a function of sub-sufficient statistics, which are going to
+look like these guys. Just a couple of them, and then I'm going to
+apply different formulas, so writing it like this
+would be very hard. Here, my bottom line is, I think, the kernel choice, again, for the things
+that I would look at. I'm just not worried about it, so pushing Newey-West button just doesn't bother me at all, and the Monte Carlo
+work that I've seen supports that. I'll
+show you a little bit. So that's good news. That says, don't worry, you don't have to look up what these quadratic
+spectral weights are, or should I be using
+Tukey-Hanning or Tukey-Hamming, one has an n and one has an m, and one of them is
+a guy, and one of them is something on a
+carpenter's tool or something. I don't know. But you don't have to do
+with any of that stuff. You just, this Newey-West
+thing seems to be okay. This Kernel choice matters. Yes, in the sense that you want positive
+semidefinite things. You want things to
+have that shape. Does lag length matter, does m matter, how many lags you put in? That matters a lot. That's where the action is here. So just to show you that, here, there have been bunches
+of Monte Carlo's down in the literature, and you should read that literature
+to look at the fine details. I think many of
+the basic lessons from some pretty
+complicated designs you can see in Monte
+Carlo designs can be seen in something that's
+really pretty simple. Let's just take, you're interested in
+estimating a mean. That's it. So we're back to our regression. That just
+has a constant term in it. You've got an error term
+which follows an AR_1, so that's going to be w here because you're just
+estimating a mean. Remember w is x times
+regression error. The x here is one. So
+that follows an AR_1. So you're trying to
+estimate a mean with 250 observations. Then
+what are you going to do? You're going to construct a 90 percent
+confidence interval, or equivalently, you're gonna do a two-sided 10 percent test. You get to reject the null. There's a certain value of Beta. It lies in the
+confidence interval, if the t-statistic is
+bigger than 1.64. That's your rule.
+Or, you're going to not include that in the
+confidence interval if it's outside the
+Beta hat plus or minus 1.64 times square
+root of Omega hat. That's your standard error. So let's do this.
+Let's construct or estimate the standard error using a variety of techniques, a variety of things,
+and then let's ask, if you did that, if you used that rule, would you reject 10
+percent of the time, which you should, if this was exactly right? Or more than 10
+percent of the time. Are you overrejecting? Is your confidence interval too short? It should be longer. Are you underrejecting? Is the confidence interval
+too big, too conservative? This is what I'm going
+to do. I'm going to use Newey-West, and I'm going to use Newey-West where I stick in what Don says I should
+stick in as the lag length. Four. Again, Don's
+problem was finding the minimum mean
+squared error estimate of Omega, not controlling size. That was not the
+problem he solved. So I'm going to go back
+and use this formula. I know what Phi is, so I'm just going to
+stick in that Phi with this formula and figure
+out what m should be. Now, of course, in practice, you don't know Phi, so what would you do? In a situation like this, you might estimate an
+AR on the residuals, get Phi hat, stick Phi hat into this
+thing, and figure out what you would estimate
+the optimal m to be. So that would be some
+plug-in estimator of m star. Then you might say, heavens to Betsy, if I estimate an AR_1 model, why don't I just use the parametric estimator
+from the AR_1? I just estimated an
+AR_1, it's an AR_. You can view it.
+You just do that. If I took that
+parametric estimator, it's stuck in the true value of Phi, of course, I'd
+get the right answer, but now I'm going to
+stick in Phi hat. Then you can be even
+more sophisticated. You could say, maybe it's not an AR_1. So this is what I'm going to do. The most sophisticated
+thing to do is to say, what I'm going to do is
+I'm going to estimate an AR_1, and then
+I'm going to take that estimated AR coefficient,
+and I'm going to filter the data so that I end
+up with the Epsilons. Now the Epsilons are
+like white noise, so they have a flat spectrum. So I'm going to do
+Newey-West kinds of stuff on this filtered series,
+like these Epsilons, and that's nice because I'd gotten rid of
+a lot of the bias. So I'll estimate the
+spectrum from that, and then I'll use my little
+filtering formula, to say, what's the
+spectrum for the original w's all in the jargon
+[inaudible] re-color? So the first step is
+called pre-whitening, making something look like white noise, and then at
+the end, you re-color. You use the little
+filtering formulas that we talked about in Day 1. Those are the things
+I'm going to do here. This is, stick it in using
+the true value of Phi, so this isn't feasible. Here, I'm going to stick in two times m star just for reasons that will
+be clear in a minute. This sticks in m star hat,
+the plug-in estimator. This says, I'm just going to estimate. If I estimate an AR_1 anyway, I'm just going to use it. So this is the
+parametric estimator, and this is the
+sophisticated estimator where I estimate the AR_1, I pre-whiten, that's what
+PW is. I pre-whiten. I then use Newey-West using this optimal m. I then recolor. Now, what do you see? If there's not very much
+serial correlation, all of these things work fine. The optimal m star says
+include everything. Everything better work. It better work, and it does. Isn't that nice? Two times
+zero is apparently zero. So that works as well. White noise, you
+tend to estimate Phi to be really small, so m star hat turns
+out to be zero a lot. So that works pretty well. You have this AR thing where you estimated the AR
+coefficient, which is zero. You don't always get zero, so you messed up a little bit, But in the scheme
+I'm messing up, I can live with
+that. I don't know. It's not rocket science, a 10 percent error anyway. If you're shooting at the moon, the distance between that
+and that might be a big deal but not in what we're doing. You're shooting anyway because we shoot like this far ahead. What do you see here? You see, as this guy gets
+more serially correlated what do you see? You see that this
+size distortion gets bigger. By the time Phi, as, let's say 0.95, there's lots of serial
+correlation in this. The spectrum really has a
+lot of curvature in it. This estimator, it's a minimum mean
+square error estimator, but it's still got a big bias and the big bias leads
+to overrejection, leads to underrejection
+of the null. You have a size of 46 percent, you reject the null
+far too often. Confidence intervals
+are too short, then you do a little bit
+better, and not surprisingly, if you put in more lags. It's still life isn't great, but the parametric estimator, we know it works
+pretty well down to, I don't know, 0.8, 0.9. That's not a major sin. It starts with having
+a problem here. Why? You estimate
+an AR coefficient when the true AR
+coefficient is 0.95. You get downward bias. So you're sticking into
+the downward bias thing. This, as it turns out, always works like
+this. Why is that? You take the data, you pre-whiten it, and then you give it to some
+Newey-West thing. You say, tell me how many lags I should put in, and it says, this looks like
+white noise to me. If it looks like white noise, it says stick in zero. So these two columns are, if you'll look at lots of
+these Monte Carlo things, these columns are often
+very similar because the pre-whitening does
+nearly everything. The lesson here is these things tend to
+put in too few lags. MALE_2: The AR [inaudible] Mark Watson: Yeah,
+exactly. This is cheating, so there are more
+complicated designs where you really want to start out with something complicated, and I approximated by this AR_1, so that's not going to be right and blah, blah, blah. Absolutely. This isn't the definitive Monte
+Carlo on this. MALE_3: You did
+point AR [inaudible] Mark Watson: I don't know
+the answer. My reading of the Monte Carlo literature, and you may know
+more about this, people may know more
+about this than I do, is that you tend
+to get this thing. This paper has some. I
+thought it had more. We read it last night. They've got a couple of papers, most of which are unpublished, so this is the only
+published one, which is in some obscure book. But it's on [inaudible] website, so you can download
+it and look at it. Maybe some of their
+other papers had more, I remember seeing many more Monte-Carlos in their work, which I thought has this
+extra basic flavor. There's a nice paper in
+Econometrica this year, and in another follow-up paper
+by Sun and Phillips, that explains why
+this is going on, and the argument in a
+nutshell is pretty. I think you can see where the argument comes from which is just a couple of lines here. They're thinking about how
+should you choose bandwidths? How should you choose m, not to minimize the mean-square of your estimated variance but rather to think about what the size distortion
+would be in the test? What they do is say, here's the cheap version. of this long beautiful
+technical paper. Don't ever tell him I did this. Let's take this as a heuristic. You're allowed to say that. Heuristic is this, which means it's
+chock-full of errors, but hopefully has
+some insight in it. Z is normal, 0 Sigma squared, easiest
+model in the world. You got a normal, and you
+don't know Sigma squared, so you stick in
+Sigma hat squared. That's our problem. Let's
+figure out. So this would be, if I put it in the true
+Sigma squared here, this would be like a
+standard normal square. This has to be a chi-square. I want to do chi-square
+like inference, but I'm putting in Sigma hat. What's the probability,
+if you will, Wald statistic is less than c? That's just rewriting. That's the expected value
+of this indicator function. I'll just call it the
+expected value of g. Now, let's do a little expansion. These guys are going to use
+an Edgeworth expansion. I'll just mumble. I'll say Taylor
+series or something. Sigma hat squared is
+equal to the true Sigma squared. Then what do you get? If I just said I can do this, which I can't, but if I just said I could, what would I get? This guy evaluated
+at Sigma squared, that's a chi-squared, and then I get the first term
+in my expansion, which would be the
+expected value of Sigma hat squared minus
+Sigma squared times the first derivative plus
+one-half the expected value of this guy squared times
+the second derivative. What's the mean
+squared error do? Mean squared error says, I'm really concerned about this. But what do I want to do here? It's not only this that I
+should be worried about. I should be worried
+about this term as well. I want to make this small, I want to make both
+of these guys small because I'm approximating
+this guy with this guy, so I'm worried about
+both of these guys. So I really do care
+about this bias term. This bias term is important. So I got to think about
+the relative magnitude of this g prime and
+g double-prime. They both turn out to be
+important, as it turns out, if you crank through
+what's going on here, so this bias term turns
+out to be important. So bias is more important
+for these calculations than would be suggested by just doing mean squared error stuff. So this says you
+want m to be bigger than would be suggested by the standard mean
+square formula. So you see making
+m bigger helps. It doesn't help a
+lot, but it helps. Now there's some really great interesting work in
+a series of papers. I'm going to call
+them KVB papers, in which one interpretation
+of what these folks do, is just to say, if
+m should be big, let's just make it big. Let's just do it, man. How big can m be? How big can you make it? We'll set it equal
+to the sample size? Just include everything. Just do it now. Now it's going to
+be important for some calculations we
+would do in a minute. Now I want to be clear, I'm putting w hat
+in here and not w. I want to be clear about that because the first time
+I wrote these slides, I put in w, and I didn't get the right answer,
+and I kept getting stuck. It's because you
+really need the w hat. W hat's the right
+thing to use because, for everything I've said before, w hat doesn't matter. For this, it does. What's shown is
+this Bartlett thing with T is equal to m. You can do some algebra,
+and as it turns out, you can write this
+guy like this. Now, why do you care about that? Not easy, but one can figure out in a pretty straightforward way what the limiting properties
+of this thing are, using these empirical
+process methods that we talked about in Day 2. This is just like
+a Wiener process. I got w hats instead of w's where I added up squared. This is like integration, and there's this magic too here, which again I left out and my first slide, which
+was a major sin. I'm going to go to
+the next page now. Blah, blah, blah. Here we go. This says, think of
+this Newey-West guy with T equals m. How
+does that guy behave? How would a consistent
+estimator behave? A consistent
+estimator down there, Omega hat, converges to Omega. Now, what do I write? Omega hat converges to Omega
+times a random variable. This estimator is not
+going to be consistent. Now, let's go back,
+do I have it? This is the Bartlett kernel
+where m is equal to 50. These guys are using
+m is equal to 250. What's the little k way it's going to look like for
+m is equal to 250? They're going to be
+putting a lot of weight on just the first couple
+of periodogram ordinates. They've got a very small
+sample that they're using to estimate Omega. Of course, it's not
+going be consistent, it's just based on
+a few observations. Now, it's going to
+be really robust because it's not used in any of this information down here, which is good information, if the spectrum is really flat. But it's really killer
+bad information, biased information, if the
+spectrum is really curved. So this is going to be a
+really robust estimator. It's only using the information
+that they're sure of that's very close to the origin, and the cost of that is that
+you don't get consistency. You get some
+sampling uncertainty that is always going to
+be there in Omega hat, just as it is in
+the t-statistic, in the normal case, where we're constructing
+a confidence interval and we have a sample of Size 6 and s squared when you think about s squared in
+the denominator. Instead of using 1.64
+as our critical value, as we would in a z thing for a 90 percent or 10
+percent tax rate, we use the t thing with six degrees of
+freedom or something. That's what this is. Here's the critical values for their T-test, T-test-like thing. Instead of using a five
+percent test, you'd use 1.96. If this was a consistent
+estimator, if it was normal, these guys are going to use 3.7. Where's the 3.7 coming from? You're using s squared in the denominator instead
+of Sigma squared, and it's the right
+way to think about this problem if you
+want to be really robust right to curvature of
+the spectrum around zero. These are the t critical
+values. You can look at the f critical values there
+in the original KVB paper, but the way I've
+written it here, you have to take those
+and divide it by two. That's another mistake I made
+at one point in my life. It's because, in the
+original KVB paper, they propose that thing
+and then in a later paper, they said it's the same as this thing but with a
+two in front of it. I'm almost out of
+[inaudible] . Here are some like power staff
+for their method, in the normal Stat 101, in the normal case, knowing Sigma squared is not
+better than knowing Sigma squared, and so if you
+knew Sigma squared, you should use Sigma squared
+instead of s squared, and by using s squared, it costs you a little bit, and that's what this says. This is what it costs to use this robust estimator
+in terms of power. More Monte-Carlo's, I'm not
+going to talk about that. Here are some advantages and disadvantages. I'm going
+to let you read these. These are pretty
+straightforward, what I talked about already. I've got two minutes left. I just want to talk about one more thing which
+are some cousins of this. This work, this KVB
+work is related and inspired lots of other
+work that has been done where people are constructing estimated
+covariance matrix, which turned out to, the authors would arguably reflect the
+underlying uncertainty in the estimate of the variance. That is, that recognized that s squared isn't
+equal to Sigma squared and try and incorporate
+that in the inference. All papers that do that now say this is analogous to KVB. One paper is by my
+colleague, Rick Mueller. It's a great paper. It talks
+about robustness issues. His point that he's made
+in several papers is this. Here's the calculation. He says, look, you're trying to
+estimate a low-frequency, long-run thing, spectrum at frequency
+0 or something. That's long-run
+variability in the data. How much information do you
+have about the long run? A little calculation that might help one think
+about that is, let's define long run. We have to be
+specific with that. Let's define long run as variability in the data with a period which
+is greater than, I don't know, p.
+Choose p, six years. How many periodograms
+do you have, of course, with
+frequencies whose periods are bigger than six years? We'll do the calculation,
+and you get the usual thing. If I've got 60 years
+worth of data, and looking at variation
+over six years, how many independent sources
+of information do I have? 60 divided by 6 which is 10. So you really have 10
+observations that you're using to figure out that
+low-frequency variability, [inaudible] would argue, you wouldn't want
+to look at a bunch of algebra page and say, this Newey-West told me this is consistent, so
+10 must mean infinity, so I can ignore sampling
+uncertainty in this thing. He would say no, you want to recognize that you only have 10, so include that when
+you're doing inference, and one could do that
+in the KVB way or in other ways that suggest it here. Related to this is, it doesn't look the same, but it's similar is a
+paper by Christian Hansen. It's not doing time
+series analysis as this is a panel data problem, and what Christian
+talks about is, suppose you're doing
+clustered standard errors in a panel data situation,
+and in one dimension, let's say the T dimension you've got a large number
+of observations on one person over time, so you
+want to cluster on that, but you've got a small number
+of people. N is small. What he shows is, if you use the standard clustered errors
+coming out of panel data, that you get the same thing. If you do inference, you should account
+for the fact that you have a small
+number of individuals, and it shows that you get
+some nice limiting results. You get t-statistics
+being distributed. T, with degrees of freedom equal to n or n minus 1, I think. F statistics have a
+similar distribution appropriately squared there,
+Hotelling T-square things. There's some other work that I, unfortunately, don't
+have time to talk about. Let me go to the bottom
+line here of this lecture. In these worlds where you have moderate
+serial correlation, moderate memory, AR_1's with coefficients
+up to 0.7 or 0.8, that memory, that
+curvature in the spectrum, my reading of the literature is that these
+parametric estimator seem to work pretty well. So doing VAR, taking these w's and estimating
+a VAR model and then computing the
+implied Omega, it seems to be a
+pretty good way to work in many applications. You're using these for
+forecasting assessment. Then you have a theory which
+says the errors should be MA(3)'s or a certain MA process, and then it's very clear
+what you want to do. You want to go and estimate
+the MA process and use that. Why do one of these HAC or do one of these
+non-parametric things when you know something's
+in MA? Just do it. You need to ask yourself why
+you're estimating Omega. If you're estimating
+it for inference, you probably don't care about minimum mean
+squared error estimates. You probably care about size, and then you want to
+include more lags, or you want to do a KVB or you want to use other
+robust estimators. If you're using it for
+optimal waiting and GMM, that's a different problem, and then maybe that's
+closer to the mean square. You don't want a
+lot of uncertainty in that weighting matrix. That's it. So that's
+the end of this. If we can, let's take about a 25-minute break, and then come back for my final lecture. 

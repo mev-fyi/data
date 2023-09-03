@@ -1,0 +1,364 @@
+AI Roth: I'm going to start
+off telling you a little about some of the basic theory and background of market design. Then Parag is going to follow me to tell you about that
+a little more theory. Then Atila and Nikhil
+are going to tell you how to employ that theory in the design of
+econometric studies that allow you to infer things from the data about
+who has match to whom. Itai will follow up at the end to talk about
+more dynamic problems. Problems where you have to think about matching people
+as they come to you or whether you should
+think about it that way and he'll use his main
+example, kidney exchange. Let me start by saying
+that economists didn't invent market design. Market design is an
+ancient human activity. I recently wrote a
+book called Who Gets Want to try to talk
+about that a little bit. When archaeologists
+find stone tools thousands of miles from
+where they were quarried, it's a suggestion that even
+our prehistoric ancestors were able to trade and knew
+something about markets. As economists, of course, we've spent a lot of
+time studying market, but a lot of our chief metaphor for markets are
+commodity markets. Commodity markets are
+great because prices or low-dimensional
+vector of prices can decentralize the market if
+you get the right prices. Market design, when applied to commodity markets is often about how to get those prices. The Varese and auctioneer
+is hard to find, but auctions are abundant and they have different rules. They get to prices
+in different ways but when you think about
+commodity markets, even the commodities
+have to be designed. What I say in my book
+is that God made wheat, but the Chicago
+Board of Trade made number 2 hard red winter wheat. That's a commodity that
+you can make bread out of and you don't have to
+examine it before you get it. You can buy it, your 5,000
+bushels of hard wheat. Number 2, hard red winter wheat, you don't have to examine. It doesn't have
+to be planted yet but what we're going to
+talk to you about today is there's a big
+variety of markets, not just commodity
+markets, not just oxygen. We're going to talk to you
+today about matching markets, which are markets in which prices can't do all of the work, although they may still
+be very important. Matching markets
+are markets where you can't just choose
+what you want, even if you can afford it, but also have to be chosen. Labor markets, of course, are prototypical examples
+of matching markets. You can't just come
+teach at Harvard or MIT, you have to be hired. Neither can Harvard or MIT just decide who
+comes and teachers, they have to compete
+with each other and maybe with some
+Western University. College admissions is
+also a matching market. You can't just
+come study at MIT, you have to be admitted. A lot of these very
+important marketplaces that we go through in our lives, where we work, where
+we go to school, where we go to college, they are a little bit like marriage. You can't just
+choose your spouse. You also have to be chosen. There have to be market
+institutions that allow you to conduct the
+necessary courtship. These institutions
+are marketplaces. Marketplaces are the places
+where markets happen. I find it useful to think
+of a couple of tasks that marketplaces have to
+do to facilitate markets. First, they have to
+make markets thick. They have to attract
+enough people to the market so that they can
+transact with each other. Once you get a thick
+market though, there's often a
+problem of congestion. I'm going to spend
+quite a bit of time speaking about congestion today. There are so many people in the marketplace that it's hard to evaluate who you
+want to transact with. It takes time and some
+transactions may go on and people may leave the market before you find the
+transaction you want. Marketplaces have to somehow facilitate decongesting
+that market. Marketplaces have to be safe. Safe to get to, safe to away from, safe to reveal the
+information you have to reveal in order to get
+efficient transactions. Marketplaces are the
+places where design happens because marketplaces
+have lots of rules but one of the things about market design that makes
+it different from, say, the theoretical mechanism
+design literature is that when I'm working
+as a game theorist. If I want to study some game, I write down the game
+and then I study it. When I'm a market
+designer trying to study some marketplace, the strategy spaces that
+people have are huge. I will tell you of some examples where we
+design a marketplace, but people can also transact
+out of that marketplace, away from the marketplace
+if they wish to. The models we're going
+to talk to you about, we have to be constantly investigating their
+boundaries and see whether some of
+the things people could do away from
+the marketplace, interact with the way the
+marketplace is running. We're going to talk about
+some examples today. What I'm going to
+mostly talk about in my talk now is
+our labor markets. I'm going to talk
+to you both about centralized and
+decentralized labor markets and the marketplaces that serve them have to make the market
+thick and overcome problems of congestion
+and so forth. Let me just mention
+that the market for new economists that
+many economists go through each January, and that will be in
+Chicago this coming year, suffers a lot of congestion. If your department advertisers a position for a new
+assistant professor, you can expect to get
+hundreds of applications. If you go to the meetings to
+interview junior faculty, you can plan to maybe
+interview 20 people, maybe 30, if your junior
+recruiting committee is really energetic. That means you have to
+figure out which of the hundreds of applications you get should you interview. One of the things that the American Economic
+Association did when I was chair of the job market
+committee is we built a couple of mechanisms
+onto the AA website. One is a signaling
+mechanism that allows people to send two
+signals that say, I'm particularly interested in getting an interview with you. The reason that's interesting
+in a way is because it become very inexpensive
+to send applications. Applications are less signals of interests than
+they once were, because it's easy to add
+another application. Whereas if you only
+have two signals that conveys some information
+about your interest. Late in the market, when the
+market gets thin, again, if you happen to have interviewed lots of people
+but not hired any of them, it's easy to say, let's just stop now and
+then wait till next year. We've set up a small scramble, a website where people
+in positions that are still available can
+advertise to each other, can expose themselves
+to each other. So that it's possible for the market to remain thick for a little longer but I'm going to tell you
+about the similar experience, although with very
+different solutions in thickness and congestion and somewhat of incentives
+in medical labor markets. I'll talk a little bit
+also about school choice in New York City where there was a big congestion problem. Then Parag and Atila, and Nikhil, to some
+extent we'll pick up the story of school choice. Will tell you quite a bit about various aspects of
+school choice and Itai will finish off talking about dynamic
+markets in general, but using kidney exchange
+as his main example. Let me tell you about the
+labor market for new doctors. There are a bunch of different labor markets for new doctors, but I'm going to concentrate on the first market
+for new doctors, the National Resident
+Matching Program, which is the job market in which new graduates from
+medical school get there first position, which is called a residency or sometimes still an internship. That's a clinical position in a hospital under
+supervision of more senior physicians
+and it's a necessary part of the licensing
+procedure to become a doctor in the United States. This employment
+began around 1900. Before that, doctors
+would just graduate from medical school and begin
+to practice medicine but now they go through this supervised
+medical experience. In 1900, when you graduated
+from medical school in June, you would look for a job
+and you would find a job at some nearby hospital probably affiliated with your
+medical school. They would begin in July. By 1930, the principle time
+at which people were getting jobs was not June but
+over the Christmas break. Things had moved
+back a semester. There was some complaints
+in the medical literature that this meant
+you didn't really know what class standing people had when you hired
+them, things like that. It's not too bad to go this early but we shouldn't
+go any earlier. Well, needless to say, whatever the incentives were that made hospitals hire earlier didn't go away because of job owning. By 1940, the time at which doctors were being hired for their first post-graduate job, that is after four
+years of medical school was in the summer after
+their second year. They were being hired
+two years in advance. I could talk about this
+at length, but I won't. You can imagine that that resulted in lots of mismatches. Both it's hard to tell who the good doctors will be
+but it's also hard after just two years of
+medical school to tell what doctor you want to be. You might think you
+wanted to be a surgeon, get a great surgery residency when you're being matched to them after your second year, and then finally in
+your third year, you get to participate
+in some surgeries, you discover you faint
+at the sight of blood and surgery will not be
+a good career for you. There were lots of mismatches. It was hard to control these, they were really out of control but in 1945, the
+medical schools, the third party, not the
+doctors and not the hospitals, the medical schools intervened
+and they started to say, we're not going to send
+letters of reference, we're not going to
+send transcripts, we're not going to
+confirm that students are enrolled in our medical
+school until a certain date. That controlled the
+date of appointment. They were able to control it. In 1945, I guess, they initially tried to
+promulgate a rule which said, we're going to control the date at which offers are made, you should give people 10
+days to decide yes or no. What happened in 1945? Well, you're a medical student, you get an offer from your
+third choice hospital. Your second choice hospital
+calls up and says to you, keep your powder dry,
+we really liked it. We didn't have space to get you on our first list of offers but if we
+get a rejection, we could very well make
+you an offer. Keep cool. You are cool because
+you have 10 days, you have an offer from
+your third choice and you are on the waiting list
+at your second choice. Well, if everyone keeps cool, then on the 10th day, there you are with an offer from your third choice and you're on the waiting list of
+your second choice. Lots of bad things happened
+on the 10th day contract. Verbal agreements were broken, people made
+inappropriate contract. The following year they
+decided to just get rid of the 10th day and they only require that offers be
+open for eight days. You see, you guys are
+already market designers. You've figured out
+that that rule change, it's not going to fix the
+problem in the market. By 1949 they were down
+to exploding offers. A 12-hour period had been
+rejected as too long and so the phone would ring and you would get this offer but if you said, can
+I think about it? They say, well, is there anything you
+want to know about it because once we hang up the phone if you
+haven't accepted, I have to go to my next
+offer because we've learned from hard experience that if we don't make
+our offers promptly, our waiting list disappears. They were in an explicit
+exploding offer market and they did a remarkable
+thing in 1950. It had already begun with
+some regional markets. There was something called
+the Boston Pool Plan. They made a clearinghouse
+and in its schematic form, I'm going to tell you about
+the algorithms in fact, but in its schematic form, what they did is they
+said we won't have people calling you on the
+telephone to make offers. What we're going to
+do now is you go on all your interviews and then you submit a rank order list. What's my first choice,
+my second choice, my third choice,
+my fourth choice? The salaries are part
+of the job description, so you already know
+a lot about the job. The jobs, the residency programs
+will do the same thing. Then there'll be combined using some algorithm and we'll
+suggest a recommended match. You'll get a message that says you a medical student has been matched with this
+residency program, please proceed to
+sign a contract. That turned out to be
+remarkably successful. Very quickly, 95 percent of graduating medical
+students who were participating in this market and we're going where they were supposed to go,
+where they were matched. When you looked on July 1st, where they were, they were where they were supposed to be. That continued pretty well until sometime around the 1970s, it started to fade
+out a little bit. There wasn't quite as
+much participation. One cause of that had to do
+with the fact that there was starting to be married couples on the market together. In 1950, to a good
+approximation, 100 percent of
+American graduates of medical schools were met. By 1970s, about
+10 percent women, today it's 50 percent women. Medical students are
+of course, very busy. They don't have time to do much, but they can marry each other. There started to be
+couples on the match, people who needed jobs and that became a bigger
+and bigger problem. In 1995, I was asked to direct the redesign of the match around that and some
+other problems. I've just told you a story
+that I could have told you about many other markets
+that I've studied. The first part of the story was the market got earlier and earlier and thinner and thinner. There's a potentially
+thick market of all the medical graduates trying to get all
+the residencies. When those happen at one time, as I'm going to tell you how
+that was achieved again, when that happens at one time,
+it's a very thick market but when offers start
+coming to you one at a time in the Summer after your second year
+of medical school, you have to answer yes or
+no before knowing what else could happen and so
+the market gets very thin. Typically you accepted
+the first offer you got. Then in the 1940s, I told you about how they
+enforced uniform times, but they still had that
+problem of exploding offers. They had congestion
+places, firms, residency programs discovered
+that if they waited too long to hire you, if they gave you an offer and waited while you
+thought about it, their waiting list
+would disappear. They would again, give you exploding offers
+and you wouldn't be able to consider multiple
+offers at the same time. That was solved with
+a centralized market but all of these
+arrows that I show you are transitions
+that I've seen in some market or another. The medical match, that story is a very
+successful one where they got to a centralized market that
+continues to work today but many of them lose the centralized market and
+go back to unraveling. That's what I mean when
+I said before that players have very
+large strategy sets. If you're in a marketplace
+where people are hiring two years before
+graduation and someone says, this is crazy, let's all wait. You think to yourself,
+I could wait, but will my competitors wait? They are used to
+hiring people early. They could just continue to hire people early
+and when I wait, I'll find that the good people who I want to hire have all been hired by my competitors. We academics have solved that problem through
+a clever piece of market design when we
+admit PhD students. I don't know how many
+of you are involved in PhD admissions, but when you get admitted to
+Harvard or Stanford or MIT or any of about 600 programs that give PhDs in some
+discipline in the United States. In the admissions letter is supposed to come
+a statement from the Council of
+Graduate Schools of which this paragraph is a part. It typically comes on a page and on the back of the page is the list of the 600 universities
+that subscribe to this. What it says is it says, you're not under
+any obligation to respond prior to April 15th. This is not an exploding offer that you have to say
+yes to right away, we're offering you a
+fellowship in our PhD program, you have till April
+15th. That's Part 1. The big list of names on the back is part
+of the market design. It says, this isn't
+just for economics, it's for every
+discipline, every place you are applying to
+agrees with this. Then here's the clever part of the market design
+that comes next. It says, in those instances in which a student
+accepts an offer before April 15th and subsequently desires to withdraw
+that acceptance, he can before April 15th. It says everyone has agreed not to make you answer
+before April 15th but supposing you apply
+someplace and they say, we really need to know by
+April 1st, tell us now. What this says, it says, say yes, if you don't
+have a better offer. Say yes, but that won't stop us from making you an
+offer later if you move on our waiting
+list and it will be perfectly all
+right for you to accept our offer and tell these guys who went early
+that you can't accept theirs. That is the bad guy in this transaction is
+the guy who violated the agreement to wait 'till April 15th and you
+are within your rights, if they do that, to say yes, I'll come and if you
+get something better, say to them, I change my mind. Of course, that takes
+away the incentive for graduate programs to
+try to grab people early because you can't
+capture them by doing so. That's in fact what we've done. I won't talk much about that, but we've done that with some of the medical matches
+when they say, can I afford to wait for the centralized procedure in the fourth year of
+medical school, my colleagues are
+used to hiring early. They'll keep hiring early. One of the things we've done for our gastroenterologists,
+in particular, is to have them issue resolutions that look
+like this resolution, that say if someone makes
+you an early offer, you can say yes, but later, if you want to participate, if you get a better deal
+in the centralized match, you can take that and that makes the early offers go away. That helps you get
+a thick market but once you've got
+that thick market, not all of them work. Some of them have transitions
+back to unraveling. We can say, what makes a
+clearinghouse successful? Let me give you a little
+verbal mathematics. I'll define a matching to
+be stable if there isn't an applicant and an
+employer or a doctor and a residency program who are
+not matched to each other, who would both prefer to be. The hypothesis is that successful clearing houses are those that produce
+stable matchings. Because remember, at some
+level because people have such big strategy sets,
+compliance is voluntary. If you don't produce
+a stable matching, it means you get matched to
+your third choice hospital. You only have to
+make two phone calls to find out if you're
+part of a blocking pair. You call up your second
+choice hospital and you say, I got a great match
+and I'm planning to sign the contract
+when it arrives, but I just wanted to
+check before I do whether you still had a
+position because I prefer you. If they also prefer you, then they say, actually, we just got an extra position. Why don't you come to us,
+we'll send you a contract. Then they call up
+someone and they say, you know how deans are,
+we just lost a position. We won't be able to send
+you the contract that was recommended
+through the match because we don't have a
+position for you anymore. If you're getting
+unstable matchings, a few phone calls will
+start to unravel the match but if it's stable, you call up the
+places you prefer and they look at who they are matched to and they prefer all of them to you and they say, no, no, we don't
+have any positions. We're going to
+abide by the match. That's the theoretical idea for why stable matchings might work. Indeed, my first venture
+into this was to see that the 1950s medical match
+produced a stable match. As you look at other markets that have centralized
+clearing houses, here's a list of matches in
+various times and places. In the first column, I put whether it produces a stable match with respect
+to the stated preferences. There are yeses and nos there. Underneath that column, I put the phrase rules or data. In other words,
+there are a lot of different kinds of data. Nikhil and Tiller are
+going to tell you about the numerical data of
+who is matched to whom and what happens to them that you're used to
+thinking about as data but each of these marketplaces have different rules and
+they get different results. But what you notice
+is that there's some correlation between
+yeses in the first column, do they produce stable matching, and yeses in the second column, are they still in use? But it's not perfect. There are some nos that have yeses and there's a couple of yeses that failed and became
+nos, not still in use. This is one of the many areas
+of market design in which experiments fit nicely
+onto the graph. In an experiment, you can in the laboratory turn on and
+off whether the matching is stable or not and have very comparable samples that
+either succeed or don't. Experiments help us demonstrate
+that stability is one of the important components in whether matches are
+successful or not. There are obviously many
+differences between say, different regions of the
+British National Health System. When I first started talking to British medical
+administrators about this, I got the question, why doesn't stable
+matching work in England? I remember saying,
+what do you mean? It works fine in Edinburgh
+and in Cardiff and actually, I have Cardiff as a no there, that's a typo, Cardiff is a yes. It's a yes on both, but this is not quite
+an accurate thing. They said professor, Edinburgh is in Scotland, Cardiff is in Wales. The places where it
+doesn't work are in Birmingham and Newcastle. Their point, which
+is not a crazy one, is that there are other
+differences between Edinburgh and New Castle than just the fact that Edinburgh has a stable matching mechanism
+and Newcastle does not but in the laboratory, we use the Edinburgh and
+Newcastle algorithms to show that turning them on and off had the effect that
+we saw in the field. How do you get a
+stable matching? Well, here's the famous
+deferred acceptance algorithm by the late David Gale
+and Lloyd Shapley. I'm going to describe this as if the workers and firms
+are doing something active and later I'll tell you about a market
+in which they do but for now, think of this as the internal workings of
+a computer algorithm. The inputs are the
+preference orderings. The students tell us first choice jobs,
+second choice job, third choice job, and the firms tell us first choice student, second choice student,
+third choice student. 

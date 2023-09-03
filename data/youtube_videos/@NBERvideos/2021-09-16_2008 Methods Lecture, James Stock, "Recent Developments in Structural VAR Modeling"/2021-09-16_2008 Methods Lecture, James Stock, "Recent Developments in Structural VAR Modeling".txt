@@ -1,0 +1,1302 @@
+James Stock: I'm going to talk about two things this afternoon. In this first session, I'm going to talk about
+recent developments in SVAR, Structural Vector
+Auto Regressions. Then in the second session, I'm going to talk about dynamic stochastic general
+equilibrium models. Here's the outline of
+this first session. I'm going to spend some
+time just going over the basics of vector
+autoregression which we all know, but I'm just going to establish notation and go over that, so we're all on the same page talking about the
+identification problem, which is intrinsic to structural
+vector autoregressions. Then I'll talk about a
+number of procedures, some that are older procedures that have been
+around for a while, such as identification using
+short-run restrictions. Identification using
+long-run restrictions has been around for a while, but it continues to be an area
+of considerable interest, so I'll talk about that. Then there's a number
+of other areas that have developed
+more recently. Where more recently means
+say the last 10 years, which includes sign restrictions on impulse response functions, heteroscedasticity,
+the ESG priors, and then some
+miscellaneous other stuff which is
+application specific. That's going to be
+the first to whatever two-thirds of the talk and then probably the last
+third I'm going to talk a little bit
+about inference. The first part I'll have essentially after the
+introduction has to do with different schemes
+for identification. Then I'll talk about some
+issues of inference. I think there's been a lot
+of really interesting work in the last five or 10 years. Let's say 10 years in this area. It's been interesting for me to try to put this together. I'm going to start
+at the basics just to get a good place to
+start as the beginning. The question that we're going
+to be interested in is, what's the effect
+on surprise action, say the Fed raises the interest rates by a certain amount in
+an unexpected way. What's the effect of
+that surprise action on a variety of economic
+variables now and over the next several quarters? That's what we would think of as a dynamic causal effect. A causal effect is, the way I like to think about it is in a statistical way. Imagine you have a randomized controlled
+experiment and you assign some group in this randomized
+controlled experiment, a drug and the other
+group, a placebo. If randomization is perfect, then that means that although there's
+heterogeneity across the different types of
+people that's unrelated to who gets the drug and who
+doesn't get the drug. On average, the difference
+between the two groups, at least in population, is going to give you an
+effect of the treatment in an idealized, randomized
+controlled experiment. We can think about there
+being analogous situation as a hypothetical way to start
+to be concrete about it, where you would have
+two parallel economies and everything is
+identical and you randomly tell one Board
+of Governors to raise interest rates and the
+other Board of Governors is the control. Then you wait and you
+see what happens. As long as those two economies are in some sense the same on random array of
+groups of economies where you've randomized
+the treatment among them, then you're going to be
+able to track out not just the immediate effect of this interest rate increase, but the effect over time. As a causal effect in a
+hypothetical experiment, over time, which makes it
+dynamic causal effect. The FDA can do that
+with drug trials, and we don't have
+that flexibility. We're going to have to
+use other techniques, or we're going to
+have to try to get at this in other ways. That's what we're interested in, is this object here. The macro jargon for it is, it's called an impulse
+response function. Dynamic causal effect
+is all statisticians know what that means. Impulse response function,
+that's just for us, that's our secret phrase. The question is,
+how can we estimate this thing from macro data? Well, I think it's useful to break this up into
+two large categories, or more precisely one large
+and one small category. The large category is
+structural models, which is more or less
+macroeconomists have been up to or many macroeconomists have
+been up to for 60 years. I'll talk about one
+category, category B. Now, which is structural
+vector autoregressions. I'll talk about the
+other category, more tightly
+parameterized models like DSGE's in the next lecture. Then I am actually going to say a few words about natural
+experiments because I think that's a
+useful way to think hypothetically about
+what we're up to and about how we could
+try to look at identification out-of-the-box
+in some of these problems. Here's the basic
+identification problem. I've written out a two-variable
+system, but of course, you can imagine this
+being a multiple of the k variables or any amount of variables that you want. But two is all I had
+room for on the slide. I've got a two-variable system and this is a vector
+autoregression, but there in blue is the interesting
+and difficult part of the whole issue. Let's just stare at
+this for one second. We'll think about this as a linear structural
+macroeconomic model. Let's forget about worries about where there's linear
+and non-linear. Think about this as just a structural
+macroeconomic model, such as you might have learned about in graduate school in the old linear structural simultaneous equation
+systems days. Epsilon 1 and Epsilon
+2 are going to be these shocks and we might be interested in looking
+at their effects. To do that, we're going
+to need to be able to estimate these coefficients. Now, if Epsilon 1 and Epsilon 2 are serially uncorrelated, or more precisely Martingale different sequences so that
+you can't predict them, then what that says
+is that all of these lagged variables don't
+really pose a problem. You'd be able to estimate
+the coefficients on lags. But the problem is in
+this specification, is that I've got two variables here that are occurring
+contemporaneously. What's the deal? The deal is that Y_1 enters
+the Y_2 equations, so it affects Y_2,
+but at the same time, Y_2 affects Y_1 and you're not going to be
+able to sort that out. That's the identification
+problem in econometrics. [inaudible] That's the identification
+problem in the econometrics. I was going to digress about a paper in the queue j in
+1919, but I won't. About someone who was an assistant to an assistant professor at Harvard at that. But anyway, that
+I won't digress. The problem is that we can't just run
+OLS on this system. This is the classic problem. You got price and
+you got quantity, and you can't run price and quantity and quantity and price and expect
+to get anything, somehow you've got
+identify the system. What are you going to do? Obviously, one way to
+think about this is IV, and we'll come back to
+that interpretation. But for now, we're
+going to think about this in terms of VARs. You can't actually
+estimate the coefficients in what we'll call
+a structural VAR, up here, so you can imagine
+that they really exist. This might really be the contemporaneous effect of interest rates on
+prices and this might really be the
+contemporaneous feedback from prices to interest rates in the Fed reaction function, but we can't estimate them. These are well-defined objects
+in some economic sense. We just can't figure
+them out from the data and we'd like
+to be able to do that. One framework that's
+been very popular as a framework for thinking about this is vector autoregressions. One thing you can identify is the reduced form
+of this system. While the reduced form
+of the system comes from solving out Y_1 and Y_2. If you solve out Y_1 and Y_2, then that gets rid of them in the other ones to the equation. All you have is the
+regression or a projection of Y on past values of Y and
+then some error term. Now that error
+term is also going to be serially uncorrelated. It's going to be like
+that error term up there. But it's going to be
+a solved out version. Epsilon u_1 has some
+Epsilon 1s and Epsilon 2s and u_2 has some
+Epsilon 1s and Epsilon 2s. It's going to be something
+that's correlated and we're not going to know how that
+correlation structure is, at least it's not
+identified so far. But we can actually estimate these LAD coefficients
+and we can estimate the covariance
+matrix of the u's. Using lag operator notation, it's just represented
+as this A of (L)Y_t, where A of L is just
+this lag polynomial, and U, you can think of in
+a number of different ways. I'm going to think
+about all of this, not necessarily as
+being IID errors. You can think about that
+in a structural sense or you can think about
+this as just being the population residual
+from projecting Y, this should be Y_t minus
+1 given Y_t minus 2. The population residual from projecting Y_t and Y_t minus 1, so this equation is correct. Then Sigma u is the covariance matrix of these
+reduced form VAR errors. The trick is then going from the reduced form VAR, which is observable estimable
+to the structural VAR. To do that, here's some notation and here's
+some assumptions. First, I'm going to
+assume that it's conventional to assume that
+it's a finite order VAR. Now, as a practical matter, that certainly is convenient because it's not so easy
+to run VAR infinities, you can go through all of this theory, the identification, certainly without worrying
+about finite order lags, but as a practical matter,
+this is quite important. Next assumption, if
+what we can observe is the reduced form
+vector autoregression but what we want to get at is
+the structural shocks and the structural vector
+autoregression it better be the case
+that these errors you, which are the residuals and the reduced form vector
+autoregression span the space where the
+structural shocks epsilon, basically, you need
+to be able to go from the structural shocks to the reduced form
+errors and then back again so R is going to have
+to be square and invertible. You're going to be needing
+to go from one to the other. I'll talk about that
+assumption later but that's obviously an
+important part of this. Then finally, at least for the exposition
+that I'll be doing, you need to make some
+sort of assumption that these autoregressive
+coefficients are not going to be
+changing over time. Now, you can actually
+address that by explicitly modeling or analyzing whether or not some of these
+change over time, but for everything I'm
+going to be doing here, with one exception, we're going to model these as
+time-invariant. With that using
+this relationship between the
+structural shocks and the reduced form
+innovations it's possible for us to go from the from the reduced
+form autoregression to the structural autoregression simply by pre-multiplying
+both sides of the reduced form
+autoregression with the reduced form VAR
+pre multiplying them by R and getting the structural
+vector autoregression. This is then in that notation, the structural vector
+autoregression and then the final thing
+that we're interested in is what's the impulse
+response function. Well, if the Epsilons are
+the structural errors, then the impulse response
+function is simply going to be the effect of those
+structural errors on Y over time and that's
+obtained from this moving average
+representation of the structural
+vector autoregression, where the moving
+average representation obtained by inverting the vector autoregressive
+coefficient matrices and if you're going to
+express it in terms of the original reduced form VAR and this identification matrix
+R you can do it that way. Then the impulse response
+that we are interested in, the effect of Y H periods
+hints with respect to the structural shock or vector of structural shocks is just this coefficient in the moving average
+representation of this structural
+VAR. Yeah, please. MALE_1: How do you get R? James Stock: Well, how
+do you get R is what this entire literature
+is all about. It's like when you teach IV, where you start out saying
+assume you have Z such that. I am assuming that
+we have R such that. By the way, I actually
+do relish questions. I think that the few questions
+that have come up in this has been great and the
+questions afterwards have been really great. Ask them. People will benefit.
+If they're too long, then I'll just say we have
+to talk about it later. This is just notation and as little concise summary
+of what's going on. We've got the reduced form VAR and we've got a structural VAR. They are related to each other
+by this one magic matrix R. If you know R, you can compute all the
+impulse responses you want. There's an assumption that
+I'm going to make throughout, but it's worth just noting. It's made almost everywhere in this literature,
+not quite everywhere, but almost everywhere
+which is that the structural shocks are
+uncorrelated with each other. I mean, people you could argue about that or
+not but to me that actually makes a great
+deal of sense if we're thinking of something
+as a structural shock, it really is, the Fed raising interest rates by a
+certain amount in some unexpected way that's
+unrelated to other things, which are related
+to other things, then it's not the
+structural shock. To me that makes sense,
+but in any event, it's an identifying assumption that's used here and will
+be maintained throughout. One other tool in vector autoregression is something called
+variance decompositions. What a variance
+decomposition is actually a forecast error
+variance decomposition. It says, if you're forecasting output growth four
+quarters from now, how much of your
+forecast error on average is going to be explained by shock 1 or shock
+2 or shock 3? If it turns out that monetary
+policy shocks explain a small fraction of a
+forecast error variances say, eight quarters
+ahead you might say monetary policy isn't very
+important in that sense. I'm not going to talk about variance decompositions at all. In this talk, I'm going to focus on inferential impulse
+response functions, which is actually the effect of the shock out in the future, which is in a number of ways, I think a more interesting
+question but in any event, once you have these
+impulse response functions and the shock variances, you can do these calculations
+to get variance decomps. This magic matrix R. There's actually two ways to think about identification and one
+of them is what come up, which is somehow if we have a device or a tool that
+will help us identify R, then we're in business. That's the way that much
+of this literature goes. I think it's useful
+to say that there's another way that is
+really equivalent to think about identification, which in some ways is more intuitive rather than
+just this matrix. The other way to think
+about identification is suppose for some reason, let's just suppose
+that you could estimate one of these
+structural shocks. Since we're interested in the
+effect of monetary policy, let's call R an
+interest rate and I'm sorry about all of the R's here, r and R are different objects. R_t is like a Fed funds rate. We'll call this the monetary policy shocks so that's the amount that
+the Fed funds rate went up after some meeting of the
+FOMC in an unexpected way. That's our monetary
+policy shock. Well, let's just suppose hypothetically that in
+the minutes of the FOMC, they're into transparency or increasingly that's
+probably an overstatement. They are starting to think
+about issues related to transparency and
+let's suppose they went all the way and they
+published Epsilon tr. This meeting's Epsilon tr is, and they wrote down a
+number 22 basis points. Well, that'd be
+great. We'd be done. We'd be in business because Epsilon tr by definition is uncorrelated with
+everything else. They answer what
+that'd be saying. That of course, if
+you think about the release would be bizarre. It'd be saying, based on all of the information in the economy, we should be raising interest
+rates by 25 basis points, but you know what, we're
+not going to do it. Then at the end, they say Epsilon t
+r equals minus 0.25 and so that's what it would be. If they published that, you could then in fact
+just run this regression. You could just run
+a regression of y on your history
+from the minutes of Epsilon t r and the nice thing about it is
+that it is by construction, uncorrelated with everything
+else in the economy. There's two ways to think
+about identification. One is this algebra way, this R, but the other is if I had this Epsilon t r,
+I'd be in business. Actually, these are equivalent. If you had all of the Epsilons, you can
+figure out the Rs, if you had the Rs, you could
+figure out the Epsilons, you can do it either way,
+but I like this intuition. Let me talk about this natural experiment
+approach before we get into VAR particulars. Actually think it's useful
+when we're thinking about identification to go back and think about instrumental variables
+and ways that we could identify that
+are not narrowly within all of the endogenous
+variables in the system. Let's just imagine
+here, here we go. Suppose there exists
+a z such that z is correlated with Epsilon, but it's uncorrelated with all of the other
+shocks in the economy. Here I've written it down.
+Let me be this precise. Suppose you have some
+instrumental variable z, and it's not one of
+the variables and y. It's just something else. It's an IV, it's
+not in the system. It's going to be exogenous in the sense that it is
+uncorrelated with all of the other structural
+shocks in the system, except it's correlated with unexpected movements
+in interest rates. Well, that's what you
+need for an instrument. If you had that, let's just
+suppose that you had that, suppose you had that thing, then you can actually
+estimate this system by IV. Here's the argument of how you can estimate
+this thing by IV. It's on the next page,
+but I'll just do this. Suppose that you actually
+had this instrument z. Well, z is by construction, uncorrelated with the error term in the innovation
+equation for x. But it's by
+assumption correlated with the innovation
+in the interest rate. You can use it as an instrument in this equation or
+actually if you've got k minus 1 equations, you can use an instrument
+in each one of them. That means you can
+estimate this coefficient. This is a vector by the way. This is K minus 1 by k minus 1 times k by k minus 1 by 1. You can estimate this
+vector of coefficients. Well, since you know
+this or can estimate it, you can subtract off this bit and you're left
+with a residual. Well now that residual is up to a rotation,
+the unexpected, the structural shocks
+up to a rotation in x. Well, those structural
+shocks of x are going to be correlated
+with the innovation of x so you can use
+those as instruments and this equation for this k minus one included endogenous
+regressions. Subtract off that term
+and there you have it. There you have it. You've got up to scale, which is irrelevant. You've got the, you've got the structural shock for the
+structural policy shock. If you had an instrument, you only need one that
+satisfies these two conditions, you've actually been
+able to identify. Not everything. You can't identify all of these x shocks, but you can't identify the shock that you're interested in, which is a policy shock. I'm chair of the
+department and I was in a meeting with the provost
+and the other day. He's asking me what I do. He's talking about
+monetary policy a little bit and saying
+how it's so hard to figure out what the effect of monetary policies
+and the economy and he looked at me
+like I'm an idiot. Then to make matters
+worse, I said, well, what you really
+would need is you need the Fed to run
+some experiments. I'll tell you what the
+perfect thing would be which is they have a meeting and then they
+say that we're going to raise interest rates
+by 25 basis points. But then the person
+who's transcribing it types it wrong, and then they get
+55 basis points, so they raise it by
+55 basis points. Then we have this, but then
+we know that in retrospect. We have the surprise
+of 30 basis points. I'm telling this to the provost and the provost
+just looks at me. I'm sure that the budget for the department just
+went down by about 50,000 in that one meeting. He said that really
+wouldn't be a good thing. That wasn't the device
+Roman Romer used. I think that the
+Roman Romer idea of bringing outside information by reading the minutes and trying to see what might be surprised information and what might not be is brilliant. I just think that's such
+an interesting idea. It hasn't been used very
+much in this literature. Whether one agrees
+with the particulars of the reading and
+the particulars of the definition or not. It's a very interesting
+idea to try to bring external information in
+this natural experiment way to help identify these problems, which I have to say there are hundreds of papers in
+the literature on VAR. It still is a hard problem
+that nobody really agrees on. They've got a series
+of interesting things that I think is really
+interesting approach that merits more work. This just says that. There is an analogy there
+in natural experiments, which is we're trying
+to bring information that's not in the
+system, something new, something exogenous
+to try to identify something that's going
+on in endogenous system. SVAR approach takes a
+different perspective, which is we're going to
+use some economic theory, formal or informal to
+identify that are, or to identify the
+shocks and use that then as the mechanism for identifying the impulse
+response functions. The first papers were these three that are
+listed up there. One way to think about it,
+I think the easiest way to think about it
+not economically, but mechanically of
+what's going on is that the only thing you've got an SVAR here
+is this equation. The structural shocks
+are related to the reduced form innovations
+by this linear system, where r is a square matrix that in general doesn't have
+any restrictions on it. What that says is that if you compute the covariance
+is from that, then it says that you've
+got this equation. Well, this is a k by k matrix. It looks like you might
+have k squared equations, but these matrices
+are symmetric. Half of it's useless. You only have k times
+k plus 1 divided by 2, which is the diagonal
+element and below, to be separate equations. You've got k times k plus 1 divided by 2
+distinct equations. The number of parameters you
+would have is k squared. It looks like it'd be
+more than k squared if Sigma Epsilon is diagonal
+and then R is full. That would mean you'd have k and Sigma Epsilon and
+k squared and R, but one of them is
+just a normalization. You could arbitrarily
+set Sigma Epsilon to be the identity matrix
+and that's just going to get rid of the
+normalization problem. What are the units for
+a structural shock, which is not important. You can do the impulse responses
+in any units you want. You're going to have
+k squared unknowns and you have k times k plus
+1 divided by 2 equations. You're going to need
+at least k times k minus 1 divided by 2 restrictions on R to get this thing to work if you
+want to identify all of R. In the case of k equals 2, that only means that you
+need one restriction. But more generally you're
+going to need more than that. In the case of k equals 2, if you just go right up here, you can just see
+what's going on. Suppose just for the sake
+of argument that we had some theory that says that Y_2 actually doesn't appear
+in the Y_1 equation, then you've got an
+exclusion restriction and it says that you can estimate this and one way you could
+think about that is as IV estimation where you
+would take epsilon 1t, which you would be
+able to compute. Because if this isn't here, you then just subtract off these bits which you can get
+and you've got Epsilon 1t. You could use that
+as an instrument for the endogenous
+regressor Y_1 t here. It's uncorrelated with the
+error term because it's a structural shock and you'd be able to
+identify the system. That's just simultaneous
+equations theory. There's rank conditions
+which will come up, but I'm not going
+to really focus on those because that's
+case-specific. You could also approach this
+by partial identification. I think that's implicit in
+what I have already said. Where if I knew the
+epsilon tR is if I knew the structural
+monetary policy shocks then I'd be able to
+identify the system. You can make that
+whole argument here in terms of only identifying one row of this matrix and it's the same
+thing as what I was saying before in ideas. There's this idea
+called invertibility. Here's my one word on
+invertibility, which is Blaschke. What does invertibility mean? There is this assumption that let me write this up since this is
+an important equation. There's this assumption that RU_t equals epsilon t. What this says is
+that I can take linear combinations of U
+and I can get epsilon. Another way to say that is that the space of innovations has to span the space of
+structural shocks. These innovations
+are the residual from the population
+regression of y on its past. The space of the
+innovation spans the space of y
+contemporaneously. That is, you can use past
+values of the innovations to construct y or past values of y and innovations
+to construct y. These are the term that's used for that is that these
+are fundamental. Fundamental is a funny term because they're not fundamental
+in any economic sense. It's fundamental in
+the statistics sense, which is that you can
+take those innovations, these Us and you can build up through the moving
+average representation. You can just build up the ys. These are the Us
+that are recovered from projecting y and its past. These are the wall
+decomposition RUs. The requirement is that
+the wall decomposition RUs span the space of the epsilons and that's an assumption that's sometimes
+called invertibility. You can write down models in which this is
+actually not true. That is, the
+structural shocks are not spanned by the Us and you can think that
+there's some sense. This seems like it's got
+to be really obvious. Suppose you are looking
+at a two-variable VAR, and you think there
+are seven structural shocks in the economy, how can you possibly get
+all seven out of these two? What you're going to get
+is some mishmash of them and the formal way to say that mishmash is to
+say Blaschke factors and go over and then
+there's a bunch of papers. I'm not going to go
+over that anymore except to say that the usual
+response to this problem is to make sure that there's enough variables in
+your VAR that you're convinced that you
+really do span the space of structural shocks. I find that to be
+a usual response but you could pursue
+this if you want. You can talk with Mark about
+this during the break. Well, here's his
+early promise of SVARs which is certainly true. I'm going to talk about
+some of the challenges to them that were
+brought up in the '90s. Some of the new ideas about how to tackle identification and then a number of issues on inference, including some tools. This is going to have
+a bit of a flavor for a while for the next
+half hour of our survey. I don't know, I'm not going to be going through
+a whole lot of algebra, I'm just going to
+be summarizing, giving you my take on what the major developments have
+been in the literature. There's a number of good
+background references here. Luca Paul's reference is not really on any
+of the economics, but it has all of the math of VARs that you would
+ever want to know. Let me start out with short-run
+identification restrictions. This is the benchmark way, the original way that
+VARs were identified. One way to think about, well, what is this
+equation doing? This equation here says that there's a relationship
+in the short run. That is to say a relationship within the month in
+which these shocks are occurring between the Us and the epsilons and
+maybe we can use timing type information
+to identify. The most familiar of these
+timing-type restrictions is the one that I've
+written down right here and this is just taken
+from the handbook of macroeconomics
+chapter by Christiano, Eichenbaum, and Evans. It's imagining that
+you can partition the variables according to a group of slow-moving
+variables, your policy variable
+of interest, and then a group
+of fast variables. The slow-moving variables are going to be taken such that the monetary policy shocks don't affect the
+slow-moving variables within the period. This is the classic story
+that say prices don't respond to interest rate movements within the month in
+which they occur. If that's the case,
+then the effect of interest rate innovations
+or interest rate changes on innovations in the
+slow-moving variables is 0. Then there are some
+fast-moving variables which are in this structure going to respond within the month to interest rate changes
+and so those might be asset prices for example. Then the Fed. What the Fed is assumed to do, well, it's assumed to have
+this structural innovation, but the Fed is also
+assumed to look at innovations or equivalently
+structural shocks that observes happening in the real economy and using that information in the period, it then sets interest rates. That's the benchmark
+timing story. That was the main story that was developed in the SVAR
+literature in the late '80s. Not the only one, but maybe the primary one. It's related to
+essentially being able to do a Cholesky
+decomposition or something like a Cholesky decomposition of the covariance matrix
+to identify the Rs. It generated quite
+a bit of criticism. There's a paper
+by Rudebusch that summarizes a lot
+of that criticism. I think that probably
+most of the members of this audience are pretty
+familiar with those critiques. A variety of critiques. One of them is that the VAR, the monetary policy rule that's implicit in
+there really doesn't come close to recognizing
+the amount of information that
+the Fed takes into account in setting
+monetary policy. The monetary policy shocks
+that are estimated here don't match ones from
+the futures market so there's a variety of
+critiques that were made. I'm not going to go into that, but I think that
+those are pretty well articulated in that paper. Essentially, one way to look at the VAR literature for the last 10 years is
+there's a series of responses to these problematic
+and challenging critiques of this initial cut of
+short-run timing restrictions. One way that this has been
+handled is by looking at high-frequency data to try to estimate
+monetary policy shocks. I think the cleanest
+example of that, I think there are
+some reasons why in the end it wasn't
+very successful, but I like the idea
+is super clean, which is this paper in the
+AER by Cochrane and Piazzesi. What they did is
+they went and they looked at daily Eurodata data and on the days that there were monetary policy announcements, they looked at the
+change, pre-announcement, and post announcement of
+the Eurodata interest rate, they then added those up for the month so some
+months they were zero. If the open market committee
+doesn't meet and there were no announced changes some months they were zero, other months, they add them up
+and you can imagine if there's some time that they made intermittent changes and some months
+they might be too. They added those up and they
+created a monthly series of interest rate surprises, which is the change
+before the announcement, after the announcement
+of the Eurodollar rate and that constituted their monthly measure of epsilon TR. Then the thing that's
+great about that, at least conceptually
+as if they're right, if that really is
+what epsilon TR is, then they're back in this setting right here and
+all they need to do is just run the
+regression of y on those epsilon TRs and
+they're done and so they do. There are some problems,
+you can read the paper. I'm not going to critique
+the particulars. They get very strange responses and I think
+it has to do with particulars of how it was constructed but the
+idea is a nice idea. It's very clean. There are some other papers that have much more sophisticated
+approaches to trying to back this out from the term
+structure of interest rates, pre, and post-announcement, and then using that to match
+impulse response functions. I'm going to come
+back to the Faust, Swanson, and Wright paper, which is actually quite sophisticated and it's a
+kind of metrics at the end. Bernanke and Kuttner also
+have a paper that essentially is using the short very
+super high-frequency data to estimate monetary
+policy shocks effects and then use that to
+identify the VAR. I think that's one
+promising approach. We talk about long-run
+restrictions. Now I'm just going
+through a variety of different approaches
+to identify VAR. Is there any questions
+at this point? Another approach to identify V AR is through longer
+and restrictions, which is something
+that was developed back in the late 1980s. The methodology there is to say that the long-run
+effect of one shock on some specific variables
+is going to be zero. There's a couple of ways
+to think about this. In those autoregressive
+coefficients, if you have a shock
+the long-run effect is going to be related to the sum of those
+moving average coefficients. You can see if you think
+about that moving average in your head it just
+piles up over time. D of 1 is the sum of those moving average
+coefficients. You can do that. Make that statement
+a little more formal by doing the Beveridge-Nelson
+decomposition, which you may or may not
+recall. You should recall. It's a great little
+decomposition and it decomposes a summation of Y, something that random walk into a permanent component and
+a transitory component. The waiting on the permanent
+component is this D of 1. It's the sum of the effect. If one of these Epsilons
+has no long run effect on the Y then that element
+of D of 1 would be zero. That's one way to
+motivate these. What this is going to entail is a long-run restriction is
+going to entail putting a zero in D of 1 or equivalently
+as zero in A of 1. It depends how you set
+up the particulars. If you recall before what the identification in the
+short run restriction was running off of, was running off of R Sigma u R prime is
+equal to Sigma Epsilon. Well, in the long-run setup what you're interested in
+instead is you're interested in the
+long-run effect. Well, the long-run
+effect is going to be something like A of 1. A of 1 times ut is
+equal to D of 1 times Epsilon t. The
+restriction that you're now going to be interested
+in is going to be a long-term relationship
+between these. That's going to be summarized in this spectral density
+matrix at frequency zero. The spectral density matrix at frequency 0 basically says that a of 1 inverse times Sigma u times
+A of 1 inverse prime is equal to D of 1 times Sigma Epsilon times
+D of 1 prime. That D of 1 Sigma Epsilon D of 1 prime there's an R
+hiding inside that. If I then make that explicit right here I get this
+equation relating the long-term variance matrix or spectral density
+matrix at frequency 0 in the reduced form, V AR to the spectral density
+matrix at frequency 0, the long-run variance matrix
+in the structural V AR. If I equate these two things, the spectral density matrix in principle is something
+that's identified. Remember I can run the reduced form V AR
+and I can get A of l, I can get Sigma u, I can get A of l, so a of 1. Therefore, I can
+compute or at least in population know Omega, which is the long-run
+variance matrix of the Ys. I can then equate that
+to this formula here, which involves the Rs
+and Sigma Epsilon. Well, A of 1 itself is
+observable, so in principle, this is now my new matrix that I need to use
+for identification. I've got k squared
+elements here, k squared elements here, they're redundant because
+is a symmetric matrix. It's exactly the same now
+mathematically as before, which is that I have k times k plus 1 divided by
+two equations here, and I've got unknowns in this, and I've got unknowns in this. I've got k squared
+unknowns and I therefore, I need a total of k times k minus 1 divided
+by 2 restrictions. It's exactly the same
+logical structure as the identification using short-run restrictions and the only difference
+is instead of using the short run or one-step
+ahead variance matrix we're using the long-run
+variance matrix, which is this 2Pi times the spectral density
+matrix at frequency 0. I'll just type condition. That would impose
+a zero in D of 1. Now, if I set the
+shock variance matrix to be the identity matrix, which I can always do that, that's just a normalization, so I'm going to set the
+shock variance matrix to be the identity matrix. Then this restriction or this equation from
+up here simplifies. Since this is Omega and
+that's observable I then get Omega is equal to D of 1 prime. That's with the Sigma Epsilon
+be the identity matrix. Now, the problem
+here is going to be somehow solving for D of 1 and then using
+that solution to get R. Here's the easy way
+to think about it. If there's zero restrictions and this is lower triangular, then that is the D of 1 is the Cholesky
+factorization of Omega. We can observe Omega. That says you compute D of 1 as the Cholesky
+factorization of Omega, and from that you
+can then compute R. That's the basic idea of estimation and identification
+for long-run neutrality. This actually has quite a life. It goes back to
+some early work in the late 1980s and it
+continues to be used in part. It's been a center of a spirited debate about whether technology shocks lead to short-run decline in hours based on long-run restrictions. It's spirited and seem to be almost endless debate
+actually, I should say. Two years ago I was on the
+NSF panel on April 4th. I was in Washington for a meeting which
+happened to be when the macroeconomics annual
+meeting was in 2006. I actually didn't attend the Macroeconomics
+Annual meetings. In preparation for this talk
+I went back and I looked at the discussion for the
+Macro Annual meeting. Some of you were probably there. It's really one of
+the more amazing. This is from NBER Macro
+Annuals published. It's one of the most amazing
+published discussions I've seen. It goes on for awhile. This is about a paper by
+Christiano Eichenbaum and Vigfusson where
+they're talking about long restrictions and
+vector autoregressions, and that thing, and inference. Then there is a discussion by Pat Kehoe who was
+actually also at the NSF panel with me and he had scheduled two
+things on the same day. It was given by Ellen
+McGrattan instead. I understand it made a big hit. Here is the comments
+and discussion where Edward Prescott
+remarked that there are many exciting and
+interesting puzzles and macroeconomics on issues
+of great importance. In light of these
+facts, he felt it was unfortunate
+the discussion in this session seemed to be about how many angels can dance
+on the head of a pin. Prescott also remarked that the Lucas critique had taught
+economists that estimating structural V AR is inconsistent with dynamic economic theory. Sims responded that he felt
+it was great to get input on statistical methods from real business cycle theorists. Sims wondered why
+Charlie, Keyhole, and McGrath had
+turned their critique of Galli and Ravenel into a critique in
+which they claimed that SVRs were no
+good in general. He want to be sure they were
+not trying to argue against all probability-based inference
+because in his opinion, much of the discussion
+had that flavor. He suggested that if
+Charlie, Keyhole, and McGrath were going
+to conclude that SVRs were no good in general, then they should suggest some
+alternative methodology. Anyway, it'd been a fun if
+I'd been there, I guess. That's the spirit of debate
+on long-run restrictions. I actually think that some of
+the spirited debate has to do with problems of
+inference, and that in fact, what's going on in these long-run restrictions
+is that there are some very delicate and
+difficult inferential problems and they have to
+do with estimation of these long-run effects. I'll come back to this later. Then Mark will talk about
+this also tomorrow morning in the first bit when
+he talks about spectral density
+estimation frequency zero. But there's been some
+quite interesting recent work, I think, that has interpreted
+this in an IV way, which links into what I was talking about yesterday,
+so I'm going to come back. I think that some
+of this recent work here can shed some light
+on this spirited debate. Identification by
+sign restrictions. Man, I've got to speed up. Sign restrictions. Sign restriction
+says the following. Suppose that you know A priori or you have
+an opinion a priori that the impulse responses
+have to have a certain sign. The question is, how
+could you use that to identify a structural
+vector autoregression? There's a number of
+different proposals that have been put forth. This is quite interesting. I'm going to just talk
+about one of them which is Uhlig's 2005 method
+in a jammy paper. The basic idea there
+is suppose you have some a priori theory that says that a tightening of monetary policy cannot increase prices for the next
+four quarters, hypothetically, suppose you wanted to make that assertion. Then how can you impose that? That's actually pretty
+tricky to think about. This is a clever algorithm
+that they thought up. One way to think about the fundamental
+identification problem is that you can insert orthonormal matrices inside of our R inverse and you
+can get the same answer. Here's the algorithm. We're going to look
+at all possible Rs. We want to map out all
+possible matrices R, and then only keep
+those matrices R that produce impulse responses with the signs that we like. That's a well-defined
+problem and a well-defined mathematical
+problem that has a solution and Harold has
+a clever solution to it. He says, let's do this. First of all, we're just
+arbitrarily going to take pick some R to work
+with for starters, and that's going to be a
+Cholesky decomposition. He's going to take a
+Cholesky factorization here. Now that's not a structural R, but it's a useful device
+because he's going to then insert inside that
+Cholesky factorization, H, H prime, where H is
+an orthonormal matrix. Since it's orthonormal, H times H prime is the identity matrix, so this maintains the
+equality for all H's. But what that says
+is that if I could go through all possible H's, which is the space of
+orthonormal matrices, if I could just go
+through the whole space, that will generate by
+H prime RC inverse, or equivalently, if R
+equals H inverse RC, I will have generated
+the entire space of all of the R's. One way to get all of the R's is to go through all of the H's. All of these R's are going to be suitable factorizations by construction because they're multiplying this
+Cholesky factorization. Now I'm only going to want
+to keep some of those. What I want to do is
+I want to go through the space of all of the R's, and then I only want
+to keep some of them, the ones that satisfy
+the restrictions. The way I'm going to go
+through all the space or the R's is to go through all
+of the space of the H's. The way I'm going to go
+through all the stages of the H's is actually just by sampling at random from the face of the H's. If I just draw an H and I check it, either it
+works or doesn't. I draw another H, I check, it either
+works or it doesn't. I can go through all
+of the space of the H's and I can find
+those H's at work. Work means they provide impulse responses that satisfy your sign restriction
+conditions. That's the algorithm. That's close to his algorithm. This is my interpretation
+of this algorithm, which is that you draw H from the space of
+orthonormal matrices, you compute R from this Cholesky factorization
+times the H inverse, you compute the
+impulse responses, you check to see whether
+the impulse responses satisfy the condition. Then Harold does this
+in a Bayesian way, and so he then evaluates
+all of these using a prior. The prior is going to
+be a combination of prior on the A's and the
+reduced form of matrices, which could be anything
+in particular, but it's convenient to use
+a conjugate prior times this indicator function
+which says I'm only going to keep a D avail if
+it meets my conditions. Then we integrate that over the space of
+orthonormal matrices, which is what we're drawing
+from using Monte-Carlo. That's the algorithm and you keep the ones that you like, and then you compute, say, posterior reasoning using
+Bayesian credible sets, which is essentially
+a confidence interval from a Bayesian
+posterior distribution. I want to make a couple
+of comments about this. It's very clever and it
+certainly has some appeal. It raises a number of very interesting
+inferential questions. One of them is that this proves results in what's commonly
+called set identification. That is to say,
+there's not going to be a unique matrix R that
+satisfies these criteria because you said I want to have the first four quarters or
+the first eight quarters of impulse responses for a specific impulse
+response to be positive. That's not going to uniquely
+identify your matrix R. It's only going to
+identify a family or a set of matrices R. What that means is since you're only identifying a set of matrices R, you're only identifying a
+set of impulse responses. The impulse responses
+are only set identified. Another way to say it is this restriction isn't
+going to distinguish among a whole family of impulse response
+functions that are going to satisfy
+this restriction. Inference for set identification is actually quite tricky. I'll come back towards
+the end, I think. Actually, no, I've got it now. Impulse for set identification is actually quite difficult. I'll talk about that
+in just one second. There's one other point
+that I do want to make, which is that there's an additional level of
+integration here that involves integration over
+this random draw from the space of
+orthonormal matrices. Since you're drawing
+at random from the space of
+orthonormal matrices, that means implicitly
+that you've got some prior distribution on the space of
+orthonormal matrices. That prior distribution
+on the space of orthonormal matrices is the one that's implied by your
+numerical algorithm for sampling for that space. An interesting question that
+I don't know the answer to, but I haven't seen explored in this literature is
+whether or not the prior that's implicit by the
+algorithm that used a sample over the space
+of orthonormal matrices actually has an effect on the resulting Bayesian
+confidence sets. I would imagine that it does, but I think that
+would be something to explore and be
+interesting to see. Let me tell you one thing
+about set identification. Set identification doesn't come up very much in macroeconomics. I think this is one
+of the few places where it comes up
+in a serious way. When you estimate using
+the Uhlig algorithm, the impulse responses that
+satisfy this condition, you are estimating a set
+of impulse responses. The set of impulse
+responses that you're estimating is not
+a confidence set. What a confidence
+set for a set be, a confidence set for a set would be a set-valued object that were contained the true set 95 percent of the time
+in repeated samples. When you compute your set
+of impulse responses, that's an estimate of
+the unidentified set. That's a set estimate of
+the unidentified set. It's not a confidence set. A confidence set would be another set that
+would contain the true set 95 percent
+of the time. Got it? When you suppose
+that you did this, you remember, I've got
+all of this confidence. I've got all of
+these in that set. I've got a whole ton of confidence bands from this
+random draw using the right. I've got a ton of impulse
+response functions. Suppose out of those
+impulse response functions, I took the inner 67 percent
+and I plotted those, and I call that a
+67 percent band. That wouldn't be into
+67 percent band. That would be a band
+which would lie within your set that
+you're estimating. It's not a 67 percent
+band in any sense. It might be in some Bayesian sense that I don't understand, because I don't understand
+that very well. But it certainly isn't
+any frequent ascent. Would actually be
+within the band. Within the set, within
+the identifies. The identified set is
+all of the ones files to in Swanson and Wright have a very nice paper where
+they go through this, not with this exact mechanism, but with another very
+closely-related mechanism that gives some set identification
+using high-frequency data. This is a very nice paper. This is their estimate
+of the identified set. I'm not going to go
+through how they did it. This is their estimate
+of the identified sets. This is a point estimate. This is like plotting one impulse response in a
+fully identified system. This is the set
+that they estimate. They then do a
+Monte-Carlo simulation where they then come
+up with a confidence set that will contain the identified set in 95
+percent of realizations. You with me? This is
+definitely tricky. I'm not used to this. This is their point estimate and this is their
+confidence set. Now point estimate, but
+the point estimates are set and the confidence set
+is a set that contains sets. Now look, this is wild. Look at the scale. This is 0 to -0.8, this is 0.5 to minus 1.5. The scale is actually
+really expanding on these. These sets that contain sets, not surprisingly are
+huge. It makes sense. This is the point estimate. You want to have
+something that's going to contain this in 95 percent realizations is we're going to be
+really enormous. The set that contains
+sets is really huge. This has got to be an issue. I haven't seen this done and there are experts in the
+audience on this procedure, and they might correct me, but I haven't seen this done for the sign
+restriction thing. It'd be very interesting to do it for the sign
+restriction thing. I think there's a lot of interesting inferential
+issues here. They're not ones
+that are impossible. The Faust response and write
+papers is a good step. Identification from
+heteroscedasticity. This is cool. Suppose you have two regimes. Suppose that the
+economy got less volatile in 1984, just imagine. But suppose that the structural relationships
+didn't change. Let's be precise. Suppose that we're going
+to have a model in which the structural shock
+variances decreased and not proportionally but
+decreased, say in 1984. But that our matrix
+didn't change. Sigma Epsilon is going
+to change, but R isn't. Well that's terrific
+because now I got to hold additional
+set of equations. I've got my equations
+before 1984, and I've got my
+equations after 1984, and it's the same R, but it's different shocks, so it's more equations. More equations I can
+deal with more unknowns. In fact, high have K times
+K plus 2/2 equations here, and I've got another K times
+K plus 1/2 equations here, and if I add those together, I have K times K
+plus 1 equations. But I have K squared
+unknowns before 84. Now by changing the
+shock variances, I only have K more unknowns, so I have K times
+K plus 1 unknowns. You're done. That's so cool. That's Rigor Bone,
+is 2003 paper. I really like this. I don't know if I
+like it in practice, but I like it in theory. Here's the intuition
+that Rigor Bone gives, which is somehow, if you knew that the
+variance has changed, then you actually know that if you want to supply
+and wants demand, and you know that the
+relative variance has change. Then if you know that the
+relative variance has changed, then you're going to be
+able to deduce from that, that maybe things
+are relying more along a supply curve in one
+period than in the other. That's another way to
+get some intuition, but I actually like the
+accounting equations approach. There's a rank condition here, which I haven't gone through. But that's important. It certainly can't be the case. Suppose that all of
+the structural shocks increased by the same fraction. That's not going to identify it. You've got to actually
+have different equations. There's a rank condition
+that's involved. You could estimate the
+break date consistently. You can do it using
+conditional heteroskedasticity instead like arch. That's this Sentana
+and Fiorentini paper. I've never seen that
+implemented except that there. A couple of things that I think one has to pay close
+attention to, is look, we said that in 1984 the structural shock
+variance has changed, but nothing else in
+the economy changed. You got it. That's
+the assumption. It's also got to be the case that they have to
+change by enough, I said we've got, a whole
+another system of equations. Well, you only have another
+system of equations. They actually really
+changed by enough. If you don't have a
+big change and you have a weak
+identification problem, it's not really going
+to solve anything. But it's cool idea. DSGE priors. I'm going fast because unfortunately I have
+nothing to say about Number 6 and 7 except that
+you should look at the literature and I'll talk
+about this after our break. It's important, I
+don't mean to minimize its importance by
+being quick on it. Rather, I'll come back to
+it when I talk about DSGEs. The next one, I'm going
+to be quick on it, which probably is to
+minimize its importance, which is to in some
+very special cases, if you're working with
+multi-country models and you say that shocks transmit in proportion to trade flows or trade shares
+or something like that, then you can get some
+identification out of that, and there's a literature. It is what it is. It's
+not like the greatest. I can say that because
+we have a paper on this. Let's talk a little
+bit about inference. I'm going to talk about two
+main things in inference. The first one is going back to this long-run
+identification issue, and then the second
+is going to be about impulse response inference
+and confidence intervals. It won't be about
+confidence sets, it'll be the old
+fashion confidence, it won't be about
+confidence sets for sets, it'll be the old-fashioned
+idea of confidence intervals. Back to this spirited debate. The long-run
+identification procedure led to an estimate of this magic matrix R that was obtained by doing a
+Cholesky factorization. I'm working just for the sake of argument that we
+have some reason to believe that there's a
+Cholesky factorization for the long run impulse
+response matrix. I'm just taking
+that at face value. I'm not going to
+argue with that. In the two-by-two
+case suggest is that as in Blanche hardcore, that aggregate demand
+didn't have a long run. It doesn't have long-run effect
+on one of the variables. I'm just going to take
+that at face value. I'm not going to argue
+with the economics of it. I mean, just look
+at the statistics, the econometrics of that. We're doing a Cholesky
+factorization of the long-run variance matrix, which is two Pi
+times the spectral density matrix at
+frequency zero. That is estimated by
+the long-run impulse response function of the
+VAR times the estimated covariance matrix
+of the innovations. Then I'm multiplying it
+again by A out of one. That's our estimate of R. That's one way
+to think about it. I'm going to talk about it
+now as an IV estimator. There's some really
+interesting work that was done 10 years ago, or I guess more of when
+it was first done, it's published 10 years ago, which I think as far as I can tell must not have
+been very well understood. At least I didn't really
+appreciate it at the time. It hasn't received too
+many sites until recently. But I'm going to go
+through it because I think it's very insightful. This is a paper by
+Pagan and Robertson. I was the editor
+on this paper and I don't think I
+really understood it. It's nice stuff. I think I understand it now. What this literature
+does is it sets up this long restriction
+problem as an IV problem. We're going to do that, we're going to set up
+the long-run restriction problem as an IV problem. We'll do it in the
+two-variable case just because it's easier to look at a long-run restriction on
+the impulse response D_12. Suppose we have a
+long-run restriction of that being zero. That's going to correspond
+to a long and restriction on the coefficients in
+the one two-part because the impulse response
+function is the inverse of the sum of the autoregressive
+coefficient in the structural VAR and
+the two-by-two case, this is just what
+the inverse is. This element is going
+to have to be zero. Basically, the long-run impulse response zero restriction
+corresponds to a zero restriction on the sum of the coefficients in
+the structural VAR. I'm going to take
+advantage of that. Let me skip ahead one slide. What I'm going to do
+is I'm going to take advantage of that
+expression that be B_12 of one equals
+zero to work out what the explicit restrictions are on this equation in the VAR. If you remember how I started, I started saying that we
+needed some restriction, like an exclusion
+restriction to deal with identification problems in the simultaneous
+equation system. It turns out that this
+long-run restriction provides another different but
+another restriction that you can use for
+identification in an IV way. That's what I'm going
+to do. To do that, I'm going to use not the beverage Nelson decomposition
+which we saw before, but some version of the beverage Nelson
+decomposition where I'm going to put C of
+one on the final lag. I'll leave this as an
+algebraic exercise for you, but you can rewrite
+in some sense of reverse beverage Nelson
+decomposition where the long run effect appears on the final value and distributed lag rather
+than the first. I'm going to take advantage
+of that just by that, except that this is
+algebra that is correct. What I'm now going to
+do is I'm going to rewrite this first equation, actually rewrite both of these
+equations so that there's this long run coefficient
+loading on y_2t minus p, the p of lag. Then everything else is
+in first differences. Then I don't care about these. These are lags and so
+they are predetermined, so we can treat them as exogenous in the terminology
+of IV regression. We don't need to
+worry about these. Anything with a lag,
+we don't need to worry about in terms of
+identification. Here's the key point. Once I've done this
+rewriting so that one of these has the sum
+of the coefficients, I can now drop one of these by imposing that
+zero restriction. The zero restriction
+means that there is a variable that's
+now going to be excluded from one of
+these regressions. If there's a variable
+that's excluded, it means I can use
+it as an instrument. There's my instrument. I've got an excluded variable so I can use it
+as an instrument. What am I instrumenting?
+Well, I'm instrumenting the contemporaneous value
+of the change in y_2. If I look at that again, I'm going to be
+using this variable, which is going to be
+excluded from this equation. I'm going to be using it as
+an instrument since it's excluded for the
+contemporaneous value of the change in y_2. Well, I've got all these
+other lags in there. That's equivalent to
+using y_t minus 1, y_2t minus 1 as an
+instrument for delta y_2. That's what it says right here. Then because all
+these lags appear, it's equivalent to
+using y_2t minus 1 as an instrument
+for delta y_2t. That's Pagan and Robertson
+and Cooley and Saul. Do the algebra, it's
+correct. It's not mine. It's Cooley and those
+guys, Robertson, Pagan. Here's the point
+of those papers, which is if you think
+about what you're doing, you're saying I'm going to use the lagged level of consumption as an instrument
+for consumption growth. I'm going to predict
+consumption growth using the lag level
+of consumption. That's not going
+to work very well. That's going to be
+a bad predictor of consumption growth. It depends if it's a series that's not very
+serially correlated, is going to be a pretty
+good instrument. But if it's a series
+that is highly serially correlated
+consumption growth, consumption about a random walk. Consumption growth
+is going to be unpredictable using
+lag consumption. In that example, that's an extreme case where it'd
+be a really bad instrument. Maybe some other series
+would be not so bad. It depends on how
+serially correlated. In fact, if I do this back
+of the envelope calculation, where y_2 is in AR_1, just to make this calculation
+simple, it's an AR_1. Delta y_2 is related to y_2t minus 1 with the
+coefficient alpha minus 1. Now, this is going to be a first-stage regression
+in IV terminology. I go back to my IV
+notation from yesterday. There's the
+concentration parameter that's from yesterday, where Pi is Alpha minus 1, Z is y_2t, sigma squared V is Z epsilon 1. I plug everything in, I know
+what the variances are. I do the calculation. The variance of y_2t
+is Alpha minus 1. There's a T floating
+around because that Z prime Z Sigma squared V is
+sigma squared epsilon one. I remember what this thing is. This is sigma squared epsilon
+over 1 minus Alpha squared. I plug it in. There's the
+concentration parameter. I just computed the
+concentration parameter for this first-stage regression
+in this simple example. Now, if Alpha is small, it's like 1/1 times t and this concentration parameter is going to be really big. If Alpha is big, like if it say nearly one, this is going to
+be really small. You can take out a calculator or Excel or something and
+you can compute this. If Alpha is big with
+a 100 observations, it's going to be small. Mu square of 2.6, that's bad. That's less than 10. This was all worked out in a really nice paper that's coming out in the
+JBS, by Gospodinov. He actually works it out
+in a special case where Alpha goes to one in a
+local community sense. If you can do all of
+that in your head, what that means is that Mu
+squared is in his asymptotic is going to converge to a
+functional of Brownian motion. Then you can get all of this
+distribution theory out. It basically provides
+a mathematical way to say why this might be a
+week instruments problem. Instead that technology wasn't available to these
+papers back in 1998. But so what Pagan and
+Robertson did is they did a Monte-Carlo simulation and here's just a figure
+from their paper. These coefficients, these B1, 2 things are like this. They're like this
+object right here. They're estimating this
+object right here. It's the one that's
+being estimated by IV. It's the object that's
+being estimated by IV using these long-run
+exclusion restrictions. This is just a Monte-Carlo
+simulation that they did. They actually, the thing
+that's interesting about the Pagan Robinson
+paper is they did three Monte-Carlo
+simulations and each one was calibrated to empirically
+estimated model. They took three
+models from the VAR, from the literature
+that we were all like six variables
+or four variables. Pretty substantial systems, not twice systems
+that were published. Then they took the
+point estimates and then they did a
+Monte-Carlo simulation around those point estimates. This is the result of the
+Monte-Carlo simulation for these estimates of
+these coefficients that are needed to compute R. You can see that these
+distributions are very far from a normal that comes close
+to fitting it is plotted in the background. But these are coefficients
+that actually have a very widespread in the original units and far from a
+normal distribution. The implication that's going to really complicate the
+situation for inference. Where does that take us in terms of this long-run
+restriction literature? To the extent that this week instrument
+interpretation is valid, I think it does suggest a number of things
+that you would expect, which is that there'll be
+a lot of sensitivity to the sample in the specification. It'd be sensitivity
+to the lag length. Going from a VAR
+of 6-8 might make a big difference in
+terms of the estimate. There might be other
+delicacies that you would see. Certainly, if you do a
+Monte-Carlo simulation, you'd expect to see very non-standard behavior
+of these VAR coefficients. Not surprisingly,
+by the time you then invert them for
+impulse response functions, they're going to be all over the map in terms of
+their distribution. There's a couple of
+ideas that come out of that in terms of
+practical advice. One is to perform a Monte-Carlo
+simulation or something like that to try to get a
+sense as to whether this might be going on in a
+particular application. There's another idea
+which is, I think, interesting paper here by
+Francis [inaudible] and Rush, which says just don't use a long-run or an
+infinite run restriction, change it to a finite
+run restriction, and use a different algorithm. This based on John
+Files in 1998 paper. That's, I think interesting. I've only seen that
+one use of that. I think that's an
+interesting approach. I think this is actually, despite the fact that
+it's been around for so long in area that is
+not fully resolved. It's a pretty interesting one. Before I make a final
+set of comments on impulse responses are there
+any questions to this point? The question is part of the debate in the
+macro annual and in this Chari & Ellen McGrattan and paper has to do with the
+number of lags and the VAR. Then how does that relate to this week instrument
+interpretation? I guess the way I
+would say that is it one lesson from the weak
+instrument literature is that, I don't have an algebra
+answer to that. Seemingly, minor little
+differences can make very weak instruments
+can result in very big differences
+in estimators. It might well be the case that that's what's
+going on here, but I actually haven't
+seen that worked out and in an algebra
+way and that would be a good exercise to
+see if this explanation addresses that specific question that's hanging out there
+in the literature. There's an equivalency between
+what I'm talking about here and estimation of spectral density is
+at frequency zero. We know that for estimation of spectral densities
+at frequency zero, that's a very delicate, and very difficult problem. Mark's going to talk
+about that tomorrow. Whether you add a few more lags. The thing is those
+coefficients might be small, but if they're adding to some things that are
+canceling already, they could make a big difference in an A of one and then
+you go and invert it, it could make a big
+difference in D of one. I think there's two ways to
+look at the lag problem. There's the week
+instruments way and then there's the spectral
+density matrix at frequency zero way. I think at this
+point It's warnings, we don't have a
+definitive answer. But it's not surprising. I'll tell you from
+this perspective, it's not surprising that there would be these delicacies. Confidence intervals for
+impulse response functions. I'm going to end up going over by a few minutes,
+but not too many. All of you who've
+read loop cupula's set second edition to introduction to multivariate
+time series analysis. The first edition, I think
+it was like on Page 106, there was one of the
+longest equations. Now, the longest equation
+I've ever seen in a book was in college as
+a physics major. For some reason I was reading
+this book on laser physics and there's an equation
+that lasted four pages. But in this loop cupula book, there's actually equations
+that last like two pages. They're the equations
+for the Delta method expressions for the impulse
+response functions. It's like VEC of
+everything inversed, and then you just
+go crazy with all of these Kronecker
+products and everything. It just goes on and
+on and on and on. If you're a believer in Asymptotic theory than
+what you would say is that the coefficients of the VAR are asymptotically
+normally distributed. We're going to take a function of those which is going to be the transformation from
+the AR coefficients to the MA coefficients. That function is
+continuous in which it is, and it has derivatives
+which it does. We're going to say that because
+Theta hat is consistent, we're going to be
+able to approximate this function as a
+linear function locally. That says that these
+VAR MA coefficients are going to be
+asymptotically normally distributed where
+the distribution of the variance is
+going to depend upon the AR coefficient variance, and then the
+linearized difference between the AR coefficient and the moving
+average coefficient. If you believe that it's true, this is true theorem and it has almost nothing to do with
+reality in terms of VARs. That's probably too
+strong a statement. There are certainly
+examples in which these provide good
+approximations and what the Delta method provides good approximations to
+impulse response functions. But unfortunately, those
+examples are really pretty simple ones
+where you have a small number of
+VAR parameters and you don't have a great deal of persistence and
+things like that. What this hinges on is having a large
+number of observations relative to the
+parameters having G being approximately linear
+and the range of the variation of the data, which an inverse is the
+VAR at the inverse is not. It also requires the original auto-regressive
+coefficients to be well approximated
+by a normal, which they are in
+some circumstances, but they're not in
+other circumstances. In particular, when the
+roots of VAR are large, then we know that the VAR coefficients are going to exhibit substantial bias. In fact, it even goes to non-normal distributions as
+the roots get close to one. I have an example that's
+worked out here which I will skip about impulse response functions at long horizons having
+non-standard distributions. I'm just going to skip that. But I will refer you
+to a paper by Pestle, Vento and Rossi that works out some of the
+particulars of this in a VAR context and then applies that to one of these long-run inference problems. Let me say a few words about computing impulse responses. I'm going to keep you for
+about five minutes more. Let me say a few
+words about computing impulse response functions and confidence intervals for
+impulse response functions. Despite my not being very polite to
+the Delta method, that is the natural
+place to start. Then in a sense that we've got a series of formulas for and approximating distribution for the impulse response
+functions and those are programmed up in
+standard software and so you can just go ahead and use those as a starting point
+of an approximation. It is the case that
+in some circumstances they work well, but in a lot of
+VAR circumstances they don't work very well, so some other methods have been developed and
+there's a family of bootstrap methods that
+have been developed and the original bootstrap
+developed by [inaudible], which was published in
+the JBES 20 years ago. Then, there are some work that
+was maybe 10 years old by Lutz Kilian that he did in his thesis and then
+subsequent to that, looking at a more sophisticated
+bootstrap algorithms, and there's also some
+Bayesian methods. A particular Bayesian method, Bayesian Monte-Carlo
+Integration that Simpson Job proposed
+in a paper in Econometrical in 1999. Kilian and Xiaoqing
+have a paper in which they do a Monte-Carlo simulation comparing these
+different procedures. They do it again for a number of different designs that are
+actually based on real-world, real published VARs, which has a very
+nice feature of it. It's a lot more work to do it, but it's a very nice feature. Here's a plot, if you can see it of some of the results
+from the Kilian and Xiaoqing
+Monte-Carlo study of the quality of the confidence set for the impulse responses. In particular, what
+we're talking about is a Monte-Carlo study
+where you compute an artificial set of data and then you compute an
+impulse response function from a VAR, and then you compute
+confidence intervals for that. Then you do that over Monte-Carlo repetitions
+and you find out what fraction of those
+confidence intervals contain the true impulse
+response function. Since it's a
+Monte-Carlo experiment, I know the true impulse
+response function and you can see what
+fraction contain it. I should make an
+additional point is we're not talking about impulse
+response functions. We're actually talking about
+at coverage at a point. Everything here is point-wise. We're not talking about
+containing the entire path we're talking about containing the true impulse
+response function, say at the 12-month horizon, which is how all of these
+intervals are computed. You can do that for a variety of different methods
+or algorithms for constructing confidence
+intervals for impulse responses and
+these are the results. It is very hard to see this. I'm sorry about that. It's really hard for
+me even to see this. The dash, dash line is
+the Sims and Zha thing. You can't even see.
+Here's the deal. I'm going to summarize
+the results. None of these seemed
+to work great. Here's a couple
+of cases where at least we're not going
+to get too stressed out about it because the
+coverage rates start to decline after 30 months but that's
+10 percent of the dataset, 30 months is reasonably far out. At least we've got
+reasonable coverage in these cases in the
+first 30 months or so. This it starts to
+flake out around two years and here it's
+entirely flaked out. Depending upon the procedure, this one happens
+to be the rank of bootstrap that's worst at the 10 or 20-month horizon and the rank of bootstrap
+is covering instead of 95 percent
+of the time it's covering maybe 60
+percent of the time. These other ones are
+not covering 95, they're covering
+maybe 85 percent of the time even at
+very short horizons. Let me just tell you
+what they conclude. They do a whole bunch
+of different things. The answer is there's
+no obvious ranking between these in the sense
+that sometimes one is better, sometimes the other is better, but the one that Kilian
+likes the best is his own. Here's the algorithm. The algorithm is you
+compute the VAR estimate, you compute a bias adjustment. Here's some more really
+horrible formulas on the bias. Some of you might
+be familiar from the finance literature where
+there's been attempts to bias-adjusted estimates of auto-regressive
+coefficients using some formulas from Shem and Einstein that might ring a bell. This is the multivariate
+version of it using for VARs which is this
+Pope 1990 paper. You compute the VAR estimate
+of the As, you buy, I suggest that you do a bootstrap and in the
+context of the bootstrap, you bias-adjust everything,
+and then you construct your confidence intervals
+from the percentile draws. If you followed all of this and you're a
+bootstrap aficionado, you would say, why
+are they using the percentile rather
+than the percentile T? That is a great
+question and there is no real answer to that question. Let me make a couple of
+concluding comments. I think there's been
+some pretty interesting developments and
+identification in SVARs over the
+last decade or so. I haven't talked
+about the DSG stuff. I'll talk about that
+in a little bit. I think this high frequency
+is very promising. The thing about the
+high-frequency and the natural experiment ideas
+is that you're saying, let's try to get new data to bring to bear
+on this problem. I think that's got to
+be a good instinct. This sign restriction idea
+is quite interesting. It raises some I think subtle inferential issues that have not been fully worked out. The heteroscedasticity
+technique there might be some plausible
+applications of that. The big assumption or the
+heteroscedasticity technique is that the Rs are not
+changing but the sigmas are. If there's a situation
+in which that's plausibly the case based on institutional or
+economic knowledge, then that's a method
+that one would I think feel comfortable using. There are a number of
+inferential issues that come up. There's this set
+identification issue that has come up a
+couple of times. There's these issues with inference with
+long-run restrictions, which I think in light of yesterday's talk
+could be viewed as weak instrument problem
+where in light of tomorrow morning's talk could be viewed as a HAC
+estimation problem. Then there's, I think an unsolved problem about
+what the best way to produce confidence bands is for
+impulse response functions. There are some interesting
+new work that, in fact, some of it was just presented last week at the
+Summer Institute, but I think none of that is
+really ready for prime time. I think there's methods that
+are plausible right now like this Kilian bootstrap over bootstrap or
+bias-adjusted bootstrap. But as a matter of theory, it doesn't work and cannot work when those things
+are highly persistent. I think there's more
+interesting work to be done on that. Although, as practical advice, I think using a suitable or an appropriate bootstrap
+is a pretty reasonable way of proceeding under our
+current state of knowledge. That's where we are for this and we're going have to start again little
+over 20 minutes, I'm sorry about
+that for the DSGs. 

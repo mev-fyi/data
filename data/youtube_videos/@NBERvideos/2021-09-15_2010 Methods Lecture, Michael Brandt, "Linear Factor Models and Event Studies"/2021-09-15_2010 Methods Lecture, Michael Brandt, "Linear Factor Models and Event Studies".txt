@@ -1,0 +1,1438 @@
+Michael W. Brandt:
+I roughly tried to split this up half-and-half. We'll see how we go and
+where we take a break. Let's try to take a
+break somewhere around halfway as we go through this. Starting out with
+linear factor models, these are asset pricing models, which are really models
+for expected returns, which is how we think
+about pricing assets. An asset is a set of cashflows that we need to discount
+at an appropriate rate and sent fundamental quote
+of asset pricing is what is the rate at which
+we discount assets. Most asset pricing models
+we have can be written in a linear factor representation as the one that
+I've written out. Let me see if I can
+figure this out. I'm sorry, I saw
+Sidney used this yesterday so this must work. Expected excess returns here so that's the expectation
+of return vector r minus the risk-free rate
+should be linear in the product of a set
+of factor loadings base. I'm going to highlight right
+now and then we're going to carry through for
+the rest of this talk. Everything I'm going to do
+initially is unconditional. There's no time t subscripts on the expectations or of course, if this was an outcome of an optimization
+problem in some agent, and everything would
+be conditional time t information set and I'll come back to that issue
+in a little while. I'm even further going
+to simplify things in just a minute by looking
+at single factor models only where I'm going to
+reduce the dimensionality of the facts from potentially
+many factors to only one. I'll come back to
+that issue as well. The two most prominent examples of linear factor models are, of course, the capital
+asset pricing model. In the capital asset
+pricing model, you expected excess return any risky assets indexed by
+i here are proportional to the assets Beta im
+with respect to the market portfolio times the expected excess return
+on the market portfolio. Where the Betas are
+regression coefficients, literally covariances,
+or variances. That comes right out of individual expected utility
+maximization problems plus some assumptions on
+aggregations you will derive the CAPM and in most, that would be the
+standard theory we would teach an undergraduate
+or an MBA student. Alternatively, the
+other prominent example that I think of is
+the consumption CAPM. In the consumption CAPM, the underlying factor
+turns out to be consumption growth
+rates and you can write down approximate entities to linear factor representation
+of that model as well. Where expected excess return on an asset indexed
+by i here are proportional to or equal to the Betas of the assets with respect
+to consumption growth. So think of running
+a regression of our individual asset returns on consumption growth rates
+multiplied by a Lambda. In this case, the Lambda has a structural
+interpretation and it's equal to the agents relative risk aversion
+coefficient Gamma, multiplied by the variance of consumption growth
+rate through time. Actually, there's a reason why I put up these two examples, because they are having
+a fundamental difference that guides us in terms of how to think about estimating and testing
+asset pricing models. In the first model, the consumption
+asset pricing model, the factor is an excess return, which itself is one
+of the assets that needs to be priced by the model. That is an extra
+testable implication that allows us to use time-series techniques to
+estimate and test this model. In the second model, the consumption CAPM,
+the same is not true. The factor is an underlying
+macroeconomic factor that has no direct tie to
+the asset pricing model. Back to the asset pricing
+model and therefore, we're lacking one teasel
+restriction and turns out that means
+time-series techniques will not work and we instead, we'll rely on
+cross-sectional techniques to estimate that model. Given the popularity
+of these models, and as I said, you don't necessarily
+even have to start with a linear
+factor model. Oftentimes you might have
+a highly non-linear model, but then decided to
+linearize it and end up with a linear model anyway or
+linear approximation. Let's see humungous
+literature on how to test and estimate such models and I classify them into
+essentially two sets. There are time series
+regression tests, where the goal is to
+estimate the Betas and to test whether
+the intercepts of our regressions
+are jointly zero. I will elaborate on that idea. There are cross-sectional
+regression tests where the test is to regress excess returns on estimated
+factor exposures and then to test jointly whether the residuals are
+zero and that to anybody who comes from
+classical econometrics is a really bizarre
+concept and we will elaborate on that idea as well. It's actually turns out to be still a well-specified
+problem in this context. The aim of the first
+part of this lecture is simply to survey
+these two approaches, put some perspective on them, link them up together and see where and when
+and how they're different and when they're the same and draw some
+general conclusions. First the time series approach. First of all, let
+me just simplify notation here and
+stick with one factor. Everything here generalizes
+wherever you see products, you're going to start seeing vector dot products and things. But there's nothing unique to a single factor setting in
+terms of econometrics here. When we have a model in which the factor is itself
+an asset return, excess return on a portfolio of assets as it is in
+the case of a CAPM, for example, where the factor
+is the market portfolio. Then the model applies
+to the factor itself. Which means that since the factor has a Beta
+of one against itself, the factor risk premium, the Lambda term that we saw
+earlier in our regression, is identified by the expected
+return on that factor. That turns out to eliminate
+one degree of freedom from the model and produce a set of testable imputations
+of the model, which says that I can write
+asset pricing model as a time series regression
+of excess returns on my i assets, on factor returns, returns on the market portfolio, and if it is true that
+expected excess returns should be equal to Betas times Lambda, it must mean that the Alpha i, the intercepts of this
+regression are equal. It should be equal to
+zero univariately, which is how black the
+instance and showed first test that the CAPM and of course we'll get to next, it should be equal to
+zero jointly as a set. If I wanted to test
+whether or not the model applies to a
+single asset Alpha i, I would simply use a
+standard t-test in a single time series
+regression of excess returns on
+factor returns. The key here again is that the factor has to
+be an excess return. If the factor is not
+an excess return, this equation doesn't
+hold and moreover, there is no restriction on the intercept Alpha i in this time series
+regression here. The easiest way to
+see that logically, you said we could have a factor
+that has a mean of zero. In fact, many of our fundamental factor
+pricing models where the factors are
+macro fundamentals or something other than returns, we standardize the factors in the first stage so
+that their mean zero. That means that in this time
+series regression here, it would be the intercepts, the Alphas in this notation, that would absorb all of the expected return from
+each of the assets. Because the term Beta if would have a zero mean
+due to standardization. The critical point here is that when the factor is
+an excess return, we can think of the model as a time series regression and the models testable and vacation as a test on these
+Alpha intercepts. Of course, you gain power by looking at a large
+cross-section of assets. We would want to test whether jointly in a cross-section, the intercepts are equal to 0. The most straightforward
+way of testing such a joint test would
+be a Wald statistic. The Wald statistic, you
+form a quadratic form of your estimated Alphas and your variance-covariance
+matrix of the estimated Alphas under
+asymptotic normality should be a Chi-squared
+n for n assets. Of course, the key to forming such a statistic is to evaluate what is the variance
+of the estimator Alpha coefficients. Well, to do that, we need a little bit more distributional
+assumptions here. Typically, the way we proceed, at least in an initial
+stage of investigation, will be an assumed
+IIDness of the residuals. The residuals are independent identically distributed
+through time, in which case standard
+OLS results apply. That means that the variance of our OLS estimates are just x prime x inverse
+Sigma squared. Well, here's the x
+prime x inverse. I believe we're missing
+an inverse right here. We pulled out the one comma, one element of x prime x inverse and that turns out to be this
+expression right here. There's something that's
+interesting about this expression that we'll come back to in just one second. That is that this ratio of expected return on the
+factor of volatility. The factor is something that
+appears over and over again in the statistical properties of linear factor model tests. This ratio right here has the economic interpretation of being the Sharpe
+ratio on the factor, the excess return on the factor divided
+by its volatility, which we call the Sharpe ratio. We'll come back to that
+in just one second. Now, if you wanted to make further distributional
+assumptions and particular, if you wanted to, in addition, assume that the residuals
+are multivariate normal, then given to us and
+Shanken actually derived a finite sample distribution
+for this Wald statistic, which is essentially just taking the original Wald
+statistic that we had, which is this term
+circled and scaling it by an adjustment on
+multivariate normality that turns out to be
+an f distribution. That is the Gibbons,
+Ross, and Shanken test. Now my mind in the benefit or the contribution
+of the Gibbons, Ross, Shanken tests, however, is not necessarily to find that sample distribution
+part of the paper, but rather the interpretation
+of the Wald statistic. Well, Gibbons, Ross, and Shanken showed is that you can rewrite this statistic in this following form as a difference between two
+squared Sharpe ratios. This term over here is the
+square root Sharpe ratio of our factor being
+the market portfolio. This term over here is the
+square root Sharpe ratio of the x post optimal mean-variance
+optimal portfolio, and so Gibbons, Ross,
+Shanken showed was that of Wald statistic
+on the intercept, a test of whether jointly
+all the intercepts in n time series regressions are zero in a context of a CAPM. It's equivalent to testing
+whether the Sharpe ratio, the expected return to variance trade-off of our ex-post
+best portfolio we can form in our assets
+is statistically different from the Sharpe
+ratio of the factor portfolio, which is the market
+in this case. That gives us a sense for how some people
+like to think about joint intercept tests
+and other people like to think about Sharpe ratios
+produced by portfolio sorts, for example, the two
+are intimately linked. When I test whether or not
+jointly intercepts are zero, I equivalently test of
+whether or not I can form a high Sharpe ratio by forming an ex-post
+optimal portfolio. What's the intuition here? This guy, the market
+portfolio to factor, it is the ex-ante mean-variance
+efficient portfolio. It should be the best
+that you can do in terms of mean volatility trade-off. Of course, in any finite sample, you'll always be
+able to do better simply because you
+measure expected returns and volatility with noise
+even under the model. Therefore, you can do better and the question is the
+amount by which you can do better within the
+statistical noise of the data. Gibbons, Ross, and
+Shanken answers that question and
+show us that that is equivalent to a Wald statistic for the intercept
+coefficients Alphas. If I can flip you
+back like a movie and just give you a
+sense of what we did. We started out with a Wald statistic and
+then we said, well, under IIDness we get
+an asymptotic result, the chi-squared n
+variance-covariance matrix we can figure out. We then add
+multivariate normality, but you get an F statistic. But there's many cases when you don't want to make any of those assumptions either IIDness a multivariate
+normality, in which case, MacKinlay and
+Richardson showed us how to estimate or test
+that Wald statistic in a general method
+of moments framework. Typically, this is where I will stop throughout the lecture. You'll see me write down a
+set of moments and then we know standard GMM
+methodology applies, which means we have estimators for the spectral density matrix. We know how to do chi-square
+tests and so forth. But let me just
+walk you through a little bit of the detail in this particular example since it's the first time that we, together, at least, have
+seen GMM estimates. GMM estimates are based on
+sample moment conditions. In this case, the sample
+moment condition or just the normal equations
+of the OLS problem. OLS says the mean of
+the residuals should be zero and the residual should be orthogonal to the regressor. That is the moment conditions
+in this GMM problem, the first one says the
+residuals should be zero. The second one says the
+residuals should be orthogonal to a regressor, which is the market portfolio
+factor in this case. My notation here
+follows Cochran. This is an estimator
+of the expectation, is just the sample average
+of Capti observations. That's the same as
+tests of the setting, the residuals equal to
+zero on average and making the residuals orthogonal
+to the factor returns. If I find an estimator Alpha and Beta that satisfy
+these two equations, which I will be able to do. Because what I have here is exactly identified
+set of two equations and two unknowns. I get OLS estimates because these are the
+first-order conditions of the OLS problem. But what I gain is a
+general expression for what is the
+variance-covariance matrix of my estimates, which collapses to
+all these results if my residuals are IID. But in general, will
+capture initially heteroscedasticity independence
+and the residuals. The extent to which you're
+successful at doing so, capturing heteroscedasticity
+independence depends on your way of estimating
+the spectral density matrix. That's another
+three-hour lecture in and of itself.
+Let's not go there. But we got lots and
+lots of theory on how to best estimate expected density matrix in a standard GMM
+problems such as this, and this is even
+simpler because we got two simple moments
+in two coefficients. That was linear factor models. I just wanted to see
+where I'm at time. That's linear factor models. The unique thing
+of being able to work in a time series approach is that factors are
+excess returns. Now, there are many cases in which our factors are
+not excess returns. In those cases, we
+have to resort to cross-sectional regressions
+for testing the model. When the factor is
+not an excess return, then it must not be
+priced by the model. That means we effectively losing one restriction or adding one degree of freedom
+to our tests. Instead, why it has to test
+them all cross-sectionally, and we do that in two steps. In the first step,
+what we do is we measure asset by asset Betas, which we'll call
+factor exposures. Exposures of factor
+I or common factors. We do that through time
+series regressions because that's the only way
+that we can identify exposures because these
+exposures or by theory meant to be covariances over
+variances or less slopes. We run a time series
+regression of excess returns of each of
+our assets on our factors. We measure Beta i's. Notice this is not
+Alpha, this is A, an intercept and that intercept has no theoretical restriction, as we already discussed. Because the factor in this case, it's not an excess return. Equipped with a
+cross-section of Beta i's, we can then run a cross-sectional
+regression relating the average return of our n assets to the measured
+Betas of the n assets. That cross-sectional
+regression where the Betas are regressors now, should have a slope coefficient that's equal to the
+factor risk premium Lambda and the residuals
+here are Alphas, because they are the differences between average realized returns and theory
+implied returns, which are Lambda times Betas. Let's ignore for now
+the important fact that we're measuring
+these Betas here with error. We'll come back to that. Let's just pretend that in
+the first-stage regression, we get a perfect
+estimate of Beta. Then it should be clear
+that the model implies a cross-sectional
+relationship between average excess returns and those perfectly measured Betas, and that cross-sectional
+relationship we ought to be able
+to capture through a regression coefficient
+of which are to be Lambda. If we run this regression
+without an intercept, which is not necessary, but the model implies a zero intercept,
+so that's imposing. The OLS coefficients are very straightforward or run a
+cross-sectional regressions. The Betas are now
+excess regressors. This is x prime x
+inverse x prime y, and then the Alphas are nothing more than the
+residuals of this regression. There are just the differences
+between the data and the fitted expectation
+of the data. That gives us also forecasts. Now, we do the same
+thing as before. We just formed a wall statistic. The wall statistic is you
+form a quadratic form of your estimated
+Alphas and there's variance covariance
+matrix here and you get asymptotically
+Chi-squared distribution. It all boils down to
+what's the variance of the thing that you're
+forming a quadratic form over. Except there's
+some caveats here. This is a bizarre problem because what we're
+testing here is whether or not the residuals of
+a regression are zero. They are by construction
+in the cross-section. We can actually can test
+that a restriction, that's a silly restriction of test given the
+regression framework. Instead, what we're
+trying to test is whether or not
+the magnitude of these residuals is
+surprising given the model. Now, it turns out that in
+a standard OLS problem, if we didn't know about this first-stage
+regression here, we just took a regression of some exogenously given Betas
+on some average returns. This regression, you would have absolutely no implications on what is the magnitude
+of the Alphas. It is simply just
+whatever it is it is to do what to reflect
+the noise in the data. But it turns out that in
+this particular example, due to the two-stage
+nature of it, the Alphas, the residuals of the cross-sectional
+regression are actually linked to the time series
+properties of the returns, and therefore, we have a
+testable restriction here. The variance
+covariance matrix of the residuals is this Beta x prime x inverse x
+term here times the variance covariance matrix of the underlying Epsilons. It turns out that this
+we can pin down from the time series
+regressions in this case. That introduces a couple of
+complications in this test. First of all, this variance covariance matrix
+here is singular. Because there's an adding
+up the condition that OLS imposes on our residuals in the cross-sectional
+regression. This is a generalized inverse, not a real inverse in this simple way of
+writing down the problem. That's why this Chi-squared
+statistic here, the same wall tests we saw before now has one less
+degree of freedom. That's because we
+removed one degree of freedom due to that
+adding up constraint. Then finally, as I
+mentioned already, what makes us all possible is the fact that we
+have information about the magnitude of
+the Epsilons from time-series regression that
+allows us to then test whether or not the
+magnitude of the Alphas and the cross-sectional
+regression is too large, given the model. We're running this
+regression here. Initially, we assume that
+these coefficients here, these Alphas here
+are uncorrelated, but but very likely, if you think about
+the problem they were estimating and the alternatives
+that we are considering, it is very likely that in fact, these Alphas here
+are correlated. If that's the case, then
+really the prescription from standard econometrics is to run an GLS regression and
+not an OLS regression. GLS regressions just
+look very similar, except we're waiting the xs with
+variance-covariance matrices. The xs are Betas in this case. Now, we're waiting
+the Betas with the variance
+covariance matrix of the underlying Epsilons, and we get GLS estimates
+instead of OLS estimates. We get a GLS variance
+covariance matrix, which we can show as we should, is strictly smaller than
+what we got from OLS. That's to be
+expected. We're using the data more efficiently. We're putting more weight on more precisely measured Betas. We're putting less weight unless precisely measured Betas. It makes sense that
+we would do so. That's two-stage regressions in an ideal world where
+the Betas that we're regressing our
+average returns on are measured perfectly. Of course, that's not true. The Betas are
+measured with error, and so chink in
+'92 was one of the first to formalize
+that problem and to derive an adjustment
+for the fact that the Betas were actually
+generator regressors. His adjustment is very simple. It is simply a
+multiplicative scaling of the OLS and GLS
+variances of our estimates. We're scaling by one plus, here it is again, the Sharpe
+ratio of a factor squared. Both the OLS standard error
+or the GLS standard error. What's nice about
+this magnitude here? This is not some
+cryptic formula of a bunch of unknowns
+or known quantities, but it's actually something
+of economic value is that we can very
+quickly determine whether or not the chink and adjustment has bite or doesn't have bite in a given application because it depends on the properties of
+the data and in particular, on what factor we're
+looking at and what is the sample frequency at which
+we're estimating things. For example, if I were
+to estimate a CAPM cross-sectionally and I was using annual data
+in my calculation, then I know that the x squared Sharpe ratio
+of my factors, the square root Sharpe ratio
+of the market portfolio is roughly six percent risk premium over 15
+percent volatility or 16 percent adjustment. That's the magnitude of my shaken adjustment in annual
+data in the CAPM setting. Quick back of the
+envelope calculations will help me understand
+whether or not that adjustment actually is important or not important
+in drawing inferences. If, on the other hand, I did this daily data, my shaken adjustment
+here would be the order of 252 smaller. This number here would be
+really, really close to one. Because of course I
+would have a lot more precision on my estimates. Now, the shaken adjustment can be automated through
+a GMM framework. That's a logic that goes
+through all of my slides. If you read Cochran, it goes to all Cochran and it makes sense
+that that would happen is simply a historical
+development of techniques. We come up with a
+simple solution, we identify a problem
+and we fix it, and then we ultimately discover that all of it could
+have been fixed if we just framed it all in a more general
+estimation framework. Here we go. This is the
+shaken correction and GMM. Along with it, we get to
+relax a whole bunch of assumptions as we always
+can in a GMM framework, non-idealness of the
+residuals in particular. Here are the GMM
+moments for running a cross-sectional
+test of a cabinet. The first two sets of equations really are just our time
+series regressions. Again, these are the
+normal equations from time series regressions. The first one says
+the residuals of my time series regression
+should be zero. The second one says my time series
+regression residuals should be orthogonal
+to my regressor. The third set of equation is
+the cross sectional part. This is the equations
+that link returns cross-sectionally to Beta with a cross-sectional coefficient
+here being Lambda. There's n of these
+equations in my system, have added any n cross
+sectional equations. This is now an over-identified
+system of equations, unlike a time series setup. The Betas are exactly identified from
+these two equations. But then this last set of equations is over
+identifying the Lambda. What do we do when we
+over-identify a coefficient? We need to wait the moments and collapse the dimensionality
+of the problem. Here, there's two
+logical ways of waiting the last set of these n moment conditions
+that identify the Lambda. If we wait the moments by our regression
+coefficients themselves, then what we end up with is the normal equations of a cross-sectional
+regression problem. The normal equations
+of a cross-sectional regression problem or just like the normal equations of the
+time series regressions, or that the residuals are zero, and that the residuals are
+orthogonal to the regressor. But these are the residuals. If the residuals are
+orthogonal to the regressor, which we can enforce by
+weighting those moments by Beta, what we get is OLS regressions by weighting these two sets of moments with the
+identity matrix. In this last set of moments
+with a Beta vector, we get all this coefficients. We get, as a result then all the inferences
+that we derived. We can use all the
+inference machinery from GMM in that context. If on the other hand, we take this last set of moments here and we instead
+weight them by Beta times the
+variance covariance matrix inverse, we get GLS. Because it would then correspond to the
+normal equations of the GLS problem that
+the residuals are orthogonal to this
+particular combination of the mayor coefficients. Both OLS and GLS are
+nested in a GMM setup of cross-sectional regressions
+and the beauty of it is we get an
+automatic shank and correction because there
+is no first stage, second stage estimation
+in this context. We get to do this for
+non-ideal residuals, so we don't have to
+make it a stronger distributional assumptions
+on the problem. Everything else then
+become standard Jama. Another variant of
+cross-sectional regressions that I want to highlight
+and then we are going to come to some pictures that actually are going to illustrate the similarities and the differences
+between the three. The third one is to
+rewrite the model in stochastic discount
+factor form and then to estimate it with
+cross-sectional regressions. Again, except in the regressor will be slightly different
+than what we saw, won't be a Beta anymore. It will be a expectation of the product of
+returns and factors. You'll see that in a second. What's the stochastic
+discount factor? A stochastic discount factors
+are random variable m, such that the expectation of m times excess return to zero. What we can do is we can rewrite our linear factor models as linear stochastic
+discount factor models. I'll convince you
+that in a second. This is a linear stochastic
+discount factor model, with actually already a
+normalization imposed. It's not a plus b times factors, but the intercept has
+already been normalized. That's because the mean of the stochastic discount
+factor cannot be identified from excess returns. We will need to have
+a risk-free rate in this equation in order to identify the mean of the
+stochastic discount factor, the intercept a, this
+term right here, so without loss of generality, we can normalize
+it to something, and one turns out to be a
+convenient normalization. That's no different
+than estimating cross sectional and time
+series test without an explicit risk-free
+rate in there. Immediately we
+wrote everything in excess return form and that's
+the same I've done here. But we're losing a degree of
+freedom as a result of it. To see that a linear
+stochastic discount factor is equivalent to a
+linear factor model, you just plug-in chug. You take your stochastic
+discount factor, plug it into your fundamental
+pricing equation, that's right here, and then you rewrite it. You get expected
+excess returns minus Beta times the product of expected excess
+returns and factors. Turns out this is
+the cross-sectional relationship we're
+going to test. But then the expected product of two random variables
+is the covariance plus the product of
+the expectations. We can rewrite all of it and
+in the end what we get is a factor model exactly identical
+to what we had before, where you get expected excess
+returns equal to Betas, a time series
+regression coefficient, multiplied by a
+Lambda coefficient, which in this case depends on the variance and the
+mean of the factor. If we can rewrite a linear stochastic
+discount factor model as a linear Beta pricing model, we can go the reverse,
+of course, as well. You can start with a
+linear Beta pricing model and reverse engineer, what is the implied linear stochastic
+discount factor model. That means there
+is another way of testing the new Beta
+pricing models. We start with the CAPM. You say, well, what does it imply for the stochastic
+discount factor? It implies it's equally linear in the stochastic
+disk in factor form, and then, we can test it. What we would test in a stochastic discount
+factor version of cross-sectional
+regressions is simply that the pricing errors
+on average are zero. This is our fundamental
+pricing equation with the linear factor model already substituted in for m, the stochastic discount factor, and we're testing that the
+average errors are zero, which is the same
+as testing that the average excess
+returns are equal to Beta times the expected cross product of returns and factors. This is a cross-sectional
+regression right here. It's the same as the previous cross-sectional
+regressions, except that our
+regressors are now as expected these average products of returns and factors
+as opposed to Betas. Everything else is the same. Because things are already set up in moment condition form, it's natural to simply
+proceed with GMM estimation. Standard GMM techniques are used to estimate
+the b coefficient, and are used to estimate a test whether or
+not these conditions here hold in population or as just a standard J test
+in GMM estimation. We're just testing whether
+the moments conditions hold. That's the same as testing
+whether the model is true. GMM on the stochastic discount
+factor representation of the model is nothing more than
+cross-sectional or less of average return
+on excess returns, that's our y-variable, on the average cross-product
+of returns on factors. That would typically be your
+first stage estimate on the identity matrix as
+you're weighting matrix. Then when you use a second
+stage weighting matrix, if you use in particular the
+residual covariance matrix, what you end up with is
+standard GLS regressions. It's the same as
+what we had before, just slightly
+different regressors. There's one final variant of this procedure that absolutely
+requires mentioning here, if for no other
+reason historical value, and that's Fama-MacBeth. Fama-MacBeth was one of the first variance of
+cross-sectional regressions, and it actually had one particularly
+important aspect in it that I'll come back to
+in a second separately, but Fama-MacBeth is a
+three-step procedure. The first step in
+Fama-MacBeth is to estimate Betas from stocks
+or in their case actually portfolios estimated over some pre-formation period. They estimate Betas
+from portfolios, and then run
+cross-sectional regressions the same way that we've done, except rather than running one single cross-sectional
+regression of the average return on Beta, Fama-MacBeth run capital T cross-sectional
+regressions one for each time period of the realized returns
+on Beta estimates, and obtain by doing so a whole time-series of Lambda coefficients and
+Alpha coefficients. You can then test whether
+or not the Alphas, these residuals here, are jointly zero on
+whether the Lambda, the price of the factor, the premium on the factor
+is positive, for example, in the case of the CAPM, by simply constructing tests with simple sample statistics. But, we also obtain sampling
+distributions through the repeated observations of
+these Alphas and Lambdas. We're gaining some
+information about how are the Alphas correlated
+through time, for example, that we can adjust
+for when we look at the distribution of these
+estimates down here. Before I go on, I want to
+show you some pictures, I want to just point out one important thing
+that I'll come back to. One critical step
+which I've ignored to describe in more detail because I know I'm coming back to it, is that in the very first
+stage of Fama-MacBeth, is a portfolio
+construction step. Portfolio construction
+step in Fama-MacBeth was such that the portfolios had
+relatively stable Betas, and that there was a large cross-sectional
+distributions of Betas through the use of so-called Beta
+sorted portfolios. I'll come back to that. But, I want you to just keep that
+in mind before I move on, because we'll get back to
+it in a couple of slides. Here are pictures
+out of Cochran, which I find enlightening
+to illustrate how the different approaches of testing a linear factor models
+are different or similar. This picture basically just
+shows the outcome of a test. They're all going to
+look the same with slight variations that
+I'll point out to you, but let me get the
+general setup of the picture across and
+then we'll go from there. In this case, we're using size-sorted portfolios
+on the CRSP universe. On this axis here, we have monthly average returns, x-post, and on this
+axis over here, we have measured
+time series Betas. The model, in this
+case the CAPM, implies a simple
+linear relationship with a zero intercept
+which we've enforced between average
+excess returns and Betas. That linear relationship here is that line in the picture. The dots are all of our assets. There's 10 of them in our case. There's one particularly
+important asset, which is this one right here, that's evaluated return on the market portfolio
+that's the factor. A couple of things to
+notice in this regression. What's estimated in this model? Let's start there. What's estimated in this
+model, these Betas. What's fixed in the model
+is the slope of this line, and that's because
+we're talking about time series regressions. Because the slope of this line was identified through
+one particular point, which is this market
+portfolio here, and that was the point about the market portfolio
+is a traded asset. Therefore, we are imposing that restriction to start with, that fixes the
+line of the slope. We estimate the Betas, and the differences between the line and the
+dots are our Alphas. We're simply testing
+whether or not jointly, those Alphas are zero. This guy up here being our smallest market
+cap portfolio, the one that's particularly
+puzzling for the CAPM. Contrast this to
+cross-sectional regressions. In a cross-sectional regression, we get the same point still, as supposed to the
+average returns, we're getting the same
+estimates of Alphas, it's also coming from the
+time series regressions. But what we're doing now is
+we're running a regression of average returns
+onto the Betas, so we're getting
+a different line. That line is constructed to
+minimize as much as possible the square deviations
+of our Alphas from our fitted line. We've added a degree of freedom which is the
+slope of this line. We allowed it to vary. That's because in the cross-sectional
+regressions, in general, the slope of that line is not
+identified by the factor, and so becomes a free
+parameter. We get to fit it. Therefore, we have an extra room to make the model look better. That's only in this context
+when we use OLS regressions. Actually, what John
+did here is he used the market portfolio as
+another traded asset, and he then looked
+at a GLS estimate. Well, in a GLS estimate, the market portfolio
+would be fitted exactly. The variance of the
+residuals will be zero, which forces the
+regression to go once again through
+the market portfolio. John points out in his
+book, at great length, that when you do cross-section
+or GLS regressions with your traded factor portfolios as test assets is identical
+to time series estimation. Because you're forcing
+your line or you're playing in a
+multivariate setting, you forcing your line to go
+through the factors again. When you do that,
+it is no different than when you're running
+a time series regression. I was going to show you that it's exactly the same line, but maybe that's a moot point. There is your line.
+There's a third picture. I'm sorry, this computer
+is a little slow thinking about these
+pictures. There we go. There's a the third
+picture which shows you these stochastic discount factor cross-sectional regressions.
+Everything is identical. The only thing that's
+now different, is that we got expected
+cross-products of returns and factors
+on this axis here. We've got a first stage OLS, we got a second
+stage GLS estimate, and everything is in
+all other regards, identical to cross-sectional
+regressions. You can look at what are the differences in terms of
+the test statistics that you obtain and it turns
+out they're all very similar between the
+three approaches in this particular application so let me not dwell on it too much. I got some couple
+of odds and ends on factor models that I thought we should spend just
+a little time on. So far, we had a generic
+alternative hypothesis in mind. Our null was our intercepts
+are joining at zero, the alphas are joining at zero either in the time
+series contexts or in the cross-sectional context and the alternative is the
+model doesn't hold. That's what we've tested. But in many cases, in modern empirical work, we actually have more specific alternative
+hypotheses in mind. Those alternative
+hypothesis typically come through a preliminary
+portfolio type of analysis, where the researcher may sort, for example, stocks into
+portfolios on the basis of stock level characteristics such as the stocks
+book-to-market ratio. In that case, really
+our hypothesis is a little bit more specific in that the null is still
+the model holds, but the alternative now is, the model doesn't
+hold and instead, expected returns are somehow
+related to characteristics. I've just written out a very
+linear specification here. There's nothing that says
+they have to be linear. But you might think that's
+a good starting point. The alternative is alphas are in fact related to characteristics. Well, it turns out that that's another advantage of
+cross-sectional regressions, is we can explicitly
+test our hypothesis in a cross-sectional setup. We can run a cross-sectional
+regression of average excess returns on SDI, on the betas that we measure from time series regressions, as well as any firm characteristics you might
+want to toss in there in order to explicitly test the hypothesis on average
+returns related to characteristics in
+a way that is not already consumed or
+accounted for by betas. When we think of
+cross-sectional regressions, we think of them as being
+necessary in two settings, I mentioned that earlier,
+I'm not sure stressed it. One setting is of course, where the factor is
+not a traded asset. You have no choice but to use cross-sectional regressions
+in that context. The other is where we're
+interested to see whether perhaps average returns or expected returns are explained by things other than betas. In the original
+Fama-MacBeth paper, that firm characteristic
+here was idiosyncratic risk. Because back then we
+were still wondering, does the model hold? Is it true that there is no compensation for
+idiosyncratic risk? In fact, the answer they found
+was that that's true that Beta explains all variation
+in average returns, at least along the dimension of idiosyncratic risk
+in their application. That's firm
+characteristics. Now, one could in principle do this testing in time series
+regressions as well. We could estimate
+time-series alphas and then run another second
+stage regression where we relate those alphas
+cross-sectionally to characteristics and
+that's something that's equally feasible to do. We'd have to think once again about to generate our
+regressor problem, but other than that,
+there is no reason not to think about characteristics in the
+time series approach. But this is a more
+straightforward, immediate way of thinking
+about characteristics. I promised I'd get
+back to portfolios. There's many reasons for why we form portfolios in finance. The two most obvious
+ones are that stock level regressions
+are way too noisy. If you think about
+the signal-to-noise ratio of a single stock, it is just mostly noise. Volatility of single
+stock names can be 60, 70 percent annualized
+and we're trying to extract means that are on
+the order of 6-10 percent. A massive signal-to-noise ratio. One way of reducing
+noise, of course, is to form portfolios
+via diversification, idiosyncratic risk will go
+down and the systematic part, we expect the return related
+part will start to emerge. The other reason is betas are
+time-varying, most likely. When betas are time-varying, we need to think about
+more sophisticated ways of estimating those
+regressions, whereas, if we manage to form portfolios that have constant betas, we can skip that step and think about
+unconditional moments. The Fama-MacBeth
+procedure actually solves this problem by forming very
+specific set of portfolios, which were Beta portfolios. The procedure is
+something like this. Each portfolio formation period, call it annually or
+June of every year, you obtain a noisy estimate of firm-level betas through
+a rolling regressions looking backward at
+that point in time. You then sort stocks
+into beta portfolios on the basis of that historically
+measured noisy beta, so that you have high beta stocks and
+high beta portfolios, low beta stocks and
+low beta portfolios. You call those beta portfolios. The basis on which those
+beta portfolios are constructed are those
+pre-formation estimated betas, noisy betas from single name
+time series regressions. But the benefit of this or the hopeful outcome of
+this is that what you end up with is a set of portfolios that are fairly
+homogeneous in their betas, meaning that, all the stocks in the portfolio have
+roughly the same Beta. It should be because they
+were formed in such a way. That the beta is relatively
+constant through time so if the beta distribution across section is
+constant through time, then the beta or beta portfolio should be
+constant through time. That there is a nice spread in the cross-section of portfolios
+in beta, the regressor. This brings us back to
+standard OLS theory. The precision of our slope
+estimates depends critically on the cross-sectional
+variance of a regressor. The more spread in
+the regressor we get, in a scatter plot of x and y, the more precisely can
+we pin down the slope. These beta portfolios are great portfolios to
+use in a test where betas are regressors
+because they are constructed to have
+maximal spread in betas. Well, somewhere along the way we forgot about
+pre-formation betas, and we replaced sorting on factor exposures with sorting
+on stock characteristics. Most empirical work you see now, use portfolios sorted on size and book-to-market and
+other characteristics. That is fundamentally
+bizarre to me. Sorting on characteristics,
+is like sorting on ex-ante alphas instead of
+sorting on your betas. It's like sorting on your residuals or
+your intercepts as opposed to sorting
+on the betas, your regressors, which
+sorting on the regressors from statistical
+theory perspective just makes so much more sense. There's some unintended
+consequences, of course, of sorting on alphas. One is that when you sort
+portfolios on alphas, what you might end up with may not at all have
+constant betas. Let me show you
+that picture first. I'm sorry. I don't know if
+it's moving or not. Hold on. It did move. I like this picture
+from a paper by Andrew Yang which shows you a rolling sample market Beta of value and
+growth portfolios. Value portfolios are portfolios with low book-to-market ratios, growth portfolios
+are portfolios of stocks with high
+book-to-market ratios. These are our standard Fama
+French test portfolios, and they were
+formed on the basis of characteristics, not Betas. But you'd hope that maybe because they are similar stocks always that somehow
+their Beta exposures are all the same. But it turns out that's
+not at all the case. That if you look at rolling
+Betas of these portfolios, they can go from 1.2-0.8 over the course
+of a couple of decades. We have ended up with
+portfolios that have highly time-varying Betas
+that we nevertheless apply techniques
+with constant Betas too. That's a problem. Characteristics sort of
+portfolios will not stabilize your Beta unless
+you happen to be lucky and the Betas are function
+of the characteristics. But that seems
+like something you can test in the first place. Characteristics sort
+of portfolios may also not generate any
+cross-sectional variation, and the thing you care
+about, which is the Betas, because those are
+your regressors, and without having cross-sectional
+variation regressors, you have no power to identify
+Lambda or test the model. The classic example
+of that point is industry portfolios. What a great grouping of
+securities that are alike. You form a whole bunch
+of industry portfolios. If it turns out that
+industry portfolios have a rather small spread in Betas from the most highest Beta to
+the lowest Beta portfolio. You're running a regression
+of average returns on Betas. Where you basically
+just got a ball and whatever slope you
+fit through there, you won't be able to get any power to identify the slope. Before I flip through this, that doesn't make
+any sense to me. I personally, would like to see pre-formation Betas return
+to this literature. I said at the very onset that I'm going to focus on
+unconditional models. Of course, the world
+is a conditional one. A conditional model does not necessarily imply
+an unconditional model. Therefore, one response to us rejecting an unconditional CAPM, for example, is
+always that well, that's because a
+conditional CAPM holds and you tested an
+unconditional version of it, and therefore that's
+not surprising. In a conditional version of an asset pricing model,
+the expectation, the slope coefficient,
+and the risk premium, all could potentially
+be time t subscripted because they depend
+on information at that point in time. The expectation, obviously, the slope coefficient here, that's really a
+covariance of a variance, which both of those may be
+varying through time and that picture on
+the previous slide shows you a great
+example of when it does. Then this Lambda here, this is a reward for risk
+from an economic perspective. As preferences
+towards risks change, the reward for risk
+may also change, so that very naturally might be a time-varying property as well. This makes the model
+fundamentally untestable. That's the
+Hansen-Richard's critique of conditional asset
+pricing models. Because the problem
+is the following. If ISE econometrician
+look at this, I now need to specify
+the functional forms and the information
+sets relevant for the time variation in these
+Betas and the Lambdas. If I reject the model, I can always be critiqued
+of not having used the appropriate
+information set for specifying those functional
+forms of Lambdas and Betas. I asked with many of these
+fundamental critiques, I typically get ignored because there's
+nothing else to do. Nevertheless, we
+have approaches of estimating conditional
+asset pricing models. The idea here is that if we cannot reject the model with
+a reasonable specification, that makes us feel
+a bit better about possibly the world being
+described by such a model. Whereas seeing the other
+way around if we reject it, we can always come
+back to this critique. There's at least two
+ways to proceed as far as I can tell
+in the literature. They basically revolve around two different ways of
+statistical modeling. One way of statistical
+modeling is to model in a time series the underlying
+latent processes. The first step papers
+on this were modeling your covariances and variances here in Garch specification. Not exactly the same because
+the residuals there's not an independent
+source of noise here that the processes will
+be driven by returns, but still an underlying
+time series model for variances and covariances. Likewise, we could write down a state-space representation
+of the Betas, treat them as latent variables, and then try to
+filter from returns what are those data
+and variables. We could write down a
+state-space representation for the price of risk. Say the price of risk
+follows an AR1 process with its own shock and try to
+estimate such a process. That's a time series
+specification of the process where typically we would have independent shocks, and what makes the
+econometric problem exponentially more difficult because we now have filtering. We have to learn from
+data about unobservables. Alternatively, and by far the more popular
+route pursued in the literature is we
+simply say, well, we've got some observables that we think might be linked to fundamentals in a way that
+might link to risk aversion, for example, or might link to levels of risk for example. Why don't we start out with simple linear specifications or even non-linear specifications, of Betas as linear functions
+of these variables, and of risk premium as linear functions
+of these variables. What kind of variables are
+we thinking about here? We're thinking about, let's
+say the dividend yield of the market portfolio, or in the slope with
+a term structure as variables that are tied
+to business cycles and therefore natural conditioning
+variables to capture time-series variation in
+our coefficients here. We can do this. In any
+of our techniques, we could allow the
+slope coefficients and the market price of risk to vary with
+exogenous predictors. We can do so in time
+series regressions, we can do so in
+cross-sectional regressions. I'm going to do it in the stochastic
+discount factor form. But again, in any one of these we'll deliver
+similar results. We start out with a stochastic discount
+factor pricing equation, where the expectation here
+now is conditional on time t, and the stochastic discount
+factor is linear again in the factors except
+the coefficient. Then your coefficient here is also dependent on time
+t. Notice time t, it's measurable at t. It's in the agent's information
+when they're making decisions as opposed
+to t plus 1. Here, we could start
+with the assumption that this b coefficient here is a linear function of
+our macro variables, and then we plug and chug again. We take this b coefficient,
+we plug it in here. We take the resulting
+m expression and we plug it into
+our pricing equation. We get another conditional
+pricing equation. Still has a time t subscript, but now has only
+unconditional moments of parameters in here, Theta naught and Theta_1. That allows us to
+condition down, meaning take the
+unconditional expectation of the conditional expectation. Everything that's in
+here, you can take an unconditional expectation of, because there's no time
+t subscripts anymore, other than in the random data. We end up with a
+unconditional model, which looks like this. Now, expand this stochastic
+discount factor. You notice that what you've
+done is you've turned a one-factor conditional model into a two-factor
+unconditional model. Where the two factors now are the original factor and the original factors scaled by our conditioning variable. At this point we are in unconditional factor model world and everything we've discussed before applies to this problem. Meaning we set this
+up as a GMM problem, we can weight moments and end up with OLS
+or GLS estimates. Now if you like this
+way of thinking, which I do, there's lots
+of things one can do know. For example, if I wanted to know whether or
+not there ought to be a quadratic term up here, that's the same as thinking about factor models
+with missing factors. Because if I had a
+quadratic term here, a Theta 2 z squared, then I would have
+followed the same steps and I would've ended up with a three-factor model down here, where the third factor would be z squared times f, the factor. We have automatic
+test statistics for non-linearity in our
+functions for example. They were just
+missing factor tests. Where are we? I think we have 10 minutes for questions before
+we take a break. Techniques to find their
+sampling distributions under the sampling scheme
+of the given event study. Meaning we try to replicate
+the clustering that is induced by the events
+that we're looking at, which will differ
+from study to study, and come up with just an
+empirical distribution. The discussion will be
+somewhat more loose, but I'm hoping to do the same thing as what I did with linear factor models, and see if I can put
+some perspective on techniques to give motivation
+for where they came from. What boundary I'll be pushing on in terms
+of methodology when we're substituting one
+technique for another? Let's first talk
+about event studies, conceptually why they exist, and the question they ask. An event study measures
+the immediate, and short-term impact of a certain event on the price
+of a set of securities. They really designed
+historically to answer the question of, does an event matter for
+the value of a security? A classic event study, in that line of questioning, would be an index addition. A stock is added to
+the S&P 500 index. Under certain assumptions, a completely value
+of relevant event. The question is it
+doesn't matter, so you could run an event study. The event study would look at the collection of all
+additions to an index, and try to compute
+statistics as we'll go through to answer
+the question, does this event matter to
+the value of the firm? If the event matters to
+the value of the firm, then we will proceed,
+and figure out why does it matter to
+the value of the firm? Now increasingly
+though, events studies are being used or have been used to also
+answer another question, which is somewhat
+unrelated actually, of whether or not the information relevant
+for valuation that is coming out with
+this event gets compounded into prices
+immediately over the delay. The first is simply a matter of just the value of security, the discount rate applied, or the projection of cash flows. Obvious security
+doesn't relate to an event as a
+contemporaneous question. The second one is a question of market efficiency really. That question that asks, is the information
+processed immediately, or is it being
+processed with a lag? Post earnings announcement
+drift in my mind is the classic example of that
+second line of questioning, of whether or not information gets compounded into
+prices immediately. Event studies are very popular in a broad set of literatures. The bread, and butter,
+and accounting, and corporate finance, but
+also in economics, and loss. In economics for example, if you wanted to
+understand the role of a given regulation or policy, you might conduct an
+international event study. Where you have repeat
+observations of that same policies change
+happening across the globe, and understanding what that does to certain response variables. Likewise, you could think
+about in legal cases, and just try to understand
+legal liability, the value of certain things
+happening to your firm, as seen through an event study. There's two notions of an event study that
+actually tie back together into the question of whether or not we're trying to answer
+this first question, does the event matter? Or the second question is information impounded
+into prices immediately, which are short versus
+long-horizon events studies. In the short-horizon event
+study, by my definition, one examines a
+relatively short window of time surrounding
+the event in question. I'm thinking here days and
+weeks around a given event. Since even weekly
+expected return of small, and magnitude relative
+to the announcement, and return to you
+would realize that an imperial impotent
+revelation of news. We can, in most cases, focus on the actual returns
+surrounding the events and ignore the expected
+return surrounding events, and importantly also changes in the expected returns
+surrounding events. Because if you have an
+event that has relevance for the value of the
+security, in principle, it's not clear whether
+it's relevance for the expected cash flows or relevant for the discount rate, so one has to think very hard. If one were not to focus on a very short-horizon of time, one would have to
+think very hard about the expected
+return implications as much as just the cash
+flow value implications. As a result, the way I see it, there's relatively
+little controversy in the literature about short-horizon event
+study methodology. It's pretty much a very
+standard procedure, everybody follows it, the statistics are
+very much standard. As I said, we have very little statistical theory because the actual clustering of events vary so much from study to study that
+we'd only have some guidance as to how to
+think about the problem. But the methodology is
+pretty much standard, and uncontroversial. The opposite can be said about long-horizon
+events studies. They're extremely
+controversial because it is the classical joint hypothesis
+problem in this case. Where over long-horizons, months, quarters, and years, one has to worry
+a lot about what happens to expected returns
+over that time frame, and so we get into issues of specifying the
+expected return model, and that specification being just as important as measuring, have no turns around the events. Where these long horizon
+studies come from? They come from the
+motivation of wanting to use events study technology in order to test whether
+or not information gets compounded to prices
+immediately or at some delay. There's a tendency to try
+to extend the event window, such as for example
+in the literature of whether or not IPOs
+are underpriced. This is a literature that runs events studies with
+post-event windows that last up to years after the initial release
+of information. Long-horizon event
+studies are problematic, because of the joint
+hypothesis problem. In order to draw
+inferences about the abnormal returns
+around announcements, and subsequential announcements, we first have to rely on an accurate specification of
+the expected return model. Especially when
+we're dealing with firms that will grow
+very dynamically, or with firms that undergo similar changes in
+something or other, it is not at all unreasonable to expect expected return models from change around the event. There's a large
+controversy about how to think about long-horizon
+events studies, what the right technique is, and what one can
+learn from them, and so what I'm going
+to do is I'm going to focus on the short-horizon
+event studies. That's not just saying I'm
+only going to focus on the first question of whether
+or not an event matters, but I'm going to abstract
+from the type of events studies that
+would look months, and years, and quarters and
+years out after the event. Because that discussion, had I gotten myself
+drawn into it, would inevitably lead us to talk about linear
+factor models again. Because linear factor
+models would have been the normal return model
+that we'd have to subtract from returns to measure abnormal returns in
+long-horizon event studies, and we would have had to
+get into discussions like why do factor loadings change around
+events, for example. That seems like it was not the purpose of talking
+about events studies. The goal then is, let's
+talk a little bit about the basic methodology
+of event studies. I'll talk some more about
+the bells and whistles said one would attach to the
+event study methodology. I'll show you a brief example that comes out of
+Campbell, Lo & MacKinley. Basic event study
+methodology is, as I said, uncontroversial, and basically just relatively unchanged since these two papers by Ball and Brown,
+and Fama et al. in the late 1960s. The technology we use today, or the statistics we use
+today are unchanged. Our understanding
+of those statistics has changed obviously
+through time, but the statistics are the same. An event study has the following
+four components to it. You start out with
+an economic question that identifies a certain
+event that you want to study, and you need to figure out what securities you're going to use in order to
+study that event. Define the event, especially select the securities
+we're going to study. Step number 2 is you
+need to figure out what would be the
+normal returns on those securities over
+that event period if the event was not important. That has to do with estimating, specifying, and estimating
+a reference model. This is where the
+joint hypothesis enters into the picture. Where if I have a wrong model
+selected in step number 2, my inferences about the
+importance of the event, later on, may get biased. Number 3 then, we need to
+compute some statistics, and particularly
+in event studies, we compute abnormal
+return statistics, which are the difference between the returns realized
+on firms over the event period minus what we would expect
+from step number 2, those returns to be given a
+model for expected returns. Then finally, we do
+some hypothesis testing and interpret our results. My thinking number 1, and number 4 here is where the real meters, that's where the
+economic value is added. As I said, the
+methodology by now is so straightforward that I view the rest as being
+fairly mechanical. It's just the recipe
+of steps to follow. Here are some common reference models, which actually now it fits nicely following a discussion
+of linear factor models, it's a nice follow-up to that. But this is where
+we would start. Having defined an event, having chosen
+securities to study, we would then have to write down a model
+that we thought, returns followed in the absence of the event being important. Couple of options here, there is the constant
+expected return model where we're just assuming that returns have a return
+specific average return. Nothing else. A
+single factor model, which looks very
+much like the CAPM, except this is stated
+in raw return form. There's no ease, there
+are no excess returns. Notice the intercept
+is the market model. Called the market model
+is just simply taking out the covariation
+between market returns and asset returns without imposing the
+asset-pricing implication on the intercepts. Because we go down to
+confound inferences about the event when inferences about
+a linear factor model or CAPM in this case. We allow that
+intercept to be free, whatever it is, without imposing the CAPM
+restriction or of course, it's multivariate extension, where we have multiple factors, still an intercept
+in the equation. Now it turns out,
+the nice thing about focusing on short horizon
+events studies is that because expected returns of a short horizon of time are relatively small in magnitude. It actually doesn't
+matter so much, which one of these you
+pick or some alternatives. So the general advice then is to keep it as
+simple as possible, so long as you're focusing
+on short horizon windows, not longer-term
+horizon event studies. Given the model, we
+now have to write down estimation
+scheme for the model, and for that, it
+helps to look at a timeline of a
+typical event study. Typically, we might have in a sample that goes
+from T_0 to T_3, let's say that's today. We might have three windows identified in an event study. The event happens at date zero. There is a window of time
+between T_1 and T_2, which is the main window of
+interest to the researcher. What we want to
+understand is what is the extent to which returns over this time period reflect
+the news that is being released at date zero. Now that may be a single day or maybe a couple of days
+before and after, or may start at date zero
+and go for some time period. That choice is driven by the economic
+question being studied. But we got parameters and the parameters
+are in these models. The Alphas and the
+Betas and the MU here, as well as
+variance-covariance matrices, and those parameters have to be estimated and generally
+they're estimated over a pre-announcement
+estimation window. Now, if you happen to have
+an event that it causes such fundamental change to your underlying
+structure of the firm. You may also use this
+post event window to estimate those parameters. What kind of event
+would that be? For example, an IPO
+is a great example. There existed no returns
+prior to the event. But we want to understand
+what happens to returns around the event so one might use post event information to estimate those parameters. The key is, what you
+don't want to do is contaminate
+parameter estimation, and return inferences
+over the event period. That's why that's
+being separated out as a separate time piece. The parameters of
+the reference model are typically estimated over this first time period
+here, the estimation window, and then held fixed over this event window
+unless you have some specific information
+that tells you to do something differently because of the nature of the event. The recipe then for an
+event study is very simple. One takes an event at date zero, when estimates the
+reference model over this estimation window, and then simply records the abnormal returns realized
+over this event window, as the difference between
+the realized returns and the expected returns given
+the estimated return model. That all is captured in
+abnormal returns statistics. This is an abnormal return
+of firm I at time Tau, where Tau, here goes
+from the beginning of my event window to the
+end of my event window. The returns I'm interested
+in for each of my firms. Which is the difference
+between the return on that firm minus the expected
+return on that firm. Notice the hats here,
+that's symbolizing the fact that the
+reference model had to be estimated in the
+estimation window previous to the recording of
+abnormal returns. In order to draw our
+inferences about the magnitude of this
+abnormal return, we would want to know what is the variance so that we can form a standard T-statistic or Z-statistic depending on
+whether we are happy. It's too soon normality as well. The way to do that is you
+assume IID S. If you assume IID S you can write
+the variance of the abnormal return as the
+variance of the Epsilons, plus the variance induced by the estimation error and
+the reference model. Variants that comes from
+the Alpha hat and Beta hat, as opposed to the
+variance that comes from the Epsilon in population. Now turns out, that second piece is actually quite nasty
+if you think about it. Because what it does, is it creates persistence as well as
+cross-auto-correlation. An abnormal returns, even in the absence of underlying persistence and cross-correlations
+in the Epsilon, or under the assumption that
+the true returns are IID. You're very simple.
+If I misestimate my Betas on all my firms, then I would systematically
+also misestimate the Epsilons relative to
+the population values. That introduces an
+extra error term in precision in the
+contemporaneous estimate, but it actually has the
+same error that I would induce estimate after
+estimate return after return, thereby inducing persistence
+in the residuals. There is this an issue when the event window become short. The estimation
+window become short. Let's go back to the timeline. If this period
+here is too short, my estimates will become
+too noisy and my estimation error term in the abnormal
+return statistics, the term that is being
+accounted for here, starts becoming
+relatively large. The resulting
+prescription to resolve this issue is to use sufficiently long
+estimation periods. You can think of this
+term here is guiding your choice of how long the
+estimation period has to be. Given that, you'd want to
+proceed most likely by assuming that this
+term can be ignored. I'm going to do
+that going forward. Because already even without
+any further clustering, this would already make
+inferences much harder. Once we start doing what
+we're going to do next, which is aggregate
+abnormal returns across time and across firms. We're going to assume
+that those are zero and that the only error in these abnormal return statistics is coming from the Epsilons. Now, what we want to do is we want to draw inferences about the relevance of the event for the value of the security. But if you look at just
+a single abnormal return on one stock, that quantity is
+still extremely noisy as a way to draw inferences
+about one event. So what we do is we aggregate observations
+in the time series as well as in the cross-section. In the cross-section the way
+we aggregate information, is we simply take an
+average over N firms, each realizing the same event. But we do so by lining up our observations
+and event time. If Firm 1 is realizing
+its event on 1st of January and Firm 2 is realizing its event on
+the 15th of January, we add the return on
+the 1st of January for one firm to the return on the 15th of January
+for the second. Essentially, what we're doing is we're shifting the observations for the various firms
+to line them up such that they all
+have the same date 0. This is the critical
+part that destroys most of our ability
+to come up with reasonable statistical
+theory underlying these abnormal
+returns statistics, which is that we
+don't know ex-ante, how are we going to be shifting those observations around? If there's any
+correlation that exists between returns in
+the cross section, we will be inducing
+correlation terms in the variances and variances of these abnormal returns
+statistics will come back to that in just a little while. In the first step, we can
+aggregate abnormal returns, across-sectionally across firms, and then in the second step, we aggregate abnormal
+returns through time, either at the individual
+security level, where we start at
+the beginning of the event window and go to
+the end of the event window, summing up the returns, coming up with a
+cumulative abnormal return over the event window, or at the aggregated
+cross-sectionally already aggregated form, where we take the
+cross-sectional average abnormal
+return nowadays into the event period and sum
+them up and come up with a cumulative average
+abnormal return. Going back to obey
+event window, sorry. We aggregate a return from this time point to
+that time point. Why would we want to
+aggregate returns? Lots of different reasons. You might think that there
+is a time delay in the way information gets processed over very short period of
+time to 1, 2, 3 days. You might think that there's
+some microstructure issues that cause the inflammation that is already in pounded
+into true prices to not be revealed yet
+and observable prices. Or you might just
+want to average out some noise because you
+know that there's a lot of noise and daily
+returns to rely on some time-series averaging
+argument to get rid of that. Now it comes to
+hypothesis testing. What we want to
+study is whether or not the abnormal return from this event or the
+cumulative abnormal return at the stock
+level over some horizon, or the average
+cumulative abnormal return of all firms
+over some horizon, or zero, or positive
+or negative, depending on which way we think the event affects the
+value of the firm. In order to do that
+hypothesis testing, we need a variance expression
+for those statistics. The easiest one to
+calculate a variance for with the least offensive of statistical assumptions
+would be this cumulative absolute average residual
+at the stock level. The stock level residuals, if we assume that they
+are IID through time, so these epsilon i's here
+for firm I by itself, if they are IID, then the
+variance of the sum of returns over some observations is just L times the variance
+of the individual epsilons. That's easy enough, and as I said, not so offensive in terms
+of assumptions to make. The other two expressions, the average abnormal return across firms once we line
+firms up in event time, and particularly the
+cumulative average return across firms once you line up firms in event time, become a lot more
+complicated because they depend fundamentally on the cross-sectional correlation
+of event returns, which itself depends
+fundamentally on the clustering of events. Consider two examples.
+One example, you have events
+that are completely non-overlapping so that none of the event windows overlap. In that case it is
+fair to treat each of the cumulative abnormal returns stock by stock as
+independent of one another. That will be fairly
+simple to deal with. Take the other where each of the events are all
+happening at the same time, a legislative change that affects a whole bunch
+of firms all at once. Now, you would think it's
+very reasonable that there's very strong correlation in the abnormal returns across stocks and this statistic needs to adjust for
+that correlation. When you mix those two extremes and go to the intermediate case, it gets even more complicated. Because now all of a sudden, when you have a wind
+windows that are not perfectly lined up but also
+not perfectly separate, you start introducing
+lead-lag cross correlations. Those lead-lag
+cross-correlation show up in the variance term for this cumulative average
+abnormal return statistic. We can proceed by ignoring
+those issues and pretend, or assume, or check that our event windows are in
+fact non-overlapping. Then we can treat the abnormal returns and the cumulative abnormal
+returns stock by stock as being
+independent and come up with the variance of
+our abnormal return, aggregated in the cross-section is just one over n squared, the variance at each
+individual guys, and so, just the average there and the variance of our
+cumulative abnormal returns, again, you just aggregate up all the variances from
+the individual pieces. That's easy enough.
+Here's a picture of a typical events study. This is taken out Campbell,
+Lo & MacKinlay and it is a picture of an earnings
+announcement event study. Classic events study. I like this picture
+because it illustrates a lot of different
+things that happen in events studies that are worthwhile to keep an
+eye on and to discuss. First of all, let's discussed
+the setup of the study. These are earnings announcements
+at the firm level, they typically happen four
+times a year per firm, date 0 is the release
+of the information, and we're looking here at a
+two months event window that starts minus 21 days before the amendment goes to plus
+21 days after the event. You want to think of
+a hypothetical line right here that
+goes right there at 0 where you see that
+massive returns. That's when the news comes out. We're plotting cumulative
+abnormal returns. That's what I had denoted as my AR bars and we're doing it actually for
+three sets of firms. We are doing it for
+firms that have no news, we're doing that for firms
+that have positive news, and we're doing it for firms
+that have negative news. What we're trying to study here is whether or not this
+news has relevance for the firm and
+it is very clear that there is a contemporaneous, very large reaction of these cumulative abnormal
+returns to the piece of news. If this return right here is
+statistically significant, or maybe the absolute value
+of these two returns here, that would give us
+evidence to conclude that this event is
+meaningful economically. But there's more going
+on in this study. One thing that's
+going on here that we haven't really discussed
+but you can see it here, is the segregation of abnormal
+returns by type of news. We can test whether bad news
+is different from good news and it's very clear
+we don't need a statistical test in this
+case that it would be. But otherwise one could devise a statistical test that compares the average abnormal
+return in this group to the average abnormal return inaccurate standard
+difference and mean tests. There is some abnormal
+returns going on before the event that's
+worthwhile to point out, is the sample selection. Remember that we were selecting samples already on the basis of whether or not they
+had good news or whether they had bad news. To the extent that
+good news firm also have good things
+happening to them before the event and bad news firms also have bad things happen
+to them before the event, this is not at all
+surprising and it's not necessarily evidenced that
+something has happened here or that
+information is leaked. It's just simply a
+sample selection issue. There's also some
+action here after the event which people in the accounting literature have coined post earnings
+announcement drift, which actually this is not
+post-earnings announcement if this looks more like
+a reversal right here, but it just suggests
+that there is a large return and then there is a subsequent move increment of abnormal returns that if it was statistically
+significant, would suggest that
+this initial move was perhaps an overreaction, leading to some conclusion
+of potential inefficiencies. Or you might suggest that there is an inefficiency here. Then the typical post-earnings
+announcement drift type of paper would have
+this event window here going out to
+the next quarter, next quarter, next quarter, all the way up to one year, and what we would
+actually see in those studies is a
+gradual increase in the cumulative abnormal returns
+with jumps happening at the subsequent
+quarterly announcements if you really control
+for those carefully. That's an example
+of an event study, the study that we have in mind. Again, the statistical
+inferences here are about the
+magnitude of these jumps. Are they sufficiently
+large given the sampling distribution of these cumulative
+abnormal returns here, and perhaps about the
+differences between this group of the population, and finally, see what happens after the
+event in order to draw conclusions about
+the immediacy with which information gets
+impounded into prices. That's the basic
+events studied setup. But there's lots of
+bells and whistles that people have talked about as they have over time
+documented and discussed the various shortcomings
+of this procedure which are worthwhile reviewing
+and at least touching on. The first is dependent, and this is really the
+biggest one of them all. That is that if event
+windows overlap, then abnormal returns
+are correlated, either contemporaneously
+if two firms happen to have abnormal returns
+in the same day perhaps, or at a lag, and the lag structure is
+particularly tricky because it depends on the overlapping
+nature of the events. If an event is
+overlapped by one day, or don't perfectly
+overlap by one day, let's say they're
+offset by one day, it's a deep lag correlation
+at day one offset. If there are 10 days apart, it's neat that correlation and 10-day offset and so forth. That depends on the actual
+sampling procedure. The common approach
+to this problem is what Brown and Warner first called the crude
+adjustment method, which I think of as
+portfolio construction. Two things is Brown and
+Warner paper did which is quite influential in
+events study literature, it first talked about the portfolio
+construction technique, and it secondly laid out the framework that
+basically everybody still follows in terms of the
+procedure by which you evaluate the quality of your inferences through every
+sampling procedures. They discuss the use of
+resampling of the data, bootstrapping
+essentially to obtain finite sample distributions
+of statistics that have correlations embedded in them through whatever
+the events specific correlation structure
+and clustering is that's induced by that event. Here's what you do in a portfolio
+construction technique. You form a portfolio of firms that are experiencing
+the same event, are lined up in event time, but you do it short
+periods at a time. You say, for example, over this quarter, there are 20 firms that experience
+a given event. I'm going to take
+only those 20 firms over the quarter and
+I'm lining them up in event time and I treat them as a portfolio,
+a common observation. I then keep that
+portfolio constant at whatever offset I've
+had to move it to in order to line up event
+date and look at it in calendar time going
+backward to measure its variants from
+your perspective, because this way, backwards
+to measure its variance. What that does is it
+measures the variance of the abnormal returns
+taking into account the lead-lag correlations
+that are induced by having these timescales
+shifted in a way so that the time zeros
+all match up, the event dates all match up. You do it over short
+windows of time, meaning you don't aggregate the whole population like
+this because that way you can still account for changing betas in
+the historical data. You don't have to think that every firm has a
+constant beta forever. You do at one-quarter at a time, cumulate all the
+former portfolio of all the event firms, look at the abnormal return of this portfolio and
+normalize draw inferences with the
+standard deviation of the abnormal return
+of that portfolio, line up the way it is
+line up in event time, looking back over some
+estimation window. That's some very
+intuitive I find way of thinking about how to application by
+application specifically, deal with the fact
+that clustering induces cross autocorrelations
+and event returns. There's also heteroscedasticity
+to deal with, and in events studies, heteroskedasticity
+comes in two flavors. There is cross-sectional
+differences in the volatility of the
+abnormal returns. Clearly, there are
+firms that are more volatile than others and there are event-driven changes in the volatility of the
+abnormal returns. Let's first talk
+about the first one. Cross-sectional differences
+in the volatility of the returns are accounted
+for in two ways. One way is, you
+might think about a JLS approach where you
+take the abnormal return from firm I and you
+first standardize it by its own residual
+variance so that it has an equal contribution in
+terms of units of variance to the cumulative abnormal
+return as JLS versus OLS in an invent
+study environment. The second way that we account for that form of
+heteroscedasticity already, I didn't mention
+it, is right here where we take the average over the individual
+asset-specific variances. We're not just saying, well, this is 1 over n squared times some common variants where
+we're actually allowing each asset to have its individual asset-specific
+residual variance. That's fairly easy
+to account for and it's common practice to standardize the abnormal returns by residual variances before
+you start aggregating them. The second is a little bit
+more tricky to deal with, and that is event-driven changes in the volatility
+of the residuals. This is a very logical
+one to worry about. If you think about it, there is a big event that just happened. Earnings come out. It's very important for the
+evaluation for this firm. It's reasonable to assume
+that the variance of this firm's return is also
+higher when that event happens around the time
+of the event comes out. In order to address this, that's a little trickier
+and it's addressed by this Burma doll paper. The way you can deal with this is you estimate
+the variance of the abnormal returns
+cross-sectionally as opposed to from
+the time series, because you have to get a sense for what is the variance of abnormal returns
+over event windows, not overestimation windows that don't have events in them. Rather than forming a
+time series estimate of these abnormal returns, you would form a
+cross-sectional estimate of these abnormal returns under assumptions
+of independence. Then there's one final thought
+I have on event studies. Typically you see events
+studies being formulated in this classical event
+study methodology, abnormal returns, cumulative
+abnormal returns, and so forth, which then
+makes you have to think about how to deal with particularly independent
+structure in the data, but there is nothing
+wrong, and in fact, it seems very intuitive
+to me to actually run a time an event study in a multivariate
+regression framework. This has now become fairly standard in the
+accounting world. This was first
+introduced paper by Rex Thompson and
+Katherine Schipper. Where basically you
+have a whole bunch of time series regressions. You got individual regression coefficients which
+you would have had to estimate anyway because that would have been your
+reference model, but now, together with
+estimating the reference model, we also get to estimate
+the event returns, which are dummy variables, coefficients on dummy variables. A dummy variable very
+simply is equal to one. If Firm I had an event
+on this particular date, t minus tau, so y t minus tau. Well, if I just had
+a dummy variable for my actual event day, I will be able to test
+whether or not there is an abnormal return on
+the day of the event. But generally, event
+study methodology actually puts a window around the event and asks whether the cumulative return over
+that event period is zero. Well, I can accomplish
+the same here by having a sequence of dummy
+variables that turn on. One dummy variable turns on
+three days before the event, one dummy variable, two
+days before the event, all the way until three
+days after the event, giving me a seven-day
+event window now through seven
+dummy variables. I would get seven different
+of these gamma coefficients, which I may restrict to be the same in the
+cross-section or not. I have some flexibility there. Basically what has
+just happened is I've replaced inferences drawn about the abnormal return a Firm I at time tau with inferences drawn about these
+regression coefficients, gamma I drawn at time tau. But because these
+regressions are still all line up in calendar time, I don't have that
+cross-correlation issue to deal with anymore. I now replace it, however, with a more complicated
+waltz type of testing situation where I got to join the
+test of the gamma, so, some linear combinations
+of these gammas is zero. That makes the testing a
+little bit more tricky, but in principle, the
+inferences become cleaner, because I don't deal with these ad hoc constructive
+test statistics which are the cumulative returns that we've talked about already. I'm afraid that is
+all my insight that I have on events studies. Now I should mention
+that what I did is I compiled, before we
+get to questions, I compiled a reading list which is not part of your slide. 

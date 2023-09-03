@@ -1,0 +1,594 @@
+Alan J. Auerbach: I'm very
+pleased to be here to give the Martin Feldstein Lecture at the NBER Summer Institute. Of course, Martin was my
+dissertation advisor and a co-author and I learned a
+lot from him over the years. Indeed, I want to
+start in talking about the taxation of
+business income in the global economy with a couple of Marti's contributions
+over the years in the area. Not simply to remind us how versatile Marti
+was in his research, but also because the
+points he made in these papers relate to the material I'm going to
+be talking about today. The first of these
+contributions is one paper that Marti wrote with David Hartman in the late 1970s in the quarterly
+Journal of Economics, in which Feldstein and Hartman
+derived optimal taxation of domestic and
+foreign source income for multinational companies. A key thing in
+these results other than the results themselves, was the implicit assumption
+that companies residents is well-determined and
+where are they earn their income is also
+easily determined. Both of those things are, while perhaps quite
+sensible assumptions in the 1970s are not
+so sensible today. The second contribution of
+Marti's I want to highlight is from a paper with Paul Krugman in NBER
+conference volume. In this paper, the
+international trade effects evaluated taxation. There's a particular quote
+that I wanted to highlight, "The point of the
+analysis is more modest. We want to show that commonly
+held belief that a VAT is a disguised
+protectionist policies based on a misunderstanding." That was a very important
+point to make them. Unfortunately, it's a point, it's still applies today when policymakers debate the merits of not only evaluated taxes, but of other consumption destination based
+taxes and that came up in the US tax reform
+debate a few years ago and still plagues policy
+discussions in this area. I'll come back and talk
+about that as well. But to begin, let me
+start with a figure which is common to discussions of international taxation today. This is the G7
+corporate tax rates according to OECD data, going back a few decades. You would get similar
+picture if you looked at other groups
+of developed countries, it's not unique to the G7. What you can see is that corporate tax rates have been declining throughout the
+G7 over this period. Starting from a much
+higher range in the early to mid 1990s
+than they are now. It's worth pointing
+out that although the United States drop in 2017 occurred during a
+Republican administration, in several of the
+other countries where tax rates have come down, they've done so under
+left-leaning governments. It really is a phenomenon
+that is not so much related to the
+specific politics of the time and the country, but rather to something
+more fundamental. That fundamental thing
+that it relates to is the change in the economy, the world economy
+over this period. Let me talk a little
+bit about that. The best way for me to
+start to illustrate what's happened in the world
+economy in particular, in the US economy, is to think about the
+largest companies by market capitalization in the
+US 50 years ago and today. Fifty years ago the
+top five companies were mostly names that
+are still familiar. IBM, General Motors, AT&T, Exxon Mobil,
+and Eastman Kodak. A couple of things to
+point out about this. First of all, Exxon Mobil was actually at that time
+pre merger with Mobil. Also AT&T wasn't the
+AT&T today it was the enormous regulated
+monopoly providing telephone services and actually providing manufacturing
+and providing telephones. In 1971, companies, although they may have
+relied on technology, IBM was certainly a leading technology company at the time, were companies that made things, they made things in
+identifiable locations. Then that's not just true
+of oil companies where the location of extraction of natural resources is clear. But it's also true of where General Motors made its cars. If we shift to 2021, we see another five
+familiar names, all very giant companies, Apple, Microsoft,
+Amazon, Alphabet, and Facebook and all familiar, perhaps not Alphabet for some, because Alphabet is the
+parent company of Google. These companies are enormous and worldwide
+multinationals. They rely very heavily on
+intellectual property, all of them in the services
+and goods that they provide. Just to highlight that point, let me make a couple of
+observations based on data. In the last half century
+during this same period when the identity of
+these five companies changed as I just showed you, the share of
+intellectual property measured in US non-financial
+corporate assets, according to the Fed's flow of funds data, more than doubled. That's probably a
+conservative estimate because the measurement of
+intellectual property is a fairly narrow one here. The share of before tax
+US corporate profits coming from overseas
+operations nearly quintupled. That is, companies, the US corporate
+sector became much more multinational in character, not just selling things abroad, but making them abroad as well. In the share of cross-border
+equity ownership has steadily increased
+as indicated in the link here in this slide. What of all these facts imply? Well, there are a few
+important implications for tax policy that
+I'd like to draw. First of all, these
+changes have put increased pressure
+on tax systems that are based on
+corporate residents. Its natural course to think of individuals as residents
+of particular countries. But our income tax system also identifies corporations
+by where they reside. In 1971, it may have been pretty obvious what a US
+company was and what it wasn't in
+terms of who owned the company and where it produced that's
+much less true now. There's much greater
+multinational activity of companies that are
+said to reside in the United States
+and they have many more shareholders
+from abroad as well. These two factors mean
+it's easier to engage in so-called corporate
+inversion that is to change the corporate residents through corporate reorganization
+as a company might want to do if being a resident of a particular
+country or the US or some other country is disadvantageous from
+a tax perspective. A second implication for
+tax policy is that there's increased pressure on taxes does based on where
+companies produce. The location of production
+is easier to change now because companies already
+have internal supply chains. They're not just
+producing in the US or mostly in the US. They're producing around
+the world already. If they want to shift production from one
+location to another, they already have existing operations to make that easier. Moreover, because
+they're manufacturing things like microchips and pharmaceuticals and
+indeed services versus heavy things
+like autos and steel, they don't have to
+worry about location as much in terms of
+transportation costs. Finally, there's
+increased pressure on tax systems based on where companies report their profits. Here I'm emphasizing
+where they report their profits as opposed
+to where they produce. That is, we normally think of companies as earning profits
+where they produced. But one of the problems that governments face today
+is that companies may produce in one location
+and the report that profits deriving from those
+activities and another. Companies can shift
+profits among parts of their overall enterprise because they have operations
+in so many countries. If some of these
+operations are in low tax countries having
+operations they are already makes it easier
+for them to shift profits where they report
+profits to those locations. It's particularly easy
+when we're thinking about income being generated by an intellectual property. Because intellectual
+property has no logical location
+in the same way, we may know or a factory is. But it's a lot harder
+to say where a piece of intellectual property is or
+is being used in production. Now I should just
+add a point here. There have been some
+estimates in the literature recently if how much
+profit shifting there is suggesting that it's
+occurring on a vast scale. There's some potential
+problems with some of this research associated
+with difficulties of interpreting some
+government data. I'll just flag that as
+something that one should think about when looking at some of the results in
+this literature. Nevertheless, it doesn't take away from the point that
+this is an important issue. It's one that certainly
+drives thinking about tax reform. We have a situation where the existing tax systems, the ones that we
+have traditionally used for decades in the US and elsewhere to tax corporations based on where
+corporations reside, where they produce, where
+they earn their profits. This seems like an unstable
+situation because of the evolution of
+the world economy so what are the
+options for reform? Well, there are
+several that have been tried and some that
+have been proposed. The most common one are
+so-called anti-avoidance rules. Tax officials simply come up with ways to get
+tough on companies. Tightened rules to
+limit profit shifting, put in place various rules that simply make life harder for companies that want to shift where they
+report their profits. There are a variety of
+mechanisms that are already in place to do this but such mechanisms have
+adverse effects. If you make it harder
+for a company that's producing in the US to report profits in a
+lower tax country, that shifts more of the
+profits to the US perhaps. It also increases the
+effective tax rate that the company faces may make them more
+sensitive to the US tax rate. That's not to say, one shouldn't adopt
+anti-avoidance rules, but it's not an unmitigated
+benefit for tax authorities. Likewise, the US has been trying to come up
+with rules to limit inversions and
+these rules exist, but they are becoming
+increasingly complicated as
+corporations come up with different ways and different strategies for
+changing presidents. A second approach
+that has been used, especially in Europe, has been to come up with so-called patent boxes
+or intellectual special, favorable intellectual
+property regimes. The ideas, if it's income associated with
+intellectual property that is particularly sensitive
+to different tax rates and typically difficult for
+a tax authorities to locate, then maybe government should
+impose lower tax rates on such income as a
+way of admitting that they're not going to be able to impose this
+higher tax rate. Also, governments justify such favorable regimes
+using the argument that intellectual
+property may development, and may produce social
+spillovers in terms of productivity for other
+parts of the economy. Here's just an illustration or recent illustration
+of some of the patent boxes in place in Europe and the
+tax rates that apply. Now one of the problems with
+patent boxes is in a sense, it's a way of dealing
+with competition, tax competition by giving up. That is saying if we tax
+competition is a problem, and so we're just going to
+engage in tax competition, or be it for part of the income of companies,
+not all of it. But also in terms of
+the other argument for patent boxes that there
+are social spillovers. Research suggests that
+companies are responding to these favorable regimes by locating intellectual
+property income in favorable places but not necessarily doing the
+research and development in those places that
+would be associated with both social
+spillovers so this isn't an obvious
+fundamental solution to the problem of tax
+competition either. A recent proposal or series of proposals
+and indeed policies adopted beginning
+in Europe has been to target largely
+US multinationals, tech multinationals, with new separate taxes on gross receipts based on
+where their users are. The argument is companies like Google or Facebook
+have lots of users and just to a company
+like Germany or France. Yet by traditional
+income tax rules, they don't have what's called a nexus in those countries, they don't really engage in any traditional production
+operations there. Therefore by standard
+income tax rules, they don't owe anything
+to those countries, which doesn't make those
+countries very happy. They've simply come up
+with an adhoc solution, digital surface taxes to tax them based on
+whether users are. In several individual
+countries, starting in Europe, but not exclusively
+European countries have adopted these and indeed the European Union
+as a whole has been moving forward
+with such an idea. Here are examples
+of countries at various stages of adoption
+of digital service taxes. A fourth approach is
+destination-based taxes. It's related to the
+digital services idea, but it's a much more
+fundamental one, but it's not based simply
+on the provision of digital services it could
+apply to any company. It's to focus the tax base not on where companies reside, where they report their
+profits, where they produce, but on where their sales are, where their consumers are. Because consumers are relatively immobile and so by imposing
+a tax based on destination, it's likely to be
+less susceptible to a competition over tax
+rates among countries. Because competing for
+corporate profits or for production
+location is likely to be much more intense than
+trying to get people to move across borders to take
+advantage of lower tax rates. The main existing tax
+based on destination, the value-added tax shows
+little susceptibility to the tax rate competition like the kind I showed you
+for the corporate tax, and indeed, here is a slide for value-added
+taxes and the G7. Of course, there are
+only six countries represented here because the United States
+alone among the G7 and indeed alone among
+a much larger group of developed countries, does not have a value-added tax, does not have a national destination-based
+consumption tax. But you'll see here there's
+no obvious downward trend in these taxes and indeed, some of the blips downward represent counter-cyclical
+policies, such as the United
+Kingdom during the global financial crisis. If you omit those drops, there's probably
+an upward trend, if any trend at all
+in these rates. That confirms that you
+don't see the same kind of tax competition here as you
+do for corporate tax rates. That's not necessarily
+because it's a tax on consumption rather
+than a tax on income, but because it's a tax based on destination rather than on
+the location of earnings. Now because of the reduced focus on residence or
+location in production, the unilateral adoption
+by one country might actually push other
+countries in that direction. If the US, for example, were to move its corporate tax to one based on destination, it would encourage more
+companies to produce and report their profits in the United States because
+they would no longer be subject to tax based
+on those actions. That might be
+self-reinforcing to get other countries
+to do it too. It's a form of tax competition, but it doesn't necessarily
+require a low tax rate, simply a different tax base. What I think is an
+important and overlooked objective international
+tax policy discussions, which is the idea
+that in addition to all the other things we'd
+like tax systems to have, efficiency, equity, ease
+and administration. Incentive compatibility
+is important too. That is, countries perceiving it to be in their own
+best interests to adopt a tax system without having to be
+coerced by others. Now, this role of destination-based
+taxation in tax reform and the importance of
+incentive compatibility, is something that's
+emphasized in the book that I and several
+collaborators shown here, recently published with
+Oxford University Press. Indeed this book is not
+only available from Oxford University
+Press in hard-copy, but if you are willing to live
+with a PDF file, instead, you can download it for free, by arrangement with
+Oxford University Press. In this book, which we produced over a
+period of several years, we put forward in addition
+to the general idea of destination-based taxation being an important
+potential step in tax reform, we hammered out two
+specific proposals of how to get there. One big, one small. The small one is that is small relative to
+the current system, is the idea of taxing residual profits based on the
+location of sales income. Income from sales. Which we call the RPAI. The other is a destination-based
+cash flow tax, DBCFT, which came up in policy
+discussions in the United States a few years ago and
+that would represent a much bigger change toward
+destination-based taxation. Let me explain each of
+these a little bit. The RPAI is a hybrid system. It would say for routine
+operations that companies do where they're just doing
+traditional production, easily identified
+using tangible assets and probably not earning a particularly high
+rate of return, the old system probably
+still works pretty well. We can tax that based on where companies report that they are producing and
+earning profits. But then there are a lot
+of residual earnings that will remain for companies after these routine
+profits are taken out. That's especially true for the companies that are the
+biggest companies in the US. The tech companies that
+I showed you earlier. Allocating routine earnings
+for these companies would not account for a very large
+share of their earnings. For those earnings, we would allocate based on the location
+of net sales revenues. It's a form of partial
+apportionment system, which for those of us who
+live in the United States, is familiar from the way
+states tax corporate income. We have apportionment in the US of among the
+states of all income, not just residual income. We have been moving steadily
+as the States choose their own ways of apportioning toward using
+sales apportionment. That is, there's no coercion or national coordination
+among States. States have been choosing how to apportion income among them. They have chosen sales, they've chosen destination
+because of the attractiveness that exists for using
+destination as a way of determining where
+to tax income. That confirms that the idea
+of incentive compatibility. That is, states have gotten
+two sales apportioned taxation of income without
+any national coordination. The destination-based
+cash flow tax would start by imposing a cash flow tax
+on domestic operations. It would impose so-called
+border adjustments, eliminating the import deduction
+and the tax on exports. These border adjustments would work precisely as they do under existing
+value-added taxes. What border adjustment
+does is two things. First of all, it
+shifts the location of tax from production
+to consumption. That is, things consumed in the United States would be taxed in the United States even if produced elsewhere and
+things produced in the United States but consumed elsewhere wouldn't be taxed. That's what border
+adjustments do. But of equal importance of border adjustments would eliminate profit
+shifting opportunities. Because transactions
+with related parties in other countries would not be part of the tax calculation
+the companies would do. Therefore, any
+misstatement of where the profits are earned or
+how the big the profits are, or borrowing and lending that companies do
+among related parties, none of those things
+would have any impact on the taxes due when a country adopted a DBCFT. Now, the DBCFT is a profits tax, but it's equivalent
+to evaluated tax with one important difference, which is it doesn't tax
+the wage component. The wage and salary
+component of value-added. In that sense, it's a tax on profits rather than a
+tax on value-added, and that makes it much
+more progressive. Indeed, one can show that it's equivalent that the destination-based cash
+flow tax is equivalent to a onetime tax on the wealth of residents through taxing the future cash flows
+that they receive. Now, the DBCFT, as I mentioned, was proposed in the United
+States in 2016 during the discussion leading up to the Tax Cuts and Jobs
+Act passed in 2017. It was not implemented
+because of several concerns. Some including the short-run
+effects associated with exchange rate adjustment that would have needed to occur. I think legitimate
+concerns and there were differences in opinion of
+how important these were. Concerns about a
+possible WTO reaction. I think here I would
+just highlight that the problems have to
+do really with the way the WTO rules are structured in the sense of emphasizing
+form over substance. Because the equivalents
+of the DBCFT do, are perfectly acceptable tax
+systems under WTO rules, should've made the DBCFT
+acceptable as well. But they were reasonable
+concerns that wouldn't have been true given the
+way the WTO operates. Finally, and I have
+to emphasize this and this relates
+to the Feldstein, Krugman quote that
+I gave you earlier. There was just a general lack of understanding of the
+plans operation, it's incidence and
+its economic impact. Indeed, there was a view
+that it was protectionist, that it was very pro-export
+and very anti-import. Things that economists generally understand are not true. But we're very hard to convey
+in the public discussion. The final approach in terms of things that
+have been tried or suggested as a way of dealing with the current problems of our tax system is
+the kitchen sink, which is how I would describe
+the Tax Cuts and Jobs Act. Because it had a little
+bit of everything. It reduced the
+corporate tax rate, just simply continuing
+tax competition. It introduced some additional
+tax avoidance measures by introducing a global
+minimum tax on US companies because it was
+just a US tax law. It introduced something
+with the acronym GILTI. Taxing income earned abroad by US companies if that income
+was taxed at too low a rate. It introduced investment
+expensing and targeted border adjustments
+on exports and imports borrowing
+from the DBCFT. Even though that wasn't
+introduced in law, some of the ideas
+and the reasons for those ideas did find their way into the Tax
+Cuts and Jobs Act. It didn't have a
+unified logical basis. It borrowed from
+different ideas, but also it's not really
+a stable situation. It's not a stable
+situation for the US and it's not stable
+for the world either. It generated a tax revenue
+loss for the United States, which we certainly need revenue at this point and
+there was concern about that. It discourages US
+residents because the minimum tax was
+adopted by the US alone, not by other countries
+and therefore, it could be avoided by not
+being a US resident company. Finally, there was no measure in it to deal with
+digital services, which was less of a concern
+for the US, but remember, these are US companies that largely would be hit by the
+digital services taxes being proposed elsewhere and so not coming up with a
+solution for that is certainly something
+that will not leave other countries
+happy with the outcome. Finally, that brings us
+to where we are now, which is the initiative
+taking place over many years, reaching a crescendo this year. A process put in
+place by the OECD, which they referred to as
+a two pillar proposal. Now I have to pause here and say that we don't normally think about the tax system in
+the US as having pillars. When I've heard
+this discussion of two pillars and
+how it would work, presumably the idea is that
+there's two pillars that are going to hold up the
+world tax structure, but a different picture comes to my mind based on the story
+from the Old Testament, which is the story of
+Samson and the two pillars. Of course, Samson,
+his activity with the two pillars was not to
+use them to hold anything up, but rather to bring
+down the temple of the Philistines and the
+Philistines with that action. I'm not sure that the OECD would necessarily
+appreciate this analogy, but if one continues
+a little bit longer and thinks about whom Samson
+might be in this situation, perhaps it might be the
+Republic of Ireland or one of the other countries
+that has not yet signed on and become a member of the coalition of the
+willing in this initiative. I'll come back and talk
+about that process shortly. Let me describe how
+this would work. Pillar 1 is essentially
+a replacement for the digital service taxes
+that many countries, especially in Europe and the European Union
+itself have proposed. It would allocate
+to market countries a fraction of profits
+above the threshold, so 20-30 percent of profits above 10 percent
+of sales revenues. But only of extremely
+large companies, those with over £20 billion
+a year in annual revenues. It would exclude financial
+services companies and those in
+extractive industry, some of which are
+also very large. By its nature, it
+really is targeted very much at tech companies and
+indeed US tech companies. Pillar 2 would be a
+global minimum tax along the lines of what the US adopted in 2017 with some
+important differences. It would be at least
+15 percent imposed above a threshold seven and a half percent
+of tangible assets plus payroll for large
+multinationals, not as large as Pillar 1, but greater than £750 million
+a year in annual revenues. Pillar 2 also includes some other provisions which
+would encourage countries to adopt it because
+remaining outside of the general agreement would impose a penalty on
+those countries. Say a little bit
+more about Pillar 1. Estimates suggest that if the aim was to target
+largely US multinationals, it seems pretty successful. These estimates suggest
+around close to two-thirds of global tax revenues would be
+generated by US companies. Half of that amount would come from five
+companies: Apple, Microsoft, Alphabet,
+Intel, and Facebook. It does relate to one of the other proposals I suggested in being destination based, like the RPAI proposal, the hybrid proposal that my
+group and I put forward, but it's much more limited. It only applies to
+a small number of extremely large tech
+companies and it allocates only 20-30 percent of excess profits
+rather than all. However, as I'll come back to, one might think of this
+as a first step in a direction adopting the
+principle more broadly. Pillar 2 is, as I said, a little bit like the
+US GILTI provision. But it would be tougher because it would impose a
+higher tax rate. On the other hand, it
+doesn't go as far as the proposal put forward by the Biden administration
+earlier this year, which would have had a tax rate of 21 percent and
+indeed would have had no threshold over which
+taxes would be assessed. Really that was aimed
+much more not just at companies shifting profits
+to low tax countries, but really at companies shifting production activities
+themselves. It was aimed at a broader array of activities of companies
+that involve tax competition. Well, this brings us to an important question. Can the agreement
+work? Should it work? There are immediate questions
+one should ask about this. That is, we might never
+get off the ground. Among these are whether the US can get treaty
+approval for Pillar 1. The US has a variety
+of treaties with other countries indicating who has the right to tax income, and Pillar 1 as an income tax, but one based on destination, would be a seating
+taxing authority to countries which as I said, have no taxable nexus under standard income tax rules for collecting tax
+from these companies. In order for this to work, and for the US to allow
+other countries to do this, they would have to be a
+renegotiation of treaties. Even though the
+Biden administration has come out in
+favor of Pillar 1, the Biden administration
+alone doesn't get to decide whether we
+have a new treaty. It has to be approved
+by 2/3 of the Senate. This is not something that can go through reconciliation. Most likely, and therefore
+is likely to be difficult. It's important to
+keep that in mind because many of the countries who have agreed to
+the overall package, including Pillars 1 and
+2 to agree to Pillar 2 in exchange for
+getting Pillar 1. If Pillar 1 doesn't happen, we don't know what will
+happen to Pillar 2. A second question just from the US perspective is
+whether the US can get the minimum tax being proposed through reconciliation, which would require 50
+votes in the US Senate. We know it can't get it through a regular legislative
+process outside of reconciliation because
+the US doesn't have 60 votes in the
+Senate to approve that. But even 50 votes is tight and it's hard to know
+whether that'll happen. Finally, can Europe
+achieve unanimity? The European rules for adopting this tax reform
+require unanimity, and I highlighted
+Ireland before, but Ireland isn't the
+only member country of the European Union that has yet to sign on to
+this agreement. Without Europe being able to coerce or bribe these holdouts, it's not clear how Europe
+would join this agreement, even though in principle
+has said it will. These are all short-run
+concerns that could cause the agreement to
+not reach fruition. But there's also a more
+fundamental challenge in the longer-term arising from the attempt to
+preserve a tax system, which is fundamentally based on concepts that don't
+really work anymore, that are ill-defined
+and endogenous. Corporate residents
+and the location of production and profits, something that tax
+authorities have taken to calling the location of value creation as if somehow
+that is easily identified. Because it relies on these ill-defined concepts and concepts that are
+difficult to measure, it's really not going to be very sustainable unless
+countries adopt and adhere to similar rules. That lesson incentives
+for companies to shift production
+profits or residents. What does that require? It requires that countries adopt similar minimum tax rates and bases across home countries, so that the base and then
+the rate together provide similar effective tax rates
+to less than the incentives for companies to shift
+corporate residence because the residents determines which minimum tax applies to you. If the rates are similar, there's not a strong incentive to move corporate residents, but only if the
+rates are similar. You need similar
+corporate tax rates and tax basis in the
+countries themselves, the regular corporate
+tax rates in basis to prevent companies from shifting their
+production and profits location from one
+country to another. Even if these countries
+are not low tax countries, that would be subject
+to the minimum tax. Differences in tax rates
+between the US and some other economy without
+a very low tax rate, there might still be big enough differences in
+these tax rates and tax basis to encourage shifting of profits in production. Finally, you need a
+similar regular tax rate in the country itself, and the minimum tax
+rate that country applies to keep companies that are resident in
+those countries from shifting their profits and
+their production abroad. This is relevant, for example, for the United States, where we've agreed to a
+15 percent minimum tax. But the Biden administration has at least currently
+still proposing a 28 percent tax rate
+on domestic income. A big difference from
+the minimum tax rate. Well, what should
+these values be? There has been so much focus on that is these common values. There's been so much focus on the objective if you're
+eliminating tax competition. That one can easily lose sight
+of the fact that limiting tax competition isn't the only or the major objective
+of tax policy. There are many other
+objectives as well, and one needs to think about the other
+objectives to think about whether the corporate
+tax rates should be 21 percent, 28 percent, 35 percent, whether the minimum tax rate
+should be 15 percent, 21 percent as it was
+originally proposed, whether the tax base should
+have a threshold or not. These are all questions
+that can only be answered if one thinks about what governments
+are trying to achieve, what they're trying
+to achieve in terms of encouraging saving
+and investment, how much revenue they need
+from the corporate sector. These are not questions that are addressed in simply
+agreeing to have the same values,
+but unfortunately, wanting to pursue other
+objectives as well as reducing tax competition
+is likely to lead countries in
+different situations with different objectives
+in different directions. Now, if countries
+instead had moved in the direction or more in the direction of
+destination based taxation, governments could pursue
+different objectives without worrying about
+tax competition. For example, if
+the US had adopted a destination-based
+cash flow tax, it could have kept its 35
+percent tax rate in 2017. It wouldn't have
+had to worry about tax competition and lowered
+its tax rate to 21 percent. Other countries
+seeking more revenue or less revenue could adjust
+their tax rate up or down. Countries would have a freedom
+that they don't have in the current situation or under the proposed
+two-pillar agreement. Where does that leave us? Well, I'm not going to
+make the mistake of trying to predict what happens
+in the short run. How far we get
+with Pillars 1 and 2 and the proposed
+international agreement. But what I will say
+is that I think over the longer term, whatever the success
+and the short-run in getting this agreement
+adopted widely, they will still continue to be pressures of a type I just discussed for countries to
+move in opposite directions. I think part of
+that movement will be a further movement in the direction of
+destination-based taxation. I mentioned that the 2017
+tax cuts and jobs act did include certain pieces taken from the destination-based
+cash flow tax, and I think that such ideas will continue to be part of tax policy and
+perhaps expanded. I think it's quite
+possible that Pillar 1, although very narrow as proposed because it's
+really just meant to replace the Digital
+Service taxes that had been proposed
+and adopted can grow, and countries, once they see
+that it works pretty well, may want to lower
+the threshold and make it so that it applies to a much larger group
+of companies. If once these movements toward destination-based
+taxation take place, it's going to not only give countries more revenue
+from these sources, but it's going to
+lessen the need for other measures
+like minimum taxes. Because minimum
+taxes really aren't needed when countries are relying more on
+destination and less on location of
+production and profits. I think that's going to put the less revenue needed because of more revenue from
+destination-based taxation, and the less need for to
+backstop the tax system. Because of destination-based
+taxation will put further pressure on minimum taxes to
+whatever extent they're adopted as countries see them as a nuisance that
+doesn't really serve any unnecessary purpose as the tax systems naturally
+evolve it worldwide. With that, I thank you again
+for listening to this talk. 

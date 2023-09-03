@@ -1,0 +1,830 @@
+Daron Acemoglu: I'm going
+to build on what Matt did. In going one step
+beyond diffusion is, or related problem
+is the propagation of shocks over different
+types of economic networks. Again, here, the network is of great importance if you
+think of in a labor context, how shocks go through
+one labor market to another because of
+trade migration or other interactions between
+the labor markets or how shocks are
+propagated across, regions, firms,
+banks, innovators. Those are all problems of interaction across economic
+units of different sorts. They have a lot in common with the diffusion problems
+that Matt talked about, but generally we have a little bit more economic
+structure because we know just a little bit more about what atomic interactions
+are taking place. I'm going to try to introduce
+some of these topics, show some general
+lessons that have been obtained in the
+literature as well as some interesting directions
+for research and thinking. In the process, we're going
+to talk about issues of systemic risk, and how different types of
+networks can be classified in terms of their robustness or stability or fragility to different
+economic shock. I'm going to start talking about shocks in interactions
+and production networks, then talk a little
+bit about reduced form empirical approaches, then talk more about
+aggregate volatility. In particular, put some emphasis on the conditions under
+which we can think of macroeconomic shocks washing
+out in the aggregate, and what interactions between different productive
+sectors or firms, make sure that there is greater stability or
+greater fragility. Then I'll talk more about the same issue in the context
+of financial interactions. Then finally, I'll come
+about, to talk about, Innovation Network
+where ideas flow, which is similar to some of the issues that
+Matt talked about, but in putting this again in the context
+of economic data, in particular patents
+and citation, we have a lot of
+data that provides some interesting perspective on the id flows within the economy. Let me start with a production
+networks because they are very simple at some level. I'm going to build on a
+very well-known paper by Long and Plosser, which is incorrectly dated, it's not 1993, 1983 is an relatively old paper
+by as these things go. Then more recent paper by
+myself with the Vasco Carvel, who also has Ozdaglar,
+and Tahbaz-Salehi. Essentially he say, classic
+input-output economy, output of each sector
+is either consumed or used as input
+by other sectors, and I'm going to
+simplify things and just talk about a static
+economy without capital. Let's take this and
+output of Sector I, is going to be some random
+term UIs and error term, ally is the amount of labor
+that that sector hires, and then the Cobb-Douglas aggregate of the inputs of other
+sectors that it uses. In particular, xij is
+the amount of good j, that Sector I uses as inputs. The importance of that is
+given by the exponents. If wij was equal to
+zero, of course, the amount of good
+that I would use from that Sector J wouldn't have mattered and I wouldn't
+use any of it, but if wij is a large number, that's a very important
+input for me, I might use quite a bit of it. The specific day
+that I wrote it, is motivated to make the input-output matrix have some simpler ways
+of representation. That's why I put the one minus Alpha in front of the wij, but that doesn't really matter. As I said, whatever is
+produced is consumed, CI is final that consumption or is used as input
+into other sectors. I sum over xji, xij was what Sector
+I uses of Sector J, now I'm looking from the resource constraint
+point of view to sector I as an input producer, input supplier to other sector, so I sum over xji, it's all of the other Sectors
+J that use I as input. There are no aggregates shocks, and I'm assuming that things are all finite and well behaved. Let sometimes it's useful to proportionate to
+think of log shock. Epsilon I is the logo of UI. This input-output
+structure again defines a network or a graph
+exactly like before. There's a link from j
+to i of strength wij, if j is an input supplier to i. This is again, a directed
+and weighted network, it's not symmetric. The fact that I am supplying
+chemicals that supplying to pharmaceuticals
+doesn't mean that pharmaceuticals are
+supplying to chemicals. Of course, the strength of
+the lengths is different. The reason why I've made this normalization is that
+I'm going to represent this, wij is against as a network, as an adjacency matrix, W. With this normalization here, then I put one minus Alpha here, constant returns to scale
+is going to correspond to the row sums of this
+network being equal to one. Again, think of the
+network of Matrix W. The rows are how much inputs I get from different sectors. The columns are how much inputs I supplied to other sectors. Wij is are the rows,
+wji's are the columns. The degree of a sector that linking back to the concept that Matt emphasized the degree there was how many
+neighbors I have, this a weighted graph, but I can define degrees. Similarly, I just sum over the weights that I
+matter in other sectors. In other words, it's
+the column sum. If you look at the Matrix W, again, it's row sums
+are equal to one, it's column sums are given by the degree of the
+corresponding sector. Now, this W Matrix
+is very important. If we couldn't observe it, we could still do the theory, but it would have
+limited ability and you'll give us
+limited ability to use this for empirical work. But fortunately, we can observe something pretty close to it. If all markets are competitive, we know that the value shares, from given the Cobb-Douglas
+production function are constant and are equal
+to Cobb-Douglas exponents. In other words, the value share, which means how much I
+spend on the inputs from Matt sector relative to
+the value of my sales, smiley of my production is
+going to be exactly my wij, with j being math
+sector, i being me, but that's essentially what the input-output table measures. The input-output table measures how many units, or how
+many dollars worth of chemicals do I need as a pharmaceutical sector for
+every dollar of production. That's exactly the thing that
+is constant equal to wij. If in fact the
+Cobb-Douglas world is a good approximation to reality, the input-output table gives
+us exactly this W Matrix. Now let's also put some
+consumption side to this. Let's imagine that
+consumers also have Cobb-Douglas style
+of preferences, the fact that it's
+symmetric doesn't matter. Then there's a labor
+market clearing condition. Then it comes to
+competitive equilibrium is just the usual thing. All the representative household maximizes the utility function. All firms maximize profits and labor and goods
+markets clear. Now, what does the
+equilibrium look like? It turns out that it has a structure that's very
+similar to what we have seen. That's because this is
+a linear model, again. It's a linear model
+because you can take the logs of everything
+and that's log linear, but linear, log-linear,
+same difference. In particular, what
+you can show is that, output GDP or log of
+it is equal to V, which is some vector, which is, you can call
+it the influence vector, I'll tell you what
+exactly what it is, the sales vector times
+the vector of shocks. Remember the epsilons
+are these things here. You take the vector
+of these epsilons, and then you multiply
+that or you take the inner product of
+that with some vector v. That's going to
+be loosely speaking, how influential a sector is, and that's going
+to give you GDP. A GDP is very closely related in this model to the
+network structure or to the input-output
+structure, because v itself is a function of the Bonacich centrality given the input-output matrix. In particular, this v
+vector can be computed as, again a Bonacich centrality
+type of measure, with coefficients
+one minus alpha. Again, you take the inverse of this and then multiplied
+with a vector of ones. Why? Well, the reason
+again is not because Bonacich centrality
+is a magical object, but this is a linear model
+that's defined recursively because I will demand
+more of Matts, inputs if I myself, I'm supplying a lot
+to other people because I need to
+satisfy that demand. My location in the
+input-output table is going to determine how much of Matt I need, and how important
+shocks to Matt will be, because shocks to
+Matt will choke me off and I won't be able to
+supply those other guys, that's against the recursivity, and that's why this comes. But of course, those of you who suffered through old-style, input-output analysis
+will recognize this not as the
+Bonacich centrality, but as the Leontief inverse. It's exactly the same
+thing, a curious thing, Leontief himself, and all of the economists working
+in the 1950s and so on were thinking of these economies with Leontief technologies. It was one unit reads one
+unit type of technologies. It's a really strange
+technology at some level, but it turns out that
+it's Cobb-Douglas is exactly the same
+thing that comes out. As I think the Cobb-Douglas, is a much better way of thinking about the reality than
+the Leontief technology. It also turns out that this influence vector has another economic interpretation, it can be shown as a result
+that goes back to Halton's, the paper in the review
+of economic studies, 78, that is actually
+the sales vector. If you take the equilibrium
+and take the total sales of sector i divided by total
+sales in the economy, notably, sales is not equal to GDP because there are
+intermediate goods here, but that's going to
+give you the VI. That also emphasizes what
+you might have observed from matrix algebra that the
+elements of V sum to one. Essentially, what this
+says is that therefore log GDP is a convex
+combination of the shocks to different sectors
+with weights given by how important sectors are according to their location
+in the input output table. If you want to think
+about why is it that the Leontief
+inverse comes up, there's another way of doing it. Time is short. I don't know how
+much to go into it, but you can derive it
+from first principles. Essentially, it goes
+something like this. I'm not going to
+repeat the Math. The Math is here, but I'll
+just explain the intuition. You hit Math with a shock. You could compute the
+first-order effect Matt is with a short
+hit this with a shock. He supplies less. That has an impact on me. You can immediately compute from from the production
+efficiency cost minimization, how much of an effect
+it's going to have on me. That's the first order effect. But then there's a
+second-order effect because then I will supply less, and that's supply less
+perhaps we'll go to some other supplier
+of Matt and there's going to be a cycle,
+there's going to be a walk. Then you can take
+the second-order, which is I supply less, and
+that goes less to call it. Then you can take
+the third order and so on and so forth. That's going to be a
+power series expansion. What are the terms of that
+power series expansion? It's going to be powers of the input-output
+matrix because it's the input-output
+matrix that gives you what's
+the second-order, what's the third order
+and so on and so forth. Again, you have series as power series expansion into
+the input-output matrix. Then again, if it's converges, That's equal to identity
+matrix minus that thing. That's the Leontief inverse. Now, once you have this, you can do quite easily
+reduced form analysis. Now, in particular, if you had this structure, you knew what the
+structure is, and you had some candidates for what
+these Epsilon shocks are. You could just put
+those in a regression. Now you have to be
+careful a little bit because there are
+a bunch of things that Cobb-Douglas structure
+puts some more discipline. I talked here about
+the effect of Matt that Matt has on me. Why didn't I talk about the
+effect that I have on Matt? Well, if you think
+about firstly, economic principles that
+should be present as well, I'm hit by a shock. As a result, I might want to
+have less of maps inputs. Now, it turns out that that effect is the
+sum of an income and substitution effect
+and it cancels out exactly in when the shocks
+or productivity shocks, like the ones that
+I have written. There are no effects
+from me to my suppliers. But on the other hand, if the shocks or demand shocks or for example, import shocks, then actually what you
+can show is that it's the upstream is the
+effects that go to the suppliers that goes from the downstream towards up
+that are more consequential. Actually, the upstream
+ones are not so important. In any case, one
+simple application of this as in a paper
+that David Autor, Brandon Price, David Dorne
+and Gordon Hansen and I have written and it just takes the source of variation that David and Gordon
+have exploited in the context of
+exogenous shocks to the two different sectors in the US economy coming from
+the fact that imports from China have expanded greatly in some industries
+and not in others. Here is just a very
+easy way of doing it. That what we're
+calling downstream here is shocks that start from
+the downstream and go up. Upstream are shocks that starts from the
+upstream and go down. In fact, this is just you take the
+first-order and this is take you take the full
+Leontief and in both cases, in addition to the
+shocks that this is for Four Digit Manufacturing
+Industries, what you can see is
+that in addition to how much you are affected by imports yourself, and
+here we follow out or Dornan Hansen and use the
+exogenous component of this meaning component that is correlated with the increase in imports in that sector to
+other non-US OECD economies. One effort to purge this
+of the fact that it's the things that are specific to that specific industry
+in the United States that's causing the expansion
+of the Chinese imports. But whatever that is, that effect is complemented
+by this downstream effect. Then consistent with the theory the upstream effect itself is not very precisely estimated. Then when you go
+to the full effect with the Leontief inverse, that's even more
+precisely estimated. Again, the purpose here is
+not to focus on the numbers, but once you have
+this perspective of shocks going from one
+industry to the other, or we can do this from one
+locality to the other. You can easily find ways of using this as a useful
+source of variation. Here it actually turns out
+to make a big difference. If you ignore these upstream, downstream and put
+up with shocks, you would greatly underestimate the impact of Chinese
+imports on the US economy. At least so we find according
+to these estimates. Now that we have the structure, what can we say about aggregate
+volatility in general? Of course, there are many ways of measuring
+aggregate volatility. Let me here just do
+the simplest thing, take the standard
+deviation of GDP. Remember, GDP itself
+is v prime Epsilon. It's the convex combination
+of the Epsilon. Therefore, this
+thing here is equal to the square root of the sum of the variances of
+these epsilon shocks weighted by the entries of this influenced
+vector squared. Where I don't have the
+covariance terms because I'm assuming that these sectoral
+shocks are orthogonal. Of course, if they're
+not orthogonal, then you would have
+the covariance terms. Now looking at this expression, you would immediately see the rationale for the reason why macro economists
+for very long time felt justified in ignoring
+macroeconomic shocks. This was stated in Lucas's
+theories of business cycles, for example, where
+he said you can forget about
+macroeconomic shocks. You can forget about
+industrial shock because they're all
+going to wash out. If you want to think
+about macroeconomics, you have to think about
+macroeconomic shock, aggregate productivity shocks,
+aggregate money, shocks, aggregate demand shocks
+or whatever those are. Then you can see that from here. For example, I already
+told you that VI itself has two elements of
+the VI have to sum to one. The elements of the v
+vector have to sum to one. If you have n of these sectors, then you're going to have each element is going to
+be approximately 1/n. If n is large, then you have 1/n square here. This is going to go
+to zero very fast. That was the argument
+that because you have many macroeconomic units,
+and many decentralized, disaggregated sectors,
+whatever hits these sectors in an idiosyncratic way
+that does not have this aggregate
+macroeconomic component is trivial and can be ignored. Let's actually think
+about that a little bit. Then let me first start by talking of irregular networks. Things are called
+regular networks if the degree of all out-degree. Here the indegree is equal
+to one because I've made all industries equally
+dependent on other inputs. That was the row sums of
+the W matrix equal to one. If the out-degree of all industries is
+also equal to sum d, Then I'm going to
+call that a regular matrix or regular network. Here are two examples
+of regular networks. Rings are regular network
+because I supply to Matt, Matt supplies to Karla, Karla supplies to Jeff, Jeff supplies to others, etc. But each one has one
+role as a supplier. That's irregular network. It's is the complete network. We also apply equally
+to each other. But these two are very different economic, and this one is
+a very sparse network. It looks it's going to
+create a domino effect, whereas this is a
+complete network. Let me also make things
+simple and suppose that all Sigma i's
+are equal to Sigma, meaning that all sectors
+have the same variance. Then you can show that all regular networks have exactly the same
+aggregate variance. It's given by Sigma
+over square root of n, which is exactly what the law of large numbers type
+of arguments are. What you use as part of the central limit
+theorem would imply. This is actually a somewhat surprising result
+because a lot of people had the intuition that
+this structure here, which has got much
+greater sparseness, should be much more susceptible to shocks than this
+complete graph. This theorem, this result here says that
+that's not the case. Why is that? Well, the reason is because this
+is a log-linear world. I'm looking at
+proportional shocks. Linear shocks implies that if I have some irregularity here, positive shocks in one
+part of the network cancel out the negative shocks in some other parts
+of the network. That's true regardless
+of whether you are in a sparse world
+or a non-sparse world. Or mathematically what
+happens is that in both the ring and the complete network or
+any other regular network, the VI's are in fact identical, exactly equal to 1/n. The importance of each
+sector as a supplier to other sectors is the same and as a result of the influence
+of each sector is the same. This would suggest that one
+common conjecture was wrong, that the sparse
+networks should be more unstable than the
+complete network. But another part
+of the conjecture, the Lucas conjecture, what Lucas is not the only one
+to make this conjecture, but the macro economists
+conjecture is right, that these things are
+actually scaling with square root of n. For n large, this number is trivial. Any microeconomics source of volatility that you're going to get is actually very small. But actually that turns
+out to be wrong also. All you need to do is go out of the regular
+networks class. Here is the general argument
+is that if you make the network asymmetric
+in terms of how important different
+industries are as suppliers to
+other industries, you're no longer going to have
+this canceling of shocks. The key thing was that Patrick was getting hit
+by a negative shock, Eric was getting hit
+by a positive shock, and the two got canceled out. But if Patrick is very important to the
+supplier and Eric isn't, that canceling is
+not going to work. The extreme case of that
+is the star network where one industry is
+overwhelmingly important, then you can see this trivially. Hit this guy with
+a negative shock, there is no way you
+can recover from that. In fact, the star network
+turns out to be the most susceptible to
+macroeconomic shocks. You can compute what the Sigma aggregate
+is, it's like this. This is just n minus 1 over
+n. This is just like 1. Where did n go? N is not there. In fact, this is 1 in which the law of
+large numbers doesn't hold because however
+many sectors you add, the star remains the star, there is no way of canceling
+the shocks to them and so the law of large
+numbers doesn't hold, so it's an extreme case in which the macroeconomic shocks are
+actually quite important. Because the argument about
+the macroeconomic shocks not being important was that A, these shocks will
+cancel out and B, they will do fast, so this
+says they want to fast. In fact, they won't
+even cancel out. But when you go to more
+realistic structures, it's not going to
+be that the law of large numbers doesn't hold, but it's going to hold
+very, very slowly. As a result you need huge number of microeconomic units in
+order to do that canceling. The other important
+thing here is that, this is a systemic volatility. Systemic volatility essentially means
+system-wide volatility. It means that different
+units move together. Again, macroeconomists generally thought for a long
+time, well, still do, that to get system-wide
+volatility, you need system-wide shocks; monetary policy, some amorphous aggregate demand,
+whatever that means. But here you hit this guy, you're going to get
+system-wide volatility because everybody else
+is dependent on that. Here is the US
+input/output table. This does not look
+like a ring network or a complete network,
+it's highly asymmetric. It's not a star, but it looks pretty much
+like a star perhaps. Here is one guy which
+has many things, here's another guy, many things. Is this like a star? Well, we do have a
+quantitative way of answering that question, so we need to dig a little
+bit deeper into it. Actually, once you take
+the input/output matrix, there are more structural
+things that you can do which are also fun, but since time is short, I'm going to just
+mention the idea rather than go into the details, but essentially
+the idea is this. There is an interesting
+paper by Foerster, Sarte and Watson in the JP which does a
+little bit of this, but what they do
+is that they write a model on
+input/output structure and then calibrate that model taking the input/output
+structure seriously. Then from that calibration
+like indirect inference, they back out what's the
+importance of sectoral shocks. But in fact, you could
+do more than that even without taking
+the calibration, the capitals stock, etc. If you take the
+input/output seriously, then the input/output structure suggests a very specific pattern of core movement across sectors as a function
+of sectoral shocks. In other words, if I am connected to Patrick
+but not to Victor, then sectoral shocks to me should co-move me
+together with Patrick, but not with Victor
+to 1st order, but perhaps to 2nd order if Patrick is
+connected to victor. In fact, the answer to that is again the Leontief inverse. You can show that the correlation between
+sector i and sector k is exactly going to be equal to a function of the entries
+of the Leontief inverse, so sum of i, k, j. How exactly you come up to this. This is the part
+I'm going to skip because it's pretty
+straightforward, but I don't want to delay you guys going out to dinner or drinks too much. But you can compute these things once you take the
+input/output seriously. This is a very, very
+simple exercise, I haven't seen anybody
+do this exercise. Take the input/output matrix
+seriously and then say, given the correlation
+structure across sectors, can I back out these things? It seems quite doable. I gave you some very
+simple results; regular networks, what is
+the aggregate volatility? The star network, what is
+the aggregate volatility? But that's as much as
+I can do for finite n. But in fact, as I said, the arguments here
+are based not on finite n, but on asymptotic arguments. You take n to infinity, you make the economy more
+and more disaggregated. Say you start with
+one digit, two digit, three digit, four digit,
+five digit, six digits, seven digit and so
+on and so forth, as you make it
+more disaggregated to what's happening
+to the economy. You can actually get
+results about the law of large numbers, and the
+behavior of this economy. Let me just give you
+a flavor of those. I'm going to talk
+of the stability or the robustness least
+systemic risk, if the economy really behaves like our law of
+large numbers says. That aggregate volatility scales with 1 over square
+root of n and scales, which means that
+it's not exactly equal to some constant times
+1 over square root of n, but for enlarge, it's as if it's equal to that. Then I define the
+correlation coefficient of the degrees which is how
+variable is the degree. As I said, the key is the regular network
+where everybody has the same degrees versus
+asymmetric degrees, so the coefficient
+of variation is one way of measuring that. Here is one very simple result. It says that if you look at an economy where n
+goes to infinity, then Sigma aggregate is Omega of 1 over square root of n plus coefficient of variation over square root of n.
+What does Omega mean? Omega means it's the
+standard notation, which means that as n goes to 0, this object here, Sigma_agg goes to 0 no faster than the
+argument of the Omega. What this says is
+that this goes to 0 no faster than 1
+over square root of n, which is the usual rate, so we could never go
+faster than that anyway, plus the coefficient
+of variation over square root of
+n. In particular, if you have regular network or something like
+irregular network it doesn't need to be
+exactly irregular, but it needs to be not too far from regular since these
+are asymptotic results. These are all coefficient
+of variation equal to 0. In fact, these are going to behave just like 1
+over square root of n, as we saw in the context of the finite and economies also. But if you have star network for example or
+something like star, then the coefficient
+of variation you can compute scales with
+square root of n. Now you have square root of n over square root of n, that's 1. It doesn't go to 0 at all, so that's another
+proof that the law of large numbers fails
+in this case. But this result is just exploit the 1st order, it
+just looks at degree. It's not using any information about the fact that
+Matt supplies to me and Whitney
+supplies to Justin, but I am much less
+important than Justin. Therefore, Whitney should
+be much more important because he's supplying to
+another important industry. You can do that also and that would be looking
+at some other coefficients. It turns out that
+the coefficient that is relevant turns out
+to be something like this, which is you look at the interconnection of the input/output matrix
+weighted by degrees. In particular, this is something that you see in rearrangement
+inequality type of things. But just to get an intuition, this Tau_2 object,
+this is an economy where Tau_2 is low. You have one sector supplying
+to two other sectors, but one of those
+sectors is important, has high degree,
+the other one is low degree and then
+another one is like this. You rearrange this, so that the degree
+distribution stays the same, but you now make
+this guy supply to two industries that
+themselves have high degree and
+this guy supplies two industries that
+have low degree and this one has the high Tau. The result is that now you put the 2nd order interactions, now you add one more term,
+which is this term here. You could go 3rd order,
+4th order and you have now more complicated
+statistics there, but the idea is that these
+things actually do matter. But this is still not quite tractable if you
+want to do empirical work unless you actually
+go and compute this for every
+input/output matrix. It's not going to give you
+very specific insights. What you would like is
+perhaps some easy way of characterizing
+input/output tables in terms of how asymmetric it is. One way of doing it
+is exactly the way that Matt showed in his second lecture which
+is look at the tails of the degree distribution,
+or look at the tails of the 2nd order
+degree distribution or the 3rd order
+degree distribution. To do that, let me go to this. Let's say that the
+degree distribution has a power law tail. If the tail of that
+degree distribution, which means the fraction
+of nodes that have degree greater than something
+scales with the number, whatever number we're looking
+at to some exponents. For example Matt showed that for the romantic
+relationships, that exponent was 1,
+for some other things, it was something else
+and so on and so forth. What you can show is that, if you have this
+relationship and this Beta is between 1 and 2, 1 is not a very
+well behaved case. That's the Pareto
+Zipf's law case where you're not going to have the mean being well defined, but as long as it's
+between 1 and 2, then you can show
+that it's equal to Sigma_n to the power minus
+Beta minus 1 over Beta. You can see that when Beta
+is equal to 2 or close to 2, this is like square root, but when Beta is small, this is going be
+much slower than square root and that's
+essentially the idea. What about 2nd order degree? Well, you do exactly
+the same thing, but now you define a
+2nd order degree which is my degree weighted by the degree of my
+downstream guys or in other words I take my w, j, i, rather than remembered degree once I sum w, j, i. Now I sum w, j, is with the degrees of
+my downstream guys, so it's the 2nd order degrees. It's how many grandchildren
+industries I have. Degree is saying, how
+many industries I supply, how many industries
+are my children, the 2nd order degrees says how many
+grandchildren I have. Essentially what you can show that if this second-order degree has a power law with
+coefficient theta, then you again have
+that this is Omega of minus theta minus 1
+over theta and in fact, if both of them have power law, then it's the minimum of the two that's going
+to divide because the low Pareto exponent means
+that the tail is thicker. There are more observations, even when you take
+a very high degree as the benchmark, and ask how many industries have degree above 10,
+above 12, whatever. Now look at the US data. It turns out that
+the US data looks a mixture of what
+Matt was showing. Originally it's got
+a concave part, but then in the tail, it's actually pretty
+linear and that's true both the first-order
+and second-order degree. But in fact, the one that has really thick tails is the second-order degree
+not to first-order degree. The first-order
+degree has a tail of 1.38, which is pretty thick, which is pretty unequal
+degree distribution, but if you look at the
+second-order degree, that's really small, 1.2 and then you can do some calculations and
+show that in fact, this is very close
+to a star network, in the sense that really microeconomics shocks are
+not going to wash out. Now, one of the general ideas that Matt emphasized
+already in introducing the centrality measures is that you can talk as if there is some centrality measure
+that's going to matter regardless of the
+economic contexts where the problem
+is being defined. What is centrality for
+friendships is going to be very different for production networks and so on and so forth. That is absolutely true. It just turns out that
+I presented two sets of models where the Bonacich
+centrality measure came in, but there's no
+magic because both of the models were chosen for tractability reasons
+as well as some other economic reasons to
+be linear or log-linear. But the same observation also implies that you can't just talk about what
+networks are stable, what networks are not stable, that will also depend on the structure of the
+economic relations on it. One surprising result was this, that sparseness of the network, whether it will
+look like a ring or a complete network,
+didn't matter. It was just the
+asymmetry that mattered. Is that a general result? No. It really depends on the economic
+interactions on it, and one interesting set of
+economic interactions which shapes the way that people think about this is financial interactions. The dominoes, we can think of the dominoes in the context
+of production networks. But when you ask a layman about dominoes
+and economic models, they'll probably
+think about banks failing and then causing
+the failure of other banks. Could we apply the lessons that we have seen so
+far to banks failing? The answer is no, because a linear model would
+be an awful model for the relationships between
+banks and there is a very nonlinear thing about the relationship between
+banks, and that's default. So what was the intuition that I gave for why was it that
+these shocks canceled out? Well, it was that Pat was
+hit by a negative shock. Eric was hit with a positive shock and that canceled out, but now look at a
+world with default. Whatever positive shock
+Eric is hit with, that's not going to
+make up for the fact that Pat was hit by a negative
+shock and went bankrupt. That's a very specific form of non-linearity so
+does that matter? There are a number of
+papers now are coming up, some of them building on Allen
+and Gail's paper in 2000. Some of the other ones like Elliott Golub and Jackson
+looking at not debt, which is the key
+intermediating mechanism, but cross share holdings across financial institution or across other
+general institutions. But all of them provide different sorts of insights
+about financial contagion. How shocked in the context of financial relationships
+actually spread from one setting to the other. Let me go through one paper, or one part of one paper that's by myself Acemoglu
+and [inaudible], which is the simplest
+financial model that you can take
+and here, of course, endogeneity of the network
+is very important, but I don't have time
+to talk about that. I'm just going to
+look at a situation in which banks form into interrelated lending
+and borrowing chains at time t equals to 0 and
+then they're hit by shocks. In particular, I'm
+going to look at a setting in which banks, just like in diamond debrief
+type things that have long-term assets that
+pay in some future date, say t equals to 2 and
+then they are also hit by liquidity or potential
+negative shocks at t equals to 1 and then at t
+equals to 1 they have to clear their debts to some other
+financial institutions and if they cannot or
+they cannot pay their senior creditors, they will have to go
+bankrupt, and that's going to lead to costly liquidation
+of their long-term assets. Again, we're going to
+look at a network, now the network is defined
+by standard debt contract. Yij means that
+institution J owes some amount Yij to some other financial
+institution or bank. This is very related, slightly different from
+a related problem, chains of credit by a very nice unpublished paperback
+[inaudible] and more. There's a very interesting
+empirical picker at Jacobson [inaudible], which looks at these credits
+chains in this context. The only other thing
+I'm going to do is I'm going to assume that banks have this random
+returns Z_i at time 1, deterministic return at time 2 and they're going to have
+some senior obligations v, for example, they
+have to pay taxes, they have to pay their workers, they have some senior
+creditors like Pimco, etc, that have to be paid
+before they're in network obligations and then if they can't do that,
+they're going to default, and if they default
+day then liquidate their long-term
+assets and they get some amount theta times a, but let me take the simple case where theta is close to 0. Nothing I say depends on that, but just the expressions
+are simpler to write. What that implies is
+that we're going to have the actual payments of banks at time t equals to 1 have to be given by this
+complicated looking but actually quite
+simple equation. Xij is the actual payment
+that David makes to Victor, one Bank J makes
+to another bank I. Remember Yij is what Bank J owes to bank I or what bank I originally
+lent to Bank J. Now, there are three
+cases to consider. The first case is that David is not in financial distress, which means that his intake, which is what he gets on his assets in the short
+term Zij plus what all other banks pay him is greater than or equal to what he owes to the senior creditor, plus his in-network
+obligations, the sum of Yij. In that case, he has to pay the full face value
+of debt contracts, that's Xij is equal to Yij. The third case is also simple, where he has so little
+money that he can't even pay his senior creditors, in which case he's
+going to pay nothing to his insight creditors, his in-network creditors, and the middle case is that he has enough to pay
+senior creditors, but not quite enough to pay all of his in-network
+obligations, in which case everybody is
+paid on a pro rata basis, meaning that everybody
+gets some fraction of what's out there so you pay what money you
+have in the fraction Yij, which is what David owes to Victor relative to what he
+owes to everybody else. That's pretty straightforward. What's an equilibrium here? An equilibrium is just a
+fixed point of this equation, meaning a mutual set of
+payments that satisfy this equation so
+that everybody does actually make the payments
+that are feasible. Now you can show
+that an equilibrium exists, it's genetically unique. But more interestingly, now
+we can analyze and say, what are the inter-bank
+relationships? Are the ones like Matt
+showed in the first lecture, where a couple of
+institutions are very important is that major or not. To do that, let me simplify things further
+and let me also take the financial financial
+network to be regular, which means that
+every bank is equally indebted, and equally
+creditor to other banks. Why? Because we know that when the network is not regular, where there are the asymmetries, stability is related
+to what I already characterized in the context
+of production networks, so I want to
+abstract from those, so let me take the regular case. In addition for now, let me just simplify things
+and assume that this Zij, the J takes two values, either some positive
+a or a minus epsilon, where epsilon is
+a negative shock. Let me also make things
+simple, and suppose that only one bank is hit
+by this Epsilon. This epsilon is really
+an idiosyncratic shock. One out of 100 banks or 200 banks is going to be hit by the shock and I'm
+going to again look, does this create a
+systemic downturn, systemic collapse of
+the financial network. What is volatility
+in this setting? Again, you can define some
+ad hoc measure of volatility in the context of the
+log-linear economy, standard deviation
+or the variance of GDP turned out to be
+just the right measure, I didn't justify it. But here you can show that social surplus is in fact
+equal to exactly this thing, which is number of defaults. Therefore, number of
+defaults seems like economically the
+right measure of volatility so let
+me look at that. So if the number of defaults, either in expected or
+worst-case scenario is higher, I'm going to say that's a less stable or more fragile network. Now it's going to turn out that the way that you think about these networks is
+going to crucially depend on whether the
+shocks are large or not. I'm going to distinguish between what I'm going to call a small shock regime and
+a large shock regime. There's going to exist
+some magical Epsilon star. You can compute what it is, but I don't care about
+it for this lecture. Such that when Epsilon is
+less than Epsilon star, I'm going to call that
+a small shock regime and when Epsilon is
+greater than Epsilon star, I'm going to call it
+large shock regime. Here are the results for
+the small shock regime. You can show that when Epsilon is less than Epsilon star, the small shock regime plus y needs to be greater
+than some y star, otherwise, they're not
+enough liabilities in the financial network to
+do anything interesting. But provided that these
+conditions are satisfied, the complete
+financial network is the most stable network and the ring financial network is
+the least stable networks. In fact now, very differently from what we saw for
+production network, even though these are
+both regular networks that have a lot of
+symmetry in them, they are very different in
+the economic implications because the economic
+interactions over the network are very
+different and in particular, there is this default, so that
+you cannot apply a law of large numbers type of argument
+to cancel out shocks. In fact, you can
+say that anything that's in-between
+has some in-between stability, and in
+essentially this is capturing the domino effects. What's going on is that in the ring network domino
+effects are very prevalent. I have all of my debt to Matt. What that means is that Matt does not have a very
+diversified portfolio. If I go under then Matt doesn't get any
+payments and as a result, he gets into
+problems and then he defaults and then
+this time, Caleb, who has all of his assets coming from Matt is
+going get into problems, so this is exactly
+the domino effect. Whereas in the complete network, Matt holds a little
+bit of my debt, a little bit of David's debt, a little bit of Jim's debt, a little bit of Joel's debt
+and so on and so forth. As a result, if I go under, that's not a big deal for Matt, he might have some difficulty, but it's not going to
+go under and so on, so that's essentially
+the intuition. But here's the
+interesting thing, things are very different
+in the large shock regime. To prepare for that, let me call a financial
+network Delta connected, if I can separate it into two parts such that the
+linkages between the two parts, M and M compliment is
+no more than Delta. An unconnected network will
+be a zero connected network, but this is essentially a strong linkages
+between these things. In the large shock region where Epsilon is greater
+than Epsilon star, now the result is
+exactly the opposite. Now the complete
+network in fact, is the most the least
+stable network. For Delta sufficiently small, a Delta connected network
+is the most stable or more stable than the complete
+than the ring networks. What's going on is, sometimes in this models is
+called a phase transition, which means that there's
+a sharp threshold when you cross that threshold, all of the comparative statics are turned on their heads. What is the intuition? Let
+me give two intuitions, one is the network intuition, the other one is an
+economic intuition. I think they are complimentary. The network intuition is
+that when shocks are large, this becomes like an epidemic. There is no way of containing the shock because
+whenever somebody is hit, that's creates so
+much distress on other people every other
+financial institutions that's exposed to that,
+is going to go under. Then what you want to do is
+that you want to contain the epidemic in a relatively
+small part of the network. Which means you want to create parts of the networks that are pockets that are not strongly
+connected to other parts. Now, when the shocks are small, this is not an issue because it doesn't create an epidemic. It can be contained
+by diversification. Economically, what's going
+on is that there are two ways of containing
+networks shocks. One is through diversification, the other one is making use of the liquidity of the
+senior creditors. The complete network is very good at creating
+diversification, but it's lousy at making
+use of the liquidity of the senior
+creditors because it spares this in your creditors
+as much as possible. What you do is that
+when you create these weakly connected
+networks is that you make very heavy use of the liquidity of the
+senior creditors because, I owe this money among myself, I can shift it out to
+other institutions, so I have to pass it up
+to the senior creditors, so PIMCO is not spared. Again, this gives you a sense
+of what different types of economic interactions lead to different types of
+network representations? How the language of
+networks is useful for thinking about that and you can also do some analysis about how different network properties lead to different interactions. The final topic
+that I want to talk about is about
+innovation networks. Another topic that is
+both relevant for, in an interesting and of itself, but also for
+transmission of shocks or transmission of ideas
+which are just like shock, is the innovation network. Think of the innovation
+network is who do I rely on? For example, I read the papers of many
+people in this room, so those are the
+ideas I rely on. If Joel writes a great paper, then I can build on it, that's going to make me
+more productive relative to the case in which you he
+not write a great paper. His ideas that are going
+to get transmitted through the network of reading
+or building on, if I was not somebody who read Joel than his idea would
+not get transmitted to me. How could we measure this, which is relevant for
+both in and of itself, for understanding dynamics
+of innovation but also transmission of
+shocks at the medium-term, especially when some sector
+like software is doing well? Where is that going to show up? Which other sectors are
+going to have booms? Well, we have an ideal
+way of doing that, which is the citations data. The NBER, which we can
+give a plug to the NBER, has worked with researchers to create a wonderful resource, which is the a complete data set of citations across individuals with lots of demographic
+characteristics. You can again think
+of that as one the relationship does
+or does not need to be linear and the G is essentially how much do
+I cite another industry? Now, let me just give you just one quick glance of that data because I
+think the results are, or at least the patterns
+are super interesting. Let me take this
+citations data and let me just use it for a
+very limited period of time, very back in time, so 75-84. I'm going to create
+a link between my sector and these
+sectors are essentially, I'm going to show
+you graphs both at about 40 sector level
+and 400 sector level. The link is how many
+of my citations during this period go to Patrick sectors relative to all of the other citations I do? There'll be a strong
+link from me to Patrick or depends on how you define the links
+or from Patrick to me. If there are many citations
+going from me to Patrick, which means that I am building a lot on the
+information coming from Patrick or at least through my revealed preference
+of citations. It's a bit like I'm reading
+Joel and I'm citing Joel and if I wasn't one of the people who read Joel, then
+I wouldn't be citing him. I'm going to leave
+out self sites, but that doesn't really matter. This is how the
+innovation network looks like and it's exactly
+what you would expect. Organic compounds are
+cited a lot by drugs, biotechnology cited a lot, and chemicals are cited by
+biotechnology, surgical, etc. Now, construct this thing, just accept that I'm not
+gonna do it with delays, because it's not that you
+immediately cite things. I cite papers that Joel
+writes immediately, but papers that David writes, I cite them 10 years in time because it takes me 10 years to understand David's papers. You can do that, and then
+do a very simple exercise. Take the citations
+pattern from 75-84, and then the patterns
+that actually David's industry has generated
+for between 85 and 94, so another time period,
+and then look in construct very naively expected
+patterns, 95-2004. In other words, if you think of my technology for
+generating patterns, new innovations
+as a Leontief for a Cobb-Douglas technology,
+again, log-linear format. What would you predict my new innovations
+to be on the basis of the fact that
+some of the sectors that I usually cite have
+been unusually productive? Crucially here, I am
+leaving out self-cite. This is not capturing the
+fact that I was productive in 85-94 and then it's going
+to be serially correlated. Therefore, I'm going
+to be productive now, it totally leaves
+out cell sites. These are
+non-overlapping periods and here is how it looks like. This green line is
+the 45-degree line, so if this prediction
+was exactly right, you would be on the
+45-degree line. But it's almost, this
+is pretty close to the 45-degree line with coefficient is 0.6,
+very close fit. Now here, this is because this is year-by-year and
+industry by industry. Take out industry fixed effects, year fixed effects and
+now it's no longer 45-degree line
+because you're tired of taking some of
+the variation out, but again, it's a
+very strong pattern. What this suggests is that there are actually very
+strong flows of ideas within the innovation
+network and this is actually a pretty interesting
+source of variation. It says that I am becoming very productive in the
+next 10 years because some of the sectors
+that I normally rely on have been unusually
+productive 10 years ago. In ongoing work with
+[inaudible] BellKor, we're using this
+pattern to generate region and industry
+level variation in innovation and technology so that you can look
+at things like, when technology advances,
+does that replace labor or does it
+complement labor? Does it create jobs technology? Does it destroy jobs
+or create jobs? Or what else does it
+do to a local economy or at when industrial labor market and so on and so forth. But again, this is just
+more in this flavor of their interesting things about the diffusion of ideas,
+diffusion of shock, amplification of shocks,
+and the language of networks and the existing data sources and some basic theory seems
+to get us fairly far. There is a big area, so as Matt packet
+list emphasize, there are lots of really
+interesting and open questions. I think from my point of view, what makes this really
+interesting is that many questions that we have been interested as economists
+like externalities, amplification of
+shocks, flow of ideas really are crying out for
+networks and when you put networks in it
+doesn't really complicate the problem, it actually clarifies it in some respects might give
+you additional perspective. Might give you a somewhat
+different language, might give you new ideas. I think it's a really
+useful perspective and there's a lot
+to be done here. I hope that Matt's lectures and a few things that
+I've said might have actually generated some
+interest in among you. I'll take some questions
+and then we can conclude. 

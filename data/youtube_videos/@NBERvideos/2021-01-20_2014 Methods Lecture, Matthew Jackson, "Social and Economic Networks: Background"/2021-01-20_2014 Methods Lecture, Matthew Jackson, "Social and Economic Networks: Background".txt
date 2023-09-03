@@ -1,0 +1,765 @@
+Matthew Jackson: As
+Jim just mentioned, Duran and I will do a tag team. I'll do the first lecture,
+Duran will do the second, I'll do the third, and
+he'll do the fourth so we'll have breaks in-between. Just in terms of background. The slides from the
+two parts I'll do are available here on my website and Duran and I'll
+tell you about this, I guess, some paper
+copies of Duran slides and also PDF of his. The assumption here will be that people are not necessarily familiar
+with network analysis. Some of you I know from seeing faces are, but some
+people aren't. We'll start from ground zero
+in terms of building up. The first lecture
+here is going to be just a a crash course, basic background of analysis
+of social networks. Some measures that might be useful how we think about
+representing networks and so forth, and then we'll get progressively in a little bit deeper as we go into
+the other lectures. It's an enormous area that covers lots of literatures
+now so we'll be a little bit pressed for time
+in terms of digging deep. But do stop me if there's something that
+you need clarified, I'm happy to clarify
+things as we go along. One just basic starting
+point, why study networks? Basically because a lot of our economic interactions are
+within social structures. The way that we form opinions, how we learn about things. People influence our behaviors, access to job information. There's a long list here, transmission of viruses, favor exchange,
+choices of behavior. The list is very extensive and understanding how
+network structure impacts these behaviors can be first-order in a lot of
+applications, and so understanding the connection
+is fairly critical. You can also be purely
+interested in social structures. When you talk to sociologists
+are not necessarily always interested in what
+the implications are, but sometimes just prima facie, interested in what
+networks look like. But we'll move a little bit beyond that in these lectures. There's lots of literatures
+that work on or around these topics, and
+you'll be seeing snippets from different
+ones as we go along. Sociology is obviously the one that's been added for
+more than a century, economics, a couple of decades, computer science,
+a decade or so, statistical physics
+actually is probably one of the most active areas in
+this research these days. Random graph theory,
+there'll be a bunch of different tools will pull
+from, and we'll look at a little bit of what
+the state of the art is from an economist's
+perspective. We'll also be talking
+about areas of open research as we go along. Four parts. I'll be doing
+the first and the third. Duran, the second
+and the fourth. In the first one is
+just going to be very basics, some measures. How do we operationalize networks in ways
+that are useful? Then Duran is going to
+talk a little bit about peer effects and
+identification issues. Then I'll come back to talking about
+diffusion, and more on identification issues and
+some estimation problems and challenges in
+working with networks. Then Duran will
+wrap things up by talking more generally
+about how we can understand
+transmission of shocks and other things through economies
+using networks as a tool. I'm going to start with is just a few examples pulled from different research areas of different kinds of
+data and a view of a few applications, and
+just preview some of the questions just so people are aware of the
+things we're talking about. Here, I'll start with
+my favorite example, which comes from work by Padgett and Ansell, and goes back to work that had been
+done by Kent earlier, which is looking at this
+is a network of marriages in Florence in the 15th century. You can see here's a pointer. I'm sure this is turned on. Yes, but the pointer
+doesn't seem to work. Let me go. At the center
+here are the Medici. Part of this is trying to understand how the Medici
+rose from being in a not so prominent or
+moderately important family to being one of the
+more important families during this time period. We'll come back to this
+story a little bit later, but the marriage is
+playing an important role. Another example here is one which comes from
+the Add Health dataset. This is a set of students
+in a high school in the US, color-coded by gender,
+male and female, male blue, female are
+pink in this picture. A link between two
+indicates that they had a romantic relationship inside an 18-month window during which these data were collected. You begin to see
+things that actually are quite typical of networks. There's one large component where a lot of the students are interconnected, and then a bunch of smaller connected components. These numbers down here, they're actually 63 die ads where there were just
+two people interacting. But then, there's a
+lot of individuals who are interconnected through
+a larger component. We'll talk a little
+bit about that and some of the
+implications of this for things like diffusion
+as we go along. This is a picture of military alliances
+in the year 2000, this is from a paper I'm working on with
+student at Stanford. It turns out that these
+networks actually correlate very strongly
+with trade alliances, and understanding
+the interaction between the military
+alliances and the trade alliances gives us a picture into the
+incidence of war. It gives us insights that
+we wouldn't have otherwise. You can begin to see
+that there's a lot of military alliances which
+are geographically based, which actually
+correlates heavily with trade networks, and you can
+look at the evolution of these networks over time and try to understand what the
+implications of these things are for both trade and for military
+interventions and war. This is one from a
+paper by Soromaki and some co-authors, which looks at inter-bank
+loans overnight. Here we have basically the four largest banks.
+You can see here. JPMorganChase, Bank of America, CitiGroup, and Wells Fargo. There's something which is typical of some networks
+but not others. Here this is what's known
+as a core periphery network where you see about 25 banks which are completely connected. They all interact
+with each other. and then a bunch
+of smaller banks which intend to interact with just one or
+two of the others. In that case, you end up with a very particular pattern for contagions and other things as we'll see in
+the last lecture. Networks are going to
+have different shapes. They come in all
+different applications and these are just
+previewing some of the types of things
+we'll be looking at. But the main challenge
+with dealing with network data is
+that the number of networks that you
+might observe on any given set of nodes
+is exponentially large. Just to drive that point home, here if you just had 20 nodes, if you start thinking
+about counting the number of networks
+which are possible, well, you just go through
+the combinations here. Person 1 could have
+19th possible friends, Person 2, 18, not counting
+Person 1 and so forth. You end up with two to the 190th possible
+networks just on 20 nodes. If you go to Wikipedia, this
+is Wikipedia's number here. The number of atoms
+in the universe is somewhere between 2 to the 158th and 2 to the 246th
+by people's estimates. You've got more networks
+just on 20 nodes, then you have atoms
+in the universe. You're looking at
+something which is a fairly large
+number of networks. That means it's
+impossible just for us to describe particular
+networks, and categorize them just directly by single-case network number 75. It's not going to
+be very meaningful. We're going to have to
+simplify things somehow. In particular, in terms
+of simplification, what we're going
+to do is have to work with statistics or aggregate descriptions
+of networks in ways that are still useful, but capture important
+descriptive details of the networks and
+allow us to tie them back to economic behaviors, and things that
+have implications for economic behaviors. The question is sort of,
+what are the objects? How do we describe
+these objects in ways that are simple enough to work with and don't involve so
+many different calculations, but at the same time are useful in terms of
+driving implications? What we're going to do is in
+the first lecture is we'll go through four different
+types of characterizations. The first is going to be
+global patterns of networks. We will talk about things
+on a global level. Things like path
+links and networks. How far does it take to get from an average node to another
+node in a network? Degree distributions. How connected are
+different nodes? Is it a very irregular network? Does everybody have exactly the same number of connections? [inaudible] Does it look more like a core
+periphery network? These are going to be things that describe the network as a whole and look at
+these global patterns. Then we'll drill into
+segregation patterns. These are things that
+we can look at where the network has no labels on it. It's just a picture
+of a network. We don't know what the
+characteristics of it is, and we just know
+that there's some patterns that are emerging. We can also begin
+to start labeling nodes by their types. Once we start doing that, then there's a separate
+set of patterns that will emerge. In particular, what
+we'll call homofily, which has the tendency of similar nodes to be
+associated with each other. There's strong segregation
+patterns in networks, and these are going to be
+another global characteristic that are going to be
+important to take care of. We'll have these larger macro
+descriptions of networks, and then we'll be looking
+at a more micro level. We can begin to look
+at local patterns. If I'm connected to two friends, are they friends
+with each other? That's what's known
+as clustering, that has important implications in things like risk-sharing, favor exchange, information
+passing in a network. We'll talk about local patterns. How do things look on
+a very local level? We'll also talk, at the end of this
+first lecture, about positions in networks. Another thing which turns
+out to be important is being able to characterize who
+is important in a network, who's influential, who's
+powerful, who's central. There's a whole series
+of different ways of measuring things
+like centrality, influence, power, these terms that you have some
+idea of what they mean. We can operationalize those by looking at a network and say, this is the most
+important node in a very specific sense. We'll be able to
+rank nodes based on some measures of importance. These will be things that look more at a particular
+characteristics, either of the local neighborhood
+or a particular nodes, and these other ones will be broad overarching
+pictures of the network. Let's start with the first ones. We'll talk a little
+bit about path lengths in degree distribution. What do we know a little
+bit about these things? Before doing that, let me
+just give you a little bit of notation to fix ideas. Generally, we're going
+to be talking about some finite set of
+nodes, vertices, players, agents,
+whatever you might call them depending on the
+particular application. One through n. The relationships on the network is often going to be represented by what we
+call the adjacency matrix, which is just a matrix of, in this case say zeros and ones. Either people are friends with each other or they're not. They're allies, or
+they're not allies. They're trade partners, or
+they're not trade partners. They had a romantic
+relationship where they didn't. These are just 0,
+1 relationships, and we'll keep track of this just via matrix known
+as the adjacency matrix. Sometimes we're going
+to be interested in a particular weighted
+versions of this, we can also allow
+the intensities of these relationships. They might be directed, I might cite somebody that
+doesn't cite me back. Depending on a
+particular application, these might have different
+weights or directions. The canonical version is just
+going to be zeros and ones in situations where things
+tend to be reciprocal. If I'm friends with you and
+you're friends with me. In a network then, often when we talk about paths, we'll represent these
+things graphically, we can talk about
+a path from 1-7. 1, 2, 3, 4, 5, 6, 7 this is a particular
+path in this network. We can also talk
+about shortest paths. 1, 3, 7 would be the
+geodesic in this, a shortest path in the network. Often we'll be interested in shortest paths for things like
+information transmission. How long does it take for a
+piece of information that's injected at one
+part of the network to reach everyone else? Does information
+transmit quickly or slowly in a network? We might be interested in, what's the average path length? In path length here, will often work with shortest paths, not necessarily longest paths. The diameter of a network
+is the largest geodesic. You look at the longest distance between any two nodes where distance is measured
+by shortest paths. That would be known
+as the diameter. Lots of situations, a network might have
+some isolated nodes or some disconnected
+small components. In that case, what's often used when people talk about the
+diameter of a network, they'll be talking about
+the largest component. For instance, even if
+you look at Facebook, where you have 700
+million nodes, you have situations where
+there's some people who just have web pages and
+absolutely no friends. You don't want to say
+that the distances are infinite just because you have
+a few disconnected nodes, you measure things
+on the rest of the large component
+of the network. Diameter can be
+prone to outliers. Often we'll talk about
+average path length instead. You can look at the average
+distance between nodes as opposed to the maximum
+distance between nodes. These things again
+are going to be important because they help us understand how quickly
+information is going to diffuse through a network or how fast a
+contagion might occur, and how long it might take for things to move from
+one place to another. One feature that has been
+known for quite a while now, I guess Milgram is probably the first really
+nice illustration of this is that social networks, when you look at acquaintances and different relationships
+between people, tend to have short
+average path lengths. In particular, let
+me describe what Milgram did if people don't know is Milgram was famous for various experiments, but one of his famous
+experiments was a letter experiment
+where he gave letters to people in one part of the
+US, and asked them to send those letters to targets in the other part of the US. You were given a name, say John Smith is an economist
+in Massachusetts, see if you can get
+this letter to them. It starts out in
+Nebraska or Kansas. The person then sends it
+to one of their friends. The letter then has a list and the second person then
+puts their name on the list, and then forwards it to a
+third person that they might think is somehow able
+to get this letter on. Maybe if I'm in Kansas, I don't know John Smith, I don't know any
+economist, maybe I send it to a friend I know
+who lives in Boston. Then that friend happens to know somebody in a university, so sends it to that
+person, and so forth. Through that method
+then eventually makes its way hopefully
+to the target. Out of this experiment, basically what he found was that the 25 percent of
+the letters made it, which is actually a high number given participation rates. Now you multiply those
+participation rates so you get a fall off. The median was 5. The median number of hops was 5. The distance was fairly short compared to what
+you might expect. Also, notice that this isn't necessarily the shortest
+path in the network. This is a path in the
+network but it could be that since people don't know exactly what the
+shortest path is, they don't see the network they sent it in a very
+circuitous route. Now, there are some
+serious problems with taking this
+number as a median. Why? There's a
+selection bias here. More distant chains are less likely to make it
+than shorter chains. You're biased in ways
+that are going to favor lower numbers
+of being successful. There is some endogeneity to the ones that made
+it, and there are subsequent follow-up
+experiments that have taken care
+of that trying to estimate exactly what
+the unbiased estimate of these hops are. You can also just look at
+these things directly. These are looking at
+co-authorship studies. In economics, there's a study by Sanjeev Rael and Michael
+Venderly, and Raghu Gonzales. Economics, the mean is
+about 9.5 and the max is 29 if you just put all economists who
+published in a decade, published in an
+ISI-indexed journal. Put a tie between them if
+they co-authored a paper, and then just look
+at that network. That gives you some idea of how information might flow
+through the profession. It turns out to be
+fairly typical. If you look at
+mathematics, physics, you get similar
+order of numbers. Facebook, everybody
+always asks about this. Average is actually 4.7. Amazingly on Facebook, 99.9 percent of the
+nodes are connected in the largest component out of about 720 million
+pages as of 2011. It's a fairly small world in terms of the average path link. Getting from one end of
+the network to the other, you have less than five hops in terms of getting that
+information across. One thing to understand
+then is just as a basic level is why do you see such small average path lengths
+in such a large network. Facebook isn't constructed, they have short average path length. It's constructed for people to just communicate
+with their friends. You put 720 million people together, and you get
+a fairly small network in terms of overall diameter
+and average distance. Understanding this is
+fairly straightforward. It has to do with the exponential reach that
+we have in moving outwards. What you can do is begin, let's do a simple calculation
+where what we'll do is just look at a tree which
+is known as a Cayley tree, which is a very
+regular tree where at each point in time, everybody has exactly
+the same number of friends, and their friends
+always move outwards. We don't have any
+loops coming back. The first first person we
+look at has d friends. Then each one of those people they have the
+friend with the first, they reach another d
+minus 1 and so forth. We can just ask if this was
+the structure of the world, what would the average path length look
+like in that world? Just how far do
+we have to go out before we cover the whole world from this person's perspective? You just keep adding these up as you go outwards. What
+do you end up with? The next level is going
+to give you d. We've got another d minus 1 connections for each of these
+people and so forth. As you go outwards, you end up with a sum of how many nodes you've reached at each level moving
+out from this person. Looking at this person's
+network reaching outwards, if you go out l steps, then you've got this sum is how many nodes
+you've reached. For a reasonably large d, a good approximation for
+this is roughly d minus 1^l. This sum looks like this. If you just do the
+sum, partial sum, and then take an
+approximation of it, it looks like d minus 1^l. To reach everybody
+else in the society, if I want to reach n minus
+1 other individuals, I just need d minus 1^l
+to be equal to n minus 1. I go through, and what
+do I end up with? L is on the order of log n
+minus 1 over log d minus 1, roughly log n over
+log d. You get something which says
+expanding outwards. For this very nice tree, it looks like the length we need is actually
+going to scale with the log of the number
+of nodes compared to the log of the reach in
+terms of number of friends. That gives us an idea that
+that's something which is going to be logarithmic
+in the number of nodes. That gives us an idea of
+why it could be very small. Now obviously this is
+a tree, and why on earth would something like
+Facebook look like a tree? It's not at all obvious. If you take Facebook, it's not going to have a
+tree-like structure. It's going to have a much
+different structure. Well, what you can show is that there's a whole series of theorems that for many classes
+of large random graphs, average distance and
+maximum distance are proportional to log n over the log of the expected degree. It turns out the
+first version of this that appears in a famous paper by Ergos and
+Renyi in the late '50s, and early '60s, they
+had several papers. Part of the reason that
+this happens is that even if you just put
+down links at random, you end up having a lot
+of a tree-like structure underlying the overall network. You have enough of a
+tree-like structure and things expand rapidly enough that you still get
+the same expansion property, even if it's not constructed
+explicitly as a tree. The proof of this thing is now relatively
+well understood. There's a paper by Chung
+and Lu that extends it to a whole series of
+different degree distributions. I have a paper that extends it to economically
+relevant models that have
+characteristics in them. You can show that for a
+wide class of models, you get the same structure. It looks like log n over
+log expected degree. Let's just take a
+look, and see whether this looks reasonable in terms of empirical validity. This is taken from that
+same Add Health dataset that we looked at the
+romance relationships for. These are 84 different
+high schools. This is actually taken from some work I did with Ben Golub. Here what we have is average
+shortest path length of the actual data, and then log n over log
+of the expected degree. Here you have a series of
+different high schools that varied in terms
+of their structure. Some were 50-person high
+school, some were 3,000. You end up with very
+different sizes of the high schools
+difference up. Basically, the log n over
+log d seems to fit the data, at least here fairly well. In a lot of applications, it seems to fit fairly well. Just in terms of doing
+back-of-the-envelope calculation, people have heard
+of six degrees of separation world about
+seven billion people. Suppose that each person has 50 reasonably close
+friends that they talk to, log n over log d is roughly six. It's not hard to
+see why something on a scale of Facebook
+might end up with a fairly short
+average path length when you do these
+kinds of calculations. The first part here is
+we've got these networks. We have ways of measuring. One thing we were interested in measuring is average
+path length. Conclusion. A lot of
+these are going to have some underlying tree-like
+structure enough so that you can actually have fairly short average
+path lengths in very large societies. That's one part of the picture, one thing that we might
+want to measure and keep track of when we're looking
+across different networks. A second thing is then going to be neighborhood and degree, because it's not going
+to be that everybody has exactly 50 friends, some people are very social, and some people might
+be very asocial. Capturing that is going to be done by keeping track of
+who are the friends of person i in the network g.
+Who are the j's such that i and j are connected in a network g. I'll
+use this notation i, j, and g just to indicate
+that gij is greater than zero that they're
+connected in that network. Then a person's degree is just the number of connections
+they have so degree is just a term for connectedness and an important aspect of a network is going to be how degree is distributed
+in a network. As we saw before by that picture of a core periphery network in the inter-bank loan network, we end up with very
+different possible degrees. We can have networks that have roughly the
+same average degree, having very different
+configurations in terms of who's
+connected to whom and how many people have very high degree and how many people have
+very low degree. This is an area which is an important distinction in
+terms of networks and one of the reasons that this is
+an important distinction is when we get to things like contagion or transmission
+diffusion models, it's going to make a big
+difference whether we're in a network like this where here if we hit this person with information it
+instantly spreads to everybody else here it
+might be much harder to get information to move from one part of the
+network to another. Having hubs and spokes networks look very different
+from having ones where everybody has more or less the same degree that can
+affect diffusion processes, contagion processes, information
+and learning processes. One thing we can
+ask is, what does distribution of degrees
+look like in a network? We can just keep track
+of different ones. If you look at two of the networks we've
+talked about already. Here I put the
+romance network has one degree distribution
+so this is the degree on the x-axis, and the frequency on the y-axis. You get one distribution for
+say, the romance network. You get a different
+distribution for the co-authorship network,
+and often you can look at different networks
+and you can order these things by means of stochastic dominance
+relationships. One might be more
+dense in the sense of a first-order stochastic
+dominance or it might be more dispersed in the sense of second-order
+stochastic dominance. Doing these comparisons across degree distributions
+is actually something that then allows you
+to bring these to bear on information
+learning processes, other things that we
+want to figure out how it's working. If you look at fitting some
+of these things to data, this is a network so here what I did is put up
+some degree distributions of different networks,
+and just show you that they exhibit different
+patterns so empirically, you actually see some
+dramatic differences in the patterns and let me just explain what these
+pictures look like. Often when people plot degree distributions
+in network science, the way that you standardly do this is on a log-log plot. You plot the log
+of the frequency against the log of the degree. Here we've got
+logged frequencies and the log of the degrees. Here actually is the log of
+the complement of the CCDF which actually behaves often
+similarly to the frequency. Ones that are fairly curved are ones that look very
+much like a random network. If you look at the
+high-school romance network, if you put down a, basically
+a Poisson distribution, which has the distribution
+you would get if you randomly put down links of given degree, you'll end up with a frequency
+distribution that matches the high-school romance
+network very closely. If you look at something that looks like the World Wide Web, then these things are often said to have scale-free
+distributions, power-law distributions, partly because this
+begins to look almost linear in terms of
+its degree distribution. What's happening here is you end up with many more nodes who have very high degree and very many more nodes
+that have very low degree, then you get in some of the
+more curved distributions, you've got fatter tails, and
+fewer nodes in the middle. This is looking at just a
+piece of the World Wide Web. This is from Albert and
+Barabasi's work on this. You basically get a fit
+which is pretty good in terms of just looking
+at this as a power law. It looks like it has
+a Pareto distribution as opposed to something which is much more at random like
+a Poisson distribution. The important takeaway here
+is that the distributions of these things have particular
+statistical patterns. There's a diversity in
+these patterns, and that diversity is
+quantifiable, and generally there seems to
+be a fairly simple set of different families
+of distributions that capture a lot of these. There's ways of capturing
+the distributions in fairly simple and
+meaningful ways. What we've gone through is
+just basic global patterns. I want to talk now a little bit about the segregation patterns, putting in node types, and talking about homophily. This is something
+which is obviously, you can actually find this
+in writings of Aristotle, Plato, and so forth. Here's a quote from
+a film in Holland, birds of a feather
+flock together. The idea that people associate with people who are
+similar to themselves is something that's well known, and it's been around
+for a long time. I want to point out from an
+economist's perspective, why on earth do we
+care about homophily? We care about it a lot because it affects the
+heterogeneity of behavior, beliefs, culture it
+affects a lot of things. It's going to be one
+of the main themes that we're going to come
+back to in terms of the identification when we get into the econometrics
+of some of this. What's the issue here? The issue is that people
+tend to associate with people who have very similar characteristics to themselves. That means that then when we are looking at peer influences, those peers tend to be correlated in terms of
+their characteristics, both observed and
+unobserved characteristics. The fact that they might be correlated and unobserved
+characteristics means that naturally
+their behaviors are going to be correlated and
+that's going to make it very difficult for us to disentangle effects
+that transmit through the network and effects that were there just because of the people's
+characteristics which tended to correlate
+with the network. Actually endogenously
+figuring out what's really going
+on in terms of the network is going to be
+tricky, and that's going to be one of the main challenges in working with network data. That's going to
+be the main theme you'll see in Lectures 2 and 3 of dealing
+with some of this. It occurs across pretty
+much any dimension of characteristic you can name. People have investigated
+homophily on and found fairly strong evidence for it so it's not surprising that
+you find it in age, race, gender, religion,
+profession, and so forth. I can give you some pictures. This is one from a paper I wrote with Sergio
+Currarini and Paulo Pin. These are students
+in a high school. They are color-coded by self-reported race in this case so this is a health dataset. Again, the blue
+nodes are blacks, red nodes there's a few
+Hispanics in this school, whites are yellow here, and then there's a few other depending on whether
+people click multiple characteristics
+or didn't report so there's some
+data missing here. But basically, it wasn't as if I pushed all the yellow nodes to one part and pushed all
+the blue nodes to another. This was drawn with what's
+known as a spring algorithm. The algorithm for
+drawing this network, what it does is it tries to
+pull together nodes that are connected and push apart
+nodes that are not connected. It just iterates on that and then after some
+number of iterations, you end up with a figure.
+You can program it. There's a whole series
+of algorithms from network science
+literature that do this, but this is using one of
+the spring algorithms. We collected all
+these nodes together, even though they
+weren't drawn that way. It pulls out the ones that
+tend to be connected and you can begin to see community
+patterns in these things. Not surprisingly, if you know something about
+American high-schools, the students are
+segregating fairly strongly according to race here. If you look at the data, basically there's 52 percent
+of the students are white. Here you see 86 percent of the friendships of whites
+or with other whites, black 38 percent of the school, 85 percent of their friendships
+are with other blacks. Interestingly, Hispanics
+are 5 percent. If you become a
+very small group, you tend to integrate well. They're very well-integrated. Actually, only two percent
+of their friendships are with other Hispanics and they tend to integrate
+more than other groups. But you see these
+patterns where you see these segregations across groups, and that's going to mean it's going to have
+several implications. One is that if we begin
+to think about say, adoption of certain
+opinions or technologies, it's quite possible
+that we'll see different equilibria if you might on one part of the network than on the
+other part of the network. The segregation
+patterns can allow very different cultural
+norms to exist in different parts of the network, and can
+allow things so that information might not spread
+from one part to another. This is going to have
+profound consequences. Notice that this can
+be very independent of the other dimensions like the average distance, or
+the degree distribution. If we hadn't colored these nodes and pulled them apart
+in this manner, you might not see the particular segregation patterns
+that are there. Adding these
+characteristics gives us another picture of what
+the network looks like. One thing that happens here, what I did is actually take the same network. But now what I did
+was color-code this by what's known as
+strong friendships. Strong friendships here are
+ones where people actually could report
+different activities that they did with each
+other in a given week. Code a network of friendship
+as being strong if people were reported doing at least three different activities in a given week with
+another person. Studying together, going
+to lunch together, some athletic activity
+and so forth. They had a whole list of
+things they could click. Now you see actually the
+network splits almost entirely. There's I think three
+friendships between blacks and whites once your code things by the stronger relationships. Depending on how you code things you could end up with different
+segregation patterns. Here it's a much more
+pronounced segregation pattern than it was before. This is from a paper I just wrote and it's
+actually from data from a project I'll talk about
+a little later with Abhijit Banerjee emerged under the current has to do flow. This is a village
+in India and this is a kerosene and rice
+borrowing network. In this case the nodes
+are color-coded by caste. The blue nodes are
+scheduled castes and scheduled tribes. The castes that are recognized by the Indian government
+for affirmative action, the red nodes are the general and otherwise
+backward castes, so the more forward castes. Basically again you see
+segregation pattern. This is also drawn by
+a spring algorithm. Now if you look at the number, the probability of a link
+existing between people in the same caste
+designation in this case is about 9 percent and it's about 6/10 of a
+percent going across. You see more than 10 times
+probability of link between. Again, that's going to have
+consequences for a lot of transmission of
+information and so forth. This is an interesting
+one that comes out of a paper by Luciani in 2013. I don't know if you
+ever saw this. This was in the New York Times. This is US Senate co-votes. What I'm going to do is
+just take you through three decades, three
+different snapshots. Here what have we got? We've got senators, and they're color-coded by
+political party blue and red. There's a link
+between two senators. If they voted the same
+way on at least 100 bills in the given session of that
+particular year in 1990. Here the network, this
+is again pulled apart by a spring algorithm so
+it collects the blue, and the red tend to be on different sides but it's
+fairly well meshed together. This is 1990. This is 2000. It starts to pull apart.
+There's fewer connections. 2010. When people are talking
+about polarization you can visualize it pretty clearly when you start using these algorithms and actually
+looking at the networks. The co-voting together in the Congress now is
+pretty much nonexistent. The votes are almost always,
+who's that in the middle? I can't quite read,
+it's from Maine. Who's the Senator from Maine? Nelson. Ron Burt has an important paper on one of the most important
+sociological papers on network structures. He talks about structural holes. People that can be important in an organization are ones who are bridging
+different groups. That looks like a
+structural hole as clearly as you can
+see them often in data. But these pictures
+allow us to see and track whether or
+not we're seeing different patterns and roughly whether they're
+changing over time. One thing to emphasize
+from this as well is often just from data
+considerations. We tend to work with data in isolation where we look
+at a particular snapshot and we treat this as the network as if all
+these people were communicating and it was static. But these things
+change over time. They're very fluid. People might communicate with some people intensely
+for some period, not for a long time
+then intensely again. The dynamics of networks
+is something which is a nascent area of methodological study, and an important one for keeping in mind and pushing forward with. We've talked through these two. I'm going to leave local
+patterns to talking. I'll come back to that
+in the third lecture. But let me talk a little
+bit about positions in networks. This will set up
+also a little bit of what we'll talk about
+in the next thing. But trying to keep track of how important
+individuals are, how central they are,
+other kinds of things. Looking at the micro level
+now when you're looking at a particular node and trying to identify something about
+its characteristics. Economists, we care about networks because
+of externalities. Without externalities
+networks would not be that interesting. Part of the reason
+they're really important is because somebody's behavior affects other people's
+behaviors, and they don't necessarily
+take that into account. But understanding how important somebody is and how
+influential they are is something that can be essential in a lot
+of different studies. There's going to be a
+lot of heterogeneity and nodes influences not just due to characteristics, but also due to
+network position. It could be that a
+village has an elder or somebody who is
+wiser and so forth. They might have a lot of
+influence just because of their position and their wisdom. But it could also be
+that somebody who is a shopkeeper tends
+to talk to a lot of people and they can be very
+influential just because of their network position, and not because of their
+knowledge or background. Capturing things like centrality
+and influence measures and networks is going
+to be something that's important in a lot
+of applications. How do we capture this? Well, it's going to depend on the nature of the application
+and the interaction. What's happened is there
+has been a mushrooming of different measures
+of importance in networks. There's all sorts. We could spend more than four
+hours just going through different network
+influence measures. Today what I'll do is
+I'll just pull out a few of the most prominent ones and ones that are
+well-known and well used. The most basic one is just what's known
+as degree centrality. This is just capturing
+how connected a node is. It's a basic measure. You can normalize
+it if you want. Keep track of what percentage of the people I'm connected
+to and so forth. Well, that's some measure of
+my reach or my influence. If I know half the
+people in the room then that's measure as opposed to knowing 1 percent of
+the people in the room. That's a very crude measure. When that goes back to symbol in around 1906 and we start talking about importance
+of different individuals, degree centrality
+is a central role. We go back to Padgetts Data. For instance, looking
+at the Medici in this, so the Strozzi's, the Guadagni's were
+other families in this time period that we were a number of other families who had better wealth and better political
+connections and yet the Medici seem to rise
+at this point in time. If you read a little bit into what Cosimo de
+Medici was writing, he was engineering marriages of his family with other families, with the idea of becoming
+important in a network. In particular, just in
+terms of degree centrality, we see that they have
+six connections, the Strozzi's have four
+and Guadagni's have four. They look a little more
+important on this dimension. That doesn't really capture
+a lot of what's going on, what we'll have other measures
+that might do better, but it begins to capture
+something about the network. What's the problem with
+degree centrality? Is that it's not capturing several other things that
+we might want to capture. One is that people can
+be more influential, not just because they
+have more friends, but because they have
+better situated friends. Another is that
+somehow you want to capture where you
+sit in a network. There's some idea that
+this node is more central in terms of
+where it is placed, and also in terms of
+who it's connected to. Degree centrality
+labels these two nodes as being equivalently connected. There's going to be a large
+equivalence classes of nodes which really are very
+different animals in terms of what their
+connections are in a network and how potentially
+influential they are. We want to measure
+that it picks that up. The centrality measure which begins to do that is by thinking of seeing the
+centrality should be proportional to the sum of
+your neighbor centralities. Let's just define the
+centrality of a node i to be proportional to the sum of the friends of
+i's centralities. We just want a measure which says it's not only the
+number of friends, but let's wait things
+by their centrality. Now we'll define
+things that way. Very simple variation on this. What do we end up with? We end up with C_i proportional
+to the sum of C_j's. If we write that in terms
+of the adjacency matrix, we have some scalar a times the C_i is going to be equal to the sum of the g_ij times C_j. That's just in terms of
+our adjacency matrix. Well, this is just an
+eigenvector calculation. This is just saying
+that the vector of centralities is proportional to the adjacency matrix times
+the vector of centralities. We've got a system of equations, and a system of unknowns, which looks exactly like a
+eigenvector calculation. This is what's known as
+eigenvector centrality. Eigenvector centrality, there's many different eigenvectors for an n-by-n matrix that
+can be up to n of them. In this case, the tendency is to take the one which has
+all non-negative entries, which for a non-negative matrix by the Perron-Frobenius Theorem, there'll be a unique eigenvector which has all
+non-negative entries. There's a lot of nice
+matrix algebra that'll tell us things about what
+this vector looks like. We have an eigenvector
+calculation. We can go ahead, and use that as a measure of centrality as well. That's known as
+eigenvector centrality. Basically Google
+PageRank, it should be a capital P was
+named after this. Google PageRank keeps track in the early days was the way that pages if you clicked in a search, and there were a whole series of
+things that might match, they had to rank which one is appeared first,
+second, and third. The original algorithm
+was actually based on an eigenvector
+calculation. It's becoming much more
+sophisticated since then, but that was the origins of it, was using a basically an
+eigenvector calculation on the matrix if
+they kept track of. You can do random models
+which if you look at a random Markov
+chain on a network, the percentage of time you will spend a different nodes is going to be proportional
+to the eigenvectors. This captures a whole
+series of things which are interrelated and have
+some nice mathematical foundations. If we go back to
+that same network, we see your now this
+node comes out at 0.31, this one comes out at 0.11. This one is much
+more central than the other one once we do
+this kind of calculation. In fact the most central node, and this one has
+seven connections. This one only had six, but it ends up being much more central in terms of
+eigenvector centrality. You can go through
+and use this as a different measure of
+centrality and it'll give you different information
+about positions in the network then
+degree centrality. You can go back,
+the Medici are also the most eigenvector
+central family here. Strozzi I guess a close
+second than Guadagni. Ridolf would do pretty well. Here are the Ridolf
+do pretty well even though they only
+have three connections. They're pretty well
+situated in this network. Another prominent measure
+is betweenness centrality. What is betweenness
+centrality measure? This keeps track
+of the number of shortest paths that a
+given node lies on. One thing you could do is say, am I essential for connecting other
+people in the network? One way you could
+do that and say, look at all pairs of people. If the shortest path between
+them goes through me, or one of the shortest
+path goes through me, then I'm somehow important
+in connecting them. Betweenness centrality than just does a calculation
+which says, "Okay, look at how many
+different connections there are shortest
+paths between i and j." Then keep track what's the number of geodesics between
+i and j that k lies on. Then do a calculation which
+I get if I'm on half of the shortest paths
+between person 1 and 2, then give me a half for that, and then sum over all
+the possible pairs of other individuals
+and then normalize by how many pairs you
+can be considering, and that gives you
+betweenness centrality. If you go back to this, the Medici are on 52 percent of the shortest paths
+between other families. If you read into
+Cosmos writings, actually that was one of the things he was
+trying to engineer. They wanted to be
+important brokers in the courts weren't so
+great in enforcing contracts and so
+forth at that time, having being an
+important broker between other people's business
+dealings was very enriching. They were in 52 percent, the Strozzi 10 percent, Guadagni about 25 percent. So you'd begin to see
+differences here. All of these measures
+are capturing different things and they might be different applications that they're going
+to be useful in. We've gone through
+degree centrality, just keeping track
+of connectedness. These kinds of influenced
+prestige eigenvector numbers, it's not what you know, but who you know kinds
+of calculations. That's going to be another
+important dimension which captures things. That's the eigenvectors between this importance as
+an intermediary. There's also another set of notions that we won't
+talk about today, but I'll just throw out
+their closeness measures. You can just ask a given node, how close is it to other nodes? I might be close to
+a lot of people. Some other people
+might be more distant. You can just keep
+track of what's my average distance
+to other people. There's closeness in
+decay variations. Ease of reaching out to other
+nodes. Okay, let's see. I think what I'll do
+is this is probably a good place to stop
+the first lecture. 

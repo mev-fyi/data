@@ -1,0 +1,1043 @@
+Caroline M. Hoxby: I'd like
+to start with some thanks to, for me this is I'm
+really honored to be here today to give
+the Feldstein lecture. I want to start with
+some thanks First. I just want to thank the NBER. It's almost difficult
+for me to thank the NBER because it's been
+so important in my life. The first time I
+showed up at the NBER was when I was an undergraduate
+as a research assistant. I have never missed spending some time at the
+NBER in any year since then. My first Summer
+Institute was actually the year after I graduated from undergraduate school at Harvard when I was invited
+to go to Summer Institute, it was still like Quincy
+House at the time. Whenever I'm at the NBER, I was feeling that it's
+my home away from home. It's been an incredibly
+influential in my life, and I just cannot imagine having become an
+economist without the NBER. But then also, I really want to say that I'm honored to give this lecture because it is in
+honor of Martin Feldstein. Martin has been probably the single most influential
+economist in my life. He was the first person to teach me college-level
+economics. You taught me Principles
+of Economics and first fact I believe I attended his first principles
+of economics lecture. Don't look up the
+date of that lecture. I also attended his last
+principle of economics lecture. Because by then I was his
+colleague at Harvard and we were colleagues for I
+think 13 years at Harvard. I had him as an undergraduate, and I can still remember many things that he said in the two classes
+I took from him, but especially his American
+economic policy class. Believe it or not, I often
+quote some of the things. I probably remember it
+better than he does. I still quote some of
+the things that he said, not just to my undergraduates but to my graduate students. I do give him
+proper attribution. But then we serve
+together as colleagues, we co-taught both graduate and undergraduate
+public economics. I can tell you that I learned an enormous amount from
+co-teaching with Martin. But also from just sitting in seminars with him every week and hearing the questions he asked and the way in
+which he thought. He has a remarkably
+incisive mind. He is really dedicated to
+first principles in economics. He always sees the
+big question in a question I never tire of hearing Martin's
+comments and questions. I should say that for
+all of you who may not have had as many opportunities to spend time with Martin, you can always spend
+time with his papers. His papers are very much
+like his beautiful mind. They are very clear. They go right to a point, and there is a reason
+why so many of them are seminal papers in economics and especially in
+public economics. Anyone who teaches
+graduate public economics will teach many of
+Martin's papers, and we'll know that
+they are some of the easiest papers to
+teach to PhD students, precisely because
+people take away so much from them and
+they're so influential. Thank you Martin for
+all that you have done for me over the
+years and in every way. I'm very honored to be giving the Feldstein
+lecture today. What I'm going to talk
+about today is that economics of the market for higher education in
+the United States. I think that we have an incredibly unique
+and exciting market for higher education here. One that is not only informative
+about our own country, and maybe about highly developed
+countries but is deeply informative about what happens
+in tertiary education. I'm going to try to get
+to all of that today. By the way, there's
+a short disclaimer. Some of the slides are based on a paper that I gave last
+year at Summer Institute. Many of you will have seen it. Therefore there's a disclaimer that this does not represent the views of the Treasury or the Internal Revenue Service. Let me just tell you
+what I'm going to argue today to put it all out there because there are several pieces to the argument
+that I'm going to make. The first part of the argument
+that I'm going to make is that in our market
+for higher education, we see a very strong
+correlation between the educational resources
+that a student experiences, and his or her
+college readiness, which from now on
+I'll just call CR. College readiness
+is a combination of probably innate aptitude,
+and also preparation. I'm just going to call it college readiness
+so that you know, from now on it's just this
+combination of probably ability and preparation
+put together. This correlation between CR and educational
+resources experienced is considerably stronger
+in the parts of the market where market forces appear to be more powerful. I'll show you evidence of that. The next part of the talk
+is going to be about the productivity of American post-secondary institutions. Over the past year, I have been working on measuring the productivity of every U.S post-secondary institution. What I'm going to do, is show you the
+results of that work. I'll tell you a little
+bit how I got there, but I'm mostly going to show you the results and then
+show you that they have fairly strong implications for what must be going
+on in this market. I am going to show you
+that the productivity of a dollar of
+educational resources, appears to be fairly
+similar across all of the selective institutions
+in the United States. From the most selective,
+like Harvard, Yale, Princeton, Stanford,
+University of Chicago, etc. To those that are
+just selective, somewhat very
+modestly selective. I'm going to suggest that market forces
+may be the reason why we have very similar
+productivity of a dollar. That doesn't mean they all
+spend the same amount, but a dollar produces about the same amount of value-added. I'm also going to show
+you that productivity of post-secondary
+institutions appears to be lower and is much
+more dispersed, much more different among the institutions that
+are non-selective, and they appear to experience
+much weaker market forces. I'll make an argument
+that there's a connection between
+those two things. If productivity in higher
+education is important for growth point to
+which I will come back at the very end of my talk. It may be a bit
+of a problem that the US market for
+higher education is largely expanding its enrollment in the non-selective tier. Where market forces appear to be weak and productivity
+seems to be lower. Then finally, I'm going to
+conclude by talking about the implications of all of
+this for economic growth, and for income equality. Because if we take these
+productivity results seriously, and we also take the
+results seriously about the relationship between educational resources
+and college readiness. Then it is almost impossible to escape
+the suggestion that a particular model of education production applies
+and tertiary education, and that that model
+exhibits single crossing. Single crossing is the idea that people who have higher
+college readiness, benefit more from any additional unit of
+educational resources. Once you get that single
+crossing condition, it has pretty profound
+implications for economic growth, for potentially policy
+in the tertiary world. Also, it has consequences
+for income equality. I will try to get to all
+of that in the talk today. I will probably speed up at some point as I flip
+through the fingers. Part 1, I'm just going
+to talk a little bit now about the US market
+for higher education. Part of this is to remind you of what it
+looks like because most of the people
+in this room are not associated with
+representative institutions. I will say that I
+think the US has the only true market for
+higher education in the world. You might disagree
+with me a bit on this. But it is undoubtedly the
+most informative market. The reason is that market forces still
+dominate this market. It's not that the government
+doesn't intervene. The government intervenes in numerous ways in our market
+for higher education, but we do not have a
+centrally controlled market. There's no national
+government setting tuition. There is no national government
+allocating students to different universities
+or deciding which universities
+should get resources, or faculty, or
+anything like that. That really sets us apart even from our nearest counterparts, probably the United
+Kingdom, Canada, etc. We really have a market that is dominated
+by market forces. Our market exhibits
+very strong variation. The top and the bottom look
+nothing like one another. Where by top, the most
+selective institutions, and by the bottom, I mean the non-selective
+institutions. What I'm going to
+show you is that the highly selective
+end of the spectrum, the market is very integrated. In other words, the
+institutions are competing with one another, and the same types of students are attending
+these institutions. The market is relatively
+well-informed. I would never say it's a
+highly informed market, but students do know quite
+a bit about schools, and schools know a
+lot about students. It's mainly privately financed. By that, I mean that for the sources of revenue associated with
+undergraduate education, most of those sources
+are coming from the students themselves
+or from their families. It's largely privately
+financed at the top. The top are the most
+selective schools are populated by
+students who are, tend to be quite elastic
+to institutions, academic, and other resources
+in other words, they're sensitive
+to whether you have a high faculty-student
+ratio or low one, how nice the campus is, what classes are like
+things like that. Finally, you will see
+that it is characterized by very strong
+assortative matching between the educational
+resources at an institution and the
+students college readiness. At the other end
+of the spectrum, and the very non-selective end, almost the opposite
+conditions prevail. In the middle, it's
+in the middle. We'll get to look
+at all of this, and I'm going to try
+and show you evidence on each one of these pieces. Let me just quickly
+review the market, especially because I know not everyone here
+is an American, and even if you are,
+you don't necessarily study higher education. There are about 7,500 post-secondary institutions
+in the United States. About 1,000 of those
+are selective. We have many that
+are non-selective. We have three types
+of governance, public, non-profit,
+and for profit. Our institutions are very
+autonomous compared to most post-secondary
+institutions in the world. They get to choose
+who they admit, what their tuition is, what their curriculum is, who they're going to hire
+in terms of faculty, their salaries, how to
+give up financial aid, how to raise money. That depends on whether you're a non-profit or for profit. But in any case they get to
+choose all those things. Now I know some of you
+are associated with public or state colleges
+and universities, and you know that your schools are considerably
+less autonomous. But by international standards, even public universities in the United States
+are very autonomous. It is true that you may negotiate with your
+state legislature over how to set
+tuition or how to set in-state
+out-of-state enrollment, but at least you're negotiating and you're not having it set
+by the federal government. The US Department
+of Education is not making those
+decisions for you. Selective schools in
+the United States tend to admit students
+on a holistic basis. They don't just take account of one thing like a test score
+and have sharp cutoffs. Nevertheless, test scores
+are statistically by far the most powerful
+indicator of how selective a school is and of a
+student's college readiness. From now on, I'm just going
+to say that a school is more selective if it has higher
+median test scores, that is, it is just the statistical
+predictor that matters. Net tuition in the United States is what you actually pay
+if you're a student, that is not equal to the
+list price or list tuition, and the difference there is financial aid, as we all know. But list tuition is
+also not equal to the educational resources
+that a student experiences, and that can differ because of state appropriations and
+public universities, or in non-profit
+universities that usually gifts to the endowment
+or current use gifts that separate those two things. It's important to realize those are not all the same thing. What you pay for tuition is not the educational
+resources you experience. As Jim Perturb pointed
+out in the introduction, the most selective
+schools which have very high resources per student, are strikingly often free
+for low-income students. It tells you that net prices and educational resources
+can really be very different from one another. We do have federal
+intervention in the US, but it is mainly in the form of portable grants, in other words, you can take them to any
+college or university, subsidized loans and tax
+credits and tax deduction. I'm not going to be
+talking a lot about the federal government today. I like to think of the US post-secondary market
+as a market in which there are many
+price distortions or price interventions, but it's still not
+centrally controlled. That's how I'd like you
+to think about it today. Just reviewing some of my previous work
+which we need to load up so that we can understand some of the other things
+that I'm talking about. In about 1875, I would describe the US higher
+education as autarchic. Most people just went to
+the most local institution, or one of two local institutions
+or something like that. After that, it
+became significantly more geographically integrated, and this was particularly true for students with high
+college readiness. You'll see in a moment that
+it's still not terribly integrated for students
+with low college readiness. Also a lot of this
+integration took place immediately after World War II, between about 1950 and 1970 when testing
+became standardized, financial aid became
+standardized and people started to realize, Oh, I'm really ready for college or I'm really
+not ready for college, and colleges were
+able to start to find the students
+who suited them. As the market became
+more integrated, the students with
+high degrees of college readiness
+tended more and more to attend the institutions that had the most
+resources per student, and I will show you that. It's quite a dramatic change. Many of the students with high college
+readiness could pay, but many of them also
+could not pay for the educational resources that they would have experienced
+at those schools. That is really the beginning
+of serious financial aid, as these schools reach
+out to low-income, high-achieving students and find ways to make school affordable. This was achieved by having increasingly large subsidies at selective institutions
+and their students are by far the most
+subsidized students. I may come back to
+that point again because I think it
+confuses people a lot, but a lot of the most
+selective institutions subsidize their
+educational resources the most for students, although at least at private universities,
+the private non-profits, the students pay it
+back later in life when they ask them for
+their alumni donations. It's not free. But
+the consequence was that the correlation between parental income and
+educational resources fell over this long
+period of time. Let me just show you some data on the things that I said. This is the percentage
+of students who apply to a post-secondary
+institution that's at least 250 miles
+distant from their home. I'm going from 1950-2010. The top set of dots is for the students who
+had the highest aptitudes, students at the 90th percentile or above on college assessments, then I have median
+aptitude students and marginally
+prepared students. What you can see is that the students who had
+a very high degree of college readiness switched from being largely in Autarky. They were just attending
+their local institution to nearly all of them are applying to at
+least one institution that is at least
+250 miles distance, so that they're in a geographically integrated
+market these days. If I do something more
+sophisticated and I estimate a statistical
+model of college choice, so this would be something like a conditional logic model. A pretty big model of post-secondary
+choice where I can take into account all of the characteristics
+of the students and the characteristics of the colleges and then the
+match between those things. What do I see? Well, I see that distance is decreasing in importance
+for college choice. That the match between
+my own college readiness as a student and the college readiness
+of the peers I would experience at a school is
+increasing in importance, and that my parents
+ability to pay for the school's
+educational resources is decreasing in importance. That would be true if I do these pretty
+sophisticated statistical models of college choice. But all of these
+changes are much more dramatic for students with
+high college readiness, and they are not at
+all dramatic for students who are marginally
+prepared for college. The next thing I
+want to show you is how much the sorting of students and educational
+resources changed over time. The earliest year
+I can show you is 1967 for reasons of data. Let's have a look at that. On the horizontal axis is an institution's per student
+instructional resources. What I've done is I've
+given each school the number of seats it had in 1967 and then just ranked them. At the far right-hand of the horizontal axis are the schools that have the highest per student
+instructional resources, and if the top school
+had 1,000 seats, that's how many rank
+places it's allocated. On the vertical axis, I've done something very
+similar except what I've ranked as students in terms
+of their college readiness. Again, I've just taken
+students in order and rank them from the
+top scoring students to the bottom scoring students. If the top scoring student
+went to the school that had the highest instructional
+resources per pupil, and then we went down like that, rank, what we would see was
+just the 45 degree line. We do not see the
+45 degree line. In fact, what we see is that students college readiness and instructional resources don't
+seem very closely related. Although there's a
+little indication here on the right-hand
+side that there is some positive
+relationship as you get towards the schools that have the highest
+instructional resources. Let me show you the same chart with the same schools in it. For 2013, you can see that there is a lot more assortative matching. Essentially the students with
+high college readiness are going to the schools that have high instructional
+resources. There's an enormous
+increase in the matching between students
+college readiness and schools
+instructional resources. Although you will notice
+that if you look at the bottom left-hand
+corner of this chart, as you get into the
+schools that have lower instructional
+resources and the students with lower
+college readiness, it starts to look again
+a bit like a cloud. There's not really much
+of a relationship there. This is the most selectives, or most of you spend most of your time,
+the very selectives. The selectives, and these
+are the non-selective here, just to give you a sense of where they are on this chart. In fact, this
+non-selective group in the two charts that I showed
+you in 1967 and 2013, I showed you a panel of schools so that I was
+holding the schools constant and I wasn't really expanding the schools
+that I was looking at. That was to be fair in terms of the comparison over time. But in fact, this
+group down here has really expanded
+enormously over time. This is where most of the
+enrollment expansion in the US has occurred. Let's have a look at that
+quickly just so that we can put some things
+in perspective. This is the growth
+of enrollment of the non-selective
+sector since 1967. The way I've divided selective and non-selective
+here is to say that you're a selective
+school only if you ask students to submit test
+scores, grades, and letters. They at least recommend them when you submit
+your application. That's one way of thinking of what a selective school is. You can see that now the non-selectives by that criterion totally dominate enrollment
+in the United States. Another way of deciding
+where the dividing line is between selective and
+non-selective is to look at schools that call themselves
+open enrollment schools. These are schools
+that really don't even require you to apply. You just walk in the
+door and as long as you can pay you are enrolled. Again, you'll see this
+enormous expansion in the open enrollment. It's not quite as dramatic, but you can still see
+that's the part of the US post-secondary market
+that is expanding fastest, is the non-selective part. I want you to keep that in mind throughout everything else that we're going to be
+talking about today. That was just a bit of history
+to get us to up to today. Now, I want to make
+the points that I described earlier in my
+introduction in the motivation. The highly and
+non-selective parts of the market differ in all of these ways that
+I described earlier. Now I've already shown you
+evidence on two of them, so I'm not going
+to show you again that there's a big
+increase in the degree of assorted of matching and that students' sensitivity
+to institutions resources has
+increased over time. I mentioned that already with these longitudinal studies but I am going to try to
+make the rest of the points for you here quickly. What does the US post-secondary
+market look like today? Well, what this
+is showing you is the enormous difference in instructional resources
+per pupil between the most selective schools
+on the one hand and the least selective
+schools on the other. It's really very dramatic. What we have at the top end of the selectivity distribution
+is schools that have instructional spending
+just under a $100,000 per pupil and core spending of
+around a $150,000 per pupil. Core spending adds to
+instructional spending. Students support,
+academic support, and institutional support. It doesn't really matter which of the two measures you use. As you can see, they go up
+together very smoothly. At the low end of the
+selectivity distribution, we have schools where instructional spending
+and core spending are under $10,000 a year, $5,000 a year, $4,000 years-all
+is quite common. Mind you that these
+are not tuition, this is what they're actually spending to educate a student. I'm going to show you a
+slightly different version of this chart in one moment. I want to emphasize that on
+the horizontal axis here because you're going
+to see a lot of charts that have the same
+horizontal axis. What I have here is the institution's median
+SAT combined score. That's the math plus
+the verbal score. Institutions are binned
+in 20 point categories. It's the institutions that are shown here not the students. Just to be clear, if you happen to be a
+student and you're attending a school that has a median
+SAT score that's below yours, you're with your institution. It's the institutions
+that are being shown , not individual students. The SAT does not give out score points in a way that is even in terms
+of percentiles. The SAT is designed so that
+it is more sensitive over the range in which students
+are very college ready. As a result, if I were to show this same chart and just
+use national percentile, so this is exactly
+the same chart but I've now changed the
+horizontal axis to national percentiles
+instead of the SAT score, you will see that things
+look much more compressed. That's telling you that a
+lot of the action among the most selective
+institutions is up just in the top few percentiles of
+the test score distribution. I'm going to continue
+to show you charts with the SAT score on the
+horizontal axis. I'm doing that because the selective institutions
+are interesting. I want you to be able to see the interesting action and
+not have it all crowded up on the right-hand side
+of each one of the figures. That was instructional resources and core student
+resources per student. We saw that it was dramatically different among institutions. I'm now going to look
+at some measures of competition and integration and show you that they are also dramatically different
+among institutions. I have four different measures of competition and integration. The first one is just
+the average number of applications filed by an
+institution's students. You can see that the least
+selective institutions most students are just applying
+to that students school. Just one application is filed. Whereas at the most competitive, most selective schools,
+what we see is students on average submitting
+10 applications. Very big difference there. Another measure would
+just be the share of an institution's students who applied only to that school. They really never considered another school very seriously. It's not clear that school A and just needs to
+compete with school B. You will see that, again among the
+non-selective institutions with the least selective ones, most of the students are only
+applying to that school, whereas that behavior is extremely uncommon for the
+most selective institutions. Another measure
+of competition or integration might be whether school A has to
+compete with schools outside of its own
+little commuting zone. Is it only competing with
+other local institutions? Well, this just
+shows you the share of competing applications. In other words,
+applications submitted by my students to other schools that are to institutions
+in another commuting zone. Again, you can see that
+this goes up very steeply as we go from the
+least selective to the most selective
+institutions. If instead of looking
+at a commuting zone, which is a pretty small area, I look instead at applications submitted to an institution
+in another state. You can see that that also
+goes up very steeply as we go from the least to the
+most selective institutions. By all measures of what
+we would think of as integration or competition
+with other institutions, the least selective
+don't look like they have much competition, they're just maybe
+competing with a few local institutions. The most selective
+look like they're in a very integrated
+national market where they have to compete for students with all the other
+institutions potentially. That was competition
+and integration. Now let me show you a little
+bit about information. Probably the best measure of whether we have very
+much information about a school is whether
+the institution provides information
+to something called the common dataset. The common dataset is one
+dataset that is gathered by a consortium to be used for all of the college guides
+in the United States. It's used for Barons guides
+and the Peterson's Guide, and it's used by US News and
+World Report and so on it. It is so that schools can provide comparable
+information to all of these different
+organizations and so that they don't have to provide
+it time and time again. You'll notice that the least
+selective institutions, none of them are
+really participating in the common dataset. In fact, it's quite difficult to find information about them. Go and try on the web and what you will find is
+they'll say lots of wonderful positive
+things about themselves. But then when you try to get down to the
+nitty-gritty, well, tell me about how much
+you spend on this, what's your faculty
+student ratio? How many of your faculty
+have graduate degrees? What are your students graduation rates in
+different programs? You won't find that
+kind of information. On the other hand, the most selective schools
+in the United States, a 100 percent of them are participating in
+the common dataset. We can find out lots of
+information about them and it's all in the college guides with which we're familiar. I also note that here you
+can really begin to see this break between the selective and
+non-selective schools. There's this very
+steep increase in the participation in
+the common dataset in a range between about 900 combined on the SAT and about 1,100
+combined on the SAT. Keep that range in mind because it'll show up on
+some other figures as well as being the
+dividing line between the non-selective
+and the selectives. Finally, I want to
+show you the share of undergraduate revenue
+that is paid by students. Because I think students
+have an incentive to internalize the effects of their education on their
+own human capital, on their later earnings, on
+their later life outcomes, when they are paying for their
+undergraduate education. They may have less
+of an incentive to do that when someone else, a third party is paying for their undergraduate
+education. What do I mean when I say
+it is paid by students? Well, perhaps it's
+easiest to think of what is not paid by students. If I'm getting a
+government grant, I am not paying
+for that directly. I'm never going to
+have to repay that. If I have a loan and I'm
+going to default on it, or I'm just not going
+to pay it back under one of the income-based
+repayment schemes, that counts as not being paid. I'm counting those as students who are not paying either. Or if my tuition is being subsidized by
+state appropriations, I'm not going to pay that back. As you can see, if we
+look at this chart again, what we can see is that at least selective and only
+about 40 percent of undergraduate related revenue is really coming from students themselves whereas
+at the top end it's close to 100 percent. Now this top end is
+actually a funny thing because as many of you
+know, in this room, who teach at non-profit
+universities that are very selective, those students tend
+to be subsidized by income from the endowment
+and other donations. But for the purposes of thinking through the
+incentives here, I think we're going
+to count that as money that is
+paid by students, partly because
+they themselves do actually make the
+donations later in life. But also because the institution has a strong incentive to internalize the effects of its own education on its
+students later outcomes, because those later
+outcomes are what determine the inflow of later
+donations or revenue. From the economic
+incentives point of view, we're going to count it as money that ends up getting
+paid by students. Finally, I'll just note before I leave this topic
+that the share of undergraduate revenue paid by students does not differ a lot, among the most
+selective institutions, they all have a lot of their undergraduate
+revenue paid by students. But once you go down
+to the non-selective, it's all over the place, so what I'm showing you
+here is the 10th, 50th, and 90th percentile of the share of undergraduate
+revenue paid by students. If you know very much about
+the non-selective part of the market for education in
+the United States you will recognize that this is the incredible diversity
+of our non-selective. On the one hand, we have
+non-selective institutions that are extremely demanding. They're often for
+profit institutions. They give out certificates and other credentials that are
+very valuable to employers. We have a bunch of these
+in Silicon Valley and they charge a lot of money and they expect students
+to pay for that. Most of the students who go to those schools pay for
+their own degrees. On the other hand, we have also for-profits still sticking with the for-profits
+theme for a moment. Also, we have for-profits where almost 100 percent of their revenue is coming
+from federal grants, and the grants that are given to military veterans in
+the United States, and they would be down at
+the 10th percentile where almost none of the students are paying for their own
+undergraduate education. They're both types
+of for-profits. Actually the public institutions
+tend to sit someplace in closer to the median there. The non-selective part
+of the market for higher education in
+the United States is incredibly diverse. It is not like the most
+selective end where you could say the schools are not
+quite interchangeable, but they're close to being interchangeable at
+the non-selective, and they are far from
+being interchangeable, and that is a theme
+that we will see again. So far I've just reviewed where the market for
+higher education is. Now let me show you what
+I think of as being the new and to me
+surprising and maybe even very surprising results. What I have been
+working on now for about a year is measuring the productivity of
+post-secondary institution, so what do I mean
+by productivity? I mean the productivity of a dollar of
+educational resources, so the numerator is going
+to be the causal increase in lifetime earnings that is triggered by enrolling
+in the institution. This I'm going to
+call value-added. I realize that
+post-secondary institutions don't just increase earnings, but we're going to put
+that aside for right now. We're only going to
+think about value-added in terms of lifetime earnings. In the denominator will be the causal increase in lifetime educational spending that is triggered by enrolling
+in the institution, I'll call that
+social investment, and notice that both of these
+are longitudinal concepts. Not just the first one, the lifetime increase
+in earnings, but also if I go to a specific college and
+then that triggers me to not only go
+to that college, but also maybe to go
+to graduate school or go and get a professional certificate or
+something like that, that will be included also
+in social investment. It's not just what happened to pay out of
+pocket at the beginning, it has all the educational
+resources that get devoted to me longitudinally is going
+to be in the denominator, so it's very important
+that we have longitudinal data for both. The main problem for measuring the productivity of
+post-secondary institutions is the bias that arises through vertical and
+horizontal selection. Vertical selection is the
+problem that different schools enroll students who differ in terms of their
+college readiness, so it is not
+reasonable to compare, a Tulane University to, which is very selective to a local community college and say that the difference in the students earnings
+just has to do with the difference in
+value-added between Tulane and that
+community college. It's just not true, they're admitting
+students who have very different levels
+of college readiness, so they probably
+would have earned something quite
+different anyway, and dealing with that is the primary problem in trying
+to measure productivity. There also is a horizontal
+problem which is non-trivial, and that is that if you
+were to compare Tulane, which is located in Louisiana, to an equally selective
+school that is located in a labor market that
+has much higher earnings, you might end up making a false apples to oranges
+comparison again, and that's because even if these schools enroll students who are equal in
+college readiness, they still could differ
+in other ways in terms of their labor markets
+and other ways that might affect their earnings. I'm going to try to deal
+with both of those problems. I'm not going to go into the nitty-gritty of
+the method here today. Although please feel free
+to read the papers and also feel free to ask
+me about them because I like to talk about
+the nitty-gritty. What's the method
+from a 1,000 feet? Well, I tried to think
+through experiments. I really wanted to
+put the method in terms of experiments
+that people could understand and that made sense, and I'll also explain to you
+later why it is that I like this method rather
+than just trying to control for students test
+scores or something like that. The method deals with
+vertical selection by finding each school's on the
+bubble range and admission. On the bubble means
+that the students are just maybe going to be
+admitted, maybe not. It's the range where the school
+is almost flipping coins between whether the student gets admitted and does
+not get admitted, and I'm going to treat
+the students who are in the bubble range as randomized
+by the admission staff, and the result is that I get thousands and thousands,
+tens of thousands, hundreds of thousands,
+I'm not sure, but many thousands of A versus B experiments where college
+B is just a little less selective than
+college A. I was on the bubble at college A.
+I didn't get admitted. I go to college B, and it's only a little
+less selective. That's what you get
+from those experiments, and I'm going to
+deal with horizontal selection by finding students who are choosing among colleges that are in an indifferent set. In other words, they're very similar on selectivity grounds. They may look extremely similar, and it looks like the student
+is the one who's just flipping a coin at
+the end of the day. I'm going to treat those
+students as randomizing among the schools in his or
+her in different set, and that's going
+to give me lots of A versus C experiments
+where colleges, A and C, have very similar students, and those are
+usually schools that are geographically
+approximate to one another or that
+look very similar on numerous other criteria. Then I take paired
+comparison methods and I combine the
+results of all of these pairwise
+experiments to obtain value-added and social
+investment that is free of selection
+bias as possible. Now, paired comparison
+methods are probably most familiar to all
+of you through sports, because they are used
+to rank tennis players, they are used to
+rank chess players. They are used to
+give us the ranking. They're used to do rankings
+of college football teams, all things like that, so this turns out to be exactly the same
+statistical problem, although it's actually
+easier to use it to derive value-added than it
+is to rank football teams, and the reason is, we
+don't have to worry about home field advantage,
+things like that. Just to summarize the method, I'm going to gather
+all the differences in earnings and social
+investment from all of the vertical
+experiments involving students who are
+on the bubble at some selective school unexposed to randomization by
+the admission staff. Notice that I really need the longitudinal
+data here to get the social investment
+differences as well as the
+earnings differences. I'm going to gather
+all the differences in earnings and
+social investment for all the horizontal
+experiments like to colleges that look very
+similar to one another, involving students
+who choose between equally selective schools, and I'm going to combine all
+the experimental results using paired
+comparison techniques. I should say I'm using
+population data, I'm using administrative data, this is not sampled data. I'm looking at every student's
+application portfolio, so there are hundreds of
+thousands of these experiments. What are the strengths and
+limitations of this method? The first strength, of course, is the purpose. I
+went in with it. I'm trying to remove
+selection bias and I think a lot of the selection bias
+is removed by this method. The second strength is the
+one that I have become convinced is the
+most important one, and that is the common
+support is always fulfilled. I am never comparing two schools without thinking about
+a student who would actually be choosing between those two schools potentially. None of these experiments
+is saying what would happen to John Smith if he went to MIT when
+John Smith could never get into MIT or
+would never consider MIT. MIT had to be in his application portfolio,
+and furthermore, he always had to have been a
+very plausible MIT student, so that common support I have become convinced is really
+why it is that this method, I think works better than just controlling for something
+like test scores. In addition, there's no
+functional form at all imposed on the
+relationship between value-added and
+college readiness. Again is an advantage vis a vis simple linear controls
+or something like that, and it's pretty obvious
+which assumptions need robustness tests. It's basically how I
+find the bubble range? This is really the main thing that needs robustness checking. There is a big limitation
+to this method, which is not just this method, but almost any method that
+would attempt to do this. There is probably no general fix for the selection problem of I go to a non-selective
+institution versus I don't go to a
+post-secondary school at all. Everyone in this room is
+aware of the literature on what is the return to
+enrolling in college, and that's about these
+marginal students who are just on that margin. But most of the fixes that
+we know for that problem are very specific to a
+certain of institutions, they may be local to a
+certain set of conditions. They may be in
+historical artifact. It's a natural experiment, it's a policy experiment. None of them are general fixes
+that I could use broadly. What I'm going to do is
+I'm going to show you productivity relative to the least selective
+institutions, and I will not attempt
+to tell you how productive the least
+selective institutions are relative to their
+near alternatives, which are things like a
+student perhaps going into the military or doing
+on the job training or engaging in some
+credentialing program that is not considered a post-secondary
+program in the US. Now let me build up the productivity numbers. I'm going to start
+by just showing you wage and salary
+earnings through Age 32. This is not value-added, this is just raw wage
+and salary earnings. This is for the cohort who graduated from
+high school in 2001. They're about Age 32 and the last year earnings data
+in which I observe them. I've just counted
+everything back to Age 18 using a two-and-a-half
+percent real discount rate and I can show you various other discount
+rates in the paper. But what you can see
+is what you would expect students who go to institutions that
+have higher math and verbal SAT scores. In other words, they're
+more selective, have higher wage and
+salary earnings. That part of that maybe the
+institutions value-added. But of course, part of that is the fact that they also just had higher college readiness before they were admitted to school. You'll see that the
+difference is quite large. It's about $500,000
+in difference between the least selective and the most selective
+institutions. Just to give you a sense
+again of where they are. The most selective
+in the top bubble, very selective, selective, and non-selective depending
+on how you cut it, is between about 700 and
+950 something like that. Now let's do it through Age 65. Obviously, I can't observe
+the high-school graduate and cohort of 2001
+through Age 65. What I did was I observed
+them up through Age 32, and then from Age 33 onwards, I projected their earnings
+in a few different ways using administrative earnings
+data from the Treasury. This is my preferred projection. But again, if you
+look at the papers, you can see a variety
+of other ways. It's not going to matter
+very much except for the very top group is quite effected
+by which type of projection method I use. Now, you might say, this looks just like
+the other chart, but notice that
+the vertical scale is now quite different. The top of the vertical
+scale is no longer 800,000, but 8 million. Again, this is a
+discounted back to age 18 using a two-and-a-half
+percent real discount rate. Through Age 65, lots and lots of earnings. Again, this is still
+just earnings. This is not a value-added. Let's look at the same chart and put value-added in there. Now the value-added numbers are coming out of that method
+that I described earlier, where I'm trying to take account of vertical and
+horizontal selection. You can see that value-added
+is also increasing pretty much monotonically with an
+institution selectivity, but it's not increasing as nearly as faster
+rate as Roth earnings, and this is particularly obvious if we look out on
+the right-hand side, where the institutions
+are very selective, a lot of the earnings of those students is due to the
+fact that they were just very college ready
+in the first place and they would have always had pretty high earnings. That so that you can see
+value-adding does go up, but it's just not
+nearly as fast. Also notice that this
+is a normalization. I do not know the value added of the least
+selective institutions, so I have just normalized
+it to be zero. Therefore, this normalization is not completely innocuous, which is something
+I could discuss. But you should keep
+in mind that the value-added is just
+normalized to zero for the lowest value
+added institutions that's not truly zero. I
+don't know that it's zero. It could be negative because it could be that
+it's worse to go to a low selectivity
+institution then to go into the military or to do on the job training or
+something like that. It's not necessarily
+a positive number. That's value-added and
+lifetime earnings. Now, that's the numerator. Let's look at the
+denominator now, this is lifetime
+social investment in post-secondary education. Remember that this
+is longitudinal. If you keep going to
+school longer and longer, you're going to have more and more of this social investment. That's exactly what we see. Social investment
+is quite low for students who are going to
+the least selective schools. That's because not only
+are they going to schools that don't spend very much
+on them in the first place, but they don't tend to stay
+very long in those schools. Whereas it's very high around $600,000 even when
+discounted back to Age 18, using the same discount rate for the students who attend the
+most selective institution. Again, that's because
+they're going to schools that spend more money
+on their education and they stay longer in
+school consequently. What we have is a race between the numerator and
+the denominator? We know that the numerator value-added is
+rising as we go to more and more selective schools
+but also the denominator is rising as we go to more
+and more selective schools. Which of the two
+is going to win? This next chart shows you. When I first saw this chart, this totally shocked me. I have to say, in fact, it changed the whole
+nature of my interest in this topic because I had not expected it to look
+like this at all. It changed what I thought I
+ought to be thinking about. I won't tell you what I
+expected it to look like. That's probably not a
+good way to set you up, but it's just this
+is what it looks like and this was not
+what I had expected. What does this say? This is my characterization
+of this is that it's flat and a little lower
+at the non-selective. Then it's rising in this area where we're on the border between the non-selective
+and the selective. That's pretty flat again. What does this say? This says that a dollar of educational resources
+is generating about the same value added for the only mildly
+selective institutions and the most selective
+institutions. Yet, as you saw in
+previous figures, these institutions
+differ enormously in terms of
+educational resources. Just enormously in terms of educational
+resources per student. It's not obvious that a dollar
+at Harvard or Stanford, or University of
+Chicago should produce the same amount
+of value-added as the dollar at a school that's only very marginally selective, just a little bit
+above non-selective. That's the first thing
+to take away from this. That is a very striking result, very very striking result. Then the non-selective or
+less productive, again, don't take too
+seriously the fact that they're below the zero axis, that's really the normalization, we just know that
+they're less selective. Than less productive with a dollar than the
+selective institutions. That was the average. This is showing you
+some dispersion. What you'll notice is that there isn't that much dispersion and productivity among the various
+selective institutions, all of the dispersion starts to grow as we get into the middle
+of the selectivity band, and then it just explodes as we get into the non-selective. That shouldn't surprise you because you may
+recall earlier that I showed you that the
+non-selective we're a very diverse group. But what this is showing you is that their productivity is also very very diverse. We can talk through
+the exact magnitudes. When I first saw this, I thought, oh, this
+can't be right. Then I actually looked
+at lots of examples, I thought, oh, no,
+this can be right. But they're very
+very diverse group in terms of their productivity. Whereas you can see it that
+the most selective schools, I know we all make
+a big deal out of which one you go to, but it's not a big difference. Let's assess where we are. The productivity for a
+dollar of social investment tends to be flat across a
+wide range of selectivity. As I said, this is striking
+because these schools have very different educational
+resources and it suggests that somehow the resources are scaling up with college
+readiness in such a way that there are no easy gains
+to be made by taking a dollar from one
+selected school and sending it to another
+selective school. There's some gains to
+be made by doing that, but it's not as though
+if I took dollars from Harvard and allocated them to Ohio State
+or something like that, it doesn't look like
+much what happened. It doesn't mean that all
+the selective schools make maximally productive
+use of their resources. It could be that they're
+just similarly inefficient, which is what I think based
+on being a professor. Also, where we are relative to the least
+selective institutions, the productivity of a dollar is really sufficiently
+positive at the selective institutions
+that the fact that they have additional resources
+seems like a good investment. I mean, if you looked
+at the numbers on the vertical axis, it looks like for every dollar that is being spent at
+those institutions, it is generating multiple
+dollars of value added. That makes it look like
+they're all good investments unless we really normalized
+things incorrectly. I don't think we could have done that as incorrectly as
+it would need to be. We also have concluded that
+less selective institutions are less productive on average, but their productivity
+is also much more dispersed so that
+students can make quite big mistakes by choosing a non low-productivity one instead of a high
+productivity one there. They're often next to one another in the same
+commuting zone. It's not obvious what the
+differences between them all. This is potentially problematic because the non-selective, so as we saw earlier,
+expanding much faster than this electives and they are
+less productive on average. Also it's just easier
+to make mistakes. It's hard to say,
+as I've emphasized, whether the non-selective
+institutions are good investment vis-a-vis
+other alternatives. We've already seen quite a bit of evidence that predictors have strong market forces prevail
+among selective schools, but not among the non-selective. We can also test further this idea that there may
+be a connection between productivity and market
+forces by looking at similarly selective
+schools and seeing whether the same predictors are
+correlated with productivity. I'm just going to be clear
+that what I'm about to do is not causal, it's
+just correlational. It's suggestive, but
+I think it does. It is suggestive about the relationship between market
+forces and productivity. I just ran regression where the dependent variable was an institution's productivity,
+which I measured. I dump it out, the school's median test
+score in these 20 bins. Selectivity is now out. I put in as the
+covariates of interests, some of those measures
+I showed you before of integration and competition, my information measure and the share student related
+revenue paid by students. All three of these types of measures, the more competitive, the more integrated
+the school is, the more informed
+people are about it and the larger the share of its student revenue
+that's paid by students. It's all are positively
+correlated with productivity, I should emphasize again,
+this is a correlation. It's only suggestive evidence, but it does suggest there
+may be a connection between. Finally, let me get
+in my last minutes to the economic implications
+of all of this. Because I think
+we want to take a big step back and say, okay, now we've learned some
+interesting things about the US market
+for higher education, but what are the big lessons and why does this matter to
+the economy more broadly? Well, I'm going
+to take a little, it'll seem like a short
+digression and say, because we need to understand
+what economic model could explain all of the phenomenon that
+we've seen so far. I'm not going to
+claim that this is the only economic model, but it seems to me like it
+is the most concise one. If corrected has important
+implications and it's the model that I think
+is probably right myself. Here's the simple model
+I'm going to propose. There's going to
+be single crossing in the productivity of educational resources
+and college readiness. Just to remind you what is single crossing in this context, it basically means here on will be very familiar
+to a lot of you. College readiness is my CR, R is my educational resources. P is just going to be the undistorted price
+of an institution before tuition subsidies
+and things like that. What single crossing says
+is that this function, which I've defined here as M, is monotonic in
+college readiness. That just means a
+student who has higher college readiness
+is always willing to pay more for unit of educational resources
+than a student with lower college readiness. That's a familiar
+condition to us in many other settings, but we often don't think of it. With regard to colleges
+and universities. Just go back to my simple model. I have single crossing. Students are going to maximize the return on
+educational investments. Students are insensitive to arbitrary features
+like geography so that all the institutions are
+well integrated into the market and
+students are fully informed and not
+liquidity constraints. This is a an obviously
+ideal setting. If that is the model, what happens, then
+what would we see? We would see that student
+choices and market forces. We'll generate an
+assortativitily matched allocation in which students who have higher
+college readiness are paired with more
+educational resources. Here's the crucial thing. Each dollar of
+resources will generate the same value-added and
+institutions will be pressured to be x-efficient
+or productively efficient. You may recognize that this is the same type of market equilibrium that we get in a lot of other settings. For instance, this is
+really the same as a TBI equilibrium in
+a local public goods. We get the same
+types of results. We get stratification. That means we get
+some schools which have students with higher
+college readiness than others. There's a stratified
+equilibrium. We get positive
+assorted matching between college readiness
+and educational resources. We get allocative efficiency. The returned to a dollar is pretty equal
+across institutions. We get productive efficiency that's forcing the
+institutions to be more productive with a dollar of
+educational resources. We get a standard
+condition there that you get in all of
+these types of models. Now, how does this model
+help me understand the data? Well, I would apply it to the selective schools
+where it's assumptions don't fit but they don't
+outrageously not fit either. I think it helps
+us to understand why we see the
+equilibrium that we see for the selective schools where we see this
+stratification, we see the assorted of matching. It looks like we see
+pressure to have productivity that is very similar across a
+range of schools, productivity of a dollar. We just say it doesn't
+really apply to the non-selective schools where none of the assumptions
+seem to fit. We have weak integration,
+we have weak competition, we have poor information, a low degree of self pay, and we have students who
+just aren't willing to look outside their zip code or
+a couple of zip codes. If that is the model, by the way, as I said, I found this results
+somewhat surprising. But once I ingested
+them, I said, this model really does explain part of what it
+is that we're seeing. It made me think that students who I never think
+of as flexible, rational, informed, interchangeable
+investors may actually be better investors
+than I had thought. What are the implications
+of a model like this? The first implication
+is that to make its maximum contribution to grow a higher education
+sector in an economy, needs to allow
+educational resources to scale up with
+college readiness. Now, that may seem obvious because that's what we
+happen to do in the US, but actually in most
+countries in the world, educational resources are
+kept very similar across students who have
+high degrees of college readiness and low
+degrees of college readiness. It is not popular necessarily with people to suggest that there should be these
+vast differences in educational
+resources per student. No other country has
+this spectrum with incredibly high
+educational resources at one end and quite modest educational resources
+at the other end. That is unique to the US, that top tail of the
+distribution does not exist in other countries. The extent of scaling up
+is quite unique to the US. It may mean that we have
+educational resources contributing more
+to economic growth in this country than
+in other countries. Precisely because we allow
+that top tail to exist. Where educational resources, huge educational
+resources are paired with students who have
+very high degrees of college readiness. Elsewhere, Phillipa
+Aghion have argued that top US research universities
+are unusually productive. They tend to be standouts
+and research but it may be that we have
+a whole tail of universities that are able
+to be productive with very high educational
+resources and contribute a very disproportionate
+amount to economic growth. All of this would be
+exacerbated if you have a model like the
+model of Acemoglu, Aghion, Zilibotti, which says that in a
+highly developed country, economic growth is unusually propelled or disproportionally
+propelled by innovation. That higher education
+contributes disproportionately
+to innovation, as opposed to say,
+imitation of technology, we often think of education doing a variety of
+different things. But highly advanced education might contribute very
+disproportionately to innovation. That would suggest
+that we should really be paying
+attention to whether our post-secondary sector is organized in a way that's
+efficient for economic growth. Well, all of post-secondary
+investments may actually be earning high returns
+relative to alternatives. I don't dismiss that
+possibility because my normalization doesn't
+tell me anything about that. Reallocating students
+and resources from the least productive schools to the more productive schools is an obviously pro growth thing. If you go think back to that productivity
+chart where we saw how dispersed productivity was for the non-selective
+institutions. Just moving students from the least productive
+non-selective institutions to the more productive
+non-selective institutions might
+be a good thing. It seems like it would be very pro growth and policies that facilitate market forces in
+higher education, such as better information, better competition
+financing that makes students in schools
+internalize the consequences of their choice may also be pro growth because it
+may promote productivity in this very important
+sector that potentially contributes to the
+economy through innovation and through
+a lot of other ways. That's all about
+economic growth. At the end of the day
+I do come down on this idea that there is something special about the US market
+for higher education, that it may be
+incredibly vital to American economic growth that we should not take
+it for granted, that we have this
+unusual setting, that we should not take
+it for granted that we have these
+institutions that are incredibly highly resourced and that are fortunate enough to not only have the high
+aptitude people from the US, but have high
+aptitude people from around the world engaging with those educational
+resources that may be a very special part
+of our economy. However, that same model also has implications
+for income equality. This is where I'm going
+to stop because I think it's important to. If there is strong single crossing between
+college readiness and educational resources
+and tertiary education, what is good for growth? In other words, that
+enormous assorted of matching may be very bad
+for income equality. It says you come into college with high
+college readiness, you're already going to have pretty high earnings even if I don't give you very many
+educational resources. But guess what? I'm going to pair you
+with huge amounts of educational resources as
+opposed to very modest. Well, even if all schools are equally productive
+with a dollar, some schools have a
+lot more dollars. Some students experience
+a lot more dollars. That is not great
+for income equality. It sounds like we're
+doomed, but perhaps not. It's worth remembering
+that college readiness is partly due to primary
+and secondary education. It's not just innate aptitude. It's all those kids who go to elite high schools
+in the United States. Then we'll all start out
+that elite at birth, there probably is something
+to the schools they go to. There's lots of
+reason to think that educational resources
+may be more productive in early
+childhood programs that serve the disadvantaged
+than the advantaged. It is not the case
+that single crossing necessarily has to
+work the same way for early childhood education. Say, it could go the other way. But I think what it tells us is that if we want to grow fast, we should feel extra
+pressure to make all of our students have high
+college readiness so that we don't have these big gaps and college readiness
+as they go into tertiary education where I think this strong single
+crossing applies. With that, I'm
+going to stop and I would be delighted
+to take questions. 

@@ -1,0 +1,614 @@
+Guido Imbens: During the break, there was actually one question someone asked about giving a little bit more detail on cross-validation in Indiana, and this is really a big
+deal in this literature that instead will contrast a bit with the way we typically in most econometrics papers we would typically just
+take the full sample, estimate our model
+on the full sample, and present the estimates and
+standard errors for that. Let's say here this
+is in the context of the regression Trees. We have a sample
+of n observations. What we do is divide those into B cross-validation samples. Typically in this literature for computational reasons
+it's often the 10, but it could be a slice of
+n but you split it n times then in a single observation an n minus 1 observation. You do this randomly. If you do it n times into
+n minus 1 for this one then obviously there's
+nothing random left anymore, but if you do it with say 10 cross-validation
+samples you would just divide the
+sample completely randomly into 10 sub samples. Then for given value of
+this penalty term Lambda you would estimate the
+model there excluding the observations from the
+Bth cross-validation sample. If you have 1,000 observations than
+cross-validation samples, you would estimate the
+model for all values of Lambda on the first
+900 observations. Then you would look
+at the error of those regression estimates or if you estimate the tree
+on those nine observations, you get a regression
+tree out of that. You predict for all
+handled observations in the cross-validation sample and what the
+predicted outcome is. You compare that to
+the actual outcome in the cross-validation sample. Square those, add those up, and do that both over those. You do that. First off, there's
+100 observations in that cross-validation sample then you go to the next
+cross-validation sample, re-estimate the Trees on
+the other 900 observations then calculate the errors in
+the cross-validation sample. You do that for all the 10
+cross-validation samples. If you do the four values
+of Lambda that gives you a function of Lambda
+and you minimize that. You find the value of
+Lambda that minimizes this sum of squared
+errors and use that, then go back to the full sample and estimated tree given that value for the penalty term. In principle that sounds
+like a computationally very demanding procedure with
+Trees as well as with Lasso. There's a lot of tricks
+that make this feasible. In particular with Trees, the implication of the algorithm instead it's only a
+discrete set of Lambdas you actually need to look at, and that makes it much easier
+to implement these methods and it allows them to
+scale fairly well. Since the early work on
+the regression Trees there have been a number
+of modifications, and improvements there. Again, I don't expect people to get all the
+details from this, but I want to discuss some
+of the conceptual ideas because a lot of those
+apply not just to Trees but also to other
+ways of looking at supervised learning
+problems in regression as well as classification. One issue with the Trees, the way the tree algorithm
+I described there, is now is that it
+may stop too early. Suppose we just have
+a single covariate and the regression function is quadratic in the covariate, it may not find a good
+place to split because it's on both sides of the split. The average outcome
+may be fairly similar. Even though if we split
+it a couple of times, we could do much better
+than not splitting at all. To deal with that
+type of problem what people actually typically do in practice is
+not simply grow the tree the way I
+described so far, but grow much larger tree. Keep splitting beyond the point where there's an improvement in the objective function
+with the hope that further down you may find substantial improvements
+in the objective function. Initially you allow for splits that don't really
+improve things very much with the hope of
+later finding splits that they do improve things. Once you have this
+really big tree and in principle that
+may go as far as grow keeps splitting though there's just very few
+observations in each of these leaves and
+then to deal with the fact that at
+that point you've over-fitted the
+regression function to a substantial
+degree then to deal with that there's the notion
+of pruning the tree to take the gardening metaphor further. We have this big tree
+with a lot of branches that don't really improve
+the objective function, but they were simply grown to avoid missing the
+subsequent interactions. Now at the last stage we get
+rid of these branches that don't improve the objective
+function very much, but this way you give yourself the opportunity to
+find interactions even if there are no main effects without running the risk
+of over-fitting things. This is probably not very
+visible from the back of it and so here I looked at
+it on the front there, [inaudible] if you had
+the electronic version of the slides you can see here this is for the same
+data you used for Lasso. Now unless they have earnings and eight covariates
+you see that there are no surprisingly
+the tree splits on some of the earnings variables and ignores in fact most
+of the other variables. Here I just split it a couple of times to make it
+fit on the slide, but if you do that
+for the full datasets the tree even
+though it gives you a very different approach to getting the regression function like Lasso that`s substantially better than OLS
+though in this case it doesn't do quite
+as well as Lasso. Not surprisingly because some of the covariates here
+are continuous and actually they like the
+freshness of the outcome, so linear regression
+models have some advantage over simple splitting
+algorithms. To see what this looks like
+in terms of the predictions, here is a scatter plot
+with the predictions for Lasso versus the
+tree predictions. Is it that tree
+predictions only take on relatively few values, but ultimately the correlation
+is actually very high between the Tree and
+Lasso predictions. Now, next I want to
+look at some methods that I can be used
+in settings of Trees and I'm going to
+look at it there. But actually general
+conceptual ideas to improve the supervised
+learning methods. They can be used
+also with Lasso, they can be used
+with kernel methods, they can be used with
+neural networks, support vector machines
+as that key ideas, there's a notion of boosting. Suppose we have a
+very simple way of estimating
+regression function. It's going to be
+a very simple one and clearly not a very,
+very attractive one. I'm going to refer
+to this following this literature as
+a weak learner. Boosting is the idea of using these weak learners to get a good predictor for regression or classification problems. We're going to start with a very simple way of estimating
+regression function, where we're going to
+use that repeatedly and then we build a much
+better way of estimating the regression function. The very simplest way of getting estimate of the
+regression function is just using a single split. I may have 200 or
+2,000 covariates and the single outcome and maybe million observations. I'm going to estimate
+the regression function, but just splitting
+the sample into two. I'm just going to split
+it on a single covariate. That's going to be very fast, but obviously it's not
+going to be very accurate. I can use it most
+abundant one covariate. It can give me a very
+good approximation to the regression
+function by itself. But then the idea behind
+boosting is to take the prediction error after using this weak learner
+and do it again. I estimate the
+regression function just using the single split. I subtract that
+from the outcomes and now I'm going to take
+the residuals there. The difference
+between the outcome and this is estimated
+regression function and I'm going to apply
+the same algorithm to this new dataset. But now the thing I'm trying
+to predict the residual. Now the one thing that's clear, I'm not going to split
+on the same covariate and exactly the same place because that it will
+not improve anything because we said to leaves,
+it's exactly the same. It's going to split either
+in a different place or on a different covariate. It's good to improve
+the prediction overall at least by same amount. Then I'm going to do that. Again, calculate the residual from that second weak
+learner and go back and reapply the weak learner
+to the second residual. I'm going to do this
+possibly thousands of times. Now I'm going to try and
+use this simple learners, combining all these very, very simple naive estimates of the regression function to get a much more
+complicated function. What is interesting is whereas the tree algorithms I described before in principle, can approximate any
+regression function arbitrarily accurately
+with enough data, because you can split the
+sample in enough ways. Boosted using boosting with this particular
+weak learner, I just split it once count
+actually approximate any regression function because it enforces an
+additive structure on the regression function. We can only approximate regression functions
+by additive function. Now, then in South
+may already be a very rich class of functions, so they may not be a problem. But what is interesting here that it gives us
+the ability to put a lot of structure on the
+estimated regression function. If instead of using this
+single split weak learner, if instead I used the weak
+learner that split twice, then I would allow
+myself the ability to approximate any set of
+functions that is additive and functions of at
+least two covariates. I would allow for general
+two way interactions. If I started with a weak learner that allows for three splits, I would allow three-way
+interactions. You can control
+the complexity of the approximation
+you are allowing in the boosting algorithm by changing the weak learner,
+are you basing this on. Ultimately, this has
+been in many settings, not just in this
+regression tree case, but the idea of boosting
+that you use simple and arguably naive and
+inadequate methods, but use them repeatedly
+to get very accurate, very appealing
+solutions to whatever the machine learning
+problem is you're looking has been
+very successful. The way these are often used is that people use them in selling the user with
+relatively shallow Trees, up to say, six splits. That in principle, allowing
+for sixth order interactions and then grow many Trees, do 4-500 iterations of this, calculating the residual and reapplying the weak learner. Now of course, in principle here we have two sets
+of tuning parameters that's we have the
+number of Trees we use, and also the depth of
+each individual tree. In principle, we could try to use cross-validation methods to optimize over both
+parameters in practice, I think that's very hot and so what people
+do typically is used fairly shallow Trees just
+pick six steps around. He said six was fine. Then only optimize over
+the number of Trees and do that by monitoring
+on a test sample, there was not used
+in the estimation to see at what
+point the root mean squared prediction error
+starts deteriorating. Again in the spirit
+of cross-validation. Another concept, again, I'm going to
+illustrate it here in the context of Trees, although it can be
+used more generally. This is referred to as bagging. Again, this is Stanford
+guys stretching the ways they get their
+acronyms together here. F1 as one of the
+originators of this idea. The concern is with Trees
+that are very discrete, you can see that
+the scatter plot. If you actually estimate a
+three on a particular sample, then over large parts
+of the covariate space, the regression
+function is constant. It's very discreet in that way. Either two observations
+are in the same leaf or they're not as good
+as the number of ideas. Bagging is one of them as
+random forest that try to find some way of smoothing
+over that to end up with predictions that are in
+the nth fairly smooth. As a couple of reasons why
+that might be a good idea. Ultimately, it may
+actually improve things by smoothing over
+a different Trees. Another very
+interesting the idea that people have
+pursued here is that the averaging over many Trees, you actually may be able to
+get distributional results. Now, especially in the
+context of random forests, it looks like you can get
+asymptotic normality by averaging over these Trees where doing that
+for basic Trees, it's hard to imagine that
+that's even possible there. But so bagging is a very
+simple version of this. We have a sample of size n. We draw a bootstrap sample
+of size n from those data. We constructed three on
+that bootstrap sample. Simple tree, we may do pruning, we may do version of the tree, but then doing that on these bootstrap
+samples, ultimately, we're going to estimate
+the regression function by averaging over these
+bootstrap samples. That's clearly going to check, if you think of doing this
+with a single covariate, it's going to change exactly
+where you split each time. It's going to smooth over the edges of the step function. You've get a more
+continuous estimate of the regression function. One that ultimately May
+actually be more open to a distributional analysis of
+distributional properties. Last of the three
+modifications sir, and this has been a
+hugely successful one. Random forests that is arguably one of the best off
+the shelf methods for estimating
+regression functions. Again, there's a lot of software floating around for doing this. This tends to give fairly good properties
+fairly quickly. It has some of the
+features of bagging, but it adds another
+component that, that's going to help
+with the smoothing. We do the same thing as bagging, then we get these bootstrap
+samples of size n. But it differs from
+that in the way it estimates the tree on
+the bootstrap sample. The key features that we random, we don't look at all
+the regressors for deciding on which way
+to split the sample, we randomly select the sum of the regressors out of
+the full set of regressors. We only choose the
+optimal covariate to split on and
+optimal threshold among the selected regressors rather than in the full
+set of regressors. Then we split the sample and we keep splitting it
+again each time randomly selecting the regressors
+and splitting among the threshold and choosing among the threshold and
+the covariate there. Then we do this for all
+the bootstrap samples and average Trees over all
+those bootstrap samples. That's going to make
+for much smoother the estimated predictions
+in the test sample. It's good to look much more
+like what you would like the regression function to be like compared to sample Trees. Again, you will do this
+in principle many times. Obviously now you need to select this additional tuning parameter and a number of regressors, which has some rule of thumbs. But I don't know that it's
+fairly easy to implement. Because as I mentioned before, there's now some
+distributional results for these random forests. Although they're fairly limited and that they require you
+to estimate the Trees, very small bootstrap
+samples relative to the overall sample in a way that's not really
+very realistic, but it's suggestive that here distribution of
+results may actually hold. Susan: [inaudible]. Guido Imbens: Yeah.
+Yes. Thank you, ma'am. Here going back to
+kernel regression there, the traditional results that are used in the
+econometric literature [inaudible] and
+all the reference on that is that for a
+particular value of X, the estimated
+regression function at that particular point has asymptotically a
+normal distribution that's centered at the true, depending on how you do that, sometimes you may need to do
+some bias reduction there. But in principle,
+that's centered at the true value
+with some parents. You can use confidence intervals for the prediction at
+a particular point. That's what would
+be the goal here, that for particular value of X, you could actually
+get a prediction and a confidence interval
+associated with that. At least for the
+random forest case, that appears to be possible though the conditions
+are still very limiting footwear that we hold. Now, leaving the
+tree literature, let me look at another
+set of methods. This actually goes back
+reasonably long way. The work on neural networks
+effect in the 90s, how White wrote a number of
+papers using these methods. But recently, there's
+been a lot more work and people have found
+ways of scaling them up so that now some of the
+big tech companies run this neural network models
+with many variables, many layers, and
+many observations. Here the idea again is
+to be interested in modeling the relationship between a set of
+features, covariates X, and some outcome. That's done through the hidden layers of
+unobserved variables. Given and so here I'm
+going to just illustrate that using a single
+unobserved layer, you think there's these
+unobserved variables, CI, there's a bunch of
+those capital M, their disease are modeled
+in terms of these X's through some parametric model, typically with
+linear coefficients. Then the outcomes are modeled as linear functions or
+parametric functions of these inter
+mediate variables C. Here they're just a linear model for the Y's in terms of disease. In principle, we can
+have multiple layers where a first layer
+of C's affects some second layer of variables. It's only the second layer that affects the ultimate outcome, but the principle is the same. It's just a single layer
+of unobserved variables. Let me specify these
+parametric models relating their X's to
+the disease to specify this parametric models
+relating disease to the Y's. Now we're going to
+try to estimate these models by minimizing the sum of squared deviations between the predicted values, which you can write
+ultimately in terms of the observed regressors
+X and the outcomes. Computationally, these
+things are obviously very messy and there's
+been a huge amount of work trying to come
+up with good ways of both estimating these models as well as regularizing
+them very quickly. There's a big danger
+of overfitting these models, they're
+incredibly flexible. They allow for very
+complicated interactions between the axis, but it comes at the
+expense of having lots and lots of parameters set. You need to be very careful in how you regularize
+these parameters. How you string them towards
+zero or other values, but then they tend to be
+incredibly powerful in terms of giving interesting
+comparison approximations to the regression function. Often the regularization is that in terms of L2 norm,
+that penalty function is where we sum over
+all the parameters, the square of the parameters, both for the Alphas and Betas. Then we find the optimal
+amount of regularization by monitoring the sum of square prediction errors
+on the test sample. As you estimate this model, you have a test sample that you don't use
+for estimation. You keep calculating the sum of squared errors in
+the test sample. As you relax these
+parameters more and more, starting with a very
+heavily regularized model, the very large value of Lambda. As you keep relaxing that, you keep monitoring how
+that improves the sum of squared residuals
+and the test sample and you stop when
+that's being minimized. Susan: [inaudible]. Guido Imbens: Well,
+this is an area where there's a lot of active
+research going on. There's some people who feel these methods
+are incredibly powerful and have a lot of potential for getting good approximations to regression functions
+in very high dimensions. But I think the
+jury is still out whether these things really work incredibly well as a sensitive how wide was doing
+this in the 90s. Then I remember people, they'd play the tension and then stopped
+paying attention after awhile because
+it wasn't really clear that these methods are
+actually delivering. But certainly now I think at
+some of the tech companies, people who feel that
+they are actually doing very well in getting
+predictions. Susan: [inaudible]. Guido Imbens: Yes. For the super high
+dimensional type problems. Susan: I see in images, videos, that's where they're using
+in the practice right now. It's complicated [inaudible] Guido Imbens: But I think
+there's still some sepsis how useful these things
+are in practice, but it's likely to be
+one of the methods. But they'll be a lot of work
+in the next five years. The last part of the
+supervised learning I want to talk about before with various theorems are some more methods model averaging or super learner set. I said the idea there
+is if you may have a number of
+candidates algorithms for estimating the
+regression functions, they may all be
+similar sensitivity when we're doing
+the random forestry using all these different Trees and then average them. But it could also be qualitatively
+completely different. With the same data, you could estimate the
+regression function using Lasso after creating
+a lot of interactions or you could use Trees, or you could use rich methods, or you could use kernel methods or you could use
+neural networks. The idea is to try
+to combine them and find some way of averaging these predictors to get a
+better estimator and ideally, one that is better than any
+of the single algorithms. The couple of dental comments and the idea is here is not
+to find a single method, it's not to select out
+of these candidate estimators one method that
+is the right one to use. It's not like a
+testing type setting where we try to find
+the one true method. It is trying to find
+the set of weights that give us a better
+predictor than each of these estimators
+do on their own. Some of these
+machine-learning competitions where people try to come up with algorithms for solving
+particular problems, in the end, it is often algorithms
+that combine a lot of more basic methods
+that do really well and so you can imagine
+that in some cases, Lasso is going to do very well for estimating
+regression functions, and in fact, it is true that
+there's some covariates that matter a lot and
+a lot of covariates that matter very little. But in other cases, rates
+may do much better, other cases Trees
+may do very well and so having a suite of methods and then getting predictions
+based on all of them and trying to get
+estimate weights for all these methods together, combined estimator can be a very attractive way to get very good
+predictions in the end. Susan: Average like
+800 models not five. Guido Imbens: At that point, even in that state for
+estimating the weights, it's likely that you're going
+to do some regularization. One way of combining these estimators is
+you could imagine that you started off with
+the training sample, they estimated all these
+different methods, including Trees,
+including Lasso, including neural networks, and then on the second sample, some test sample, you try to estimate these weights for the
+different methods. You try to come up
+with the Alphas that they give you
+the best predictive in the test sample. At that point, if you have a large
+number of these methods, as Susan's saying, if you actually trying
+hundreds of thousands of different methods, you may want to regularize
+that second problem, including a Lasso-type
+L1 penalty term, where your shrink this
+weights towards zero and limit the number of
+models that actually enter into this combination estimator. When I did that here
+on this Lalonde data, where originally the OLS did very poorly compared
+to Lasso and Trees. If I tried to
+combine these three, and so here it's not
+hundreds of them, it's just these three, they put most of
+the weight on Lasso and a little bit on
+the Trees in fact it's pretty much the same
+as Lasso on its own. But it's certainly a lot
+of cases you would expect these ensemble
+methods to do well compared to any single method. Again, the idea here, the question is not so
+much to try to distinguish between OLS, Lasso and
+tree methods here, it's trying to come
+up with a method that combines the best of all
+three through weighting. Now, the last 50 minutes of the second lecture I
+want to talk about The Unsupervised
+Learning Methods. I should probably, I'm going to spend
+much less time on this than on the supervised learning because it's less
+directly related to a lot of what we
+do in econometrics and it's going to be harder
+at it directly fit this into the way we think about
+a lot of problems. In the basic unsupervised
+learning setup, we have a number of observations on some vector of features and we're trying to find
+patterns in these data and then typically, the goal is to find some way of reducing the dimension
+of the data. Then, [inaudible]
+itself feed into supervised learning type
+problems or other questions. But initially, the idea is just that we may have
+too many features to really be able to deal
+with all of them. One approach suggests find linear combinations of this axis that capture most
+of the information and the data and that's something that
+has a long tradition in econometrics using
+principal components whereas we're even going back at 60 types textbooks
+like Tiles, Principle of Econometrics, there's a long discussion
+on principal components. He didn't want to do OLS
+with many regressors, so he just wanted to find
+the key components there. The second approach is a bit like tree methods to partition the space into a finite
+set of subspaces and then we could try fit models to these sub-populations. There what we want to do
+is to find the sample and units into k
+different groups or communities or clusters and then we may try to do things within these clusters
+of relatively to the original access, relatively homogeneous
+sub-populations. They're the most closely
+related literature and the econometrics is that
+on the mixture modeling, as I'll talk a little
+bit about that, as well as about less
+model-based methods for constructing these clusters. Principal components, again, that has a long
+tradition in econometrics. If we just tried to find linear combinations
+of these X's, will be modeled the X's
+as linear combinations of an underlying set of factors y, in a way that the
+dimension of these y's is a few of the
+Y's than the X's. I'm not going to go
+into much detail here, we trying to somehow minimize the difference
+between X and this linear combination of
+these principal components, and that turns out to be
+a very fast problems. It's just a matter
+of calculating eigenvectors of the
+X prime matrix. The clustering problem and we're going to look
+at two versions of that. But the one that is familiar, at least in part
+of the econometric literature it's just modeling this axis as coming from a mixture of parametric
+distributions. The leading example would be to think of the
+distribution of X as a mixture of normals with unknown mixture
+probabilities and unknown parameters of
+the normal distributions. For example, you could model the elk factors X as
+coming from a mix of k multivariate normal
+distribution with k probabilities Pi k
+and parameters for the normal distribution
+says Theta k. At that point, we have a fully parametric
+promise in principle, we could just do
+maximum likelihood, but it turns out to
+work incredibly badly. In the '80s, this literature of
+a set of popular and duration literature
+where people estimated mixture
+of duration models, I said when I was a master's
+student in England, how I would run these models and they would
+just take forever. Obviously, we didn't have a
+lot of computer near power in those days so using
+this fancy computer remotely in London and
+it would take days for these models to
+estimate because they've incredibly
+poorly behaved. Now, using the EM algorithm actually in principle
+makes this easy, it's just very slow. Rather than doing
+maximum likelihood, you would start by assigning all the units in different
+mixture components, estimate the parameters of each of the mixing components and then go back to updating the probability
+set in each step. One of the papers that I
+suggested on the reading list that is done algorithms and
+machine learning literature, the EM algorithm is one
+of these algorithms because it's incredibly powerful for estimating this type
+of mixture problem. Now, this work well, but they're very slow. In practice, you
+don't want to do this for very high-dimensional
+mixed models. Another algorithm that
+is actually very fast, although it has its own problems is the k-means algorithm. Here, this is looking
+at the same problem. We have n observations and we're trying to divide
+them into k clusters. There has to start with relatively arbitrary
+center points for this k cluster, centroids. Then assign each observation to the centroid that
+it's nearest to. If a particular observation. You'd calculate for
+each observation, the distance to each
+of these centroids. You assign it to the
+one that is closest to. Do that for all observations and then you recalculate
+the centroids as the average of the
+observations over all observations in that
+cluster you do that. You go back then to
+reassigning the observations. Given that the
+centroids have changed, which the cluster observations is assigned to may change. You keep doing that. That's actually a
+very fast algorithm for dividing observations
+and in clusters. What you end up with is
+just the partition of the sample into k clusters
+that are relatively homogeneous in their covariates and then often
+there'll be the basis for some subsequent analysis where you may want to
+estimate model within these different clusters
+that are now more homogeneous than the original
+set of observations. This is very fast, in fact, the main concern is really to the sensitivity to
+the starting value. Obviously, if you started with all the centroids
+being identical, the algorithm would
+immediately stop. Exactly how you choose
+the centroids in a way that the final values are not sensitive to that can
+be a little tricky, and so what people do
+in practice is start in many times different values and checking that
+the things converge to the same values. Last algorithm I want
+to cover here is again, one that isn't directly fit into a lot of things
+we do in economics, but it's been very useful in the general machine
+learning literature. Instead of trying to
+find what are called association rules in datasets. Here the canonical
+example is one where we have end
+customers they each choose a number of items
+out of a set of m items, and we want to find
+patterns in these data. Here there's no model about how people
+choose these items. We're just trying to find which items tend to go together. The algorithm is about an efficient way of
+finding the sets of items that
+relatively large number of customers brought together. What we're looking for there is the set of all
+subsets of k items that are bought together by
+at least by l customers, where l is an input chosen
+for the algorithm there. We start off with n customers, we may have a million customers we want to find all
+sets of 10 items that were bought by at
+least 100 customers. What the algorithm
+does is it starts with just the single item baskets, and so then it looks
+for all items that were at least bought
+by 100 customers. That gives a subset
+of all the items, and any set of 10 items that
+has at least 100 customers buying those 10 items must
+be included in that set F1. Recursively you go down
+the number of items, but each time you
+reduce the set, looking for the sets of items that have at least 100
+people buying them. First, we start with
+a set of single items that have at least 100
+people buying them, then we look at all the
+combinations of items in that set that have at least
+100 individuals buying them, that gives us F2 as the
+set of all pairs of items, and then within that set, you go look for sets
+of three items with at least 100 customers
+up to the point where you have sets of 10 items. Again, there's no model here that is underlying this about
+the individual behavior. What we're looking for here, it says patterns in
+the data that sales may be useful as inputs into how to model the behavior
+of the customers here. It's a given that I have
+three more minutes, now, I'll spend these
+last three minutes on support vector machines
+from Vapnik here. There's actually two
+books by Vapnik on this, and I think 700 pages total. This is become one of the most important algorithms
+for classification. I'm going to look at
+this in a setting where we just have two classes. We have a sample of
+pairs of Y and X, where Y is minus 101. We would have an algorithm
+that for new values of X, assigns them to one
+of these two classes. Now, again, tradition
+in econometrics, you might have modeled this as a logistic probably
+the regression model, they tried to estimate
+the probability of being in one class
+rather than the other, that's not what is done here. Here it is simply defining the covariate space
+into two parts, the minus 1 and the one part, and it's trying to
+find good rules for coming up with a
+classification there. If in fact, and in some cases where we're estimating
+models of this type, we actually really
+need the probabilities in the program
+evaluation literature. It's often very important
+not to just have rules for assignment
+but actually estimate the propensity score. These methods are not
+intended for that here, it's simply about classifying these methods into two groups. You may start off
+with linear rules and later you can
+extend that by using the expansions of this
+into functions of X. You can imagine starting
+just with the linear rule, where you've tried find
+the Beta_naught and Beta_1 that help us assign units to
+the minus 1 or one class. We want to choose the
+Beta_naught and Beta_1 that helps us partition the
+space most effectively. What the support
+vector machines do is, supposed to be actually
+there is such a rule that completely separates
+the Y's minus 1 and the Y's one group. In that case, we can look
+for the value of Beta that maximizes the margin
+between these two groups. If there is going
+to be a hyperplane that separates these two groups, there's typically many of them, and so we look for the one that most effectively does so by maximizing the margin
+between the two groups. Imply if we find such
+a positive margin, it means that for all
+the observations, it's point is at least
+a distance m away from the boundary of the
+separating hyperplane. I can write the solution
+for Beta_naught and Beta_1 there in the way
+here at the bottom, and that gives you the
+solution in the case we you completely separate
+these two groups. In practice, of course, we can't separate these
+two groups exactly. Now we're going to add
+penalties for observations that are not separated
+by this hyperplane. We're going to add this
+penalty, the Epsilon_i, we're going to try
+to minimize this, or restrict the total
+amount of penalties, and try find this hyperplane that separates this
+as much as possible while penalizing
+observations more that are on the wrong
+side of the boundary, especially those that are far on the wrong side of the boundary. Turns out the very
+effective algorithms for doing that have proven
+to be very successful in doing this
+classification problems much more successful than simple discriminant
+analysis type approaches that are very closely related to the
+logistic regression. The key thing is that somehow the support vector
+machines use penalties for misclassifications that
+are much more effective than the implicit penalties that are used in
+logistic regression. So that has something
+to do with the way in which they don't
+actually include rewards for getting the
+classification very right if the observation is
+on the right side of the boundary and very far so, but it just put in
+penalties for being slightly on the wrong
+side of the boundary. In principle, this
+support vector machines also allow you to do
+regression in a way that's quite different
+from the way we used to, there hasn't been quite as successful as in
+the classification, but for classification, it's
+one of the key methods. 

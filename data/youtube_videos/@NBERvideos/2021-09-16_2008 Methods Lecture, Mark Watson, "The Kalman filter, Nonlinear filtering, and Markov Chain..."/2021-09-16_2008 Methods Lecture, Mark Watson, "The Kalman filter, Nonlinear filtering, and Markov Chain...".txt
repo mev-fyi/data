@@ -1,0 +1,902 @@
+Mark Watson: What I'm
+going to talk about today is I'm going to start with this filtering stuff
+which is of course, as you know, is different than the filtering that I
+talked about yesterday, so it's got the same word in it, but this is more probably better characterized
+as signal extraction, so it's going to be, trying to track something
+that is evolving through time when you observe it with
+the air, if you will. It will look at some
+examples of that, stochastic volatility
+model is one. You want to track the
+variance of something over time or the local mean in the context of what we were
+talking about yesterday. We'll talk about
+some linear models, so that's the common filter, we'll talk about some
+non-linear models for and I'll use stochastic
+volatility as the example here. One way to do this signal
+extraction in these models is, well to use some
+analytic formula which are simple to
+use in a linear model, because everything's Gaussian and they're just
+linear regressions. We'll use linear
+regressions there and that's simple but
+in the non-linear thing the regressions are non-linear, and so figuring out the regression
+function is difficult, and then it turns
+out that there are some pretty simple
+simulation methods that you can use and
+that often works, so I'll talk about those, and those are examples of Markov Chain simulation methods or Markov Chain
+Monte Carlo methods. That'd be the first
+lecture today, and then the second lecture will be talking about estimation of parameters in these models, where you've got some a break and a coefficient or something, and you might want to
+estimate the break date and do inference about it. Or you might have some
+Martin Gil variation in some component
+may be a parameter, and you want to estimate that variation or the other
+parameters of the model. That will be the
+after coffee talk and then Jim will come
+back after lunch, and he's going to do structural
+vector autoregressions, a tool used by macro
+economists a lot and talk about what
+we've learned about those in the last
+10 years or so, and then DSGE modeling. I look forward to seeing what
+he has to say about that. Let's get going. Since this is the outline
+of this morning's lecture. I'll start with
+some general stuff. What's the canonical model I'm going to be talking about, and it'll look like a macro
+model if interpreted right, and then I'll talk about some things that you
+might want to do with it, the objects you might want
+to estimate or calculate, and then we'll spend the rest of the time figuring
+out how you might calculate those things. First I work out
+some general formula then go through
+some special cases, and then as I say, talk about
+this simulation method, and then talk about how you might estimate or approximate the value of the likelihood, which is important
+perhaps if you're doing maximum
+likelihood estimation. Here's a general way to write down the model that we're going to be interested in. It's, I guess a buzzword, so it's in general non-linear. It's got shocks and variables in it that
+are non-Gaussian. But it's got this pretty
+simple structure to it, so you've got some
+observed variables Y, and those depend on some
+states that are latent, S and some noises Epsilon, so both S and Epsilon,
+you don't observe. What you observe
+is Y and S evolves according to this
+first-order process, where S depends on where
+it was last period, and then there's
+some shock, Eta. I'm going to think about
+both Epsilon and Eta as IID I think in everything
+I do, is that right? I think that's right,
+in everything I do. You guys don't know that, but I can play my
+lecture forwarded, see that in fact, I think in everything
+I do that they're IID. Here's a reference, and
+these are different. This is a statistician
+signal extract door, and then these guys are econometricians
+thinking about this as an economic model, and it's the same model,
+and it's just question, what are you going
+to use it for? Let's just go. The standard example of this
+might be a linear model, so this is just a
+linear Gaussian model, linear state-space model,
+a Kalman Filter model, if you will that's the
+way we'll solve this, so the observables are linear
+functions of the state, the state evolves as
+a linear process, right here, a VAR1, and the shocks are uncorrelated with one
+another and Gaussian. Keep this one in mind. We'll think about this. Other examples might be a Hamilton regime switching
+model, in which S, this state is now discrete, it's zero or one
+when it evolves as a first-order Markov process
+so with a little fiddling, you can write it
+in the same way. That's all this does, where Eta has to be a uniform random variable
+here, as it turns out. You could also think about, here's a non-linear model, if you will, a stochastic
+volatility model. My observable is think about Epsilon as like IID
+standard normal. This guy has variance 1, but it gets multiplied by, if you will time-varying
+standard deviation e^st would be the time t
+standard deviation of Y, and the log of the
+standard deviation, so e^st is the
+standard deviation of the log of that is S, and this S might follow an
+ar_1 or something like that. This is time-varying volatility. I'll say Garchy thing even
+though it's not Garchy, it's the same idea. These are just examples and we'll do a couple
+of these in detail. We'll do this one in detail
+because it's really easy, and we'll do this one in
+detail because it's fun and highlight some things that are useful to talk
+about, I think. What might you want to do if you've got one of
+these models here, some objects, some things
+you might want to calculate. Let's let Y and S
+denote histories up until the time
+of the subscript, and then some things
+you might want to do is you might want to predict, so you might want to figure out some guess of what the
+state's going to be tomorrow given the
+observables today, so this is the predictive
+density of S given Y. You might want to, of course,
+predict the observable. What do I know about Y tomorrow given the history of
+the observables today, so this is the predictive
+density for Y. It turns out also of course, by factoring the joint
+density of all of the Y's, you can write it as a product, in the usual way. This predictive
+density multiplied together gives you the joint
+density plug-in the data, of course that's the likelihood, so if you're stuck
+in observables here, if you're stuck in data here, this would be the tth
+component of the likelihood. Or if you took logs that tth component of
+the log-likelihood. This is going to
+be a key object, if you want to do
+estimation or something. Then standard things that one might want to compute is you
+might want to do tracking, so you might want
+to figure out what the state is today given
+your observables today, so in the jargon, this is the filtering problem, and the smoothing problem is, you've got a bunch of
+data on Y in the past, Y in the future, and you want to know what the state was in
+a particular day, given data in the past, present, and future. That's the smoothing
+problem, if you will. We're going to talk about a general formulas for computing these guys given the structure, the formulas because of the
+structure of this problem, the formulas are simple, have some structure to them. I want to show you
+what that structure is and then we'll talk about
+using that structure to do these calculations,
+so that's the thing. General formula and
+I wrote down these are in Kitagawa and
+they probably are. I should have gone back
+and read this paper. But of course you never
+have to read papers if you just think. That's what I tried to do here. Let's see, did I think right? But I'm positive that
+something like them is in a paper by a guy whose name probably
+spelled something like this. Here's the model. Y depends on S, and these Epsilons
+and these  Etas, these guys are going to be IID. We'll use that, S depends
+only on lag S in this data. Here's prediction. I want to know what's
+the density of s given past values of Y? You can use a little trick here. Augment this with
+lag values of S and then integrate over, write this marginal
+if you will as a joint and then integrate
+over the second argument. Then you take this joint and you write it as this
+conditional times this marginal in both cases of course conditionally
+on lagged Y. Then the key thing
+here is to say, well, g, if I know lag S, lag Y doesn't help me at all. I can get rid of that component. The way I think about
+my predictive density for S given lag Y is just
+this filtered thing. What's my best guess of S at time t minus 1 given t minus 1? That's the filtering problem. Then I update that to get my predictive density of S. That's a little trick that you'll recognize this
+if you think through, most of you at some
+point went through these little Kalman
+Filter things and this is just an
+example of that. Of course obviously to get
+the predicted density of y given Y, conditional S and uncondition and once you've got this, this density is really
+easy because given S, Y is pretty simple. It just depends on Epsilon. This is pretty
+simple given that. Filtering. Similarly, apparently
+it looks like I've used Bayes' rule here, so how did I use Bayes' rule? Blah, blah. Yeah, look. So I want S given Y, but Y is just y at dt, and Y at dt minus 1. Now use Bayes'
+rule on this part. That means I can take Y
+and stick it over here, take S and stick it over here, that's what Bayes' rule is. Changes those, that's
+what I do here and then of course
+you've got to do that. You got to put that factor in. Then you notice
+something cool here. I've got S over here
+and y given S and Y, Y doesn't matter again because of the structure
+of the problem. That just simplifies to this. This is pretty easy
+to compute often. This is this prediction
+problem that we talked about and this is the
+prediction problem that we talked about. We solve, we got
+that, we got that, that's pretty easy so then we can solve the
+filtering problem. In principle anyway,
+the formulas look nice. Smoothing. Smoothing turns
+out to be similar. I don't think this formula is in this Kitagawa thing but
+it's a similar trick. What do you do? What's my best guess
+of S at t given Y at T, and what do you do? You throw in this
+S_t plus 1 thing and then you do some rearrange and you can just work
+through this so, blah, blah, blah,
+blah, blah, blah. You get all the same things. But what's cool about this
+or what's nice about this is this smooth thing
+that you want, it's this filter things. The only difference
+between this and this is there's a t here and a T here and then times what? Well, times the density of S_t plus 1
+conditional on S_t. That's easy to compute
+times this factor. What's this? This is the smooth
+estimate of S at t plus 1 times the predictive
+density at S at t plus 1. The way you work
+through this and again, this is familiar
+for those of you that have gone through this
+common filtering stuff, you do the filtering
+up to the last period and then you work backwards
+to get the smoothing. This is this working
+backwards things. I go all the way forward
+and then to figure out what my smooth value
+is at S at dt, I use information on
+what my smooth value is at S at dt plus 1. You work backwards. Those are these general formulas and they're pretty I think. I thought they were pretty. But of course, in any particular
+application to apply them you have to figure out what
+all these apps and stuff is. That's the hard part. We've simplified things a
+lot but not enough that for any particular model
+you can just do it. You now have to dive
+in and get dirty, greasy if it was like you're working on
+a car or something. Except one works on cars anymore because you can't work
+on your car anymore. I can put oil in mine. I tried putting in
+windshield wiper fluid and I put it in the coolant, then I looked on the web to
+see what damage I'd done and there's like a million
+people who have done this. Anyway, then you take your car and you get it flushed. Let's get back to work. Here's the simplest
+special case. The simplest special case is the linear Gaussian model and that's going to give
+us the Kalman Filter. Let me just remind
+you how you do that. This reminder is a useful, well, if you know this, then it's not useful
+because you know it. If you don't know it, it's
+useful because it means that you could always
+derive it in a minute. If you were stuck
+on a desert island. Here's the way you proceed. Here's the model, it's linear. Then, everyone
+knows this formula, This is your first
+econometrics class. If you've got a and
+b are joint normal with mean and covariance matrix, if you've got joint
+normality condition, marginals are normal, conditionals are normal,
+normals are nice. In particular, the
+conditional distribution are density of a given b is
+also normal with this mean and this variance where the mean of a conditional
+on b turns out to be the original mean
+of a updated by, well, the deviation of b from its mean times this linear
+regression coefficient. The conditional
+variance is this, it's the original variance minus what you learned about a from b, which is just Sigma ab, Sigma bb inverse Sigma ba. That's good. This is the Kalman Filter and this is the Kalman Smoother. That's it. All you have to do is
+interpret a and b correctly and you're done. Let me just show you
+that interpretation. Here's the model
+again at the top. Y is a linear function of S. S depends on lag S. These Epsilons are normal. The notation is standard. S_t/k is going to be the mean of s_t given Y through time period k P_t/t is going to be that conditional variance. Mu t, t minus 1. That's the mean of
+Y given lagged Y. This would be the best
+forecast of Y at dt, given lag-wise if you
+were using minimum mean square error forecasting. Sigma t, t minus 1 is that
+conditional variance. All we're going to say,
+what's the Kalman Filter? The Kalman Filter
+starts, it says, suppose I know the conditional
+density of s_t minus 1 given Y up to time t minus
+1 and I know it's normal. Let's start here
+with some normality. Then you can see because
+everything is linear here, these Epsilons and
+Etas are normal. That the conditional
+density of S and y, given lagged values of Y
+is going to be normal. We'll figure out what these moments are
+in just a second. That's straightforward. Now, what's the
+filtering problem? The filtering problem is I
+want the expected value of this guy given will
+not Y at dt minus 1. But Y at dt. All I have to do
+is take this guy and stick it over here. Then we're done. Well, if I call
+this a and this b, I'm just figuring out the
+distribution of a given b. That's why this
+slide that I just had is this solution to this. All we have to do is figure
+out what these guys are. What the means are and
+what the variances are and then apply econometrics
+one-on-one formula for the multivariate normal. That's what this slide does. Now, you just look
+and you're done. Well, what's the mean of
+S of dt given t minus 1? Well, heck, if everything
+is linear here, so it's got to be f times
+my best guess of that, which was this, plus my best guess of
+that, which is zero. What's the variance of that? Well, it's the variance of
+that plus the variance of that and these guys are
+uncorrelated so you get this. What's my best guess? What's the mean of y? Well, the mean of Y is
+my best guess of this. I guess I just figured
+that out up here. Plus the mean of
+that, which is zero. What's the variance of that? Well, again, two
+pieces there into the sum of the variances
+because they're uncorrelated. Boom. This is the regression
+coefficient. This is whatever it was, Sigma ab, Sigma bb inverse. Term here in the jargon. Economists would call this Beta because it's a
+regression coefficient, for some reason
+it's called K here traditionally called
+the common gain. Then that's just the covariance times the inverse
+of the variance. Now, these are these little
+too updating equations. This is mu of a
+given b is mu of a plus regression
+coefficient times b minus the mean of b. That is right. Then this is this little
+variance formula. I've written it in
+a bad way here. This is a bad way to write it. This is a standard
+way to write it. But it should be written as the variance of a minus the
+covariance between a and b, variance of b inverse, covariance between b and a. That's the general formula. Here I've written it in a
+more traditional way in this literature but
+that's all this is. That's it. Going back, again, I like this because I never
+remember these things. This is all I remember. I tell students when I teach, Barbara will verify this, that this is all you need
+to know in life basically. You should know a
+couple of more things. You should know
+where your office is and how to get home and this. That's basically yet. You can, I guess, work
+out the log-likelihood. That's pretty simple. All the density of Y
+conditional lag Y is normal. All I need is the mean and
+variance because it's normal. The mean is this, and the variance is this, and you stick it in the
+normal formula and boom, you have the likelihood. I guess here, this
+is the log-likely, so I've taken the
+logarithm of that. You could also, in a similar
+way derive the smooth guys. Best guess of S using all of
+the data in its variance, using again the conditional
+normal formula, interpreting things
+in the right way. Jim does that in his textbook. This is this old book
+by Anderson and Moore. This must be a recent
+edition of it, its 1976 or something
+is the first edition. Now, let's do something
+that is more fun. This is an example of a
+stochastic volatility model Let's see what happens if
+we change things around. It's non-linear. We've got a non-linear problem. Now, instead of before I had
+observable is S plus noise. Now, I've got
+observable is, well, this state thing times noise. It's non-linear. But it's a product. We know how to make
+products linear. We take logs. That's the trick
+here, so to speak. Let's do that. It's good to take logs
+not of negative numbers because that's problematic. It's nice to make these
+numbers positive. We know how to take
+numbers that might be negative and
+make them positive. We square everything. Then you got positive numbers. Take this expression, square it, and then take logs. Then, now my
+interpretation of S is just the log of the
+standard deviation. It's log volatility
+or something. This two here, this
+is what was h before. Two comes from the fact
+that I squared some stuff. This is great. This looks like the
+model we just solved. Except I've got h is equal to 2 and what I had f
+now is equal to 1. But it's the same model. You can think about just
+going about your business. The only complication here
+is that now this Epsilon, if I started out
+with e being normal, like a normal 01. What's Epsilon? Epsilon is the log of e squared. This guy is going
+to be non-Gaussian. It's going to have
+a distribution which is the log of
+a chi-squared 1. We're going to think about doing filtering in a linear model. But with error terms that, well, one particular error term,
+which is non-Gaussian. Ask what happens here. There are three ways to do this. One way is just to ignore it. Gaussian, non-Gaussian. I mean, who knows? I don't know. Just do it. Undoubtedly someone's done this. This is like who? MALE_1: Probably
+Ruiz and Shepherd. Mark Watson: Ruiz and Shepherd. I thought so. This is just like a quasi
+maximum like QMLE or something. So you could think
+a bout doing it. Of course, as usual, if you solve the
+Gaussian problem, which is linear, and apply that to a
+non-Gaussian problem, you get best linear predictors. If you just thought about
+the filtering problem here, that would give you your
+best linear estimates of the states. That's all fine and nice. If you had to estimate
+some parameters, you'd get quasi maximum
+likelihood things. That's one way. Another way is I guess you could work out analytic
+expressions for everything. Has anyone done that? Sort of. Someone's done that or tried. Or you can use some
+numerical approximations, and I'll talk about
+numerical approximations because just this is an example and we'll learn a little
+bit about a couple of strategies for numerically
+approximating some stuff. Let's go. I'm going to focus right here. There are two tricks here
+that we're going to use. The two I say here, a trick and a simulation method. Here's the problem again. The problem is, these Epsilons are non-normal. We know something about them. We know they're log
+chi-squared one things. Here's Trick 1. We're going to approximate
+this log chi-squared one density by a
+mixture of normals. Here, I guess
+following Shepherd, or actually these numbers
+come from a paper by Kim, Shepherd and Chib, we're going to approximate this Epsilon as a mixture
+of seven normals. Think about Epsilon as
+being a draw from a normal with this mean and this standard deviation
+with probability blah, this normal with this mean, and this standard
+deviation with probability blah, blah, blah, blah. We've got seven of those guys. I could write Epsilon
+t as then, well, draws from these normals,
+times an indicator, where this indicator tells me which of these guys
+I'm drawing from, and I guess the probability, the q_it is equal to 1
+is given by these p_i's. By drawing, this mixture, I can approximate this log
+chi-squared distribution. Anyway, here's seven. I'll show you the log
+chi-squared density and the approximation. Again, this is stolen from
+their paper, and here it is. You can see, well, that
+they look the same. What's very funny
+about this paper, I'm sorry, this is
+a wonderful paper and I encourage
+everyone to study it. This is like guys with way
+too much time on their hands. This is what they do, they come up with
+this approximation and then they solve all this, and then they've got three pages at the back of the
+paper where they say, "If you want to refine this approximation,
+do this stuff." I mean, heck. You really have to really, really buy into your
+original Epsilons being normal 01 to
+want to refine this. Anyway, that was pretty funny. That's fine. That's the trick. The trick is to approximate
+this log chi-squared one thing by a
+mixture of normals, and here are the coefficients, are the normals
+and the mixtures. I've done some of this
+within being much smaller instead of seven
+being a smaller number. I think I wrote two but
+maybe three or something. I don't know. That's the trick, and now we need some
+simulation methods. See, I always get here. It's a 35 minutes into this and I'm on slide 17 of 34. I'm starting to freak out here. Then I'll run out of time at the end because
+I won't finish. What we're going to
+do is we're going to use some Markov Chain
+Monte Carlo methods, and what I'm going to use here is something called Gibbs, now for those of
+you that know it, then you know it, and that's it. For those of you that don't, this hopefully will be useful. Markov Chain Monte Carlo, let me explain first
+each of these MCs. I'll explain the second
+one first, Monte Carlo. Here's the game. You start with, you've got some
+random variable a, and you want to know
+something about a. You want to know, a is distributed f, and you want to compute
+the expected value of some function of a, like its mean or its variants or some quantile or something, and you don't want to integrate. You don't want to integrate
+because that's a bother, maybe you forgot how to do that. Or this f is so ugly that doing the integration is
+hard or something. One thing you might do is that if you've got a random
+number generator and if you're lucky enough to be able to get
+random draws from f, then it's pretty easy to think about how you might estimate
+a population average. You would compute
+a sample average, get a bunch of these draws, and use your sample average as an estimate of the
+object that you want, which is the population average. As long as these a's
+weren't too weird and this function
+wasn't too weird, you would be able to
+estimate this thing with, in some sense, arbitrarily fine precision if you'll let the number of
+draws get really big. That's just the law
+of large numbers. That's the Monte
+Carlo bit of this. Now, the Markov Chain
+bit of this is the, what if you can't draw from
+f of a in an easy way, so you don't know
+what that density is, so you can't compute these IID draws from your random
+number generator. Now, what might you do? Well, the game here is to instead of taking
+independent draws from f, what you're going to do is
+choose a sequence of a's where these a's are
+generated by a Markov Chain, so this guy is correlated
+with this guy, this guy is correlated
+with this guy, etc. you're going to choose
+this Markov Chain in just the right way
+so that these draws, this Markov Chain has an
+invariant distribution which turns out to be f of a, and these guys aren't
+too highly serially correlated so that this
+sample average thing is still going to work well. That's what this
+Markov Chain stuff is. What we're going to do is
+I'm going to talk about that in the context
+of this example. I'm sure that's what
+this next slide says. This next slide says, I'm going to choose my
+i plus first draw of a, is going to depend
+on my ith draw of a. I'm going to draw from
+this conditional density, and I want to choose this conditional density
+in the right way, and that's going to be
+problem-specific I guess, so that its invariant
+distribution is what I want. As I said, the draws
+can't be too dependent, like if I kept drawing the same thing over and
+over and over again, then this would be not good. I want enough independence
+in these draws that the sample average works well, and I guess the
+precision of this will be related to the
+amount of dependence and how I choose n. If I got these guys
+are pretty dependent, I might have to
+make n really big. There's some theory and there's some
+references I'll give you. I hope that talk about
+this in general. I'm going to talk about it in a particular context. This is one way to do this. Remember what we have to do. We have to choose this
+way of drawing these a's, so that f's the
+invariant distribution, and we don't want
+these guys to be too highly surely correlated. There's a bunch of
+ways to do this. I'm going to talk about Gibbs. Others you've heard of are
+like Metropolis-Hastings, and I'm not going
+to talk about that. We'll talk about
+this because this works well for this example, is a natural way to
+proceed in this example. Here's the Gibbs game. The Gibbs game here is, you take a, a is the thing that
+you want to draw from, or you want to draw a. Think about a as being a vector
+with two elements in it. Call them a^1 and a^2, and I know you're never supposed to use superscripts because people confuse them with powers. But I already have subscripts, so you have to put
+the index someplace, so I'm going to put it up here, so don't confuse
+these with powers. I'll do that tomorrow too, and I'll square them, so then you should be confused. But that's okay, confusion is a good thing because it forces you to think. Here's what we're
+going to do now. Take a, suppose you could
+break it into two components, and I want to get
+draws from this. Here's the game, write the joint density
+as the product of the conditional of a^2 given a^1 times the
+marginal of a^1. Well, now you can see how
+this is going to work or how it might work. Suppose I happen to draw
+a^1 from its marginal, from the correct marginal. Well then, if I drew a^2 from the conditional
+distribution of a^2, given that a^1, I would have gotten the draw from the joint distribution. That's it. Stop, take a breath, sink in. It's pretty obvious. Now what we're going to do is we're just going to
+iterate on that. Here's my eyes draw of a, break it into two components. Now what I'm going to do is I'm just going to
+iterate on this thing. Now how do I turn this
+a_i into a_i plus 1, how do I get my next draw of
+these two random variables? Well, the way I get my draw
+of a^1 is to draw from the conditional density
+of a^1 given a^2 and stick in my last
+guess of a^2 here. Then how do I get
+my draw from a^2? Well, I want to draw from the conditional density
+of a^2 given a^1, and I just drew in a^1. This allows me to move
+from that to that, and if these conditional
+densities are nicely behaved, well, draws from this
+are going to converge to draws from the
+joint distribution, and they're not going
+to be too dependent, and I can do this averaging. This seems sensible. Shake your head. I told Barbara
+seating in the front, she has to shake
+her head regularly, so give me some
+positive feedback or else I don't feel very good. It's just this. Now you have to think, geez, when is this
+going to mess up? I want to talk about
+when it messes up. Then I want to
+talk about how you might check to see
+whether it messed up. When is this going to mess up? This is a little different
+picture than you have, but it's got the idea. When's it going to mess up? This is a^2 and this is a^1. You have a picture that looks
+like this in front of you. Now, I want to get draws from this joint density
+of a^1 and a^2, and it's got this
+funny bimodal shape. How am I doing the draws? Well, I choose some a^2, like right here, and then I draw, this look like a
+helicopter tour. Whenever I see one of these, I think of the helicopter tour
+paper of Harold and Chris. This is a different picture, but it still feels like
+a helicopter tour. What are we going to do? An a^2, we're going to be here, and then we're going to draw from the conditional
+density of a^1 given a^2. What's that given? That's given by the
+slice of this guy. If I got this a^2, I'm going to draw some a^1. Well, in this particular
+weird example, that's going to be essentially from this part of the density. Then given that a^1, I'm going to draw a^2
+along this slice, and that's essentially going
+to be from this density. You can see I get stuck here, in this particular
+weird example, but most of my draws
+are going to be here. I really need to be able
+to go and get over here, so I need enough mass here
+that I don't get stuck. That's one thing
+that could go wrong. You could have a weird density in which you don't
+visit everywhere. That's a problem. Or even if you've got a density in theory you visit everywhere, if the probability
+that I draw on a^1 from here is very
+high given an a^2, and the probability that I draw an a^2 from here is very
+high given that a^1, even though in principle
+I can get here, I'm going to need
+a lot of draws. n is going to have to be really, really big to break out of this, to get over here. Then the way I've
+written it here, once I get over here, I'm stuck. I got a bunch of draws here, is going to take a long,
+long time to break out, so my n in this averaging
+stuff is going to have to be really enormous. We want to rule
+stuff like this out. The other thing is, an extreme version of this is if you just have it
+absorbing point. What if you start with some a^2, which happens to be some
+weird point, a^2 tilde, and then if a^2 is
+equal to a^2 tilde with probability one. I draw a^1 tilde and with that a^1 tilde
+with probability one, I draw the a^2 tilde
+just gets stuck. I just never move. Think of that as a real
+extreme version of this. Now the reason I put this up
+is because I did this once. I'll show you, I did this
+and it's embarrassing. But I'll share that with you. If you want to ask yourself
+does this stuff work? Well, I guess you need to know enough about the joint density and say one of, do I
+have this problem or not and sometimes if you knew
+enough about the density to know if you have
+this problem or not, you wouldn't be doing this, you'd just be drawing
+from the density. It's nice to have maybe some diagnostic
+checks to see do I have these problems or not. What you might do
+here of obvious what you might do some of this Markov Chain stuff from different initial conditions and then what would you conclude? Well you'd conclude that
+if you started down here you were drawn
+from this guy and if you started up here, you were drawn from this guy. If you did this simulations from different
+initial conditions, you'd be getting
+different answers and that would tell you that something
+funny is going on. I'll just go through this list. That's what this is multiple runs from different
+starting values. Well, here let me step
+back for a second because I guess I
+thought through this when I wrote these
+slides up so there must be a rationale here. Here's the estimator. You're estimating this
+population average with a sample average and if things are nice
+you got dependent, but not too dependent draws right from the same distribution with the same expectation. You're going to be
+able to think in the usual way about this
+guy being an estimator of this guy and it's going to
+be approximately normally distributed with some variance
+that you could compute. This is the hack, covariance of this G. We'll talk about ways
+that you might estimate that tomorrow but it's
+Nui West or something. You Nui West this guy then you could compute
+confidence intervals for this and you can ask how N has to be and
+stuff like that. Then you could do this, start this chain again
+from another place and then you've got two
+independent estimates. You know what their
+sampling distribution, you know how far apart they
+should be probabilistically. You can do a difference in means test to see whether
+they are the same. This is a diagnostic
+that's used. Another diagnostic
+that's used is just when you run
+this Markov Chain, you run it a million times. You could take the first 300,000 draws and the last
+300,000 draws, leave out the middle
+400,000 draws and then you should have
+independent things, and you can see that those
+give you the same answer. These are standard
+diagnostic tools that people use it. I'm sorry. Should not. See I got this wrong. Should not thank you. MALE_2: Is there going
+to any information Nui west itself,
+like [inaudible]. Mark Watson: Yeah,
+you can learn how serially correlated
+these guys are by computing the serial
+correlation coefficient. Now it might be hard to see. Imagine this example. It might look like all
+of these draws are independent of one another but in fact they're
+really dependent because they're all draws
+from this and not that. It's not necessarily
+looking at the ar_1, ar_2, ar_5 ar_10 coefficient
+and something like this, you'd have dependence but it's really
+long-range dependence. Now what we're going to do is let's just crank
+through this example and see what you might do. Armed with this tool now. Here's our model x is
+this product thing log standard deviations or random walks square
+things take logs. You get that. This is all stuff
+we've seen before. This error term Epsilon, we're going to write it as a sum of some indicators
+times Gaussian. We know the mean and variance
+of all these Gaussian. The distribution of Epsilon
+is a mixture of these, so these q_it's are zeros
+and ones telling us on any particular date which of these normals I
+happen to draw from. Let me just go through this. Let's do this, let's solve the smoothing
+problem i guess. The smoothing problem compute my best guess of the
+standard deviation. Well, what is the
+standard deviation? I guess it's the
+exponentiated S. That's the G function
+I'm interested in. Given all of the
+data that I see. Here's the trick that
+we're going to do. The a, the thing
+that I want to draw from what do I care about? I care about S. That's what I care about
+because that's what I want but I'm going to define
+a in a particular way so that drawn these
+conditionals, a_1 given a_2, a_2 given a_1 turns
+out to be really easy. What I'm going to do
+is I'm going to take, this is the thing
+I'm interested in this is what I
+want to draw from. I want to draw from
+the density of this but what I'm going to
+do is I'm going to add some other variables here that are going to be
+useful for making these draws and the
+variables that are useful for making these
+draws are these cues, these 01 variables saying
+which normal I'm drawn from. Now why is this simple? Why is this a good idea? Well, suppose I knew
+what these q's we're, suppose at each date, I said, this date I'm taking a
+draw from a normal with mean five and variance
+23 and another date I'm drawing a normal from a
+mean four and variance 16 and I know those
+normals and I know at which date I'm drawing
+from those normals. Well then heck what do I have? I just have a linear
+Gaussian model where I have heteroskedasticity, I have variances in means
+that change but I know them. All I do is common filter stuff, linear Gaussian stuff where at each date I mess around with this formula a little bit but it's still a linear
+Gaussian problem. If I knew what these guys were, then I know these guys are
+going to be conditionally normal given the y's and I know how to
+compute the mean and variance of that
+conditional normal distribution that's just common filtering
+common smoothing stuff. It's nice and linear so
+draw on these guys is trivial because it's just
+running a common filter, common smoother and taken draws so that's why I'm
+going to augment this. That must be what this
+next slide says I bet. If I know what these q's are, I know these indicators of what normal I happen
+to draw from, draw the S is trivial. It's a linear model,
+boom I got it. So drawing a_1 given a_2, drawing the S is given
+the q's is simple. Now I have to think about
+what's the other side of this? How do I draw the
+q's given the acids? Because I got to
+go back and forth. Well, I got to rewind. Drawn. The S is given the Q is simple. I said, it's simple. Remember we did
+these calculations we did the common filter thing. I computed things like, what's the mean of S and what's the variance
+of S at dt given the y's. I have to get a draw
+from this big vector, I need the entire
+joint distribution of all of these assets. That's going to be normal, but I need all those
+covariance things. What's the covariance
+between S at date 2 and S at date 50 given Y
+through time period 100. I need all those
+covariance things too, to do these draws, and that turns out to
+be pretty simple to do. Here's a paper that tells you how to do that in a
+nice recursive way. This paper. The first time I did this, I didn't know about this paper, so I just did it. You could just do it too. If you're a macro guide dealing with 200
+observations or something, these are just 200 by 200
+matrices so you just do it. If you were in another field where he had 2,000 observations, that would be harder and then these little tricks
+are really important. Now I know how to
+draw from these guys, given these guys have to say, how do I draw from these
+guys given these guys? Well, that's pretty easy too. That's actually really easy. Because if I know S, then I know Epsilon. Epsilon is just a
+mixture of normals. The probability of
+q_it is equal to 1 given S is just Bayes' rule. This is just trivial
+Bayes' rule. That's a probability
+this is equal to 1 given the S is it's just this
+so I just draw from this. This is just Bayes' rule,
+as simple as can be. That's where I've got these
+normal densities here. That's really simple. Putting this together
+I can just do it. I'll show you some results from this in a couple of minutes. Now I have a 29 minutes left. I'm on slide 26 of
+34, we're okay. You don't want to go
+over because that's bad. You also don't want
+to end at like 10,10. Because then you
+didn't prepare enough and that's bad too. From your Macroeconomics, here's some versions of
+this that you've seen. Cogley and Sargent. Have a multivariate
+version of this. Where they have
+stochastic volatility in the ease of the sort
+that I've talked about. It's a vector thing. They put in some time-varying
+coefficients here too. That's just icing on
+the cake, if you will. Again, that's all
+linear, so easy. This Cogley and Sargent, I forget which paper there's
+a couple of these things, I'm doing this. This is a reduced form
+VAR as I remember there's a structural
+VAR version of this in a very nice paper
+by Giorgio Primiceri. There are versions of this where these E's and
+these Phi's don't follow remember I have log standard deviations following
+this random walk process. I think that's what these guys
+use and what Giorgio used. Sims and Jaw have a paper in which they have mark-up
+switching here, right on these guys so you get stochastic
+volatility that way. Same stuff. Now this one in particular, the mechanics are
+going to be different. Because the stochastic
+process for the volatility in the
+Phi's are different, so it's a different mechanics
+but same basic idea. Let me show you some
+output if you will, Just because you need to see numbers every so
+often to wake up. Let me show you a version of if you will a Cogley,
+Sargent thing, a reduced form VAR
+but a real easy one. We're going to make Y, a scalar. It's just a simple
+autoregression. I think it's like an
+AR4, 3 or something. Y is quarterly GDP growth rates. This comes from a
+macro annual paper, that Jim and I wrote
+several years ago. We're just going to
+estimate this AR4 model where we've got
+stochastic volatility and we got potential
+time variation in the phi using exactly
+basically this algorithm, We're going to if
+you have an AR4 you could compute what's the
+standard deviation of this. Which would be year-over-year
+growth rates of GDP, in this thing. Given Phi's and given
+the variance of E, I can compute what's the
+standard deviation of year-over-year
+growth rates of GDP and I just plug in
+my estimated Phi's and my estimated Sigma
+E, right, to do that. Here's a picture. This was in 2002. You don't have this picture,
+I think because I added it this morning because I
+thought I'd run out of time. So I needed to stretch it out. This is GDP the solid
+line in the middle of this dashes, are something, I think that's the
+absolute value of the data or something. What do you see where
+the absolute value of the data is highly volatile
+and then less volatile. If you compute the
+standard deviation using this stochastic volatility thing where you get what
+we now recognize, is the volatility decline that occurred in
+the early 1980s. Interestingly here or what
+was interesting to us is that even if you estimated this volatility and
+this flexible way. It looked like the volatility
+was a step function. That was interesting. I thought or we thought
+when we did it. Here's a souped-up
+version of this. Let's go through this one because I'm looking
+at my time here. Damn. Here's the souped-up
+version of this. This looks like this, this Y and in this example
+is going to be inflation. Here's the model. Inflation has a permanent
+component, that's Tau. It's called the
+permanent component because it evolves
+as a random walk. We'll think of it as
+a low-frequency bit. Inflation has a
+low-frequency bit, and then it's got
+some white noise bit. That's Epsilon. You could think about
+estimating this model and do the usual calculation. Look at the first
+difference of inflation. The first difference
+of inflation is going to be the first
+difference of Tau, which is Eta, and the first
+difference of Epsilon, which is a first
+difference of white noise. This part on the right-hand
+side is going to be what? If everything is
+white noise here, this guy is going to be
+correlated only at log one and have some negative serial
+correlation at log one but zero every place else. This guy is going to be an MA, one with negative
+serial correlation. This is the model for inflation
+which is an integrated, that is, you have
+to difference at once a moving average model. So an IMA 1,1 model, a popular model for
+inflation that people have used over the
+last 40 years or so. What we were interested in
+this paper was to ask, well, what if we take this basic
+model that people have used for a long time and
+ask, maybe over time, the relative importance of
+these components has changed. Maybe this variance, the permanent component
+used to be important. It had a big variance
+but now it's small. Maybe this component
+used to be important and now it's more
+or less important. We wanted to take this model and do it where we allowed
+UNL the standard deviations to evolve through time. This is, the usual version of this you'd call an
+unobserved components model. You're breaking inflation
+into two components, a permanent component and a transitory components so that's the unobserved
+components part. Now we're going to layer stochastic volatility
+on top of that, each of those components, has some innovations that follow this stochastic
+volatility thing. Here you go. It's the same thing only
+there's just more stuff. Y is composed of
+these two components. Now do this. Now take Epsilon t. We want this guy to be a
+stochastic volatility thing. We know how to do that. Take Epsilon t, square it, take its log, blah, blah, blah. It's got to have a
+mixture of normals. Take Eta. Let's get stochastic
+volatility, square it, take its log, blah, blah, blah. Same thing. It's going to be a
+mixture of normals. Same mixture coefficients
+but different. When you draw these cues, that's going to be a
+different time periods. Here's the stochastic
+volatility evolution. Now you could think
+about doing filtering or signal extraction
+here in the same way. You just have to put another
+layer on top of this. Now the game is this. Now take a and break
+it into three bits, a_1, a_2, and a_3. What's a_1? A_1 is going to be Tau. That's this permanent
+component of inflation. Now, if I know the
+standard deviations and I know these cues, again, this is just the
+linear Gaussian model so I can draw the Taus just
+using the usual formula. Now, what's the next step? Take this guy,
+stick it over here, bring another thing over here. Well, if I observe the Taus, then I observe the first
+difference of the Tau, that's Eta and I
+can do stochastic. We learned how to do that, how to get a draw from that then I guess if I know the Tau, I subtract it from
+Y and o Epsilon. I do what we just
+did before there, no muss, no fuss. Now I got all of these and then how do I
+draw these cues will the same way
+we did it before. You can put another
+layer on this. It's no big deal. You could add another
+layer on this, add another 17 layers get a whole bunch of
+different papers out. They would start
+looking pretty silly but you know what the
+heck, a paper is a paper. That's what it's all about. Let me show you some results
+here because they're fun. This is based on
+10,000 simulations. We're going to ask where I
+threw the first 1,000 away and you start this Markov Chain someplace so you're worried the first set might be
+influenced by where you started. There's always this
+case where you throw a bunch of them away. I threw 1,000 of them away. Then here's inflation. You'll recognize this
+for the United States. Then here's this
+permanent component. Here's my estimate of Tau that
+came from doing averaging. Now, what do you see? Well, it does what
+you think here. It's smooth so
+deviations of inflation from Tau or these Epsilons. These Epsilons seem to be
+pretty important here. Tau is not varying too much, it's pretty smooth so it's
+volatility is pretty low. Once you get back here, Tau and inflation are
+moving a lot together. Most of the movements of
+inflation are Tau movements, permanent movements, not
+these Epsilon movements. It looks like these
+point estimates are consistent with there being important
+volatility changes in this permanent
+component of inflation. In a few minutes I'll show
+you estimate of Sigma Eta. Now, what I want to do
+is think about these. Here I did two 10,000
+draws of this thing. Is 10,000 enough? Maybe I'm in one of these weird bimodal things or something. Maybe that's a problem. Here is the smooth
+estimates of Tau using two different
+independent sets of draws with different
+initial conditions. They're both plotted here. This is the difference in them. That feels okay if
+you're pretty happy when you see that. This is a little different and you feel a little
+less happy about this. This is now Sigma Eta is the standard deviation of the change in the permanent
+inflation component. Here are the estimates of that. You can see this is the
+zero line right here. You can see this
+volatility was higher here and then it came down a lot and then it
+looks like it went up a little bit here at the end, but it's pretty low
+over this period, high over this period. Suppose you ran
+this thing again, different initial conditions,
+different random things. What do you get? Now you can see a difference
+between these two. It looks like there's
+some simulation air. How big is the simulation air? Well, here the differences, maybe you worry about
+this, maybe you don't. I didn't lose sleep over this. I lost sleep but not over this. I'll tell you what I lost sleep over in just a few minutes. What you might want to do
+is look at these draws and see how much serial
+correlation there is in them. Now, each draw of Tau is really a draw of
+this history of Tau. I've got Taus for all dates. That's one draw. Then I got Tau for all
+dates, that's another draw. I could compute
+serial correlation in the Taus for each date. I think I'd averaged them here. It turns out that they're
+not very serially correlated so 10,000 draws with a process that isn't very
+serially correlated. I've computed this long-run
+covariance matrix divide it by n. This is like the
+standard deviation. This is pretty small. It's about less than one percent of the average size of
+what this Tau thing is. That's why you couldn't see it when I plotted them together. That feels good. This guy, the Sigma Eta, this is a harder thing
+to estimate apparently. With these its more highly
+serially correlated. This newly waste thing is it's smaller in absolute
+value but this guy is also smaller than
+this guy on average so you have about a three
+percent standard deviation. That turns out to be
+about what you see here. That's like three percent. Now, I want to tell you, here's a sin I committed once. Usually you commit
+sins more than once that's why you keep
+going to confession. But this scene I think I
+never knowingly committed it but I committed it twice. Here's the problem. Think about this model. This is it, I should have thought about this
+before I did it. I didn't think about it. What I had done is I had done
+this macro annual thing, standard stochastic
+volatility thing and then we needed this model and I said, oh, I can just
+use the same computer code, spruced up a little bit and I'd just turn it on
+and then go hang out. This model was used in this paper with Jim Stock and also in a paper
+with these guys. This paper had a mistake in it. I was going to call
+this Ceccheti et al but I figured I should
+put my name here. Here's the problem
+with this analysis. Here's what can happen. Suppose you're doing this
+Gibbs sampling draws. Suppose you do this once and it just so happens you
+get a bunch of Sigma Etas that are really small. They're really small. Then what's going to happen? Well, you're going to go
+run your Kalman Filter, Kalman smoother thing
+and you're going to say Sigma Eta is really small so this Tau thing is
+now very important. Your Kalman Filter,
+Kalman smooth thing is going to estimate the
+mean and variance of Tau, it's going to say mean is really close to zero and its
+variance is really small. You can take a draw from that. You're going to get
+really small numbers. Then you're going to look
+at differences of those, and those are going to be Etas, and those are going
+to be really small. Then you're going to
+ask what's the variance of those really small numbers? It's going to say,
+it's really small. Then you're going to
+draw these Taus again, and they're going
+to be really small. You're going to run
+into this problem. It's that something problem
+that I showed before. You're stuck. You've got height and it's going to take
+a large number of draws to break out of that if you happen to
+be unlucky enough to get some of those draws. In this paper, we applied this model to inflation
+for the G7 countries. They are a bunch of countries,
+seven of them, let's say. It turned out for some
+of the countries, via this estimated Sigma Eta
+was really close to zero Why was it really close to 0? Well, wasn't because the true
+Sigma Eta was close to 0. It's because this thing
+hadn't been run enough or I let this thing
+get too close to 0 and then it just
+got stuck there. There was like a working
+paper version of this and then some person, I looked up the person's
+name today than I forgot. Ling Hu. This is an important lesson. I always put code on my website so that people can do
+stuff and sure enough, Ling Hu at some hedge fund, this person named Ling Hu, who I should know,
+I probably met. Is Ling Hu here? Downloaded these
+programs from my website and for some reason
+was running them, was using them to
+model something. Hedge fund related, I
+guess and uncovered and sent me an email wondering about something in the code and then we corresponded
+and sure enough, it's this problem surfaced. It certainly wouldn't
+have immediately unless he or she had been
+able to get this code and then try and figure out
+what we were doing here. Luckily that was done between the working paper and
+finished version of this so that we could
+correct this before the finished version
+was published. It's good to always
+put your code up on your website with
+all of your data as soon as you possibly can because there are people
+out there that will try and replicate your stuff and you really want
+that done early because having it done
+late means you're stuck. You have to publish
+these embarrassing whatever they call it
+a rat or something. The last thing I'm
+going to talk about now is just something that we'll talk briefly
+about tomorrow. Maybe Jim might talk
+about it today, computing these likelihoods. We've talked about
+how you do filtering, how you do these
+nonlinear models, how you do smoothing, how you get estimates of these
+guys using all of the data and that turns out to be pretty easy using the
+simulation things. If you want to compute the
+value of the likelihood. What you need is the
+predictive density of y's so you need filtered
+versions of these guys and then you got to
+do some other things. What sometimes people use is they do something
+called particle filtering and particle filtering
+means different things to different people
+but the basic idea, just because there are
+lots of these things. I want to tell you
+where this jargon comes from by thinking about
+a simple example. I'm interested in the likelihood or the density of y_t
+given lagged values of Y. What is that? Well, we worked that
+out, it's the density in this model of y_t given S, which typically would have
+a simple form that you can figure out because
+it's just that, times the predictive density
+of S given y_t minus 1. Doing this integration
+is sometimes hard because figuring
+out what this guy is is hard in particular models. A scheme that people use is something called
+particle filtering and let me just tell
+you the basic idea so that you understand
+where the word comes from. Here's like the simplest one
+in the world you might do. This is a dumb one, but
+it makes the point. This is what you
+do, you figure out ways to get draws from
+s_t given log of y's. You figured out how to
+get draws from s_t given lagged values of y's and let's say you get
+a bunch of draws, a gazillion of them. Then what can you do? Well, you could just use this very naive estimator of
+this conditional density. These little S these little
+draws are called particles and so this is a naive, if you will, particle
+filter here where you're just approximating this
+probability distribution. This thing here, by 1 over n, if these are independent draws. Now there are much smarter
+ways of doing that. The smarter ways
+of doing that it seems have to do often with the particulars of the model and so if you ever
+want to do this, you don't want to do this. You want to go read papers
+by these guys or other guys, but this is where
+I'd probably start. I read a bunch of
+papers by this guy, Neil Shepherd on this stuff when I was thinking
+about these lectures and they're all really good. So it's worth reading anything
+that he's written on this. I've managed to stretch this 75 minute lecture into
+90 and I don't feel guilty, I don t have to refund
+money to the NBER. This is what we've done, we talked about this
+signal extraction problem, different models,
+we talked about general formula, special cases. This was the linear models and these stochastic
+volatility models, we then talked about
+ways of doing this filtering and these
+nonlinear models and some special cases and learned about
+one MCMC method, this Gibbs thing in particular and then at the end I
+just briefly touched on this particle filtering
+for likelihood evaluation. Let's take a half-hour break and then come back
+for the next lecture. 

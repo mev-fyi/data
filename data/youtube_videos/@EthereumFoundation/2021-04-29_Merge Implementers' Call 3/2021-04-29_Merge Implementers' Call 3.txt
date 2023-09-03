@@ -1,0 +1,201 @@
+welcome everyone this is merge implementers call 
+number three let me drop the agenda to the chat   um this is gonna be short one no major respect 
+discussions is planned for today uh we'll start   with the orionis updates uh from client updates 
+then go to the um update on the first devnet   that we are about to launch tomorrow which 
+is called stickler and yeah then we have some   research updates not much there then go to 
+spec discussions probably some questions um   are there and yep and we're done 
+okay so let's start from ryan's   client updates um i'll start from 
+tekku side so taco is like ready for   the first devnet launch it's been tested 
+with uh bazoo nethermind and catalyst   and uh yeah so that's that's it 
+we're excited to see it in the   in the first devnet and see how the things are 
+going um and i didn't try like interrupt it with   other clients but just try to run it on a couple 
+of machines um yep went well so let us see um   um also uh um not uh the update not about the 
+merge but anton started to work on sharding   implementation and taco implemented shortens back 
+and did some sanity tests so it works in general   and he keeps keeps doing progress on that okay 
+so that's from deku um who wants to be next i can i can take a lighthouse um not a whole lot 
+to report on our end we got uh interrupt going   with nethermine now so we're now working with 
+gas and nethermind uh yeah we're ready for the   devnet i believe um we're still not 
+calling the finalized endpoint but we can   probably throw that in pretty quickly 
+um i think that's that's it for us yep great prismatic yeah hey there um so i 
+think we're pretty much ready we spent the   last few days um debugging hashu root for 
+the transactions field and then to proto   he helped a ton there so we were able 
+to get interrupt working locally between   prism and catalyst so today we'll try nevermind 
+and other other e34 but yeah i think we're pretty   much ready for the test then that's it that's 
+so cool um nimbus right yeah um i think we're   we're ready um so we've been testing with uh geth 
+uh with catalyst and and so far it's been uh the   interop's been uh solid um so yeah looking forward 
+to see see if this works how this works tomorrow great okay so um yeah i guess we can go to 
+eat one clients um who wants to be first i can go first so nothing major 
+uh we will be releasing a hot fix   for what lighthouse uh submitted to us a small 
+issue in the contracts in the response but   nothing major uh we'll be releasing it today so 
+we will have a newest release and us docker today   um what is this issue about like uh the issue is 
+that uh the response wasn't serialized correctly   and i don't know i think it's something in 
+docker because in general it should work i'm   i'm really confused why it happened because it 
+worked fine for me um it's uh just to simplify   it uh the response is instead of success instead 
+it was saying value and lighthouse said that it is   generally okay so i'm interrupting because maybe 
+a question to can we not release it and simplify   so they can continue can lighthouse 
+safety will work fine with this response   yeah so we um we don't let an error on that 
+endpoint stop us from progressing so we um it   so lighthouse just kind of logs an 
+error uh that that we didn't find   the feel we expected in the response um and 
+the success that the call works well in um   neither mine so it doesn't really stop anything 
+from working it just creates an error log so let's   not release do not confuse any people who are 
+using already some docker volca what do you think i don't think that release would hurt anything 
+so we will be more uh more stable and if you   just grab the newest docker image it should 
+be fine for you so i would still release it okay cool anything else here okay then um who wants to speak from go ethereum 
+from catalyst is anybody from go theorem here i don't think so okay okay so i i can speak um uh yeah i can give an update on that it just 
+works i tried it great okay um yeah bazoo   uh yeah we just um get a working 
+basuteku local net yesterday and   did some debugging and got it into a good enough 
+state that we think that it's it's good enough   to join the the friday test net um it's still 
+pretty early because we just recently got it uh   you know stable and um right now 
+it's just a uh rainism branch uh npr   uh and a private docker repo but uh we're 
+looking forward to participating great um   anybody else else turbo gath queen theorem 
+quick question before tomorrow so it seems like   um a number of clients have tried different each 
+one clients underneath the hood and then have we   had a number of these one clients tried like a 
+number of two clients from the hood have we run   any short-lived transient test nets with multiple 
+uh like different consensus engines driving or is tomorrow the first time it's doing that   so i've successfully paired lighthouse and uh 
+deku that works then there are some initial issues   with lighthouse nethermind but those have been 
+resolved i believe so i'm confident it will work   okay so like white house and taku agreed on on the 
+consensus changes are very minimal obviously but   i'm just curious if they can 
+stand up network together yeah i've been also like using deco with 
+nethermind and catalyst in like one local   local it was not actually local 
+it was a couple of machines   yeah but if you want this now 
+it worked well i mean if we are so one thing i like to share here is 
+that at first we were just looking at   launching like the very minimal set of clients to 
+just get something stable out that we knew know   like should work but yeah that does it for a 
+longer time and in the past few days there have   been like an immense amount of new clients and 
+instructions on how to build all of these things   and although i think and i'm still confident that 
+we can run like this multi-client does not it's   a lot it's like clients are being added faster 
+then we can rewrite deployment codes for them so   yeah this is actually great i think yeah and 
+very exciting to see uh what we'll have tomorrow   so okay so we have like four e2 clients and three   if one clients ready for the first 
+devnet which is very impressive brother do you want to give like 
+more details on tomorrow's launch   sure um so we have a configuration up yesterday we 
+had an initial configuration but we changed it a   little bit so we changed the validator set and we 
+changed the fork version in on the ethereum 2 side   other than that it's the basic familiar 
+configuration you know from previous testnets   it's a maintenance configuration this time 
+down it's not the minimal configuration   you may be using locally and right and in chat you can find the 
+link to this desktop configuration   we will set the boot nodes right after the 
+call and then deploy some notes of our own   and then i think today we'll just 
+focus on connecting all these notes   getting everything running and then 
+tomorrow at noon utc we will start the chain great um so i would like 
+suggest to jump on the discord   uh one of the on the orion orionism discord voice 
+channel after this call to do some coordination on   on this first devnet uh to to understand who runs 
+uh what and it would be great if we have like   full coverage of different mixes of with 
+one and two clients in order not to miss   any um any interrupt disability i believe with um 
+four different epm2 clients and three different   if your month clients you have to test at least 
+12 combinations um i think or at least we'll try   to run out of them but then i also need other 
+teams to run as many combinations as they can   and if you don't have validator 
+keys already please reach out   and then you can get your manomik 
+to participate with meditators any questions to the stackload.net what's the precise time it's starting again 
+12 for you to see 12 um yeah i need to see yep   gotcha and maybe proto will throw up a 
+zoom length 30 minutes before to congregate   we will be live a lot during 
+like the run up to the test net   in this card in chat in the rainism cast 
+channel and we can do zoom right before okay yeah i'll just look to ryan's discord 
+channel for for coordination purposes   i think a lot of conversations will 
+happen there like today and tomorrow um okay i see peter just joined peter do 
+you want to give any updates on the cut list mainly in the context of this uh trans uh 
+short-lived merged devnet that'll start tomorrow   the update prior to you joining 
+was catalyst seems to work because   multiple people have interrupted this right and i have like a 
+follow-up question about like   transaction propagation enabling for catalyst mode do we have any like estimation 
+on when it could happen can you hear us okay probably not okay i'll ask later um 
+okay let's just go to research updates um   there is like the first update i um i've made 
+to the fork choice rule section of the design   document of the execution layer design document 
+um this this update is just to remove um the   recommendation on using the new block as the 
+signal for the folk choice because even if the   new block uh that that is coming from consensus 
+societies really it does not mean i i mean this   even as if execution payload is like a valid one 
+it does not mean that the whole beacon block is   valid and depending on the implementation 
+of consensus um side of consensus layer   um of consensus client uh it will be like 
+uh it it could be the case uh when they're   like the new block has been sent to the 
+execution layer and it's been valid um   but yep but like state route mismatch happened 
+on the consensus side later and yep and uh yeah   in the in that regard uh in this case the new 
+hat won't be issued for this particular block   so that's why it's been removed and the only 
+trigger for the fork choice is the new hat message   i don't think like it has a big impact on implementations 
+currently but anyway wait sorry so the   this is the trigger for changing the fork 
+choice on the execution client side from   being proof of work to be in transition mode 
+um no it's not about transition but it's   just about that you know there was like yeah 
+there was a it's oh it's post transition or   right right it was a recommendation so you can 
+it was like you can use like new block if it's   the lead and if it's like in a child of the 
+head of the chain you can switch the head of   the chain to this new block uh which might not 
+which dependent on the implementation might not   work correctly well why is this is this because 
+we i we want the execution clients to not trust   the kids i just client for this or yeah you you 
+might like run things and so you might say you ran   uh execution and consensus validation in parallel 
+then you might actually find that they can some   of the beacon block contents were invalid 
+and done even though the execution is valid   or you know any type of like ordering issues on 
+that right right i see okay so like if the quiet   basically if the client's implementation sent 
+the uh execution block to the execution client   before it did at least one of the other checks 
+and if those remaining checks were ended up like   not passing that it would be a problem yeah 
+like for example if you don't want to do this   until the end then you wouldn't actually know and 
+so you can't take the shortcut of like get the   leaf block of the head right big sense but whereas 
+a new head message is something that would come   to an execution client after the consensus 
+client did the full validation cycle okay yep so that's it just pay attention to it 
+if you have started to implement this uh   external fork choice stuff the next update is 
+the withdrawal design dock dimitri has like   um gained uh like this this dog from um 
+his proof of concept implementation for   the withdrawal mechanism um and this this is what 
+we will probably take into a kind of spec for   ryan is in the next couple of weeks because 
+there was an idea to deploy with roles uh   to deploy the withdrawal test that um 
+so dmitry do you want to speak about it   yeah a few words i'm working on with roles and 
+i've created a specification it's not actually   a specification more like a design document 
+but the spec could be made from it the link is   in the chat and in the agenda and then a feedback 
+appreciated directly to me or by commencing   md it doesn't support partial withdrawals 
+it only works with validator exit   which leading to full withdrawal but from what 
+i made i see special withdrawal somewhere around   and i am going to extend spec with them in a few 
+days i was skeptical about partial withdrawals at   the beginning but now i see we could make them 
+without much pain so i still think we could we   should resist uh it so we will not we will not 
+see visceral messages one per day per every   validator we should restrict it in such manner 
+so it will be less frequent and that's all for me any questions to dimitry about this doc i was able to review it in general i think 
+it looks good i left a number of comments on   there and we don't go through them now but 
+uh i just want to make sure you solve them   um and yeah i think i think the base 
+of that can probably be extended   uh with partial withdrawals if as long as the 
+withdrawals are unique and that they have like a   unique identifier or something so that the mapping 
+isn't based on validator index and that also   allows for reusing validator indices later which 
+is good but otherwise it generally looks good so i encourage everybody who's interested in 
+withdrawals and or just want to take a look   just take a look like um like in the next 
+week so with your questions on discord   like in comments to this talk okay it definitely feels like a simple 
+and clean method so i'm happy with that yep any other research updates okay cool yeah that's because a lot 
+of work happening on the right okay   sorry anything i was just going to mention 
+that um we are going to attempt to turn on the   like core suite of tests for the 
+merge spec that's in the repo   for the next pre-release but as i say that i'm 
+also realizing that the ryan as a merged spec   has probably potentially diverged a little bit on 
+the beacon chain side from what's in the spec repo   so that might not actually be very useful but 
+um we can talk about that i guess in a few days   if that is useful i think we can 
+cut some test sectors next week it's primarily just like whether 
+you can support the types and things   uh because most of the changes are extremely 
+minimal yeah what do you mean by diversion   what has emerged oh um i and i'm not certain if 
+this is the case but the has the ryanism spec   from the um is that just pointing to dev currently 
+or is that pointing to a particular commit on the   beacon chain side it's pointing to dab okay gotcha 
+then cutting the test vectors would be useful i   wasn't sure if it had pointed to like a commit 
+that was from maybe a week ago two weeks ago   okay see okay thanks um yep i think we're done with 
+research updates let's go to spec discussion   um so any any questions i know that 
+there is a work happening um on the   employ on the state and 
+probably boxing complementation   does anybody have any questions with regard to 
+this particular work or any other uh work that's   happening on the execution layer from this back 
+perspective and from the researcher's perspective okay so i guess yeah everybody is busy with 
+the rhines which makes a lot of sense too   i think we can get back to this um 
+to this like in a couple of weeks   um any questions for the beacon chain side for 
+the beacon chains back so um i have a question   regarding the merge spec i look at the merge 
+spec and uh i think the merge shoe ideally be   built the merge dispatch should ideally be built 
+on top of sorry the sharding space should be built   on top of the merge spec because without the 
+execution panel here i'm not sure how useful   that is right well right theoretically these back 
+part like the changes to the spec that need to be   done are pretty independent right so like you can 
+like you can work on the two in parallel though   obviously you know there's not much value 
+in actually implementing sharding before   the merge goes through except for 
+just like testing value basically   yeah and the current state of the spec is phase 
+zero is stable everyone has implementations of   it and so it's easier to have the spec currently 
+both of those specs merge and sharding be based   off of phase zeros so that if changes to the 
+merge happen if we want to go in and change   the starting stack and vice versa and so 
+that we can kind of independently iterate   but once um they stabilize and once there's 
+like a very concrete order like merge will go   to mainnet first which i think we all generally 
+agree on uh we would see like charting be rebased   on kind of the merge spec and similarly once 
+altera implementations do exist correction   charting is already based on the merge spec 
+in the f2 specs repo okay okay because i don't   see the situation pillow header in the 
+beach instead but maybe i'm just missing i think it just extends the state okay anything else any other questions   okay open discussions because they 
+don't want to discuss anything did we want to chat about the how are we 
+going to set up ran ism nodes in here or do   we definitely want to do that in a discord after 
+i i would suggest to do it in discord after   like in less formal manner just like if 
+it would be like an offline event you know um so i would just like to say thanks 
+implementers teams or their hard work   that they've just done to to be at this line um at this line i mean in terms of ryan's progress 
+thanks a lot to proto for doing a lot of   coordination and other other stuff so i'm very 
+excited about tomorrow's launch so let's go to   i think we're gonna just wrap up and go to 
+discord or do do we want to like take a 30   minutes break or it's kind of my preference 
+is not a 30 minute break cause it's 11 30 here   i was gonna say that for paul as well yeah okay 
+6 30 a.m here it'd be nice to get some coffee   yeah let's i would just suggest to rip up 
+here and go to discord and whoever joins at   whatever time so it doesn't matter much okay thanks everyone for coming   thank you yeah thanks great work 
+everyone thank you bye-bye thanks 

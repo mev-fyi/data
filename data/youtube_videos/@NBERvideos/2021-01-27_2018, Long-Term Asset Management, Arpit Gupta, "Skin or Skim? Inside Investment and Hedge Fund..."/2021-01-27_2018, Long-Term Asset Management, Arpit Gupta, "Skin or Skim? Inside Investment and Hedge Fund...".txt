@@ -1,0 +1,321 @@
+Arpit Gupta: This work is
+joined with Kunal Sachdeva, who's joining rice this fall. The motivating question
+in this paper is to ask, what's the role of
+inside investment on fund performance? By inside investment, I mean managerial GP commitments to their own funds under
+their management. To study this question,
+we're going to first have a model framework
+that uses a berk and green style model to understand how inside investment might affect the incentives
+for managers. The key friction in
+this model are going be limited commitment and
+decreasing returns to scale. Then we're going to
+turn to the data. We're going to use novel regulatory information
+to empirically analyze the role of skin the
+game on fund performance. The way to think about
+this is to imagine a hedge fund that has multiple
+funds under their control. We're going to be comparing the returns on fund number two. That's a fund here in
+this example that has a higher amount of
+inside capital, greater skin in the
+game that comes from managerial
+GP commitments to the fund against another fund that this hedge fund operates. This fund number one, that has a smaller amount
+of inside capital. Our key result is that a one standard deviation
+of inside investment within the same firm
+is associated with about 1.3 percent
+increase in Alpha. We're finding that insight
+investments are very strong, powerful predictor of
+superior performance even when we look
+within the fund family. First, I want to
+motivate our model and try to illustrate
+why we think capacity constraints
+is the right friction to have in mind and
+understanding of this result. First what I'm showing you here is a flow performance
+relationship. On the x-axis, we've got
+lagged excess returns, on the y-axis, I'm showing you subsequent
+flows into the fund. Then breaking out insider funds, these are the ones in
+red and outsider funds, those are the ones in teal. The distinction of being
+the insider funds have over 20 percent of their
+capital coming from the GPs, from the manager of the fund. Notice that the
+outside funds here in teal have more of a standard flow
+performance relationship. Meaning that when they
+have a good quarter, they get more money than
+subsequent quarter. That relationship comes from
+the fact that investors see the superior performance of the fund and they're putting
+their own capital into it. However, we don't see that relationship when we
+look at the insider funds. Meaning that when we're
+looking at funds that are disproportionately
+managing inside money, they have a good quarter, they don't get a lot more
+money the following quarter. Now, in parallel to that
+result on flow performance, I'm showing you here a picture on fast return persistence. Same thing on the x-axis,
+lagged excess return. On the y-axis I'm
+now showing you the subsequent follow-on
+excess return. Now this relationship
+isn't as precise, but we see a
+suggestive sign that the insider funds seemed like they have a little bit
+more return persistency, meaning they have a good
+quarter, one quarter. They seem to do maybe a little bit better
+the following quarter. These are just
+motivating facts that go into how we develop our
+modeling framework, which we're then going
+to use to interpret our empirical results. The model we use is a fairly standard Berk and
+Green style model in which managers have access to different return technologies with different scaling costs. Each return is associated with a particular Alpha
+parameter that captures how good the strategy does when you first put it in a little bit of money into it, as well as the
+scaling parameter, which captures how the
+returns of the strategy diminished with additional
+capital contributions, or the capital in
+our model comes from both insiders as
+well as outsiders. Now the key differentiation between insiders
+and outsiders in your model is that the outsiders are
+taking fees as given, they're investing their
+capital into the fund, whereas insiders are collecting both the management fees on outside capital as well as the internal returns on investing their own
+private capital. They're trying to maximize
+that total value-add, taking the participation of outsiders and scarce
+insider capitalists mixed. The way to think about this
+framework is to imagine two strategies with very
+different scaling parameters. Think of the first
+one here in red. That's going to be something like high-frequency trading. It's something that gives
+you really high returns, but doesn't scale very well. The more capital you put
+it into the strategy really diminishes the returns
+that you receive on it. We think this characterizes
+a broad set of strategies that hedge
+funds have access to. There's another set of strategies that are
+outlined here in teal. This strategy doesn't
+give you as much return, but it scales a lot better. The basic framework in
+this model is going to be that if you have inside
+capital to delegate, you're going to first put that
+into the strategy in red, you're going to earn
+really high Alpha on your own private capital
+and you're in stake in a market that fund in teal to outside investors earning
+management fees on that money. That's going to be the basic
+intuition behind the model. Now think about what happens in any given fund as you change the amount
+of skin in the game. On the far left, we have the
+berk and green framework. The fund size grows really large because you're just trying
+to maximize management. On the right side, you've got a world in which there's only inside capital and the fund. Now when that happens, the manager has
+optimized the scale of the strategy so as to
+get the maximum Alpha, because they're earning all of the excess
+returns themselves. In between you've got
+some intermediate range where the insiders are not scaling up the fund as much as they could because they've got some capital contributions. Parallel to that, we've got
+a framework on returns. Again, left-hand side, broken green framework,
+there's no excess return. Right-hand side, we see funds do really well because
+the managers are choosing to optimize
+the scale of their strategy so as to
+earn excess returns. What happens in-between
+is really interesting. What's going on in
+between is that the insiders are
+internalizing the fact that raising new capital
+is dilutive to existing investors
+in the sense that it worsens the capacity
+constraint of the strategy. Skin in the game acts to better align the incentives
+between the LP and the GP by causing the insiders to internalize this
+diluted capital raising. That's just the basic
+framework of our model. It leads us to
+think that as long as the scale and size
+costs are going to vary, we're going to expect that hedge fund
+insiders are going to allocate strategies differentially
+across their funds. They're going to be putting
+their own private capital across these different funds in ways that should result
+in a relationship between skin in the
+game and performance. It gives us some sense of
+what the plausible mechanism, this capacity constraint idea. Again, the basic intuition
+in this model is that insiders are trading
+off scale and scale. They can earn a lot of money if they're managing
+their own private money, particularly when it comes to strategies that don't
+scale very well, or they can earn a lot of money on management
+fees but to do that, they're going to have
+to really take a lot of capital and drive those
+returns down a lot. The basic friction
+in the background generating this result is the idea of limited commitment. That outsiders can't fully contract with the management of the fund to commit against diluting them over raising
+capital in the future. Skin in the game is acting as the commitment
+mechanism here. That's just the basic
+framework that we have in mind that we're going
+to take to the data. We're going to use
+novel regulatory data that comes from form ADV. ADV data has been used
+before and other contexts, but it's been updated after Dodd-Frank to include a
+lot more information. It's going to now be a
+comprehensive dataset all hedge funds above
+a certain size, that's going to allow us
+to understand the role of inside investment in
+the hedge fund industry. We're going to link this with commercial hedge fund datasets. This is going to allow
+us to look at returns. We were able to link
+a number of these based on the SEC
+identify itself. First, let me just give
+you a sense of what this regulatory form looks like. Here I've got Renaissance
+Technologies. This is the Medallion Fund, the most successful hedge
+fund of all time. A dollar investment
+is fund in the 80s would return over $10,000 today. Distinguishing feature
+of this fund is its reliance on inside capital. I want to draw your attention to Question 14 on this forum, which is what we're
+going to use. This asks, what is the
+approximate percentage of private fund beneficially owned by you
+and your related persons. I'm going to come
+back to related persons in just a minute. But basically
+beneficial ownership has to do with ultimate
+and ownership through Shell vehicles and so what
+this is going to for us is something we think
+is a good proxy for managerial
+investment in the fund. This is telling us that
+about two-thirds of the six billion dollars
+in this fund is coming from the
+managers themselves. This is really a fun that's
+managing inside money. Our basic empirical
+strategy is going to be to compare funds like this. Funds like medallion
+to funds like reef. Reef is a fund that
+renaissance technologies also operates that has about
+$16 billion in size, but only 12 percent of that is coming from GP
+capital commitments. This is a fund that you can access if you have a
+million dollars maybe, and you're not going to get the same returns that you would get in the Medallion Fund. Back to related parties these are entities that
+are listed on the forums and most commonly they
+are sponsors of the GP. About three-quarters of the time they share a supervised person, about 60 percent of the time
+they're in the same office. We think that this question
+asks for an entity that we think economically is quite linked to the
+management of the company. We're going to treat that all is inside investment
+for our purposes. What this data allow us to do
+is to look within firms at the distribution of
+how their skin in the game is distributed
+across their fun vehicles. For Rentec here we can see
+they've got a range of funds, some of which have very
+little skin in the game, some which have a lot
+of skin in the game. We have this measure for the
+entire hedge fund industry. This histogram is
+telling you for every single fund
+that's a hedge fund, what is the skin in the game
+of that particular font? There are two interesting
+modes here at zero and 100 percent so no skin in the game
+and totally prompt fun. We're actually going
+to ignore those for the remainder of the
+empirical exercise, but results you
+can also going to hold if you include
+those as well. Moving on to our results. This is our basic specification. What we do in the first step is a factor correction
+of returns. You can think of the Fama-French cohort
+factors, for instance, we're just going to regress
+a bunch of factors against raw returns in order
+to extract an Alpha. That second step, we regress that Alpha against that
+measure of skin in the game. We're taking these from annual
+ADV form so we're taking the skin information from one year and regressing
+against the returns, the Alpha from the
+following year. We're looking here both at
+the Fama-French cohort as well as the [inaudible]
+share factors. The key result is that in one percent increase
+in skin in the game is associated with about 0.5
+bits of Alpha every month. To scale that appropriately, an additional standard
+deviation is going to add about 1.2 percent
+Alpha every year. Really important feature about that result is it comes from a panel regression in which we're controlling from
+a form fixed effect. Meaning we're looking
+within a firm at different funds
+that they offer. The firms all have
+common management, but they have different vehicles with different amounts
+of skin in the game. That's the variation
+that we're using in this panel contexts and we're finding that it's variation inside investment within
+firm within year, within strategy
+controlling for size, that's associated with
+very strong predictor of superior
+performance of Alpha. To having established
+this relationship between skin in the
+game and performance, we now are turning to understanding some
+of the mechanisms. Remember we have
+this framework that suggested that capacity
+constraints could be driving. We think very
+strong evidence for capacity constraints comes from funds that are closed
+to outside investors. From a Berk and Green
+framework it's very surprising to have a fund that's not accepting
+outside money. Because you could
+earn more management fees if you let in more capital. Those concerns are
+highlighted in our Columns 2 and 3
+where we show that actually these funds
+that are close to outside investors
+do incredibly well. They're earning 2-4 percent every year in additional Alpha. It seems like outside
+investors should really want to get
+into these funds. The management could
+make more money in management fees
+that they let them inside the fun, so
+why don't they? Well, the resolution that is in Column 1 where we find that these funds close to outsiders actually have
+more skin in the game. This is illustrating more starkly the mechanism we think is partly
+driving a result, which is that the fund managers are creating separate vehicles. They're keeping their
+own money in some funds, optimizing the scale,
+optimizing the strategies, and instead offering outside investors
+different products, products at a different scale that don't get as much an Alpha. Additional evidence that capacity constraints
+can be driving this result come from the size of the funds
+that we're looking at. Again, looking within firms, contrasting funds
+within the firm that have different amounts
+of skin in the game, we find that the high
+skin funds are smaller. That's again consistent with a scale interpretation
+of this result. Further evidence comes from the role of flow performance. This is just a
+regression version of that plot I showed you earlier. What we're finding is that
+when funds do better, in terms of excess returns that are inside our funds that as they're managing higher than 20 percent marker
+of inside capital, these funds don't accept as much outside capital
+the next order. Meaning that the insider
+funds have a good quarter, you would ordinarily
+expect capitals flowing. We don't see capital flowing as much when there's an insider
+fund that's consistent with the idea that the
+insider funds are better managing the capacity
+of their strategy, not accepting as much
+outside capital. We see that on the
+extensive margin, taking any capital at all, as well as an intensive
+margin question. We've also looked at this in the context of flagship funds. I don't have the result here, but comparing the skin of a flagship fund
+in particular firm, does that drive flow to the other funds and the
+family and we also find that superior performance
+of funds in that context also doesn't drive flows into
+other funds in the family. What these results suggest is that it's not a
+signaling story. Because if it were
+a signaling story, if it were the case that
+managers are pledging personal commitments in order to drive
+investor interests, we would expect to see
+greater flows in the future, either into the fund that they've got the
+personal commitments in or maybe into the family overall and we don't see that. That suggests instead that
+it seems more likely that it's something like moral hazard that's
+driving the result, that there's some
+agency conflict between the LPs and GPs and that the managers
+are doing something different in the funds
+that they operate, either on their scale or the
+nature of the strategies. Further evidence for this capacity constraint
+interpretation comes from the strategies where we see the
+strongest effects. What I'm plotting here
+as a coefficient so the basic coefficient
+relating inside investment to Alpha across different
+fund categories and we see the
+strongest relationship between inside investment
+and performance and the categories that
+we think are more characterized by
+capacity constraints. These are relative value
+multi-strategy event-driven. We think of these as arbitrage
+like strategies that are more capacity constraint
+and so we expect to see a greater relationship between inside investment and
+performance there. We don't see a strong effects
+and CTAs or fund to funds and fund to funds we exclude
+for our main analysis. Additional evidence for
+this agency interpretation comes from an event study. What happens when a
+new fund is created. What we're doing here is
+looking at funds that only had one fund to begin with and it's now open
+up a second fund. We think what happens
+is this offers the fund managers
+the opportunity to do one of two things. They can either keep their personal capital commitments in the old fund and use the new one to raise additional revenue. In that case, that's
+the case in red. We find that that original fund continues to do very well. Money stays in the old
+fund, old fund as well. Contrast that with the
+results in teal here. This is what happens when
+you create a new fund. You move your capital
+to a new fund. Meaning that you
+use your old fund for marketing purposes. It's got a track record. Outside investors are
+flowing into that, but your own money
+travel somewhere else. In that case, we find
+that old fund does not do as well after
+the new fund creation. Finding that the money follows the skin is additional evidence for agency conflicts in
+driving our results. A lot of other people have
+worked on this question. What I want to emphasize
+is that relative to the mutual fund literature,
+which has looked at this, that literature has
+really emphasized a signaling interpretation
+of the relationship between inside investment
+performance and we think we're finding evidence instead of a moral hazard interpretation of
+what's going on here. In particular, based on
+the evidence from flows. We do a lot of other
+stuff in the paper. To conclude, I think what these results help
+rationalize is how do we live in a world in which outside investors
+don't seem to do very well when they're accessing
+delegated fund managers. How is it that hedge fund
+managers themselves seem to do extremely well and yet we
+have a lot of competition? We're trying to understand these joint dynamics and what
+we're suggesting is that that picture ignores
+that a major aspect of compensation and the hedge
+fund industry actually comes from the capacity of
+managers to invest on private capital and
+their funds manage these differently from the funds
+that they're opening to outside investors and we think this is an
+important fact to understand for asset management
+generally. Thank you. 

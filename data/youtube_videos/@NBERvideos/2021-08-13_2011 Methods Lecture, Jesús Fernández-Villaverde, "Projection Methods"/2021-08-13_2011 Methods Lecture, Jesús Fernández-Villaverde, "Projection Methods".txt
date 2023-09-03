@@ -1,0 +1,710 @@
+Jesús Fernández-Villaverde:
+Let me say a few words about the projection methods. The idea, remember from
+yesterday's introduction is that we are still
+looking for or functional equation h where the
+unknown is the function d, the stock of all the decision rules and all the functions in the model is going to be
+equal to a functional 0. Basically, what projection
+methods do is they say, well, we are going to approximate the unknown decision rules by a linear combination of some basis functions
+given some coefficients. The rule of the game
+is going to be to pick a good basis to determine how to project the
+unknown decision rule into that basis and that's why these things
+are called projection. Now, the absolutely
+beautiful thing about projection methods is that they can be
+anything you want; it can be a decision
+rule for the agents, but it can be a value function. The same way that you can use perturbation methods to
+solve value functions, you can also use projection methods to
+solve for value functions. All the arguments like maybe the value function
+is better behaved at equilibrium condition
+will also go through here or expectations. This is actually something
+very cute because sometimes the conditional expectation is a much smoother object that
+the value function directly. Imagine that I go out there and I try to find a job so I can either
+get a job or not get a job. The value function, if I
+get a job will be here, the value function if I don't get the job will be over here, so you have a
+discontinuity over there. But if I'm thinking about
+my choice with respect to tomorrow and I'm
+integrating over the probabilities of getting
+or not getting a job, the expectation may
+be perfectly smooth. There may be cases
+where you want to approximate it's an expectation. In general, we
+would like to have the same number of coefficients Theta than basis functions. You could do things
+that are different from linear combinations, but those are odd. Again, we could do
+non-linear combinations, I know that in
+engineering these days, they are really studying a lot non-linear combinations and they seem to be making progress. I think that we, as economists, we are
+not quite there yet. Although I just filled in our grant proposal
+with a couple of crazy engineers from Illinois, Urbana-Champaign, who promise me that they are going to teach
+me everything I need to know about modern dynamic
+programming so maybe in a couple of years
+I will tell you otherwise, so far, I don't know. Anyway. Basic algorithm is going to be very, very simple. As I was saying before, you pick your basis functions, the basis functions are going to go from
+the status space, so different values of
+this can take into Rm, m is the number of decision
+rules that you are picking, and we're going to
+have n of those. We are going to have this
+vector of parameters Theta, and what I was saying before, we are going to define this
+approximation of order n, where n remember is the number
+of basis functions we are picking is as the
+linear combination of these basis functions. What we do is we plug
+in this approximation, this parameterize approximation
+into the operator h, into the equilibrium
+conditions or into the value function or into whatever set up your problem is giving you and that will give
+us our residual equation. Remember before h is equal
+to the function of 0, but when we don't evaluate at D, but at the end, it will
+not be equal to 0. Maybe if we're lucky,
+but in general, it will not be equal to 0 so we are going to
+have a residual. The argument is
+going to be, well, find the value of these
+parameters Theta, that make the
+residual as close to 0 given some objective function. There are basically here two dimensions that you can pick; One dimension is which basis
+functions we want to pick, the second dimension is which metric you want to select to minimize
+your residual. Now, of course, people
+need to publish papers. There are dozens
+of proposals for basis functions and dozens of proposals for metrics you
+have dozens times dozens, that means a lot of
+different methods. I'm going to concentrate
+on the ones that are more useful or that have been found
+over time to work better. For those of you who have some inclination
+towards econometrics, this is going to look a lot like ordinary least square because ordinary least square
+is a projection. Some of you may have
+even had a class in econometrics where they tell you that you are projecting, but another way to
+think about this is this is my
+object of interest, the conditional
+expectation of y on x. I don't know what
+this thing is so let me approximate it as the
+linear combination of monomials on x. The way I'm going to select
+this ones is to minimize the distance between
+the observed y's and the observed x while
+the square of them. What is the unknown object? Now, what is
+nonfunctional equation? The conditional expectation, remember conditional
+expectations are functions. What is my basis? The monomials in x. What is the criteria I'm I
+going to use this square? I'm going to minimize the
+square of the residuals. All fashion OLS is
+just projection. There is actually a
+really super cool [inaudible] on
+something called semi non-parametric methods or semi I'll never know if
+it's one or the other which is
+basically the idea that parts of the model are going
+to be fully parametric, but other parts of the model are going to be fully
+non-parametric. We're going to approximate these non-parametric part
+as basically we are going to pick a bunch of basis functions and we are going to project
+them in the right way. Chen Hongsheng at NYU has, is the leader in
+that literature. These type of things
+that are called safes because they look like a safe. Anyway, I don't want
+to get into that. She has a very nice
+handbook chapter in the Handbook of Econometrics
+about these things. If any of you is interested, these things are super cool. Also, there are two methods
+that people use out there in the literature
+in economics that you may have seen; One is called policy
+iteration and the other one is called
+parameterize expectations, you can show that both of them are particular cases
+of projection, or some particular
+are basis functions and some particular are metric. In that sense, the good thing about thinking
+about this as projection in general terms is that
+is of course much easier for us to understand
+the general structure and to work through theorems
+and things like that that may be hidden in very particular applications
+and in the details. After all, that's why
+functional analysis was invented to abstract
+from irrelevant details. There are basically
+two ways in which you can pick a basis; You can go to our global basis, which is basically a basis
+that is defined all over the space or a local basis, which is a basis that is defined only in a
+very small subset. The first type of global basis, they are also called
+spectral methods, no idea why, but phase
+sounds really cool. Local basis, they are also called finite element methods. Then of course,
+how do we project? There are many, many
+spectral basis. The great advantage that
+they have is simplicity. You don't need to worry too much about coronary or
+something like that, being sure that the
+different pieces of the approximation get
+together, glue together. The problem they have
+is that they have a very difficult time in
+capturing local behavior. Imagine this is related with the Gibbs phenomenon
+that some of you may know from Fourier analysis. Imagine that this is
+your decision rule forever and the reason it
+has a bump over there. Global methods really try to
+approximate this globally, so they are going to have
+a really hard problem handling a very small
+local irregularity. The reason why I was
+relating this with Fourier analysis is
+in Fourier analysis, you are basically
+using sines and cosines to approximate
+regular functions. Imagine this is a function you can approximate a step function. The problem is that doing
+this with sine and cosines, when you get to this point, you are going to
+overshoot like this. Even if you go to
+extremely high levels of approximation where this is
+going to be nearly flat, right at this point
+where there is this local change of behavior, you're going to have
+these big overshoots. This is called the Gibbs
+phenomenon because Gibbs was the first
+person to point it out. Well, something like that is what is going to
+happen over here. If you have for whatever the
+reason, some local behavior, the global method
+is going to have a hard time capturing it. On the other hand, if it is a smooth and nice policy
+function like the one generated by the
+neoclassical growth model or by your favorite
+new Keynesian model, then this spectral methods
+are going to do a great job. There are many, many basis. I'm not going to go over them
+in the interest of time. Just let me, kick out from your mind the
+idea of using monomials. Very bad idea. The main reason, while I talk over there, I say a lot of many long words. X to the power of 10 and
+x to the power of 11, plotted in your computer, they look exactly the same. This is multicollinearity,
+not a sock multicollinearity, but
+narrowly multicollinearity. Monomials, bad idea,
+don't use monomials. Cosines and sines common, we are not in regular. Okay. The most general type of polynomials
+that you'd like to use are where
+sometimes are called the Jacobi polynomials
+or the Jacobi type. The reason why they are great is because they are orthogonal. The reason, so think about
+when we're doing regression, what is the way to
+get the maximum bang for the buck in our
+regression if for two regressors are
+really very uncorrelated because that really gives
+us a lot of information. Well, what more uncorrelatedness,
+that orthogonality. As I always tell people, or false, means a straight
+orthogonal this angle. Something like that cannot
+get much more different. Now, the key thing about
+the Jacobi polynomials, that they have this general
+formula is that they are, if you go to the math
+department or your university, you will find dozens and dozens of textbooks written about them. There's really a lot that
+is known about them. In particular, for the
+case where we have this Alpha-Beta equal to 0 in this implicit definition of
+the orthogonality condition, we have one particular
+version of them, what are called
+Chebyshev polynomials. Chebyshev polynomial
+are a particular type of the orthogonal Jacobi type. I will come back to this
+in just one second. I don't have that
+formula over here. Let me skip this. For the next few minutes, I'm going to fully concentrate then on Chebyshev polynomials. Very, very nice, two very, very nice books. Chebyshev and Fourier
+Spectral Methods by John Boyd and a practical guide to
+pseudospectral methods. You will see that, say the spectral methods are a subset of a spectral method. Two very nice textbooks,
+very easy to understand. Chebyshev polynomials are
+great because of many reasons. We already argued that
+they are orthogonal, but we have many single
+close form expressions. We know a lot about them. They are very robust when
+we interpolate them. They are bounded between minus
+1 and 1. They are smooth. We know very well how to switch between the
+coefficients of a Chebyshev expansion and the values of the function
+implied by those. We can do a lot of
+move between things. How are they defined?
+We have it over here. Let me show you,
+maybe the easiest way is to see the
+recursive formulation, and then a few polynomials. The first Chebyshev
+polynomial is 1. Is the constant. While the
+pseudo Chebyshev polynomial. The first Chebyshev
+polynomial is x. The polynomial n plus 1 is 2x to the Tn
+minus Tn minus 1. You see why this is recursive? Because I just specify the
+first two and after that, it's just a combination
+of the previous two. What you will have is 1x, 2x squared minus 1, 4x cubed minus 3x and
+so on and so forth. Let me show you a few
+of those polynomials. We will start to see a lot of very interesting properties. While the first one is just a constant defined
+between minus 1 and 1. That's great. Other one is just a
+straight line between minus 1 and 1
+polynomial of order 2, polynomial of order 3, polynomial of order 4, polynomial of order 5, and so on and so forth. Things that you will note, how many times does the
+polynomial of order 1 cross 0? One. Well, and the
+polynomial of order 0, 0. How many times order 2? Two. How many times 3? Three. Four? Four. Five?
+Five. That's great. I'm a bit surprised though
+by the way we find it. But something that perhaps is more interesting
+is look at this. We have 2 crosses over here, 2 crosses over here, but only one in the middle. As we go high in the
+order of the polynomial, the crosses at the 0
+tend to accumulate, tend to cluster at
+a quadratic rate at the borders of this minus 1,1. Which looks like a bad thing, because you say, hey, I
+really care about the middle. But it's actually great. Because in some sense later on, we will argue that when you are doing this global
+approximations, what you want to do
+is get the frontiers right and then the middle
+will take care of itself. The fact that the zeros of the Chebyshev polynomial
+cluster asymptotically towards minus 1 and 1 is a great property of
+Chebyshev polynomials. In fact, the Chebyshev, the surface area is given
+by that simple expression. Again the great thing
+about having these very, very simple expressions
+is that doing all this in MATLAB is going to be
+really very simple. Well, not that simple,
+but, well at least simple. You also have an
+explicit definition. You actually have five
+different explicit definitions. I'm not going to go over
+all of those, but anyway. Okay. Chebyshev
+interpolation theorem, this is really
+super cool result. Imagine that we are
+approximating the function, exactly at the roots
+of the polynomial, at the zeros of the polynomial. Imagine that we are
+doing a projection with a fourth order
+Chebyshev polynomial. We get the function
+to be exactly 0 at those four roots
+of the polynomial. Then we do the same with 5, and then we do the same with 6 and 7 and so on and so forth. What the Chebyshev
+interpolation theorem tells you is that as the number of
+these roots goes to infinity, you are approximating
+the function arbitrarily well in
+the whole domain. That's what I was trying
+to tell you before. If you are able to get the Chebyshev polynomials to
+do a good job at the roots, the rest of the function
+will take care of itself. You don't need to
+worry about that. That's going to
+motivate actually one of the ways we
+are going to project. What stands about this? Yes. I'm not quite sure, for sure is L2. Soup, is the soup
+norm as well? Okay. Yeah. MALE_1: You prove
+that [inaudible]. Jesús Fernández-Villaverde:
+Into the corners that actually goes fine. Yeah. I wasn't sure if the supernode will work
+or not. I knew for sure. In L2 it's trivial to show, but in supine, remember. Now something I
+haven't really said, and because of time constraints, I will not able to say much, is about all these subnets of polynomials are
+defining one dimension. But the real problem is that the live we are going to have a state spaces with
+many dimensions. We're really running
+out of paper but I will see if I can
+get a little bit more during the break. One possibility would
+be to say, well, let me define a polynomial in k, z as the Chebyshev in k
+and the Chebyshev in z. But this is going
+to have a problem. Imagine that I want to get a
+fourth order on this thing. I will have first-order in k, first-order in z, second-order in k, first-order in z, 3 1, 4 1. But then I will have 1 2, 2 2, 3 2, 4 2, and so on and so forth. I will have 16. Something that was
+relatively easy, which is 204, becomes a little bit harder, it's two dimensions
+because it's 16. Mind that we have
+three dimensions. We will have 64. Mind we have one more dimension. It will be what, 256. As soon as you have 5, 6 dimensions, is just going
+to be impossible to handle. This is as the course
+of dimensionality. It's a pain because, if you
+want to solve our model, as I was saying before with, I don't know, 20 state variables it's going to
+make your life really hard. What can you do? Basically, there's one thing you can do beyond getting a
+bigger computer, which is to say, probably if I already
+have 2 2 and 4 2, 3 2 is not going
+to be that useful. One thing for example, I can
+do is to eliminate a lot of these cross terms that are not adding that
+much new information. There is a whole literature about how to do
+this efficiently. Because of time constraints, I'm not going to be able to talk about the best way I know of, which is to use something
+that is called a Smolyak. Let me see. The
+Smolyak algorithm which is explained over there, but it's much better
+explain that in my notes in a paper by Felix Kuebler and Dirk Krueger in the Journal of Economic Dynamics and
+Control is just basically a way to keep out of these
+16 possible combinations, only a very few of them. I even have a table
+over here where if you follow the rules of a
+Smolyak interpolation, imagine that you
+had, for example, 12 state variables and you want it to do a fifth
+order approximation. This will be how many
+polynomials you will need? If you were keeping everything, while if you do Smolyak
+you will only need 315. You can see this is six orders
+of magnitude this model. Today I'm going to keep talking about
+unidimensional problems. Because at the end of the day, the math and the
+intuition is the same that the multi-dimensional, the only thing about
+multidimensional problems is what do you do to reduce the
+course of dimensionality? In the case of productivity for the basic RPC where you only have capital and productivity, it's actually relatively
+simple because what you can do is you can use
+tokens procedure, which is just a
+way to discretize the productivity
+shock in maybe high, low, middle or really high, high, middle, low
+and really low. Then what you do is
+literally you solve the Chebyshev
+polynomial for each of the five possible
+combinations of productivity. It's much easier to handle. But this is a little bit
+what we do over there. Now, this is the
+way that John Boyd, the guy I showed you before,
+finishes his textbook. The first of his moral
+principles are when in doubt, use Chebyshev
+polynomials unless, the solution is
+spatially periodic. Since that doesn't
+happen in economics, we may forget all the
+rest of the sentence. Unless you are sure
+another set of basis function is better,
+use Chebyshev polynomials. The third is, unless
+you are really sure another set of basis
+function is better, use Chebyshev polynomials. Very well behaved. I showed you already some
+Mueller equations errors before that they deliver
+very great performance, very stable numerically, a
+lot of very nice properties. Really the main problem in
+practical implementation is when you have high
+level of state, many dimensions, how you eliminate some of
+the cross-terms. Smolyak algorithm gives
+you a nice way to do it. I just finished a paper with Pavlov [inaudible] at the Philadelphia Fed
+and one Rubio a Duke, where we solve for
+Keynesian model using Chebyshev polynomials, and I think we have
+12 dimensions and we use Smolyak and we are
+able to compute that. Yes, we want to
+solve it globally. There is a reason
+we want to do that. Then let me very briefly
+talk about finite elements. Finite elements is
+one of these things that when they first came about, a lot of people
+got very excited, but I think that
+will have slowed down a little bit to them. I think that people now
+seem to be less into them. And basically the
+argument is that instead of defining the function over the whole state space, we are just going to define it over a small portion of it. Imagine that capital can
+go between zero to capital R. What I'm going to do is that one of my basis functions is
+going to be like this. It's going to be zero
+nearly everywhere except in this place. Then my second basis function
+is going to be like this. Zero over here and then zero
+and so on and so forth. In any given chunk of the space, there are only
+going to be two of these functions that
+are going to be different from zero. Then it's going to be
+assigned the same as before or approximation
+is thus going to be the linear combination
+of all these things. This will be V1, V2, V3 which ensures that the whole thing is
+continuous and well behave. What is the great
+thing about this? Is going to be great at
+handling very local properties. Because remember the example before where I have this
+small bump over here? Finite elements only will
+need to move a little bit, V3, 5_3 to try to
+get that right. Doesn't need to worry about
+what is happening over here. What is the problem
+of global basis? I want to capture this
+thing since I have the Chebyshev polynomials to change a little bit the
+behavior over here, I need to change everything
+at the same time. But finite elements can only pick in a very small subset. That's why in natural
+sciences and in engineering, they use finite elements a lot. The best example, my dad is an aerospace
+engineer so I always feel obliged to make some
+example from engineering. Designing the wing of a plane is the most
+complicated part of the whole process and the reason is because the turbulences
+are very different. You just move a
+few centimeters to one direction or the other
+they are very different. You read finite element methods
+to have a whole model of the differential
+equation over there and capture these various
+small local behavior. Otherwise, the
+plane will fall and it will not be pretty. It's not good for business. Believe it or not, when I
+was a graduate student, I have a very good friend
+at 3M in Minnesota. She was the boss
+of the group doing finite element
+analysis for diapers. Because diapers
+are designed using finite elements to be
+absolutely sure that they maximize absorption level which also has a lot of
+local properties. Really important
+things in life like planes and diapers are
+designed with finite elements. In macro, Ellen
+MacArthur has a paper, I had a paper using
+finite elements, I haven't seen that
+many people picking on them and I think that
+the reason and this is just my personal view is that remember some of the earlier equation errors
+I showed you before, you don't get such
+an amazing result in comparison with the
+pain that it represents to call this thing unless is a
+problem where you really have a complicated boundary and finite elements will help
+you to handle it very well. Let me show you what
+I mean by that. Imagine that one great
+thing about finite elements is imagine that the set of acceptable estate values
+has something like this. For whatever the
+reason, I don't know, this is not feasible
+because it will violate some
+incentive constraint. Type of problems like this show up with incentive constraints. Well, by the way,
+finite elements, this will be like pieces in a linear thing but when you
+are doing in two dimensions, it will be like tiles. That's the reason
+why this is called finite element
+because you define an element which is finite. If you are doing that
+in two dimensions, you can do a very
+small finite elements over here to capture well the behave close to
+this funky frontier. Then over here, you
+can just define many big elements
+without too much worry. The good thing is that there is nothing in finite elements that tells me that the elements need to be symmetric
+or the same size. In fabric, can be
+very different. That's the type of things
+why this works so well in physics and in
+engineering problems. Because they will do a
+very good approximation here where they really need it and they will care less about what is
+going on over here. Now, doing these type of things, I think in economics
+is difficult, we don't know that
+much about it so that's why I think it
+has some really pick up. But it's something that
+is good to keep in mind if people want to
+use it in the future. Let me not say much about it. Yes, but let me say something about one great thing about finite elements is very easy
+to do refinements with them. What I mean by that
+is that once you have an approximation to do your solution with
+let's say 50 elements, you can say, let me use this as an initial guess for an
+approximation with 60 elements. What you can do is be
+smart about where you sub-divide some of
+the existing elements in a smaller ones. There is a lot of information in the earlier equation error about where you want to do it. For example, there
+is something called the h refinement
+which is to subdivide each element into smaller
+elements to improve resolution uniformly so you just make
+everything smaller. Our refinement that is to identify areas with
+high non-linearities and just refine over there or p-refinement which is just
+to introduce more basis. If you follow the literature
+and finite element, there is long discussions about when you want to
+do each of the two of the three and how
+to combine them efficiently, and so
+on and so forth. Again, this is really an
+introduction to the material, if I had more time, I could
+explain more about it. Let me recap for a second. What we did so far
+was to argue, look, we have these projection
+methods and we can either pick Chebyshev
+polynomials as a global basis or we can
+pick finite elements, sub-divide our
+preliminary small pieces, and pick these linear functions. By the way, that's
+the reason why, especially if you
+go to a little bit older books from the
+50s and the 60s, instead of projection,
+they will call this minimum weighted
+residual method. Because you are
+going to take this weighted residual
+and minimize it. In fact, that was the
+way it was known at the beginning as this was
+developed during the 1930s. The idea basically is we are going to define
+a weight function and what is going to happen. We have this residual that
+remember, is a function, we are going to weight
+it and we want to make that integral
+of the residual with respect to the weight
+equal to 0 and that will give us zero or one otherwise. This basically means the way I'm going to select
+my parameters, sorry, that was not a
+very good explanation. What this just means
+is I want to select the parameters Theta
+in my approximation such that the integral of
+the residual function given my weight function
+is equal to 0 for each of the N weight functions
+I'm going to select. Remember, I have N
+parameters to determine. We have N basis functions
+so now what I need to do is pick N weight functions. You see? Then,
+while in practice, this is just equal to solving
+this system of equations, you're going to have the
+residual function evaluated at Theta and then the integral with respect
+to the weight function, you are going to have N
+of those so you are going to have n of those equations. Solving that system of n
+equations will give you the N Thetas and you will
+have your approximation. Which of the Arctic
+functions we can pick? Well, one is what is
+known as the least squared which is the AST. The derivative of the
+residual function with respect to Theta, this will be the condition and the reason why this is
+called least square is because this equation is as the first-order condition
+of this minimization of the quadratic receiver which is the ordinary least
+squares from econometrics. This is Aboriginal problem. Well, that's not that
+interested in this situation, doesn't work that
+well numerically. But when you have many estates and you have many coefficients, it's a difficult
+problem to handle, you need to compute
+this integral, you need to take
+this derivative. How you take the
+derivative of a function, you don't even know exactly,
+solely on evaluation. A lot of problems. Let me skip sub-domain, let me skip moments. This IS things. This is much more interesting.
+This is co-location. In co-location, what you
+are going to say is, let me pick the simplest
+possible weight function that I can imagine
+which is a bit dark, is going to be one in some point and zero
+everywhere else. The system that we had before, instead of being this very complicated integral with this
+weight function is simply to peak endpoints and then to solve the
+residual function in all these endpoints. Is a system of n
+equations and n unknowns, doesn't even have an
+integral, so much easier. Well, happens to be the case that there is a very
+smart way to select this co-location points
+which is the zeros of the Chebyshev polynomial
+and this is what sometimes. But I have a little bit more of a general discussion
+but is not needed now. This is what is sometimes called orthogonal co-location
+or pseudo-spectral. In some sense is absolutely
+a straight forward. If you are doing, for example, an approximation
+up to fifth order, you will just find
+the five zeros of the Chebyshev
+polynomial for the five, you will evaluate the
+residual function in those five points and you will just solve that
+system of equations. It's very simple. Let's look at how this
+works in real life. No, I will come to Galerkin
+in just one second. Don't worry. Now, let me show you some MATLAB. Now we need to
+change a little bit. I have some code to solve a whole RBC but as I was looking at
+it the other way I figured out it was a
+little bit complicated, has many things for what I
+want to teach you today. Let's imagine that we have the simplest possible
+functional equation over there. This will get all the points
+across with much less pain. Which is d prime of x
+plus d of x equal to 0. We need to find what d of x is because it's just going to be the exponential notably
+surprise over there. But anyway, we're going to
+do it between 0 and 6 and the boundary condition
+is going to be the d evaluated at
+zero is equal to one. Let's look at the
+structure of this code. First, let's do some
+basic housekeeping. We clear the memory, we close all the windows thick. The express on TikTok is
+just to measure time. Very important point. Since we need to solve
+a system of equations, you need to fit some
+initial values for the numerical solver
+to find the solution. Unfortunately, this requires
+certain amount of care. In the sense that
+if you don't give good initial values is
+not going to converge. I will talk in a second about iterative methods to
+minimize that problem, but stay with me for a second. What I'm going to guess, I'm going to the
+an approximation for the three over
+here, I think. I am going to an
+approximation for the three means that I
+have four polynomial 0, 1, 2, and 3 so I need four initial guesses,
+0.40000 and 0.1. Fine, they happen to work. Then a is equal to
+0, b is equal to 6. These are just going
+to be the boundaries. How do we solve this? Well,
+the first thing I need to do is I want to know what
+my co-location points are. I have a function called
+points over here. This is a very simple
+function that you pass A and B as the frontiers of your Chebyshev polynomial and n is the number of
+co-location points you want. It's going to compute the zeros. This is the factorial
+computation, notice that. Y is going to give me the zeros of the
+Chebyshev polynomial. The second line, the
+only thing is doing is, it is [inaudible] scaling
+it in the sense that Chebyshev polynomials are
+between minus 1 and 1. But this problem is
+defined between 0 and 6. Well, I just do an
+affine transformation. This thing again, inputs A and B and n. A and B
+are the frontiers, n is the order of the
+Chebyshev polynomials. What I did over here, I'm going to do for so
+I just ask A and B. This area has options
+for the optimization and what I have is that fsolve, fsolve is a function
+in MATLAB that solves systems of nonlinear
+equations numerically. What I'm telling it is to
+search for it in nonlinear. That's where my function
+is going to be defined. Now, note that in
+the way I quote, I really like to have all these modular
+functions which are very easy to substitute for
+different applications. The reason I like to do that, is because these modular
+structures will be very useful later on when you work and do more research on that area to be able to recycle a lot of
+your previous code. You really want to recycle code, you don't want to start from
+scratch every single time. Let's look at non-linear. Non-linear, I pass
+Theta is the argument, X is going to be
+where we evaluate it. A and B are the frontiers, is just a call to residual. We jump to residual. Residual is the following. Well, I need to take the derivative of d of this approximation
+that we are doing it. I don't want to
+take derivatives, I may make a mistake so I'm
+going to take advantage of MATLAB being a smart enough to take symbolic
+derivatives for me, while you need to have the
+symbolic mathematics toolbox. Most university systems
+have it anyway, seems SV just defines V
+as a symbolic variable, not as a numerical variable. Def, self approx is just the derivative of the
+function Chebyshev approx, which I'm going to introduce in just one second
+with respect to V, which is this
+argument over here. Then I take Y, I will go to Chebyshev
+approx in one second, I go to Y. Sups is just a function that
+transforms this from symbolic into numerical. I'm sure that I make it a double so it's double precision. Then what is y? Y is the derivative that I just computed plus the Chebyshev
+approximation because my differential
+equation is d' plus d. What is Chebyshev approx. Chebyshev approx is just
+the Chebyshev polynomial, which is just defining the
+function Chebyshev over here. This is just the definition of the Chebyshev
+polynomial and Theta, which is the vector, and this is the vector multiplication
+so this is the sum of the
+linear combination. It's a bunch of functions. But essentially, once you
+think about it is very easy. In test I called
+residual nonlinear, nonlinear calls residual, residual calls
+Chebyshev approximation and I build my d' plus d. If instead of doing this very
+simple differential equation, you are solving another, we
+see this will be different. This will be the part of
+the code that will change. Because over here you will
+have your overall equation. You can see how I
+will be able to carry forward most of the
+code that I already did. I just didn't want to
+spend a lot of time going over numerical
+equation over there. Then if we go back to test, the only thing I'm
+going to go over that is just plot results, it's not even that interesting. Let me run this folder. What I'm plotting
+you over there is the blue line is
+the exact solution, the exponential function
+that I was telling you before and this green line is the fourth order
+approximation fed over there really
+that we computed before. This seems to work really well. Well, you can say maybe
+not as well over there, we still have a little bit
+of a non-trivial difference. Well, something I can do is I will explain you what I have in Test 3 in
+just one second. This didn't work so well. Let me see if I have another
+figure at some place. Why is this? One second, or maybe Test 2. Now, this was the right one. What you can see over there, there are three lines. The blue one is the exact one, the green one is with four, the red one is with six and now you see
+that we are nailing it down. We're just on top. What
+did I do in Test 2? How I do this much better? Well, I use this
+iterative procedure I was telling you before. First of all, I solve
+the problem with four. Then I take my
+solution with four, is going to be the initial guess with a solution with six. Well, the first four anyway, and then I'm just going to put a little bit different
+from zero just to make it a nice example. But I could put
+here zero and zero. That's actually the way I always solve Chebyshev
+polynomial problems. I first solve the problem
+with maybe three polynomials, I get the solution, I use this as the initial
+guess plus 0 for 4. I get these for 4 and
+so on and so forth. The good thing is if you design the code in
+the way I did it, which is just all these
+different modules and all these
+different functions, you can do this in a loop. Really the only thing
+you are doing is putting a loop and you will go to very high levels of polynomials
+in just one second. Yes. MALE_2: [inaudible]. Jesús Fernández-Villaverde:
+When I get bored, no seriously. Again, this depends
+a little bit of how much accuracy you want given the characteristics
+of your problem and the speed considerations
+that you have. I don't think there
+is an ex-ante criteria that is the best. You can always compute a
+linear equation errors in each step and see if they
+are good enough or not. But again, remember the point I was trying to mention before, accuracy is really something
+that is context-dependent. Linearization is usually good enough for computing business
+cycle in statistics, but it's usually not good
+enough to compute welfare. It depends on what you want
+to use this model for. Yes. In fact, what we do with the Chebyshev polynomials, this is a little bit
+more fancy stuff. We don't really solve
+for the Euler equation, we solve for the inverse of the Euler equation where
+we have already undo the marginal utility
+because that problem is much more linear and that everything will
+work much nicer. Chebyshev polynomials
+at the end of the day, so I will say that in real
+life they have two problems. The first one is that if you really have many dimensions, it's a little bit of
+a pain to code them because you need
+to keep track of all these many, many dimensions. The second problem is you need to come up with
+good initial guesses, so our combination of this
+iterative approach plus a smart transformation of
+the utility function or the Euler equation will get you out of trouble
+in most cases. MALE_3: [inaudible] Jesús Fernández-Villaverde:
+Okay. I found that for a lot of
+the things I use, fsurf is good enough. MATLAB actually tends to
+be a very serious company, they are really very thorough. My suspicion is that
+you are going to have a hard time finding
+something better on fsurf. For example, MATLAB, the guy who founded it was
+a professor here at MIT and they are always on the frontier on things like number, random
+number generation. They take these things
+very seriously. Maybe you can find something
+better, but by default, I think that's some
+of the MATLAB code will work very, very well. Another thing is solving this nonlinear
+systems of equations is as much of an
+art as a science. At the end of the day, there is nothing like
+tender love and care in front of the screen
+of the computer at Saturday nights
+at 2:00 at night. What did I do in Test
+3 to show you this? On Test 3 is a [inaudible] the same exercise that I think Larry did yesterday where, again, blue one is exactly one, green one is four with co-location with
+orthogonal co-location, and the red one is four
+with uniform grid. You can see yet in
+another example how this works much worse. Let me recap then, what you really need to do
+for Chebyshev polynomials. Basically what you
+will need to do is, you write the equilibrium
+conditions of your model. Whatever you have
+the decision rules, you'll substitute them by these linear combinations
+of basis functions, which are just the
+linear combinations of Chebyshev polynomials that will build the residual function. My suggestion is by default, always use orthogonal
+co-location. Which just means you need to solve that residual function exactly at the zeros of
+the Chebyshev polynomial. It's not that difficult, it's not as easy
+as perturbation. I also need to be honest, but it's not that difficult. I think that
+sometimes people get scared when they hear
+Chebyshev polynomials. Let me go back to the text and just finish a couple more ideas. Another method of selecting basis function is
+called Galerkin, or sometimes Raleigh-Ritz, for the guys who came up with
+this idea back in the 30s. Basically what these
+guys suggest is that to use as basis function, sorry, as weight functions, the same basis functions that you use for the
+linear approximation. Extremely accurate
+and extremely robust. It works really, really well
+and there is some reasons, some mathematical reasons
+I'm not going to get into. If you are going to design a nuclear power plant or you are going
+to design a plane, you probably want
+to use Galerkin because the consequences of making a mistake
+are non-trivial. Now, for what we do in economics
+is probably not needed. Especially because you
+will need to solve this integral and solving
+this integral is a pain. There will be in fact
+really two integrals. The integral of the
+residual function already, because you will have things
+like expectations and stuff like that and then
+this outside integral. Also, as a rule of thumb,
+people have found, and this is only
+a rule of thumb, it's not any theorem
+or anything like that. That orthogonal
+co-location m plus 1, that's usually as
+well as Galerkin with n. If I do Galerkin with m, polynomials are
+orthogonal with 11, in 90 percent of the cases you are getting
+the same accuracy. Now, the problem is if you are designing a nuclear power plant, you [inaudible] five percent, but is not the case, so you really want to be sure
+that the thing works fine. But for what we do in economics since I
+don't think anything will vaporize if we don't
+get it exactly right, probably going to n plus 1 makes more sense and it's
+much easier and really, really much faster to compute. Questions about this? This is just a simple examples. Now, well, I talked already about how to improve errors or how to
+refine these things. I also have a fewer slides
+about finite elements. I'm not going to say
+much about those, because I really think
+that by default, Chebyshev polynomials
+is probably these days a better way to go. Let me see if I'm
+missing something else. MALE_4: [inaudible] Jesús Fernández-Villaverde:
+Yes. Which is this type of frontiers
+we were having. What we did in this paper
+about the zero lower bound was to solve, instead of solving for the earlier equation for the
+decision rules directly, what we use was to parametrize
+the expectation of the earlier equation tomorrow and that seemed to have
+worked quite fine for us. But yes, I guess that
+for finite elements you could also do some real hard work with it and see if you get
+the same solution. Let me stop here. I'm
+finishing five minutes early, so let's reconvene five
+minutes earlier as well because probably for
+heterogeneous agent models, I have a lot of
+material to cover. But I think by now you
+should at least have a basic understanding
+of how to approach perturbation problems and how to approach projection problems. One remember is about Taylor
+expansions, is about local, it's about taking derivatives, the other one is about
+building residuals. Advantage and
+disadvantage of both of them and just as a
+brief final thought, in this section, you
+really want to think about those as
+menus, it's a menu. Sometimes you feel like drinking wine and sometimes you
+feel like drinking beer. The fact that I'm drinking up some wine now doesn't
+imply I'm against beer. That's the same way
+you should think about perturbation
+versus projection or any type of linearization is really the thing that is best suitable for the problem
+you have at hand is not any rarely
+use thing that, you know, I did perturbation
+because I promised my grandmother in her dying
+bed or anything like that. 

@@ -1,0 +1,1104 @@
+Aviv Nevo: The plan
+for today's lecture is to really follow up on, in some ways with Arielle left off the last lecture yesterday, where he talked about
+computing our price indices. There he was talking about
+using hedonic methods, which are very closely linked
+to what we're doing here. There's a sense in which
+you could say, well, the hedonic equation or
+the pricing equation, the equilibrium
+equation coming out of demand and cost that the
+function of characteristics. What I'm going to
+talk about today is actually going back to the
+demand systems and says, suppose we're actually
+interested in very similar type of questions, but we're going to use estimated demand systems to
+try to do that. That's basically the goal. Now I should say, we've
+noticed yesterday that we tend to go quicker or faster than we thought
+the lectures that we plan for an hour
+and a half can take a little bit longer. This lecture actually,
+even when I planned it, I knew it was a
+little bit short. What I added actually
+this morning is actually I added a separate set of slides that I might or
+might not talk about going back to issues that we
+talked about instruments, a completely different topic. I think once I'm finished
+with these slides, we'll have to decide
+whether we're going to try to speed up the schedule, maybe leave more time
+for this afternoon or whether all fit those in. But just to give you a warning, if I do go to those, I didn't make the
+slides available yet, but I will make them later. A common use of empirical
+demand model is to compute them on welfare gains. I'll focus on the
+introduction of new goods just because
+that's going to be in the focus in IO, but you can think of doing this for a lot of other effects, a merger's regulation is a common theme that
+you might be an IO, you might want to actually
+compute a price index, again, just like what Arielle
+talked about last time. But the basic idea of all
+the things that we're going to talk about applies to
+all these other events. In this lecture, I'll really
+cover two main topics. First, we'll start to buy a paper by Jerry
+Hausman that actually looks at the valuation of new goods and estimating
+demand and product space. I think that will
+serve several things. First, it will set us up on this whole idea
+of looking welfare. But it also show us at
+least we have one set of numbers that are coming from a slightly different
+demands system than the one that
+we've talked about. We talked about demand
+and product space, but we didn't devote
+too much time to it. Here we'll see just
+one example of that. Then also it will
+serve as a comparison to the last paper that I
+talked about yesterday. Again, we can look at two
+different set of estimates for cereal and see
+how they compare. Then after I'm done with that, I'll talk about our
+consumer welfare and discrete choice models
+and how we do that. This is a paper by
+Jerry Hausman that was published in an Nber
+volume in 1996. What he proposes here is a method to compute
+the value for new goods under perfect
+and imperfect competition. What he's going to look at, is the value of a new brand. The background from this fits exactly into what Arielle
+talked about last time, it's really the
+Boston commission. Why does this keeps jumping? The Boston committee looked at the bias from CPI
+and said there's a significant bias due
+to omitted new goods. That's exactly what
+Arielle talked about. I think they put the
+value of the bias about 0.7 percent. I think that was the
+number that Arielle had on his slides. I think what Jerry tried to do in this paper is
+to actually show, yes, this is a problem,
+but it's actually a much bigger problem
+than what you thought. What he took is what
+some people might consider a trivial introduction, say Apple Cinnamon Cheerios. What are those, are basically just Cheerios that have
+been around forever with a little bit of
+Apple and cinnamon sugar flavor on top. When we think about innovations, we think about iPads,
+we think about iPhones, we think about CT scanners, we think about maybe minivans. These are big innovations. Come on, Apple
+Cinnamon Cheerios? But Jerry will actually show
+us that there's a lot of a consumer welfare generated from Apple Cinnamon Cheerios. I think in some ways
+surprising, and in some ways, once you think about it, maybe not at all surprising,
+but I don't know. We'll get back to that. The basic idea of what
+he's going to do is the following steps with
+at least that's vow, he presents that there's different ways you
+could look at it. He's going to estimate demand, he's going to use a particular demand system that we mentioned in passing and I'll go
+over the details of it. He's then going to
+compute what he calls the virtual price. The virtual price is the price
+that sets demand to zero. Through basically
+asking what price will basically make
+the demand go to zero? We'll treat that as if that
+the price pre-introduction. Then he says I'm
+going to use this price and then I'm
+going to plug it into whatever calculations
+you want to do. If you want to compute
+a price index, use the last spares index,
+we use whatever you want. I'm just going to put that in. This is the price of the product before
+it was introduced. That's what he means
+by a virtual pricing. He's going to do that both perfect and imperfect
+competition. The difference between
+the two is in one case, he basically holds
+all the other prices constant and that's the
+perfect competition. The imperfect
+competition says, well, all the other prices
+are going to respond, so I have to take that
+into account as well. I have to compute in some sense what would be the prices of other goods when this
+virtual price was in there. That's what he's going
+to try and do here. The data that he's going to use is similar to what
+we saw last time. It's going to be scanner
+data for RTE cereal, he's going to have it for
+seven cities over 137 weeks. A lot of what to do, he
+actually uses monthly rather than weekly analysis, but that's the data he has. It's a very similar
+data structure to my paper that we
+talked about yesterday. The one key issue here
+or two key issues that came up in some of the
+discussion that follows, one is the fact that this is
+much higher frequency data. That's going to be a little
+bit of an issue when we talk about the price variation and what we're actually
+going to get from it although I'm not going
+to do much with it. Then the other is
+the fact that he has no advertising data and that came up with
+some of the comments that followed on this paper. What's the model that he uses? He uses this multilevel
+demand model that we again
+mentioned in briefing. What he has here is he has
+three levels of demand. It's a little bit like this structure that we
+have in the nested logit, although it's actually an underlying different
+demands system. You basically say
+you're going to take all the different products and you say at the upper level, there is demand for overall
+category for cereal. Then below that, there's
+demand for segments. He's going to take
+all the cereals and separate them into three or
+four different segments. Then he's going to
+model the demand for each of these segments. Then within a segment, he's going to model the demand
+for each of the products. There'll be typically
+about five or six products within each segment. He solves the
+dimensionality problem, there are too many
+parameter problem that we talked
+about last time by basically setting
+these groupings. What he does is
+within each group, he's going to allow for a flexible demand system
+in product space. Let me try and unplug
+this thing here. He's going to have a
+flexible demand system within each of these
+groupings and then move up. Let me show you the details
+of how that's done because there's a few fine tuning. Let me start with
+the lowest level. This is demand for
+brands within a segment. What he's going to have here is a so-called almost
+ideal demand system. This was proposed in
+1980 by A Deaton and Muellbauer and 1980
+was pre-AIDS epidemic. You can imagine these days, I don't think we would
+have actually used that acronym for the almost
+ideal demand system. But basically what this
+demand system does is you regress the dollar
+share of expenditure on a particular brand and
+a particular market on basically the log of the
+prices of all the goods. You have here J_G are basically all the
+products within the segment. You can actually
+show, and that's what Deaton and Muellbauer show, this is actually a
+flexible demand system and can actually approximate to a second-order and
+utility function, at least that's the claim. One of the reasons people
+like it is the fact that it actually has a good
+aggregation property. You can actually start from
+individual level demand and shows that it
+aggregates well. This belongs to the gorman form, a family that Arielle
+talked about last time. The other thing that it has, the first term here in this YGT, these are the overall per
+capita segment expenditure and they are divided
+by a price index. If you just think of this as
+a classical demand system, we typically invent that in classical demand system
+have an income effect. That's like the
+income effect here, but it's really
+coming from the fact of how much was actually allocated to this segment. The basic idea to try to
+motivate what he's doing here, Jerry would allude to ideas
+of multistage budgeting. The idea is a consumer
+is sitting there and deciding how much I'm
+allocating to cereal. Then within cereal, how much am I allocating to each segment, and then within each segment, I'm going to make this
+choice within each brand. I'm not going to go through
+the full theory of that, but there are some
+theoretical restrictions that you need in order
+to justify that. For the most part, they're
+not going to be satisfied by the specifics here, although it seems like
+empirically it's not a big deal. If you made the
+changes needed to do that it seems like it
+wouldn't make a big deal. But in terms of the price
+index that he uses, you can use one of two things. You can either use, let me
+start with the second one, the exact price index. This is the one that's
+dictated by utilities. If you literally said, "Okay, this is the consumer's demand and there's an underlying
+utility that's behind it." You could see this is the utility consistent
+price index. Or you can use a much
+simpler version, which is the Stone price index. The advantage of the Stone as it then there's no
+parameters in it. Therefore, that problem stays the linear
+estimation problem. If you want to use the
+exact price index, you see it has the Gammas
+in there and those are the same Gammas
+that are up there. Now it introduces parameters
+in that price index, and makes the
+estimation non-linear. Obviously using the
+Stone price index is a lot simpler and it ends up, people have tried both and for the two or three
+examples that I've seen, it seems like it doesn't
+make a big difference so people usually use
+this price index. That's going to be
+at the level of the segment and he's going to have three different
+segments and he's going to estimate it flexibly
+within each segment. Then when he goes up as he
+goes up to middle level, which is demand for segments, and here what he has
+is he has to first construct a price,
+for each segment. Well, that's going
+to be this exact price index that
+we talked about. It's going to be what's
+the price of the segment that's going to be
+these terms here. Then they'll be
+the equivalent of the income effect and
+that's going to be how much you've allocated to that
+segment from the higher level. Here he is going to look at, it's going to be a log-log
+demand and principle. He could have also done an
+almost ideal demand system. Again, there's some issues
+theoretically lining this up, but I think it's easier to just think of this
+as saying, "Okay, we're not exactly lining up with the requirements of economic theory and
+multi-stage budgeting, but we're just going to
+try and do this flexibly." Then finally, this
+is the upper level. Again, a similar idea of the total quantity
+of cereal that you bought as a function of some price index that's
+that pi over there. Some exogenous, some
+demand shifters, and here you will actually
+have real income. That's basically
+these three levels. In terms of
+substitution patterns, what you'll get is
+there's going to be flexible substitution
+patterns within each segment. If you want now to have
+substitution between segments, you basically have to work
+through the middle level. If you have, let's say
+a brand like Cheerios, which is going to be
+in what, I think, he calls All Family Cereal. Then there's going to be
+another segment where there's kids, let's
+say Fruit Loops. You want to see the
+substitution between them, you have to basically
+work through the fact that as I change the
+price of Cheerios, there's going to be a
+little bit less demand for that whole segment. More demand for
+the kids segment, which will then change the
+demand for Fruit Loops. You're going to have to work
+through that loop and you can work through
+all those details. In terms of estimation, it's
+relatively straightforward. It's usually done, what I
+call from the bottom-up. Or you can do it
+all in one stage, depends again on how you want
+to have the price indices. In terms of IVs what he's
+going to really use is this idea of using prices in other cities that we
+talked about last time. Okay. Let me just show
+you some of the numbers. I'm not sure if you can see. Let me try to. MALE_1: [inaudible] Aviv Nevo: Sure. MALE_1: [inaudible] Aviv Nevo: Sorry,
+could you repeat? No. For the elasticity, you're going to look
+at the partial effect. You say, "Is that the
+new equilibrium?" You're holding all the
+other prices constant. Because that's what we do
+when you do substitution. You say, "I'm going to hold all the other prices constant, just change the
+price of Cheerios. I am going to let in principle all the other demands change, but not all the other prices.". MALE_1: [inaudible] Aviv Nevo: Yes.
+The demands, yes. You're basically saying,
+"What's the derivative of Fruit Loops with respect
+to the price of Cheerios." The way you compute it through that, it's
+also derivatives. You don't actually compute as
+the first-order condition. Let me show you, these
+are the estimates. Generally, if you have
+the notes from last week, or from yesterday, you could actually compare it
+to what we got from a discrete or what I got from
+the discrete choice model. But if you don't, you'll
+have to take my word for it, which is always a mistake, but you'd have to do it anyway. One thing is if you
+compare these numbers, the owned price elasticities
+are roughly comparable. I think these are maybe a little bit lower than what I got, but they're roughly
+in the same ballpark, which is the typical for what
+we get for these products, which is basically between minus two and minus three or
+minus three and a half. That's roughly the ballpark
+of what I was getting, and that's I think what
+he's getting here. The exact patterns might
+differ a little bit, but they're roughly
+in the same part. Where the main differences are, are in the cross-price
+elasticity. Generally, the cross-price, if you just look at the average absolute
+value of the cross, you'll actually tend to
+be a little bit higher. But the other thing that's
+always very striking here, and it's actually not unrelated is you'll actually
+see quite a few, and I'm searching,
+you'll actually see quite a few negative
+cross-price elasticities. Negative cross-price
+elasticities suggests that these
+are complements. For example, this one here, are Cheerios and Rice Krispies. If you say the price
+of Cheerios goes down, let's say, you're going to
+consume more Rice Krispies. Now this particular one is not statistically significant. You say, "Well,
+it's really zero." We have so many numbers, it's not surprising.
+They wouldn't be. But one interesting
+thing with these, and let me actually scroll to a particular one here and let me just see.
+Sorry, I need to. What I want is raisin bran. This is post raisin bran, and I want to see with the
+Kellogg Raisin Bran column. That's right here. That's this number right here. You see this actually is negative and statistically significant,
+actually quite high. Unlike the others where
+you could say, well, it's really what we got is zero, here you actually get a
+pretty strong negative. Right now you don't have
+to know a lot about cereal to say if you have a prior about any one of
+these parameters, it's probably that one. To say some people actually think these are
+homogeneous goods, should be perfect substitutes. Unless you actually eat raisin bran and
+then you say "No, one has more raisins
+than the other." Actually they do taste
+differently. I forget. One of them has
+more sugar than the other so people that like one, tend to actually not
+really like the other. But they're definitely
+not compliments. That's actually a common
+problem with these. To give you another actually
+cereal related example, but actually from a court case. There was a merger, Post bought the Nabisco cereal
+lines, somewhere mid '90s. The federal authorities let
+the merger goes through, but the state of New York
+decided to fight it in court. The court proceedings,
+as far as I know, I actually had nothing
+to do with it. But as far as I've heard
+were basically about an argument of the cross-price
+elasticity between Nabisco shredded wheat
+and Post Grape-Nuts, defined as a segment of cereals that kids
+would never eat. Would never touch even
+if you force them. That was that segment
+that people looked at, and it ended up that
+the states expert objecting the merger found a negative cross-price
+elasticity. If you literally simulated
+the effect of the merger, what you would get
+is that prices would decrease if you took
+your simulations seriously. It's hard to make a case against the merger where you're saying the merger would
+decrease the prices. They tried to wave their hands, they tried to get around that. It's a very common
+problem, I think, for people who've used this
+to say that you tend to find negative elasticities for
+exactly those products where you have a
+very strong prior, that they're very
+strong substitute. What's going on with this? Let me just go back
+to the equation here. Part of what's really going
+on here is the fact that, what will regress in some
+measure of quantity here it's expenditure on a
+bunch of prices. Now remember these prices, especially of close substitutes, are going to be moving
+together very closely. There's a lot of reasons why there could be
+moving together. They are the subject
+to common shock cost. They could be moving
+together because of that, they could be moving
+together because they're responding to
+common demand shocks, or just because of the way that they're competing
+with each other. All of these will
+tell you it's going to be very highly correlated. It's actually going to be
+very hard to separate the t's off the own effect and
+the cross price effect. In some sense that's what the instruments are supposed to be doing and maybe this is
+just another way of saying, there's potentially a failure of the instrument in
+actually getting at this. That's one potential concern. It should. Well, if it's just a pure failure
+of the instruments, then no, these instruments
+are not valid, and you could say if it's
+something I'm saying, there's some combination of an IV version of
+multicollinearity, then we think we could. All though I've always
+thought, never proved that. This might be completely wrong, or there's a pretty
+high chance that what I'm about to say is
+just completely wrong. But I've always
+wondered if there's actually some version of the same problems that we see in weak IVs where you think, okay, if you have a weak IV, that should show up in
+the standard errors, and we know that, actually, we have a lot of weak IVs the usual asymptotic
+approximation standard error is very poor. If you do alternative
+asymptotic approximations, yes, it will show up there, but the standard way we compute standard errors
+doesn't show that. I don't know if there's
+something like that here. I always thought there might be, but I've never actually
+looked at it more deeply. But you're absolutely right
+in the sense that what we'd expect of first
+priors is that there really is this fact
+of this IV version of multicollinearity than it really should
+be showing up in the standard errors,
+and it's not. I don't know what's going on, but this is not just one random, okay, I found the one
+number doesn't work. That's a pretty consistent
+pattern that you see, and if you talk
+to practitioners, this is often used, and I think Dennis could
+probably second me that in a lot of actual
+cases where this is used, it's actually the
+problem because that is exactly the one number
+you care about. In many cases is exactly the number that you
+don't feel you can rely on, and that's a problem. But putting that aside, that's in terms of
+the comparison. Putting that aside, now
+let's go to the welfare. Basically what Jerry found is actually under
+perfect competition, he approximated that
+Apple Cinnamon Cheerios added almost 80 million per year in the US in
+terms of consumer surplus. Once you have
+imperfect competition, you need to basically
+try to simulate the world without Apple
+Cinnamon Cheerios. What he did was assume
+a Nash Bertrand model, which is common in a
+lot of what we do. Right here, we ignore the
+effect of competition because he actually didn't really
+compute the new equilibrium. You can think of it as he did a first-order approximation to it, and the way he did it initially wasn't quite right
+and that was pointed out. Initially, he found that with competition was a little bit less about 67 million per year. He actually later
+corrected that number, and it was about something
+like 40 million. Then he extrapolates
+from this to the CPI, and he claimed the bias is much larger than
+what it was before. I'm not going to exactly how
+he does this extrapolation, but that's basically the
+bottom line of what he does. He claims that the bias
+is much larger than what the Boston committee
+found. Yes, Dennis? Dennis: [inaudible]. Aviv Nevo: Let me
+step back a second Dennis: [inaudible] Aviv Nevo: Let me
+step back a second. I'll take these separate. The first question is imposing restrictions of economic theory. Originally, didn't
+know about one of the advantages of this
+almost ideal demand system. It's actually very easy to impose restrictions
+like adding up restrictions or
+symmetry conditions because they're really all just on these parameters. I didn't actually go
+through the whole detail, but it's very easy to impose. Indeed, the original models of the original Deaton
+molar Bauer was not for these types of products, actually it was much
+more aggregated, so a product was
+housing and closing. You're right, that
+there was actually a large literature
+in the eighties. I was looking at this and for the most part they found that if you could not impose restrictions and then
+impose them and test, and when you did
+that, you found that the restrictions of economic
+theory were not met. I guess there are several
+ways of looking at it, consistent maybe if
+we look at some of the theme of what Arielle
+was talking about yesterday, you could say maybe what was rejected was necessarily
+economic theory, but the aggregation conditions required to get to this system. That's one interpretation. Another interpretation, which is also a different
+form of aggregation. There's aggregation
+across consumers, in the Gorman form that
+needs to go into them. There's also aggregation
+of cross-product that was especially
+prevalent there. Because if you're
+talking about housing, aggregating cross-product
+clothes or food, that's all. I think it's literature
+way before my time, but my reading of a
+lot of the literature is that people basically said, it shouldn't a surprise to us because really what's failing is the disaggregation
+of cross product, which is very different
+than what we have here. Because here now we're
+at the product level. Now again, a product here is
+Cheerios at a city level. We're still aggregating,
+obviously across individuals, but also across products
+in terms of there's different size
+boxes of Cheerios, different stores, right there Walmart
+actually not in this data, but you can think of having two different
+supermarkets that maybe have very different prices. Some on sales, some not on sale. There's all that going on here, but there's much
+less aggregation. I think this is
+just my impression. It tends to be, I think that
+imposing the restrictions, they fail less here,
+but you are right that they do fail quite often. I don't want to say it's like generally all you shouldn't impose
+it or you should. I think it really
+depends on the case and what exactly the product is. But I share your concern that if your results are driven by imposing
+the restrictions, then you have to feel of
+very very strong about the aggregation that underlying them and to really think, okay, I really think this is a
+structural demands system, from a representative
+agent because otherwise, you shouldn't impose
+restrictions. Dennis: [inaudible]. Aviv Nevo: Right. Let
+me actually take that a little bit further back
+and be a little bit clear. Let me put it into context here, and you'll
+see in a second. One of the things you might
+say is, oh, wow, great. Here we freed up the crossbars
+that we got negative, but we went to the BOP world or the discrete choice model and we didn't get any
+of these negatives. Therefore, they're superior. One has to be a little
+bit careful there because in some sense they're almost by assumption to get a negative cross-price
+elasticity there. In a logit model,
+okay, pure logit, heterogeneity, the only way you can get
+a negative crossbar, you basically can either
+get all these numbers of the right side or all the
+numbers of the wrong side, because they're all driven by one single coefficient,
+the price coefficient. That's not true in the
+random coefficients model now you have a distribution. It could be as long as part of the distribution is in
+positive or negative, you could get that some of these are positive not
+but it's very rare. I've never actually seen that
+happen in actual estimate, but it is coming partly because your assumption in posing, the conditions of
+economic theory, they're built into the model. It's not like arbitrary
+statistical assumption. It's going through the conditional of the
+model and saying, we have this margin utility of income and therefore
+in some sense, we don't have all these price
+statistically showing up. Ali, do you want
+to add something? Ali: [inaudible]. Aviv Nevo: I mean, the other
+two things to look at, and I try to highlight
+yesterday's, A, look at patterns
+of elasticity. We typically add it on cars. My intuition is that demand for more expensive cars is less
+price elastic than demands, so that you want
+to look at that. Sometimes I find much more useful than looking
+at the elasticities, is looking at the
+implied marginal cost because you won't actually
+see what are the patterns. A lot of times when you
+go to test these models, that's how we test them,
+we actually bring data. But even if you
+don't bring data, you have some
+patterns of saying, I think it's a lot
+more expensive. I'm quite sure that it's a
+lot more expensive to produce a Mercedes than it is
+to produce a Civic. Any estimate that would not give you that you
+probably shouldn't trust. Similarly, if you look
+across different products, you might want to say,
+well, I didn't show you, but let's compare what's the
+implied cost of producing, let's say, Cornflakes
+versus Frosted Flakes. Frosted Flakes, they
+should be a little bit higher just because
+of that extra sugar, but they shouldn't be
+completely different. Sometimes that's the
+better way I think of. I mean, formally, that's also
+how we test these models. But in there is
+not just a demand, it's also a supply model to get the cost as opposed to just
+looking at the elasticities. That was Haussmann's findings. There was a follow-up
+about 10 years ago. Just following that discussion, if you ever needed proof
+that economists are bored, you could have followed
+this discussion. In this volume, there was
+actually a discussion by Tim Bresnahan of the paper. Then there was some
+back-and-forth between Bresnahan and Haussmann
+about who said what, when and what
+appeared in writing, and who showed
+what and whatever. I mean, if you're bored or you have a high utility for these
+things or whatever, I think Tim present and still has the whole exchange
+because a lot of it was in writing
+back-and-forth. Still has the whole exchange. I think it's somewhere
+on his webpage, but again, if you're bored, you can look at
+it. If not, don't. But in terms of what
+the actual substance putting around all the
+theatrics around it, I think there was
+two kind of issues. First, I think that
+was intuitively, this goes back to the
+point I said earlier, people would have said, well, you think
+about innovation, you think about new products, you think of exactly the type of products that Ali
+talked about yesterday. You think about TVs, you
+think about computers. That's where the innovation is. Like Apple Cinnamon Cheerio's
+going, give me a break. But I think what Jerry is
+making a point here is saying, if we want to really take
+our model seriously, I mean, this introduction
+was a big deal. I mean, it got over a
+one percent market share in an industry that's
+very hard to break into. In a fairly mature industry. They were actually selling
+at a fairly high prices. This basically demand system
+just translates that. People say, well, $80 million a year sounds like a lot of money. But if you think about this
+is a $9 billion a year industry just in the US. I don't actually know if we
+really should be surprised, but I think underlying
+this objection was the fact that people just thought this just
+can't be right. But I think putting aside whether the specific
+numbers are right or not, I think there is something here. Like it or not,
+there's innovation. There's innovation because
+people are buying it. There's some consumer
+surplus generated by that. We have to take
+that into account. In terms of the analysis, there were two
+issues that came up. One has to do with instruments. Basically the point
+was that since there's no advertising data here and remember the requirement
+for these instruments to work is the fact that we need, we talked about it yesterday, we need the error terms to be independent across
+the different cities. But if there's
+national advertising, that will create a correlation. That was one of
+Bresnahan's point. But indeed actually once
+you put in advertising, it doesn't seem like it
+changes the numbers a bit. Then there was this issue
+of the computation of the Nash equilibrium and indeed the way that was initially done
+wasn't quite right. But when you do
+that, the numbers go down slightly with
+the competition, but it's still, I
+think it goes from from 60 to 40 million. Yeah. MALE_2: [inaudible] Aviv Nevo: I think if
+you want it to the total welfare, you would. But if you just want to
+do consumer welfare, you just say, I introduced this product, how much gains did I
+get from consumers? You're right, if you want
+to do total welfare, you have to take
+that into account. But I think here we're focusing just on the consumer side. For that, I mean,
+you can just look, and remember what we
+care about is a CPI. The CPI again, it's the same, we're not looking at PPI, we're not looking at
+you, just the CPI. That's the argument.
+You could be right and I think that's implicit in a lot of the arguments saying, well, there's a lot of
+a welfare loss here. Not consumer but total
+welfare because we're not generating a lot of benefits
+with these new brands, but we're spending all
+this R&D and that's waste. But that's, I think,
+slightly different. I mean Haussmann's numbers
+definitely speak to that. I think he's going to
+challenge the first part of it saying there isn't
+a lot of benefit. Doesn't seem like there is. But whether that's enough to
+cover the "wasteful R&D", I don't know because we'd
+have to look at that. Yes. MALE_2: These
+analysis also seem to exclude the generic store brands that they make it almost
+exactly the main brand? Aviv Nevo: Yeah. During
+this time, actually, they weren't a big deal and they definitely were not
+a big deal for Cheerios. If we were actually to do this for not the cornflakes
+introduced, but if it was like Apple
+Cinnamon Cornflakes, they maybe tried
+them but I don't know if they were
+ever successful. That might have been a big deal, but actually Cheerios is
+one of those products that very few people have
+been able to imitate. The store brands
+are actually not a big deal for Cheerios,
+but in general, you're right, but
+I think it's for this specific
+numbers that he had, I don't think it
+actually matters. That was Haussmann, so now I'm going to go and say, okay, suppose we wanted to
+do a very similar exercise. MALE_3: [inaudible]. Aviv Nevo: No. I mean, the way I understood the
+common maybe I misunderstood, was the fact that his
+numbers are biased because he omitted store brand. Now we could try to work
+which way it would bias, but I don't even think
+it's worth going because I think generic Cheerios
+are not a big deal, so I doubt that
+it would actually mattered for these numbers much, but that's the way I
+interpret the question is that the demand
+system in some sense, you get the wrong demands
+because you forgot an important product. I think. Yeah. You could, but
+he didn't do that. I think that was the point. I conjecture again, knowing a little bit
+about this industry, that it would've
+done very little. I think that's my answer. But in principle, you
+write omitted variable. But again, you could say, what would that bias so the instruments take
+care of it and not, but I don't think it would have mattered
+for his bottom line. Now, what I'd like to ask is, suppose you want to
+do a similar exercise using the discrete choice model. We're not going to
+actually do it for cereal, but the same idea of
+introducing in, a good. In order to do that,
+you might say, well, we know how to do consumer
+welfare and in product space, how do we do that in a
+discrete choice model? Well, it ends up this
+was actually worked on fairly early on by McFadden, and then there's a paper by
+Rosen and Small early '80s. Basically, the key to this is something called the
+inclusive value, which I'll define here. Let me just remind
+you the notation. Notation, I have utility ijt is this xjt Beta I plus our
+price enters in a linear way. We're going to define this thing called the inclusive value, sometimes also referred
+to as the social surplus , is the following. This is from a set
+of alternatives. You can think of, if
+I'd want to drop just say the whole set, everything. Then what you do is
+you take the log of the summing over all the j's, all the products that
+are in this alternative, of basically the
+exponent of the utility. That's what we're going to
+call the inclusive value. Now, it ends up that this
+inclusive value that's really the expected utility
+from these options, prior to observing those
+epsilons over there. If I'm actually
+sitting and saying, I'm going to get
+a set of options. I know that I'm going to get, I know the utility for each
+of these are the utility that I should really refer to the part
+without the epsilon. I know exactly what
+I'm going to get without the epsilon. I said, but I know I'm
+going to get these IID draws, one. B I know that I'm
+going to choose the product that's going to
+give me the highest utility, and that utility is
+with the epsilon. But I don't know
+what the drawing. I know my utility is going to be a function of this epsilon. I have to say what's
+my expectation, knowing that I will make
+the choice in this way. Well, it ends up, that's
+exactly this formula. This is basically
+what if you went the expected or the
+utility that I get, times the probability
+that actually choose that option subject
+to the model. That's what this thing gives and it's actually
+not that hard to show, but it's usually involves. You want to do transformation of
+variables when you compute that integral
+to the uniform. It's actually, pretty
+simple calculation, but it always takes me a day or two to actually whenever
+I sit down actually do it. Now, if there's
+no heterogeneity, this is in the pure logit model, just as an example. Then it ends up that, the inclusive value is going to capture the average
+utility in the population. It's actually equal, so
+this is now exposed or extended because of this,
+there is no heterogeneity. With heterogeneity, basically
+what we're going to say is this is the average. This is basically
+for each individual. If we don't know
+the epsilon or if we want to integrate
+over the epsilons, and now we have to integrate
+over the individuals and typically we have
+to do that numerically. What we'd have to do
+is you basically, this is for each
+individual and now let's integrate over
+these distributions of the demographics and the
+other unobserved variable. If utility is linear in
+price the way it is here, then if we want to turn this measure into
+a dollar measure, we just divide by Alpha I. If it's non-linear, it actually, we have to do it by simulation. There's actually no
+close-form solution to actually converting
+this into a dollar metric. There is slightly
+different ways of how to do the simulation, but
+I won't go into them. I'm actually going to stay,
+for most of my discussions, they stay in the
+quasi-linear world where price enters
+in a linear way, and then we can easily
+convert this to a dollar. You see this is
+actually fairly easy. It's really just this
+log sum formula. This log sum formula, let me tell you it's
+actually one of the most useful
+things to know when you're working with these
+logit-based models because it comes up in various ways. To remember yesterday
+when we talked about estimating nested logits? Part of what I said, you
+estimated at a lower level and then compute the
+expected utility, which is just this
+inclusive value, and then look at the choice basically between segments
+based on the expected value. Later today, when I
+talk about dynamics, it's going to end up that
+that's going to play a key role in simplifying
+some of the state-space. It's a very important concept. Applications of this. One of the very
+first applications, at least that I'm aware of, at least in this IO
+literature is a paper by Emmanuel Trajtenberg that
+came out in JPE in '89. Where he actually estimates
+a nested logit model and uses it to measure the benefits of the
+introduction of CT scanners. I'm not going to go
+through his numbers in large part because
+it's actually quite hard to
+interpret them because this is actually pre-BLP. What he gets is when
+he actually estimates, is the demand system, he gets a positive price coefficient. Consumers like higher prices, and because he
+didn't control for the endogeneity of this
+unobserved characteristic. It's a bit hard to do welfare analysis when you have an upward-sloping demand curve. Basically what he did is he does some Adonic reaction,
+to do the welfare. It's funny to read
+it through it now, now that we know how to,
+"do things correctly." We should have
+instrumented for price and gotten to the right price. The actual number
+is in some sense, I'm not quite sure, are
+meaningful right now. In terms of the actual idea,
+the exercise was there. ML Patron in a paper that was
+also published in the JPE, did a similar exercise
+but now actually, this is post-BLP so done right. What he did was he did the BLP. I used the BLP data to
+repeat this and look at roughly what are
+the welfare gains from the introduction
+of minivans. One of the main things that
+he did compared to BLP, is he actually
+added what's called micro-moments to the
+BLP I estimates. I think Arielle is going
+to talk more about how to add micro-moments later today, so I'm not going
+to talk about it. We talked actually a
+little bit about it, in the beginning of
+last lecture yesterday. The basic idea is
+you're going to bring in some information about consumer choices to help you pin down the
+substitution patterns. Indeed once he did that, the predictions of the model
+will much more plausible. He attributed this to basically, this is literally a quote that the microdata appears to free the model from a heavy
+dependence on the logit error. That was his conclusion. Let me actually show
+you just his numbers. Partly it's a motivation, we've had I think this theme
+that whenever possible, try to use microdata and this might actually be an example. Then I'm going to
+actually use that to talk about the welfare numbers. Here this is his
+table 5 where he estimates the parameters, and there's two columns here. The first column is
+with no microdata, so think of this as
+basically the original BLP. Then the second column
+is adding microdata or micro-moments from the
+consumer expenditure survey. We can look at different ones. I think the key thing, rather than looking at any
+specific numbers, they basically show
+that you can see, the first column many of these numbers are not
+very significant. These are basically the
+random coefficients. It basically says we're not that far
+away from the logit, at least in terms
+of statistical. But once you add
+the micro-moments, they tend to actually
+become larger in magnitude and much
+more significant. It really helps pin down the distribution of
+the heterogeneity. Yeah, I'll talk. That's going to be
+the rest of the talk. I think the key thing to take from these numbers
+and more generally. Actually, let me show you the
+welfare and all mechanism. He does the welfare here doing just if you do it with logit, if you do it with IV logit, random coefficients and the random coefficients
+with micro-data, and you basically see, I mean, you computes here, this is
+the compensating variation. Basically these
+welfare measures, because it's a non-linear model, has to do a little bit
+differently than what I showed there has to
+do it numerically, but that's the basic idea. You can see that the more and more heterogeneity you add. Here there's just
+a matter of bias, but just from here, once you
+add random coefficients, these numbers go down, and once you add
+the micro moments, they go down even further. The basic idea is as you're
+expanding more and more, there's more and
+more heterogeneity, and the heterogeneity
+is coming from the random coefficients
+as opposed to the logit error term. I think that leads us to connect to your question,
+but basically say, as you're moving further and further away from
+the logit model, the welfare numbers go down and I'll see in a second what I can tell
+you by freeing up. I mean, that's exactly
+going to be the discussion. It makes a huge difference for the actual estimates
+of the welfare, but also makes a huge
+difference for everything else. I don't have time
+to show you that or I didn't paste
+this to show it, adding the micro-moments
+really makes a big difference. One very important
+conclusion to take away. Whatever you take away
+from today's lecture is a theme that I hope
+you've heard over and over again over these
+lectures whenever you can get micro-data, whether in the form of
+moments like you have here, whether it's variation
+across markets, whether it's second choice data
+or anything of that sort, it's extremely helpful in pinning down the distribution
+of random coefficient. That I think one very
+important lesson that we've taken away
+from this paper, and that's important
+that you take away. The second point has to do now with the welfare numbers and that's basically going back
+Dennis, to your question. The first point, I said here, so another question is, what's driving the change in welfare? What's this freeing up
+from the logit error term? I think what Patron means in
+his paper and there's been some follow-up papers
+that have been a little bit more
+specific about that. One interpretation of what's
+going on is the following. Welfare here you can think
+of it as an order statistic. I mean, what do
+you get is you get the utility from
+your highest option? You basically put your hand
+in the bin and you draw out a random number, and
+that's a utility. Now, suppose there's just
+one number in that bin. Well, you get just one drawn. Now, suppose you actually get to draw 10 things out of the
+bin and then look and say, oh, I want the one with
+the highest utility. Because that's what we're
+doing in these models. You get to draw an epsilon
+for each of the options, and you get to choose them. If I say, you draw
+it and then it's randomly assigned to you get to choose the one that's highest. Therefore, suppose we just very mechanically
+added options. We said, now you don't
+draw a 10, you draw a11. Or not 11 but 12 or not 100, but 101 by adding the minivan. This is going to be
+mechanically increase welfare. What I mean by mechanically
+just a fact you get another draw of the epsilon. They're all IID draws. The distribution doesn't change, so therefore, the welfare
+is going to go up. That's what I think he's
+referring to is this dependence and what was exactly
+the terminology here. This heavy dependence on
+the logit error term, and that's one
+interpretation of what's going on here is to basically, as you're moving further
+down in the logit model, you're basically
+heterogeneity is only through that IID term and you
+want to actually reduce your dependence on it. Now please continue. MALE_4: Your error term had those summation of the
+[inaudible] error, and then I had asked Arielle yesterday what happened to
+[inaudible] explain that, of course, the logit
+error does not. If this way of explaining
+[inaudible] random draw. [inaudible]. Aviv Nevo: That's what's
+going on. But why don't we hold onto that question
+and let's see, because that's exactly what I'm going to be talking about. Let me tell you what
+I think is going on and I'm not sure if it's
+going to answer exactly. But let's return to that. If at the end of the slides
+I still haven't answered, then we'll talk, but no, I mean, I think you're asking exactly the right questions and please continue
+to ask questions. Anyone else if you
+have, please stop me. Basically it's a
+mechanical increase, and as we increase the variance from the
+random coefficients, some sense we're
+putting less and less weight on this effect. That's a little
+bit of what you're saying and that's
+the interpretation of what was going on. That's one option. I'm going to have a
+different take on it. Maybe this is my answer. You did this and let's
+see if it's going to go through quite a
+few slides here, but let's see if that will
+answer your question. The analysis here has two steps. Both the analysis
+that Patron did and the analysis that
+Haussmann did and others. The first step is we're going to simulate the world with
+or without minivans. It depends where we start. You can start with
+a world where we saw the introduction
+of minivan and said, which was I believe 86 or 85. But we see in that year
+what happened and we said, what would this year has been like had there been no minivans? We need the but-for world or
+the counterfactual world. That's the first thing
+we need to model for, or that's the first
+thing we need to do. Then what we need to do is after we've simulated
+prices and quantities, we need to somehow summarize
+them into welfare. Because welfare is not
+something we observe. We need a model to
+compute welfare. Even if for whatever reason, suppose we wanted to do a different diff or
+something of that sort, we could do that on
+prices and quantities, but we still need a model
+to summarize welfare. Suppose minivan was
+only introduced on the West Coast and not on the East Coast,
+and we could say, that's going to create
+some way for us to create a diff-in-diff estimate
+of what the prices and quantities would have
+been at the West Coast. But for this introduction, we still need a model
+for the second step. These are two distinct steps. If we do this
+different, if maybe we can isolate the effect
+of introduction, you could also imagine just
+doing it just as a diff. Just saying, well, let imagine of a minivans or inducing 86, Let's just look at, you
+know, compared to 85, which in some sense
+that's what we're doing when doing CPI. But again, if we want to
+isolate just the minivan, we need maybe a little bit more. We need this diff-in-diff. Now, what I will claim is that the logit model is going to fail miserably in the first step, and that's in some sense
+a known problem and that's exactly what
+we've been saying. The logit model is
+not very good at predicting what happens when
+you throw in new options, because of this IID or IID, IIA properties that you get. But at least in principle it
+can deal with the second. Now, let me just be clear. For the second step,
+I'll actually show you where it's going
+to fail as it's going to fail in the
+fact it doesn't take heterogeneity in this
+welfare measures. That some people
+really gained a lot from minivan and some didn't. But actually, if there wasn't this heterogeneity in gain, the logit model could
+actually get it right. I'm not advocating
+for the logit model. The logit model is going
+to get you wrong here. I'm just advocating
+in the direction of which things could go, and I'll show you it
+could act in principle, go either way in terms of it can overestimate or
+underestimate the effect. I'm trying to be clear
+of exactly where the failure is in
+which of these steps. So the logit, I am
+not saying that the logit model is the
+right model to use. It's quite the
+opposite, it's not. We have to understand
+why it's not working. That's in some sense
+tendencies you're going right at the
+heart of your question. I'm going to demonstrate
+this by using, this is an old example
+dating back to 1960 Debreu, it's called the red
+bus, blue bus problem, and you might have seen
+it in different places. Now originally this was
+used by the Debreu to show kind of the IAA
+problem of logit, and to show some of the problems that we have with Logit. In some sense it's going to
+be the worst scenario for logit because we know this
+is like using example. All you see how terrible
+the logit model is looking at these terrible
+predictions that it gives. But I'll actually show
+you that there is a way in which to do
+welfare in this model, that the logit model could get things right here if
+there's no heterogeneity. That's the key. There's
+a big conditioning here in heterogeneity. Let me tell you how
+this example works. There's consumers
+here, and consumers choose between driving a car to work or driving a bus and put red here in parentheses because at this point
+they're just the bus. Just to be clear, working
+at home is not an option. There's basically I'm
+trying to eliminate, there's no substitution on the margin of whether
+to work or not work in home is not a margin
+and decision of whether you're going to work does not depend on the transportation. It's really just this
+decision of the margin, just do I take a car or a bus, not any other margin. Suppose initially we start
+half the consumers choose to drive and half consumers
+decide to take the bus. Now, suppose we are
+going to artificially introduce a new option, and we're going to
+call it a blue bus. Now, why is it artificial? Because suppose our consumers
+are actually colorblind, they literally cannot tell the difference
+between the buses. Now, we have to think a
+little bit actually coming as IO economist think of it what does it mean
+introducing new bus, even if it's the same color? Maybe there's now more
+competition in buses, so the price goes down, so
+I'm going to rule that out. Now maybe you say, there's
+no price changes regularly, but maybe the bus
+is more frequent. So the option becomes,
+there's no price change. So basically the idea
+is you can think of it. We just painted half the bus is red and half of them blue, but our consumers, they don't even know because
+they are colorblind. They can't tell the difference. Basically, if we do that, given all the stories
+that I've told you, nothing should change. Half the consumers who choose to continue to choose the car, and the other half will
+split between the two buses, basically in proportion to I don't know how
+we call it a bus or when they're coming but you basically think half-half, and consumer welfare
+should not have change. That's the story. Now, let's say,
+suppose we wanted to evaluate this using
+the logit model. Let me write a very simple
+version of this logit model. I'm basically going to say
+the utility from IJT is just, it's now just as XIJT. I mean just the unobservable, but think of it as just a dummy variable, plus this epsilon. Let me start at
+period t equals 0. What I'm going to have
+here is I'm going to have the options, the share for each
+options and what the implied psi is from those, and I'll work back-and-forth. So first we start with 0.5.5. That was a story
+of market shares. What are the implied size? Well, we need to normalize. Let's normalize the car as the outside option
+and say it's 0, and because the market
+share is equal, the psi for bus at time
+0 should also be 0. That just just coming from this normalization and the fact that they have equal shares. To do the welfare, if we
+plug this into this log, log sum formula, the welfare just going
+to be log of two. So that's pre welfare. Now, let's look at
+introducing this new option, and now I'm going to separate
+between the predicted, what the logit model
+would predict and what we actually observed if
+we actually had data. Let's start with the predicted. Well, now that you
+introduce a new option, you say, well, car
+definitely didn't change. So that should be 0. Here I'm actually going to
+work not from the shares, I'm going to work
+from the size and then figure out what
+the shares should be. So car didn't change, it was 0 psi before, so it's going to be 0
+now, that's natural. Well, you tempted to say red bus was 0 before
+should be 0 now, right. That's what the
+logit model would say. I'm going to try to
+predict what the size of a red bus should be 0, and since red bus and
+blue balls are the same, it should also be 0. The size of all
+three should be 0. Then if I want to compute
+the market share, there could be a
+third, third, third. That's what the logit
+model would predict, and you would of course, get this increase in welfare, and in some sense they will
+cannibalize each other. That's what the logit
+is in doing right. In some sense, that's
+what we expect. That's the way you think, well, that's what's happening
+when we're doing using the logit model
+in the exercise before. We introduce a total
+artificial option and we got an increase
+in the welfare. But now let's
+actually say suppose, so that's where we use the
+logit model for both steps. Now, suppose we can actually
+isolate the second step. So suppose we don't need
+the model to predict. That we actually
+got to introduce the new option and we've
+got to see what happens. We're going to eliminate
+this the first step. Now, from the story I told you, we know that the
+shares are unchanged. Basically, it's 0.5 for
+cars, and we just say, let's say we split this point down quarter-on-quarter
+between the two. Well, I can compute
+what the Psis are. That would give me that
+out of a logit model, and that's what they are. It's 0 and then log
+of 0.5 and log of 0.5 for both of
+these. Guess what? When you actually do the
+welfare analysis using these, you get exactly the number
+that you got before. It ends up that once we actually have the ex post observed data, we can actually some sense, get the quote unquote, correct chairs, and then we put this into the [inaudible] get
+the right number. Now, let me emphasize,
+we're getting the right number here because there was no
+heterogeneity into valuations. Now, if there was heterogeneity, the logit would potentially get the wrong number in the welfare, even if it got the
+right market share. Even if we gave it the
+right market shares, will still get the wrong number. But that's because it's
+missing the heterogeneity. We need to separate
+between the two things. Now of course, what happens here and one potential thing
+you could object to, is the fact that what
+we did was we said, well, I'm going to
+change the Psi. I'm going to change
+the characteristics of the bus even though the
+bus itself didn't change. You might say, well,
+wait a second, the option didn't change so why should the
+characteristics change, that's not in your
+structural model. Why should you let the Psi change that's not working here. But then we have to
+really think about what we mean when we
+introduce the blue bus, and this goes back to this
+these issues of the service. If we literally just painted half the buses red
+and half blue, well then in some sense
+we did change the option. If before the bustle came to the bus stop
+ten times a day, now the red bus only
+comes five times a day. So there wasn't some sense
+of change in the option. It is justified to change that if you want,
+even from internally. But it does go back
+to something that was way back in the
+beginning of our slide, which is a lot of times when
+we want in these models, we want to do predictions, we now have to take a stand on exactly what that Psi
+is and how it's formed. That's potentially a problem for a lot of things
+including, for example, if you want to do a merger
+simulations, you might ask, well, post-merger, what's
+going to happen to this Psi? That's something that we
+need to take care of. So just basically
+generalizing from this model, what I claim is that
+the logit model fails in the first step. It could also fail
+in the next step, and I'll show you
+actually in a second the formula for it. But the idea that if you give it the market shares and there's no necessarily heterogeneity, the fact that it will get it right is actually
+more general because, in the logit, the
+expected utility really just depends on the share
+of the outside good. As long as you actually
+give it the outside good, you could actually get
+the right numbers. Patron uses the equivalent
+of the predict. He used the model to predict the counterfactual and
+then do the welfare. Now in his exercise,
+you needed somehow to create what would've
+been the but-for worlds. You could say in his exercise it wouldn't have been
+practical unless again, you could do, I
+don't know if you believe a different day
+or something like that. MALE_5: [inaudible] Aviv Nevo: Well, he observes
+them post introduction. He observes them
+pre-introduction, but in a different year. Suppose it was 86,
+he observes 85. If you all that you
+want to do is compute a price index and it's a point
+that I'll come to later, you could actually say he
+observed the pre-85, 86. But suppose you might say there's other things
+happening between 85 and 86, it's not all about minivans. That's an assumption
+that 85 is the but-for 86 without minivan. But if you're not willing
+to make that assumption, you need to introduce the model. More generally, when we have heterogeneity, you might ask, well, how do these
+two things differ? Well, it ends up that really
+the difference in shares. In the logit model and
+all of these models, basically this log sum formula, it's really just one over the market share of
+the outside good, or more generally
+the probability of choosing the
+outside good way i. In one case, basically, what we have, this is going to be the formula which actually writing out, you could say I'm
+actually integrating over if there is actually heterogeneity in the population that's what this logit
+formula is going to equal to. In the other case,
+it's this thing here. It's basically question of, do you want to take the
+log of the ratio of the averages or the average
+of the log of the ratio? We know that if this
+is the right formula, that's not going to get it. Which way it will go,
+really now depends. You can use Jensen's
+inequality to actually sign the direction
+in which it will go. You can see it's going to
+potentially go in other ways. It really depends on how
+this outside share changes, or the ratio of
+this thing changes. How does heterogeneity in
+these things change over time? Basically, as we introduce whatever event that
+we're trying to study. Let me just final comments and then in some sense going
+back to your question. The key thing here
+was that we allow the Psi-JT to fit the data. Now, this will work well or can work when we see
+pre and post-data. Because in some
+sense they tell us how to change the Psi-JT. Now the question is what
+happens if we don't have data on the counterfactual, we don't know what it is. Then we'd either have to make a model of how this
+Psi-JT is determined, maybe make some assumptions and that's something
+that we're going to have to face when we're
+going to talk about price indices, for example, we could do various
+things or we could try to do some bounds or say, "Okay, I don't know exactly how
+it's going to change, but I may be bounded in particular directions
+and use that as well." Indeed, all these issues come
+up when you actually say, now suppose we want
+to actually compute a price index from observed data and using
+estimated demand system, they all come up and there we do have the advantage
+is since we're not looking at particular
+event that we do see things change over time, but then it's a
+question of, well, what do we want to do
+with these Psi-JTs? Do we want to let
+them change or not? It fundamentally depends on what it is you think
+goes into them. The example I gave that
+you should change, but then I can also
+give you examples where you don't want
+things to change. It relates in some
+ways very directly to the stuff that actually only realize that listen
+to your lecture yesterday, Arielle, when you're talking
+about the match model. Because it directly relates what you do in the match model, it's just saying, well,
+these things are constant. This Psi-JT is a constant and maybe sometimes you
+want to let them change because you're trying to pick up various elements
+in the environment. Anyway, I think that's still issues that we
+need to further explore, but that's where we are. MALE_6: [inaudible] Aviv Nevo: Let me just go to the first part of your question. Let me just go back to
+the equivalent of here. What they do is they
+actually let us get the predicted much more
+closer to the observed. The idea in an ideal world, what we would really
+want to do is we want to have a model that's good enough that we can do
+both things right. We can actually use our
+model to say, "Hey, we got exactly the
+observed chair." That's where they help us. In an ideal actually,
+maybe you say if I even get the observed, what I should try to do is I should try to see can
+my model match it? If it does, then that's the model I
+should use for welfare. That's just for your first part. In terms of the [inaudible], my view of the [inaudible] is one is you can think of it as doing something similar
+to what I advocated here. Let the Psi change. But now we're going
+to let it change. Use historical data to tell
+us how it should change. I think there's two
+main problems with it. They do offer a
+model in the paper. But it's not a great model. It's not clear how it
+applies in many situations. If you want whatever
+solution you have to be based in a model
+and sound theory, I don t know that you
+could say that what they offer passes that bar. That's one. The other is
+more of an empirical point, which is, suppose we
+actually did that here? Think that the red
+bus, blue bus problem. Suppose what I had is I had historically I saw a bunch
+of these introductions. I saw a red bus, a
+blue bus introduced, and then a purple bus
+and then a green bus and all different colors. I use that to
+calibrate their board. Actually, I should say, sorry, I step straight into it. Maybe let's bring everyone
+up to date on what [inaudible] do before
+I talk about them. Let me go all the way back here. Sorry, I should have done this. What they propose to do is
+say, I just need a function. Take that utility. What they say is let's
+add a term there. Let's say call it a function f of the number of alternatives
+that are offered. It's f of JT. In the simplest form, just think of a
+parameter times JT. Where JT are the number of
+products that are offered. As I introduce more
+and more products, I'm going to change the utility. The idea is I'm going to
+change basically that side the same way that I
+was staying there. My points were A, where
+is this coming from? B, suppose I use historical
+data to estimate this. Suppose I did this with all these introduction
+on buses, you say, oh, well, every time I
+introduced a new bus, there's utility, I'm going to change the
+utility accordingly. I'm going to find, if I get
+the right functional form, maybe I'll figure out
+how to change things. But suppose I do that
+and then one day someone introduces
+a subway station. At that point, well, we know whatever we have
+historical data, we might as well throw
+it out the window because that's not going
+to inform us about the introduction of
+a subway station. We're back to the
+same old problem now that you have to say, well, what do I want to take? If you actually really
+do believe that the historical events
+were the relevant ones, and maybe what you should
+do is try to use as historical events just like
+we're talking to actually estimate your model and get a good model of the prediction. That's maybe a better way of using the historical
+events rather than trying to have this
+head hawk correction. 

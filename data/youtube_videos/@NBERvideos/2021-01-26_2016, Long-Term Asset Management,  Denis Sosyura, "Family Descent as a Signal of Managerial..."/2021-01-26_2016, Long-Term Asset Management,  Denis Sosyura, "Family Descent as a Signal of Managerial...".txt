@@ -1,0 +1,350 @@
+Denis Sosyura: To start us off, I'd like to point out that
+all of modern finance, both in delegated
+asset management and in corporate finances, based on the principle of separation of
+ownership and control, where selected
+managers is one of the most important tasks
+for the shareholders. We hope that this paper provides some insights to
+the question of, how do we pick high
+type managers? Then this paper,
+we're going to argue that in sentence with
+high entry barriers, such as management professions
+or fraud management, family descent can serve as a valuable signal of
+managerial quality. Here's the argument that we
+will advance in the paper. Main idea is that if a
+manager is born rich, or if an individual
+is born rich, they can become a manager through their wealth,
+inherited status, professional networks
+without necessarily being a high type or
+being highly skilled. Think of an extreme
+example of a son of a CEO who becomes the next CEO of a
+family-owned business simply because he's inherited
+with families status. On the other hand, if a
+manager is born poor, they need to really go through multiple selection
+thresholds in order to get to that high stage of entering a highly selective
+managerial fields. They face higher entry barriers, so the only the ones
+that are able to exceed these multiple
+high entry barriers are able to enter
+into the profession. Therefore managers that
+come from poor backgrounds, that would be the central
+prediction of this paper, would be on average of higher type simply because
+they've gone through this more rigorous
+selection process and have exceeded these
+continuous thresholds. Think of an individual who's born in a poor neighborhood
+in the state of Mississippi, it's very difficult
+to get access to high-quality
+high-school education, it's more difficult for
+them to get into college. It's more difficult
+for them to get a high-quality job conditional
+attending college. If they're able to exceed
+all these thresholds, they're more likely
+to be of higher type. That's the story. How do we exactly
+test this hypothesis? This is the first paper in
+finance that will provide individual data
+on census records that will trace the wealth, income, and professional
+manager's parents. We're going to be looking at the wealth that the managers
+in doubt at their birth. We'll be going to their
+individual census record where the manager is
+just a little kid. Those will be the main
+variables that will determine wealth and professional
+networks and so on, that managers are in doubt with, and then we will relate
+this to outcomes of managerial performance in
+the mutual fund industry. We believe this is a very
+convenient empirical setting in which to test
+this hypothesis. First, there are clearly high entry barriers
+into this profession. It's a highly
+selective profession. Second, there's
+one-to-one correspondence between the managers
+decisions and mutual fund outcomes,
+hence the focus on solo managed mutual funds. We also know how to measure
+mutual fund performance. There's a fairly clean
+investment opportunity set faced by managers managing
+similar types of funds. This is the empirical
+setting. What do we find? I'll point out three
+types of findings, the one first on performance, then the career path, and then some of mechanisms. First, on our main fun is that managers
+that are born poor, significantly outperformed
+managers that are born rich. The performance
+differential between the extreme quintiles is approximately two
+percent per year at a risk-adjusted basis when
+measured by 4-factor Alphas. This performance differential
+is very similar if we look at net or gross Alphas, if we look at benchmark
+adjusted returns or abnormal returns
+over the benchmark, or if we use the
+[inaudible] measure of value extracted
+from capital markets. What is the driver of that
+performance differential? Is it the outperformance of the poor or are the
+underperformance of the rich? Our findings are
+most consistent with the underperformance of
+the richest managers that are born to ultra
+wealthy families. Then we try to think about what other reasons might there be for those managers to stay in the profession
+of the underperform. We check whether
+they help attract greater fund flows
+for the fund-family, and we don't find explicit
+evidence of that. However, of course, there
+might be other agency motives that the fund family or the benefits of the fund
+family might creep. Think of IPOs or maybe access to some
+good lawyers and so on, that may provide the
+benefits to the fund company that these managers are
+retained even though again, these benefits do not ultimately accrue to the investors who have to bear lower
+performance consequences. We look at the career paths and we find evidence consistent with this selection
+hypothesis that outline. First of all, all else equal, managers who are born rich are significantly more
+likely to be promoted. Second, managers
+that are born poor, they are promoted only
+if they outperformed. In other words, their
+promotion decisions are significantly more
+performance sensitive, whereas the ones that
+are born rich are maybe promoted for other reasons without necessarily
+being skilled. This is consistent with the
+idea that among the poor, only the high types advance. Finally, we'll look at some
+of the mechanisms of where this value creation
+may stand from. We find some evidence that managers that are born
+poor are more active. To some extent,
+they work harder. There's greater turnover,
+there's somewhat greater active share and
+deviation from the indices. But the main channels
+seems to be that a bit traits are more value-added
+compared to the rich. Overall, in the punchline of the paper is that incidence
+with high entry barriers, family descendant can serve as a valuable signal of
+managerial quality. We believe this is the
+first paper that links managerial family descent and their ability to add
+value for fund managers. How exactly do we
+establish these findings? We start off with the
+Morningstar database of mutual fund managers, which includes life funds, deceased funds, the
+funds were liquidated, so if a fund was in existence and it is in that database. Then we use the
+standard data sources. The only non-standard
+data source is that we tried to be
+very careful when we account for education
+because it's important factor that is
+correlated with wealth and we actually email
+universities to get very precise data
+on fund managers, education, date of
+graduation, major, and so on. They're obligated to
+disclose this information if we want to confirm
+fund managers degree. This is the main
+value-added from the paper is really the information on the
+family background. Our primary database is the LexisNexis public
+records database. This is the most comprehensive
+public records database that is used typically
+for legal purposes. Individuals are traced through their social security numbers
+throughout the database. The database covers
+approximately half of billion of US population, both life and deceased. What do you need to be
+included in the database? You only need to have a
+social security number. You can be a foreign citizen, you can be a recent immigrant, you can move in and out. You don't need to own a house. All you need is social
+security number and how these people are traced. We supplement this
+with birth, marriage, and death records to identify
+the managers household. When we met your manager
+to the national census, we want to be very precise that the manager
+that we identify, is indeed the fund manager
+that we're interested in. We first establish their
+parents and siblings, and then we go into the census. We identify not
+just that manager, but the household with
+the parents and siblings, so that we can be
+reliably confident that we identified the correct data. Let me just illustrate
+how exactly we identify the
+manager's family tree and parents and siblings. First, we start with state birth records that are maintained by the Department
+of Health of each state. If you have managers' full
+name and date of birth, you can pull up
+their birth record. Here's an example of Ohio. You have a manager,
+Geoffrey Atkinson Brod. You get his mother's
+maiden name, his mother's birthplace,
+father's name, and so on. So much for using
+mother's maiden name as your password for
+online services. Same for Texas. You have a manager, you got their parents and so on. Then we know what
+also to look at. Another example, if we run short of finding
+a manager that way, we can pull up the
+assessment record or the tax record for the house
+that the manager owns. In almost all the cases, the house is co-owned
+with the wife. We can identify the wife of the manager from the
+ownership of the house. If they've owned any house in their life or they
+were married at some point in their life, and then once we
+identify the spouse, we pull up their
+marriage certificate. The marriage certificate
+gives us their parents. Again, we've locked into
+manager's household, we can go to the 1940 census and pull up their birth record. Lastly, death records
+and obituaries. Here's an example of how we deal with managers that
+have common names. Here's a relatively
+common named Kirk. David G. Kirk is a fund
+manager in our sample. He's married to Ann B. Kirk
+and they live in Sudbury, Massachusetts, which is just
+half an hour West of here. Once we know the
+name of the wife, we searched the obituaries. Even local very obscure
+newspapers that just give that list the manager and
+the wife as the survivors. Here's an example
+of an obituary. This an obituary for
+manager's brother. He's survived by his
+brothers and sisters, David G. Kirk and his wife and of Sudbury, Massachusetts. Now that we know the name of the wife and it matches
+the place where they live, we know we've locked in the right record so
+we can get again the names of the parents
+and the names of the siblings and identify
+the correct records. That is the process. Now, what are the outcomes? Let me first show you what
+our data looks like and what is the typical census
+records looks like. I'm not going to
+ask you to read it. Our records come in the form of images or photo images of actual handwritten
+census records. I'm going to highlight a census record of one of the fund managers in the sample. I'll zoom in on that
+record and show you what is in that record. But for now, I'd like to
+just point out that one of the first finding is
+that managers come from very highly segregated
+neighborhoods, many of them come from
+ultra rich neighborhoods and surrounded by very
+wide shoe profession. Here's an example
+of professions. Counselor for investments, treasurer of Paramount Pictures, stockbroker, president
+electric appliances companies. So they come from very
+special neighborhoods, and in a general, money managers
+come from money. Here's a snapshot of the census record
+where we zoom in on a particular fund manager. So the fund manager that
+we're interested in here is Reginald Foster, who's just a little
+kid at the time of the census and we
+focused on his father, Reginald Foster Sr. He's a stockbroker. He makes over $5,000 a year, which is in the 99th
+percentile in the 1940, when the manager is a kid. He's got two servants. We get the data on
+their servants' income, education history, and it turns out that
+having grown up with servants tends to be a
+strong negative predictor of your performance
+when you grow up. Here's another way to
+describe the data. Here's the distribution
+of incomes of manager's parents relative to the incomes of the general population. The blue bars represent
+the general US population, and the red bars represent the the families
+of fund managers. So the first thing I'd
+like to point out is that managers come from
+rich families. The average income of manager's parents is at
+the 89th percentile, roughly the top 10 percent
+of the US population. Secondly, there's huge
+amount of dispersion, right? So when I show you
+quintile regressions, the manager's that are in the bottom
+quintile relative to other fund managers
+are also sort of at the bottom of the
+population at large. The managers that are rich, or certainly the ultra rich
+relative to the population. So high mean and a very wide dispersion
+where they come from, which gives us a lot of
+identification power. They also come from
+more educated families with about three more
+years of college degrees. So the main finding
+of the papers that those that come from ultra rich families in
+the absolute right tail and wealth tend to be
+weaker performers. Now, let's provide a little
+bit more formal evidence in regression design
+that also counts for meaning other correlates, such as parent's education, such as managers own education and other
+correlates of wealth. First, I'm going
+to start off with just linear regressions where we use different
+measures of wealth. We can use their income, we can use the rent
+value of the house. We can use the wealth
+index, the wealth rank, which is just the value of
+the house in which they live. They are negatively related to managerial performance and we control for other marriage or characteristics such as age, quality of their education, for parents characteristics,
+their management job, number of years of education, and lots of fund
+characteristics as well. In quintiles, you get a sense
+of the economic magnitude. I think it's a nice way to summarize the
+economic magnitudes. You only include fund
+manager controls. The performance
+differential between the top and bottom quintile of manager's wealth is approximately a 150
+basis points a year. As you start adding
+additional controls, the magnitudes
+typically increase, and statistical significance
+increases as well. So why is that? Well, the reason is it does
+help to go to Harvard. It does help to have manager's parents who are in
+the finance industry, who are well connected. Because we know from
+the literature that social connections help
+increase performance. We know from literature
+that SAT scores, their education
+quality are helpful. If you keep adding controls, you could raise that
+performance differential to about two percentage
+points per year. But really, picking
+the rich and the poor, I think that this is a
+more realistic estimate of 1.5 or 1.6 percent per year. The main driver, if you look at the performance across
+different quintiles, is really the under performance of the ultra rich,
+of the richest. This result is not specific to how we
+measure performance. Here, I've put on the table for other ways
+that you could measure performance in the
+mutual fund literature using both met and gross Alphas using
+benchmark adjusted returns, abnormal returns
+over benchmark or the value extracted
+from capital markets. The results are pretty robust to different ways you
+could measure performance. You want me to put the
+results in dollar terms as opposed to a percentage terms. One way to summarize them would be that an interquartile range, if an increase in managers
+wealth corresponds to a monthly loss of approximately Three million dollars expressed in 2012 dollars as
+measured by the, then this [inaudible] measure of value extracted
+from capital markets. So far, I have given
+you the results about the means of managerial
+performance. Our selection
+hypothesis also has important predictions for
+the variance in performance. If it is really true that
+managers that come from poor backgrounds face
+significantly higher thresholds for entry into their profession, their performance is
+going to be significantly less disperse so that only the high types
+are able to enter and that the variance in
+their performance in the cross-section is going to be
+significantly tighter. If on the other hand, you come, you're born rich, you can enter the profession if you're
+really, really good. If you're okay or if you're just mediocre through other channels. Our prediction of the
+selection hypothesis again is that the dispersion in managerial performance
+is going to be greater because different
+types can enter. Formal way to test this is
+the Golfheld-Quandt test for directional
+heteroscedasticity. We find evidence consistent with those predictions
+that I just outlined. So first, we find that
+Alpha dispersion is significantly high that among managers that come
+from richer families, consistent with the fact that managers may enter into
+the profession having a lower bar and some
+of the ones that enter could be good
+and bad and mediocre. That as you start
+splitting the sample into, between the rich and poor into more and more and more
+selective categories. Instead of just looking at below the mean and
+above the mean. If you look, let's say
+at the top quartile and the bottom quartile, that difference
+becomes even starker and even more
+economically significant. The ratio of residual
+variances is even higher if the comparison groups focus on the tails
+of the distribution. So the further you
+go in the tails, the greater this
+difference in dispersion, again, consistent with
+the selection hypothesis. Then we provide evidence also from their career trajectories. We study the career of
+these cohorts of managers and see how they get promoted and what happens to them,
+conditional and performance. So our main finding here is
+that promotions of managers that from poor families are significantly more
+performance sensitive, whereas managers that come from richer families,
+first of all, may get promoted without necessarily being skilled
+and second may be promoted for other
+reasons that are not directly linked
+to performance. Lastly, we look
+at the ability of managers to attract
+mutual fund flows. Because ultimately, the mutual fund industry
+is structured in such a way that fees are based on assets
+under management. Ultimately, mutual fund
+companies might be more interested in not
+necessarily the returns, but just the assets
+under management. The hypothesis we test here is whether or not there's
+any difference in the ability of the
+managers to track flows and we do not
+find any effect. We find that we've
+looked pretty hard to identify the effects with different variations of
+controls and fixed effect. Find no evidence that
+managers are born rich are better at
+attracting flows in a particular setting of
+the mutual fund industry. This may be quite different in the private wealth management
+industry, let's say, or in private equity
+where there is a tighter contact between the manager and the client
+and when the instead, in the mutual fund industry. the survey evidence tells us the vast majority of
+investors do not even know the name of their fund
+manager in the database. So we find that the flows
+are driven primarily by fund and fund family
+characteristics and that fund manager
+characteristics have very little effect on flows. So these are the main
+findings in the paper. I'd like to conclude
+by providing you an industry perspective of anecdotal evidence that some of the managers appear
+to be aware of these different entry barriers into the profession for
+the rich and the poor. So here's a quote from a Wall Street Journal reporter that speaks to this effect. "Since the days when
+the Goldmans and Morgans cared mostly bought hiring young men from the best families and
+schools, the Bear or Bear Stearns cared about one thing only, and
+that is making money. Its longtime chairman Ace Greenberg even
+coined a name for his motley hires, PSDs for poor, smart, and a deep
+desire to get rich." The same quote from
+the chairman himself, "I think it is important
+that we continue a policy that has
+helped us prosper. We're really looking for people with PSD degrees." Again, for poor, smart, and a
+deep desire to get rich. So let me stop here and
+conclude in this paper, we argue that incidence
+with high entry barriers, family descent can be an invaluable signal
+of managerial quality. We provide evidence that
+this is consistent with a selection mechanism where the inherited
+status changes, the stringency of
+selection, changes the entry barriers
+into the profession. So if I were to zoom out and put this paper in the perspective
+of the broader literature, leads the first evidence on the family backgrounds on
+investment professionals and one of the first links
+between family status and the manager's ability to create value. Thank you for your time. 

@@ -1,0 +1,879 @@
+Alan Krueger: I really
+wish I had invited my parents to come listen
+to Jim's introduction. It is a great honor
+for me to have been invited to give the fell
+sign lecture today. I have received encouragement, advice from Marty
+throughout my career. Jim didn't mention I was
+a research assistant at the NBER in 1984, the summer of '84 when Marty returned from the Council
+of Economic Advisers. I remember when he came back,
+1050 Massachusetts Avenue, they gave him a tour
+around the building to show what had changed. Then I was fortunate
+because I took public finance that
+year from Marty and from Larry Summers where I learned a
+tremendous amount, and became very excited about using economics
+in public policy. Then I think really most importantly
+throughout my career, Marty has been a source of
+encouragement and support. When I was chairman of the CEA, Marty often visited me, took me to the Metropolitan
+Club for dinner. We had a preexisting
+relationship, so he could actually treat, and I really appreciated the advice and encouragement
+he gave me at that time. I'm going to talk about a
+topic today that Marty and I have discussed
+on many occasions; how tight is the labor market? Which I think boils down
+really to two questions. First, what's going on with
+long-term unemployment? Are they more likely to leave the labor force or find a job? If they've already
+left the labor force, are they likely to come back? I think those are key questions. Then the second question is, how do we think about
+the U-6 measure, which I'm going to
+say very little about because the U-6
+measure is elevated, primarily because
+of those who are part-time for economic reasons. If you look at work hours, I don't see a lot
+of slack out there in terms of the
+average workweek. I'm happy to discuss that
+in terms of questions, but I'm going to focus
+on what to me is the most important
+question when we think about how tight the
+labor market is. I had the occasion about
+two years ago to brief the president on the
+employment situation and the significance
+of this picture is, I remember distinctly explaining that short-term unemployment
+was back down to normal, long-term unemployment
+was still elevated, and I said to President
+Obama and Secretary Lew, "If we're going to make further progress lowering
+the unemployment rate, it's primarily going to
+be because the long-term unemployed find jobs or
+leave the labor force." My feeling was that
+unless we focus public policy on improving the odds of the
+long-term unemployed, finding a pathway back to work, the natural forces of the way the labor
+market operates would lead many of them to
+leave the labor force. After I left the government
+about a year-and-a-half ago, I wrote a Brookings
+paper on that topic together with two Princeton
+graduate students, John Kramer and David Cho. Part of what I'm
+going do today is summarize those results
+and extend them. We could see where
+we got things right, where we got some things
+wrong, what that means. I think the picture of
+the US labor market is one of gradual improvement. I've been saying this
+for the last five years. The US economy is healing. It's slowly healing from the great wounds from
+the Great Recession, and I used to get poked fun at for saying the same
+thing every month, and I said when
+the business cycle changes I'll say
+something different. I think we are
+getting to a point now where the job market is getting very tight and
+generating real wage growth, which I'll show you
+some evidence on that. We've seen the unemployment
+rate come down from 10 percent to 5.3 percent, and I think that represents real progress, real improvement, that long-term unemployment
+has declined very rapidly from a high of 45 percent of the unemployed being out of work
+for more than half a year, down to just about 25
+percent last month, which is still high. But we've seen a big drop
+in long-term unemployment. Unfortunately, I think
+the primary reason is because a large number
+of the long-term unemployed have left
+the labor force. I'll show you some
+evidence on that, and that's the cyclical
+pattern that we normally see. Over the business
+cycle in the US, the labor force
+withdrawal rate for the long-term unemployed tends
+to collapse in a recession. Then gradually, they tend
+to exit the labor force, and I think there were a few
+reasons that caused that. One is discouragement, one is unemployment
+insurance benefits run out, and another is employers tend to discriminate against the
+long-term unemployed. Now, I've been skeptical that
+we're going to see much of a return to the labor force
+of those who've dropped out, and I'll show you some
+evidence on that. I'll also present evidence from a calibrated model of
+matching in the labor market, which extends work that Kory Kroft and his
+co-authors have done. Then finally I'll get to
+the controversial part, which is the Phillips curves. If, as I have been arguing, the job market is getting tight, what's going on with wages? Are we seeing wage growth at about the rate one
+would expect right now? If that leaves any time, I'll say something about
+implications for policy. This shows you the unemployment
+rate, as you know, peaked at 10 percent
+in October 2009, was 5.3 percent in June. Apart from the time when
+Marty was CEA Chairman, this is the fastest drop in the unemployment rate
+the US has experienced. This shows you the share of workers who are
+long-term unemployed. When I would teach about unemployment in my
+labor economics class, I would say before
+the great recession, we're seeing a secular rise
+in long-term unemployment, and then it shot
+through the roof shortly after the
+recession ended. In 2010, early 2011, 45 percent of the
+unemployed had been out of work for more than half a year. Typically in the US, that fraction fluctuated between 10 percent and 20 percent. Now we're nowhere
+close to Europe, that's the good news. In Italy or Spain, 67 percent of the unemployed are out of work
+for more than half a year. In fact, they use, as a definition of
+long-term unemployment, out of work for
+more than a year. But the US does have a
+long-term unemployment problem, though it's been solving itself. As you can see here, we're down to just
+over 25 percent of the unemployed out of work
+for more than half a year. The picture isn't
+quite as rosy if you look at the employment
+to population rate, the share of the
+population employed. That peaked when the
+2000 census was done. In the last recovery, the recovery from 2001-2007, you notice the employment
+to population rate was lower at the peak than it
+was at the previous peak. That's the first time we've had that experience in US history. Then the employment to
+population rate plunged, fell five percentage points
+in the Great Recession, and it's recovered
+only about one point. Now, the reason why the
+unemployment rate looks so good and the employment to population rate looks so weak, of course is labor
+force participation. The labor force
+participation rate in the US peaked also right around the
+time of the 2000 census, with 67 percent of people over age 16 in the labor force. It was lower at the end
+of the previous recovery at 66 percent than it was
+at the one before it. Labor force
+participation actually was pretty stable
+during the recession. You might think during
+the Great Recession, when the unemployment rates
+soared to 10 percent, people would have been
+leaving the labor force, but it only fell three-tenths
+of a point over a year-and-a-half
+of the recession. The decline in labor
+force participation accelerated after
+the recession ended, and we're now down to labor force participation rate of 62.6 percent back to where it was when Jimmy Carter
+was president. I used to do press interviews in the front lawn
+of the White House, I'm sure Eddy and Marty
+remember doing this, and Austan Goolsbee
+with the sun shining in your eyes at 9:30
+in the morning, and then I would get
+asked frequently, "Aren't you concerned that labor force participation is back down to where it was when
+Jimmy Carter was president?" But if you look at this graph, when President Obama
+came to office, it was back down to
+where it was when Ronald Reagan was president. We've been experiencing
+a 15-year decline in labor force participation. What's driving it? Well, sensible analysis, and there are many ways
+you could do this, but sensible
+analysis of aging of the US population suggests that about a half of the drop from 67 percent down to 63 percent rounding is
+due to population aging. You can just keep the age
+distribution constant, and use the labor force participation
+rates for different ages, and it looks like aging is responsible for
+about half of the drop. What about the other half? Well, I think there are
+two important factors. One is, some trends
+that were taking place before the
+Great Recession. Labor force participation
+of women fueled the post-war rise in labor
+force participation in the US that peaked around 2000. Not entirely clear
+why it's peaked, and its edged down for many different
+categories of women; single women, married
+women, women with children. The main factor that was causing labor force participation
+to rise came to an end. Labor force participation
+for men has been declining throughout
+the post-war period. That continued in the 2000s, and then labor force
+participation of younger workers declined in part because
+school enrollment increased, and ultimately that's probably a positive thing
+for the US economy. If you make a projection of those trends prior to
+the Great Recession, you could account
+for about half of the half that not due to aging. What about the other quarter? Overall, that seems
+to me to be cyclical. There are many ways
+you could come to that similar estimate, that a little over a
+percentage point drop in the labor force
+participation rate is a result of the recession, and I'm going to show you some evidence which suggests it's unlikely we're going to see much of a recovery of that one percentage point or so drop in labor force
+participation. Now, I've had this view for a while and I thought I'd do a little bit of a victory lap since nobody
+ever read this article. I did get some criticism
+for it at the time. In March 2011, I
+wrote an article in Bloomberg saying that
+the conventional wisdom now holds that the
+unemployment rate should rise because
+many workers who left the labor force will
+come back and start looking for a job as
+the economy improves. While many jobless
+workers have indeed given up searching, I'm going on record
+as a contrarian, I suspect the large rise in the labor force won't cause the unemployment
+rate to jump. Instead, I suspect
+we're going to see a continuing decline in the unemployment rate and then some uncharacteristic
+understatement here. We might well see the labor
+force shrinking more even as the measured unemployment rate falls and that's precisely
+what has happened. Now, to show you that the conventional wisdom
+was the other side, I thought I would show
+you some quotes from Goldman Sachs Research Group, very well-respected
+I think they do very good work and I think they represent I think the consensus in this area and I also
+think they're wrong. In May 2011, they wrote
+in their newsletter, we find that the labor
+force participation rate is likely to stop falling, which would raise the
+minimum amount of job growth needed to lower
+the unemployment rate. Their forecasts then was for labor force participation
+to rise from 64.2 percent to 64.6 percent and I think it ended the
+year at 64.0 percent. Then about a year
+later, March 2012, the labor force
+participation rate is likely to stabilize. Demographics still push
+towards lower participation, but the improving labor
+market should encourage more marginal entrants
+to join the labor force. Then January 2013, we expect the unemployment rate to
+fall much more slowly from 7.8 percent now to 7.6
+by the end of 2013, it actually felt at 6.7, which is a pretty big drop. The main reason is that we expect labor force participation to stabilize after three years
+of significant declines. We expect the participation rate to stabilize because it's now a full percentage point
+below its structural trend, defined as the rate
+that would prevail of labor demand was
+at normal levels. May 2014, labor force participation
+has fallen by three percentage
+points since 2007, despite the ongoing
+structural drag from an aging
+population we expect to stabilization and perhaps a small increase
+in coming years. Last month. The sharp decline in both unemployment labor
+force participation in June looks
+statistically anomalous. At a certain point, I think you have to throw in the towel. Now, why was I expecting labor
+force participation to continue to decline? I had published this
+chart in Bloomberg. This shows you the monthly
+labor force exit rate for the unemployed by
+duration of unemployment. This is based on the current
+population survey data. You will link from
+one month to the next and you could look at the unemployed depending upon how long they've been unemployed, what's their chance of exiting the labor force in
+the next month? If you have trouble reading
+this from the back, the red and the purple lines at top are those who've
+been out of work for more than half a year and the orange and green
+line at the bottom are the short-term unemployed. You can see a very
+strong cyclical pattern for the long-term unemployed. Labor force exit rates
+tended to rise when the economy strengthened in the late 1990s for the
+long-term unemployed. Then we had a mild recession in the early 2000s and the labor
+force exit rate collapsed. Then we saw the same
+pattern again and the recovery in the early 2000s, labor force exit rate gradually increased for the
+long-term unemployed then it collapsed and just around the collapse was
+when I wrote the piece for Bloomberg and I thought
+that we would see the bounce back that you can see we've actually seen in the labor force exit rate for
+the long-term unemployed. This is only partly a result
+of changing composition. If you adjust for
+the education and the occupation industry that the unemployed were coming from, you can account for a little less than 20 percent of this cyclical pattern for
+the long-term unemployed. For the short-term unemployed, there's a cyclical pattern, but it's much weaker. What I was expecting in
+2011 is that we would see labor force exit
+rates return to something closer to normal for the long-term unemployed
+and unless there was some effort to help the long-term unemployed
+stay in the labor market, find a job, they would
+exit the labor force. Now, if you look at the
+transition rate to employment, the job finding rate
+for the unemployed, what you see is almost
+the opposite in that the short-term unemployed
+are much more cyclical than the
+long-term unemployed. The blue line on top
+are people who've been out of work for
+less than five weeks. In any given month, they have about a 35 percent chance of finding a job that tends to be higher
+when the economy is stronger and it tends to
+be lower in a recession. The red line at the bottom are those who've
+been out of work for more than a year and that moves very little
+over the business cycle. Even if you do these
+graphs and logarithms, because the scale is different, you've reached the
+same conclusions. Frankly, I don't think it makes that much sense
+to do it in logarithms because if you want to look at the Markov transition matrix and try to use this to explain what's going on
+or predict what's going to happen to
+the labor force participation and unemployment, you don't want to do
+it in logarithms. Again, composition plays a relatively small
+role in these trends. Now, there's been a long debate in economics about whether the lower job finding
+rate for the long-term unemployed is a result
+of heterogeneity, perhaps unobserved because
+I already told you the observed heterogeneity
+doesn't do very much, or due to something about
+unemployment changing people. What we call true
+duration dependence. That debate has
+not been resolved. It's inherently a very
+difficult question. If you haven't
+worked in this area, the issue with unobserved
+heterogeneity is if people have different proclivities
+for finding a job, those who have a higher
+likelihood of getting a job sooner are going
+to leave the pool of the unemployed so the
+mix will change over time and that's very
+difficult to address. You can make some
+assumptions about the distribution of those types. You can make some
+assumptions about the flow into unemployment
+of those types. By enlarge that literature
+suggests there's a lot of duration dependence, not that much unobserved
+heterogeneity, on the other hand, is not an entirely settled
+literature and I would be hard-pressed to
+say it's all that convincing for what
+I'm going to show you. For some things that matters, for other things
+that doesn't matter, if the lower likelihood
+of finding a job for the long-term unemployed is a result of unemployment, changing them or their characteristics
+going into unemployment. For example, for thinking
+about the Phillips curve, I don't think it actually
+matters for thinking about policy interventions to help the long-term unemployed
+I think it does matter. Just show you a little bit more. This is from our Brookings
+paper where we use the SIPP, Survey of Income and
+Program Participation, to look at the likelihood of a year later someone
+finding a job. If you've ever
+worked with the CPS, job flows data, you know
+they're extremely noisy. People go in and out
+of unemployment. Their duration doesn't always change the way you would expect. If they found a job and then become unemployed again,
+you would expect, well, it's a new spell
+of unemployment, but they often report
+their unemployment at several weeks or months. I think it's actually
+important to look at longer-term what happens to the unemployed and
+this looks a year ahead. Instead of looking
+at the next month, it's looking a year ahead. The blue line at the
+bottom, it says, what's the chance of an unemployed worker who's been out of work a month, two months, three months, all the
+way up to three years, that they're going to be in full-time steady
+employment a year later? You see a couple of things. It's strikingly low
+and it's declining. If you look at the
+green line on top, that's the chance
+of being out of the labor force a year later. As I said before, it's unclear whether
+these trends represent the pool
+of the unemployed changing over time or the nature of unemployment
+changing people. I'm going to make an
+argument soon that it's unemployment changing
+people's prospects. This also uses the SIPP
+data to look over time, looking at longer-term
+transitions. What I wanted to highlight
+here is if you're looking at, this is all long-term
+unemployed people. If you look at the
+long-term unemployed, the chance of going into a steady employment
+back in the late 1990's was a little
+less than 20 percent. Now, that's the strongest
+job market that we've seen at least in my lifetime. Well since I got my degree, I'll say I was born in the '60s. Then if you look at
+during the recession in 2001, it was about the same. The chance of the long-term
+unemployed moving to steady full-time
+employment doesn't seem to depend very much on the business cycle and
+I think that's because the long-term unemployed
+become more and more detached from the labor market. The experience of
+being unemployed, I think makes it harder for people to get back on their feet and even a strong economy
+doesn't solve that problem. You can see the same thing
+if you look more recently. Using the SIPP data
+in 2005, 2006, near the peak of
+the last recovery, the transition rate into
+full-time steady employment was not higher than
+it was in 2009. It's also interesting to use the SIP data and say, well, what's happened to
+the long-term unemployed? This looks at people who
+became long-term unemployed between 2008 and June 2009
+during the Great Recession. We could follow
+them through 2013. Thirty-five percent
+of those who became long-term unemployed we're
+out of the labor force. By the middle of 2013, 14 percent were
+still unemployed, 22 percent were employed
+full-time steadily. Steadily here, by the
+way, is a pretty low bar, it's four months in a row
+of full-time employment. Just over a quarter, were working intermittently or working on part-time jobs. The biggest group
+left the labor force. Why is it that
+long-term unemployment has such adverse
+effects on people? A lot of research suggests that long-term unemployment affects both the supply side
+and the demand side. On the supply side, mental health and
+self-esteem look like they're affected
+by the experience of long-term unemployment. Until Von Watcher has done
+very good work showing that physical health and mortality
+are adversely affected. Family dissolution
+and stress rises. Job search activity declines. Andy Mueller and I did a study where we followed workers on unemployment insurance
+and we gave them the American time you survey
+each week essentially. We also asked them directly, how much time did you
+spend looking for job last week and how many
+job applications that you submit and job
+search activity tends to decline the longer
+people are unemployed. The American time you
+survey also shows that the unemployed tend to spend
+more time by themselves, they tend to be more
+socially isolated. Really interesting new
+study by Jamison Toole and co-authors followed
+cell phone records for a European country, they were not allowed
+to tell which one and you'll see why in a moment. For workers who lost her job in a plant closing and then they compare them to other workers, they were less likely to receive phone calls and to
+make phone calls. They were also physically more isolated because you can look
+at what cell phone towers, their phones we're
+connecting to. There were just a lot more
+likely to stay at home. Long-term unemployment
+is associated with repeated job loss, lower re-employment
+earnings and all of this, I think points to a decline in human capital and also
+leads to discouragement. On the demand side, studies have shown that
+employers at least statistically discriminate against the long-term
+unemployed. Kory Kroft, Fabian Lang, and Matt Notowidigdo, did a study where they
+sent out resumes with varying gaps of time that
+people were out of work. You can see the
+likelihood that employers would call those people in for an interview depending
+upon how long they were out of work and Lang Gaya did a very similar type of study with a similar
+type of result. What about the prospects
+of those who have left the labor
+force re-entering? I tend to be very skeptical. For one thing, historically, we don't see much sign of that. This uses the CPS
+data to look at monthly transitions from out of the labor force back
+into the labor force. Now unfortunately, we can't do a very good job tracking the long-term unemployed
+and the CPS, but we can look at all
+of those are out of the labor force
+and are they more likely to enter in a boom
+time compared to a recession? If you look at the
+blue line on top, which is the monthly
+transition rate from out of the labor force
+back into the labor force, it's unrelated to the state
+of the business cycle. It looks a little bit like
+somebody's heart rate, but without them doing
+much activity in the middle, just bopping along. Then if you break it down, the green line shows you the
+chance of going from out of the labor force directly to
+employment and the red line, from out of the labor
+force to unemployment. What's very interesting,
+you could see a pattern where there is a
+cyclical relationship between transitions from out of the labor force
+back to employment. When the economy stronger
+people are more likely to go directly from out of the
+labor force to employment, we saw that in the late 1990s. You see it in the first recovery in the 2000s and you see it now. But offsetting that is the likelihood of
+people going from adult labor force
+to unemployment. This also shows you why the Goldman Sachs notion that a wave of people
+are going to come from out of labor force back
+into unemployment and obscure statistics on
+unemployment and make us think the economy is getting weaker than it actually is, really didn't have much
+chance of succeeding. We didn't see that
+in the late 1990s, we didn't see it in the
+recovery earlier in the 2000s, and we're definitely
+not seeing it now. Here's some further
+evidence and I think that the presumption that labor force
+participation will make a cyclical recovery comes from a misreading of what happened in the recovery in the 1980s. Presumption is, I think a lot of people did
+that the recovery in the early 1980s was very strong in labor force
+participation rate grew very smartly after 1982
+when the recession ended, but it was growing very
+strongly in the late 1970s. If you just make a linear
+forecast based on the 1970s, 79 trend line, labor force participation
+never really caught up. It stayed about a
+percentage point below where you would have predicted from the
+previous trend line and I think this decline compared
+to the trend was masked by the fact that labor force
+participation was just growing very strongly in
+the early 1980s. I wanted to show you
+this because we did a more sophisticated version of that when I was at the
+Council of Economic Advisers. Jim Stockdale as well before
+probably worked on this where we took
+different subgroups and we looked at the trend in their labor force participation rate and the decade before the recession in
+1980 and a decade before the recession
+at the end of 2007, and we were on different trends. The trend prior to
+the recession in 1980 was for labor force
+participation to grow by a percentage point over the next five years
+and the trend from 2007 to 2012 was for it
+to decline by 2.2 points. If you look at that compared
+to what actually happened, I think I might have gotten
+that a little bit reversed, but if you look at what
+actually happened, we were about a point below what you would
+have projected based on the trends for the
+demographic groups after both of those recessions. Let me make a
+transition now and talk about the Beveridge curve. The Beveridge curve is
+the relationship between vacancies and the
+unemployment rate. As you know, we've seen a very big shift in
+the Beveridge curve in the US 2008, 2009. It's not unusual to have loops around the
+Beveridge curve. A lot of research has shown that when you have a recession, the Beveridge curve
+tends to shift out. Research by Peter, Diamond, and Aysegul, Sahin finds that at the end of a recovery
+you tend to be back pretty close to the
+original Beveridge curve. I've been waiting for us to make a left turn and come back to the original
+Beveridge curve. If you use the short-term
+unemployment rate, the Beveridge curve is stable. I don't want to make
+too much out of this. But on the horizontal axis here, this shows the number of
+workers have been out of work for less
+than half a year relative to the labor force. This is just the
+short-term unemployed. What seems to be the
+case is the shifting out of the Beveridge
+curve coincided with the great increase in
+long-term unemployment. I want to do a little bit more to model the Beveridge curve. I just showed you
+this is background. Also, I should have pointed out, this is looking at prime
+age workers 25-54, because in subsequent
+work I'm going to be looking at workers
+in the same age group. This gets to the technical
+part of my talk. What we did in our
+Brookings paper was to extend the very
+nice work of Kroft. I'm going to get
+all the co-authors, Kroft, Lange, Notowidigdo, and Katz. A paper that's coming out in
+Journal of Labor Economics, where they estimated a structural
+model of job matching. We extend their model
+in two respects. I think their model
+does pretty well for the period that they
+were looking at. How do we extend the model? First, the way that we allow the long-term unemployed to match the jobs is different. I think a little bit more
+natural the way that we do it. Where we have this
+matching function and we allow a lower coefficient for
+the long-term unemployed. In their framework, you can
+think about the long-term unemployed affecting the land in front of this
+matching function. More importantly, we allow for differential flow rates into employment out of
+the labor force for the short-term and
+long-term unemployed. We follow a lot
+of what they did. We fit the matching
+function for 2002-2007. I think it's actually
+important to think about that because there were not extended unemployment
+benefits in that period. This story, if it works, doesn't really rely
+that critically on extended
+unemployment benefits. The model takes account of all the other flows
+you can think of moving from out of the labor force into
+short-term unemployment, out of labor force into
+long-term unemployment, which is not so
+easy to estimate. We focus on prime
+age workers, 25-54, which in a way is making our challenge a
+bit harder because early retirement probably not too much of an issue
+for this age group. I think that's one of
+the ways in which you see the long-term unemployed
+leaving the labor force. But even if we look
+at this age group, this shows you in red for the long-term unemployed out of
+work more than half a year, we find the same
+cyclical pattern that the long-term unemployed
+are more likely to exit the labor force when
+the economy is stronger and weaker cyclical pattern for the short-term unemployed. We estimate the parameters to simulate the path
+of unemployment, the Beveridge curve,
+and the share of long-term unemployed workers. Then we could do some
+interesting counterfactuals, like we could say, suppose the labor
+force withdrawal rate stayed where it was in 2010. How much would we have predicted the share of long-term
+unemployment to decline? How much would we have
+predicted the unemployment rate to decline over the
+last four years? I'm going to use the
+model to do that. Before I do that though, I want to emphasize one of
+the findings that Kroft et al had which I
+think is very significant. What they found is explaining the path of long-term unemployment is not difficult with this
+type of a model. What happened was at vacancies collapsed, the V in the model. In 2008 at the beginning
+of the recession, demand dropped through the
+bottom, vacancies collapsed. That created a lot
+of unemployment. People were initially
+short-term unemployed. Over time, they became
+long-term unemployed. The long-term unemployed have
+a lower match efficiency. That accounts very
+well in their model, which doesn't have a differential
+labor force exit rate for the short-term or
+long-term unemployed. That accounts very well for the rise in the share of
+long-term unemployment and does okay in accounting for the shift
+out of the Beveridge curve. One of the reasons why I
+think the wrinkle that we've added is significant now, but not for what
+they were looking at is the labor force exit
+rate was about the same for the short-term
+unemployed and the long-term unemployed in 2008, 2009, 2010. That started to
+change after 2010. I want to show you
+that we can explain or predict a loop around
+the Beveridge curve. This is just from
+the Brookings paper. The red line is the simulation. Again, using the parameters for the matching function
+from 2002-2007, then using the actual path of vacancies and the
+flows that we observe. It does predict this a loop
+around the Beveridge curve. Although we get back to the
+original Beveridge curve a bit quicker than we
+would have predicted, which is a problem for
+this model in general. The first counterfactual,
+the red line, is our best simulation. This is using the actual path of labor force exits for
+the long-term unemployed. In green, we say, let's not use the actual
+path of labor force exits. Let's keep that fixed at
+the average from 2010. What you can see is if
+labor force withdrawal had been held constant at
+the average in 2010, the share of workers
+who are long-term unemployed would be
+significantly higher. The difference accounts for about half of the decline in the share of unemployed workers who are long-term unemployed. The pattern that we saw, that cyclical pattern of labor force withdrawal for
+the long-term unemployed is of economic significance. It can account for about half of the decline in the share
+of long-term unemployed. What about the improvement in job finding rate
+for the long-term unemployed? Not so much. The green line holds constant. The job finding rate
+for the long-term unemployed at its
+average for 2010. The red line shows
+the simulation with the actual path and
+they're not too far apart. Only about 10 percent
+of the decline in the share of unemployed
+workers who are long-term unemployed can be attributed to the improvement in
+the job finding rate for the long-term unemployed. Now, that's looking
+at the share of those who are long-term unemployed. We also care about the
+unemployment rate. The unemployment rate fell
+in our simulation by 3.9 percentage points from
+January 2011 to June 2015. That's just about spot on what occurred for this age
+group in the actual data. If we do this type
+of a counterfactual, the rise in the labor force
+withdrawal rate accounts or 8/10 of a percentage point. It accounts for about 20 percent of the decline in the
+unemployment rate. It's significant, but
+it's certainly not the lion's share
+of the improvement in the unemployment rate. You know it couldn't
+be the lion's share because long-term unemployed
+only accounted for about half of this
+group so they couldn't account for the full decline
+in the unemployment rate. The job finding rate
+improvement for the long-term
+unemployed account for only 2/10 of a percentage point drop in the
+unemployment rate. Likewise, the increase in the labor force
+withdrawal rate for the short-term
+unemployed accounts are just 2/10 of a point. The improvement in the
+job finding rate for the short-term unemployed
+accounts for 7/10 of a point. Together, these
+factors account for about half of the drop in
+the unemployment rate. The other flows that are really important is what I
+showed you earlier. We've had a decline in
+the number of workers moving from out of the labor
+force into unemployment. That's actually a little bit faster than I think
+one would have predicted from past years. We've also had a decline in movement from employment
+to unemployment. This shows up in lots
+of different ways. Unemployment insurance
+claims are way down. Layoffs have declined. That accounts for the other half of the decline in the
+unemployment rate. Now I said I'd get back
+to the Beveridge curve. This is part of the
+work that we did in the Brookings paper that
+doesn't look so pretty. We made a projection
+in our Brookings paper about the path of the
+Beveridge curve under the assumption that vacancies
+would continue to grow at the same pace they
+had from 2011-2013. That the other flows in
+our model would go back to their average level
+in 2006 by 2016. We thought the labor market
+should be normalizing. Here's a reasonable
+path for vacancies. Does this get us back to the
+original Beveridge curve? Then it gets us close to it. The problem is, what we've
+seen is the red line, which has continued to parallel the original Beveridge curve
+but to be shifted out. Now why were we so far off? About half of the reason
+is that vacancies grew much more quickly than we had projected in the simulation. That's good news. I think it shows
+that the economy is really strengthening. On the other hand, we've also seen a bigger drop from out of the labor force into unemployment than we were projecting in terms
+of getting back to 2016 so that's why we didn't see unemployment drop as quickly
+as we were projecting and we were projecting unemployment
+to drop pretty quickly. We've seen unemployment drop quickly but
+not fast enough. That leaves a big puzzle. What's going on with
+the Beveridge Curve? Is this a sign that the labor market in the US
+is now more inefficient? I have to say I'm
+skeptical of that view. Eddie Luzier did a nice
+paper at Jackson Hole which I think was also
+skeptical of that view. Well, what else can
+explain this path? Part of it I think,
+is a result of the long-term unemployed
+just matching more slowly. But long-term unemployment
+is now down to 26 percent. Pretty soon it
+will be back down, I think to close to normal that will help get us closer to the
+Beveridge Curve, but not all of the way. I was initially
+skeptical of some work that Steve Davis and John
+Houghton Wagner had done, which argued that
+vacancies might not measure the same thing
+today that they used to, maybe companies are
+not advertising as intensively or
+really searching, maybe they're too choosy. The longer we wander away from the original
+Beveridge Curve, the more likely I think that explanation may have some force. But I want to show you
+another projection. I'm not giving up yet on getting back to the original
+Beveridge Curve. What we do here, is assume that vacancies stay constant at their
+most recent level, which was May 2015, and then all the other flows also stay constant
+at their June level. Now you may remember in June, the unemployment rate dropped two tenths of a point so I
+think this is a bit rosy. But under those assumptions, we would return to the original Beveridge
+Curve by the beginning of 2017. We'll see what happens. I can skip over the summary. Let me turn to the
+Phillips Curve. I'm going to briefly talk
+about Price Phillips Curves, but I want to focus on
+Wage Phillips Curves because the focus of my lecture is on how
+tight the labor market is and I'm going to
+avoid money illusion. I'm going to focus on
+expected real wage growth. The model I have of
+the labor market is around the
+beginning of the year, companies and workers decide or bargain over pay increase
+for the coming year, they're concerned
+about real wages, they don t know what
+inflation is going to be. Last year's inflation rates are pretty good estimate of
+next year's inflation rate, so in much of the work
+I've done previously, I've used last year's
+inflation rate as the estimate of inflation
+in the coming year, that's also fairly
+common, I think, in the macroeconomics
+literature. Let me talk about some
+aggregate Phillips Curves and then some state-level work which is some of which is new. This shows you the
+Price Phillips Curve. On the left, the total
+unemployment rate is on the x-axis, and the change in the core PCE. PCE stands for Personal Consumption Expenditures
+index is the y-axis. It's the acceleration version, or you can think of the
+previous year is the expected. On the right, the dependent
+variable is the same, but it's just the short-term
+unemployment rate. You can see that the
+relationship is more stable if you use the
+short-term unemployment rate, although there's not
+a whole lot of data. The dash line shows you the 95 percent
+confidence interval. There was a puzzle
+in 2009, 2010, '11. Why weren't we seeing deflation given how
+high unemployment was? But if you use just the
+short-term unemployment rate, we looked like we were about where you
+would project to be. A lot of people have done these time series estimates and argued that long-term
+unemployment matters less. The long-term unemployed put less pressure on the job market, I would say consistent
+with the fact that they're on their way
+out of the labor force. James Stock did early
+work in this area, Rob Gordon, Mark Watson, there's an older
+paper looking at many OECD countries
+by Ricardo Llaudes. Then there are
+alternative views. Ben Bernanke when
+he observed that inflation wasn't
+dropping as much as you would expect from
+the Phillips Curve argued that inflation
+expectations are anchored. Ball and Mazumber and
+Akerlof, Dickens, and Perry have argued that
+the Phillips Curve is convex. Then, most recently
+the Fed Minutes argued that nominal
+wages were rigid. Let me talk about wages. Here's a prototypical
+Phillips Curve I'm going to show you you've got the percentage growth
+in wages in period t, less inflation in
+the previous period. Relate that to the
+unemployment rate in your t. Sometimes I'll break
+the unemployment rate into short-term, long-term. Sometimes I'll show
+you a wage growth for different deciles. In fact, Larry Katz and I had a paper which I think of as the conventional wisdom coming
+into the Great Recession. Larry and I had a Brookings
+paper called The high pressure labor market
+and the 1990s, where we estimated
+those types of Wage Phillips Curves by decile. Then we calculated what is the unemployment rate
+threshold at which you start to see expected
+real wages grow. Larry came up with a
+brilliant term; URZERCG. Unemployment rate
+associated with zero expected real
+compensation growth which is not done as well as
+narrow but remarkably, you see for each of the deciles, that threshold is around
+5.6, 5.7 percent. Prior to long-term
+unemployment jumping up, I would say that the
+conventional wisdom in the economics field was
+that you start to see expected real wage growth
+when the unemployment rate gets down below
+5.6, 5.7 percent. For the median interestingly,
+it was a little bit lower, although I'm sure it's not
+significantly different, 5.4 percent. Now, two months ago, the unemployment rate was
+five-and-a-half percent. By this logic, we should be expecting real wage
+growth right about now. I think we're seeing
+it a little bit earlier than right about now, my next contribution in this area was a table that
+was not published as part of my Brookings paper
+with Cramer and Cho where we estimate the
+same Phillips Curves that others have
+done for prices. and we just divide up
+the short-term and the long-term unemployment
+rate and you see you get a much bigger coefficient on the short-term
+unemployment rate than you do in the long-term
+unemployment rate. Short-term unemployment rate is highly statistically
+significant. Long-term rate is
+not insignificant. Test of the difference is
+highly significant even with not too many
+time-series data points. Now that created a
+bit of a controversy, I want to show you that
+it's actually held up okay. This chart shows you the
+Employment Cost Index, which I think is the best
+measure of wage pressure. The Employment Cost
+Index was designed to be just like the
+Consumer Price Index. BLS goes back to the same firms, they ask about the
+same work groups. This shows nominal wage growth from the ECI, a 12-month change. You can see over
+the last 12 months, the ECI is up to 2.8 percent nationally and it looks like
+a bit of an upward trend. More importantly, for
+the way I model things, this subtracts off the previous year's
+core price inflation. Here we're seeing
+real wage growth, expected real wage
+growth of 1.5 percent. If you looked at
+real wage growth, it's actually stronger because
+inflation was so low in 2015 and that's the strongest that we've seen
+over the last 15 years. This shows you on the left, the Phillips Curve, which is fit from two, from 1978-2008 using the
+total unemployment rate, and on the right,
+using the short-term unemployment rate. Realized ECI is certainly within the 95 percent confidence
+intervals and if you use either one it's within the 95 percent
+confidence interval, if you use the total
+unemployment rate, it's actually stronger
+than you would predict. If you use the short-term
+unemployment rate, it's basically
+right on the line. Now, I don't want to make too much out of the time series data because I'm a labor economist I'll come back to
+that in a moment. Now, you could say, well, maybe I cherry
+picked and the ECI shows the strongest
+growth, which is true. This shows our average
+hourly earnings. Again, subtracting off the previous year's
+core price inflation from the CES survey, the BLS establishment survey for production and non
+supervisory workers. Also in the first
+half of this year, the rate of wage
+growth has picked up. Not as strong as in the ECI, but we're seeing
+real wage growth from the average hourly
+earnings as well. I should also point
+out that this is a very flaky series. It was a real
+puzzle in the 1970s or in the 1980s and early 1990s. Why this particular series was showing such
+little wage growth. This shows you the
+Phillips curves using the CES data and there's
+really nothing alarming. If you look at the
+graph on the right, it looks like if you made a projection based
+on the Phillips curve, you'd be reasonably accurate. Now this created a
+whole cottage industry of state-level Phillips curves. I think the logic is you get a lot more
+variability if you could use a time pattern across the states as opposed
+to just nationally. Now, whether that's
+appropriate variability or not is a question that's
+not addressed much. This is a good
+headline to wake up to from The Wall Street Journal and I've actually found
+six different studies that the regional economists at the regional Feds and the
+Board of Governors have done, and really they're at
+odds with each other. The first one listed here is by two economists
+at the Dallas Fed. They're estimating wage
+Phillips curves where they put at state level, state by year using CPS data, where they divide up the short-term and long-term
+unemployment rate. I highlighted in green
+estimates that are consistent with what I found
+in the macro time series. The short-term unemployment
+rate is significant. The long-term unemployment
+rate is insignificant. If you have trouble
+reading the details, when they use average wages, they find the short-term unemployment
+rate is significant. That's why it's green and
+long term is insignificant. If they use change
+in the median wage, they find that both coefficients are significant and about
+the same magnitude. The second paper was done by economist at
+the New York Fed. The third one, The Federal
+Reserve Bank of Chicago. The fourth one, by Kylie, was from the Board of Governors. His dependent variable is the growth in the
+CPI within the SMSA. I have a lot of concerns
+about whether inflation is determined by local
+economic conditions in price inflation
+or nationally, since a lot of our product
+markets are national. I'm also worried that calculating the short-term
+unemployment rate and long-term unemployment rate for SMSAs and then controlling for SMSA dummies and time dummies doesn't leave you
+much variability, but does leave you
+a lot of noise. At the state level.
+I've actually convinced myself that there's
+enough signal with the sample sizes in
+the CPS that you can identify short-term and long-term unemployment effects. The fifth one by Smith looked at wages,
+also Federal Reserve. Number 6 is from Higgins
+at the Atlanta Fed. Looked at average
+hourly earnings. I'll let others comment on
+whether you could predict what these studies might find by what the heads of
+the regional Feds, whether they're considered
+to be hawks or doves. I did my own analysis and
+what I found is consistent, I think with those
+previous studies in that you get somewhat
+different result if you use the average hourly
+wage as opposed to the median wage and it's a
+little bit of a mystery why, and the results are sensitive to how the states are weighted, how the wage is calculated. Some of the earlier papers use the wage measure that
+didn't include overtime. I think that's a bit of a concern if you're
+want to look at how a stronger economy
+affects wage growth. Anyway, I get results that are very similar to the
+Atlanta Fed and the Dallas Fed and also I suppose to the
+Board of Governors, because if you use the median, you don't get a
+difference between the short-term unemployment rate in the long-term
+unemployment rate, at least not a statistically
+significant difference. The time effects, by
+the way, don't have an enormous effect
+on these results. I'm not sure you've actually
+gained all that much by using the state did and absorbing the
+aggregate time effect. Now one might say, well,
+why would it be that a lower long-term
+unemployment rate helps raise the median wage, but not the average wage. Well, it's possible that the long-term unemployment
+rate matters more for the median worker than
+it does certainly at the top end because people at the top end don't suffer
+much unemployment at all. Next I look by decile and that story
+doesn't work so well. If you look at the
+10th percentile, the long-term unemployment
+rate doesn't matter at all. I'm not entirely sure
+what's going on. We do get something
+of a difference between the median
+and the average. I think for monetary policy, you should care
+about the average. If you're worried about
+wage growth being associated with price
+pressure and price inflation, that's an issue for the
+average now for the median. But that's something I'm
+happy to discuss further. Let me briefly
+comment on policies. One of the overriding
+lessons I take away from this research is we want to avoid the problem of
+long-term unemployment. Long-term unemployment can have hysteresis
+type of facts. I think the US labor
+force participation rate will be for a long time, lower than it otherwise would be as a legacy of the
+Great Recession, probably around a
+percentage point. Also, I think that causes
+whatever economic harms that causes pales compared
+to the costs to the individuals who are going through that type
+of a situation. I think one would want to use overwhelming force to avoid the problem in the first place. Second, I think it's
+cyclical recovery where industry specific
+policy would not be sufficient to solve the problem. The reason why I say
+industry-specific policy would not be sufficient, the long-term unemployed
+or a big concentrated in construction and a bit
+concentrated in manufacturing, but they're spread
+throughout the economy. That leads me to
+think more about targeted policies to help
+the long-term unemployed, particularly early
+on in a recovery, like a tax credit
+for employers to hire those who are
+long-term unemployed. Perhaps direct employment,
+public service employment, or supported work for private sector companies
+to hire the long-term unemployed to avoid the
+histories effects, volunteering. I think part of the
+phenomenon that we're seeing comes about
+because of the long-term unemployed
+become isolated, their skills atrophy, and if they volunteer, some research has shown that
+they make new connections, they learn new skills
+and that could help them find a job. Job search assistance
+has typically been found to be effective
+in the US to help many groups of
+workers find employment. One interesting ideas to have a probationary period of
+employment for the long-term unemployed where the
+unemployment insurance office pays for the compensation for the employees over that period. I think wage loss insurance
+is worth considering, especially for older
+long-term unemployed workers. But now I think the problem has gone on for sufficiently long. We need to think about it
+more as a structural problem. I think that leads us to think about the types of policies that could address the
+structural decline in labor force participation. Family-friendly policies
+that might help to encourage more women to
+join the labor force. It's maybe one reason why
+many European countries have had rising labor
+force participation of women compared to us, perhaps disability
+insurance reforms. Hopefully I left some
+time for questions. Just summarize by saying, I think we're seeing the
+economy continue to improve, the labor market
+continuing to heal. I think that process
+is likely to continue. I think it will
+probably slow down because a good part of the
+drop in unemployment by no means all but a good
+part was from the long-term unemployed leaving
+the labor force and that ought to slow down. Also as the unemployment
+rate gets lower, It's hard to imagine how we are going to be
+able to continue growing at 220,000 jobs a month. I think it's very
+important to consider the cyclical pattern of labor force withdrawal for
+the long-term unemployed. I remain skeptical that
+we're going to see a wave of labor market dropouts
+re-entering the labor market. Now I think we have a
+structural problem on our hands and I am pleased to see
+stronger real wage growth. I think the US has gone for too long with weak
+real wage growth. This may indeed
+affect labor share, which has fallen to
+historically low levels. I suspect we're going to see a continuation because I think the labor market is just below the point where one would expect to see real wage growth. 

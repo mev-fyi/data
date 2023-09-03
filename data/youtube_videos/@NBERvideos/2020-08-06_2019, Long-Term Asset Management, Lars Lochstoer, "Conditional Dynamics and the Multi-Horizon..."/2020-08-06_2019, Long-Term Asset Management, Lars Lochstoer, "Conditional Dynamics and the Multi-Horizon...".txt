@@ -1,0 +1,410 @@
+Lars A. Lochstoer: This
+paper was motivated exactly by thinking about long
+term asset allocation and long-term investment. Basically, when you're starting to think about those issues, there's a couple of things
+that are immediate. Number 1 is, it's got to be about conditional dynamics
+of the return [inaudible]. Everything is IID. The long run isn't any different than just a simple
+sequence of short run. That's not a particularly
+interesting thing. The second thing
+is it's incredibly difficult. It's very difficult. Part that's difficult actually analytically to get solutions, but empirically, it's
+a tremendous challenge because we know
+we have to try to estimate conditional
+expected returns and maybe a high
+dimensional state-space. I'd say very
+complicated exercise. As a result, I think
+it's pretty fair to say that most researchers are very often that these
+researchers and practitioners resort to tools, developed more of a
+myopic situation. For instance, just like one month mean-variance type problem is something we see
+again and again. What we're going
+to think about in this paper is going to flipping the perspective a little bit. We're going to say, well, this is all very difficult stuff. But one thing we could think
+about doing is looking at returns at
+different frequencies. If you're a one-month investor, that's your horizon, you're interested in one month returns. But maybe for one year
+or two year investors, you would really want to look at two-year returns, for instance. The idea of why that
+might be interesting, and we're going to call
+those different frequencies. We're going to look
+at them jointly, not just one at a time. We're going to call them
+multi-horizon returns. There's MHR, acronym
+is going to pop up. The reason to testing on or thinking about those things and unconditional moments of multi-horizon returns
+are interesting is that they will reflect conditional dynamics
+and an example that we used in the literature. We're not just going
+to do that obviously, would be variance ratio. At the market
+level, we know that the variance ratio
+measures unit per time. As you increase the horizon, various ratios tend often to go down because of meaner version indicating long and
+investors might be willing to hold more equity. Here's what we're going
+to do in this paper, we're going to use
+multi-horizon returns to test asset pricing models. What we're going to
+do is to take a bunch of models, standard models, and we're going to
+frame them in terms of a stochastic discount
+factor because I know how to accumulate the stochastic discount
+factor over time. I just multiply them together. What we're going to think
+about is in that setting, what does multi-horizon
+returns do for us? It is going to be a
+conditional test of the model. I'm going to show you that very explicitly as a general point. We're not going to talk
+too much about this, but we're going to
+develop a way to estimate a particular GMM
+estimation technique where we use multi-horizon
+returns to the input. We're going to argue that
+this is informative. Just to give you a flavor
+of why it's informative. Think about a model
+has a small error, but it's a persistent
+there, and so, now, as you make that
+error over two years, it can become a large error and that's what we're going
+to exploit at some level. The application we're
+going to have is linear factor models. This is our null.
+I'm going to talk about alternative later on. The M is the SDF and then a minus b are
+some coefficients, the a parameter is effectively matching the risk-free rate. The b can be a vector of coefficients and F is
+some factor returns. If you want to think
+about F is like the HML, SMB and market factor
+or Fama-French, that'll be an example of that. That's going to be the set of models we're going
+to think about. In that set of models, we know that b times F is supposed to be
+unconditional MVE portfolio. That's the classic. This is the SDF version of that. We're going to find pervasive
+misspecification in basically all the standard
+models that can lead to, in some cases, large
+long run pricing errors. Then in the second exercise, we're going to think
+about an alternative. How could we fix it? We're going to add these
+motorized and returns to actually say something about what type of conditional
+dynamics we're going to show up as a^T and b^T and this
+coefficient can be time-bearing. I'll explain why exactly. That's going to be
+very interesting, is going to give
+us some sense of some puzzling
+features of the data. Let me just spend
+two slides exactly delineating what adding multi-horizon
+returns does for us. Number 1, conditional
+law of one price. We all know that just a
+notation t minus 1 comma t. I'm just highlighting here
+that we're going to think about the maturities
+or horizons. Here's the exercise I'm going
+to go through right now. Think about the
+second bullet here. Think about a candidate
+stochastic discount factor that prices a set of assets unconditionally and R
+here is our gross returns. Now, I'm going to ask
+the following question, which is the final bullet. What do we gain by looking at, let's say it was
+monthly returns, let's think about
+two months returns. Now, what does that bias? If you look below, that's how you would gross up the discount factor to M so
+just multiplied together. Returns are here gross returns. If you want to think about HTML, I'm just going to
+take HTML and add the risk-free as it goes for it because that'll be
+my gross return. That's how you would do
+that. Should still be equal to one if this is
+the right model. Now, I'm going to do something. The first on the
+left-hand side here, it's the same as before is a
+two-year MR. Tooth months, I should say MR condition. I'm just going to do the usual thing where I say if the expectation of X times
+Y is the expectation of X times expectation of
+Y plus the covariance. That's what I have on the right-hand side
+of that equality, and so, that's the expectation
+of the one-month return, t minus 1 to t times
+the expectation of the one month return again, but from now from t to t plus 1. If that model works by
+covariance stationarity, both of those things
+are equal to one. Then I get a covariance
+term which says, well, if I want everything
+here to be equal to 1, that covariance needs
+to be equal to 0 and then the covariance is M_t minus 1^t R_t minus
+1 MR should not co-vary then with M^t
+plus 1 times R^t plus 1, and that just says you
+shouldn't be able to predict M times R.
+That's a very baseline. M times R should be an
+expectation always equal to 1. You can't predict it. That's just what
+we're going to check. We're going to check
+if the pricing error, if you will, is going
+to be predictable. That's the same as unusual as what the second
+bullet here is saying. It looks a lot like,
+if you remember Cochran's textbook
+when you're talking about an instrument and GMM, you said this is ZT
+his put in and that's the instrument that could tell us about conditional dynamics. It looks identical except the instrument here is
+endogenous to the model. I didn't pick it out of a hat or come up with and having
+looked at the data, it isn't over
+identifying restriction that comes from the
+null hypothesis, which I'm free to impose and we can see it might
+not be informative. It was very noisy
+and not useful, but at least it's a modeling
+application we can test. Just one quick note. We're going to look at
+the multiple horizons. We're going to look
+at horizons 1, 2, 3, 6, 12 and 24 months as it were. What you get when you do this
+GMM type tests are you get overlapping observations, and that's not a
+great thing if you want to think about spectral density matrix and
+these type of things. What we're going to
+do is we're going to use this trick we're using here to write a two period one in terms of the one-period top plus
+the covariance term. Because the covariance,
+we can always think about predicting one period
+ahead pricing error. We go through this in more
+than a paper but it's a very nice thing because our moment conditions under null, they will not be autocorrelated. This is important for
+the size of the test. In fact, we also do a
+Bootstrap version here to account for some
+nonlinearities that might be important. That's a technical issue, but that's how we're going
+to implement this. The data on the models,
+and like I said, is going to be linear
+factor models. The data we're going
+to do a bunch of standard model is like
+the standard CAPM, we're going to add
+a betting against Beta type factor constructed
+from Ken French's data. We're going to do the FF3 and FF5 in Fama-French 3
+and 5 factor models. Actually, I forgot to add. I was going to add
+[inaudible] to one of them. We're going to think
+about the camp Daniel and co-authors have a new version of the
+Fama-French factor models where they hedge out industry risks and those have way
+higher sharp ratios. These are very fancy, very high sharp ratio models. We have volatility managed Fama-French five-factor
+[inaudible] . We have this dumbbell in
+Yuan model four-factors. Two of them are new
+capturing some mispricings. It's a roster of models. The sample is a usual
+samples '63-2017. The test assets. Let me just mention this, the test assets are the
+gross risk-free rates. The base horizon is monthly, the gross risk-free rate, then it is excess
+returns factors of the model itself.
+Let me explain that. Let's say you have
+the market factor, you can try to
+explain the market; the one-month horizon, but you can also
+try to explain it up to two months horizon,
+or to three months. You accumulate up
+the gross return to the market for three months and subtract off
+the gross return to risk-free rate
+for three months. That's the excess return. Why do we use those
+as test assets? Well, we do that because
+now I know that trivially, the alternative where At and Bt in this stochastic
+discount factor, is to our time-varying
+that alternative can price that model conditionally. The factors can price themselves conditionally if I
+allow At and Bt. I know that there exists
+a model with time on At and Bt that prices the
+long horizon returns. That's why we set
+it up like that. I think I mentioned,
+but horizons are 1,2,3,6,12, and 24 months. We're trying to get at a
+reasonable set of months. Before we start here, they're a little small
+here on the screen, but I want to show you
+some summary stats of these factor models
+which are going to inform where we're going here. The plots A, B, and C are autocorrelations
+cumulatively over months. The x-axis is from 1-24 months. There's a bunch of lines
+here, but that's okay. I just wanted to give
+you a general sense. I wish this thing
+doesn't exactly work, but if you were looking
+at the top-left, the blue line is the
+cumulative auto-correlation of the market from 1-24 months. It's basically
+hovering around zero, positive a little bit, until about 18 months so it
+starts going negative. That's the market, but
+it's hovering around zero. If you start looking at
+the other factors there, that's the Fama-French
+Five-Factor Model, they're way more positively
+auto-correlated. You start getting a lot of
+positive auto-correlation. The scale is the same
+on all the three A, B, and C plots. If you go to the DMRS
+factors that are just industry and other risks hedged Fama-French factors, the auto-correlation
+is way higher, meaning that you're
+getting a ton of dynamics there, and
+that's a warning sign. If you want to invest
+for a long time and there's a ton of dynamics, you've got to pay attention, not for all factors, but
+for some of them. The bottom there
+is betting against beta and this time by yuan,
+so it's about the same. The bottom right is the
+variance ratios for the MVE, in the sample MVE mean-variance efficient
+combination of the factors. I just want to
+summarize the model. For the market, I know the following
+about a variance ratio. It goes up a tiny bit above one as it increases
+their horizon, then it starts falling at
+about 18 months to two years, as you have been in
+reversion kicks in. These other models, the
+market is basically hovering around that
+straight line at the bottom. The other model
+is, for instance, the DMRS model gets
+a variance ratio at a 24-month horizon above two, meaning that if you hold
+statically rebalanced back to the MVE combination
+of those factors if you want to do
+that for two years, you're going to take
+twice as much variance per unit of time as
+someone who's doing this. That might be a problem. Here we've got to pay attention. But so anyway, that's just
+some motivating plots. Let me show you, again,
+this is not a formal test. Let me show you what
+happens if you calibrate each model at the
+one-month horizon where the factors
+price themselves. Then you look at
+pricing errors of the factors at
+horizons 1-24 months. We don't go that far out of
+time because we want to have 30 independent years in our
+observations I should say. Again, the scale is hard to see here, let me explain this. On top, I define a
+pricing error is the m times r minus rf. It
+should be equal to zero. The scale of that investment is $1 because it's a gross return. If you look at the
+top left here of market plus BAB,
+you start at zero. There's no pricing error
+at the one-month horizon. Trivially, if you go to
+the 24-month horizon, which is the amnion, look at the red dotted, dashed line here. That's the betting
+against beta factor constructed with
+Fama-French data, the pricing error is the
+order of 20 percent. Let's annualize it to 10. If you're trying to
+explain a risk premium of 6-7 percent in the pricing error or annualized is
+about 10 percent. That seems it might,
+maybe it's just noise, but maybe there's
+a problem here. Stambaugh Yuan, they go up to 40 percent for some factors.
+Some factors are fine. The market tends to be more
+fun on the other factors. Fama-French or certain
+factor investment, etc, seems to have a
+lot of these dynamics. DMRS, the same thing, you get these really big for some factors pricing errors. Here's what we do and
+I'm just going to show you the end result of our tests. We're going to formally test this with this GMM approach, this Bootstrap standard errors, and we're going to
+do it in two ways. The red bars are for a bunch of different
+haemolysis p-values. We're going to estimate on the one-month horizon and then we test on the other
+horizons formally. You can do that. The other one, the blue bars are
+where we estimate the constant parameters of the model on all
+horizons jointly. Just to see if it could
+perhaps still out-price it. The answer is on the
+left, you see the market. The market is not rejected, because the market
+prices itself. We're referring to
+other horizons. But basically, all
+the other models are, by and large, they're rejected
+at the 5 percent level. A couple of them
+that sneak above, but they're all rejected. Statistically
+speaking, we reject these models when they're trying to account for
+themselves at other horizons. Then we do something puzzling
+because, statistically, you might think that if I
+increase the complexity of my model, it makes more errors, but economically, I think you
+might expect the opposite. If the sharp ratio of a model, the maximum sharp ratio
+of a model increases, you should be getting
+closer to the MVE portfolio and that should be
+the right thing. You would maybe think
+that as this max sharp is on the y-axis. As that increases, we get closer to the MVE portfolio,
+which should maybe have smaller pricing
+errors on average on the test asset which are
+the factors themselves. If you press me, I'm pushing a line
+through these points. It looks like it's
+going the other way. The higher the sharp ratio is that the multi-month horizon, the higher the pricing errors are at the multi-period horizon. At least, from that perspective, that's
+somewhat puzzling. Just a brief slide on this. These GMM tests always make
+some people uncomfortable. One thing we're doing
+is we're just doing a GRS test as well, which isn't formally a test of long horizon moment
+but I'm just asking, hey, can I use
+these instruments? The instrument here
+is the z, m times r, that's a factor return
+going h periods back. I estimate the MRIs is
+going h peers back. Can I use that to manage to return to the original factors? This is all in the paper but I can run a standard GRS test. The outcome is, we'll reject all the models in this case, except actually Fama-French
+Five volatility managed is not rejected. Although if you ask it to press the original Fama-French
+Factors, it still is rejected. How big is the
+rejection economically? We're using the information ratios you get from those tests. McKinley has this small
+sample adjustment to get an unbiased
+information ratio. The information ratios
+that are left on the table are on the
+order of 0.5 annually. It's a reasonably big number, that's left on the table. Then the question is, what's going on at some level? How are these models failing? The way we set up the test, there is a conditional model which is the second line here, where a_t and b_t
+are time-varying. That one, there exists such a model that
+prices the assets. We're going to use
+multi-horizon returns to help estimate these b's and then the a_t is going to be nailed using the
+conditional risk-free rate. We're going to get
+that out there. If you apply the
+conditional law on price, you have this expression
+here that b_t effectively has to be
+equal to the expected factor return divided
+by its variance. Risk-free rate is also
+there, that was not a big deal, divided
+by its variance. It was never the case that actually these models
+assume IID returns. They didn't do that,
+but they assumed that expected return of
+variances line up exactly. They've got to be proportional. The fact that we reject means
+that they don't line up. That's what it really means. Now, we're going to
+look at what does this variation look like? What we do, and this is a hard problem if you
+have multi-factor models, we're going to take a
+couple of shortcuts here to just illustrate, we're going to look at
+the MVE combination of any given factor model. Take the in-sample MVE combination and just
+look at that one. It's every model is a
+one factor model now. Then we're going to
+get an observed b_t. We could estimate the
+conditional variance using an EGARCH on
+that one model. That's reasonably accurate. Then we do the
+realized MVE return. It's a noisy signal of
+what b_t should have been. Then we're just going
+to project it on an AR-12 type thing. I want to restrict
+some parameters here. I'm going to just make
+the two first lags. I'm going to allow
+for some first and second-order
+autocorrelation, and I'm going to have the
+same coefficient on Lag 3-12. I just want to reduce a little
+bit and get some of them. That's the returns or
+these realized b_t's. We also add in the
+conditional variance as a potential
+explanatory variable. Then we take the conditional
+expectation of this thing. What we're going to do is we're not going to run
+a regression here, we're going to let those
+coefficients be estimated by long-run returns
+because we want to ask what is the information
+in long-run returns? It could be some very
+short-run IID dynamics that long-run returns
+are not so sensitive to. The first thing that
+happens if you do that, the red bars are our p-values again for the constant b case, and then the blue bars are the p-values for
+the time-varying b. The point here that you
+should take away from this is that, generally
+speaking here, we do not reject anymore
+with our new specification. I'll show you what these
+look like in a second, but just to give you a sense, I can construct now the optimal timing of this MVE factor given
+my estimated b_t's. I'm just doing this here
+and I compare that to the Sharpe ratio of the MVE portfolio with the
+constant b_t's, which is the blue
+versus the red, and then the information ratio, what's left on the table from R. What you should observe, you should really look at
+the blue here, which is the information ratios
+of the rejected model, which is everything except
+for the CAPM effectively, are in the order of 0.6-0.8. That's how we can improve
+on this MVE portfolio. It's consistent
+with the GRS test and that's the economic
+magnitude we're going for. What does it look like?
+Instead of plotting the b_t's, we decided to plot
+the prices of risks, the conditional Sharpe ratio. That's the b_t times the standard deviation
+of the factor. That's all this, but
+it looks the same. It's just a little bit
+more interpretable. What this plot is, is
+actually just the average. It's the first principle
+components across all models. It's just a straight
+average price of risk across all models. We just want to get at
+the big picture here. The average price of
+risk here is 0.7, 0.8 across all these models. Obviously, it varies.
+The yellow bars are our NBER
+recession indicators. Something you can see here is that it looks like
+the price of risk, the maximum Sharpe ratio, conditional Sharpe ratio
+of these models is low in recessions,
+which seems awkward. Not all recession. The 2,000 recession seems like
+it was high actually. That was where these models would predict a very high one. It looks like maybe there's
+something going on here, which we have to think about. Now, let me do it a
+little bit more formally. I regressed this thing
+on a recession indicator on the conditional variance
+of the market portfolio, on the dividend price ratio
+on the term spread and on the cross-sectional spread and Betas from the betting
+S Beta for portfolio. All I wanted to see
+is that is there some relation between the conditional
+risk prices gotten from those models and some notion of cross-sectional
+variation and some characteristic? We
+would just Beta. We could have done
+the value spread. I did something else
+maybe. What do you get? The recessions are statistically significantly negatively related to the
+conditional Sharpe ratio as given by these
+long-run returns, and that doesn't really depend on the other
+variables here, that's a pretty robust fact. The cross-sectional
+heterogeneity, how much spread is there in Beta is actually positively related. I'm wishing we had the
+value spread in here now. It makes some sense to think that maybe the price
+risk gets high when there's a lot of difference
+in the cross-section. The market variance, the
+conditional variance of the market is negatively
+related to the price of risk. The consistent with
+my radar on your type thinking that what's going wrong here at some level
+is that in recessions, maybe this variances spike
+and expected returns just don't go one for one
+with the variance. It is weakly positively related to the
+dividend price ratio. That is not particularly
+robust, actually, depending on the
+regressors and by itself, for instance, it's
+insignificant. What is robust seems that it is positively related
+to the term spread. That's consistent with
+somewhat similar models. The R-squared is only
+9.6 percent, though. There's very little. There's ton of variation that
+we're getting here. Maybe some of that is
+noise, it could be, but there's a very low
+R-squared relative to the stuff we're
+used to seeing. At least, this exercise
+indicates that there is some puzzling dynamics of the conditional risk price
+from this standard models. That's basically
+our paper as it is. As we conclude, the
+literature typically thinks about one horizon at a time
+and that's totally fine, and if you've got
+that exactly right, there would be no valid
+looking at multiple horizons, but we're seeing that if you don't have
+it exactly right, looking at multiple
+horizons at the same time is a conditional test
+of the model as it. What I like about it too is
+that we just use the model. We're not adding
+additional assumptions, no auxiliary variables
+are introduced, and they are all informative because
+we're going to reject state of the art models with relatively high
+information ratios. They're only asking themselves to price themselves,
+so to speak. I would say, if I was to say something about the estimates of the conditional price of risk, they don't obviously look like
+what I would have thought it would look like from
+a classic risk model. We have substantial variation. Risk prices went from zero, negative 25 Sharpe
+ratio to positive 2. There's a ton of variation
+of the Sharpe ratio. It tends to be low in recessions and is low when
+market variance is high, which most models would
+obviously give you the opposite. It is positively related
+to the term spread, but that said, most of the variation is not accounted for. 

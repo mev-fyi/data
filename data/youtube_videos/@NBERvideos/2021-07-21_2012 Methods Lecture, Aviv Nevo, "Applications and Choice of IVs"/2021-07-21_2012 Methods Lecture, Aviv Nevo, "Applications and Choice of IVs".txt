@@ -1,0 +1,1324 @@
+Aviv Nevo: What I'm
+going to do now is I'm going to talk about
+several applications, and before that I'll
+talk a little bit about the choice of instruments. Before we say, here's
+the analysis that we do conditional
+having instruments, and now I'm going to
+give you some examples of what the literature is used, talk both the pluses and
+minuses of these instruments, and then now we'll go
+specifically talk about three different papers
+where we'll look at exactly what they did
+and look at some of the numbers and talk of the
+instruments through that, and I think that would
+be a great time to raise various questions and issues
+of how one can deal with. The papers I'm going to talk
+about is the original law, the BLP paper and looking
+demands for autos, then a paper by Penny Goldberg on the same issue
+of Econometrica, and then I'll talk about
+then on my own work on breakfast cereals. I said some of this we basically talked about the estimation conditional on
+having instruments, and then we'll talk about
+where these instruments come from and see several
+applications. Before talking
+about instruments, let me just emphasize this, because I said this before, but I want to emphasize again
+that instruments here or the moments actually
+have dual roles here. One is we actually
+need to generate moment conditions to identify
+the non-linear parameters, and the other is to deal with the correlations between
+prices and the error term. Let me actually show a specific example in the
+case of the nested logit. A nested logit, remember we were saying that there is a couple of examples where we can actually do the inversion analytically. We saw what it looked
+like in the logit. The nested logit, which is just a, I'll talk a little bit
+more about it later, but it's basically what
+you do is you separate the products and put them
+in nest or in segments, and you create a
+correlation structure, you say there's a
+nest wide shock, and then there's still
+this Epsilon IID shock, and you put a
+particular distribution on the common shock, and that's going to
+give the nested logit. Well, in the nested logit, what you have is you
+have exactly the same as in the logit, so you have this
+X_jt Beta, Alpha, pjp and Psi, right exactly what
+we had in the logit, plus this additional term, which is just the log of
+the within segment share. This is the share of product
+j within the segment, segment G or group G.
+That's the difference. Unlike the logit where there's
+no non-linear parameters, not endogeneity,
+here there is one. Here which basically
+tells you if you want the relative importance of the variant of the nest shock. That's what this row is. In this case,
+suppose for example, the P's and the X's were
+completely independent of Psi. If we didn't have this term, we can just estimate
+this with OLS. But once we have this term, we can assume it's independent, but that wouldn't make sense
+because remember in here we have the share as we do here. This is the share relative
+to the outside good, and this is the
+share relative to the share of the segment. If you get a high Psi, that's going to impact your
+share within the segment, unless it's a very,
+very special case. But in general, it's
+going to impact. This is, if you want, a correlation that we
+really can't get away from. It's not just saying,
+well, prices will preset or were determined
+by some experiment. It's almost impossible
+to think of, when would this not be
+correlated with the error term? Therefore, we need an
+instrument for this term, even if prices and
+characteristics were varying randomly. That's what I call
+the second rule, and it's very easy to see in this case because we can write out what the Delta is. But in general in the general
+random coefficients model, we can write out the Delta, but it's exactly
+the same type of problem is the fact that we need a moment condition to identify the parameters of the
+nonlinear parameters. We can't just use non-linear
+least squares here, it will be linear
+least squares because exactly this problem
+that what we'd have is a derivatives that
+non-linear squares would actually have shares in them, and therefore endogenous terms. That's another way
+of saying this. What we need is we need instruments for the
+non-linear terms. Now, price endogeneity, interestingly, which is a lot of the motivation that we want, a lot of times we can
+actually handle it in other ways not using instruments and we'll
+see some of that, and that's basically, especially if we
+have repeated panel, if we want to put some
+structure on this, sometimes we can put enough
+structure on it to say, well, whatever
+residual variant is left in prices,
+that's exogenous. You could say, well,
+suppose you have repeated observations of shares, maybe we could put a
+product fixed effect to capture the unobserved
+product quality, and whatever is leftover, maybe that is exogenous
+for the price endogeneity. We'll see examples of that. With that in mind,
+let's go and see what people have actually used. Let me start what I
+think is probably by far the most commonly
+used instrument, which is to look at competition and
+characteristics space. The assumption is the following. We're going to assume that
+the expected value of Psi, the unobserved characteristics, is mean independent of the
+observed characteristics. It's maybe hard to see,
+but the X is boldface, so it's actually the
+vector or a matrix of all the characteristics of all the products in the market. We're saying all the
+observed characteristics are mean independent of the
+unobserved characteristics. We'll talk in a second what that means or what
+we think about that, but then the basic
+idea is we're going to use these as instruments, or we're going to use that to
+generate moment condition. There's different ways
+of implementing this and partly we actually
+now suddenly go from maybe not having an instrument, so now we have actually
+an embarrassment of riches because now remember if there's k different
+characteristics and j different products, so we have j times k
+potential instruments. It's a lot of instruments, although we think that maybe the identifying power of
+any marginal one is small, so we need to somehow maybe
+find a way to use this. BLP propose using the following, they propose to basically use your own characteristics,
+which again, if you look at this equation, you can think of saying, they're already in here, so you want to use them
+as instrument anyway. So the own characteristics
+of the product, you want to use the
+sum or the average of the characteristics of the other products
+produced by the firm. If you're General Motors, you look for each product
+and its own characters and the average characteristics
+produced by it, and then you want to use
+the sum or the average of the characteristics
+computed by competitors. That's what they propose using. Well, what's the basic idea or what's the power of
+these instruments? The idea is that basically if the proximity of n
+characteristics space to other products is going
+to impact your markup, which in turn is going
+to impact the price. If we think that
+basically price is equal to marginal cost plus markup, generally speaking, if
+you want an instrument, you can say, I'm going
+to look for something exogenous is going
+to impact cost, or I'm going to
+look for something exogenous that's going
+to impact markup. These instruments try to work
+through the markup term, and the reason to separate these is to basically say, well, my markup term is going
+to react differently, whether it's my own products or the product of competition. That's intuitively it's let's try to bring in the IO and have a particular functional
+form of how these work. The validity, we need
+these to be exogenous. We think about this to say, well, these characteristics, if you think again
+of the auto market, you think these are the
+characters that actually set quite a while in advance. If you think, well,
+these are set before the firm actually
+knows because X_jt, that's usually the argument
+that people give to justify why observed characteristics are mean independent
+of unobservable. Now, I'm sure at this point your mind is
+racing and saying, well, wait a second, can we come up with stories that
+will make these invalid? The answer is, it's not
+very hard to come up. Even if you don't know exactly
+the Psi, you might say, well, you have some expectations
+about what it would be, so you want to separate
+between the part of Psi that's known when they said and one that's
+showing up later. We'll get back to if you
+want a modified version of this that tries to
+do exactly that. Yes. Think of my pricing problem. Let's think of I have a
+firm, I have two products. I have product A, product B, and then there's a
+product C that's produced by a competitor. Now, think of different
+markets where that products B and C are located in
+characteristics space vary and think of how my pricing
+will respond to it. That's essentially what we're
+trying to pick up here. As you move across markets, the competition
+is going to vary. Therefore, I'm
+impacting your markup. The way in which
+your markup will vary depends on whether it's your own product or
+your competitor's product. For example, if it's
+your own product that's close to you, we tend to think that
+that will increase your markup or many
+models will deliver that. Yet if it's your competitor
+that's close to you, that would decrease your markup. That's the reason why both of these might actually
+have some validity, might have some power. Why you want to separate
+them because they'll actually work in different ways. If product B is owned by my
+competitor or owned by me, and product B being
+the one closer to me, my pricing incentives
+are very different. That's what we're
+trying to pick up. Then what we want to see it. Let's see when we look
+over markets over time as the relative difference. There's always
+Product B and a C, but how far or close they are in
+characteristics space, that's going to vary. We want to see that variation is going to impact the price. As long as you know
+where they are, their location and
+characteristics space satisfied that condition, you think that would
+be a valid instrument. Good. Is that answered though? Now, these are not prices, here the x's are just the
+characteristics of other. We don't use the prices
+because the prices of everyone are
+determining equilibrium. Maybe this is where my notation is slightly different
+than Arielle. Here the x's are just the
+observed characteristics excluding price. We're going to assume that
+the observed characteristics are actually independent, but price is allowed
+to be correlated. Price basically, if
+you want to think the timing here is that
+you first set the x's, then size revealed, and then you set prices. Again, where you're setting
+your prices as a function of everyone's size and
+everyone's prices. That's important. Chris? Yeah, I think of it since there's
+also a constant, just a number, it's
+basically like the average. Chris: The average [inaudible] Aviv Nevo: No, you can. Then it's just really
+a question of, we have a lot of these x's and what's a reasonable
+approximation to it? Because we know we want some
+function of the other x's, and the question
+is what function. I don't think this is completely unreasonable for the
+reasons I just said. Now you might say
+you want to separate this so you might
+want to allow it. Let me use first stage, although it's very misleading. But if you actually thought
+of a first stage here, you could allow for different first-stage for
+different parts of this. You might say how
+much I react to these would be different in the different segments
+of the market. But that's just
+another way of saying do we want interaction maybe between these things and
+the own characteristic, which segment is one of
+the own characteristics. You can obviously do more, if your data you feel that
+it justify, you can do that. But this is, if you want,
+the simplest version and one that's often used. Just going on to
+this point, these are probably the most common used for a lot of reasons. But I think one of the
+reasons is the fact that they really don't require any additional data we
+don't already have. Because these characteristics,
+we already need them for the demand. It's not like we have to
+go and find something, it's okay, in some sense, it's easier to use. These are often called, you'll see people refer to
+them as the BLP instruments, sometimes literally
+by those terms. I mean you can ask
+Arielle during the break, but I think that's doing a
+little bit of injustice. We'll talk about the
+BLP paper later. BLP do use these instruments, but they actually also
+use other instruments. These are a subset of the
+total BLP instruments and it's actually
+not quite clear. We'll talk about it
+as to where they're actually getting their
+identifying power. It might actually be more from the cost side instruments,
+which we'll talk about next. Chris: Are you going to talk a little more about [inaudible] Aviv Nevo: Not much
+more than what I wrote here and not much more
+than saying that. Let me just say a
+general point that I actually should have
+said when we started. I ended the previous
+lecture saying, a lot people have put time and computation and I think are
+going to say at the end it's not quite clear that
+it matters that much, if we're talking about
+15 minutes versus 30 minutes or whatever. Where I do really think that
+we need a lot of work or where our weaknesses are in these models are
+in the instruments. It's hard for me now, even though I'm telling you
+what use we'll talk about specifically in
+specific examples. But both in terms
+of their validity and also in terms
+of their power, there has been a little bit
+of work recently of whether these instruments are
+weak for some things, but we generally need
+much more work on it. Characteristics is
+revealed to the firm. Yes, I agree, depends
+on the situation. But the assumption here, I think the easiest way to rationalize to say that
+these are characteristics that are actually set before the firm gets to
+see now of course, what these unobserved
+characteristics are depending on
+the application. I'm building up, but I'm
+telling you, this is the way, this is the assumption that's often used and it's
+easier to defend in some cases and in others. Yeah. I wrote it all together. Well, in that case, going back, looking at this, you'd
+also need instruments for this particular first part. But it's also the question
+of what does the firm know? You could say, it knows its own characteristics but doesn't know the others. Yes, you could refine this a little bit further and
+say I'm going to use, but again the question
+and you'll too, again, it's something
+that the firms set. If you literally think the firm is sitting there determining both the x's and exceed
+at the same time, it's going to do it
+for all its products. Probably two is going to be in. Now the competitors,
+you could say maybe, but then you walk
+in on a little bit of exactly what the
+information is, you want to have some game
+of imperfect information. It is what it is. Other
+type of instruments, I'd say the second most
+used instruments are what I would call cost
+base instruments. Cost data, if you followed IO, I don't know, anything
+in the last 25 years, you know, we don't
+like to assume that cost data are actually observed. For instance, we
+don't need to have the actual cost data, but some proxies to it. But even then that's
+rarely observed. But there are ways
+to get at this. The other part of
+the BLP instruments is to use characteristics. BLP action, we'll see in a little bit they're going to have
+the demand side, but then also specify an
+adonic cost function. There's going to be
+marginal cost that's going to be a function
+of characteristics. There's going to be
+characteristics there as well. What they used implicitly
+in their setup is they're going to
+use characteristics that enter the cost side, but not the demand side. It's again going to
+be these type of characteristics of the
+products with things that you don't think enter the
+demand, only the cost side. We'll talk a little
+bit about later. You can see from the
+final papers which matter more but it seems
+like these instruments might actually be more
+important for driving the end results
+and in some sense, that's actually
+missed because a lot of what followed just used the previous
+page, not these. That's one set of
+cost instruments. Sofia Villas-Boas, an
+ex-student of mine actually estimated
+demand for yogurt. What she went there
+and she actually got price of inputs, the various inputs of
+the going to yogurt. The problem is that those are not going to vary by brand. The question is, how do you get variation across the
+different brands? What she did was she basically interact with those
+with product dummies. The idea is that there's
+some production. Think of each brand as a
+slightly different proportions of using these inputs, but you don't
+actually know them. You're trying to estimate in some sense what proportion
+they're trying to do. That's again the cost-based. Other instruments that tried to indirectly get at cost measures are instruments that
+Jerry Hausman introduced. We'll see one of the papers. We're going to use
+that tomorrow in which I use and we'll see
+that application later. These we're going
+to try to rely on indirect measures of cost. Here what we're going to do
+is something that at first sounds like a non-starter. What we're going to do
+is we're going to use prices as instrument for prices. We're going to use prices
+and other markets. The idea is you
+think of, suppose we have a cross-section
+of markets. We might have a panel,
+but at any given time, we'd have a cross-section
+of markets, the price of the same good, and a bunch of other markets. We're going to
+use, I don't know, if suppose we're estimating
+demand and this is going to be that both in
+the context of cereal. Suppose we're estimating
+demand for cereal in Boston. We're going to use
+the price of cereal, let's say in Portland, Maine as an instrument for Boston. That's the idea.
+We're using prices of the same product
+in another market. What's the validity
+argument here? The validity is that after we've controlled for common effects, we obviously have to
+control for common effects. That could be, for example, if we look at Cheerios. Cheerios is popular
+in Boston and it's popular in Portland, Maine. We want to control general
+cereal dummy, if you want. But after controlling for
+those common effects, whether it's just a
+Cheerios brand name or some advertising effect. What we're assuming
+is that whatever is leftover in excess after we've controlled for
+all these things, they're independent
+across markets. If you think about in the case is going to be
+in that application. Suppose it's like just
+local promotions activity. Suppose that those
+are uncorrelated, there's a different
+brand manager in each one of these markets, and they're not coordinating
+their activities. So under that
+assumption, it's okay, that's going to be
+independent and therefore, it's going to be a
+valid instrument. How is it going to
+have any power? It's going to have power because you're going
+to assume that there's common marginal costs that
+are impacting everything. After controlling for
+everything, we're going to say, there's whatever is leftover is due to common marginal cost, and not because of
+shocks in the demand. For these types of instruments, if you have the right
+data structure, namely, if you have a panel, a cross-section across
+different market, that's going to be just like the previous set of instrument, that's going to be in your
+data because you have data, quantity and price
+data for Portland, you have it for Boston, and then you can
+cross-reference it. Sofia, when she did this, she went and constructed some data for milk
+goes into yogurt, I forget what other
+inputs you use, but she actually
+went and collected some general price
+series for that. The main problem she had was
+that there isn't variation, either regional or by brands. You somehow have
+to generate that. For BLS, we'll see it a little bit later when we talk
+about my paper, I actually did use some
+wage structure by market, but I'm actually now forgetting
+even where I got that. It's been 15 years. I forget
+exactly where I got it, but I think it was
+actually some bureau. The bureau actually
+had a database where I got that from, I have to go back
+and read that up. I did get that somewhere there, that's the arguments for now. It's easy to come up with examples where these
+instruments will not be valid. For example, suppose the brand managers
+are not coordinating, suppose there's actually
+a regional brand manager. Whoever determines the prices of the promotional
+activities for these brands, determine that for Portland
+and for Boston jointly, in that case, you actually
+would lose the validity. That's one example.
+Another example is again, you're estimating demand
+for cereal and suppose in the middle of your
+sample, suddenly, there's a study
+that comes out that said fiber-rich cereals
+are healthy for you. That's going to be a national
+shock to all markets. In principle, if you know that, you might actually be
+able to control for it, but if you don't, if that's what's giving
+you the variation and what you're using here, some independence over time, that's potentially
+going to create correlation and make the
+instruments not valid. Once again, I'm telling
+you this is where people have assumed
+in what they've use and we'll see how
+you can actually try to address whether
+they're valid or not. The other commonly used instruments or actually
+becoming common, they're not as commonly used. This again rely on
+panel data techniques. The most obvious
+thing is just say, let's put enough fixed
+effects in there to maybe absorb all the endogenous variation, whatever is leftover. We don't have to worry
+about price variation. We still have to get instruments for the non-linear terms, but maybe we can do that. At least to not worry
+about price variation. To some extent, maybe
+that's what you can think of the previous example. What you show is you put enough instruments
+and then whatever's leftover is roughly
+assumed independent. The other way that
+people have generated instruments to use
+the ideas from a dynamic panel literature. This was actually originally, if you look carefully, the BLP, the original
+paper, it's a footnote. One could use this. I think at the time, they didn't really
+think it would work, so they never actually
+experimented with it. Recently, people have
+gone back to look at it. I'm not sure if this is the
+first paper that uses it, but it's the first
+that I'm aware of. Andrew Sweden actually
+has a paper where he brings this back
+and basically what he assumes is he
+assumes the following. This goes back a little bit
+to these timing assumptions of when the x's are known
+and what's known what. He says suppose there's actually an AR1
+process in the Psi. Psi today is Rho
+times Psi yesterday, and there was this
+unexpected shock, which we're going
+to assume that's uncorrelated with
+whatever the x's were. Here, there's a little bit of a time you could say
+whether you want to use x's today or the x's
+at time t minus 1, the characteristic
+time t minus 1. But the whole idea is this
+is an unanticipated shock. There's a part of that
+that you could say, I know the Psi, at the same time
+here, but I'm trying to predict the future Psi. If that's the case,
+and you can actually use a quasi differencing to
+create a moment condition. The idea is that you're
+saying it's not that I don't know the Psi where
+I'm setting these x's. Again, it might be the lagged
+x's or the current x's depending exactly on the time
+and you want to make here. It's not that I don't know. What I'm going to assume
+that I don't know is the kind of the
+innovation in this. It's not as strong of an
+assumption as the one that you make in
+the original BLP. You basically now say, okay, just in how to
+operationalize it, if you think of
+what we do later, it's just the same way that
+we computed the Psi's. You compute Psi t
+and Psi t minus 1, then just create a moment
+condition based on this. You take this quasi
+difference between them, and that's the basic idea. Andrews use it and
+several other people have used it recently and it actually seems to work
+reasonably well in terms of getting new estimates. Sorry? Yeah, and you'd
+estimate role again, it's part of the you have enough x is in here that you
+can actually estimate it, so Rho becomes another
+parameter that you estimate. Anyway, these are probably
+the most common instrument. There's occasional, you can see here and there
+people to try to use some what labor economists like to call quasi-experiments, natural experiment and try to use some regulation
+change stuff, and you see that here and there. But it's actually quite rare to see that in literature. But with the exception of that, these are the
+instruments that people have actually used. What I want to do now
+is to go through. Yes? You're asking me to give well, partly because I mean, that's a philosophical
+question that I'm sure I'll get into trouble
+for whatever I answer. But I think there's
+a difference. I think that most people, the way that they approached
+the problem is that you first start a market and
+then look for instruments. You're going to end up
+with one of these things usually as opposed to start with an
+instrument and say, okay, here's some
+regulation that we think is interesting and
+how can we use it? Which is a lot of times the way that at least some labor
+economists proceed. In which case I think
+you're going to end up maybe with an instrument
+that's better looking. But so I just think that's
+just the nature of it. That we don't actually
+choose which markets to look at based on whether they're going to be good
+instruments or not. We choose them for
+other reasons and then we do the best we can. We maximize whatever we can
+in terms of the instrument. Rather than firstly, let's
+find a place where there's really good exogenous
+variation and find something we can
+answer with that. I don't know, but that might be if you want a theory how to explaining why we
+ended up with this? But I think just as a
+descriptive matter, I mean, I think that's where we are. These are the instruments
+that people have used and I think it is
+because we start, I know from my own experience, I mean, I start usually, this is the market
+I want to study. I go look for the data. I find the data
+and tried to find an interesting question,
+I don't like the model. By time you get to that, Okay, what's the best instrument
+that I could use as opposed to starting with the instruments and
+building up from there. But that's at least
+my experience. If anyone has a
+different experience, feel free to speak up. What I'm going to do
+now is I'm going to go through three
+different applications and show you how all
+this works together. The first paper is the BLP
+paper 95 and Econometrica. Two points that I
+want to take away from looking at this, so the first is just the
+effect of instruments. Right now, we've been doing
+this for a while now. It's what almost 17 years
+since the paper was published and even more since it
+was doing the rounds, I think we've also take it for granted the fact that, oh yeah, of course you need instruments, but originally there was
+something that needed proof. I'll actually show
+you the effect that instruments have and we'll see that over
+and over again, at least three applications. But here we can literally
+put hundreds of examples. The other thing is to see again, the difference between a logit model, a
+random coefficients. We talked about it in theory, but I'll actually show you
+numbers from their tables to show you the importance of allowing for the
+more general model. The data that they use, they have 20 years of
+annual US national data. A market for them is
+a year in the US. There's 20 of these markets. Overall, they have just
+over 2,200 observations. Observation is a model year. There's an issue of how
+you define a model and how they look at the quantity, so they define it by name plate. The prices that they use are
+going to be list prices. Remember, we talked a little
+bit about the issue of what happens if there
+is variation in it? For now, we're just going
+to look at list prices. There has been some
+follow-up work that asked what happens. There's a paper I can think
+of it done at an airlines. Can ask, well what happens if there's variation in prices? How do we account for that? But for now we're just
+going to ignore it. Characteristics is
+a standard source, the automated news data book. I think you can actually
+get it in many libraries. The price encourages
+that they take are going to correspond to a base model. Because again, you
+can see there's different options
+or different trims and which one not to use. They're going to actually
+make very little use of either segment or
+origin data versus domestic or foreign car
+and that's going to be important when
+we compare it to the next paper, the
+Goldberg paper. The demand model is almost
+exactly the one that we've seen with really
+one slight modification, which is before really what
+we had to remember was Alpha times price and really what we had and I wasn't
+too careful on notation, well it really had
+was YI minus price, so we just had
+income minus price, but income drops out because it's constant for
+all the options. Anything that's constant
+for all the options, just going to drop out.
+Use discrete choices. Basic recall, all we care about is really the relative utility. I didn't even bother
+putting it up. Now what they're
+going to have is going to have the
+log of YI minus P. You can actually show that this would come out if you
+think that there's a Cobb-Douglas utility
+function where you have the numerator and then the utility that you get from the car feeding into
+a Cobb-Douglas, you get something of this sort. The linear, by the way,
+would come out if you have a quasi-linear utility function. Other than that, the
+random coefficients here on the x's, they're
+not going to have the demographics
+they're just going to have this normal distribution. There's not, the Alpha is not going to have a
+subscript i on it, but there is going
+to be a Trojan AT in the margin utility of income, basically through the
+log of income term here. This is the utility from the options, from
+the outside good. But otherwise it's basically the model that we had before. The estimation is basically
+as we discussed before. What they do is they add
+supply-side moments. What do I mean? I'm not actually
+going to go through it. What they do is
+they actually write down a particular pricing model, Arielle will talk a little
+bit more about this and the importance of
+it in later lectures. But they're going to write
+down a pricing model. That pricing model,
+it's going to be a marginal cost that's parameterized a function
+of characteristics and then a markup that's
+a function of the demand. The pricing model is
+actually going to put some structure on
+the demand parameter because the markup
+enters into it. That's the first point. It's going to help pin down
+the demand parameters, but it also through
+the cost now, you can actually add
+cost instrument. It's both of these things and it actually ends up that
+they're going to come in. Both of these things are
+going to be quite important. These are going to be the
+cost side instrument. These are characteristics
+that enter only the costs and not the demand. Then on the demand side is these characteristics that
+we also talked about. The paper also spent a
+fair bit of time and I think Arielle again
+might talk about some of these things
+about to try and to make the estimates a lot more
+efficient things that I didn't really focus on. I'm going to skip now as well. Let me just look at the numbers. The first table that
+we have up here, this is our estimate
+for the logit model. Remember the logit model here is just a simple linear regression. You are regressing the
+log of the odds ratio, the share of each share
+over the share of the outside good on
+these characteristics. First, they just do it. This is just overlap, and then just linear IV. The key thing that
+we want to focus on are basically actually
+these two rows here at the bottom. We see this is price. You can see here in
+terms of the magnitude, the price coefficient
+more than doubled, almost 2.5 times larger
+in absolute value. It actually takes it
+from being and this is the bottom here you can see
+it takes it from being, if you look at the number
+of inelastic demands, you get about 1,500
+inelastic demand, that of 2,200 observations. Huge fraction or
+inelastic under the lease squares to once use the
+instrument almost nothing. I mean less than one, or about
+one percent or inelastic, right now remember,
+inelastic demand, I mean, not that they're going
+to use the logit for it, but if we wanted to
+use the logit for this would be quite
+problematic if you're going to plug this into like
+a single product pricing. In some sense, you'd say that the predicted marginal costs
+are going to be negative. This is if you want
+the first point, you see just this instrumenting
+makes a huge difference. Now at this point, you
+might say, it's obvious, of course, we need
+the instrument, but you have to take this in
+the context of literature. Before that, people
+were estimating these discrete choice models without instrumenting for them. We'll actually talk
+about an example of this tomorrow when we
+talk about welfare. One of the first
+papers that did this actually found an upward
+sloping demand curve. A little bit hard to
+do welfare analysis when you get an
+upward-sloping demand curve. That's the first thing to take. The second thing to take away
+from here is the effect of the random coefficients
+versus the logit. Let me build up. I'll show you a few numbers, some of them I'll
+actually need a little bit later when I
+compare to another paper. This is one of the tables
+that basically shows, if you want, own-price
+elasticities. Let me just focus on the last column which gives
+you the price. What we have here
+is for each model, we have the first row is, that's the price in
+thousands of dollars. A Mazda 323 is just over $5,000. The second row is the
+elasticity, an absolute value. The elasticity here is six, and you can see the value
+for different products. You can see the range
+here varies from about 5-6 in terms
+of absolute value. We'll keep that in mind when we look at the next paper
+in different numbers. How about the
+cross-price elasticity? One of the very
+first things if you want to get estimates,
+want to ask yourself, are they reasonable, is to look at the patterns in the
+cross-price elasticity. What we have here, these
+are semi-elasticity. Basically, this is
+the percent change in the market share for
+$1,000 change in price. Instead of a percentage change, it's $1,000 change. The key thing I
+want you to look at is if you look at the
+pattern within a column, if you actually wrote
+elasticities down, what you would get
+in a logit model, the elasticities and
+we'll see numbers, it would be exactly the same. They'll be identical when
+you go down the column. By the way, that's again, what Arielle was saying,
+if you don't get that, then you made a computational
+error somewhere. What you want is to see
+if there's actually heterogeneity in these and if that heterogeneity
+makes sense. If you look at these products, I'm not an expert on the
+car market in this time, but it makes sense. If you look at the Mazda 323, its closest substitutes
+are the car is up here. By time you get down to the
+735i, it's basically zero. It makes a very clear
+pattern is it's by orders of magnitude in terms of
+the substitutions. You can see if there's
+a change in the price of these products, you can see it does
+almost nothing to the more expensive cars
+that are down here. Yes. Well, there is some intuition for why you want to
+do some elasticities. Because with elasticities
+in some sense, you're not keeping
+the "experiment" constant because your
+change in percent, the percent change in price. What you want to say is
+you want to say, well, I want to do the
+same experiment, the same variation across
+different columns. I want to see what the
+effect if I change by one dollar or by $1,000 here, and I want to keep that constant across columns as opposed to, say, it's going to
+be a percentage because the percentage change. The Mazda was 5,000. Percentage change of
+5,000 is very different than one of these
+cars down here. That's almost 10
+times more expensive. That's the intuition. Now, which of these you want
+to look at? I don't know. I tend to prefer
+elasticities myself, but that's because a lot of
+the products that I look at, there isn't as much variation
+in the average price. If I look at consumer
+package goods, there's big variation
+between a generic and a national brand of one
+is double the other, but it's not 10 times. But that's basically, I
+think the intuition as to why you'd want to look
+at semi-elasticity as opposed to elasticity. But the key here and
+that's to keep in mind is to really remember how big this is because we'll look at alternatives to
+this in a little bit. Then finally to bring
+home the point of substitution of the difference between logit and
+random coefficients, this is a table that I
+think demonstrates very nicely in that the substitution
+to the outside good. Now, in the logit model, this is off of logit, they're basically
+all 90 percent. I think the only reason, not exactly just subject to some simulation or
+computational error. What happens is when the
+price of a product increases and some consumers decide
+not to purchase it, they're going to purchase
+the outside good or decide not to purchase
+the same frequency as the average consumer. Well, in this market, the market size is
+defined such that there's a 90 percent share of
+people who don't buy cars. By the way, the market here is defined as the number of
+households in the US. In any given year,
+only about 10 percent of households buy cars. If you're not going to
+purchase, regardless, if you're not going to purchase a very expensive BMW
+or a cheap Mazda, you substitute with the same fraction to
+the outside good. That's in the logit. In
+the random coefficients, you see not only does
+the average changes, but it also gives you, in some sense, more
+reasonable patterns. It's more likely
+that if the price of a BMW went up a
+little bit and you decide not to purchase a BMW, you're probably less likely to substitute the outside good. Now you might ask, well,
+what is the outside good? Remember that's the option
+of not buying a new car. If probably BMW went up a little bit I'd say I'm not
+going to buy a car at all, but you might substitute
+to buying a used BMW. That would be in the
+outside good as well. That's why maybe you wouldn't
+expect that to be zero, but you probably
+would expect to be lower than what you would get for the cheaper cars. That's just one way of looking at the
+difference between them. There's other tables in
+the paper that show this, I'm not going to go over them. The final thing
+that I want to show you is the markups predicted. You can actually take these elasticities and
+put them through a specific supply model, we'll actually see the
+supply model later, and then look at what the
+predicted markups are, and you get these numbers here. Once again, I'm not an
+expert on this industry, but if you actually compare
+these to industry numbers, they're actually,
+roughly, in the ballpark. I think the conventional
+industry wisdom is that markups should
+be at about 15 percent. That's roughly where
+these things are if you average across the
+different products. I know Arielle might want to talk about it
+a little bit later, but I know that they
+actually compare this to what actually I think show this to the car manufacturers and they actually admitted, well, you guys got it pretty
+much exactly right on. But again, I'm just comparing. If you look to the
+public sources, these are at least
+in the ballpark in the right order of magnitude. Again, if you did this
+either with logit, you wouldn't get the
+types of patterns that you see here. Or if you do without
+instrumenting, we saw from the number
+of inelastic demands, you might literally actually
+get a bunch of these to be negative or the marginal
+cost to be negative. In summary, this is basically a very powerful method that's
+been used a lot since. Looking back, it's
+easy to see that. It clearly show both the
+effect of instrument and the effect of random
+coefficients versus logit. If you talk to people,
+especially in offline, you'd hear a lot
+of people love to complain about BLP and they'll complain about
+the instruments. They'll complain about
+the supply side, that it's static and wasn't tested and it is
+maybe driving the result. They'll talk about, well, you estimate a static demand model, but really this is
+all a durable goods. A lot of these
+things are right and indeed, follow-up work, in the 20 years since I've looked at a lot of these
+issues and we'll look at some of them further. Yes, Dan. Dan: Have you ever seen how the [inaudible] model
+will [inaudible]? Aviv Nevo: That's
+exactly what I'm going to talk about in a second. The way I'm going to do this is rather than
+going and trying to estimate on the original data. What I'll talk about is about
+the paper that came out, the same issue of Econometrica, right next to each other
+by Penny Goldberg. That's going to use slightly
+different methodology. Part of why I pointed
+some of those numbers and tables you can actually look a little bit
+of the comparison. It's different data, slightly
+different time periods, but I think there's
+actually a lot to learn by just comparing them. This is a paper
+by Penny Goldberg that it's a very nice paper actually the application is
+mostly trade applications. I'm not going to
+be talking about that at all and I'm just going to focus on the demand mouth. I'm really just going to
+talk tip of the iceberg, just a small part of the paper. The application is
+very nice and I actually always
+recommend to my students to go read it even if it's like outside the IO
+course that I teach, it's actually I think
+a very nice paper. Demonstrate how you'd
+want to present results from a
+structural demand model. The points I want to take
+away from here are two. One is I want to
+emphasize a point that I thought I emphasized
+in the previous lecture, but I just want to make
+sure I can bring it home is the fact that even with
+household level data, which is what she's
+going to use, the problem with endogeneity. We can see this by
+comparing the numbers. Then down to the question
+that you asked about nested logit versus random
+coefficients logit again, it's maybe not a fair comparison because a lot of
+moving parts here, but just to compare the numbers from the two papers we'll
+get some insight on that. Her demand model is a
+so-called nested logit model. She basically has the following decision tree if you want. There's a household that decide, do I buy a car or not
+or buy at least one? Buy at least one car. Do I buy a used
+car or a new car? If I buy a new car, which class do I buy? Think of it, which
+segment of the market? If within a segment, do I
+buy foreign or domestic? Then once I'm within this nest, which model do I buy? The original models
+you can think of it as literally
+a decision tree that a consumer goes through. But you don't really need
+to think of it this way. The way to think
+about this is that each of these models, so these are going to
+be a choice they get an IID shock and then there's these shocks that are
+at the next level. For example, all
+foreign cars in Class 1 get a common shock. That's going to create a correlation across
+these options. If you don't like
+Model 1 in this nest, it's going to create a
+correlation with the error term that you're more likely to
+go to Model 2 in that nest, then you are to go to
+another model altogether. How important these
+shocks are depend on the relative variance in these shocks versus
+the IID shocks. The idea is that there's a hole. There is a common shock to this nest and there's
+a common shock here, and each one of these
+nest going upwards. One way to think about this is really what this is doing. Actually one can even
+show this formally. What this is doing is really putting each of these
+as a characteristic. Whether it's foreign
+or domestic, or which class it
+is, you can think of it as putting a
+characteristic and then putting a very
+particular distribution on the random coefficient
+of this characteristic. It's a little bit harder to show when you have these
+multiple nests, but if it's just one
+level of a nested logit, you could actually show
+that that's what it is. You put a very
+particular distribution and that intuition
+we can actually integrate out
+analytically to get the type of results
+that we saw before. The data she's going to have is household level
+data as opposed to the market level data. It's going to come from the
+consumer expenditure survey. She's going to use data
+from between 83 and 87. Overall these are
+numbers reported from the paper so overall there's
+over 20,000 households, 30 percent of which
+bought a car, and 1/3 of those
+bought a new car. You see actually it's roughly comparable to what
+we had before. About 10 percent of households bought a car that's roughly comparable to what
+we had before. Then here's the break of
+about 70 percent bought domestic and the
+others bought foreign. The key issue, remember,
+we're talking here 600 observations of
+foreign and we're going to split now into six different, or nine different classes and
+then into different model. By the time we're down
+to the model level, we're not going to have or we're going to have a lot of models that they really
+no one's choosing. We're going to have somewhat
+noisy estimates of that. The price and the
+characteristics again come from this automated
+news market data book. Estimation. She's
+going to estimate the model by maximum likelihood. Remember this is a
+individual level data. It ends up that there's
+a very simple way of estimating this model which is basically saying what
+you do is you estimate which model you choose conditional on
+being in this nest, then you move up, you basically create something that
+we'll see later. We'll create an
+expected utility from this nest and then say how do I choose between these two nest? This is now two options. This summary something
+called an exclusive value. I'll define it in
+tomorrow's lecture, but it's basically a
+very simple way of estimating this at stages. You could estimate
+it all in one step, but it's much easier to
+do it in these steps. That's what she's doing here. She's not going to directly
+deal with endogeneity. Endogeneity, remember,
+because this is household level data, she doesn't need instruments for the nonlinear parameters, that you can actually get from the actual demographic that she's seeing in the data. She needs to literally
+deal with endogeneity of price and the unobserved
+characteristics. She is going to have origin
+and segment fixed effect. Segments are these
+different classes and origin is whether domestic or foreign or
+guess which country, I guess it's mainly
+Japan or Europe. But these are not going to fully account for the brand
+unobserved characteristics. There will be at an old
+a German fixed effect that might affect
+all German cars, but there isn't something
+that's separate a Volkswagen from a BMW. She partially deals with
+endogeneity, but there's still, you could potentially
+claim that there is still some residual leftover and that's something that
+we're going to look at. Now let's look at price
+elasticities by class. It's a little bit hard
+to exactly compare the numbers from the two papers because they break things up
+a little bit differently. But in terms of
+the numbers here, they generally tend
+to be in terms of range a little bit
+lower than what we saw before from the BLP paper. The BLP paper, or was the
+Mazda 323 right ahead, about a six, an absolute value
+here it's about a three. Here they vary
+from three and go, there's a few exceptions, but go down to about one or 1.5. The range in BLP was about 6-4, here it's about 1.5-3. Now that's consistent with
+the fact that there might be some residual endogeneity that we haven't fully controlled for with the fixed
+effects that she has. The other thing, by the
+way, that you can see here, one of the advantages of
+having individual level data, she can do things like
+giving you the elasticity for different consumer types. You can look at
+first-time buyers versus repeated purchase because that's something
+that's in our data. She can include that
+as a demographics and actually show you that while doing that with
+the aggregate data might be a little bit hard because you need to
+know information, something has to be very hard to estimate with the
+aggregate data. That's the overall elasticities. Now going back to comparing nested logit versus the
+random coefficients. These are again
+semi elasticities. Here she actually does BLP
+did it for $1,000 change, she does it for a dollar change. You can need to multiply this by instead of minus seven should be minus four here to make the levels
+comparable, but. More interesting I think
+they're looking at the levels, is looking at the
+variation within a column. Remember what we're
+looking for is we want to see a lot of heterogeneity
+in something. We want to see big numbers here and relatively smaller
+numbers there. The key is yes, we see
+that pattern but if you look right the
+difference between the highest number here
+and the lowest number here it's about 15 times larger, which is nothing to sneeze at, but it's not what we saw. In BLP, we got it was
+1,000 times larger, three orders of magnitude. That's a little bit Dan
+going to your question. What would you get if you
+did with the nested logit? It looks like it is picking up the patterns that you see
+bunching up the product. But in some sense maybe it's
+not doing enough of that. Because you can ask, and again I don't know what the
+level here should be, so just ignore this. But you can ask for
+civic changes in prices. How many people are going
+to switch to Ferrari? Well you could say this is zero, but I'm saying it's
+relative to switching to a cell or something of that. I would have actually
+expected the ratio is more like what
+you see in BLP. Now is this driven directly by the nested logit? I think so. I think that you
+just need to have more characteristic
+in some sense here to really pick this up. But again to really see this you wouldn't want
+it to go and say, well, what if we actually did
+the BLP with their data, with the aggregate model. Of course, you are.
+You're basically saying there is a function
+of the characteristics, but I'm saying here I've taken two studies that have
+different approaches and I'm just looking
+at the outcome and what I'm saying
+is, I don't know. As a non-expert of the car of the auto market seems
+to me that I would expect that a higher ratio here than what I actually see. That's all. Now if someone knows more
+about cars and tells me, oh no this should be a higher. I'm willing to step
+back and say that, but it does seem to
+me like I would've expected the ratio here
+to be higher maybe. As opposed to the difference here in the own elasticities, I am pinning on the endogeneity, on the fact that there's no
+options-specific constant. Endogeneity would impact
+the level of these. It's not clear how
+endogeneity should impact the relative magnitude. Again, you can formally go
+and try to derive this, but that's why I'm
+saying I'm not necessarily looking
+at the levels. Because the levels
+here are actually lower than they are
+before and partly because they're doing it not comparable but even
+if you multiply this by 1,000 is still lower
+than what we saw before. The level could be, for anyone, could be but I don't think that endogeneity could explain or be the main cause for the relative difference
+within a column, so the ratios and that's
+what I'm focusing on. Kyle, did you want to? It is except that the
+specification you used if you had the class and origin variables
+in there then I agree. If you have the same
+characteristic, I completely agree. I mentioned this before,
+but just to emphasize, nested logit is a random
+coefficients model with the characteristics being
+the segment dummies in a very particular
+distribution on them. You can formally show that
+there's a paper, Cardell. I know for sure it's exact
+in a one-level nested, I assume it can be
+extended further, but it's exact and
+you put a very particular distribution on it. It's not a normal distribution
+on the radical vision. It's a very particular
+distribution on it and you can show that it's
+exactly the same. Nested logit is a random
+coefficients model, but a very particular
+distribution. The characteristics
+are whatever it is it used to define the
+segments. Yes, Chris. I haven't, and partly
+because I'm not exactly sure what she did for the prices of the
+options that were not chosen. You have the transaction
+price for what you bought but then I don't know
+what the prices are for the options you didn't buy. I don't actually know. I have to go back, but
+it's been a while, I don't actually remember what exactly she used for the price. I mean I don't know this
+literature as well, but I know, for example, in consumer packaged
+goods where there's coupons some people
+have actually argued that even if you know if I know that you bought
+something with the coupon, but I don't know if
+you would have used a coupon for another
+product you didn't buy, that you're actually better
+off ignoring the coupon, which the equivalent
+here would be that you might be better
+off just using list prices but it really depends
+on, in some sense, you're going to have
+a problem either way. I don't actually remember
+what she actually did. That's a good question. I should know, but
+I don't remember what you actually
+did in terms of getting the prices for
+the other options. Now, in terms of markups, I think that's reflected
+in the number. If you actually look at either price minus cost or
+the markups that she gets, she generally actually get
+the markups higher than BLP. Actually, even if you read Penny's own paper,
+she actually admitted. He says, 50 percent is the perceived wisdom of what the average
+market with me and I'm actually getting something
+a little bit higher. She had some
+discussion on it and you can see she's
+maybe doing alright, at the lower end of
+the distribution. I'm not quite sure how this
+accords only get 10 percent, but otherwise you can see it's monotonically with
+that exception, increasing and getting actually at some point too
+pretty high markups. I think higher than what
+people believe are reasonable. This although frankly, I have no idea what the markup should
+be on Ferrari and Porsche. Beyond my range. This is again, consistent with the numbers of the fact that it may
+be even though she's included all these
+dummy variables, there's still some potential for leftover endogeneity even though she's using
+individual-level data. Any questions, comments? No. Basically what she
+does is she computes the demand elasticities
+and she puts it through a Nash-Bertrand
+pricing model and compute the markup. If your elasticity was low, you're going to get a
+very high markup rate. Low elasticity means
+people are very price sensitive and therefore the
+market would be higher. This is not necessarily
+coming out of any cost data estimation. It's really just from
+basically taking the estimate. We'll actually show
+you the equations in a few more slides going in different contexts
+but it's taking the demand estimates
+and plugging them in. Mark? You're saying if we had? I think the answer is yes. Because, suppose for
+example, we had, in the BLP data, we have the fraction
+every year of new buyers. Just that. We wouldn't
+know what they buy. We just know every year what
+fraction of the people. That would be a demographic. We'd know the distribution now. If there's a lot of variation
+over time in it you could, with aggregate data, try to estimate the new
+versus repeated buys. I mean, that was
+the one demographic they talk but if there isn't, that's going to be
+very hard to pick up. I think if you really care about the effect of
+observed demographics, I personally will
+put a lot more. If I actually get
+different numbers from aggregate data, from
+individual data, I trust individual
+data more there just because you really see here are new buyers and repeated buyers and I see the
+different purchases. While in the aggregator
+you really working off some variation in the market and unless you have a lot of
+markets and a lot of variation, or you have some additional
+information of saying, it's not just the fraction. I also know which car is they
+bought something like that. If you had these additional
+so-called micro-moments, I would believe him, but otherwise I'd really would believe more than microdata. The other place
+where the microdata, and we'll see that
+later tomorrow is if you want to go to dynamics. You could estimate dynamics
+with aggregate data, but I'd feel a lot more comfortable if you actually see households and you'll see, let's say for example, how long they've held onto their cars or what
+other cars they have. If that's the thing that
+you want to estimate. If you actually have individual
+level data as opposed to try to simulate it
+through some aggregate. What we've done up to now, no, but that's extremely useful. When we talked about
+different ways to get more variation and that's one of the things we're
+going to talk about. I forget if it's
+this afternoon's lecture or tomorrow's lecture what we're talking
+about bringing in this additional information. For example, [inaudible] and his study of the auto-car,
+that's what he did. He brought in this
+additional what we call micromoments and that was extremely helpful in
+pinning that down. If you want to cook
+bottom whenever possible, if there's any information
+you can get from microdata and incorporate that into the analysis, it
+definitely should be. I hope that the message
+comes away from this, I hope is not antimicrobial because that's then I
+told you screwed up. That's not what I wanted to
+say. It quite the opposite. I'm just saying whenever
+you have microdata, being able to incorporate
+into analysis, extremely useful but you have to be aware that even
+with microdata, there's potentially
+additional endogeneity and you want to take
+that into account. it's not against using
+quite the opposite, if you can use it. Indeed, Petron was one
+example of saying let's bring this CX-type information into a BLP world and it ended up being extremely powerful
+and extremely useful. I'll actually relax some
+of the assumptions on the supply side and we'll
+talk about that next. That's very important. I hope I didn't come across as anti-microdata because that's
+exactly the wrong message. Any other questions, comments? Let's see. We started 1:30, so we're planning to go to 3:00. I was debating whether to stop here to continue in this page. Let me continue. I think I can do
+this in 20 minutes. Let me talk about the
+last paper and again see a little bit of a
+different activity. This is my own paper. The point I'd like to
+take away from this, I guess there are several. People often said, well these
+characteristics models, they work great
+when you're doing autos because the
+characters are obvious, but how would you
+do it in the case of products that are
+characters or less obvious? I think Jerry
+Hausman is actually on record in writing saying, you could never do
+this for cereal or how would you ever
+do it for champagne? Would you measure the
+number of bubbles? How fast they go up?
+Stuff like that. That's part of what try
+to do here is to actually show how you can incorporate when characters
+are less obvious. The other thing is, we talked about
+different instruments. I like to show you here are the different effect and maybe explore the different
+instruments and how they enter. It's a question of testing the model of competition
+because we see that enters a lot and that's
+going to be here as well. Then finally, we're not
+going to do it today, but first thing tomorrow morning we'll actually talk
+about alternative method. Just like I did comparing
+the BLP and Goldberg, I'll actually compare this to an alternative
+method, in that case, the multistage
+budgeting numbers, just to get some idea on the
+differences between them. Cereal, you have the unfortunate case where actually know more about
+cereal than about cars. I'm going to bore you
+with a whole bunch of facts just because
+I had them easy. But anyway, so cereal is
+is actually characterize, it's at least at the time of the fairly highly
+concentrated industry, the top six firms had
+about 60 percent. By the way, since then
+there's about top 4. There's been a couple
+of mergers in here. They had fairly high cost, price cost margins and large advertising to sales ratio and also a lot of introduction
+of new goods. This is always been used
+to claim that this is a perfect example of
+an industry where pricing is roughly collusive and firms compete on
+other dimensions. They compete basically sort
+of through advertising, through introduction
+of new goods. There's always the
+textbook example of that. The question that I went
+out to answer was to ask is really the pricing
+in the industry collusive? Or another way of
+saying is saying, the price cost margins are high. We'll take that as given. But the question,
+how much of this is due to product differentiation? The fact that we might think,
+if you don't eat cereal, you might think all
+cereals are alike, but people who eat cereal
+might actually disagree. How much is coming from that? How much is coming from
+the fact that these are multiproduct firms that
+have a portfolio of products and therefore take that into account under pricing and then how much of
+the rest if you want, is while price collusion? The way to address this
+and this if you want, just as general example of
+how to use these types of demand estimates to answer other questions
+even if you're not interested in demand per se, so the way to do this
+estimate brand level demand and we'll focus on that. Then compute price cost
+margins predicted by different industry structures in different models of conduct and I'll show you in a
+second what I mean by that. Then compare those to some industry knowledge or feeling about what
+the markups are. Yes. I should've said I knew a lot about theory. Yeah, it's going to be
+a little bit more complicated on the supply side, but you could deal with it with if you're willing to put some structure
+or some assumptions. But we'll see on the
+demand side it's actually quite natural to add that. Indeed, if you want to
+highlight the importance, for example, of Psi
+in this context, it's going to be extra
+important because what you're going to get is you're
+going to get two products, the national brand,
+the generic brand that have practically the
+same characteristics. First we'll see how we'll
+find characteristics, but there's going to be
+zero variation in them. But yet if you look
+at the prices, the national brand is,
+depending on the product, sometimes it's twice as expensive as the generic
+as a store or label. If you don't account for that, that's going to create a very severe endogeneity problem. Here's the national brand with high prices and high shares. The generic with low
+prices and low shares. So on the demand side, it's very important
+to include that. It's not just by saying let's just have one of
+the characteristics, whether your
+national or generic, because how good the
+generic is really varies. For example, corn flakes
+is one of those products. It's very easy to imitate. Indeed, they've lost a lot of market share while for a bunch of reasons, but
+that's one of them. Cheerios, on the other hand
+is very hard to imitate. Many people have tried
+including Kellogg, had a cereal, it was 1959
+that survived for ten years, it was called, OK. O's and K's. Well, terrible marketing
+name and it's like, yeah, I really want to buy
+something, that's okay. They tried and
+there's actually a, I don't know if this is true, but you know, Frank
+Fisher told me. I'll assume it's
+true, but he said that they actually
+Kellogg at some point, try to figure out why the
+cereal wasn't selling and they did these
+consumer panel tasting and the guy said, this tastes okay, but this
+other cereal is lacking this slight metallic aftertaste that we feel in Cheerios. That's why they didn't buy it. Yeah, we can talk a
+little bit about that. It's not really the focus
+of what we're doing here even though I
+have supply on here. But that's I think
+the first ISO. We can introduce this, but maybe we can
+talk a little bit about that later just because it doesn't directly
+fit into every, anything that we talked about. But in principle, I think there are ways that
+you can introduce it. We can talk about Hub. Let me just, you know,
+these are supply equation I've hinted to before. Let me just go through it. The profits of the
+firm are basically the variable profit
+minus the fixed cost. These become the
+first-order conditions. What's very useful
+is to actually write these first-order conditions
+in this matrix format, where each element
+of the matrix is either this
+cross-price derivative or the derivative of
+demand function or zero. Whether it's zero
+or not depends as to the "ownership" structure. If we have single product firms, this is going be basically
+diagonal matrix with just own price effect on the
+diagonal zeros elsewhere. If it's multiproduct firms, it's going to be blocks. If you think of a monopoly maximizing joint profits
+over the whole industry, it's just going to
+be a full matrix. That's when we talk about before looking at
+different structures, that's in a sense in which
+the different structures enters basically
+what's zeros or not. But with that in mind, you can basically say these are the
+first-order conditions. In principle, what
+they mean is that the markup is just
+equal to this matrix, which is a function of
+demand derivatives and the ownership and
+the market shares. The basic idea and
+this was implicitly used in the tables
+that we saw before, what it basically
+says, if you have the demand estimates
+which entered into this matrix, these derivatives. The price sensitivity, if you have that and you see the shares where you have
+the predicted share, you can compute what the markups are without observing cost data. We get into this in
+some sense backwards. But if you look at how did people get
+interested in demand, it's because of this
+because we said we don't actually have good cost data and we want to know
+what the markups are. That's what we're doing here. That's the basic idea is to say, let's estimate the demand, plug it in for
+different equations, see what the markups are and
+see which one fits better. The utility is
+basically as before. Really the only
+difference here is that part of the characteristics are going to be brand
+dummy variables. There's going to be
+a dummy variable for Cheerios and for cornflakes,
+stuff like that, to soak up some of
+this variation here. It's soaking up all the quality that's constant over time. To the extent that Cheerios, its characteristics and
+what's more important that characterizes the way
+consumers perceive them. Whatever is constant
+over time is picked up by these brand characteristics. There is a bit of an issue
+of then how do you get the coefficients here on
+characteristics themselves don't vary over time
+and if I have time, I'll talk about that but it's this second stage regression,
+they can get that. The data that's
+been used here as the ions IRI scanner data. These are data that come
+from basically supermarkets. The IRI and Nielsen are these two companies that
+collected from supermarkets and they aggregate this and then reported back to
+some of the companies. Here what I had was that the
+original data is actually collected at a UPC at a bar code level at a
+supermarket at a week. Here what I had was
+at the brand level. It was all the
+different barcodes of Cheerios aggregate
+it together. At the level of MSAs, aggregated quite a few stores, and aggregated to a quarter. It's over 13 weeks. What I had here was basically the top 25 brands in 67 cities were the exact number of cities varied over time, over 20 quarters and got
+about 28,000 observations. The market shares,
+to your right, to convert quantity to shares. I did that by essentially looking for
+each of these products. I had the volume converting that to a
+number of servings. Then assuming that
+each person in each city is going to consume at most one serving per day. That was a total
+market size and then that's how it was converted
+into market shares. Prices are defined as here. It's pre-coupon
+transaction prices. Anyway, a whole bunch
+of other variables, by the way, you asked before
+about cost instruments. Apparently, I got them
+from the monthly CPS. We'll talk about that later. Estimation basically follows the method we
+talked about before. Only demand side moments
+know supply side moment. Really here the extra variation
+is there's going to be over 1,100 different markets. Where the markets here vary both by time and cross-sectional. There are 67 different cities and that's going to be
+quite important to create the variation we need to estimate the random
+coefficients. I've explored various
+instruments here, the characteristics
+of competition. The first sentence we
+talked is actually problematic here because we have brand fixed effect and
+the characteristics don't change almost by construction. What I'm going to
+use is the prices in other cities that we've
+talked about before. I also compare them to
+proxies for city-level cost. These are earnings in
+the retail sector. Density of the city,
+trying to get for the rental cost and maybe
+transportation costs. But I really only do that
+for the logit model. Let me skip the
+brand-fixed effect. Let me show you some estimates
+for the logit model. One thing that I do find useful in doing is
+to always start with the logit model just
+to get a feel for the data and feel, what's the variation
+that's driving things. Just because these are linear regressions, they
+are very easy to do. Unlike everything else that
+takes time to program, this is once you have the
+data and it's organized, it's an afternoon playing
+around with data, even if you have a
+very large database. It's always a good idea to
+get out what's going on. These are all logit numbers
+and I'm just going to focus on the price coefficient. This directly translates
+into elasticities, but I'm not going to
+show you what those are. Just to get the idea
+of the endogeneity, the first column doesn't
+include any brand dummies. Then the next column, I include that it's still
+over less but just putting in brand dummies to capture
+the mean differences. As we saw in BLP when we
+instrumented, same thing here, the price coefficient
+significantly increases, and it's linear in
+the elasticity. The elasticity is
+not quite doubled, but almost it's about 50 percent higher in absolute value. This is the same
+thing, just adding a few more demographics.
+They don't do much. These are all OLS now
+putting in various IVs. The first thing here is I
+actually use IVs so instead of including IVs
+in the regression, what I do is I use
+them as instruments. The idea is to think of it it's a non-parametric version of the characteristics of
+other products because the characteristic of other
+products are constant. Think of it as if I included 25 different
+interactions of these. Think of it as a nonpermitted
+version of that. What's interesting is you get, comparable to these,
+very similar numbers where they use these
+instruments or include them. In some sense, it's saying
+that this is potentially a pretty good
+instrument to use for, if you're worried about
+this unobserved quality, it actually potentially
+could work reasonably well. The rest of these
+columns, what they do is the brand-fixed effects
+are back in there and now I'm worried
+about the endogeneity, not just of the average quality, but of the deviation
+your market by market. The thing that you can think
+of is that this is like some unobserved
+promotional activity that's going to impact the specific shares in any particular market and you want to instrument for that. The different column,
+what they do is they either are what I call prices, so that the price
+in another city or these costs proxies. What I find quite interesting
+looking at this is the fact that they
+move in tandem. Depending on what
+else I control. But they're almost identical. These two different sets
+of instruments and in some sense have no reason
+why they would produce, they are completely different where they're
+coming from and yet seem to actually produce
+very similar numbers. Going back, we had a lot of doubts of whether these
+instruments work. But to me this was
+actually, yeah, I can tell the theory
+it's actually seem to work reasonably well
+when you move together. When you go into the
+nonlinear models, I only used the prices in other cities because
+these in some sense, I didn't have enough of them. But it's just a way
+to feel better about these prices in other cities. These are estimates
+from the demand model. Let me skip that. I don't know if there's anything particularly interesting here. These are cross-price effects, so these are actual elasticity, it is not semi elasticities. Can you see any
+of these numbers? Again, how do we look at these? Well, I think it is
+always useful to look at. The first thing I look
+at it is if this was a logit model within column, this should just be
+a single number. I think actually in the
+paper I even report, I don't remember
+what that number is. The thing that you
+look is to see how much variation
+do I see in that? Just find, is there
+any variation, and then does that
+variation make sense? Does it end up that the cross-price elasticity
+makes sense? For example, if I'm
+looking at cornflakes, it looks like its closest
+substitute is Wheaties. Which makes sense, at
+least to some extent. Then Frosted Flakes, which are basically just
+Corn Flakes with sugar on. It makes sense. Another
+thing to look at is this actually going to be important when
+I look at tomorrow. Let's see here if I
+can fit them all. I'm looking at Post raisin
+bran and which one is the Kellogg raisin bran just
+a second. The second one. I'm looking at the Post
+raisin bran column. Right here. What's its
+closest substitute? It's Kellogg raisin bran. Again, if I'm looking
+here at ratios, would have I liked that margin
+would have been higher? Yes. But at least, it is coming out as the best, whatever the closest substitute. Now of course, how close if
+I really cared about that, I maybe could have
+put in raisins as the characteristics.
+But it wasn't in here. I actually can show you what
+the characteristics were. The characteristics
+are the ones that I had here as you can
+actually see there's, calories from fat sugar, a dummy variable defined as
+mushy and that's whether the cereal actually gets basically whether
+it's a flake or not. Then the amount of fiber and then these are
+segment dummies. Very much like if you
+want the information that you would get us a logit, but segment dummies and just put a normal
+distribution along them. There's nothing here
+that will obviously tell you it's pushing these two rigging the game to make
+sure that they're the same. But you see it's still
+enough to actually pick up that those are the
+closest substitute. Then you can compute
+the margins here, and here they're under
+different models. Then how do you
+choose between them? Well, you go to some data and it ends up that the
+industry estimate was 45 and that's basically
+the only model that fits as the model here
+without collusion. That's the one that I went with. I'm basically out of time,
+but this is my last slide. Let me just talk about
+some comments and issues and build up on some of the issues that came up
+and the people asked me. One of the issues that always comes up in this
+context is asking, is choice really discrete? We assume you only
+choose one cereal. You could always say all of
+these settings just like, well, we say it's
+a discrete choice, but is it really the case? There's two ways about this. One is to say, well, let's just define the choice finely enough. It's like yes, consumers can buy multiple boxes when
+they go to the store. But the question is, when
+you wake up in the morning, are you going to take on going to take a little
+bit of cornflakes, a little bit of raisin bran
+and mix them in the bowl, or you just say, I'm
+just going to take one. You could say, if you define
+the choices every day, I'm going to choose what it is. This is an approximation
+to this two-stage process. First decide what to buy and then what to
+put in the bowl. But if you really care, I think that in some cases
+that's not a good fit, there are extensions
+that we're not going to have time
+to talk about. Most notable, I
+think it's actually a paper by my colleague
+Yigal Handle. We actually model the
+multiple discreteness both in terms of
+choosing multiple brands but also choosing more than one. Saying I'm not
+just going to buy, in this case you
+look at PCs firms deciding which PCs to buy, not just one PC, but how many, ignoring both. There has been some work that we're not going to
+be talking about. The other thing here is
+it ignores the retailer. This was basic manufacturer, supplier say, well, where's
+all the retailer in this? Again, you can extend the
+analysis of this paper by Sofia Villas-Boas
+does exactly that. There's been a lot
+of other work, John Asker and looking
+at other industries, there's a lot of people that
+have followed up looking at the vertical relations,
+following up on this. Then the other thing that
+I just want to set up for my last lecture of tomorrow,
+you might ask, well, cereal is a storable good, where is the price
+variation coming from, and how much of the
+variation is from sale, these temporary price reduction, and how does that
+impact the estimation? What happens is, this is a
+static demand, but you say, suppose it really what happened there's dynamics because
+of the storability. How is that going to impact? That's something again
+that we're going to talk about tomorrow. Any final questions? 

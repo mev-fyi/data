@@ -1,0 +1,324 @@
+Tyler Muir: Let me start with
+the main research question that we're after in this paper. What we want to know is, how much variation in
+aggregate risk premia, can we ascribe to
+intermediaries? By intermediaries, we mean
+banks, investment banks, hedge funds, rather
+than to households. The two things I
+want to highlight here is what we're
+going to be focusing on aggregate risk premia, risk premia across
+broad asset classes. Then there's rather
+than households, really think of rather than aggregate
+fluctuations in risk aversions. Let me try to make
+this concrete. We know that period of poor health for financial
+intermediaries, for financial institutions, times when they
+get into trouble, tend to be times when
+risk premia very high. But those are also times likely when aggregate risk
+aversion is probably high. It's going to be hard to separate what's coming from
+which of those two channels. To give them a very
+specific example, here's the financial crisis. I have just a couple of
+measures of risk premia. I have an MBS spread, a corporate default spread, and the dividend yield
+for the stock market. You can see all of these
+measures of risk premia spiking dramatically in the
+middle of the crisis. Now, there are multiple
+stories that you could tell, but the two that we're going to really am thinking
+about here is, one story is that large financial institutions got into significant trouble
+in the financial crisis. Their risk-bearing
+capacity was impaired, and that's what's driving up risk premia in this episode. Now, of course,
+at the same time, it's very likely that aggregate risk
+aversion also moved. You could think
+about that in the context of specific models, let's say Habits Model
+consumption is falling, so risk aversion
+would be rising. Or if you want to
+think about sentiment, people are becoming overly pessimistic for possibly
+behavioral reasons. But it's very
+likely that both of these two things were going on, so it's not clear
+how to interpret this coordinated rise in risk premia cross
+those asset classes. What we're going to
+do in this paper to try to get at this issue, is we're going to argue that intermediary risk
+appetite should matter more for assets that are more difficult for households
+directly invest in, and household risk appetite should matter less
+for these assets. It's going to deal with the fact that the two measures that
+we're going to use of intermediary distress and unobserved
+household risk aversion are likely positively
+correlated. We're going to show you
+this in the context of a model that this is
+theoretically justified. The model is going
+to nest the simple version of the two main views. It's going to allow for
+household risk aversion to change over time or
+aggregate risk aversion, and in intermediary
+risk aversion. We won't say much about
+it in a talk right now, but the existing
+tests that we have don't quite get
+at this question. One needs to look at
+this relative variation and risk premia across
+the asset classes. Then I'll show you evidence
+that across asset classes, measures of financial sector
+health predict returns more strongly in
+these asset classes that are difficult for
+households to invest in. Think of things like credit default swaps versus
+the overall stock market. We'll look at a couple
+of household measures, we'll show you that those have the exact opposite pattern. They predict more
+for assets that are easier to invest
+in, and vice versa. So far, all I'm talking about is variation in risk aversion. You might be worried about
+time variation and risk. We can control
+observable variation and risks in terms
+of volatility, skewness and beta will show that time variation and that is not what's going on in terms
+of explaining the result. The bottom line is
+going to be that intermediaries in
+households appear to have sizable but distinct
+effects on risk premium. I'll show you a
+number of results, but the main result will
+look something like this. I have the future returns on asset class I on
+the left-hand side, those are going
+to be normalized. I'll tell you how we do that
+normalization in a second. I have measures of intermediary health on the right-hand side. The leverage factor that I've used for broker-dealers before, and this net worth
+of primary dealers. But just think of
+that as a measure of intermediary health
+predicting returns. Then we're going to
+look at the pattern of these coefficients
+across assets, where we're ranking them, by how intermediated they are or how specialized they are, with stocks left and
+then CDS on the right. Then we're going
+to be arguing that this increasing pattern
+of coefficients is suggestive that
+intermediaries are mattering more for
+these asset classes. I'll show you the same thing
+when I include proxies for household risk aversion
+and we'll have the exact opposite
+pattern downward-sloping. Then we're going to
+use that to try to decompose the volatility of risk premia in
+these asset classes and we can ascribe
+to households, which I'm plotting in red, and then intermediaries which
+I'm plotting in the blue. We're going to be using this
+diff-in-diff approach here. These are all lower bounds
+in each asset class. The lower bound for stocks for intermediaries
+is going to be zero because that's what I'm
+going to base it off of as the least
+intermediate assets. Then I'm just going to be using how much more are these measures predict in CDS than
+stocks to try to get it, this variation for
+households is going to be the opposite pattern. A sizable amount
+of variation and risk premia is
+attributable to each one, and in the way
+you'd expect based on these asset classes. Just to talk a little bit
+briefly about the literature, what we know so far is aggregate asset prices
+are consistent with the idea that institutions or intermediaries might matter, but most of those
+tests are Euler equation tests
+about intermediary first-order conditions. They can't tell you how much
+of this risk premia you can ascribe across these
+asset classes. We also have a lot of local
+evidence that intermediaries matter for particular
+asset prices at particular points in time. But it's still not
+clear how much they matter broadly for these
+aggregate asset prices. Let me just highlight
+the basic ideas before I go into the model. We're going to have time-varying risk appetite
+of intermediaries, which I'm going to
+call Gamma I.t. Same with household
+risk aversion Gamma H. t. The question that we want to know
+is whether or not in this regression here, Beta I, the loading for the risk aversion
+for intermediaries is bigger than zero. I'll talk about this
+normalization that we have on the left-hand side in a second. The problem is
+going to be we only observe some proxy for Gamma i, and likely that
+proxy is going to be positively correlated with Gamma h. That's what I
+showed you in the beginning. Everyone's going to get into
+bad times at the same time. The way we're going to
+try to overcome this is arguing that households face different frictions to
+invest in each asset class. Beta i, H is going to be weakly decreasing as we go from less to more
+intermediate assets, then I can tell
+whether or not that Beta i is different
+from zero, is positive. The model is going to
+look something like this. It's going to be
+really simple just to lay out these issues. For now, think of two assets, we're going to have N assets. Asset 1, think of it as
+something like the stock market, something that's easy for households to
+invest in an asset, to think of some more
+complex asset class, that's going to be
+harder for households to invest in directly. We're going to
+capture that through these costs, C1 and C2. Think of C1 as being low and
+C2 as being much higher. The household can directly
+invest in asset 1, but it's costly or to
+invest in asset 2. We're going to have
+household risk aversion Gamma h and intermediary
+risk aversion Gamma i. This is going to be a
+CARA normal framework. There are going to be two
+frictions going on here. The first friction
+is that, as I said, assets are going
+to differ in their ease of direct investment. The way that we're going
+to capture that is with this quadratic cost C, which might differ
+across different assets. The second friction is
+that intermediaries are going to invest on
+behalf of households, but possibly with different
+investment policies. They're going to have a
+different risk aversion, potentially Gamma I, that might be different from Gamma H. Notice here in
+the households problem, they're taking
+into account D_ I, so they're taking into
+account that they own the intermediary and are getting risk exposure
+through them. But it might be costly for them to go around and directly invest in these asset
+classes that they want to. The second friction is going to be that there's
+potentially a wedge in preferences that
+intermediaries are not going to act as a
+veil but invest exactly as households want
+them to in the model. The key outcome of
+the model is going to be this relative
+predictability. It's going to be easy to jump from those to
+the equilibrium. I'll just jump to
+what the model says about this empirical test. The model is going to say that something pretty intuitive, which is that the change in
+risk premia for asset class I with respect to a change in intermediary risk
+aversion Gamma I. That's always going to
+be weekly increasing. Increase in risk aversion is going to weekly
+increase risk premia. But it's going to depend
+crucially on this C_ i, the cost across the
+different asset classes. Similarly, for household
+risk aversion, when I change household
+risk aversion, risk premia also going to rise. That's going to
+decreasingly depend on C, which you can see in
+the denominator there. Now you can see if I just had one asset class
+and I was running one predictive regression
+and I was worried that my gamma I proxy was
+correlated with Gamma H, I wouldn't be able to really
+separate this at all. But using relative
+predictability can help me separate these two things. That's what we're going to use. The fact that the first
+effect is increasing in C_ i and the second
+effect is decreasing in C_ i is going to be what's key for our empirical results. This is basically what's
+going on in the model. You have a change in
+intermediary risk aversion here. For these assets with
+the high cost where it's hard for households
+to invest indirectly, there's going to be
+almost no substitutions through quantities and the price is going to fall substantially for asset class 1. Where it's easy for the
+household to invest, intermediary risk
+aversion increases, the household can
+easily substitute and prices won't
+change very much. That's exactly what
+we're using in the data. Having said that, I need to make choices about what
+returns I'm going to use. How am I going to
+get variation across asset classes and the
+ease of investment? Then also which
+proxies I'm going to use for intermediary distress? I'm going to use these two
+proxies in the literature. Some based on my own work using changes in
+broker-dealer leverage, another one based
+on He Kelly Manela. For what I'm going
+to show you here, we're just going to use
+an average across both of those factors as a joint measure of the health of these
+financial intermediaries. Then we don't need household risk aversion for
+our main results, but I'll show you
+results where we include household risk aversion
+proxies as well. Those have the implication
+that they should have the exact opposite
+pattern in the data. I'll show you looking at the habits measure from Kimball
+Cochrane looking at CAY. We have other ones as well. We're happy to include
+additional things here. What returns am I going to use? I'm going to look at stocks, treasury bonds, sovereign
+bonds, options, commodities, FX, CDS, then we've just actually added a
+couple more series. A high minus low yield
+corporate bond return, and then a mortgage-back
+security return as well. We think of these as more complex intermediate
+asset classes. Then I'll show you results
+as well where we look at convertible bond
+arbitrage returns and fixed income
+arbitrage as well. Things that we think
+are going to be unlikely for households
+to invest in directly, we should have effects
+showing up more there than for stocks. Normalizing these asset classes is going to be very important. We're going to look at two ways to do this normalization. One is normalizing
+them by the mean. Dividing the return
+in the asset class by the unconditional
+risk premium and then dividing by the volatility. We basically just
+want to account for. We could get an increasing
+pattern of coefficients if one asset class is just a
+levered version of another, and so forth, the volatility and the risk premium normalizations. We'll deal with that fact. The risk premium normalizing by the unconditional
+expected return will deal with any unconditional
+differences in Betas and things like this
+across the asset classes. Just to say a note on how
+we do these cost rankings, this is the ranking that
+we're going to come up with. We tried to base this on as
+many sources as we could. None of them are
+fully comprehensive in terms of giving us
+this C_ i ranking. But basically we went
+to flow of funds, you can look at
+household holdings of these different assets and you can compare
+that to institutional holdings of these
+different assets, specifically broker-dealers and other financial
+institutions. You can see who's holding
+relatively more of what. That gives us a partial ranking. Then we did these two other
+partial rankings as well, looking at value at risk to get intermediary exposures to different asset
+classes and looking at this data from the
+BIS on derivatives of who's trading in
+these asset classes. That gives us this ranking here. Let me show you the
+main results were first-time normalizing
+by the risk premium. I'll focus on two things, the pattern of coefficients
+going from left to right, and also the R-squared is
+going from left to right. You can see things becoming larger in terms of the size of the coefficients as
+we're going from left to right and also statistically
+more significant. Also the same pattern is going on for the
+R-squared for stocks, it's around one percent. For some of these other
+ones, it's much higher. I put this vertical divide here where we have
+credit and MBS. Those are the two
+things that we added, but they're not incorporated
+in the ranking. You shouldn't think of
+them as ranked eighth and ninth in terms of
+intermediation, but the one through seven
+ones were based off the ranking that
+we had just done. Here's the main
+result I showed you, that's just plotting
+the coefficients from the previous graph. Here's several other metrics that you might be interested in. Here's the normalizing
+by volatility in the second panel. Again, it's still gives this relatively
+increasing pattern and same with the
+R-squared at the bottom. Depending on which
+normalization you do, you get slightly
+different results, but still this upward
+sloping pattern. Now, what would
+happen if I replace this with a household
+risk aversion measure? Here's doing it for cay, same
+thing for habits though, you actually get a
+downward sloping pattern. That's exactly what the model or idea would have predicted, that it would matter
+more for things that are easier for
+households to invest in, unless for the harder things. Now we're going to use that in a panel regression framework. We're going to have interactions for how intermediated
+the asset classes are. That's what those dummies are
+and that interaction term, we're going to include household
+risk aversion as well. Let me show you those results. There are different ways
+to do those dummies. Let me focus on the last one, which is just doing a
+rank of the asset classes from left to right, from 1-7. What you can see is
+this interaction term being positive insignificant, that's consistent with what
+I showed you earlier of an increasing pattern of coefficients across
+the asset classes. For Gamma H for this household
+risk aversion proxy, you actually see a negative coefficient on the
+interaction term consistent with the
+downward sloping pattern. What we're going to do
+is we're going to use this to try and decompose the variation in risk premia attributable to
+each one of those. We're only going to be
+using the interaction terms to do that decomposition. For example, the non
+interaction term for Gamma I, we don't know whether or not to ascribe that to
+intermediaries or households. We're only going to
+use this difference. That's where I come up
+with this graph here. These are lower
+bounds just based on that interaction term. We're getting a significant
+amount of risk premia, ascribe to intermediaries in the blue for the more
+intermediate assets. The opposite thing for
+households in the red. I don't have time to talk too
+much about the robustness, but I'll just point you
+to this in the paper. Let me just address one
+issue of time-varying risks. So far we've all talked about time-varying
+risk aversion. Maybe it's that these measures lineup with time variation
+and risk in the right way. The concern here would be that the more intermediated
+asset classes happened to become more risky exactly when intermediary
+health is poor. That's the issue that we
+would have to deal with. We do this in a few ways. I'll just show you one. We just see whether or not those measures predict
+future variance. Whether or not the
+pattern of loadings maps to the patterns of loadings
+that I showed you before and we don't find that
+here. We look at skewness. We look at all different
+ways of measuring risks. Again, we can only
+control or deal with observable
+variation in risk. But we don't find
+anything there. Then I'll say one thing quickly about additional evidence
+from Hedge Fund returns. Again, this is an
+area where we would think intermediary health
+would particularly matter. It's probably hard
+for households to invest in these directly. We see something like this so for things like
+convertible bond arbitrage, fixed income arbitrage, we see a lot of predictability from these
+intermediary measures. We see a lot less for the
+overall stock market. Again, this is
+different data that's consistent with the main idea. Let me conclude here. Do intermediaries matter
+for aggregate asset prices? We argued the answer is
+yes, households too, but they have these
+distinct patterns across these different
+asset classes. Intermediary risk appetite
+should matter more for assets that
+are more difficult to directly invest in. That's exactly what we find
+empirically and the opposite being true for household
+risk aversion. 

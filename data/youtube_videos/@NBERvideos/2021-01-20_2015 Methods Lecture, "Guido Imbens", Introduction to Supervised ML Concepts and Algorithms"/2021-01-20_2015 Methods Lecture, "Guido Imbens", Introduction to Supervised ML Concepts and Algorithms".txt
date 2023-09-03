@@ -1,0 +1,683 @@
+Guido Imbens: I'm
+just going to give a brief introduction, and then I'm talking about four different areas
+of machine learning. Then I'm going to go into detail for one
+particular area there. I'm going to spend
+a fair amount of time on linear regression with many regressors and look at
+lasso and related methods. Then I'm going to continue with the with other methods
+for supervised learning, namely regression trees, and
+various variance on that. I'll briefly mention
+another set of methods referred to as neural networks and
+sometimes as deep learning. I'll talk a little
+bit about methods for combining various supervised
+learning methods. Then in the last
+part, I'll talk, and that's going to
+be fairly brief about some unsupervised
+learning methods. By a general introduction there, I'm very glad to be here, I gave some of these lectures
+with Jeff Gouldrate in 2007 when Matt [inaudible]
+started this series. At that point, we didn't
+really do anything on these methods. If I look back at the topics to be covered then it's not so much that we covered stuff
+that wasn't relevant. But this is really
+the biggest area in terms of what are now covering in my graduate
+econometrics courses that wasn't covered
+in those lectures. What I'll try to do
+is give somewhat of an overview it's going to be partly very short and condensed. There's a lot of courses, full semester length courses that deal with these topics. But it will give
+people a sense of which methods may be
+useful ultimately. Some of that isn't
+going to be that these methods are
+immediately useful because it's partly going
+to require a paradigm shift where the way we traditionally do things in econometrics. To imposes a lot of
+discipline and structure on the way we approach problems. A lot of these
+methods don't really fit into this framework. But being familiar with
+both these methods can do, I think it's going
+to help make them useful and in economics. Then this is partly echoing
+what Susan was saying. A lot of these machine learning methods are much more about the algorithms than about
+asymptotic properties. There's no unified framework where often in econometrics, we write down the
+models, and then we know where to
+look for methods for actually implementing
+these models, we may use maximum
+likelihood estimation. We have a lot of results on what the properties are there we know in many cases these methods are going
+to be consistent. They're going to be efficient, they're asymptotically
+normal and none of these things come up very early on the discussion of these
+machine learning methods. The question is
+typically much more of that it works in practice, which is obviously a
+very nebulous concept rather than what it's
+formal properties are. As a result, there's a proliferation of methods
+and algorithms and there's not always a lot of discipline in choosing
+between these methods. At the same time, that's very liberating in the sense
+that there's a lot of room for coming up with
+different methods. But, it makes it hard to figure out which of
+these methods work. Again, in contrast, in large parts of econometrics as well as in
+large parts of statistics, there's a very
+well-defined structure for doing things
+that we look at. For example, we look at p-values
+and we decide things as significant if the p-value
+is less than 0.05. It's a very interesting
+and in other fields there's a lot of push
+back there as well. There's a psychology
+journal that's just decided they don't allow the publication
+of p-values anymore. Partly in response, the American
+Statistical Association has set up a committee with somewhat odd task of coming up with a statement about the
+proper use of p-values. Now, I've been on this committee and it's been very interesting, partly because there's clearly no consensus on how
+they should be used. But at same time, in these
+machine learning methods, there's very little
+of the discipline. It's very hard for many
+of these problems, many different methods, and people have experienced about
+which things work well. But, there's very few
+formal results that particular things
+are guaranteed to work well under
+particular conditions. The setting is often one with a fairly large
+datasets and it can take the form of having many observations,
+many year units. But it can also take the form
+of having many predictors, covariates,
+regressors, features. Scalability of a lot of these
+methods is very important. There's a lot of cases where we would actually
+know what to do very well if computational
+issues were not a problem. But these methods
+are intended to be used automatically with very little human intervention
+on very large datasets. Another feature is that often the causality is de-emphasized. It's very explicitly
+about prediction, and the labels are often irrelevant. That's actually a very important
+thing because it makes, once you de-emphasize causality
+and focus on prediction, out-of-sample
+cross-validation is going to be much easier than in settings where causality
+is a big issue. Final thing that makes part
+of this literature hard to pass sometimes is
+that there's a lot of new terms for things that
+we're very familiar with. Here there's lot of talk about training models rather
+than estimating them. Hypotheses are used in a very different way than we
+typically do in statistics. Just reading the literature
+is often a little painful to try to figure out what people
+mean in familiar terms. I'm going to stress three
+key components that are in these first two hours
+of this lecture set. One is that there's
+a big emphasis on out-of-sample
+cross-validation. Rather than figuring out the theoretical properties
+of these methods, the way we typically do, and the way they've
+been well established for things like maximum likelihood estimation
+or DMM estimation. People assess the properties by looking out-of-sample
+as it typically takes the form of
+cross-validation exercise is where the data is split
+into a training sample. On a test sample, the model is estimated or trained on
+the training sample. Then its performance
+is assessed or compared to that of other
+methods on this test sample so that there's no possibility
+of over-fitting leading to the favoring
+of very large models. As I said before,
+and as Susan will illustrate later this afternoon, that creates a lot
+of problems in cases where we're interested
+in causal effects. Unlike prediction problems, we generally don't have
+unbiased estimates of what the truth is in models
+for causal effect. Here, will tend to look at models that can be very big. Then there needs
+to be special care taken to avoid overfitting. Rather than choosing
+models in a class to optimized the
+fit of the model, this typically going to
+be some regularization, some penalty to
+avoid overfitting. That is going to
+be two questions, how you choose the form of regularization as well as the demand of the
+regularization. Second part is relatively easy. Typically that's done
+through cross-validation, where repeatedly
+the data is split into two to figure out what the optimal amount of
+regularization is. The form of regularization
+is much harder. Those are typically
+chosen partly on theoretical grounds, and using more ad-hoc methods, and often different ways of
+choosing the form of regularization lead to very
+different algorithms that sometimes surprisingly
+different properties. But this is an area where the lack of structure can
+make things very difficult. Often, you know that you would like to be very flexible in
+the form of regularization, but there's only a limited
+amount you can do in terms of actually implementing on that. The third theme is scalability. In the literature, we want
+these methods to be able to handle very large
+amounts of data and work well automatically without
+much human intervention. One key aspect is that typically we want
+to use methods that parallelized rather than to
+speed up the computation. For example, if you think of methods used in
+program evaluation like matching methods, they can be very
+computationally intensive. There's been a lot of
+work trying to find methods that do almost
+as well theoretically, but at scale up much better. Locally sensitive hashing is
+one of the key ideas there. In terms of the
+supervised learning that I'm going spend all of the
+first lecture on there, two problems they
+want to focus on, I'm just going to
+mention the first we then focus on the second one. First is classification. The idea there is
+we have a number of observations on pairs
+of two variables, y and x. X is an
+element of an unordered set of integers. What we're trying to do
+is find a function that will map for any value of x, the original set of observations into one of these categories. Given the data for
+new value of x, we want to assign them to
+one of these new categories. Traditionally an econometrics, we might have done this using logistic regression models, where we model the probability of belonging to one
+of these categories. Here, that's not
+always the goal. Often we don't actually
+need the probabilities. We just want to get one of these integers out
+of the algorithm. Some of these algorithms never come up with a probability there.
+We want to do that. It just assign new observations to one of these categories. Big successes there in the machine learning
+literature has been automatic
+reading of zip codes. There it is, you see someone writing
+something and you want to classify it into
+one of 10 categories, namely digits from 0-9. There's no interest. There are in causality, beyond that, facts that I
+use an example at once. Then one of my statistics
+friend says well. In fact, now when
+he wrote envelopes, he actually did that being aware of the fact
+that these things are going to be
+read by machines, and so he knew to make sure that they would
+actually be readable to machine rather than
+readable by humans. But in principle, it's a pure prediction problem that's obviously
+modern versions of that face recognition that is being used very widely
+at places like Facebook. Whatever spent most of the time on is a problem
+that's actually very familiar from the economic
+and econometric literature. It's essentially which we use to refer to as
+nonparametric regression. Again, we have n observations
+on the pair y and x. Now y is a continuous
+variable or discrete, but we're trying to come up with the expected value
+for y given x. In fact, in these
+lectures in 2007, we did talk briefly about
+nonparametric regression. What people typically used in econometrics at the time was kernel regression that had a
+lot of very nice features. It was easy to establish asymptotic properties
+for these methods. They were fairly
+easy to implement. But it was also very
+widely understood that didn't really work very well
+with lots of regressors. You could do this and you
+could make a pretty plots, if you add one or
+two regressors, nobody really ever tried to
+do this with 10 regressors, let alone with thousands
+of regressors. What we're trying to do here
+is looking at methods where you could think of
+implementing this with thousands of regressors
+of features. Partly the price level pace, that's for a lot
+of these methods. There's actually no going
+to be asymptotic results. In fact, in lot of cases
+it's clear that there's no going to be asymptotic
+normality, in some cases, that's been suggestions
+that asymptotic normality and general large
+sample properties may hold in particular
+for random forests. But that's not been a main
+topic in this literature. Now let me get to
+the main part of this first lecture and let me start with looking at
+linear regression. The way we typically teach
+it in econometrics courses, we have a relatively small
+number of covariates. We model the regression
+function as linear. In those covariates, we estimate the model by least squares and we teach the
+undergraduate and graduate students
+this estimators have very good properties therefore they should be widely used. Now, of course, these
+optimality property is actually very limited. We know that in general, OLS is not even admissible
+but in practice, it works very well for small values of k when
+we have relatively few covariates. Question is what to do when
+we have many covariates? Again, we want to implement this with
+thousands of regressive, sometimes millions of regressors and very large number
+of observations. In some cases, there may be
+actually be more covariates, more predictors, than
+we have observations. Clearly in that case,
+we can't do all that. Now many years
+ago, when I sit in the econometric
+seminars at Harvard, I remember the grades
+we really just saying that we should never trust OLS with more than
+five regressors. The contexts was really that, he thought you suddenly really
+look at those problems. There was nothing that was
+really going to work well, if you had lots of regressors. Now here, that is
+exactly the focus of a large part of
+this literature. What we need to do is find some way of regularizing
+these problems, of shrinking them towards the particular values
+so that we don't run into the invertibility
+problems or the poor properties of
+OLS with many covariates. Here's another quote. I'm going to give a
+couple of these quotes. You can decide
+whether that's there. To hide my ignorance here, or to just show that I've
+read this literature. But Fabnik who has come up with the support vector
+machines methods road that regularization
+theory he was one of the first signs of the existence of intelligent inference. You can already see
+from here that he's not necessarily very
+generous person. I think there was a
+lot of statistics that reflected
+intelligent inference. When I talked to a friend
+of mine by this new Fabnik, he said somebody asked Fabnik why he was being so abrasive. Fabnik comment was that
+100 years from now, they weren't going to remember
+what it was nice or not, but it we would
+remember his work. How do we regularize
+these problems? I'm not really sure in Fabnik's case is
+that's completely right. Exactly so he could
+have been an economist. Let's now look at regularization
+regression there. There's three things we can do, one is to shrink estimates
+continuously towards zero. I'm still going to do this in the least-squares
+contexts so we could do OLS but we may have a large number of regressors so we don't think it
+works very well, or we may have so
+many that we can't actually do least
+squares directly. We can just shrink all
+the estimates towards some common value and
+typically that would be zero, or we could limit the number
+of non-zero estimates. That's a big idea, the notion of a sparse
+representation. Then we're going to select some of the covariates to enter into the regression there
+and drop others. Of course, we always
+do that informally by just choosing which
+regressors we include, but here I'm going to talk about systematic ways of doing that. Here's again a quote from the highly recommended
+book by Hastie, Tibshirani the main writer, but we refer to this as
+the sparsity principle. They say in the
+end you should use methods that do well
+in sparse problems, so where in fact there
+are a lot of zeros, a lot of coefficients that
+are very close to zero. Because if in fact the
+problem is sparse, these methods are
+going to do well which seems plausible, but the other part
+of the argument is very interesting because no procedure is going to
+do well in dense problems. I've been accused of
+that in my own work, so this is very much
+a case of looking for your keys where the
+light is say, well, problems that are dense where a lot of these coefficients
+are different from zero and we have no structure on them, we're never
+going to do well. If you have 1,000 observations
+and 800 regressors, we cannot figure out these coefficients if you
+have no structure on there. So just don't think
+about this promise, just try to deal with the
+case where you know there's only a couple that matter
+and the others don't matter. The discussion here
+in the other book by Friedman, Hastie,
+and Tibshirani, they discuss this in
+more detail and they argue that there's actually
+deeper reasons for doing this that I'm not sure
+are entirely convincing. But this is a huge issue, the idea of looking for these representations
+where you try to select some sub-models that zero out a bunch of the coefficients is a very important concept. Then we can combine
+these things where we do some shrinking
+towards zero and dropping some
+coefficients directly. The first method into
+this framework is just doing subset selection. You could try to
+look for the set of covariates that gives you
+the best approximation to the regression function by limiting the number of non-zero
+coefficients or putting a penalty on the number
+of non-zero coefficients where Beta naught is
+just the L_0 norm, but you just count the number
+of non-zero coefficients. Trouble with this is it's
+very hard computationally. In principle, you would
+need to look over all subsets so if you want to allow for 50 covariates and you have a
+million covariates, that would be a
+very hard problem, you can't deal with
+it computationally. Even though it may be better in principle than some of these
+other methods computation, this is just not scalable. The second method that goes back a long way
+is ridge regression where you modify the
+OLS estimator by putting in the
+denominator there, but you add to the denominator Lambda times the
+identity matrix. I should have said this before, typically in these
+methods we first normalize all the
+covariates to have mean 0 and variance 1 so
+they're on the same scale. Otherwise, obviously,
+adding Lambda times the identity matrix wouldn't be a very natural thing to do. But now once we've done that, this is somewhat
+natural thing to do, we ensure that the matrix
+and denominator now is invertible and we
+end up shrinking all the estimates towards zero. As a very nice interpretation too from a Bayesian perspective, if you had a prior
+distribution for Beta that was normal and if the distribution
+of Epsilon was normal, then for some values of Lambda, the ridge regression estimator would be the posterior mean. The posterior distribution
+would in fact be normal and this would
+give you the posterior mean. Here, all the estimates are shrank smoothly towards zero. If they're all uncorrelated, we would in fact shrink them
+all by the same factor, one over one plus Lambda. In general, it's a little
+bit more complicated, but it's a very
+familiar thing to do. It scales up reasonably well other than at a
+point where you have so many covariates
+that you can't really invert this
+matrix very easily, which is in general not going
+to be a sparse matrix so the matrix and [inaudible] at some point it's going
+to make this hard. If you do this for a
+billion observations, you would have a billion
+by billion matrix and that's hard to invert. Now, what is in between these things which
+has become incredibly important in the
+statistics literature and in the machine
+learning literature, so here's a quote from Andrew Gelman's blog
+where he talked a bit about an ease with Lasso and how he became convinced that it's a very
+important thing. What a sense for
+actually is Least Absolute Selection and
+Shrinkage Operator. Stanford guys are very
+good at coming up with labels for their methods
+as we'll see in a bit. This goes back to
+Tibshirani '96, what he suggests is minimizing
+the sum of squares, but then adding a penalty term, then in contrast to the subset selection there where it was the L_0 norm or the ridge regression
+where it was L_2 norm, now it's the L_1 norm. We sum the absolute values for the Betas and it
+turns out that has very interesting
+features that make it both computationally
+easy as well as make it have a
+nice interpretation. So the comparison is
+to ridge where we use this L_2 norm or the subset selection where
+we use the L_0 norm. What ridge is going to do, I don't have a pointer here. Here it just shows you how these three different
+methods shrink OLS estimates towards zero. You start off with the
+least-squares estimates, we just have a single
+regressor here. The ridge we just multiply the coefficient by some
+constant between zero and one. The subset selection
+would set the coefficient equal to zero up
+to some point and then go with the
+OLS coefficient, and Lasso does something in-between where up to a point it sets the coefficient
+equal to zero, and then it goes up linearly, but it stays below the
+least squares coefficient. This is ridge, this is subset selection
+and this one is Lasso. One thing to take away
+from this is that compared to ridge for very large
+values of the coefficients, there's going to be
+a big difference between ridges on the one hand, and Lasso and subset
+selection on the other hand. In cases where there's
+some regresses that you think are
+very important, ridge is not going to do very well because it's
+going to shrink the large coefficients much more than Lasso or subset selection, and that has a lot of the intuition for
+when Lasso might be doing better than
+ridge in practice. Now here's another plot to
+illustrate why with Lasso we occasionally may end
+up with exact zeros and why we never end up
+there with ridge. Here if you look at
+ridge regression, if you have the OLS estimates, one way of thinking about the
+problem is that we shrink these OLS estimates
+towards zero. Given an amount of shrinkage, we want to have estimates
+that are inside this circle. We look for the closest value to the OLS estimates that
+is within the circle, and that's always going
+to be or, in general, that's going to be somewhere away from the
+points where one of these coefficients
+is equal to zero. When we do the same
+thing with Lasso, restricting the
+coefficient means we're restricting them to these rotated squares, and now the closest value
+to the OLS coefficients may be on one of these edges
+but in many cases, it's going to be
+on one of the axis where you set some
+of the coefficients exactly equal to zero. Compared to ridge,
+Lasso is going to zero out some of
+the coefficients and shrink the others a
+little bit towards zero but it could end up with
+all coefficients non-zero. Now, there's lots of other ways of doing that that have some
+of these same properties. Apparently, I want to mention these because they're
+all that interesting in their own right but it
+shows you how special Lasso is in some
+of its property. There's a method
+developed by Efron called Least Angle Regression
+or LARS that's a stagewise proceedings
+that's a little bit more like stepwise
+regression but it provides an algorithm
+for actually calculating the Lasso coefficients as a function of the
+penalty parameter. So that is very
+helpful in terms of implementing these
+methods because it shows you which
+coefficients enter into the regression
+function there as you relax the penalty parameter. Then there's another
+closely related method called the Dantzig Selector, named in honor of Dantzig from linear programming because the actual computational
+methods for doing this involve a lot of
+linear programming by Candes and Tao. I'm probably mentioning
+this because Candes is our neighbor at Stanford living 100 yards
+from where we do. That's again a
+very clever method and in principle theoretically, you could expect
+it to do very well very much like Lasso. It turns out in practice
+it doesn't work very well and it turns out that the particular way in which Lasso
+looks at the estimates, that's the regularization, it just works out
+incredibly well. Here's just a dental side that this is actually one of the few methods that has made some inroads
+into econometrics. There's been a lot of work
+by Belloni, Chernozhukov, and Hansen Journal of
+Economic Perspective paper. It gives a lot of references
+to that literature. What is special here? There's a couple of features. One is the fact that
+it shrinks some of these coefficients
+exactly to zero, makes it much more
+interpretable. In the end, if you do this with a couple of
+hundreds regressors, in many cases you would just
+end up with five or 10, and you can actually look
+at which ones matter. It also scales up
+incredibly well even compared to which
+where there is actually analytic solution
+for the estimator. If you have many observations inverting the covariance
+made and many covariants, inverting the covariance
+matrix can be a problem. Conceptually, it is also
+interesting to think why it might work well
+relative to LASSO. There, this [inaudible]
+issue is very important. If you actually look at
+Tibshirani's original 96 paper, it talks about the fact
+that if you think that as many covariates and they all have similar sized coefficients, then ridge is very
+natural thing. Or in general,
+putting a prior on these coefficients
+with common mean and some variance is a very
+natural way to go. But where LASSO is likely to do well is in cases
+where the covariates are very different. Where you think that some
+of these covariates, but you need not necessarily
+know in advance, but some of these
+covariates matter much more than the others. At that point, the
+fact that rich shrinks the large coefficients much more than LASSO becomes a big issue. Because it's very hard to
+think beforehand about what the distribution of
+these coefficients in settings with large number
+of covariates looks like. But I think it's certainly
+plausible that there are some covariates that matter a lot if you think about trying to predict an
+individual's behavior, it's likely that some features, some characteristics
+of these individuals matter much more than others, rather than that
+it's all a mass and they're all somewhat
+similar sized. But again, that's not really
+a theoretical argument. It's certainly the case if you think about this from a
+Bayesian perspective, that if you think
+the distribution of these covariates is more like a normal than like a Laplace distribution there, which we do better than LASSO. Focusing on the covariate
+selection, the way LASSO does, does have some awkward aspects. Sometimes we think about super efficient estimators where we try to estimate the mean, estimate it by zero. If the average is
+close to zero or by the sample average, if the average is
+far away from zero, and you can show that
+estimator is super efficient in the sense
+that it always does as well as the mean
+in large samples, but it does much better
+than the mean if the true population
+mean is close to zero. LASSO has the same feature. It shrinks these
+estimates towards zero. It does very well if these estimates are
+very close to zero. But the same way we
+don't really ever use this super efficient estimators for the
+mean because we think they do very poorly
+when the population mean is close to zero but
+not identical to zero, LASSO is not going to
+do well if a lot of these coefficients
+are close to zero, but a little too
+far away from zero, for zero to give you
+a good approximation. In that case, Ridge
+would do much better. Another aspect is that the nature of the penalty
+term means it's going to be unstable when we have very highly
+correlated regressors. In particular, if you put in two copies of the
+same regressor, Ridge would have no
+problem with that. It would shrink both of them to approximately
+half the magnitude of the sum of these
+coefficients, but LASSO would be indifferent
+between many values. As a result, it tends to
+be unstable if you have a lot of very highly
+correlated regressors. Another attractive feature
+of LASSO is that it has the interpretation in terms
+of a Bayesian analysis. If you start with a prior
+distribution for the Beta, it has a Laplace distribution. You focus on the posterior
+mode then you would get the LASSO estimates. Of course, from a
+Bayesian perspective using the posterior mode, this is somewhat odd thing, but has it's key here to getting the sparsity property
+that a lot of these estimates are
+exactly equal to zero. What is more interesting is
+the choice that the prior, where I think in a lot of cases, a normal prior would probably be less
+reasonable than a Laplace prior if you want to
+allow for some of these coefficients to
+actually be large. Another Bayesian method that
+is useful to think to put this in perspective is what is referred to as
+a spike and slab prior, where you could specify a prior distribution that
+puts a point mass at zero and then has a continuous distribution
+for non-zero values, say normal distribution or
+even a Laplace distribution. That would be very much
+in line with LASSO, but it doesn't scale
+up as well as LASSO. Let me make a couple of comments on how you actually
+implement things. I don't do this with the idea that's based on this
+very short discussion, you would actually directly
+be able to implement this. But I want to point out some of the issues that come up when you actually implement this. There's a lot of
+very good software available for these methods. If you go to
+Tibshirani's homepage, there's links to all of them, but it's been
+implemented in MATLAB, where there's a lot of our
+program software available. But there's a bunch of
+choices to be made still in these methods that matter certainly if
+you want to be able to replicate results based
+on different software. The idea is to minimize the
+sum of squared deviations using this penalty, this [inaudible] penalty term. We can rewrite that as minimizing sum of squares
+subject to the sum of the coefficients being
+less than some constant. Often people scale
+that by the sum of the least squares
+coefficients so you get the scaling coefficient
+to be between 0 and 1. Then the question is how
+to choose the amount of regularization
+either in terms of Lambda or t. You could do that both
+ways so it may make a difference whether you
+regularize on Lambda or on t. But we
+typically do that. What was typically done
+in this literature is using cross-validation, typically for no
+particular reason other than it's nice to have
+consensus numbers there. People do 10 fold
+cross-validation. We divide the sample into 10
+cross-validation samples. For each of these 10 samples, we first estimate the model for a given value of
+Lambda on the remainder, on the 90 percent of the data, then we calculate the sum of squared deviations for
+that value of Lambda. We sum up over all the
+cross-validation samples. In principle, that's
+something we could minimize over the cross-validation
+parameter. That's not quite what
+is typically done, Tibshirani and his co-authors
+recommend actually using a larger value for Lambda, doing more regularization
+than you would get out of simply minimizing
+the cross-validation, the mean squared error. What they do is they
+calculate standard error over the cross validation
+samples and then choose the largest Lambda
+that is reasonably close to minimizing the
+cross-validation error. Whether reasonably
+close, it's measured in terms of the standard error. As it is, one of these
+places where there's a lot of ad hoc decisions in
+the end going into this. Why exactly this is
+the right way of doing it is not clear, but the experience of suggests that that's a
+reasonable way to go. Final point on the LASSO is what is referred to
+as Oracle Property. That's reminiscent of the super efficient
+estimation discussion there a couple of minutes ago, if in fact the true
+model is sparse. Obviously, in social
+science applications or in any application that's
+really very unlikely. But if it were true that
+the model is sparse, and if it's true that the number of non-zero coefficients is relatively small relative to
+the number of observations, then ultimately, you
+can do inference. You can calculate, construct confidence intervals based
+on the LASSO estimates, ignoring the fact that you selected all the
+zero coefficients. You can just do OLS on the
+regressors that are selected. The regular or less
+standard errors give you valid
+confidence intervals. Because in practice, that is not always going to give
+you a good approximation. In the end, if you start with 1,000 covariates and
+you get it down to 10, ignoring the fact that you spent a fair amount of
+data on getting rid of these 990 covariates
+can't always work. But at least in
+principle, suggests that it may not always give
+you a bad approximation. Just to show you how this performs
+relative to least square. I took this dataset that I've used many times from the
+original from the long time. Here, data on
+earnings and a bunch of an eight covariates, some binary, some continuous. I created additional
+covariates by just including the
+third-order interaction. I had 121 covariates or
+use the training samples by 8,000 observations
+in a test sample of about 8,000 observations. I compared OLS with all 121
+covariates versus Lasso, which selected 15 out
+of the 121 covariates, and the root-mean-squared
+error in the sample it's
+about twice the size of what it is for Lasso. The OLS can really deal
+with that many covariates. You can also see there's a scatter plot of the OLS predicted values
+for all the observations, for instance, the Lasso
+predicted values. What you see is that
+occasionally the OLS estimates. It is very wild, even though none of the
+individual coefficients was particularly
+badly estimated, occasionally the predictions
+based on our last, we just be very far off. One modification of Lasso that is fairly popular is what is referred
+to as elastic nets. This is where you're
+combining the features of ridge regression and
+Lasso regression. The idea is to look at a penalty term that's a
+convex combination of L_1 penalty and L_2 penalty with weights Alpha
+1 minus Alpha. Then do overall shrinkage on
+that combined penalty term. If you actually
+fix Alpha at zero, you would be doing Lasso. If you fix Alpha at one, you would be back doing
+ridge regression. But now you have something that could in principle deal with the settings where I last heard as well as settings
+where the ridge as well. Here you run into this general promised
+that in principle, you can make the regularization
+very complicated, but it becomes
+harder to actually implement it in practice. You can't really
+use test samples to optimize both over
+Alpha and Lambda in a very fine way as what
+people do in practice, there is just using a couple of possible values for Alpha and then only choosing Lambda
+through cross-validation. For example, take five
+values of Alpha and optimize overdose
+as well as Lambda, rather than try to do both Alpha and Lambda continuously, which will make the
+problem unstable. That finishes the part on Lasso on linear regression type
+methods, and it's eliminated. Just going to summarize that. Again, giving you a
+quote from Gelman, he wrote on his blog summary
+that Lasso is the new OLS. He viewed it as something
+that you should just do routine the same way we do OLS. We know that OLS doesn't
+really work very well in a lot of cases where we
+have a lot of covariates, Lasso is still going to
+do very well if you have few covariates
+because the shrinkage is going to matter very little. As a matter of routine, he suggests that people
+should really be using Lasso-type
+shrinkage rather than conventional OLS with
+the idea that you're not really doing my time
+if OLS works well. But if there's a difference
+between the two, it's very likely that
+Lasso is going to give you more reliable results. Gelman, event
+Goffman wrote this, he sparkly agonists originally, he didn't really think
+that might've Lasso, but it became convinced by
+the subsequent literature so this is a fairly
+unbiased no opinion there. The second set of methods
+I want to look at, let's look at regression trees so that the problem
+principle is the same one. Be trying to estimate
+a regression function non-parametrically
+in a flexible way. But regression trees
+come at this from a very different perspective. The idea is to partition the covariate space into
+subspaces and then estimate the regression function within each of these subspaces as the average outcome
+for units with covariates values
+in that subspace. I'm not going to go
+into details there. But in principle, you could do lots of other things other than using the average outcome as an estimate within
+that subspace. Within these subspaces, estimate a parsimonious
+linear model, or do anything else there. But the idea is to partition the covariate space and
+do separate things in these separate subspaces
+and the question is, how to come up with a computationally feasible
+and sensible way of partitioning the covariate
+space in cases where we may have many covariates
+and there may be binary, there may be continuous? We can directly look over
+all possible subspaces. In some sense, this
+is a little bit similar to doing nearest
+neighbor estimation, but you just average outcomes
+for units very close to the place where you're trying to estimate the
+regression function. But here this is doing
+it in an adaptive way with some of these subspaces
+may be very large if, in fact, there's
+little evidence that the regression
+function varies a lot. It's going to divide
+the space into small subspaces if
+there's evidence that there's a lot of variation and the
+regression function. The starting point
+is just taking the whole covariate space and estimating the
+regression function as the sample average
+of the outcomes then the objective function is the sum of squared deviations from the estimated
+regression function. This gives sum of squared
+deviations from the mean. Then for each of the
+Capital K covariates, for each value in the support of each
+of these covariates, you could imagine
+splitting the data, and so if we split
+it on Covariate K for Threshold T you would
+split the sample into two subsamples depending on whether the covariate
+for Unit I, Covariate K is less than or
+equal to T are greater than T. We then calculate the average in these two subsamples. We look at the and then obviously we produce the sum
+of squared deviations from the regression
+function is now just calculate the efforts
+within these sub-samples. But if we split it on a
+different covariates, we might do better or if we split it at a
+different threshold. The idea behind
+the tree algorithm is to look for the covariate and the threshold that
+minimizes the sum of squared deviations
+after the split. You pick that particular
+combination of covariate in a threshold and split the
+sample in two subsamples, and then you do that repeatedly. You keep doing that each time. In addition to choosing between covariates
+and a threshold, you also choose between
+different subspaces to split. But you split the leaf, the subspace and the covariate, and the threshold that give you the most improvement in the
+sum of squared residuals. Each time you go to reduce
+the sum of squared residuals, and so we began need to
+impose some regularization. The one that is
+typically used is to add a penalty term that is proportional to the
+number of subspaces to the number of
+leaves in the tree. The result here is
+going to be that you have what is called a tree. You have a step function that estimates the
+regression function as the sample average within
+each of a bunch of subspaces. Trying to come up with the
+optimal set of subspaces for getting the tree there. Now to implement
+that began need to choose the amount of regularization
+penalty term Lambda, and the conventional
+thing to do in this literature is to
+do cross-validation. Again, we divide the
+sample into, say, 10 cross-validation samples each time we estimate the tree using all the other data other than the
+cross-validation sample. We do that for all
+values of Lambda. Then for all values of Lambda, we sum up the squared residuals over the
+cross-validation sample, and I'm in twos, the
+Lambda that minimizes this criterion and of all values of the
+regularization parameter. I like in the lawsuit case, the most of the software it focuses directly
+on minimizing the sum of squared residuals
+rather than have the standard error thing that was suggested in the Lasso case. That's partly because
+I don't think anybody has particularly
+looked at that. It's hard to argue
+that one way would be systematically better than
+doing it some other way. But, the conventional
+thing in the three literature is to focus on the criteria
+of this type. 

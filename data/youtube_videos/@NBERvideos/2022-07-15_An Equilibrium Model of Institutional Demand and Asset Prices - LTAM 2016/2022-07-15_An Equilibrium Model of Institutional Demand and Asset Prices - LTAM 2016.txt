@@ -1,0 +1,322 @@
+Motohiro Yogo: This
+paper was motivated by a set of questions that we're interested in related
+to the role of institutions and asset markets. For example, we often like what last paper and the
+literature that institutions are becoming more important over the years as a share of the
+market that they manage. How has that affected the
+liquidity of asset markets? There's been a lot
+of QE activity going on throughout the world right now on the Euro
+program is on the forefront. How does QE affect liquidity and volatility in asset markets? Should large institutions
+like black been fidelity be, doesn't mean a
+systemically important and should we regulate
+them as such? That was a question
+that was raised by the OFR report in 2013. The purpose of this
+paper is to develop a framework to answer
+these types of questions. It builds nicely on the last
+paper that we just saw. The question is, we think about institutions, and we have lots of data about
+institutions now. Like Django woman has a
+nice work using 13 of data. How do we use data pretty enough for bond holdings
+are in the Euros. We have a data on institutional
+holdings from the ECB. How do we use such data to do
+equilibrium asset pricing. Our contributions are to develop a new demand system
+for financial assets. That's where we're
+going to think about institutional demand for assets as a function of
+prices and characteristics. Very much in a spirit of what Fama-French have
+done over the years, but trying to merge it
+with holdings state, I'm trying to do estimate
+demand function. Our frameworks can
+emerge institutional holdings exactly. We're going to see that there's going to be a lot of
+heterogeneity and demand across institutions
+that you wouldn't see if you aggregate them into
+one being institution. Our frameworks can be consistent with traditional asset pricing, with either heterogeneous
+beliefs or constraint. We're going to try to
+identify a demand system by IV or coefficient
+restrictions. I'm going to show you
+some applications of our framework towards
+the end of this talk. To jump right into the model, the framework we're thinking
+about is we're going to model each institution as having a portfolio
+choice problem where there are allocating
+across different assets. Suppose there's N
+different assets in the economy and each
+institution i is going to allocate across a subset of those assets that they're
+going to be intensive on. Each investor i's demand for asset N is going to be
+given by logit function, where this function is a convenient functional form where there's going to be
+adding up constraints. The portfolio shares add up
+to one is what you want. Moreover, the shares are
+going to be positive. The positive restriction
+is not necessary. We can have functions
+that add up to one but can take
+on negative values. But the reason will logit
+function isn't enough data. We don't observe short position. We wanted a functional from
+that is strictly positive, that's not critical
+in our framework. But what's important is
+that we're going to model this demand function
+as a function of prices and characteristics. Here's the log price. Here are all characteristics that could be things
+like dividends, earnings, book equity assets. You can throw in your favorite
+characteristics here. An Epsilon is what we
+call latent demand. This is the unobserved demand of institution i first asked. Then the other equation that we have in our model
+is just market-clearing. If you aggregate demand
+across all institutions, they have to add up to shares
+outstanding times price. This is market
+clearing in dollars. Price per share times shares
+outstanding is equal to the dollar value of stock or asset N aggregated
+across all institutions. Now, it turns out that
+our demand system has a unique equilibrium as long as the coefficient on
+price is less than one, which is equivalent
+economically just saying that demand functions are
+strictly downward sloping. I'm going to show you
+that our framework is consistent with traditional asset pricing, and portfolio choice where
+heterogeneity and demands. The portfolio separation
+theorem to essentially fail. We need something like
+heterogeneous price constraints. The fact that we're studying
+institutions suggests that these investors
+could be strategic. They're not going to take prices given some want to explicitly built into our framework,
+potential price impact. It turns out that assumption of a factor structure and
+returns is critical to going from standard
+mean-variance demands to a characteristics
+demand as you'll see. The way we traditionally
+do asset pricing is we start with an
+objective function. In this case, we're maximizing expected log utility over
+our terminal wealth at time t. The choice problem is you're choosing a vector
+of portfolio shares. Now the standard
+budget constraint is your wealth, and the future is your wealth today
+times the rate of return in your portfolio. Where r is the vector
+of gross returns and w is a vector of
+weights on those returns. Then zero just indicates
+the risk-free asset. We know very well from
+standard portfolio theory that the optimal portfolio is going to be a
+mean-variance portfolio. Sigma inverse, the inverse of the covariance
+matrix or returns, Mu is the vector of
+expected returns. But here I noticed that index expected returns by
+i because this is a model with
+heterogeneous beliefs who each institution could have different beliefs about returns. Now, you notice that
+with log utility. It's just gonna be
+Sigma inverse Mu, but I have this extra
+term in the denominator. It looks like risk aversion. The reason that happens is if investors are large, and they
+care about price and pop, there effectively going to
+be having risk aversion. It turns out that this term, constant c is going to be 1
+plus A is how big you are your assets under
+management divided by a weighted sum of asset
+center management, of all the other investors. To find large relative
+to other investors, it's effectively like
+converse more risk averse. My demand curves are going
+to be more downward sloping. But the special case of is when my assets go to
+zeros, atomistic, that's the the classic asset
+pricing paradigm which investors are priced taking than this constant
+just becomes one, which is a standard
+mean variance. Now how do I go from
+mean-variance to a characteristics
+peak demand function? The key assumption that does all the work is this
+assumption which is assume that a
+covariance matrix has a factor structure where
+covariance matrix is given by vector Pi inverse plus scalar
+times the identity matrix. This is like saying,
+like in the CAP-M world, this is just going
+be a vector Betas, and a little Pi is going to
+be idiosyncratic volatility. Now, moreover, I'm
+going to assume that expected returns, and these factor loadings
+are going to be linear and prices
+in characteristics. This is like the linear version, or like Fama-French were expected returns
+and factor loadings are just functions or characteristics like
+book-to-market size, and so on. This assumption, it turns
+out to be very powerful because with some
+math can show that the demand function is
+going to be a function of prices and characteristics plus what I call latent demand, which is the individual
+specific deviation from at the part of expected returns that
+depend on characteristics. Think of it as unobserved characteristics
+to the econometrician. This vector Beta is going to be a function
+of Phi and Psi. Phi is the vector
+that determines how characteristics
+impact expected returns. Psi is a vector
+that determines how factor loaning's depend
+on characteristics. Beta is a linear combination
+of this Phi and Psi. Economically, what
+does this say? Well, it's not the case
+that when we invest, it sounds like we care about
+characteristics directly. We care about characteristics
+to the extent that either forecast expected
+returns are factor loadings. This demand function
+saying that I liked assets whose characteristics
+are associated either high expected returns
+or low factor loadings, which is exactly what you
+would think intuitively. Ultimately, what we derive is a demand function
+where you're from mean-variance to a
+characteristics based model. Once we have this
+model, we know we can do equilibrium asset pricing. The data we're using is
+a dataset where since 1980 we have the
+quarterly stock holdings of all the institutions that are managing over a 100 million. This is merged with the standard Chris Compustat database and we end up with 44
+million observations, which is the number of assets times the number of quarters years times
+essentially the number of holdings per institution. This is like an example,
+like big data on economics as applied to finance. There's nothing much
+bigger deal than we typically use in finance where we
+only look at prices and characteristics. Now the key facts is as a
+share of the US market, institutions used to
+manage about 35 percent, which has expanded to 63 percent at the end of our sample. In 2014, the leading
+institution manage about 300 million and
+held about 69 stocks. To give you an idea
+like a cross-section of stocks like 3,000-4,000. These guys hold very
+concentrated portfolios. Empirical specification
+is if we take our demand function and then
+work in logarithms then log demand for stock n or
+asset n is a function of log price log or characteristics and
+latent demand Epsilon. This almost looks like a
+linear regression model that almost invites you to
+just estimate this thing. What we're trying to identify is it a demand system and this is for single institution from a cross-section of
+stocks they hold. But you can do this for
+each institution i. Different institutions
+are going to have different preferences for characteristics versus
+price elasticities. The characteristics
+that we throw in here are things
+like log dividends, log book equity, profitability. But you can presumably put
+in anything you want here. We estimate these
+coefficients for each 13 of institution at
+each point in time. It's a large exercise and parallel computing where we
+have 3,000 institutions, and you do that at
+each point in time. Now you have the
+whole demand system for the entire US stock market. With the whole entire
+demand system, you can start to do some
+interesting applications. Now before I go there, let me explain to
+you how we identify just immune system. As I mentioned already, suppose you do this by OLS then the concern is
+that the latent demand, a part of demand on observed to the econometricians potentially
+correlate with braces. The reason being
+that if I enlarge, and I demand share n, I could push up the
+price of sharing, so epsilon and prices are
+going to be correlated. One way get around this problem is we can put restrictions
+on the demand system that gives you over-identify and restrictions, and allows you to ultimately estimators
+with weaker assumptions. One reasonable assumption
+is that something like we care about prices
+per share directly, we care about
+prices and relation to characteristics like
+dividends per share. Suppose the demand
+system only depends on the price to the
+dividend ratio. Then essentially that gives you a one coefficient
+restricts you want just the coefficient on log price and log dividends have to be opposite and equal. You get rid of one coefficient, then you can get
+rid of price from the moment condition,
+and estimate this by restrictedly squares. This log dividends
+isn't anything specially you can do it
+with any characteristics. We can do it with
+log book equity per share or cash flow per share. But more generally, you can put in the coefficient
+restriction would be price. Together with a bunch
+of characteristics, their coefficients have
+to sum up to zero. Which is like saying
+valuation ratios are what matters in demand. A different assumption is an IV assumption
+where this comes from the index addition
+deletion literature like a Shleifer E6. Where you assume that investors have an exogenous
+investment universe. Think about this as like pension funds can
+only invest in a set of stocks, and they tried to
+decide between those stock. Suppose the investment universe of investors outside my group. Let's say if I'm an
+insurance company, I don't care directly
+about to investment universe mutual funds
+and hedge funds. Suppose you can take
+that as exogenous, then you can rewrite
+market-clearing price times shares outstanding is somewhat
+demands across all investors where I grouped
+investors into investors that are similar to me and ones that are
+dissimilar to me. Among those are dissimilar I break it up into the
+intensive margin, how allocate within the
+investment universe versus I allocate within the
+investment universe. Take the part that's exogenous and clear markets with
+that part of demand. This gives me an
+instrument for price. This is the counterfactual. Suppose like an
+insurance company, and there's other institutions at whose demands I don't
+directly care about. But the fact that they are in some asset markets
+pushes up the price. That's going to be
+an instrument for my price when I estimate
+my demand function. To give you an idea of how least squares gives you a very different
+estimate for IV, for each institution
+in each point in time. This dot represents
+their coefficient on price estimated by least
+squares versus IV. IV and OLS gives you
+the same estimates, then all the points should
+line up along the 45. But notice all the points
+are actually above the 45, which suggests that least
+squares OLS gives you a positive bias
+relative to an IV. This is exactly what you would expect in the presence
+of price impact, is that prices and demands are going to be
+positively correlated. That gives you a positive
+bias if you asked me this by OLS versus IV. Now the coefficient
+restriction in an IV give you very
+similar estimates. Notice these line
+up along the 45. Now we have an entire
+demand system. We can estimate liquidity. Liquidity measure
+that's often used in a microstructure
+literature is like an estimate of what's
+called cows Lambda, which is in our framework, how prices vary with
+investor price demands. This figure summarizes
+our estimates of price impact for the
+average institution, and this line is
+the median stock. When the average
+institution treated the median stock back in 1980, price elasticity of 0.02, which means if I increase
+my demand by 10 percent, then I move prices
+by 20 basis points. These are the least
+liquid stocks in the cross-section and
+these are the most liquid. I said the most liquid stocks
+have always been liquid. It can treat those with
+very little price impact. But the least liquid stocks, there used to be a
+lot of price impact to trade these stocks. But notice that
+this distribution has collapsed over time. In other words, even
+the least liquid stocks are a lot more liquid now
+than they used to be. You notice this big trend. Now you also noticed
+a cycle here. Price impact went up during
+the crash of the.combubble, this mark has become
+less liquid here. You notice the financial crisis here in markets
+become less liquid. There are cycles
+in liquidity and also this trend in liquidity. You can also use our frame which are decomposed the variance of stock returns into
+like supply factors, actually demand factors. Our model says that
+prices are entirely determined by shares
+outstanding characteristics, assets under management, these coefficients
+on characteristics, preferences for characteristics
+and this latent demand. Using the definition
+of log returns, we can see when prices move, then is it caused by
+characteristics changing? They can [inaudible] about earnings and
+profitability and so on? Or is it coming from
+institutions trading for reasons that are orthogonal
+to these characteristics? When we implement a
+variance decomposition in the cross-section, two percent of the cross-sectional variants
+and stock returns is explained by changes in shares outstanding
+from year to year, six percent by characteristics, 14 percent by changes in
+assets under management. This is like saying
+when assets move from BlackRock to like
+hedge funds and so on, how much is that contributing to volatility of stock returns? That's 14 percent. But ultimately 74 percent of the variance in stock returns is explained by ligand demand. This is like institutions
+training for reasons that are orthogonal to
+characteristics that are in our specification. Finally, we use a framework
+to predict stock returns. Think about using our
+demand system to create a trading strategy in
+the cross-section. One trading strategy is that, they're going to be stocks where institutions demand a lot. Those are going to be half
+currently high prices as demand is going
+to mean revert. You expect low returns. On the opposite side
+stocks institutions like have low Epsilon or low latent demand
+or low demand on, as demand mean reverts,
+prices are going to go up. Those stocks are going
+to have high returns. This is like a large
+sample version like some stuff we've seen in the mutual fund
+literature like so, for example, the Coval Stafford
+mutual fund fire-sale. If you can forecast changes
+and institutional holdings, you can try to create a
+strategy that exploits that. But this is like doing it
+for the entire universe. During our sample 1982-2014, an equal-weighted
+strategy that exploits this mean reversion and
+institutional demand generates a 17 percent annual return and valuated it's six percent. Predominantly there
+is mean reversion in institutional demand. You can exploit mostly
+on smaller stocks. Because for larger stocks, the fact that demand mean
+reverts is not going to affect their price
+movements as much. The goal of this paper is like, instead of taking the 13
+of data as one big fun, we want to go the opposite. He started analyzing
+each sector at a time. Mutual funds, hedge funds, pension funds,
+insurance companies, they are very different
+institutions. Even within those classes are different size institutions have very different strategies. That implies that
+the asset demand of these different institutions
+are going to be very heterogeneous and rich. We want to respect
+that heterogeneity. I do asset pricing by aggregating those very
+heterogeneous demand functions. Ultimately, we're interested in this framework because
+it can answer questions are very difficult with reduced form regression
+or events studies. One of our ongoing projects that developed out
+of this paper as the ECB has amazing data on institutional holdings
+all across the Euro zone. We can see in real time, as the ECB does QE, which institutions
+are selling to QE, and which assets are
+these substituting into and we can
+estimate the impact of QE not only on risk-taking and institutional asset space, but also the price impact in different securities markets. Like some work that
+Ralph and I have done on insurance companies is
+also longest framework. If you regulate
+insurance companies, systemically in institutions, how does it affect
+corporate bond markets where they are the
+largest players? 

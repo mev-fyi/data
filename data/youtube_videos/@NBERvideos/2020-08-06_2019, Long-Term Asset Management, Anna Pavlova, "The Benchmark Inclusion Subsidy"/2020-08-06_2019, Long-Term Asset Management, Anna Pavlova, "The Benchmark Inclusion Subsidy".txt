@@ -1,0 +1,268 @@
+Anna Pavlova: In this paper, we argue that asset managers implicitly create subsidies
+for certain firms. I don't think I need to show
+this plot to this audience, but this just shows
+assets under management. Currently we are sitting
+at around 85 trillion, so you see the
+numbers changed from billions to trillions and
+this industry is growing. Most of these assets are
+managed against benchmarks. For example, over 10 trillion is managed
+against S&P 500 alone. I list other popular
+benchmarks on this slide, and as you can see, all numbers are in trillions. Existing research
+to date has focused primarily on asset pricing
+implications of benchmarking, and to our knowledge, there isn't any work on corporate implications
+of benchmarking, which is what this
+paper is about. In the asset
+management industry, performance is evaluated
+relative to benchmarks. If you ask a manager whether such performance evaluation affects her portfolio choice, the answer would
+be, yes, of course. If I do not have a
+view on the stock, I will buy it with the exact same weight
+as in my benchmark. If I have a negative view, I'll underweight it, but not by too much, because if I'm wrong, I risk underperforming
+my benchmark. We argue that
+performance evaluation, the way it's done
+in the industry, create very strong
+incentives for a manager to invest a fraction of the fund into the
+benchmark portfolio, or the word closet indexing, used by Rob earlier. The manager would hold this benchmark
+portfolio regardless of the risk and return
+characteristics of the constituents as
+I'm going to show. This crisis mechanical
+demand from asset managers for
+stocks in the benchmark, and this is the key to the implicit subsidy from asset managers for the
+firms in the benchmark. In particular, the
+value of a project will be different for a firm inside the benchmark
+and the firm outside, and it will be higher for the
+firm inside the benchmark. We'll call the difference the benchmark
+inclusions subsidy. Thankfully we do not have
+margin for the discussion, would complain about subsidy, but this really does
+smell that way. Now on the last point, when we teach corporate finance, we always tell our students that the value of the project should be independent of the entity undertaking
+this project. I guess the most
+extreme example that we give to students
+is to explain that a public utility does not have a comparative advantage in
+funding fintech startups. Yes, it might have a
+lower cost of capital, but it shouldn't apply
+that cost of capital to a completely unrelated
+project with different risk. This paper creates an
+exception to this rule. We analyze a host of other corporate
+decisions and show that firms inside and outside
+the benchmark will have different decision rules for
+mergers and acquisitions, for spinoffs, for IPOs, and other corporate actions. We fully characterize what we call this benchmark inclusion subsidy and show how it varies with firm
+characteristics, for which firms it
+will be higher, for which firms
+it will be lower. In the interest of time, let me go straight to the model. This is a baby version of the
+model, simplified version. Two periods, 0, 1. We've got three risky assets, Assets 1, 2, and y, with uncorrelated cash
+flows distributed normally with mean Mu and
+variance Sigma squared. The thought experiment
+would be to place Asset 1 in the
+benchmark and leave Asset 2 outside the
+benchmark and will be merging with these
+assets with Asset y. All stock prices are denoted
+by S_i in this model, all stocks are in
+supply of one share, and we also have
+a riskless asset whose interest rate
+we normalized to 0. There are two types of
+investors in the model, there is a fraction Lambda C
+of conventional investors, and the fraction of Lambda
+AM of asset managers. All investors have CARA utility. Gamma here is the
+absolute risk aversion. Now, it is the last talk
+and it's a theory paper, so just to give you
+used our notation, let's go over one
+slide that we all know everything that's on it. This is the baseline economy
+with no asset managers. The conventional
+investors will all demand a standard mean-variance portfolio in this economy, and asset prices will be given
+by the standard formula; the price of an
+asset increases in its expected cash flows
+and decreases in its risk. Now let's do a thought
+experiment of combining from i with the Asset y, to form a single entity. X prime is the demand
+for the combined asset, depends on the combined expected cash flows and the
+combined variance. In this economy, a
+standard result that we teach trivially holds that the value of the
+combined asset equals to the sum of the value of
+the two standalones. There is no cash flow synergy, we shouldn't expect this
+to be any different. Now let's add asset managers. The compensation of
+the asset managers is here on top of the slide, and it actually comes out of another project
+that we are working on in which we endogenize compensation and
+talk about welfare. But for this project, we take it exogenously. The way compensation looks in the other project is
+that it depends on the absolute performance of
+the manager's portfolio, depends on the
+relative performance relative to a benchmark
+of the portfolio, and has a part independent of the
+performance of portfolio, for example, based on
+assets under management. Now the most important
+element from this compensation
+for us in this paper is the relative performance one, and b here is the fee for sensitivity to
+relative performance. We have data supporting
+these specifications. This paper just
+came out in the JF, supporting the
+compensation structure that we look at here. Now let's do the same analysis, but in the economy
+with asset managers. Let us place Asset 1 in the benchmark and leave
+Asset 2 and Asset y outside. This doesn't change
+portfolio choice of conventional investors, they still want a
+mean-variance portfolio, but it does change the portfolio choice
+of asset managers. Other things equal, the
+asset managers will demand more of the first asset, which is in the benchmark, this red term here, then the asset that is
+outside the benchmark. This red term represents the optimal response
+to benchmarking from asset managers. More generally speaking, in anticipating the general
+version of the model, the asset managers will invest its risky assets
+in two portfolios, the mean-variance portfolio and the benchmark portfolio,
+which is here. Now this result is very general, we know that it works also
+for other preferences. It also works in a
+multi-period setting. This is simple Merton's ICAPM, and you can think
+about this benchmark as a hedging portfolio, it hedges underperformance
+relative to benchmark. Now notice that this
+additional demand from the manager because of
+his performance evaluation, the red term, does not depend at
+all on the risk and return characteristics
+of the assets. It only depends on the
+contract parameters, that's why we call it
+the mechanical demand. This parameter b, the sensitivity to
+relative performance, the way to think about it
+is set b equal to infinity. We will think about this
+manager as a passive manager, that manager will invest everything in the
+benchmark portfolio. If b is less than infinity, the manager will split
+the fund between the benchmark portfolio and
+the mean-variance portfolio. These managers have this
+mechanical demand for Stock 1, which will essentially reduce the available supply of
+Stock 1 in the market, pushing up its price. You see exactly that
+happening in equilibrium, the price of Stock 1
+has this red term here, which the way to read it is that the price of Stock 1 is higher than the price of Stock 2 everything else
+equal or Asset y. Why? Because of this
+additional demand from asset managers. Now let's come back to
+our thought experiment of combining firms. Let us first take Firm 2, which is outside
+the benchmark and combine it with Asset y. This merger naturally leaves
+y outside the benchmark. In this economy, we
+can again compute portfolio demands for
+the combined assets. You can see that there
+are no red terms here, they look very similar
+to what you have seen in the economy
+without asset managers. For that reason, the price
+of the combined asset will be equal to the sum of the prices of these
+two standalones. Now let's get things cooking and combine Firm 1, which is in the
+benchmark, with Asset y. Notice that this effectively brings Asset y into
+the benchmark. That Firm 1 is the only firm has the
+technology to do that. Investors cannot do
+it on their own. Look at the optimal demands, no effect on the demand for
+the conventional investors. But there is a familiar term in the demand of asset managers. Now, if you compare the price of the combined asset to the
+sum of the two standalones, you will see that the
+combined ones is worth more than the two standalones. The bolt terms
+here is the wedge, which we call the benchmark
+inclusion subsidy. You can already start noticing
+in this simple model, what this subsidy depends on. It depends on the
+riskiness of the project. The riskier the project, the more valuable this
+mechanical demand is. It also depends on Lambda AM, which is assets under management following the benchmark, the higher it is, the
+bigger the effect. Now just stepping aside, there are no cash flow synergy in this model by construction. What we have here is a
+pure financial synergy, which is something we tell
+our students does not exist. In this model ignoring
+it would be a mistake. Very quickly, summarize
+what we have seen so far. As you can see, all the effects go through the discount rate, through the cost of capital. We claim that the cost of
+capital is different for the firms inside the benchmark
+and the firm outside. NPV of an investment depends on the entity that is
+considering that investment. In particular, benchmark
+firms will undertake acquisitions than
+non-benchmark firms would not. The subsidy is increasing
+in the riskiness. The riskier the acquisition, the higher the benchmark
+conclusion subsidy. Already in this simple model, you can think about
+spinoffs that the asset lands outside
+the benchmark. As it lands outside, it loses part of its value. Now let's go for a more
+general model with N assets K inside the benchmark. y can now be a project,
+an acquisition, anything and we allow for the
+correlation among assets. Let's make the firm
+inside and outside the benchmark
+otherwise identical just for presentation purposes. Let me show you what this benchmark inclusion subsidy is. This is the value of the project for the form inside
+the benchmark, this is the value of the project for the form outside
+the benchmark. Some of the black terms we have seen already in my
+simple example. What we have to add
+here is the red term, which has to do with
+the correlation Rho of the project with the cash
+flows of the assets in place. Let me first run over the empirical implications and then I will give you
+some intuitions. This benchmark inclusion
+subsidy here is the formula for you and this is the key to our
+cross-sectional implications. We know that it's positive if the correlation of
+the project with the cash-flow from
+existing assets is positive or at least
+not too negative. That's an empirically
+plausible case. Now in case you're
+wondering whether we have thought of a way of creating value for T-bills by having benchmark
+firms buy them, no we can't do that, we are not magicians. The T-Bills are riskless assets are discounted using
+the risk-free rate. There is no effect on the risk in the riskless projects. It always tied to risk. The subsidy is larger if
+the project cash flows are more correlated with the cash flows from the
+firm's existing business. The best that the
+firm can do is to undertake loans of
+existing assets, open more Starbucks
+branches, kind of thing. It is also higher, the subsidy when the market
+risk aversion is high. This is when this
+mechanical demand is the most valuable. It is also larger if assets
+under management are large. For benchmarks for which we have the largest AUM following them, this is our prediction. These are the firms for which we will see the largest effects. This parameter b, I
+told you that this is one way to think of the manager
+being active or passive. The higher the b is, the more passive managers are. Therefore, they will have bigger mechanical demand and therefore, will increase our benchmark
+inclusion subsidy. We also have a version of the paper where we
+separate managers into active and passive and make this point a
+little bit clearer. Now to the intuitions
+on the correlations. We already know that stocks of firms inside the benchmark are overpriced because of the private reasons of these asset managers
+to hold the stocks. Now think of the
+conventional investors. They want exposure to cash
+flows of benchmark stocks. But instead of buying
+this over-priced stocks, they would rather go for
+a cheaper substitute, a form outside the benchmark, but with cash flows
+highly positively correlated with the ones
+of the benchmark firm. Naturally in equilibrium,
+the price of that stock outside the
+benchmark will also be higher. Now with these
+correlations our subsidy spreads across to all stocks. This is true for all stocks, not just stocks inside
+the benchmark. Then this is also
+true for projects. You can think of the
+projects that have cash flows that are correlated with those of benchmark firms, those projects will
+be valued higher. This is the theory paper, but we have tried to gather
+empirical evidence that would help us understand
+their implications. There is a literature
+on the index effect, and clearly our model is consistent with
+the index effect. But the empirical literature
+on the index effect just measures the average
+effect of index inclusion. What we've got to say is
+the also the cross-section how this index effect
+should vary across firms. Now, our model says that it is the benchmark
+that should matter, and not the index. Usually, it's fairly difficult
+to disentangle the two, but thanks to the word
+ESG has been spoken, socially responsible
+investing and let me do a plug for Marcin
+that he couldn't do. He has a very nice
+paper on sin stocks, alcohol, tobacco, these stocks that are shunned by socially
+responsible investors. They're out of their benchmarks, but they're still in the index. Marcin and Harrison, they find that the price valuations
+of these stocks are 15-20 percent lower than
+their peers that are non-sin. I'm very much consistent
+with our story. Now there is a paper
+by Bena et al that we really like because it fully
+supports our implications. They argue that benchmark
+firms, they invest more, they employ more people, and they accept more
+riskier projects using cross-country data. Finally, a nice test
+for our Lambda AM, AUM of asset managers metering is this paper by Chang, Hong, and Liskovich where they
+look at movements from the Russell 2000 to the
+Russell 1000 Index. When a company is doing
+well and moves from Russell 2000 to Russell 1000
+Index, its price falls. It falls by five percent, even though its cash
+flows have improved. Our story is that
+that Russell 2000 is a much bigger index
+than Russell, 1000 and that would explain the fall in the stock price. Now very briefly, I know
+I'm running out of time. Let me show you a bit
+of our magnitudes. We do not calibrate the
+model the way it is. We just do the Gordon
+Growth Model calibration, which we can calibrate. We can look at the
+stock increases based on the index
+inclusion literature, which gives us a six
+percent stock increase, or based on margins
+paper which gives us a 15-20 percent increase. This is our range and
+the rest is completely a standard from the
+Gordon Growth Model. This is the range
+that we get for the subsidy translated into the decrease in the
+cost of capital. The range that we like or
+that we think is reasonable, ranges from 30 basis points
+to about 95 basis points. This is consistent
+with a recent paper by Calomiris, he sent it to us, and he looks at these
+effect empirically estimated emerging
+market bonds and find the difference in the cost of borrowing of index
+eligible bond relative to cost of borrowing by
+the same firm but elsewhere over a
+100 basis points. That's his headline result. Let me not say anything else. Let me just conclude saying
+that we do have a host of empirical implications which we think would be nice to test. Let me just say that the asset management
+sector is very big. We hope that we have put our finger on an
+important distortion. As the asset management
+sector continues to grow, this distortion will
+only get bigger. 

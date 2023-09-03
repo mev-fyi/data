@@ -1,0 +1,759 @@
+Martha J. Bailey:
+We've been working on the life and project now, which is a large-scale
+data linking project. I want to share with
+you some of the things that we've been learning over the first two
+years of this project. The title of the talk is how well does automated
+linking perform? I should preface that saying
+in historical US samples. That's going to be
+really important here. In some of the lessons we draw from this analysis
+for modern practice and I should acknowledge that this is, like Joe, joint work with a
+lot of co-authors and very large team at Michigan, including Connor Cole,
+Morgan Henderson, and Catherine Massey
+who's here today. Let me see if this works. Great. Joe did a fantastic
+job of setting this up. Some of the most
+interesting questions for economic historians, but economists more broadly
+are very dynamic in nature. So how has the human
+experience evolved and why? What factors have interacted
+to improve well-being or hold back economic
+development? What have been the
+long run effects of a variety of things? Some of the things I'm
+really interested in, you can think about policies, innovations,
+environmental factors, public health efforts. Joe previewed a lot of
+the really exciting work that's happening in these areas. One of the things
+that's motivated, I think a lot of the record
+linkage has happened is the need for dynamic data. These questions relate to
+changes for individuals, their lives over time. But until recently, most of
+the data we have in the US, especially large-scale
+historical data was cross-sectional in nature, individuals at one
+point in time. Very recently there's been this huge amount of
+data that's come online that is starting to
+revolutionize the types of questions we can
+ask and answer. This includes the 1940
+full-count census, which contains a lot of outcomes that economists are
+really interested in, like wages and education. You can think about
+the 1850-1830, IPUMS linked historical samples. These have all been linked
+to the 1980s full-count and a lot of the links. Joe talked a little
+bit about this two. Links for these historical
+data is now becoming possible through a big
+project called ALIRA, where the census bureau is
+teaming up with Minnesota. The clip project is
+that the Census Bureau and the American
+Opportunity study as well. All of these things
+are coming online and these are just opening
+up new possibilities that we simply have an
+add to ask questions we haven't even been
+able to ask before and make some serious
+progress on answering them. I also think that the
+life and project, as I think relative to these bigger initiative
+is pretty small, but we are still linking millions of vital
+records from births, marriages, and deaths
+to census data. We expect this to be coming. Public dataset available for
+everybody here around 2020 if everything goes as planned. All of these new data
+infrastructure projects, including a lot of the ones that many of you
+are working on in this room are really
+revolutionizing what we can do. Joe previewed this as well. These new data require
+a lot of new tools. Tools that we didn't need when we were in graduate school. The management of very
+large and very complex data require a lot of
+database infrastructure, things that we didn't need when I was in graduate school. Tools to link new data and theoretical and
+econometric tools to use these data wisely. What does it mean
+to be statistically significant when you're
+working with data this large? We need a lot of
+theory to think about what hypotheses should
+we even be generating and how can we test them well. The other thing is when we're doing a
+lot of this linking, this is going to generate a lot of error as part of
+the data that we have, and so we need a lot of
+new econometric tools to think about the ways that we should deal with that
+error within the context of a particular
+inference problem. What I'd like to tell you a
+little bit about today is an overview of historical
+linking methods. What's out there? What
+have we been doing? I'm going to try to put
+this in a common framework so we can talk about
+where we started and then also where the
+literature is gone since then. Then I want to give
+you a little bit of an overview of what
+we've learned about the performance of those
+different linking algorithms using four different criteria. We'll report match and
+representativeness, which is very common in
+the historical literature. But to those two criteria I
+will add Type I error rates. You can think about false
+positive, false links, that is linking Martha
+to another Martha and other data and
+also Type II errors that is being unable
+to find links for particular individuals which has of course
+implications for the representativeness
+of our samples and our ability to
+study certain subgroups that we may be really
+interested in. In the interest of
+thinking not just about so errors are errors, but how much do they really matter for a particular
+inference problem? It's really hard to think
+of one inference problem that's going to
+generalize to everything. We're going to use a particular case study to talk about today, which is intergenerational
+mobility. We're going to think about
+that for the 1940s to frame this discussion and
+think about what can go wrong in this
+particular context. Finally, I want to conclude
+the goal of the talk. It's like Joe's
+lecture to provide some constructive suggestions
+for modern practice about what we can do to
+improve things. Let's start with a question. Measuring intergenerational
+mobility around 1940. This is a standard
+regression equation on the left-hand side, you have log of a son's income, on the right-hand side, the key independent variable is the log of a father's income. Pi here is interpreted as the intergenerational
+earnings elasticity. So the larger Pi is, the more persistent is social
+class, that's the idea. The more persistent
+perhaps is an underclass. We also generally think the less equal is economic opportunity, 1 minus Pi is the opposite. It's interpreted as
+the intergenerational mobility coefficient. There's a very large
+literature looking at intergenerational
+mobility estimates and interests in this topic has really increased
+in the recent decade because income inequality has been soaring in
+the United States, which begs the question. Is this limiting economic
+opportunity in key ways? One important perspective
+on a question like that now is what
+was this parameter like? Say earlier in the 20th century when the income distribution
+was much more compressed. We might want to do
+something like compare intergenerational
+earnings elasticities for the current period
+to previous periods. History really provides
+important context for interpreting
+that in the present. But as you can see from this very simple
+regression model, it looks simple enough. But what you need for this are income measured
+for two generations, a father and a son. The only way you're
+going to get that if you're measuring them as adults say out
+of the 1940 census, is to link data. From this very simple
+regression specification, we get two records that
+look a lot messier. On the right-hand side
+you see 1940 census data which is handwritten and on the left-hand side
+you see birth certificate, which we're using for
+the life and project. The idea is if we have
+the birth certificate is the key link between father
+and son for our project. So we have fathers and sons observed on the same
+birth certificate and we can link
+them both forward, say to the 1940 census
+where we can pick up wages for non
+farmers, at least. There are lots of
+issues when we do this. Misreports by individuals, transcription errors,
+errors in enumeration, all things can go wrong when you're trying to
+transition from records that look like this to
+the digitized versions that we can use in our analysis. I want to talk to
+you a little bit about the process that a lot of the historical record
+algorithms have used to sort some of
+those things out. I'm going to focus
+on the context of linking to US census data. That's important because
+in the US census data, we have three main types of record features that
+allows us to identify people. We have their birthplace, we have their name, and we have their age. If you think about a
+standard matching problem in census linking, you would search within
+a certain birthplace. Let's say the state of Ohio for boys that have a similar
+name and a similar age, I hope you don't
+mind this Price, I'm going to call you
+out and use it as an example here,
+to Price Fishback. Maybe it's not Ohio,
+it's Kentucky, right? MALE_1: Exactly. Martha J. Bailey: We'd be
+searching within this. So for everyone born in 1940. When we see people in 1940. MALE_1: I'm not that old. Martha J. Bailey:
+You're not that old. It's an older version Price. We've been looking for
+people in the 1940 census with similarity to
+Price Fishback name and age within a
+given birth states. So as we move in that direction, the quality of names, their name similarity
+is improving. We're increasing the similarity of the names as we move
+in that direction. As we move towards an
+age difference of zero, we're increasing the
+similarity in that dimension. Then in this particular case, its very easy to find Price. That's why I thought of his name because they're not too
+many people like that. That's a pretty unusual name and so we get an
+exact unique match, assuming that he
+wrote it correctly, the enumerator retold the
+enumerator correctly, the enumerator wrote
+it down correctly, and then whoever
+digitize the record, typed it in correctly, we get a match that
+looks just like that. Now, most historical
+linking is not this easy. It's a little bit messier. We get a lot more
+candidate links with very similar Jaro-Winkler scores in a lot of
+differences in aging. Joe Ferrie was really a
+pioneer in this literature. He developed a
+particular algorithm that I will say one
+of the things you should take away
+from my presentation that's still performs very well. He takes an uncommon
+name sample. He restricts the age difference to be plus or minus 5, he finds the exact name matches. Those are the ones over
+there on that frontier and he minimizes
+the age difference. In the case if you're
+getting back to that exact unique
+match right there, that would get you
+back to the same thing but you could also imagine records that are a little bit further away
+on that age frontier, you would select those. In the case when
+there are multiples, say there's no exact match, but they're multiples
+and there are ties, no match is selected. I'm glossing over an
+important point here. What Joe Ferrie
+does and what a lot of other researchers
+have done is use phonetic named
+cleaning algorithms like Soundex and NYSIIS. Soundex was developed in the early 20th
+century for census linking and it reduces
+things that sound alike, that names that sound alike, like these different versions of Smith to the same Soundex code, so here, S_530. NYSIIS is another one
+that was developed. The New York State Intelligence and Identification System was introduced in the
+early 1970s to do the same thing as a little bit of an improvement over that but that takes names like Wilhem and William and
+changes it into WALAN. The idea here is to take strings that may have minor
+differences in spelling, differences in sound,
+and compress them to a more succinct version
+of that information. What that does in the
+scatter plot is it's taking those records and
+pushing more of them over to that frontier. Joe and some other
+researchers use NYSIIS, I think his favorite one in
+most cases in their research. Here, NYSIIS and Soundex can increase the number
+of candidate matches, which is terrific, but
+it can also worsen name matches if those Wilhems and Williams are
+different people. If it's cleaning out
+what I think of as meaningful variations in names. It can also increase
+problems with ties. In all of the Wilhems
+and the Williams, you may have thought of these
+as two different people and if you saw those raw names, you may have selected
+one or the other. Now they look like ties because they're both WALANs and so no match is selected
+for those records. That's the way that this
+phonetic name cleaning can hurt. If you fast forward a little
+bit, so the Abramitzky, Boustan and Erickson algorithm relaxes a key assumption that was part of the
+Ferrie algorithm. They tried to keep
+common names as well. In their search, they're doing exactly the same search process. They're restricting
+the age more so the age differences to be
+plus or minus 2 years. They're finding the exact
+name matches on NYSIIS and then they're searching
+iteratively to minimize the difference
+between the observed, the age of the primary
+record and these candidates. Again, if there are ties, there are these multiples
+no match is chosen. The key thing that's
+very similar in these two methods is that
+they're searching along that frontier for perfect name matches or names cleaned
+by NYSIIS or Soundex. But the key here, and I don't know if you
+can see that very well. It's a small little circle. Is how does a record like this that has a minor
+transcription error or spelling difference
+but no age difference compare to a record
+that looks like this? It's a little bit further down. It's a perfect match on name but there's a
+good age gap there. A good two-year age gap. How do we think about trade-offs between age and name similarity? We're economists, we
+can think of a lot of ways we might model
+those types of things. You could come up with
+some snazzy functions, but that's exactly the inside of machine learning is to take
+information on what humans do when they look
+at these records and try to model
+that to learn about the trade-offs between
+these different things. Now, I've simplified
+things dramatically here, thinking about names
+similarity and age only, but in theory, you can
+include all record features based on name
+and age in your models. For instance, if you
+think that things are more likely to be W's or more likely to
+be mistaken as M's, you could include
+that information in your machine model. You can include things like commonality score, NYSIIS score, Soundex scores all
+within that model to help train this
+computer algorithm to do exactly what people would do if they're looking
+at this record. This is part of what's enabling this large-scale record linkage. This is exactly what IPUMS does for their linked
+historical samples. They're using a
+support vector machine to model the trade-offs
+in multiple dimensions and that's exactly what James Feigenbaum
+does using a more, I think, economists friendly
+regression-based methods to model these trade-offs
+in multiple dimensions. The final frontier though, and this is the part
+that's really challenging because in US
+historical census data, we don't have social
+security number, exact date of birth, and all other record
+features that we could use. We have name, age and
+birth place really. You might have sex, but
+that really there's not too much extra information
+there after you have name. What happens here? How do we choose among ties? If you look at record
+that looks like these, these are not the
+Price Fishbacks, these are the John Smith's. There's tons and
+tons of them there and you can also think about the mass coming off of the page. If there are tons
+of records pile up on that exact match, that category there, how do you choose among those? This is the hardest
+part of what we do and we're not talking about, I think in computer
+science language about links that we can rank. It's not that one of these exact matches is
+better than the other. These are exact ties. We don't know which
+John Smith is right. They all look equally good
+from what we can tell, at least in the digitized
+census records. This is a really big problem because these turn out
+to be really common in historical samples and sometimes more
+common depending on the types of subgroup
+you're interested in. For instance, the
+statistics literature, the standard approach might
+be probabilistic weighing. For exact ties, you're going to weigh by
+a probability one over m, where m is the number of ties. There's another proposal
+by Nix and Qian, that suggest random selection among ties in this
+particular context. Now I think a lot of historians like the first but
+not the second, but assuming that one of
+those ties is correct. Both cases, the expected number of wrong lengths is actually identical for these methods, so they perform exactly
+the same enlarged samples, I think that that's
+really important to know. Now let's turn to
+record performance, so how well do these
+different things do? Match rates and
+representativeness would be the standard criteria that would be
+reported in a paper because that's what we know and that's what we can test. But consider for a
+moment an example where I randomly
+link 10,000 people to another 10,000 people, the match rate would
+be a 100 percent and the sample would be
+perfectly representative. Clearly, when we're thinking about working with these data, we're really concerned about the incidence of these Type
+I errors, these false links and we're also concerned about the incidence of Type II errors because we know that we're
+not linking everybody and that relates back to this
+representativeness problem. I want to talk about these
+for performance criteria. In the paper, we do this in four different
+historical samples, but I'm going to focus
+on the LIFE-M data and the synthetic data we
+created that looks like the LIFE-M data for the
+purposes of this talk and that's what we'll use for the intergenerational
+mobility estimates. For the LIFE-M data, we have a random sample of boys on birth certificates from North Carolina in Ohio
+for all children ages 19, born from 1909-1920 and we add in all their
+siblings to this as well for a total sample
+of about 45,000, or I should say boys
+when you double that when you include the girls, but we're just going
+to look at the boys because the girls
+changed their names between birth and
+the 1940 census, so they're hard to follow, so we'll focus on the boys here. We're going to link
+these individuals to the 1940 census
+using the birthplace and here that's Ohio
+or North Carolina, their age and name and we're going to
+pick up information on education and wages, I'll only show you information on the wage relationships today. Just to give you a sense of what the life in process looks like, we didn't know what
+we were doing, so we decided to
+try to figure out what was the best
+way to link records, so we designed a process
+that we tried to come up with very
+high-quality human links. I've heard from a lot of people who've worked with
+people to do this, especially undergraduates that you can pay that they
+don't do the best job, so this is the way we
+design the process. Every link that we had, every set of links
+that looks just like what I was showing
+you are reviewed by two independent data trainers and when those two
+independent trainers agree, we're going to count
+that as correct, they do make some errors though. When there are disagreements
+between the two, we send that record
+for re-review by an additional three
+different trainers to resolve these discrepancies
+and additionally, the trainers every
+week get audit batches so we can give them
+feedback on the quality of their decisions
+to try to keep costs down and we also have
+weekly meetings to discuss a lot of
+things that I think are relevant to
+what they're doing, but they might not know
+a lot of it relates to the history of the records
+and how these things work. We have a lot of interesting
+discussions about women could really get
+married at age 14, even if that was below
+the age of the state law, this blows their
+mind, but it's true. We also sent this dataset, we set a sample of
+our dataset off to BYU family history lab
+that's run by Joe Price and we held our breath and we ask all these family
+history students to do very careful genealogical
+searches for these records. The good news is for
+the ones that we linked and that they linked 96 percent of the time they were the same, the bad news is of course, that the genealogists linked to a lot more data than
+we did, I think, because they're working with a lot more information than we had in a semi-automated process. This is what the match
+rates look like, this is higher than
+what I've heard is the ferry constant, which is, I would say in the
+20-30 percent range and I think that one
+of the reasons is because we're doing this
+clerical review process, it's about 43 percent
+for the life and project and this is after we've added in the North Carolina data. Using Joe Ferrie's method and what we're going to do is we implement that algorithm that
+I described to you before, but without cleaning the name using any phonetic cleaning, then using the
+nicest to clean it, then using Soundex and this is what I was
+talking about before, is the way in which
+these phonetic name cleanings interact with this uncommon name requirement is that they tend to
+reduce match rates because it's increasing
+problems with ties. Match rates are falling there and so these
+are a little bit higher than I think you might
+think of it are common. I will say it's also because
+LIFE-M has full names including middle names and exact date of birth on
+the birth certificate, which we think maybe better than census to census linking. Now, if you relax the
+Ferrie assumption and use his algorithm to use the
+more common name samples, we can really increase
+match rates here and that's exactly what
+we get when we use the iterative method
+that I described, the Abramitzky et al implement when we use James
+Feigenbaum method, we're getting a number
+about 27 percent. What we do to implement
+this last one is we're just using
+their random selection or implementing that on top of the Ferrie common names samples. What you can do here
+is compare that 44 percent to the 67 percent and that tells you how much
+better we could do in our linking if we could simply
+disambiguate those ties, so those are the match rates, but how many of those
+links are wrong? What we do is stage the
+equivalent of a police lineup, we take the LIFE-M link that
+we are counting as truth, the link generated by
+the automated method and then we take
+close candidates from our probabilistic
+matching procedure, so candidates that
+trainers would have seen and we stage this police lineup and we send it back to the
+data trainers for review and we asked them to
+select the correct one. When we do that, they tell us that two percent
+of the LIFE-M links were wrong and so that must have been a case
+when both trainers just happened to be wrong for the same record on accident, but the vast majority are right, so that gives us a
+Type I error rate of about two percent. When we do this for
+the Ferrie method, it's about eight percent
+of links overall, but eight percent divided
+by the match rate, the number of matches
+is about 27 percent, so close to a third
+of those records the trainers thought
+were not true links. You can see that the
+numbers here are the share of all links,
+including the denominator, includes the whitespace
+fell to six percent, but the share of links, that is the 6 divided by the 19, which generates the
+Type I error rate rises as we use the
+phonetic name cleaning. If you move to the
+common name samples, we see match rates improve, but also error rates
+increase as well, similar for the
+iterative method, for the Feigenbaum method, we also link fewer and we
+have a lower share of errors, but also a lower share of records linked to
+contributing to about 37 percent Type I error
+rate and for Nix and Qian, you might not be surprised
+when we randomly select, a lot of those are
+wrong by chance so those generate extremely
+high Type I error rates. Another thing you might notice, and I think this is something that's really important here, is that the Type I error
+rates tend to increase when we use the
+phonetic name cleaning, you can see that
+within method in every dataset that
+we've looked at, so this turns out to
+be pretty important. A couple of findings, including uncommon names
+increase the samples, but it's also going to
+increase incorrect links and Tie breaking is
+also going to increase your matched samples, but it's also going to
+increase your error rates and finally, these
+phonetic name cleanings algorithms increase error rates. I think one of the
+first reactions people had when we showed
+them this is like listen, you trained these
+human reviewers and so when you do
+the police lineup, you've already trained them, they're predisposed to
+select the LIFE-M links because you trained them. Maybe if they're
+making mistakes, they're making mistakes
+favoring the LIFE-M things, so this is what led us to create the synthetic data that Joe
+talked about in his lecture, so we take the same
+set of birth records, we subtract 15 percent of them to count for under enumeration and mortality for these cohorts and we mess up the names
+and the ages a lot. We're introducing age
+heaping by rounding to zeros and fives, we're
+inverting names, we're inverting characters
+were doing a lot and honestly it was
+really hard to knock down the match rates
+enough to look like what we're getting
+from the 1940 census. To these data, we
+appended men born in neighboring states
+that would have been roughly in the same age group and we only appended
+enough so that this looks roughly like the same
+problem as we have for linking the LIFE-M
+boys to the 1940 census. The advantage here is that the true link is
+objectively known and so we can evaluate
+how these algorithms do for those true l1inks, keeping the people and the
+police lineup out of it. For the synthetic ground truth, there are no arrows
+by construction, for the Ferrie method and
+using the common name samples, again, we're increasing
+those match rates. They're virtually the same
+for the iterative method, the Feigenbaum method, I would say completely kills it on the synthetic dataset, so we have to think a little
+bit more about all of the ways things are going right there and for the Nix and Qian, the match rates are much higher. But we get exactly the same
+pattern of error rates using these synthetic data as we did for the LIFE-M data, so again, we don't think
+that this is something that the human reviewers are just favoring the LIFE-M project, we think that there's
+something very systematic about the way these data
+are creating errors and we see exactly the
+same patterns here. I will say the one
+exception to what I just said is how well the Feigenbaum
+regression-based method performs and all the way
+we screwed up the data that the other algorithms
+aren't able to detect this
+regression-based methods, it's taking into account a
+variety of data features, is able to identify that
+incorrectly link things, substantially reducing
+the error rates and I think that if we start tinkering with some
+of those parameters, we could make this
+perform even better. Just to give you a sense, if you compare the
+error rates in our Synthetic data
+and the LIFE-M data, they look actually quite similar across all of
+these different methods, I know those numbers
+are hard to see, but you should be
+taking away that the bars are about
+the same height and in the paper we also look at two other
+ground-truth samples, the early indicators project, and also the hip bones linked historical samples and
+interestingly, those are very, very different samples, but we have almost
+identical error rates for those between those two samples. I summarized the
+findings about errors. I will say just a
+few more things. One is I don't think there's
+a universal error rate. I think every dataset, data quality, different
+periods, different countries. There's lots of different
+things that are going on here. I think that that's
+important to keep in mind, but I do think it's important to point out that there
+are lots of errors that we seem to
+be baking in with the way that we're
+doing our linking. I will also say to the extent
+that the LIFE-M project, Early Indicators
+project, IPUMS projects have errors in there that
+we simply cannot identify. All of this will understate the amount of error in
+historical linking. The other thing that we should worry about are
+these missed links. If once you subtract off
+those incorrect links, this is what we're left with
+across different methods. For the LIFE-M dataset, we have about 42 percent
+of all records linked and you can look
+around the other ones that the variation
+here and the amount of links that we got correct is not nearly as great as
+the variation in match rates when you first looked at this would
+have suggested. We're getting somewhere between 13 percent and about 30 percent
+in all of these methods. The other thing we
+looked at is to say, well, what about
+these Type II errors? As the Type II error
+rates increase, so we're missing
+more and more links. You might be getting more
+and more conservative. Is it the case that we're
+getting higher-quality samples? One of the things we
+discovered is that, that doesn't seem to be the case either for the LIFE-M project or for this intelligent
+ground truth. The story is a little bit
+different for the IPUMS and the Early Indicators sample. But that's also a lesson to us, the things that we've
+been doing to increase match rate hasn't necessarily. We'd been both increasing
+Type I and Type II errors as we've progressed
+from the Ferrie and then foregone
+bone thing over time. The last thing I want
+to talk about is the implications of these
+areas for inference and this is the part that
+Joe was alluding to. We care of course, about the
+incidence of the errors. We need to care about the
+characteristics of the errors. But the other thing
+that's really important here is that
+the way in which these interact with a particular
+research problem of interest can
+really vary a lot. What we're going to do is look
+at a specific case study. But I don't think
+that these results necessarily generalize. They may, but they may not. Keep that in mind. Let's come back to our question. Measuring intergenerational
+mobility. We're interested in this Pi, which is our intergenerational
+earnings elasticity. Pi is going to be, I will say, in
+historical contexts, likely smaller
+than the estimates you may have become
+accustomed to in more modern samples because
+we have lifecycle bias. The dads and the sons are measured at very different ages. Also, there's this
+transitory income component that we can't average out because we don't have the PSID in multiple
+observations. We just have one shot
+in the 1940 census. What we're going to do is, we're going to use a
+common set of fathers and we're going to link sons
+using different methods. Now, this is important. When you think about
+that for a second, you might say, "Wait, that looks like measurement
+error on the left-hand side, not on the right-hand side." You have to twist around your thinking to
+think about this. But when I link a son to the wrong man in
+the 1940 census, what that mean is that that
+man has the wrong father. In fact, this simplifies
+back to the problem where you have father's
+income is measured with error for a given son. It's complicated to think about. What we want you to think about is even though we think Pi
+is going to be too small relative to the true parameter because of lifecycle bias
+and transitory income, we want you to focus
+on the comparisons of these intergenerational
+elasticities across methods and this is what
+they look like unweighted. The LIFE-M estimate is 0.23
+and the Ferrie method, even though I told you that
+the Type I error rate was about 25 percent in that
+sample, is identical. As you look across
+the slide this way, remember as we move
+down the slide, when we're looking at
+the Type I error rates, those tended to increase. For each one of those methods, as you move this
+way on the slide, you can also see there's a general downward trend
+that's consistent with, as we add more of these errors into our sample that those
+estimates are falling. The other thing you can see is even within a given method, so the Ferrie method moving from using the name
+nicest and then Soundex, you see things fall
+pretty dramatically as well within method. You see that for each one of
+the methods, we consider. How important are
+these Type II errors and in particular,
+if you think that there are heterogeneous
+relationships or heterogeneous
+intergenerational elasticity estimates
+may be between blacks and whites are farmers
+and there are all reasons why we think that
+these things may vary? If you have a sample that underrepresents one
+of those groups that's going to
+introduce some problems into your inferences about
+the population parameter. One of the things that could be going on across these samples, because we know the number of true links are varying a lot and also the people
+that are chosen for each one of those samples
+are varying a lot. These differences across
+samples may just reflect different people being chosen by the particular
+linking algorithm. What we do to try and
+address that is we use inverse propensity
+score weighting to reweight the linked sample
+for each method to look like the population of the group to look like
+the sample of the group we tried to link that
+random sample of boys. In practice, this
+amounts to regressing a binary variable for whether
+or not the individual was linked on a set of
+characteristics like whether or not you
+have a middle name, the length of your middle name, your name communist,
+number of siblings. A lot of characteristics
+that you might also include in a machine
+learning type of model. We use these predicted
+probabilities to reweight those inter-generational
+elasticities and this is what we find. One thing you might notice if you can't see the
+numbers in the back is the numbers are slightly larger and let me toggle
+back and forth. This is a 0.26 and then
+the 0.23, unweighted 0.26. You can see that the propensity score reweighting is changing these magnitudes a little bit. It's increasing
+them a little bit. In general, the link samples overrepresent high
+mobility individuals. When we adjust for that, that intergenerational
+elasticity is going to rise. But the other thing
+you'll notice is that this makes fairly
+little difference for those patterns that we're
+seeing within method. In fact, a lot of
+the same pattern, a general downward decline and also within method decrease
+with the use of nicest or Soundex is still present. I want to talk just for a moment about what do we think
+is going on here. If you remember that
+this parameter Pi hat, so going back to your
+basic econometrics, you can think about
+rewriting this parameter as a variance weighted estimates for the within and the
+between variation. Then further you can decompose the within variation for the group of links that
+are linked correctly, here I'm denoting
+that with a star, and those that we can
+call them imputed or incorrect with superscript i and then there's this
+between component, which I think of as the
+selection component, which in a lot of
+contexts goes away. But we write it here. What this means is that
+the probability limit for our Pi hat using
+a particular method m is going to be a
+variance weighted share of these three
+different parameters. The one that we're
+particularly interested in is the plim of those imputed links. Is that zero? Obviously that's going
+to matter a lot. Or is it big? I think that this is really when the statistician say you should do
+probability weighting and you should
+include these links. They are making some assumptions about what that thing
+should converge to. Let's think about a very simple measurement
+error process. Let's say that when the
+dad's incomes are incorrect, this is the imputed link. We're going to get the right
+income for the correct link and we're going to assume that the only source
+of measurement here is just that we've used
+the wrong dad for you. But that dad's income that
+we observe for you is going to be correlated
+with your true income. When we impose the
+other assumptions of the standard errors
+and variables model, we actually know what
+the probability limit of that component
+will end up being. It's going to be attenuated
+and the attenuation is going to be proportional to the ratio of the
+signal to noise ratio, which we think is going
+to be less than 1. What that tells us is that
+if you plug that in there, that that's going to make
+that plim them too small and that's going to lead
+to this attenuation. Now, if you have class or non-classical
+measurement error here, we know it's much
+harder to sign. This could be too
+big, too small, so it can do all other
+things to estimator, but think about this is really
+what we're focusing on, so the two things
+are going to be important to assessing
+how important this is, is one, how many of those
+links are really imputed. The variant share
+attributable to those imputed links times
+that probability limit, so those two things. When you have a lot
+of those links, a lot of your sample is
+imputed incorrectly, this is going to matter more and it's going to matter
+less when it's not. You can think about
+the other type. I think this is a
+very similar example where you could think about
+so if you have unique links, you can think about those
+dad's income is being measured correctly but
+for the multiple links, you're just going to
+observe a log income of some person j and
+so you can wait, override or you can
+wait all of them up by one over the probability
+of observing them, or you could randomly select. But here we're going
+to have exactly the same type of thing. Those aren't the same Thetas that are up there in the slides. But the idea is exactly the same as the logic I
+presented before. You're going to get a
+variance weighted average of the true parameter
+and this Phi here. That Phi is going to be a
+function of the covariance of those ties with the true link. When you draw from this
+ties, those John Smiths. Their dad's have nothing in common with the dad
+for the true link, that means Phi is
+going to be zero. It's as good as zero, it's
+as good as a random draw. That's going to really lead
+to a lot of attenuation, especially because in
+the case of multiples, most of the variation here is coming from all
+of the bad links. When you have 10 people, and you randomly draw one, you're going to be
+around nine of 10 times. That is exactly what's going
+into that second Theta, so that's really important. Really the nice thing
+in our context here is because we have
+a truth dataset, we can look to see
+what the relationship is for these imputed links and the true links and
+just compare them. I can show you and that's
+what we'll do now. This is the wage income
+for the correct links and the key thing up
+there at the top is once we remove the
+incorrect links from those intergenerational
+mobility estimates, I found it remarkable given that the samples
+are so different, how similar all of
+those estimates are. The differences
+across the method and the intergenerational
+earnings elasticity in this. Here appears to be driven by
+differences in link errors. We know about the
+incidence of link errors but now I'm showing
+you how correlated the imputed links are with
+the true father's income. That's what you see those
+little x's are underneath. Now, a couple of things, so these over here where you're looking at random
+selection using Soundex, it looks almost as
+good as random. There's almost no correlation between the dad's income for the imputed links and
+the true dad's income. But you look over at
+some of the other ones, they're slightly higher for
+the uncommon names sample, which is consistent
+with there being some really important
+information content in those unusual names, the Price Fishbacks
+of the world. Now, the other thing
+I want to note here, let's look at that. I showed you before that
+there was roughly at 30 percent Type I error rate using this regression-based
+classification system. But even though
+those links weren't the ones chosen by humans, so whatever it is about them, but they're very correlated, even though they're wrong, dad's income is very correlated with the true dad's income. It's leading to substantially
+less attenuation in other cases. I think one of the interesting
+things here is saying, so what is going on in
+this regression model that is allowing us to classify things much better
+than we're doing when we're using these
+other algorithms. Let me sum up. I've
+shown you a few things. One, the Type I error rates in historical linked data look very large using things
+like common names, phonetic name cleaning,
+and tie break. We have probabilistic linking or random selection really
+can make things a lot worse. One of the things I
+haven't shown you that we document and
+the paper is that the false links aren't representative of the
+linked population, which suggests that
+there may be some difficult to correct measurement
+error in some of these. But I've also shown you they're just errors in themselves, they don't always matter as
+much as we might expect. I think this was
+part of Joe's point, so he set this up nicely. Imputed links don't all have the same effect on inference. This can vary wildly across different
+problems and contexts. The other thing is that we're
+missing a lot of links, at least 50 percent, except in genealogical samples, are just not linked. The links we know that
+we're getting are not representative of the
+underlying population. I haven't showed you
+evidence on that either but that turns
+out to be the case in every sample that we've studied. The combined effects of both these Type I and
+Type II errors in here I would say it looks like predominately Type I error
+can attenuate estimates of intergenerational
+income elasticities by more than 50 percent. Now comes to what are we
+going to do about this? I wrote a few things that
+we've been working on. The high-cost thing is everyone should just link their
+own data by hand, but that's not what I'm
+going to recommend. It's cost prohibitive. I don't think we can do it. A few simple things we can do. One, using NYSIIS and Soundex does not look like a
+particularly good idea, especially when we have a lot more sophisticated
+algorithms for searching and doing the matching. Second, using
+uncommon name samples and machine-learning techniques seems to buy you a
+lot in this context, even the simplest
+machine learning techniques like
+regression-based methods, that should be very easy for economic
+historians to adopt. The other thing I
+want to say is we have coded up as
+part of this project a lot of do-files implement
+all of these algorithms which we're making
+available with a paper. Here's one of the cool
+things we've discovered. All of these algorithms, it's not that they're
+getting things wrong and all of the same ways, they get things wrong in
+really different ways, which turns out to
+be really useful. If you look at the
+links that are common to all of the algorithms, you can one, diagnose a lot of
+probably going to add cases and errors and you can also do a lot to learn more about what may be going wrong with
+your algorithms. That's cheap, you can do it on your computer in the afternoon. We also have done in
+some simulations, and I will say this
+is pretty preliminary but because these algorithms
+get things wrong in so many different ways, in fact, combining them and taking
+the set of common links can get us down to error rates that look like
+ground truth data, I would say in the
+4-6 percent range. I think that that's a
+really hopeful thing. Two, and I think this
+is common practice, so I don't think we need to
+spend too much time on it. When available, we can use
+a lot more record features. They don't need to
+be economic outcomes like homeownership or education or wages to weight
+up our records, we can use a lot of
+other information that's in names in
+ages to think about how we can reweight the data. Finally, what do we do about
+those small sub-samples? What I've recommended here
+isn't going to increase our ability to study
+certain small groups. We need those higher match rates to do a lot better
+job trying to learn about these smaller
+groups in the population. My last recommendation
+is for historians to do what I think we have
+always done best, is really hard work in archives, genealogy is working through
+the primary records, pulling in the information
+that we can get when we do this type of
+intensive hand linking to help inform the
+machine models then that we can use
+to train the data. 

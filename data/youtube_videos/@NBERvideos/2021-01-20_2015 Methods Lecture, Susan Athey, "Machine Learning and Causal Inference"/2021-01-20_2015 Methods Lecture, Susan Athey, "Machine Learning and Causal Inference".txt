@@ -1,0 +1,840 @@
+Susan Athey: I'm going
+to start out with recommender's topics and text. This Netflix prize actually was a real inspiration for the machine learning literature
+on recommender systems. All you've probably
+heard about it, it was this prize,
+a million dollars. If you can beat the Netflix
+recommender system, they published some data, 480,000 users, 18,000 movies. There were 100 million
+observed ratings, but that meant that there
+was a very sparse matrix. Most people had not
+rated most movies. That's the classic
+recommender system problem. Again, one of the
+first observations, and I actually want
+to, maybe I'll pause for a little
+philosophy on this too, he just said, "Any contest is always won by the average
+of hundreds of models." When talking to people like Hal Varian, and [inaudible]
+what were some of the first things that
+they learned when working with machine
+learning people on real-world big data problems, it was the model averaging
+which is amazingly powerful. Actually it's upsetting for us, because we all thought that we knew something
+about the world, and if you and an
+economist came in and tried to predict
+people buying stuff, that we would do a better job than just throwing a bunch
+of models and stuff. The fact that an average of 600 models beats like
+any structural model is depressing. But we should remember actually what they're
+trying to do here, and this is going to be a
+theme that I pick up later. They are trying to predict
+in a stable environment. They have a stochastic
+process, and they're trying to predict
+when nothing changes. Out of sample prediction is not counterfactual
+predictions. Out of sample prediction is I take 10 percent of
+my observations, but the joint
+distribution of the xs and ys, and the 10
+percent I pulled out, it's exactly the same as
+in my training sample. It's just about
+functional form fit. It has nothing to do with what would happen if Amazon changed their
+pricing policies. The fact that we always lose a prediction is not actually saying that what
+we do isn't important. I hope not. I would say that we know that
+actually from IV because of course when we run
+an OLS regression, that's the best linear
+predictor, but when we do IV, we reduce our goodness of fit
+to get a causal perimeter. Our goal has never
+been goodness of fit, and that's really a difference. Now, we're saying what we learn, we can often decompose our problems to where
+prediction is a part of it. Then once it's the pure
+prediction component, their techniques beat ours, so we should change what we do. If we were trying to predict, they have better techniques. That's all we do. That's only part of what we do. Netflix challenge, it
+inspired a lot more research, there was already
+a lot of research. There are whole books
+on recommender systems, and then those books only
+cover part of the literature. This is also a really, really hard literature to
+wrap your head around. I've wrapped my head
+around part of it, but I'll try to
+tell you about it. Recommending systems basically
+you're trying to predict whether a user will like
+an item or how much. Actually in the Netflix
+challenge data, it was like a bunch of
+question marks you hadn't rated them, and then what
+you did rate, you rated 1-5. Here just for simplicity, I'm going to think about
+a setting where you have a big matrix
+of zeros and ones. One is you clicked on something,
+or you like something. The zeros could be because
+you were never exposed to it, or because you were exposed
+to what you didn't like it. I'm going to just
+put that aside. But that's basically what it is. Actually there's a lot of
+this literature that works on the idea that you don't have
+any item characteristics. All I know is that
+there's a bunch of people and these are the
+news articles they read or the webpages
+they clicked on, but I don't any attributes. I'm just going to try
+to make predictions based on a big matrix
+of zeros and ones, and then there's another
+part of literature that worked off of the
+observable characteristics. Obviously, this looks very much like discrete
+choice modeling. We're going to try to
+predict if somebody has a click on something, we think that's something
+we know something about. One of the big
+differences here is that there's multiple
+choices per user. I would say there is a very
+small economics literature on discrete choice that focuses on multiple
+choices per user, so there's a
+political economy one about you take people's
+voting records, and you look at their choices of how to
+vote over, and they have lots and lots of different
+things they vote on. There's also a very small
+marketing literature where you look at
+Nielsen data in somebody's looked
+at multiple movies. The main focus of the IO literature and
+discrete choice and this multiple choice issue is the typical case in
+their literature. It's massive, there's lots of disconnected subliteratures. I would say that for
+economic applications, machine learning
+methods have a lot of promise for large scale
+discrete choice modeling, but there's more
+work to be done to tailor them to our tastes. One strand I'm
+collaborating with, and I'll show you some notes
+later from David Blei, it works on topic modeling, there's a group of people in computer science that build
+latent variable models. Those models look a lot
+like our structural models, but they actually compute
+where ours choke. That's something
+that I'm working on. One thing that can be
+especially confusing here is supervised versus
+unsupervised learning, because actually
+the same methods are used for both, and that can make things very confusing. Let me just remind you again. Edu made this clear before,
+but let me just repeat. Supervised learning is when
+you have a y and some xs. Unsupervised learning is
+when you just have xs. Unsupervised learning is like, I've got a bunch of videos, I don't have any human labels, I don't know any names
+of what they are, I put them into groups. When you do it on videos, you find a group of videos that all look similar on YouTube, and then when you actually watch the videos,
+some of them are cats. Then if you're lucky,
+somebody writes up in the New York Times that these smart computer scientists have found cats on YouTube. If you've ever wondered
+what that meant, how could there be a science
+to find cats on YouTube? I think my toddler can do that. What they mean is that they put all the videos on YouTube
+in a bunch of clusters, and instead of having all those be videos about different things that actually work, what does it mean
+that it worked? It means that all the videos in this cluster were about cats. That's what unsupervised
+learning is about. The unsupervised version of recommendation would just
+be like I have a bunch of documents, and I'm
+going to put them into clusters and somehow say that
+some things are similar, and then later on, if I want to recommend
+them a book, I'm just going to look at
+what books are similar to the books they've
+read before, and I'm going to
+recommend those books. It doesn't actually
+use the choice data, it's just finding
+similar things. I just want to mention, I'll
+come back to this later. You might ask, as
+an economist we usually think about incorporating
+all the information, especially structural modeling, people want to use all the
+information in the data, so you might wonder
+why would I ever want to break my
+problem into two parts? First, look at similar things and then maybe feed that into a model later, and I just want to say that actually in a lot
+of my applications, that's exactly
+what I want to do. Why? Well, if you
+use choice data and item attributes to put
+things into clusters, to say, then what you're
+going to do is you might find two books
+being similar, the people like them together, so you say these books
+must be similar. But in fact, it
+could just be that Amazon's recommendation
+algorithm in the past always put
+those books together, always put them
+on the same page. People chose them because
+Amazon put them together. Or somehow the New
+York Times would always have three
+things, one sports, one news, one
+business in the top, so people often read one sports, one
+news, one business. That's not what the people like, it's just that's the way the New York Times presented it. Then if you wanted to
+ask the New York Times, try rearrange your
+webpage, well, if you use the choice data, you would say, oh gosh, yes, you should always
+have one sports, one news, one business because
+that's what people like. But it's not what people like, it's just what you
+did in the past. It can be helpful
+sometimes to decouple, grouping things into categories from the context
+unless you've been really careful about
+controlling for the context when you
+do your estimation. Then the supervised
+part is where you would use people's choices to make predictions, and possibly
+put things into groups. Those are two separate
+sets of data, but confusingly
+sometimes you would use the same methods for both because you're
+decomposing matrices. Then there's these hierarchical
+and graphical models which I'll come back to, which are more structural
+models, if you like. The basic way I think is that
+you've got this dataset, and I think it's actually
+really useful to just think about the world
+this way for a second., your data roughly it's
+like a big matrix. If you're going to project
+that onto a model, it's going to be some way
+of simplifying that matrix. A lot of methods may seem
+very different at the outset, but ultimately it's about taking that matrix and finding a simpler way to capture
+its information. One other thing I'll
+come back to is that this matrix can also be
+represented as a network, like users or friends
+with items and so on. Also there are techniques from the network literature that can be used to analyze
+matrices like this. In this case, the
+goal is to predict probabilities that user
+choose items, or I might say, this is my input data, and I want to
+predict whether I've seen some users have
+evaluated this item, may be other users have never
+been exposed to this item, and I want to predict
+the probability that they'll like the item. If it's a very,
+very sparse matrix I might also say that
+if there is zero, I might still be interested
+in the probability they would like that item
+because just maybe they've never been
+exposed to it. Again, with the Netflix
+challenge actually, there's an issue of things
+not being rated at all, in ratings 1-5, but let's just stick with the
+zeros and ones. Collaborative filtering,
+the first connection is, this is a classification problem or that is this is a
+discrete choice problem. The very simplest thing you
+could do is you could go back item by item, book by book, article by article, and I'll do a
+separate logit model for each one of those things, and what are my covariates? It's just indicators for
+everything else you liked. Just thinking here,
+if I wanted to, here's my user, I'm
+trying to predict this, I can put indicators for
+everything else that I liked, and try to predict. This guy liked this item and he also like
+these other things, so I would put
+positive coefficients on those other things
+that he liked. Nothing wrong with this really, except for it just
+doesn't work very well, if you have very sparse, very high dimensional matrices. What you want to do is end
+up combining those with some other methods to reduce the dimensionality
+of the feature set, if you've been wanting to attempt to make it work
+in very large things, and also just as item by
+item prediction is costly. Another very popular approach is a K-nearest
+neighbor prediction or KNN and it's quite
+widely used as well. Basically what I'm
+going to do is first I'm going to take every item, and can compute its similarity with
+every other item. Then if I want to
+make a prediction, I just find the most similar items and
+I'm going to average the user's preferences over those similar items, and maybe I'll do that in
+a weighted average. MALE_1: Do we add [inaudible]? Susan Athey: No. This is what's
+interesting about, you could turn
+your head a lot of different ways in the matrix. Even with just this data, each item is going to have a
+vector of user preferences. Even without item
+characteristics, I'm going to be able to
+say one item is similar to another item if users
+like those in common. The way that you actually
+implement this is you take the cosine angle distance
+between the two vectors. You can just think of
+these vectors like they're in
+three-dimensional space. The 0,1,1 is a vector but in
+higher-dimensional space, you can still take
+the angle distance between two vectors, and
+that's how similar they are. This is also commonly
+used and actually, these cosine distances are
+used in text mining as well in relevance measurement for search engines and so on. But so it's very
+easy, very fast. It's like nearest
+neighbor matching, we understand what it is. We're not making a lot of model assumptions, so
+that's attractive. The problem is that if you
+have a very sparse matrix, you're going to predict
+a lot of zeros. if I have only clicked on five web pages and
+there's 100,000 web pages to click on, then one web page might have 100 nearest neighbors but I've never clicked
+on any of them, so I'm going to get
+a lot of zeros. That's a disadvantage. There's a whole literature
+on doing weighted nearest neighbor
+matching where you estimate weights but I
+would say at that point, once you're going to estimate
+a model for those weights, maybe there's other models you could estimate that
+might work better. But really, as I
+mentioned before, this problem of
+matrix reduction can be broken down into
+something quite simple. What we can really
+think is we've got this matrix, and we're trying to find similar things. One way to do it is to pause it that there exists
+some set of factors, some smaller set of
+underlying factors. This is a little bit like
+principal components, except I'm going to break
+this two ways here. I'm going to start
+with this big matrix. I'm just going to make up
+a number K, say like 10. I want to have 10 factors. I'll make that up, and I'm going to pause
+it that this can be written as the product of user factors times item factors. You can just think
+of decomposing the probability that
+user I likes choice J, is users I preference
+for factor K and item J is awaiting on factor K. This feels a
+little bit more like a structural model and it would have some
+interpretability. The easiest methods
+for this is that there's just these nice fast scalable computer
+science methods for minimizing the mean squared
+error of the predictions. Once you pick K, you can find those two matrices that minimize the
+mean squared error. The nice thing about
+this is that you don't have to optimize
+anything, nothing. There's no converging, there's no complicated
+priors to write down. You just pick a K and there's built-in routines,
+and it goes to town and then what comes out, you might already be able
+to gain some intuition for. I'd say this is really
+good to just start describing your data, and
+understand what's going on. The cons with this is that
+because there's no model, it's hard to enrich your model. It's hard to start
+adding covariates in and some might
+work on news choice, I want to control
+for whether you are a news aggregator, or what was your choice that
+might be changing. There's lots of things I
+might want to bring in and this model is not
+so easily extensible. But I think it's nice to start with this because we're
+going to talk about some more complex factor
+models with all these priors and stuff going on but ultimately they're
+boiling down to this. This is the information
+that's in the data. There's a question of
+how we estimate it, and how we do
+inference and so on. There's a bunch of other
+approaches that basically build off of the unsupervised
+clustering methods that he'd already talked about. You can use any of those methods as your component methods, but iterative clustering
+basically what you do is you take any of a variety of unsupervised methods to find, say, groups of similar items. You have 100,000 items, and now I put them
+into 10,000 groups. Then I say, all right, now I'm going to find
+groups of users who like similar groups of items. I turned my head the
+other way and I clustered the users according to which
+groups of items they like, then you turn your head back and you further reduce
+the dimensionality of your item groups
+and you keep going until you have some
+smaller set of groups. The result is actually
+going to look similar to this in the
+sense that you're going to have different groups or it's like
+decomposing thing into factors but it's a
+different approach to it. Then lastly, there are structural
+or hierarchical models which specify the latent factors in the distributions
+they're drawn from. You might again
+actually start and say, I pause it that
+there are K factors. But I'm now going
+to say they have a prior distribution,
+and I'm going to model that distribution and I'm going to estimate things, and when I come out the
+other side I'm going to have standard errors
+and such like that. I'm going to come back to
+some examples of how that's done in machine learning
+after a little digression. I'm first going to
+talk about documents. This is confusing, so I just want to warn you
+it's confusing but hopefully, that will save confusion later. I started talking about a big matrix of zeros and
+ones where users chose items. You can also have
+another big matrix of zeros and ones but now I have documents
+and words that are in the documents. What I do is I actually
+create a dictionary of the most important words in the English language, and
+the most important bigrams, that's pairs of words in
+the English language. My data then becomes I've got documents, and
+there are zeros and ones if those unigrams
+and bigrams were in the data. Actually, Heido
+was talking about millions of right-hand
+side variables. For click prediction in search, there's actually billions of right-hand-side
+variables because there's a frequent indicator
+variable for every bigram, every pair of words and
+the cross-product, and an indicator variable for
+this pair of words in the ad, and this pair of
+words in the user query. That's all the indicators but a lot of right-hand
+side variables. Anyway, that's a
+very common issue. You've just got a
+very sparse matrix of zeros and ones for whether words are or are
+not in a document. For understanding
+and grouping text, your goal might be to
+put the documents into topics with similar
+collections of words. But actually, from a
+prediction perspective or a mathematical perspective, these problems are
+very similar and so a lot of the same
+methods can be used; all the clustering methods
+and unsupervised methods. To find topics of articles, you could use any
+unsupervised method to put the documents into clusters in terms of their
+similarity of their vectors, of presence vectors, or you can use hierarchical models that I'll talk
+about in a minute. You can also just use
+classification, and actually for the economists who have classified text so far, that's mostly what they've done. They've run a classifier to
+say whether an article is positive or negative review or whether it's left or
+right political bias. You're running a classifier
+like a logit or an SVM, or a classification tree to predict which side you're
+on using labels like human labels for a subset that said whether
+they were left to right and predict
+which way they are. How do you classify documents into groups or whether they're politically
+biased or whatever? You take the articles,
+you have humans label as many as you can afford and I've used Mechanical
+Turk for this. The great thing about
+Mechanical Turk is you can put it up in the morning and in the evening you have
+a couple of thousand things labeled. That's very fast in my research world since everything else seems
+to take much longer. Very easy to do. Then you build a classifier to classify
+the unlabeled articles. There's a fast version that
+some people that you use Yahoo or not at
+Microsoft research have online about Power Wabbit, there's a lot of other
+ones you could use Lasso any of the supervised
+methods for classification. Then I'll just caution you. If you actually see somebody
+give a seminar about this, they make it look really easy. Like, "Oh, it's great. The machine just did this." We emphasized earlier doing these things without
+human intervention. You actually want a
+really good classifier of whether news articles have lots of emotion in
+them or something. It's not hard to get them to really work well, and
+you actually have to spend a lot of time
+with your features and it can really matter
+which method you use. It's not quite as
+easy as it looks. I'll just mention something
+that I've done in work that I've been doing
+with Markus Mobius, Pow on they tried to grapple with the fact that classifiers don't work as
+well as you would like. What we did was we used unsupervised learning
+prior to human labeling. We took all the news out
+there, and then we use unsupervised learning to put
+the articles into topics, and then some of those
+topics turn out to be like tornadoes or sports
+events or something else. If we were interested
+in political bias, then we can say, we don't actually
+have to measure political bias for things that have nothing to
+do with politics. By pre-classifying the articles, we could really conserve our
+human judging resources. In addition, some things
+about the articles can actually be judged by
+the topic as a whole. You could ask whether the
+topic is generally one that's emotionally charged or one that might be ethically
+controversial. You can ask that question about a whole topic, but
+then because I can actually very
+effectively classify whether this article
+is about this tornado. Then the human told me this
+tornado topic is, say, not one that's
+ethically challenged then I actually know very well about thousands of
+articles all in one go instead of
+paying thousands of Mechanical Turk workers
+to all waste their time telling me that this
+particular article which was about a tornado, is not politically biased. This combination really
+saved a lot of effort. Another approach to
+clustering is to interpret this word
+matrix as a network, and there's this whole other completely disconnected
+literature about network analysis that
+is sometimes applied here. There network methods called community detection algorithms. They were designed
+to find cliques of people who talk to
+each other, but they also work well for finding cliques of things that
+are like each other. What we did is we applied that to the news articles,
+and we said the strength of a length between an
+article is determined by common words as well as by links to common
+Wikipedia articles. Then I structured it is a network and then trying
+to find communities. Now in principle, a latent variable model
+should have found that. But basically you can think
+of what we did was we impose a whole bunch of
+structure on what was important. Because we were right, we did better than letting the
+data find the structure. This is another theme. Part of machine-learning says, just throw all the
+variables in and it won't matter and the
+data will find it. But that's not quite true. It still matters how you
+put the variables in. If you have an
+assumption that's right, like the model is linear and not a step function or
+something like that, you can actually massively
+improve your performance. There's still a role for
+domain knowledge and actually thinking about
+your specification even in machine learning models. Just as an example
+of how this work, we created links between all
+the articles based again on their common words,
+and whether they match the same
+Wikipedia article. We discovered in the data, a community or a clique of articles that were all highly
+connected to each other. They were about President
+Obama's prom night. I wouldn't have thought
+to look for that, but I didn't discover cats, I discovered President Obama's prom night aren't I clever. That worked to pre, classify these
+into topics again, then I could ask my humans, is President Obama's
+prom night politically charged or ethically
+controversial, and get ratings about all
+of the articles in one go. These are some of
+the topics that we discovered in this thing. The NFL season, Ariel
+Castro kidnappings, a tornado, death of
+Lee Rigby and so on. Now let me talk a
+little bit more about hierarchical models. In some ways these are closer to structural models and
+really the differences are that the people who write
+them down are not thinking about out-of-sample
+counterfactual prediction. They're just thinking
+about prediction. But they happen to be writing
+down interpretable models, so they're closer to us. It turns out they're
+just better at computing them on large
+datasets than most of us are. I think these are interesting to highlight even
+though there may be a smaller part of the literature because they have more
+connection to us. This is my co-author,
+David Blei, he has bunch of
+tutorials on this. He has great material on his website that
+you can look at. I stole some slides from him. There's something called
+Latent Dirichlet Allocation, LDA, and this is a
+fairly popular method. What David has got
+specific implementations of this method that
+compute very well. You basically say, I'm
+going to think about taking documents, and
+put them into topics. Each topic is defined as
+a distribution of words. Each document is a mixture
+of corpus wide topics and each word is drawn
+from one of those topics. I'm just going to think my
+data-generating process is that my document is going to draw proportions of topics and then I'm going to draw
+words that are distribute. Each topic has a
+word distribution. You can write this
+down and at least in the equation form it
+starts to look like a structural model that we
+would be familiar with. You can just think about given
+the observed data about, words and so on, what's the posterior
+distribution of a parameters? The way the computer science people like to write this down, they call them graphical
+models or hierarchical models. In some sense, it's just like a Bayesian model
+doesn't mean anything. To call it heavy graphical or hierarchical.
+It's just a model. It's just that they don't
+usually use models. When they have them,
+they're graphical, I guess. This is a graphical
+representation of the Bayesian model, the words are all that observed. Then there's these
+latent variables. You try to, use the data to estimate the underlying
+latent parameters. There's a whole bunch of methods for estimating
+those things. Gibbs sampling looks a lot like the way we would
+do Bayesian estimation, but they have a whole
+bunch of other stuff that isn't normally
+used in economics. I don't really know
+exactly how to evaluate those other methods. David run this on all
+the articles from Science and found
+a bunch of topics. These are some topics, and then the most frequently
+found words in those topics. Discovers things about DNA
+gene sequences and so on. Those are collections
+of articles in Science on a similar topic. Again, as I mentioned
+this earlier, but just to reiterate, we actually have to
+think fairly carefully about whether you
+want to stop here. This is just using the
+articles to find topics or whether you actually want your estimation to
+incorporate choice data. The advantage of incorporating
+user choice data is that you're going to get a better prediction in
+a stable environment. If I'm going to keep using the same way of people
+finding articles, if I incorporate
+what they chose, I'm going to do a better job predicting what they
+should choose in the future rather than just using data about what's
+in the documents. But, if I think I'm going
+to change the context or change the interface or changed the way I
+do recommendation, it might be better just to decide if the two
+articles are in the same topic using only their exogenous
+characteristics. Another way to think about
+this is that from an, econometrics point of view, we all know if we take exogenous variables and
+recombine them in any way, we can still put them
+on the right side of the regression and we
+haven't screwed it up. But if we use the x's
+and the y's together in some complicated way, and then put them on the right-hand
+side of a regression, well god knows what we did. It can be sometimes useful
+to decouple these things. But if you just want to make good recommendations then you should incorporate
+the choice data. Actually let me skip over that. Here's just an example of that. He's classifying
+academic articles. David classifies
+the article about the EM algorithm as a
+statistics article. But then he looks at who's actually citing, and
+reading these articles. That data actually tells him
+that people in the field of vision really like
+the EM algorithm. Somehow in the
+vision literature, it turns out that using
+latent variable models and estimating with the EM
+algorithm really works. People who read about vision
+also like the EM algorithm. Then you recommend
+this article both to statisticians but also
+to vision people. This is a graphical
+representation of the latent variable model that incorporates the user data as well as the document data. this is the article component, the topic component, and the
+user preference component. The only things that are
+observed are the words in the documents and
+what the users chose. But then you build a
+structural model around it, and you say that there's
+these components of topics and that's going to tell us the probability that the
+words are in the topics. Then I'm going to take
+the each document, the document are D, and I'm going to
+classify them in topics. The users are going to
+have latent preferences for those topics. I'm going to have
+a structural model that incorporates
+all of those things. They're going to estimate
+it using various methods. Just to conclude here, I would say this literature
+is one that I think we are going to interact with because it's very
+close to what we do. When economists
+work with big data, one of the big things we're
+going to be asked to do is help make better
+recommendations, better predictions, and so on. That's fundamentally
+an economic problem. We do need to learn about this. This literature has a
+couple of different areas. One has a whole bunch of quick
+and dirty techniques that can actually be a substitute
+for more complex modeling. The clustering methods, the community detection
+algorithms are built into R. You
+can just run them. In an hour you can look at your data and have
+decomposed it into latent factors or put it into communities, and have something to look at and think about. But if you want to get
+fancier, and also have something that's closer to
+structural econometrics, you might want to
+learn a little bit more about these
+graphical models, latent variable models, to help understand what can
+actually be estimated. They do not focus on
+identifiability at all. Like, God knows, how
+much functional form is working, and how much was actually identified in the data. Just like the
+structural literature in economics at first, was happy with functional
+form assumptions and didn't care about
+identifiability and ultimately evolve to think
+much more sophisticated about identifiability and the
+role of functional forms. That evolution hasn't really happened in this literature yet. Just say what do I
+think comes next? Just in my own work
+about recommending news and thinking about
+people's choices of news. Other things this
+literature has left out besides the link
+to structural models, is trying to incorporate
+more about choice sets and the role of the intermediaries in determining what you choose. Netflix only show
+you certain movies. That's why you never rated them. Trying to incorporate
+a little bit more about that context, which I personally think is a really important
+economic question. Just the role of
+these aggregators and intermediaries in
+determining what you buy, what you read, what you know, how you feel, who your friends are on Facebook and so on. That's the direction. This choice that direction, hasn't really been explored. Let's see how am I doing here. Good. I'm now going to switch to my second set of slides for those of you
+who downloaded them. As I mentioned, pretty much still everything I told you before and that Guido
+told you was about applying machine learning
+methods off the shelf. We've saved you 30 hours of viewing something
+on Coursera, plus given you some economic perspective
+about how to think about it. Now I'm going to shift gears
+to thinking more about modifying those methods and
+what they don't do well. I've actually said a fair
+bit of this already, but again, I want to hammer some
+of these points home, that supervised
+machine learning is great at non-parametric
+prediction with big data. It's got these great focus
+on cross-validation for model selection, and if you
+take only a few things away, my view is that we should
+all be doing that. That's what Lasso,
+does if determining how many variables go in
+the model using the data, rather than pretending that God told you that or economic
+theory told you that. That economic theory told
+you should have a dummy for 60-68 year old men in Alabama, and that's why
+the dummy is in there. No economic theory
+didn't tell you that, that's a descriptive part of the model and data should
+really be guiding us there, I'm a big believer in that. Another just
+philosophical observation is that this literature, the strength and weakness is that basically
+anything that works at prediction is okay and so it's actually interesting from a scientific perspective. If you give a literature
+just one goal, which is to predict out of sample and it's something
+that people can test, like just test, if
+you have a dataset, you can just test if
+it predicts out of sample, and you have
+no other rules, that literature is
+really going to advance. I can write a paper in an
+hour if I have an idea, step 1, 2, 3, 4, and 5, then I have to code it up
+and if it works, it works, so that they really
+advance this. That's really just one
+way to think about why it's so good
+at what it does, but just to remember that
+that's had a single focus and actually my co-author David Blei and
+I've talked about, he does these topic
+models that are interpretable, and
+he complained that there wasn't really
+a language in computer science for the
+benefit of interpretability, but we know the benefit
+of interpretability. If a model is interpretable, it's probably also likely to do well when the world
+changes fundamentally. We have a language for that
+and they don't, and that's actually a really,
+the big advantage. Now there's a small
+literature on causality. Judea Pearl has whole
+books on this and there's actually a large
+literature following him. Instead of writing
+equations, they write boxes and arrows that
+show relationships, but their empirical
+literature has not focused on the same
+things we focused on. One way to think about what it's good at is that suppose you have a huge engineering system, and there's some you don't
+understand it at all. It's like software that's
+developed over years, but actually buried in
+that software are rules, like this comes before this, and this is an input to that. What comes out of
+this could never influence some other
+component of the model. Just technically there's no
+communication between them, but there are so
+many of these things that I don't really
+understand them anymore. You could get data
+from that system and learn the arrows. You can learn whether this thing influences that thing, and that thing influences
+this thing. We haven't really tried to do that because in most
+of our datasets, God, if we have one exogenous
+thing, we're happy. We don't think we're going
+to find 100 exogenous things in an interesting dataset. It's just different directions, but I should say there's
+some rule that being very senior and working on causality means you
+have to be very grumpy. We can think of examples
+of that in economics. Judea Pearl fits right in with our very senior grumpy people
+who work on causality. They all have lots
+of fights, you can read blogs if you want to be amused and he's gone at it
+with Heckman and so on. About whether or not this
+was all in Heckman or Pearl subsumes all of Heckman or Heckman subsumes
+all of Pearl. For your amusement, you
+can read about that, but most of the
+applied literature that follows is
+pretty far from us. Of course, we're
+good at causality, but we're bad at model selection, and
+we're bad at big data. Just again, some lessons I think I've actually gotten a little inspired by the
+engineering approach. Just at the MB-RIO thing I'm talking to my most
+structural of friends, and they're a little bit alarmed that be happy to use methods that I'm not sure
+what their properties are, but actually being a little bit liberated can sometimes
+get you somewhere. I think sometimes we should
+be a little bit inspired by the fact that their
+engineering approach, like rather than just
+stopping a literature, they're going to find
+something that works. I think that's interesting, even though we don't want
+to go all the way there. But they're very
+systematic because they're computer guys, and so they want everything to
+be very algorithmic, they don't want the human
+to have a big role. Very low-hanging fruit for
+us, the model selection. I'm going to spend most of
+the rest of the second part talking about heterogeneity, heterogeneous treatment effects. Again, I started out at the beginning talking
+about ending up with 10,000 segments of
+advertisers running regressions for
+all of them in it. But I had defined the segments by the
+cross-product of big, small industry and everything, rather letting the data tell you heterogeneous
+treatment effects as well as personalized
+recommendations. We can do personalized
+medicine, personalized offers, personalized
+searches, and so on. Then again, these
+specific areas I've already highlighted
+recommendation systems, topic modeling, text analysis. Causal inference,
+I'm going to say a few words to tie
+together and again, I'm going to talk about my work. Now, I want to tell you what
+I think is interesting. I started working first on the things I thought
+was interesting. In each case, I think
+we're taking a first step, but I hope there'll be
+lots of work that follows. Some of the problems that I would like to
+try to solve is that many problems in social
+science have a combination of prediction and causal
+inference exists. The prediction part might be just predicting what
+happens as a function of all of these demographics or previous web browsing
+or other stuff. Existing machine
+learning approaches don't directly apply
+to causal inference, that hasn't been their goal. Then as Guido highlighted, for a lot of these
+machine learning methods, we didn't even know the most widely used
+machine learning method we only know as of last year whether the prediction is
+asymptotically normal. Can you imagine not
+knowing for decades if OLS can do
+hypothesis testing? It's a crazy thing, but they just haven't really even cared about it very much because they had
+this other thing, which was mean
+squared error out of sample to evaluate models. They weren't interested
+in asymptotic normality. Some of the proposals I have is first of all, for economics, let's formally model
+the distinction between causal and predictive parts
+of the model and treat them differently for both
+estimation and inference. Let's say price, I
+want to focus on that, this causal variable, I want to understand
+the causal effect of price on consumer
+behavior or whatever. I want to understand the treatment effect
+of this drug. That is my focus, that is the
+causal part of the model. I have one set of problems about inference in
+estimation about that. Then there's all these
+other variables. They actually, in the
+econometrics textbook, they're just a big vector of
+right-hand side variables. But actually these
+attributes are different. I'm not imagining,
+I'm going to change the distribution of
+population characteristics. I might have the whole
+population for that matter. Those are just fundamentally different in how I
+think about them. Their distribution
+isn't changing. Well, I'm going to actually
+change the causal variable. The paper with Alberto and Hito and Jeff Wooldridge
+that actually says even in small datasets that standard error should be
+different for causal variables. The basic idea is that suppose I have all
+the people at Amazon, I've all the search
+advertisers or I have all the state
+through all the counties, if I have data from
+a whole population, I actually know with certainty differences
+effective of characteristics, if I have all the states, I know the difference in
+income between East and West. That's a fact. I know
+that for the state. I might imagine, well, maybe I want to think about what the states
+would be next year. But if I actually have data about one year for 50 States, I know the difference
+between East and West in that dataset. If I wanted to predict
+the difference between East and West next year, I should get a panel dataset. Because states are pretty
+highly correlated. The cross-sectional
+variance between California and Maryland
+tells me nothing. I would argue about
+what the difference between East and West
+will be next year. If you calculate the
+standard error for the difference between the means incomes of East and West, that standard error
+would be based on the cross-sectional variance. But that would not
+have anything to do with predicting
+what happens between East and West next year because East and West next year is about the serial correlation
+of California. If everything is highly
+serially correlated, then difference East and
+West next year will be very similar to the difference between east and west this year. On the other hand, if I wanted to think about the
+effect of changing the minimum wage and
+half of the states had minimum wage
+high in half at low, I still, even after
+observing all 50 States, don't know the causal effect, the average causal effect of
+changing the minimum wage. Because I never saw any
+state in both circumstances. The problem for inference is not that I have a small sample
+from a large population. It's actually that I
+don't observe everything, I don't deserve all the
+potential outcomes. You actually get different
+answers for those things. I gave this talk in more
+details somewhere else. I had a quote that was actually widely tweeted and
+re-tweeted afterwards. I love econometric seminars
+getting re-tweeted. But anyways, the result of that is everybody's
+standard errors are actually too big. I said you should never
+write a paper that says people's standard errors are too small because you'll
+never get cited. But if you say they're
+thinner or they are too big, you've got a shot. Everybody who wants
+smaller standard errors read our paper. But more and more actually
+more seriously, I actually, what I think is interesting
+about the paper is that we actually
+say you should think differently about
+inference between two different types of variables and in the formulas
+get different answers. Second, we want to develop
+estimation methods. Not just for standard errors, but also for how we estimate. We should treat the two types
+of variables differently. Just as an example of that, I could think about
+building a tree to segment my advertisers, but then estimating a demand model at the
+bottom of the tree. Those were two
+different exercises, estimating the causal
+effect of price and deciding how that
+interacts with attributes. That's what a lot of
+our work has been on and I'll tell you
+more detail about that. We've also been thinking
+about robustness, so that the paper
+and the paper and proceedings about that, which I probably won't get to, but possibly it's in the notes. We've been looking at
+network experimentation. We have a paper that's
+just out on that and large-scale structural models
+with latent variables. I alluded to that
+with the news work. Just to ground everybody. The model of causal
+inference I'm going to use. For the more labor
+folks in the audience, this is the way we're
+always going to write these things down for the
+IO people in the audience. We can think of this Y_i
+is demand and W is price. This is the potential
+outcomes models. Y_i of W is the outcome unit I would have had if a sign to treatment W. Let me just
+make sure when I'm going to get a couple of
+minutes before we break. That's the potential
+outcomes notation. Again, the fundamental
+problem of causal inference, which is actually going
+to be very substantive and how we modify
+methods is that we don't see all the units at the same time with different
+counterfactual policies. Again, we talked about
+the entire supervised learning literature
+revolves around one goal, which is I have a bunch
+of data on y's and x's. I have a holdout sample. I use the x's to
+predict the y's, and I see how well I do. If I'm estimating
+a causal effect, I can estimate it in
+a training sample. When I go to the
+prediction sample, how do I know if
+I did a good job? In fact, as we know, if I
+was doing an IV estimate, I would exactly not do a good
+job at predicting the y's. What do you do for
+the ground truth? Then we're going to have
+a solution to that. But that's something that
+has not been grappled with at all basically in the machine learning literature. The units of study
+typically have these fixed attributes
+x. I'm going to decompose my right-hand side by variables into the causal
+variables and the attributes. Trying to say by mostly
+harmless econometrics makes this distinction, most other econometric
+textbooks don't. Causal inference
+versus prediction, let's start with that. Of course, in economics,
+we want to make decisions, decisions about
+allocating resources. That's why we care
+about causality. Nonetheless, prediction
+can actually play the dominant role in causal inference in a
+bunch of situations. One that's [inaudible], has emphasized a lot is that their decisions where if you know the underlying state of the world, you
+know what to do. If you know it's going to rain, you're going to
+bring an umbrella. All I really care about
+is predicting rain. Another class is
+that prediction is a dominant component of your estimation for
+causal inference. Propensity score
+estimation, it's just estimating the probability
+you get a treatment, It's a pure prediction problem. The first stage of
+instrumental variables or two-stage least squares, not for interpretation,
+pure prediction problem. There, we just
+immediately can do better by applying machine
+learning techniques. Predicting the baseline
+and a difference in different setting or in
+a time series setting. By the way, the one place
+where supervised learning has already had an audit inroads is time series econometrics, because it's about prediction, has been having more interaction with machine-learning
+in the last few years. This paper by Sendal and he has a paper in the
+papers and proceedings and also some other related work has these motivating examples where all you care about is
+the state of the world. Will it rain? Which
+teacher is best? Unemployment spell length, etc. He writes down a little
+model and he says, ''Imagine there's some
+state of the world. The effect of a decision
+on my payoff is the effect of the decision
+on my payoff directly plus, and in the second component is how the state of
+the world changes my payoff times the derivative of the state of the world
+with respect to my payoff.'' Sendal says this is actually
+a prediction problem because all we have to do
+is predict F. He says, ''Well, taking an umbrella doesn't affect whether it rains. This is a causal
+part of the problem. Therefore, the causal part actually isn't important
+for this problem, all that's important
+is prediction.'' I have a little
+twiddle with that. Actually, the derivative
+of your payoff with respect to taking an umbrella is often that's the
+treatment effect. That's actually what
+many of us mean by causal inference. Nonetheless, if that
+derivative is always positive, if it rains, then he's right. I mean, then you really
+don't care about the exact value of how your payoff changes with
+respect to an umbrella. All you care about
+is whether it rains. He's going to focus
+on that aspect. He just has a couple of really nice examples,
+where he says, ''If somebody is going to die, you don't want to replace their hip if they're going
+to die in the next year. Replacing your hip
+is expensive and painful and if you're going
+to die in the next year, it's just going to ruin
+your last year of life.'' He has this approach
+where he uses a machine learning method to predict with 65,000
+Medicare patients, 3,000 variables, whether
+somebody is going to die. He does a counter-factual where he reallocate the
+people who are going to die away from getting hip replacements and shows
+that they'll be better off. I think this is a nice
+example where for policy, we had old methods, there are new methods,
+they do better. You could save more money
+and save more lives. 

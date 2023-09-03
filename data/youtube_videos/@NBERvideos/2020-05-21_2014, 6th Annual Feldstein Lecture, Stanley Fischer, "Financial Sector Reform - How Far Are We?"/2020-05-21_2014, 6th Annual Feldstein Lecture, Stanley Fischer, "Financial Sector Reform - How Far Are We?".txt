@@ -1,0 +1,654 @@
+Stanley Fischer: Well,
+I'm extremely grateful to Jim for the very
+kind things he said in the data he made up on
+various aspects of my career. I'll add one, Jim. I thought that when I
+came to this lecture, I would recognize no more than five
+percent of the people. Well, I guess the profession has been aging a bit with me because I see a lot
+of people that I know and interacted with and
+enjoyed interacting with in various
+ways in the past, and thank you all for
+coming to this event. Customary to say
+it's an honor to deliver not one of
+these lectures, a named lecture, but this really is an honor. Martin has had a
+remarkable career. He's the founder
+of the modern NBER as the primary center
+of applied policy, relatively applied
+economic research. The modern NBER is
+not only impressive, it's remarkably user-friendly, it's remarkably successful, and also seems to
+be very efficient. I wrote that down before, I heard about Rob Shannon being the only person who
+apparently runs this. Sorry, Jim. I've been thinking about
+Martin's successes and one of these successes is knowing how to choose people. Well, Kate, this wasn't
+directed at you, but it's certainly relevant. This institution
+of the summer camp is really an extraordinary one. At the same time, Martin continued with his
+own research program on a huge range of issues which developed over the
+years and hasn't ended, but it included more recently national
+security and defense. Add to that the superb set
+of students he's advised and produced and an
+almost unparalleled ability to work jointly
+with his students. He has left a remarkable
+impact on the profession. He, I think, has left an imprint
+on the profession to an extent that
+almost no one can match in terms of his
+own contribution, and that he has encouraged
+through others. I'd like to add a personal
+note on behalf of Rhoda and myself and our children, to thank Kate and Martin who have been the most constant, the most thoughtful,
+the most generous, and the most pleasant of
+friends for over 40 years. We are indeed grateful to
+them for their friendship and for the many
+very good things they've helped us do. For both professional
+and personal reasons, I'm honored to have
+been chosen to deliver the Martin
+Feldstein lecture. Now I didn't know when I was
+asked to do this lecture, that I was going to be
+the vice chair of the Fed when the time came. I didn't think anybody would have remotely consider
+that possibility, but now I just heard Jim say, he was known in the
+least surprised, which bothers me a bit, Jim. This was all planned. I didn't know about
+what I'd have when I was nominated
+and said yes, but I did choose the topic after I knew I was
+going to join the Fed. Now, these are things
+which as professors, I used to regard as
+a technical detail with no particular importance how you do supervision
+and regulation of banks. You tend to think
+that sort of thing until it rises up and
+hits you in the face. There would've been
+a good idea to know something about a
+topic like that. I can remember
+countless examples which I'm too
+embarrassed to tell you about of similar things we say. Not interesting, not
+important, forget about it and somebody would come and want to write a thesis, and so that's nothing, and then a year or two later, you'd realize you
+gave them bad advice and it was a very good thing. The same with financial
+sector reforms. What I'm going to do is talk about aspects of the
+implementation of the financial sector
+reform program that was widely agreed
+at the early stages of the global financial crisis. It is actually quite remarkable that an international
+group of regulators and supervisors in the Basel Committee
+on Banking Supervision and later in the Financial
+Stability Board, both of them now bodies which include the G20
+countries plus a few more. There is a law which I'm almost willing to give you
+five dollars to bet on, that there is no G which
+has a number of members that is represented by the
+number that follows the G. The G20 consists of
+about 26 countries, and I can go on with a
+variety of examples. The reason they're almost always more is that when you
+leave somebody out there, somebody really insistent, who manages to push
+his country's way in. Well, we're talking
+about measures which were introduced or thought about during the
+worst economic crisis and the worst financial
+crisis since the 1930s. I'm giving a little
+bit of background because very easy
+to forget it now, I'm always impressed when people say you
+should have done this, you should have done that, and forget to say
+at the beginning, but what you did was pretty done good considering this situation. Following the collapse
+of Lehman Brothers, many of us thought that
+we were about to witness a second Great Depression
+that did not happen. In large part because policymakers had learned some of the lessons of the
+Great Depression. Nonetheless, the advanced
+economies were put through severe economic
+and political tests. Fortunately, policymakers
+succeeded in dealing with the situation better than many had feared they would. Unfortunately, we're still
+dealing with the consequences of the collapse and the steps
+necessary to deal with it. Now, I've heard Barney Frank say that economists have
+a wonderful technique that of the
+counterfactual to analyze what is being achieved
+by preventing disasters. But that real people
+base their judgments more on the current
+state of the world than on disasters that
+might have been. Well true as that is, we should from time to
+time allow ourselves to recognize that bad as the
+Great Recession has been, it would have been
+much worse had policymakers not undertaken
+the policies they did, many of them unorthodox
+and previously untried to deal with
+the imminent crisis that confronted
+the United States and the rest of the world after the fall of
+Lehman Brothers. For that, we owe them our
+gratitude and our thanks. Now to the topic; The Financial Sector Reforms. These were prepared
+within a few months of Lehman Brothers failure, which is quite impressive. If I learn how to
+operate this thing, we'll see what the main
+elements of the program were. There were nine main strands and I'm putting them up there because I'm going to read them, there's a lot of them, and it may help for you
+to see them as well. This is not a slight lecture, this is a lecture illustrated
+by a couple of slides. The first strengthened
+the stability and robustness of
+financial firms with emphasis on governance, on risk management, on
+capital, and on liquidity. I'm going to talk about
+capital and liquidity as the first of the three
+topics of the nine here that I'm taking up. Not go through all of them, but strengthen the
+quality of prudential and effectiveness of
+prudential regulation and supervision, build the
+capacity for undertaking effective macro-prudential
+regulation and supervision and I'm going to say
+something about that. Develop suitable
+resolution regimes for financial institutions and then strengthen
+international coordination of regulation and supervision, especially for regulation
+and resolution of G-SIFIs. Now it doesn't matter what
+applied field you're in, there are acronyms and
+you go to a meeting and if you haven't been to the
+first meeting, you're lost. But once you've been
+once you get it. A G-SIFI is a globally
+that the G is added because not all are Gs, are SIFIs most of them, systemically important
+financial institutions. There's been a lot of the
+focus of the reforms, the regulatory reforms have been to deal with the big banks, which are the SIFIs
+and the G-SIFIs. Number eight, find
+appropriate ways of dealing with the
+shadow banking system. I will add a word
+on that at the end. That's what we're
+going to focus on and I'm going to focus
+on three topics. Capital and liquidity,
+macroprudential supervision, and a special topic
+which embraces several of these called
+too big to fail. Those are going to
+be my three topics. Well, let's start with
+capital and liquidity. At one level, the story on capital and liquidity
+ratios is very simple. From the viewpoint
+of the stability of the financial system
+more of each is better. That's it from the
+stability viewpoint. This is the principle
+that lies behind the vigorous campaign waged by Anat Admati and Martin Helweg to increase capital ratios set out in their
+book The Bankers' New Clothes: What's
+Wrong with Banking and What to Do about It. On the cover of the book, the bankers seem to have relatively few clothes in
+their description of it. Well, at what level
+should capital and liquidity ratios be set? We don't have a terrific
+theory on that. In practice, the base from which countries work is
+agreement among the regulators and
+supervisors who belong to the Basel Committee on
+Banking Supervision. That's where many of these
+agreements come from and they've typically
+been spread to the world through
+another body, the Financial Stability
+Board, the FSB. Following the global crisis, the Basel Committee move to
+the Basel III agreement, which strengthens
+capital requirements, as opposed to Basel II, which tried to build
+regulation primarily on measures of risk capital set by internal models developed
+by each individual bank. That's quite ambitious
+or quite trusting. It didn't work for two reasons. One, the required regulatory
+minimum capital ratios were too low but also because any set of risk weights
+involves judgments, you've got to make judgments
+about correlations about which you know very
+little, for example. Human nature rarely
+results in people choosing risk weights that make them require to
+hold more capital, so there's a problem there. In the United States now, the new regulations require large bank holding companies to use risk-weighted assets
+that are the greater of those produced by the
+firm's internal models or produced by set
+of standard weights supplied by the regulators. There's a minimum from
+the standard weights that the regulators
+have agreed on and that's somewhat
+of an achievement. Well, what is being achieved, now if I start with globally, a lot has been achieved
+and I should say that. The minimum Tier
+1 capital ratio, Tier 1 is pure
+capital more or less, has been raised
+from four percent to six percent of
+risk-weighted assets. Second, there is a capital
+conservation buffer, an extra buffer of 2.5 percent
+of risk-weighted assets, and banks are required
+to build this up as they earn profits. The required assets
+are 8.5 percent, they were four percent and the required capital
+ratio is 8.5 percent, it was four percent. There will in addition be a counter-cyclical
+capital buffer that regulators can raise
+and lower when needed. It used to be a big puzzle, Larry Summers always used
+to say about IMF programs. I don't understand why
+they set minimum reserves that countries have to
+hold and they give him the countries just enough
+money to hold those reserves. What are they going to do when they actually
+need reserves. Well, the capital buffers
+are the answer to that question in the
+case of the banks. They've also set a
+minimum leverage ratio of three percent, that's the ratio of
+Tier 1 capital relative to total on balance
+sheet assets. Typical ratio of on-balance
+sheet of total assets to risk-weighted to total is about 60 percent of
+the risk weights are less than one, many of them. Then in the United States, the Federal Reserve
+is planning to propose risk-based
+capital surcharges for US Global SIBs, systemically important banks and those are going
+to be raised. The regulators have also raised the minimum leverage ratio for Global SIBs to five percent as opposed to the three
+percent set in Basel. If they don't meet
+the five percent, they will not be able
+to distribute dividends and pay discretionary
+employee benefits, so this is a serious constraint. Foreign bank organizations with US non-branch
+assets of 50 billion or more will have to form
+US holding companies that need essentially the
+same capital requirements as US bank holding companies with $50 billion
+or more of assets. Many of these rules don't
+apply to community banks because they have a
+different business model. I wanted to add one
+point on bank capital, the Swiss and Swedish
+regulators have gone far in raising
+capital requirements, including by raising bail integral secondary holdings of capital in the form of CoCos, Contingent Convertible
+Capital Obligations. The US may be heading
+in a similar direction, not by using CoCos. CoCos define conditions under which they convert from
+being bonds to being equity. What the US regulators decided or nearly decided is that they're going to require
+minimum amounts of "Gone concern loss observancy." The editor of this speech told me she wanted to change that to going concern
+loss absorbency, but it's really gone concern. When it goes, these
+bonds are sold and used to finance
+internal recapitalization through a new resolution
+liquidation mechanism created by the Dodd-Frank Act. There are also liquidity
+rules which I won't go into. What are the critical
+results so far? Tier 1 common equity ratio. This is the one that should be a minimum of 8.5 percent by
+international agreement, which US regulators
+have raised a bit, was around seven percent
+before the crisis, is now around 11
+percent on average for the largest 25
+bank holding companies in the United States. There are also, as I mentioned, the liquidity constraint, the ratio of liquid assets
+to total assets has risen from a peak in the
+first decade of this century of about 12
+percent to over 20 percent. These are very significant. There was a big every regulator who told banks to raise capital
+and liquidity who said, "Okay we won't make any
+loans and so forth." The answer they got
+both from the Fed and from Mark Carney who was in the Canadian
+supervisor was you are going to raise
+your capital ratios through the numerator, not through the denominator. That is much harder
+because that means you can't do it by
+running of assets. The bottom line to
+date is that there is a very significant
+increase in capital and in liquidity held by the largest banks in
+the United States, which account for about 80 percent of the
+banking system. At the same time, the introduction
+of macroeconomics, supervisory stress tests
+in the US has added an important element to the assessment of
+capital adequacy. As firms are required to hold a capital buffers
+sufficient to withstand a several year period of severe economic
+and financial stress. The stress tests are very important addition to
+toolkit of supervisors. One that is likely
+to add significantly to the quality of financial
+sector supervision. I ran around myself saying
+for quite some time, well, this was a
+supervisory failure and we're not doing
+much about supervision. Well, actually the
+stress tests are very significant innovation
+in the supervisory field. That's capital and liquidity. John Riedl asked me, again I'm going to
+answer the question? The answer on this one is yes. That's being improved
+significantly. It's been dealt
+with significantly. Is it enough? Well,
+time will tell. If we had better models to
+determine what's enough. The problem with meeting the one in a 100 year test is that they show a tendency to come
+up every 10 years or so. But you've got to find
+something like that. Now I'm on to macroprudential
+and supervision. Well, macroprudential
+policy has two meanings. As the original one, which people glommed onto when Lehman failed and
+the world blew up. That relates to the
+need to understand that the financial system is a system and that if you pull something
+out of the middle of it, it has more consequences than
+the failure of that firm. It was a desire to supervise the financial system as a whole, emphasizing interactions among financial markets
+and institutions. That's the use as described by those impressed by Lehman. The second relates to
+the use of regulatory or other non-interest
+rate tools of policy to deal with problems arising from the behavior
+of asset prices. For instance, when you ask
+a central bank governor, how are you going to deal with rising housing
+prices at a time when for whatever reason, the central bank doesn't want
+to raise the interest rate. They will say, we'll use
+macroprudential policies. By that they mean policies
+that will make it more difficult in some way or the
+other to finance housing. Now, these sector-specific
+regulatory and supervisory policies
+were used extensively and systematically in the
+United States between the end of World War II
+and before the start of World War II until about the 1990s and are
+now being used, continue to be used in other advanced and
+developing countries. I think central
+bankers are very proud when they got rid of those. Finally, we've got a clear tool which we can use
+the interest rate, bank, it works. Forget all that other stuff
+the markets will do it. We're not going to intervene in this market or that market. Well, we're going
+back to the future. The issue of how monetary
+policy should relate to asset price inflation
+has been on the agenda of central bank
+is for a very long time. There are people here who
+remember papers in the 1960s. I remember when Armen
+Alchian and Benjamin Klein, which argued that we should
+deal with asset prices by putting the prices of assets in this consumer price index. That way you'd have
+to be stabilizing a measure of present
+and future prices that didn't go anywhere
+with the policy community. The issue became more prominent in the United
+States in the 1990s and in the first few
+years of this century and it temporarily culminated in the Feds mopping up approach, namely that monetary policy, meaning the interest rate, should not react to
+rising asset prices or suspected bubbles
+to the extent that they affect
+either employment and/or price stability. Rather, monetary
+policy should wait to mop up the mess after
+the bubble bursts, including for instance, by
+reducing the interest rate. That's what the
+mopping up is about. Well, you would perhaps say
+that doesn't sound right. But this policy was
+tested in the bursting of the tech bubble in 2001 and it appeared to be successful as the economy recovered from 2002 onward without the use of what is now thought of
+as macroprudential policy. The use of regulatory
+and supervisory measures to deal with undesired
+asset movements. Now the word macroprudential is used primarily in the
+second sense of the use of regulatory and supervisory
+non-interest rate tools to affect asset prices. Now I want to go from
+etymology to economics. I want to review
+my experience with macroprudential policies
+in the second sense, non-interests, regulatory,
+and supervisory policies. I'm reviewing my experience as Governor of the Bank
+of Israel to draw a few key lessons about
+the use of these policies. To set the background, there was no financial crisis in Israel during the
+Great Recession. But as domestic interest rates declined along
+with global rates, housing prices began to rise. Well, this is a normal part
+of the adjustment mechanism. I'm looking at Greg, I think, you have a couple of papers
+using that approach. Is expected to encourage an increase in the
+rate of homebuilding. Well, that's what
+happened in Israel. They started building
+more houses, but not sufficiently more to
+meet the demand for housing and prices continued to rise. Starting in 2010, the supervisor of banks who
+reported to the governor, which was me, of
+the Central Bank, began to implement a
+series of measures to reduce the supply
+of housing finance, let's say the effective
+supply of housing finance. Here is a list of
+the major measures. This I want to go through
+because this includes almost everything
+that's been used in the world to deal
+with housing prices. First they increase
+the provisions that banks had to make against loans with
+high LTV ratios, then they increase capital
+requirements against floating rate loans
+with high LTV ratios. May 2011, and I'll
+come back to this, they limited the share of any housing finance
+package index to the short-term interest rate to 1/3 of the total loan. I'll explain what that's about. The Bank of Israel interest rate was reduced to 50 basis points. The banks, who everybody
+says never compete, were competing in
+selling mortgages and they really competed. They've got the spread
+down to 60 basis points. You could get a
+floating rate mortgage, a 30-year mortgage
+if you wanted one, at 1.1 percent index the
+Bank of Israel rate. Not surprisingly, that was attractive
+to a lot of people. Well, the measure was
+that not more than 1/3 of mortgage could consist
+of loans like that. The other 2/3 had to be indexed or nominal or had
+to be adjustable to a five-year rate
+with a five-year wait. Either the real rate
+or the nominal rate. That was a huge change, we didn't quite think so then. I was thinking through it, the yield curve was steep and the nominal real rate
+was about four percent. In effect, you took 2/3 of
+what had been one percent and raised it to somewhere
+like 3.5-4 percent. That's a very severe rate
+rise in the interest rate and it worked quite effectively. But prices have kept on rising. But that one had an
+effect you could see and it set prices
+back for awhile. 2012, they limited the LTV
+ratio and housing loans to 75 percent for
+first-time buyers with tighter limits
+for other buyers. This is the limit to 75
+percent is a political move. Because the
+first-time buyers are what in Israel will
+call young couples. You mess with young couples access to finance
+and it's a problem. This actually reduced their LTV, but it made a lot of noise. Then in 2013 they
+limited the maximum, this is after I left. August year, was two months after I left. They limited the
+maximum payments to income ratio of borrowers
+to 50 percent with 100 percent risk weight on loans with a payment income of
+more than 40 percent. The evaluation of
+the Bank of Israel is the measure that sharply
+raised the cost of housing. The effective interest
+rate was very effective. That the payments to income and LTV limits were
+moderately effective, and that there was not
+the big difference which the literature finds. The literature says
+PT payments to income is more
+effective than LTV. That was not the case in Israel. But that the measures which tried to affect
+the cost of finance to the banks had
+very little effect. Making them provision more, making them raise
+their risk waits didn't do a whole lot. I think that must have had something to do with
+effect that they were able to get deposits
+at extremely low rates. It didn't make a
+heck of a lot of difference what they're doing. Anyway, that's the
+set of measures that we hit that
+we used in Israel and I want to mention three key lessons
+from this experience. They don't follow from
+what I've told you now, all of them, but
+they are important. First, the Bank of
+Israel did not have good empirical estimates of the effectiveness
+of these measures. What we typically
+did was to calculate the impact of a
+particular measure on the effective cost of
+finance to the borrower. That always
+overestimated the impact and the measures
+were not very good. But we knew that we didn't
+have good estimates. What do you do when you've
+got uncertainty like that? Particularly when you don't
+want to kill a market, you have cautious. I believe that because
+of the uncertainty and the lack of experience
+with these badges, we did too little
+on many occasions. Second thing, everybody
+has to remember, measures aimed at
+reducing the demand for housing are likely to be
+politically sensitive. This is not like
+the interest rate. The world thinks the
+interest rate is neutral. It isn't. You raise the interest rate, you don't affect
+every sector equally. But somehow the world's
+got over the fact that typically hits interest
+rate sensitive for spending and thinks that's pure monetary
+policy and that's okay. Given that measures aimed at reducing demand for housing are likely to be
+politically sensitive, the use requires very cautious
+and well-aim measures by the regulatory authorities and may require the use
+of government subsidies to compensate some of those who are affected by the
+imposition of these measures. One often sees, and I've seen it in
+other countries as well that is a conflict between serious risk
+management by the banks and what the political
+system wants to happen through housing finance. That's an underlying
+source of problems in the use of
+macro-prudential policy. Third, there's generally a
+need for coordination amongst several regulators
+and authorities in dealing with
+macro-prudential problems. Regulation among independent
+authorities is hard. If you don't have
+somebody who can say, however it's done, you
+do this, or you do that, everybody's going to insist
+on their independence and they are independent. Well, there are many models
+of regulatory coordination, but let me focus on only to the British and the American. As is well known, perhaps not to everyone
+in this audience, the UK has reformed financial sector
+regulation and supervision by setting up a Financial
+Policy Committee, the FPC, located in
+the Bank of England. It is the supervisor of the
+whole financial system. That committee can
+issue any orders to the financial intermediaries. The major reforms in
+the United States came through the Dodd-Frank Act. That's set up a
+Coordinating Committee among the major regulators, which is the FSOC, the Financial Stability
+Oversight Council. There's a nice
+paper by Don Cohn, who used to be deputy
+vice chairman of the Fed before Janet Yellen got the job, who has been appointed to the British Financial
+Policy Committee located in the Bank of England. The British are really
+very good about not worrying about nationality and choosing the best governor, if he happens to be from
+Canada, that's fine. They've got foreigners on their Financial
+Policy Committee. Don has written a very
+interesting article in which he says that there is a difference
+between an organization which has a legal power
+to impose policy changes and regulators and one
+which is supposed to coordinate among
+independent regulators without any power to
+get them to do things. He says, well, there's no
+unique regulatory model in the UK structure of macro
+prudential supervision is not ideal for all
+countries at all times, etc. But he clearly thinks
+there are advantages to the Financial
+Policy Committee. He looks at the
+structure of the FSOC, our regulatory body, and suggests six changes which two are the
+most important. The first is that every
+regulatory institution in the United States should have the goal of
+financial stability added to its mandate. Many of them don't. You can't tell them
+what you're doing, it's going to bring
+financial instability that somebody else has
+to deal with that. Then he also says, and this I think is
+very delicately said. This is his sixth suggestion. To give more
+independence the FSOC, it should also be given
+tools that can be used expeditiously to
+address systemic risks. He doesn't explain how
+that's to be done, but clearly, that's a measure. Don is very careful
+about what he says, but he is pointing to
+things which are important and which we need
+to think about. I think it may well
+be that adding a financial stability mandate to the overall mandates of all
+financial regulatory bodies would help financial stability
+in the United States when the need comes to
+have that stability. On number 2 issue,
+macroprudential supervision, it's not as simple vee or take, there's more work to be done and some of it may
+be quite difficult. Finally, I want to talk
+about too big to fail. The diagnoses of what went wrong with the financial
+system at the start of the Great Recession
+generally placed very heavy emphasis on the
+problem of too big to fail. I'm going to quote my
+colleague governor again, Dan Derulo, who explains what happens when governments
+are confronted by the potential failure
+of a large bank. Dan says, "No matter what is general economic
+policy principles, a government faced with
+the possibility of a cascading financial crisis, that could bring down
+its national economy." In his view, tends to err on
+the side of intervention. Doesn't matter what your
+principles were beforehand. When you see the train
+about to bear down on you, you start getting active
+and deciding to do things. There's a question, why do
+we have too big to fail. There's one view that the large banks have
+a funding advantage. They can fund themselves more cheaply than the smaller banks, and therefore, being large, they tend to get larger. A lot of empirical work that's attempted to estimate
+these premiums in terms of lower cost
+of financing that the larger banks
+typically receive. Well, these results vary a lot, but I'll give you some
+estimates from the IMF in it April 2014 Global Financial
+Stability Report. They say that in the
+United States in 2013, large banks generally had a premium of about
+15 basis points, that is, they paid 15
+basis points less. In Japan, it was between
+25 and 60 basis points, about the same in the UK
+and in the Euro area, 60 to 90 basis points. Well, those sound like not much, but you have to remember
+that a law I learned from Herbert Stein
+many years ago, which is the difference between two percent and three
+percent is 50 percent. The difference 60 to
+90 basis points on the cost of capital for a bank is a significant difference. Whether it's big enough to
+generate the differences in sizes that we see
+is very unclear. There's also been work done on economies of
+scale in banking. The early work say there
+are no economies of scale beyond a balance sheet
+of about 100 billion. There are more recent work. There is increasing body
+of research that says that in fact there are
+economies of scale, and some of them, as you read the
+literature look to be economies of scope actually. They do different things. That the larger
+banks may be more efficient than the
+smaller banks, or some people put it, there are certain activities
+that you only can do in a very large financial
+institution. Now the theory of
+too big to fail and the theory is that
+large banks are a problem from the viewpoint of stability has to contend with the
+history of the Canadian and the Australian
+banking systems. Both these systems have
+several very large banks, but both systems have
+been very stable. In the Canadian case, they haven't had a financial
+crisis for 150 years. If this paper had
+been given in 2005, Martin, if you'd retired
+a few years earlier, we would have added the
+British banking system to that list, but it's way off that list. The empirical results on what is the connection between the concentration banking system and the number of failures
+or the extent of failures, says actually the
+concentrated banking systems are not more unstable. That's a problem that
+one has to deal with. I've spoken to a few people who have experienced
+about all this and I will add one factor
+that I believe is important. I spoke to a veteran of the international central
+banking community and said, "How do you
+reconcile these things?" He said, "Those Canadian banks
+aren't very adventurous." Well, I take that
+to be a compliment. I think he thought
+it was anything. Well, why is this issue so
+important in the debate on reforming the
+financial system? It can't be because
+big banks never fail. Some do, financial institution certainly failed in
+the great recession, including Lehman Brothers
+and Washington Mutual, other banks who emerged
+out of existence, often in very low prices with the FDIC managing
+the resolution process. Banks in the UK and Europe failed during the
+Great Recession. It cannot be because
+equity holders never lose in bank
+crises, they lose big. It could be because until now, bondholders and large
+banks rarely have lost. That's rarely with
+an R in the middle. Rarely have lost
+significantly in crisis. Rather for fear of contagion, they ended up being
+protected by the government. Almost certainly, TBTF, too big to fail is central to the debate about
+financial crisis because financial crises are so destructive
+of the real economy. It is also because
+the amounts involved when the central bank
+or the government intervenes in a financial
+crisis are extremely large. Even though the final
+cost of the government, including the central bank, are typically much smaller, and in some cases, governments and central banks even come out slightly ahead
+after the crisis is over and the banks have been sold
+back to the private sector. Another fact, it may be
+that the departing heads of some failed banks or banks that needed massive government
+assistance to survive, an analyst received very
+large retirement packages. There's general public
+anger to banks, and that public anger is reflected in the
+way the Congress relates to this issue
+of too big to fail. Now there are a
+lot of managers in the regulatory reform program, which I won't go into
+because of lack of time, but they're in the paper which is on the Fed website now. There are a lot of
+measures designed to make the large banks safer of which the most important is that there are surcharges
+for global suffice and for domestic suffice. There is also for these structurally important
+financial institutions. Work on resolution mechanisms
+in the living will every SIFIs required to
+produce a living will, which will explain how
+it will be treated if it goes broke, how it plans to handle
+its bankruptcy. This is probably an
+unpleasant exercise, but we all write wills
+and maybe they can too. These exercises I think
+probably contribute to helping deal with the
+problem of the largest banks. Well, there is another thing. Why don't we break them up? If you talk to people, they'll tell you all about
+Standard Oil repeatedly. They'll tell you about
+the airlines often. They'll tell you about AT&T. Well, so you could say, well what about simply
+breaking them up? There's nothing
+simple in this area. It's not simply
+breaking them up. This would be a heck of a mess. You break up the
+biggest 10 banks. Do you break up the biggest and start there and keep going? Well, this could be a
+very complicated system and we don't actually have
+a whole lot of evidence that there'd be fewer crises if there were more banks,
+but smaller banks. You can look around. Lehman Brothers was
+not a very large bank, was not small, but
+it was not huge. Wasn't a bank either, but it was not a very large
+financial institution. The savings and loan crisis
+of the 1980s and 1990s were a lot of things
+called banks went broke. They were not big,
+but the government intervened in those crises. There is another phrase floating around which is called
+too many to fail. Well, too many to fail means institutions
+with lots of systems, with lots of small
+banks are a problem. Institutions with a few
+big banks are a problem, too big to fail. This is a problem, but the
+fact is financial panics can be caused by hurting
+and by contagion, as well as by big banks
+getting into trouble. My view is that actively
+breaking up the largest banks would be a very complex task
+with an uncertain payoff. What are the bottom lines? I give you a list. The first on capital
+and liquidity. By raising capital
+and liquidity ratios for the large banks and through the active
+use of stress tests, regulators and supervisors
+have strengthened bank holding companies and thus reduce the probability
+of future bank failures. The paper contains some
+details on the use of the resolution mechanisms set
+out in the Dodd-Frank Act, which make it possible
+to resolve a bank that is in essence treat it as you would treat
+a bankrupt bank without following the
+standard bankruptcy laws and those mechanisms hold-out some promise of
+making it possible to resolve banks
+in difficulty at no direct cost to the taxpayer. In any case, at a lower cost
+than was possible hitherto. But work in this area
+is less advanced than the work on raising
+capital and liquidity ratios. The agreement was
+reached very quickly on how to deal with global
+in significant banks as systemically important banks and financial institutions. How to deal with
+the bankruptcies. But there's been
+much less agreement on that and there
+are difficulties in reaching that agreement. There's work to be done there. On macroprudential, we need more research
+and more confidence. Unlearning which measures work and which measures don't. In the same area, it's important to ensure
+that coordination among different regulators of the financial system
+is effective. We'll be effective in
+the event of a crisis. On too big to fail. There's a lot of
+progress being made. I'm sometimes asked, have we put an end
+too big to fail? Well, my attitude to that is
+we will never know except when we know that we haven't. Because you can go for 40 years as the United States did
+without a big bank failing. It doesn't mean that it
+won't happen in the future. I would say that we should never allow ourselves to
+be so complacent as to believe that we've put
+an end to too big to fail because if that's what we think, we want, supervise with the
+right degree of caution. We should recognize that
+somebody imperfection that despite some imperfections. This is something on
+which I've changed my mind despite
+some imperfections. The Dodd-Frank Act is
+a major achievement from a distance it
+looked like a big mess. Well, as part of my new job, I actually had to
+read the thing. Well, it's still
+pretty complicated. But it contains a lot of
+very useful legislation, much of which will help
+stabilize the system, some of which is
+more complicated. Well, having said all that, I'm coming to the end. We need always to be aware that the next crisis and
+there will be a crisis, will not be identical
+to the last one. That we need to be vigilant, both in trying to foresee
+the future crises and in trying to prevent them and in not thinking that
+what we're doing now, will deal with all future crises and since somebody would ask me, "Well, what do you think is going to be the source
+of the next crisis?" My guess is that we have made at least progress on how to deal with the shadow banking system and that we're
+going to have to do a lot more work there. If despite all our
+efforts, a crisis happens, we had better be willing and
+prepared to deal with it. Thank you very much. 

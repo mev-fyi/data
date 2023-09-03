@@ -1,0 +1,998 @@
+Ariel Pakes: The way we're
+going to change the problem, you always analyze these
+problems by discrete choice, all the discrete
+choice problems. But if you actually
+look back in economics a little while historically, the same problem was analyzed long time ago and it's was
+called revealed preference. This started with a famous
+article by Samuelson and how therein had a bunch
+of articles on it. This is going to
+take off from that, this is the starting
+point of that. The difference between
+what I'm going to do today and what was done starting with Samuelson is they never worried about
+putting errors and disturbances in the
+thing because they weren't doing empirical work
+at any level that we do. They didn't have the
+data sets we have today, they didn't have computers
+that we have today. What I'm going to do is put errors and the revealed
+preference thing and then show how you estimate given just revealed
+preference type arguments. It's going to matter the
+properties of the errors, just like it does
+in discrete choice, so we're going to have to
+pay attention to that. What you work with
+now is not really a model and there is a
+model, but it isn't. In a sense it's going be
+much more weakly specified in the models you're used to in standard discrete choice. The way it's going to go is the following, it's going to say, "I know what the
+individual chose and I know some other option
+that the individual knew that he could have
+chosen or it could have chosen rather than the one
+it did in fact choose." At the very least, what I'm going to assume is its expected utility or
+expected return from the choice the individual
+made is greater than the expected return from the choice the
+individual didn't make, so that's revealed preference
+and that's all I'm doing. The two things about it, I'm going to have a parameterized
+model for the utility. That difference will be
+positive for some values of the parameter vector and not positive for other values
+of the parameter vector. The true value of the
+parameter vector, we think it's
+positive and that's going to be the information
+content used in estimation. The problem that's
+going to arise, and this is what got the
+econometricians going. Which sometimes I'm
+a fellow traveler, is that if one value of a parameter satisfies
+an inequality, typically values
+close to it will also satisfy the inequality. It's an inequality,
+not inequality. We get estimators
+of sets instead of the set and the
+property of the set is, we know the true parameter,
+at least in the limit. The property of
+the set is we know the true parameter is in that set, and
+that's all we know. It's going to be
+a weaker form of identification
+that formally it's called partial identification. It's been in the literature and the econometric literature
+ask if will for quite a bit. The first time I
+ever saw it was on a paper by Marsha and Andrews
+on production functions, the very famous paper, the first paper on
+simultaneous equations bias was really Marshall and Andrews on production functions. But again, it's only
+recently has been brought to starting to be used and the econometrics
+worked out in detail. I'm going to start
+with an example which is due to a student of mine who's either smart
+enough or stupid enough, depending on how you look at it, to go join a hedge fund afterwards and make
+a lot of money. His name is Michael Cats, and it was in his thesis,
+this is his thesis. He takes what is a real classic problem both in IO by the way and
+in public finance. I start with this
+example because the example
+illustrates very well exactly what's going on in this stuff without
+doing anything formal. I could start with, for example, the paper Ecosport. But then you get to these
+conditions which are right for Econometrica but not the right way to explain
+it to people. I'm going to do it this way, we're going to estimate the cost shoppers assigned to
+going to a supermarket, the drive time cost. It's a problem of big importance
+to public finance also, and you probably
+don't know this but the third biggest expenditure
+category of people is food. What makes sense,
+right? There's housing, I don't know if automobiles
+is greater than food or not, transportation might
+be better than food, but it's a big part
+of the economy. Maybe health, maybe
+I've got this wrong, probably have old data on that, butt it's a big part
+of the economy. The other thing is it influences things like zoning laws. The cost of zoning
+laws are influenced by the cost of driving
+to supermarkets. The benefits of public
+transportation programs, Bart in Berkeley and the new one they're trying
+to put in California, it's all depends on these
+costs of transportation time. It's been a problem which has
+typically been proven very difficult to analyze with
+standard discrete choice. The reason is the
+bundle of goods, they're just too many
+possible bundles of goods. There are every
+bundle, every choice, every bundle of goods that every supermarket that the
+guy can drive to, that's just too big a
+choice set to work with. You're going to see one
+of the big advantages of the moment inequality
+approach relative to the standard discrete choice
+approach is a moment in inequality approach you like large choice sets, it's a help. It's not a hindrance,
+is that clear? In standard discrete
+choice it's a hindrance. It's a hindrance just because
+every time you compute, you have to compute all
+the probabilities of all of these many choices. The more choices, the harder the computational problem
+and typically with more choices you're going
+to have more parameters to estimate so it's
+going to hurt you. The way that Michael did this is straight
+from his thesis. Had some input by me but
+mostly it's the thesis, is that it's going to assume
+the following things. The agent's utilities are
+additively separable, they're additive functions
+of an expenditure. The added functions of the
+following three things, the utility from the basket
+of goods guy bought, that's one component utility, and then the dis-utility
+for expenditure on that basket of goods and the dis-utility for
+the drive time, for the hassles of drive time. His decision vector is going
+to consist of two things. It's going to be the
+bundle of goods he bought, which I'm going to call BI, and the store he shopped
+at, which is SI. The utility function is
+going to be additive, ZI are individual
+characteristics, DI is the decision. Utility is broken down into the utility from
+the bundle of goods he bought so each individual, depending on his
+characteristics gets a different utility for the same bundle of
+characteristics and there's a bunch of bundles. That's W, BI, ZI, and theta B. Then there's the expenditure at Bart store for that bundle, which is EBISI, I get a free normalization, everybody remember this, I
+get a free normalization. I'm going to normalize the coefficient of
+expenditure to one. The cost of drive time, the next thing is
+the drive time DT, drive time for the individual
+to go to store SI when the individualized
+characteristics ZI where that ZI is where he lives, among the things that
+ZI is where he lives. The only thing that's
+normalized here so far is E, it's expenditure,
+I've normalized the coefficient of that to one. What that means is that the cost of drive time
+is in terms of dollars, dollar expenditures.
+Anything else. Now let me look back to what
+you would have to do in a standard discrete
+choice model for this, to show you why we think
+about moment inequalities. There are two forms
+of the standard discrete choice model that you could use on this. If you are doing it seriously you could say there
+are two approaches. I could assume a
+standard approach would be full information, so what's the full
+information say? Each agent knows the prices of all goods at
+all supermarkets. Matt pretends he goes
+to each supermarket, maximizes respect to the
+bundle with the price of that, chooses a bundle and then doesn't maximum
+over the bundles. Is that clear? That's what
+the standard model would say. If you think of
+what's going on here, this has two problems. Both a behavior on a
+computational problem. First of all, it endows the individual with an incredible
+amount of information. He knows the prices of
+each bundle at each store, at each particular
+product at each store. Then he's able to do pretty good
+computation abilities because he's able to
+maximize at each one of these stores over
+this whole bundle and get the right thing,
+so that's the first thing. Secondly, computationally it's horrendous because if
+you thought of it, you would have to
+go to each store, maximize over the bundle
+on the store and if it was fine enough grid of
+the things you bought, it'd be pretty difficult. Then you have to
+maximize over the stores and then estimate from just the maximum over the stores
+and the optimal bundle. That's one way of
+going about it, it's computationally hard, it has assumptions which
+probably aren't believable. It's another way
+of looking at it, which is probably more
+realistic behaviorally anyway. Which says, look,
+what I'm going to do is in the first period the agent chooses
+which store to travel to and he doesn't have to
+know everything at the store. He has some perception of what prices and characteristics
+of the store are and he chooses
+which store to go to. Perhaps not with correct
+expectations yet, but he has his own perceptions. Then the second agent
+goes to the store, sees the bundles and the
+prices perhaps and chooses. That's a different
+behavioral model. It gets rid of the problem of assuming the behavioral
+problem in some sense. It gets rid of the problem of assuming the agent
+knows everything, everywhere and always can
+maximize exactly right, we got rid of that problem. But for the econometrician, it added a problem because I
+have to be able to specify what agent's prior distribution
+was over the stores. Is that clear? That's precisely the kind of information
+we never have. We never ask agents what was your prior
+distribution of prices at Walmart or prices
+or anything else. It does get rid of the
+behavioral problem but it changes it to a
+specification problem. How do I specify this prior? What does it condition on? It actually makes the
+computational problem much more difficult
+because now what I have to do is if you give me
+a specification for the agents prior for
+every price vector, I have to compute the optimal
+bundle and then integrate out the expectation to
+get expected utility. It actually makes the problem more difficult from a
+computational point of view. Let me say it's not like this problem hasn't
+been estimated before. It's like there
+has been a lot of work on these problems. The way to look at
+the work that's been done is they're providing you with descriptive
+summary statistics and that I can write down as
+a discrete choice model. The reason I'm not
+doing that is I actually want to know
+a structural parameter because I want to
+do counterfactuals. I want to know what would happen if we built
+a subway system. Just what they're
+going to get from the summary
+descriptive statistics which I'll explain in
+a second is not bad. It may be a step in
+getting towards that by projecting stuff down onto observables and
+making you think, well, this has to
+be in the right model and stuff like that. That's a good way to start
+doing empirical production, don't get me wrong, but it's not going to get you the
+structural parameters. The way this is typical done, has been done is you group choices into
+basket of goods somehow, usually by expenditure level. You say if people are going
+to spend this much money, they're going to buy
+this expenditure, I can see in the data
+what people bought, that kind of money
+bought, is that clear? Then I'm going to have
+some specification for that expenditure level, regress it on observables
+of some kind, like prices and stuff, your family characteristics
+and stuff like that and then evaluate the possible basket
+of different stores. What it will say, here's
+what you're going to buy, everybody in this
+expenditure class buys this, or at least everybody
+with your ZI in this expenditure
+class buys this. What I'm going to do is
+I'm going to figure out at the various stores
+that you can shop doing some reasonable distance
+around your house, what does that cost there and
+what does that cost there, that same thing, and I'm going
+to choose where you buy. That's what goes on. Translating it, that's already back into discrete
+choice framework. I do the projection,
+all I have to do to move back to that is I have to make an assumption on the error distribution so I
+can get to discrete choice. I'm just going to project
+these utilities from buying this bundle at this store
+at this expenditure class, down again stuff and there's
+going to be residual. I'm going to assume
+that residual has a normal distribution or extreme value type to
+this, whatever you want. You go ahead and do the
+standard discrete choice. There are two
+problems with this. One is the one I
+already explained, that's the one that
+really motivated me which is it's not a
+structural parameter. I'll show you when they
+do this the kind of numbers they get and you'll know that it's not a
+structural parameter by just looking at the numbers. Then if you're really just doing this summary statistics stuff which I firmly believe in and I always start my research
+projects doing that, it's not clear when you put
+something more fancy in it like you put random coefficients on the prices, what
+are you doing? It's no longer a simple
+summary statistic and it's not the
+structural model. What are you estimating?
+Why would you ever do that? Is that clear? It's not
+helping you either way. Now I'm going to say
+my general thing is you shouldn't get
+around the people that do. You got to do something. Somebody is going to make
+decisions on whether we have Bart or whether we
+have an LA subway. It's not clear they're
+just doing this, this stuff doesn't
+do better than the guy with an intuition
+somewhere sitting in some office somewhere who probably doesn't
+have your education. I don't want to
+belittle it but clearly there's a sense in which it doesn't get
+where we want to go. Now I'm going to give
+you the revealed preference analog of this. All I'm going to do is
+I'm going to compare the utility individual got from the choice the individual made to that of an alternative. I know it was feasible to
+him when he went there, her or him or it when
+they made that choice. The real question here and
+the most important thing is, what alternative am I
+going to compare it to? Is that clear? Because I said already there's millions of alternatives
+out there for this guy, different bundles at
+different stores, you could do whatever
+you want. Is that clear? I could compare any
+two alternatives. The way you choose
+the alternative is analogous as to the
+sample design problem. If you had your choice
+of sample among all these samples which are all the alternatives,
+which one would you choose? It's very clear here. The answer to that
+of course depends on what you're interested
+in estimating. You want to choose
+an alternative that gives you a very clean look at the thing you're
+trying to estimate. My interest is in analyzing
+the cost of drive time or Michael's interests was in analyzing the cost
+of drive time. What's the alternative
+I'm going to do? I'm going to hold
+the basket constant. I'm going to say, you
+could have bought the same basket at
+a different store. I'm going to get
+the difference in utility from buying this basket at this store and this basket
+at the different store. Is that clear? That's going difference
+out the effect of the basket of goods
+which is what's causing me the problem because
+it's the thing that's multi-dimensional.
+Is that clear? It's the thing that I don't know expectations about
+and all of this. Now, you can say, well, if he would've went to the other store he would have bought another basket of goods because there are
+different prices, but he chose this store. In expectation at least he thought what he could
+buy at the store was better than what he could
+buy at that store and what he could buy
+at that store has always got to be better
+than if I force him to buy the bundle he
+bought at the first store. By transitivity of preferences, I keep the inequality. That's not an issue,
+it's just transitivity. The one I'm going
+to go first with, is he's going to buy
+exactly the same basket of goods at a store
+which is further away from him than the
+store where he bought at. That's one option to me. I'll look for a store that's
+further away and come back. The big advantage of this
+alternative is if I do that I'm never going
+to need to estimate W which is the complex factor. It's just never going
+to have to happen. Two other things
+you should notice is I didn't have to specify
+the whole choice set, it just doesn't matter. I need one feasible alternative and that's often a very
+difficult thing to do. Two, the alternative choice can differ with
+different agents. For every agent I'm going to look at an alternative
+that's different. If you went to this
+store and this store is farther away from you,
+that's the alternative. If you went to that
+store that lives, I'm going to look for one yet farther away from that store. I get to choose a
+different alternative for every agent. That's
+going to help me. Now I'm going to do some algebra to show you how this works. I'm going to
+introduce two things. I'm going to introduce
+this expectation operator. This expectation operator
+is the agent's perceptions. It has nothing to
+do with reality. In fact, he could be wrong. I haven't told you if
+he's wrong or right, people can make errors. This expectation operator is the agent's expectation
+conditional on what the agent knows when
+he makes his decision. Just for notational, instead
+of carrying around f of xd or the utility from x and d and the utility
+from x and d prime, I'm just going to write
+always Delta fx dd prime. Take any function f, the difference between
+its evaluation of x and d and x and d prime
+will be Delta fx d prime. That's the notational stuff. By the way, questions are fine. For every individual's di, I've just specified a d prime. That is what my
+alternative, is my d prime. It's a function of di and zi. The only thing I need to
+insure about that is it was feasible when the agent
+chose what he did choose, it was feasible for him to choose this alternative thing. Now I'm going to say my
+behavioral assumption is with the agent's
+expectation operator which again need not be right, he expected the
+utility from what he did choose to be greater than the utility from what he didn't
+choose which is d prime. The expectation is conditional
+on what the agent knew, script ji and not Cal ji is the agent's
+information set when he made his decision. What he's conditioning on. If you write that
+down and just do it, the W is different, because he's buying exactly the same
+bundle of the two goods. Remember, the utility
+function was, where was the utility function? Am I going the wrong way? No. This is the
+utility function. If I take the
+difference between di and d prime where
+WBI is the same, the W just falls out and I'm left with the differences in expenditures and the
+differences in dive times. What I know is that at least in expectation, the agents expectation
+is that difference is positive at the true
+value of Theta. I have not assumed the
+agents perceptions on prices are correct. I will need something,
+but I won't need that. The big advantage of this is so far and I never will have to, I don't have to specify what the agents prior is or
+what the conditions are. There's that specification
+problem in the other way of doing uncertainty and I've
+just gotten rid of that. Now I'm going to look
+at the inequalities I get in how I estimate it. I'm going to look at
+two different cases. One case is where Theta I
+is constant for everybody. I'm making it simple. In fact, in the paper, Theta I equals x, ZI Beta plus an error. Is that clear? I could
+put in ZI Beta here. But what I want to do is say, the only determinants
+of drive time, the cost of drive time,
+or observable things. There's no error. That's case 1. It wouldn't matter. I
+could put in ZI beta here, and that wouldn't be a problem. But it wouldn't be a problem. Let's do that for a second. Let's say Theta I
+equals Theta 0. Now here's what I need
+for this to work. Actually, I need
+weaker than this, but this is easiest
+way to show it. I need to say that, look, here's my average expenditure
+difference over people. I just take the
+average expenditure, there's a difference
+in expenditure agent I from D to D prime, which I can compute because
+I know what bundle he bought and I can just compute the cost of that bundle
+at the other store. Then I'm going to take the
+average of that over agents. What I'm going to assume
+is the average of the expectations equals the
+average of the realizations. So people aren't consistently
+wrong. Is that clear? I need something for behavioral assumption and that's it. Actually I need
+weaker than that. But for this, I'm
+going to go with this. Similarly, agents average
+expectation of drive time is equal to the
+empirical average of drive time. Everybody with me? People can make errors, they just can't be
+consistent errors. My notation P is
+convergence in probability. Let's assume that's true. I know that given that Theta I equals Theta node for the same Theta
+for everybody, I know that holds for everybody. If I take the average of that equation on the
+top over people, it's the same as putting in the average of the realizations. Because I said the average of the expectations equals the
+average of the realizations. That just, the things
+on the right hand, the average of expenditure
+divided by the average of drive time is less than or
+equal to the mean Theta, that Theta that
+I'm trying to get. Just take it over. Is
+everybody with me? That gives me a lower
+bound for Theta. Is that clear? My only assumption is that these averages converge
+to the right thing. If I would have taken an
+alternative which was closer to the individual and set an alternative that
+was farther away, I would have gotten an
+upper bound for Theta. You can do it in your free time. In fact, what I've got from these things by just
+looking at three averages. Let me finish. I get upper and lower bounds
+for Theta. Go ahead. UNKNOWN_1: [inaudible]. Ariel Pakes: It will
+violate this one, but it won't violate one with Theta I, which I'm
+getting to next. What you're saying
+is the ratio of drive time to price is
+different for different people. What I'm going to say is yeah, I'm not going to do that case, and it's going to be fine. Remember, I'm giving you the same bundle of goods
+at the same store, you should think
+of that actually is the same store also. The same kind of store. In the W will be stuff
+that relates to the store. I will come back to that. But this really is a trade-off. You're trying to hold
+all of that constant, the type of store, and all of that constant. You want to look
+at the trade-off between drive time
+and expenditure. I'll show you later that you
+can actually do tests of that if you've got enough
+of it, enough of Theta. In fact, I'll show
+you in a second. But you're right. You'll see, I'll come back to this several
+times during the talk. The problem with this is the amount of heterogeneity
+you can allow, and I will come back to this several times during the talk. That's one case. In that case, we start out with Theta equal,
+the same for everybody. Let's now say Theta
+is different for everybody. Everybody with me? Theta I equals Theta 0 plus nu I and I'm going to let
+Theta 0 will be the mean. By construction, the
+sum of Nu I is 0. That's the definition of Theta. The general case would be Theta I equals ZI
+Beta z plus Nu I. This is exactly what we did in the random
+coefficients model. The nu I is the sources that
+aren't picked up by the Z. But there's going to be
+a difference because I don't need to make
+the same assumptions you may have to
+make and standard discrete choice on the
+nu I distributions. The Nu I, we then
+made an assumption on the Nu I
+distribution like BLP. We integrated them out with that distribution. I'm not
+going to do that here. In particular, I
+can always do this and make sure that Nu I is uncorrelated with
+Z by construction, by definition of Beta I. But it may not be mean independent of Z and it might
+not be independent of Z, just the correlation is 0. All of those things that
+you're putting on when you do discrete choice, those
+are assumptions. Now the specification looks at least like the same
+specification of last lecture. Actually, I need
+less on the Nu I. Now what I'm going to do is I'm going to assume say the guy knew drive time, so it was in his
+information set. I can condition on drive time. That's something which maybe
+it varies a little bit, but it's pretty well
+known to the guy. Now my inequality is this, the expected expenditure change
+minus Theta 0 plus nu I. Now, Delta D is got to
+be greater than zero. The only difference between
+this and last time is, instead of Theta 0,
+there is Theta 0 plus Nu I, anybody with me? Now divide by Delta t.
+Remember Delta T is negative, so it's going to change the
+sign of the inequalities. It's the difference between
+the drive time to the store. I went to the driver's
+side that's farther away. I'm going to change
+the inequalities. I'm going to get this
+inequality here. I've done nothing but separate
+divide. Is that clear? I'm going to assume
+again that I know dt and the average of the
+expenditures are right. The perceived expected
+expenditure, is that clear? Is on average right. You can make errors but the
+probabilities converge, the means converge
+to the right thing. Then I can average
+this right-hand side. It has to be less than or equal to the average of
+the right-hand side. The average of the
+right-hand side is Theta 0 by definition. Now I've got my lower
+bound for Theta bar, and now I've allowed
+for heterogeneity. I haven't had any
+specification for its form. If I did it the other way, if I got somebody closer to me, I'd get a Theta upper bar
+and I get two bounds. You should keep in mind
+a couple of things about this because it's going to determine when this is
+particularly useful. I didn't have to assume
+anything on the Nu I. The Nu I's could be correlated with x's there is that it just doesn't matter for this. When you do discrete choice, some people do it
+non-parametrically. But they always assume
+that the Nu I's are independent of
+the X's and Z's. When is that likely
+to be important? Think of buying a
+durable good like a car, and now what we're going
+to say it's durable, we're really going
+to worry about it. Last hour-and-a-half,
+it wasn't durable, but it became durable on
+this hour-and-a-half, magic, I'm good at determining what the world looks like. There's certain economists
+that I think are like this, which is like, I won't tell you who I said this joke
+too, but it's like. The world isn't like the model, change the world, which
+is what I just did. In the thing where you're doing electrical appliances
+or an air conditioner, there's usually
+also an efficiency. There's the amount
+you're going to use it, and there's an
+efficiency character. It's miles per gallon or it's
+BTUs per air conditioner. There's a new eye on something like the quality of
+the air conditioner. There's going to be also in there how much you use the air-conditioner
+where you live, Florida for that matter. You're assuming that your
+distribution for the new eye, which is the quality
+of air conditioner, is independent of how important the air
+conditioner is for me, whether you live
+in Florida or not. Is that clear? That's
+a lousy assumption. Exactly. We didn't make
+that assumption here. There was no need to assume anything about the distribution, the relationship of
+new items z or x. It's a mean that we're getting. That's one place where this
+is actually very useful. The flip side of this is so far, I've only gotten you the mean of new and not
+the whole distribution. Is that clear? I'd
+actually have to make some set of assumptions
+to get more than the mean, and I haven't told
+you any of those yet. I'll tell you what
+Michael does in a second. Two other points. Case
+1 versus Case 2 again. Case 1 was the case where there
+was no head or unobserved heterogeneity in the coefficient and Case 2 is when there is totally free unobserved heterogeneity in
+the coefficient. What's the difference
+between them? The difference between
+them is, in Case 1, I get the estimates by
+a ratio of two means. That's the estimate
+up on the board. Case 2, the only difference
+is I get the estimate by, whoops, why am I doing this? I get the estimate by the mean of the ratio instead of
+the ratio of the means. That's the only
+difference. These are trivially easy to compute. You just take the
+means. One time it's the ratio of the means, the other time it's the
+mean of the ratios. If the unobserved new eyes really are correlated with
+something else in the model, then these two things should differ because the first
+one will be wrong. If there's unobserved
+new eyes which are important and are
+correlated with things, then you should see
+the first thing is wrong and the second
+thing should be different. If the new eye isn't important or isn't
+correlated with things, they should be the same.
+Pam, you had a question? Here's the empirical results. It was done with the
+Nielsen Home Scan panel. This is the same Home Scan panel that we talked about before. Everybody should do this, I forced my students to do this, is you compare it
+to the best thing available before he did this, just to see what was happening. What he did is he did what
+everybody else was doing. Was he did a multinomial
+model where he divides the observations
+into expenditure classes, I can't remember what
+the classes are there, about 16 other might think, and then uses a typical
+expenditure bundle for that plot class to form
+the expenditure level. There's means and then you find typical expenditure
+in that class, and you find the price of that expenditure at
+different supermarkets. That's my price, that's my expenditure bundle or my price. The other x's he puts
+in the model are drive times store
+characteristics and individual characteristics. Some interact, a lot of them, 40 or 60 of them,
+I can't remember. It's a big panel. There's
+problems with this. Because what's going on
+is you might expect, first of all, there's
+probably an error in price. This is not the relevant
+price for the individual. The relevant price
+of the individual is the price for the
+basket it bought. Is that clear? You
+expect an individual to go to the stores where the things it bought
+are relatively cheap. You expect the error
+in price to be correlated with the error in. It assumes the agent
+knew the goods that were available
+in the store and their prices exactly when they decided which
+store to go to. This is a full information
+model type of thing. It doesn't allow for heterogeneity in the effects
+of drive time at all. I could allow for heterogeneity and the effects of drive time, but then I'd have to
+do a specification for the distribution of the
+drive time heterogeneity, and we're worried about it being correlated
+with other things, where you live and
+stuff like that. Where you live is correlated with your income
+and stuff like that. These are the summary statistics that I talked about before. That's really what
+discrete choice is doing in this complicated ML, Is giving you a set of
+summary statistics. The way he does it, he allows the drive
+time coefficients to vary with household
+characteristics, and then he focuses on the average of the drive
+time coefficients for median characteristics
+because he has a lot of different
+things, different stuff. There's about 40 coefficients, including things
+like chain dummies, Whole Foods, Walmart, so we look for this
+whole foods store, it's farther away from here. Chain, outlet size
+employees and entities, all sorts of stuff, are these 40 coefficients that he's estimating along with the w's. He asked me that
+multinomial model and its mean cost of drive
+time per hour was $240. This was Massachusetts. Even in Massachusetts,
+relatively wealthy state, you'd worry about that. The median wage in Massachusetts was at
+the time $17 an hour. People really don't
+like driving. It's like four days of work. They're willing to give
+up for an hour driving. It's something on that
+order of magnitude. Several coefficients
+have the wrong time. You don't like to be near subway stop and stuff like that. The inequality estimators were obtained from the following. To do the inequality estimate, I have to specify
+the alternatives. He took four alternatives, one store that was further away, on store that was closer to, one store whose prices were
+typically a lot higher, and one store whose prices
+were typically lower. I did an average bundle and I figured out the prices
+of the various thing. He also interacted
+with instruments. These inequalities, they're
+not the only inequalities I could get conditional because
+I have this expectation. The expectation of the
+difference conditional on JI and there's
+information set to zero. Any function, any positive
+valued function of the things that the
+guy knew when he made his decision could hit this inequality should
+still be positive. You multiply a positive
+number by a positive number, you get another positive
+number. Is that clear? What you need for an
+instrument is it has to be known to the agent when
+he made his decision. He could condition on it
+when he made his decision. If there's an unobservable
+that the agent knows, it has to be
+uncorrelated with it, and it has to be non-negative. You have to transform it
+somehow so it's non-negative. Because you multiply
+a positive number by a negative number, you get a negative number, and we want to keep
+everything positive. This is just saying
+what you need. If you have those conditions for this one and you multiply each agents at ratio by h of xi, you still get an inequality. Is that clear? Because hx times
+new i is mean zero, so it'll converge to zero. I'll get hx times Theta. I should have had Hx in the
+denominator as well as in. There's a typo here.
+Modulus and typo, I get a lower bound,
+and now we get an upper bound. You go ahead. That's, already in the model. I don't remember what
+instruments he used. I got to admit. I don't remember what
+instruments you use. They seemed okay to
+everybody on the market. That wasn't a problem. I really don't know.
+I can't remember. But it's the same issues that you always
+have with insulin. It's easier actually.
+Actually it's important. One of the real problems
+with discrete choice, and I'll get back to this, is it can't handle errors and
+right-hand side variables. That's the problem with the
+expectational stuff as well. We'll come back to
+this in a second. This can handle errors and right-hand side
+variables because all you're really doing
+is you're averaging. As long as the error
+averages is to zero. When can't you handle an error? When the air enters into
+a non-linear function and I have to integrate
+out the error and I don't know the whole
+distribution of the error. I've changed this so that all the functions that I'm
+doing, it's discrete choice. But all the functions and I'm
+averaging out our linear. I've gotten rid of that problem. You're back to exactly, this is discrete choice, but you're back
+to the instrument problem in linear problems. It's exactly the instrument
+problem that you know it's dear to your
+heart and you learn to an undergraduate and
+graduate school. It has to be in the
+agent's information set and then it has to
+be uncorrelated with the error term.
+That's what you need. We can evaluate it. I really don't remember what Michael did, but that's what you need. You can't hurt you. It benefits me because when I
+have more choices, I can do the sample
+design part easier. I can find a choice was
+just differences out the right thing and keeps
+everything else the same. That's the only
+place that often. When cats did this, he ended up getting,
+so it should be a set. In principle, if you've got
+the specification right. If one theta satisfies them all, probably more than one it's
+nice to have them all. In fact, you didn't get
+a said he got a point. The bounds intersected one side and one went
+on the other side. That's when you get a
+point. You'll see I'm going to go over estimation
+right now how you do this. Let me say right now
+when you get a point, when you have many inequalities, there's good reasons to expect you get a point
+instead of a set, even if the truth is a set. Let me tell you why and
+then I'll come back to it. Just think of your
+estimating one parameter, and say I have
+many inequalities, so I have many upper bounds and lower bounds
+for that parameter. Because I have one for each of these HX is that I put up there. There we are. If I put up a
+bunch of HX is like that. I have a bunch of inequalities
+for a lower bound. What the computer is going to do is you're going to ask it for the greatest lower bound because I want
+the smallest set. I'm going to take the
+greatest of those. Then I'm going to look
+for an upper bounding. For the upper
+bound, I'm going to take the least upper
+bound because there's many of those and
+I want to get the smallest interval I can. An infinite samples,
+that would be the right thing to do. But in finite samples, it means have a
+normal distribution. In finite sample rate, it does have a normal distribution. If I take the least upper bound, I'm going to get a
+bias to the left, because I'm taking
+the smallest one and the smallest one on average. We'll have a negative
+realization around the mean. If you're going to
+push it to one side, and if you do it with
+the upper bound and take the maximum upper
+bound, on average, you're going to get
+a positive bias from the maximum because you're taking the biggest
+or the upper bound the biggest will have
+a positive bias. They can easily cross. Just go to the computer and do this with the right model, and have five or six. Then do it with normal
+sample size, it'll cross. You can prove that
+they'll cross with enough inequalities. They have to,
+because it's normal and they have full support. Of course, they could also cross
+because the model is wrong. There's a real problem of
+distinguishing why they cross. Do they cross, because it's
+sampling error of this form? Or is it because
+the model is wrong? I'm going to show you how
+to fix that in a second, how to test for
+that in a second. The reason for this
+introduction now is that Michael
+actually find points. I had to explain why
+he finds points. He did the two ways. We did Theta equals
+Theta naught. Everybody gets the same way. He gets $4 an hour. That's the ratio of the means. When he does the
+means of the ratios, the average was $14 an hour, a little bit less than the
+median wage in Massachusetts. People would prefer to drive around with
+their kid in the car, then maybe they wouldn't,
+at least on average. They preferred it a little bit more than going to
+work for an hour, but they don't like
+driving very much. What he did then as he went and did all these
+counterfactuals, which I'm not going to go over, what he did is for
+every class of people, for every set of Z and Xs. He then put it in the
+median and then found out the impact of zoning
+laws and stuff like that across the thing.
+I'm not going to do that. But now I hope I've
+given you enough so that you at least a
+little bit interested. What I'm going to do now is I'm going to tell you how you estimate things
+subject to sets, at least I'm going to give
+you an overview of that. Then I'm going to go back and compare the assumptions under the revealed preference approach to the assumptions under the standard discrete
+choice approach, once more had to leave
+you at the end with. I'll also tell you
+what we don't know. Which is a lot. First of all, let me introduce you to
+estimation and testing. This is not really my work. It's the first paper really on this was gender
+through [inaudible] and tamer, first modern paper
+in Econometrica. There's a more than I'm going to do here is in the Andrews
+and Sarah's articles. There's a lot of articles and some
+of them are cited here that are doing this. This is what econometrics did for living for the
+last couple of years. All I really have is I have differences in utility
+from different choices. I have some instruments. If Michael case, this is a
+vector of four differences, different prices in
+different distances, and then he used
+these instruments. The Kronecker product
+operator just expands it. It says this whole set of
+instruments is against this moment and then this whole same sentence,
+we get this one and so on. What it's doing is it's really
+just a bunch of moments. What we know about
+those moments with theory tells us about
+those moments is that those moments are greater than zero at Theta
+equals Theta naught. I think the thing that
+you have to be very important about the
+model doesn't tell you. For the true Theta, they're more greater than zero, than the other one that bigger, more greater than
+zero is better than less greater than zero.
+It doesn't tell you that. It says, I don't
+really distinguish between Thetas that make
+it bigger than zero. All I know is that Theta
+is bigger than zero. The moment is greater than zero. Every Theta brings you to
+a different moment value. The model doesn't say if I have a Theta brings me to a
+very positive thing, that's a good thing. It
+doesn't say that at all. It just says, all I know is that at the
+true Theta naught, it's positive. That's
+the big difference. Here's my notation. I'm just going to
+take the averages. M(P_n Theta is the
+average in the sample. P_n is empirical
+process and I'll say, but P_n is just the
+distribution of individuals, so it's just one over
+n on each individual. There's a variance
+which is Sigma P_n of these moments
+across individuals. In the population at
+large at every Theta, there also be a moment in the true population if I
+had it in a true variance. What we know is that
+the true Theta naught, the true population is positive. These moments, the
+Theta zeroes at the Theta values that satisfy
+that are all acceptable. That's called the identified
+set by econometricians. Because we can't distinguish between them. They're
+all equally good. For now, I'm going to go
+through the estimator, but just for
+notational simplicity, I'm going to assume that
+the variance covariance is the identity matrix. If you want it to be more efficiently when
+I'm going to do, what you would do is
+divide each moment by an estimate of its variance and then do the
+same thing again, but I'm doing okay,
+but that just complicates the notation
+doesn't change anything. Again, all I want to do is
+I want to choose the Theta that penalizes negative
+values of these moments. I'm going to introduce
+this operator F minus, which for any function F just
+takes the negative part. If f is positive, I give that number zero. If that moment is
+positive, I give it zero. If that moment is
+negative, I keep it. I do this for every moment, in the moments that I'm
+trying to estimate. I now have these moments
+which are right here. For every Theta what I do is I look at this moment
+and if it's positive, I set it to zero, and if
+it's negative, I keep it. Then I find the values that minimize the sum of squares of the negative
+part of the moments. This is just the sum of squares. It's the standard
+Euclidean norm. I'm going to find the value and minimize the negative
+part of the moments. Everybody with me? There's
+two possibilities. One is it's a set of values. Is that clear? There's a set of values that set
+them all to zero. If there's one that sets
+them all to zero it's very likely that there's
+going to be many that set them all to get zero. The other possibility is none
+of them set them to zero. Is that clear? That's Katz's case. Then you get the point that minimizes this just like you do in standard
+estimate norm. That tells you how to estimate. There are lots of
+papers that give convergence to this too in the appropriate norm
+to the true Theta_0. If the model is correct this estimator will converge
+to the true Theta 0 set up there and any suitable
+norm it's two sets. You've got to worry about
+the norm a little bit. That's not an issue. What I want is now measures
+of precision. Now, this is where things get a little bit more
+complicated than usual. It's really not complicated. It's really very simple, but it's different from what you know or different to what you got taught in
+undergraduate school. There are different
+notions of precision here. Remember I have a set estimator. I have to have a
+notion of precision. For example, I could
+give you a set that I know covers the whole true set with probability 95 percent. That's a confident
+set for a set. That's one notion of precision. Another notion of
+precision would be, I'm going to give you
+a set that covers the true point estimate
+with probability 0.95. That is 95 percent of the
+times I draw a sample I'll cover the true Theta naught. That's going to end
+up a different set. It's another notion
+of consistency. Yet a third notion
+of consistency is I might want to look in a
+particular dimension. What do we do typically when you do econometrics and
+you publish a paper? You give a confidence interval for each parameter or a standard error
+for each parameter. Is that clear? I might
+want to do that too. I might want to say, look, I'm going to give you a
+confidential for each parameter. I will cover that parameter
+with 95 percent confidence. I'm not going to do that today. That's in PPHI. The one I'm going to
+do today it's the easiest one and
+actually it's probably the best one in many
+ways except when there's a huge dimensional
+Theta and then it's hard to calculate. I'll show you why in a second. Let me just say there are many ways I'm going to
+give you one that works. It's not the efficient one. There are better
+ways of doing this. But it's the easiest one
+to explain to you guys. The better ways are just
+simple add-ons to this. They're just bells and whistles. If you're interested in doing it in a better way you can look at this Gutenberg and Andrew's
+paper. I don't know. At that time when I published
+it had everything in it. It probably doesn't have
+it anymore. Yeah, shoot. MALE_1: So far you
+haven't said anything about the size of that confidence interval that
+we cover with 95 percent. It could be massive
+or it could be small. Ariel Pakes: Right. I was going to say this at the
+end, but let me say it now. If you have a problem
+where you think an adequate approximation is gotten by standard
+discrete choice, in a way you're
+always going to do better because you
+get point estimates. All I can do is get you maybe
+a narrow interval, maybe. The trade-off isn't that. The trade-off is the
+behavioral assumptions. Because in the discrete
+choice stuff you're making very strong assumptions as you
+go along and this weakens. The size of the
+confidence, well, it depends on how sharp
+your inequalities are. I mean, that's the sample
+design question again. But what I like about
+it, by the way, is it's economics now,
+it's not statistics. It's what's feasible for
+the different people. What can I think through
+that will allow me to pin down a parameter. That's
+right what you're saying. I'm going to tell you
+how to get confidence sets with a point Theta_0. Again, I think this is probably the most sensible
+way of looking at it if you have a small
+dimensional problem. You might also want it
+interval by interval. This is the way it proceeds.
+It's really very simple. In principle, I'm
+going to look at each possible value of Theta in this space and I can compute whether
+I can accept the null that that Theta makes all
+the moments positive. I'm just going to
+do a point-wise. At every point in the space I'm going to look and I'm
+going to do that computation. That works out to be a
+very simple computation. I'll do it for you now. I'm going to look.
+What do I have to? Why is this problematic? It's problematic because I
+have to look at each point. I can't look at each
+point and then continue. I'm going to have to divide
+the space into some grid. Is that clear? To get any precision the grid
+should be pretty precise. If I have 100
+variables to estimate, pretty precise bids
+means if there's 10 points in the grid for Theta_1 and there's 100 Thetas, it's 10-100 grid
+points to evaluate. That's where the problem
+of this comes in. Is that clear? It grows exponentially. But if you have a small problem this is a good way to proceed. How do I find out whether I would accept
+a value of Theta p or not? Theta_p are the
+Thetas in this grid. I've somehow divided the grid. The Theta_ps are the
+Thetas in the script. What's the intuition? The intuition is very clear. For me to accept that, the norm of m Theta_p and
+the norm of the moments when evaluated at that Theta must be within
+sampling error of zero. Because if it is within sampling error of zero, I
+could have accepted it. All of these ones are
+going to be distributed normally with a
+particular variance. Let me just say, what's the problem, I should
+have started with this. The limit distribution of this vector of truncated
+means is not standard. There's no analytic form for it. I want to find out
+the variance of M Theta pn and see if it's
+close enough to zero. Is that clear? That's
+what I want to do. But I don't have a
+distribution for m. It's this truncated
+thing that looks funny. What I got to do is
+I got to find a way of simulating that distribution. Is that clear? I know
+the variance of m Theta, I'm going to keep it fixed. It's a consistent estimator of the variance of that Theta, but I don't really
+know the mean. I want to simulate
+from something. But what I'm going to do is I'm going to assume
+that the mean was really 0 for a second. Say the mean of m
+Theta Pn was 0, pointwise every moment was 0. I'm going to ask the question. If every moment was 0, what would be the critical
+value? That's easy to do. What I do is I take random
+draws from a normal with a mean of 0 and the
+variance covariance there. I'm going to call those
+random draws m twiddle. Just standing or just
+draw from a normal from the computer with
+that variance and that means 0 and I'm going to evaluate If I got
+random draws like that, what would be the value of that? Is that clear? Then I'm going to find out
+what's the critical value of that statistic, 95 percent of the time that statistic is
+less than something. Is that clear? Then I'm going to go
+back to the data, I'm going to say
+what was the value in the data at Theta p, is greater than that
+critical value. If it's greater than
+that critical value, it's not within
+sampling error of 0 if the true mean was 0. Everybody with me?
+What's going on? Now, it's true that, all that reasoning was based on the true mean being
+0. Is that clear? But you can show that
+if the true mean is any positive number, the critical value will
+be less than that. Because you'll just
+be adding something to the Walmart all the time and to get to 0 will be
+easier. Is that clear? Now I have a test which is
+based on the extreme point. I've satisfied the
+criteria that I will for any true mean, which is greater
+than or equal to 0. I will have rejected with
+probability less than 0.05 , so that's the logic. Now there are ways
+to fix this up, and the ways to fix this up
+all have to do with adding positive numbers to the m Theta instead of doing from
+a 0 good distribution, doing from some
+other distribution. Because that'll
+be more powerful, because you will reject more. I'm not going to go, that's
+what the school Goldberger and that's all they're doing. That's how you do
+inference in this thing. If you do this at every point, the points that you can accept, are your estimated
+identified set, the points that you can't accept are thrown out of
+the identified set. You want a confidence interval for a particular parameter. You go to this identified set, you look for the lowest value
+of the parameter that's in identified set and
+the highest side of the identified set, that your confidence
+interval, everybody with me? There's a lot more
+to learn about the statistics of this stuff, but that's the basics and
+it's pretty easy to know. I want to go back to my
+moment inequalities versus standard discrete choice
+of either I'm going to give you your extra 15
+minutes, looks like. I'm going to go a
+moment and course and I want to compare these
+two ways of doing things, just to leave you and
+to tell you also what the reinforce the
+problems with them. Let me just say the
+limits of the moment and inequality and methods are
+really still being exploited, there's an active area of
+research going on now on this. The big advantage is
+it typically requires weaker behavioral
+assumptions and the discrete choice models. I don't need to assume
+full information, people can have expectations. The expectations can be wrong, just not wrong on average. I can have models with uncertainty without specifying
+prior probabilities. That's the important
+point, because we can still do that
+with discrete choice. But you would have to
+specify what the agent new, so you condition your
+prior probabilities and what the probabilities
+condition what the agent new and those are the things
+that we really don't know a hell of a lot about them. The thing I didn't
+emphasize that came up in one of
+the questions was, and it's important in
+many applications, especially this work I'm
+doing with Kate Hoo, is that? The moment and it called
+the only uses averages, so means 0 errors and the right-hand side
+variables don't matter. At least they don't
+affect consistency, and in discrete choice, that's an extremely
+difficult problem. It works out to be an
+extremely difficult problem. I know it's not
+really solved yet and mathematically it's
+an intractable problem. It's called freedom equations of the third kind or
+something like that. It's really difficult
+mathematical problem. The third thing, and
+this has its pros and cons is it doesn't require specification of the
+whole choice set. When you do standard
+discrete choice, you have to specify
+the whole choice. The biggest con about this
+goes back to Pam's question, which is, it has a
+limited ability to handle variables that the agent does not know when it
+makes its decision. I'm sorry, wait a minute, unobservable the agent
+didn't know when he made his decision is just
+going to be averaged out. But if the agent did know it, and it's correlated with
+things, we're in trouble. You can do some things,
+and indeed in this, in this particular example, I showed you two of
+the things you can do. One of the things you
+can do is you can choose the alternative to
+different cells, the unobservable and the
+unobservable in this case is the utility from buying
+any bundle of goods. That's one source
+of unobservable. What we did is we worked out
+an alternative which killed it. That's one thing you can do. The other thing you can
+do in the second case, we had a new line
+and the new line stayed there after
+we differenced. Why were we able to
+get over the new line? Because we said, look, we're
+going to go after the mean, and I'm going to get
+a linear function of new line for every
+person in the sample. If it's a linear function of new line for every
+person in the sample, I'm going to average
+them out and get to the mean. Is that clear? You have to be
+very careful here, you can't drop out people. It can be a different
+alternative for every individual,
+that's fine. But there has to
+be an alternative with the new line and
+for every individual, otherwise you don't get
+the population mean. You get a selected
+sentence mean, you get the sample
+selection problem back. Is that clear? Those are the two ways we did in this one. I want to go now to a more
+general model and tell you what would happen in
+a more general model. The more general model
+is the agent's going to, is going to maximize
+expected utility. The only difference
+between this model and then all I put on the board and worked with is
+now I'm going to put in an epsilon is. A store specific epsilon that the agent knew when the
+agent made its decision. These are expectations now that the agent knew when the
+agent made its decision. Is that clear? But
+I don't observe. This would be a
+model that we will probably all bite
+into because it has the Theta i and it has
+this and when it has different and you can add any
+difference here you want. All I'm doing is I'm saying I'm going to normalize
+each individual, I get normalization, that's
+three for every individual. That's what the
+cardinality does. I just have an expectation. I'm going to make that one, I'm saying this can
+be totally free. There's a theta i, so
+each individual can have its own drive time
+coefficient, and in addition, each individual can
+have an epsilon is that he knew about when he made his
+decision and I didn't. Is that clear? That's the model I think we'd all
+like to work with. Let me just say, and the
+question is where are we on it? Again, a tilde over variable
+here is a random variable, which is even
+random to the agent because the agent
+doesn't know everything. The expenditure and
+the bundle here by are unknown to him when
+he makes his decision. There are now three
+errors in this model. There's the difference
+between the w we actually observe or what the bundle that guy
+actually bought and his expectations. There's the difference
+between expenditures that we actually observe, which is what he
+actually bought and his expectations and then
+there are these errors. The Epsilon choice model, you're shutting down
+these two errors. You're saying they don't exist. Then you're assuming that
+epsilon IS is normal or logit or whatever your
+mission is that clear. Michael's model, what
+he did is he shut down the epsilon
+IS. Is that clear? Assume, this and this and the distribution
+of this for free. That's the trade-off
+that's going on. We'd like a model where
+you could do both. The answer to this is there
+are models like that now, there are two sets that I know of and they
+probably are more than, I don't know if
+they're not published at and people are not letting him out
+yet, just quite yet. Because people don't know exactly how much bigger
+the balance get. It's your question and actually I'm playing
+with that right now. I hate to give you things. It's a different
+estimating equation. It's not just these
+moments. I hate to give you things until I
+know something about it. But if you keep tuned, there's this paper by
+Dick stain Morales and there's the
+tape by Jack and I, which will be coming out soon. They'll tell you how to
+do all of it that way. But right now the status
+is the other one. You get these two choices you should shut these two down here, just not the other one down.
+That's what's going on. 

@@ -1,0 +1,1658 @@
+Taddy: In the last
+session today, Jesse and I are going to
+share the time to talk a little bit about
+applications of the kinds of methods that Matt
+talked about this morning in economics
+and social science. The key thing to keep in mind, I think one of the
+themes of this is these methods are primarily, in the way they've
+been developed, in the main applications,
+primarily about prediction. They're dimension reduction
+algorithms for taking some high-dimensional data and reducing it to a
+lower dimension. Those methods have played
+a relatively small role in economics relative to the role that they've played
+in statistics and other parts of the world, because economics
+tends to be primarily about causal inference and
+less about prediction per se. Part of the theme here is just to get a feel for what are the places where currently and potentially in the future, those predictive
+methods have value. How do people use these things? Tomorrow is really
+going to be devoted to the methods which
+are specific to the case where we want
+to do causal inference, derived from these methods. Chris Hansen will talk tomorrow about those applications. I think, broadly, when are these data mining
+methods used in economics, we could of three
+categories of applications. The first is cases where prediction per se
+is what we want to do. There's, for example,
+a literature on macroeconomic forecasting. Second is cases where describing the relationships
+between the X variables and the Y variables is
+what is of interest. An example is the literature on genetics that
+Matt talked about, where a question of
+interest is just, are there genes that determine
+a particular behavior? Are there genes that determine a particular characteristic? Which genes are those? Describing those relationships. Finally, and this will relate into what
+we talk about tomorrow, we want to take the
+high-dimensional X collapsed to this
+lower-dimensional Z so we can then use Z in
+some subsequent analysis. Include it as a
+control variable, look at it as a
+left-hand side variable, use it as an instrument,
+and so forth. What we want to do
+today is, first, I'm going to give you
+a brief overview of the large data sets that have been used and the applications that
+people have used. Not talking in any detail about the specific methods
+that people have used, that's just a quick overview to give you a flavor for people who haven't
+seen those things. Then we're going to
+spend some time going into some detail about
+one specific application, one specific data source, which is text, and ways in which these methods
+are applied to text and ways that text has been used in social science and economics. I'm going to organize
+this overview in terms of data sources. Examples of high-dimensional
+data that are relevant. One obvious high-dimensional
+data that people have used is web searches. Data from Google, in particular, on
+search behavior. Think about all of the searches that are
+being generated every day. This graph is searches
+from Google trends, searches for the phrase
+big data over time. This data set, typically, we're looking at searches
+grouped in time, time series of searches, or searches grouped
+geographically, and so you can think
+of an observation as the n dimension here is time, or time across geography,
+and the p dimension, which is really big,
+is all possible terms that people could search for. On this day how many people
+searched for big data, how many searched
+for other things. This is searches for
+big data by geography. A lot of people search for
+that in India, it turns out. What are the applications
+potentially of this data and predictive
+methods applied to it? One example that many of
+you are probably familiar with is Google flu trends. Google, in partnership
+with some statisticians, developed a tool
+whose purpose is to predict the outbreak and cause of flu epidemics and the location
+of flu epidemics, so that treatment can be
+targeted and so forth. It turns out that the
+frequency of searches for things like sneezing, flu, shot, flu medication,
+this kind of thing, there are a bunch of
+Google searches that are highly predictive of the outbreak of flu epidemics. The CDC measures those things based on getting
+reports from doctors. Those official
+measurements of flu rates have a long lag and
+these tend to do much better and can
+be much faster. More related to economics. There's some recent
+work by Hal Varian and others looking at predicting, just pure forecasting exercise, can we predict things like
+unemployment, retail sales, consumer confidence,
+etc., from searches? Here, again, we
+measure these things, but we measure them
+in a very costly way with surveys and other things, so that at best we have a small sample of
+people that we're using to measure things at a monthly frequency or
+a quarterly frequency. With the search data, you can fed through a predictive algorithm like the kind of thing that
+Matt was talking about. You can predict these things at a much higher frequency and much higher levels of geography. Those are pure
+predictive applications. Related to that, another
+one of the things in that literature that
+people have tried to forecast are consumer
+confidence numbers. One of the interesting aspects of those papers is this
+descriptive question of, what is consumer
+confidence, actually? What is that survey measure? People go out and ask, how confident are you
+about the economy, what is that really picking up? What is the variation
+that drives that? Looking just descriptively at the search terms
+that predict that, you can see what the predictive algorithm loads on in terms of
+people's searches, and it tends to be a bunch of things about
+basically financial, people's investments
+and financial behavior. If you look at that paper,
+there's some drilling down into what that consumer confidence number might mean. Third, thinking about this data as an input
+to subsequent analysis. An example of that is, something that it's
+hard to measure in the world that we care about for economics is corruption. There are a lot of
+studies of corruption at the country level that are based on surveys where
+people are both asked, how corrupt do you
+think your country is, how long does it take to
+start a new business, how many people do you have
+to bribe, and so forth. We have course country-level
+measures for corruption. We don't have the ability
+to measure corruption. There's no standard data set for corruption at any
+sub-national level. There is a paper
+by [inaudible] and Simonson that observes
+that with such data, basically looking at the of frequency of searches
+for a country's name, along with words
+like corruption, graft, and so forth. You can construct an
+index which is highly correlated with the survey measures at the country level. Looking at the countries
+who are often searched alongside the word corruption turn out to be corrupt on
+the standard measures. You can now apply
+that same algorithm to cities and look at
+frequency of searches for city names
+alongside corruption and construct a variable now where we can
+measure something we couldn't measure before. In that paper they just
+stop at measuring that, but you could imagine now going on and using that to ask, what are the determinants of corruption at the city level? What are the effects of
+corruption at the city level? Another example of this is this Stephens and
+Davidowitz's paper recently using
+searches to measure racial animus predictors, indicators of racism
+at the local level, and ask whether race had
+some effect on voting for Obama in the 2008 election. Google searches is
+one sort of data. The second one that Matt
+talked about is genetic data. I'll go through this quickly,
+because he mentioned it, but this is one of
+the main places where these
+high-dimensional methods have been developed and applied. The left-hand side here is some physical or
+behavioral outcome. The right-hand side are
+all of these snips. The data set here is
+n equals 10,000 and p is something on the
+order of 2.5 million. This is a case where you have more variables than
+you have observations, typically, and we want to
+predict these outcomes. What are applications
+of this in economics? There have been a number
+of papers written applying these methods to look at genetic predictors for
+economically relevant behavior. A lot of them have
+been written by David Cesarini, Dan
+Benjamin, coauthors. They look at to what
+extent are there snips that predict things like risk aversion,
+social preferences, how people make
+financial decisions, political preferences, entrepreneurship, educational
+attainment, and so forth. I would put that, if you
+look at these papers, it's largely in this
+descriptive category, the thing we're
+really interested in, in some sense in
+these papers is, do these things have a
+genetic basis at all? Are there genetic
+predictors of them that that informs us what
+risk aversion is about, how we might want to
+model it, and so forth. You could also think about,
+if you really can measure these genetic characteristics of people then using
+these things as controls and some
+additional analysis. The interesting point
+in this literature, which Matt already mentioned is, it's a fantastic
+example of why we need good statistics and good
+statisticians to tell us how to do this instead of just
+doing it on our own, because this whole
+early wave of research, both a number of the
+papers by economists, but also lots of papers
+by other people, turn out to be largely
+false discovery. There are a huge number of
+published results saying this intelligence
+or risk aversion or various behaviors are correlated with this
+particular gene or that particular gene, and subsequent studies
+that have tried to replicate those
+things have shown basically none of
+them replicate. If you go back and think about, out of your 2.5 million genes, what share of them have a
+true causal relationship, then the p-value that
+you need to apply to have a reasonable
+false discovery rate is incredibly low, and so once you do that power
+calculation it's not at all surprising that
+that's what people found. Another large P data set to think about
+is medical claims. A lot of people who work in the health area have
+used data for Medicare. There's a standard
+workhorse data set and health economics, and the Medicare
+data is basically claimed level data
+from Medicare. There's similar claim level data from other insurers, from
+lots of other sources. Ten years of Medicare
+data is big, it's on the order of 100
+terabytes of data for all of the claims filed for
+Medicare over those periods. It's high-dimensional. A single claim is a
+function of a patient, a doctor, a hospital, how much was paid, and then in particular, what was the treatment given, which is something
+which basically binary indicators for many thousands and thousands of treatments. This is super high
+dimensional data. The question is, how can we
+reduce this dimensionality to small set of variables that we can actually
+apply two models? One of the dimension
+reduction tasks that has played a big role so far is trying to collapse
+all of this data into some single-dimensional
+indicator of people's health or
+predicted spending. Then this is used in lots
+of ways, in lots of papers. Medicare produces risk scores based on not sophisticated
+data mining methods, but a ad hoc criterion, which have some
+statutory meaning, and so they can't
+change very fast, but those are basically
+waiting all of the different treatments you might have had in a
+particular way to try to predict your subsequent
+spending and health. There's a John Hopkins model which is much more
+sophisticated than that. There are lots and lots of these predictive
+algorithms applied to trying to predict people's subsequent
+health care spending. Those variables have been used extensively as inputs into subsequent analysis
+as control variables, as independent variables,
+trust as mediators. Like in this Einav
+Finkelstein study, thinking about the
+risk or as a mediator of which health plan
+you choose to health. How does health
+plan choice differ between healthier people
+and less healthy people? Ben Handel's job market paper. He uses this John Hopkins score as a measure of people's private information
+about health, could see a lot of scope
+here for improving these dimension reduction in these data using more
+sophisticated methods. Very closely-related, also in an insurance context,
+there's credit scoring. Credit scoring is
+another example of taking high-dimensional
+data on all of people's financial behavior and collapsing it into a
+single-dimensional score. This is used for forecasting. Obviously, banks care about
+forecasting default risks. Credit scores have been used as input into lots of analysis. John Levin and Khandani, have a series of papers where
+they look specifically at the proprietary credit
+scoring algorithm used by low-end auto dealer and
+trying to understand how they make money based on having a more sophisticated prediction
+algorithm than others. This Rajan, Seru and Vig
+paper it looks on how, if the market settles
+on a particular way to reduce dimensionality in
+deciding, for example, who to give mortgages to what extent does that
+cause perverse reactions, because people start
+now loading on the things that enter the
+model and loading less on things that don't tend
+to the model and deciding who to give a
+mortgage to or not. Online purchases, obviously, there's a huge amount
+of data mining involved in companies like
+Amazon, Netflix, and eBay. They want to predict who's
+going to buy things, who they should target
+advertising to, and so forth? Matt already talked
+about this a little bit. Netflix had famously applies where people were
+invited to contribute algorithms to predict
+which movies that people would want to buy using
+data mining algorithms. There's this application to congressional roll call votes that might also talked
+about in political science using factor analysis
+to collapse all of the roll call votes
+in low dimensions and ask questions like, is there really just this
+left-right party dimension or are there others?
+Did the others pop up at particular times? How has polarization,
+the extent to which congress is really separated
+along party lines, changed over time and so forth. That's a selective tour of the places where these
+methods have been applied. Now I want to Zoom
+in and talk in particular about the
+application to text. There are lots of data
+sources that have become available with the
+advent of the Internet and a lot of digital
+information, where the data that we get fundamentally comes
+in the form of texts. There's news texts. There's a whole database
+of Google Books, which includes
+basically the text of all books ever written. Content of web pages,
+congressional speeches, corporate filings, Twitter,
+Facebook, and so forth. There are lots of
+other data sets where they don't consist
+exclusively as of text, but text is a part of
+what's in the data. Think about looking
+at eBay listings. They have a lot of metadata, a lot of characteristics
+which are numeric, but there's also a
+description field. Using that description in the analysis is
+potentially valuable. Those medical records
+we talked about, people tend to just use
+the coded numeric fields but if you look at the
+underlying records that hospitals have, those include lots of
+free text fields as well, and there's scope for analyzing that text to add something
+to that analysis. Announcements of central
+banks, so on and so forth. Just a few things to say at a high level about
+text analysis. Then I'm going to turn
+it over to Jesse to talk about some of the
+specific applications. The first thing to know if
+you're new to this is that essentially
+everywhere where text has been used is a data
+source and economics, people represent text
+as a vector of counts, a vector of counts of words, or a vector of
+counts of n-grams, which are basically phrases, one or two or three
+or four words. We take a document
+that looks like that, and we represent it
+as just a vector, how many times did
+each word occur? This picture shows this being
+applied to single words, but you could imagine counting
+sets of two-word phrases. The phrase, beginning
+God would appear once, the phrase God created
+would appear once, the phrase created, thou would
+appear once and so forth. This seems like an incredibly crude representation of text. It ignores grammar,
+it ignores meaning, it ignores the fact that you can use the same word
+in different ways, it ignores the fact that
+putting one sentence before another has a
+different meaning. It ignores punctuation, it seems incredibly crude. The remarkable fact
+in this literature, not only the economics part, but the whole computational
+linguistics literature, is this representation does an incredibly good job of
+capturing the information in the data and when
+people do a lot of work to try to add more
+sophistication to take account of things like, when did you use this word
+in an ironic sense instead of a straightforward sense or which meaning of this
+word we're using, the gain tends to be very small. Practically speaking,
+when people study texts, they studied vectors of
+counts for the most part. A second general point that I want to stress
+throughout this discussion is in the idealized
+world of the statistics. We start with data
+which is n by p, and we use an
+automated algorithm to collapse p into some
+lower dimension. In practice inevitably, what actually happens is we start with a dataset
+that is n by p, where p is really,
+really, really big. The set of all
+variables that we could conceivably use potentially and all of their
+interactions and all of their squared
+terms and all of their set of potential variables is in practice, incredibly big. We always do some first step of reducing that from
+3 million to 3,000 as a manual step using prior information
+and then we apply the automated methods to this collapsed
+version of the data. There's the science
+and there is the art. In any paper that you
+read in this area, there is always a
+substantial amount of, before we did anything else, we threw away a bunch of stuff because we
+thought it would be irrelevant and we threw away a bunch of stuff because
+it occurred rarely, and we threw away a bunch
+of stuff because it was too difficult
+computationally. That's important
+to keep in mind. In the text contexts we see people often drop rare words. There's something
+called stop words, which are standard lists
+of incredibly common words but that also did not have a particularly high ability
+to discriminate meanings. So things like articles and conjunctions that
+we think are not really going to tell
+you somebody's ideology whether they use a lot or not, but they cost your
+computer a lot of time because they occur frequently. There's something
+called stemming, which means combining
+things like economics, economic and economically into one single word because we know those basically
+have the same meaning. If you scrape data from the web, you might want to
+drop all of the HTML because that's not that
+relevant and so forth. The portrait stress is just this is manual steps based on people's priors and
+there's always a back-and-forth between that
+and the automated part. It's also worth noting that
+thus far in economics, the vast majority of work using text doesn't use any automated dimension reduction at all. Most of what people have done is we start with all of the possible
+words that could occur, and we just select
+a subset of them, a very small subset of
+them that we're going to use as an index of the thing that we're
+trying to measure. There's nothing wrong with that. If you have strong priors about what words
+are going to select the documents that
+you're interested in, then this will work much better than some more
+sophisticated methods. In that size and
+assignments and paper I mentioned where they're
+interested in corruption, they don't use any
+automated methods to figure out which
+words are going to best predict best correlate with the corruption index
+at the country level. They just search for country
+name plus corruption. In some of the work
+that Steve Davis has done with Nick Bloom, they want to measure economic
+policy uncertainty over time in the news to
+what extent are there news articles which
+are talking about uncertainty created by the fact that we don't know what the
+government is going to do. They select a set
+of terms, apriori, like economic and policy and uncertainty that
+they think are going to capture that and
+then do some work exposed to validate
+and verify that. In fact, that gives them back
+what they're looking for. There's a contrary paper where they're categorizing
+press releases, speeches from the
+Federal Reserve and they just look explicitly for
+phrases like hawkish, dovish, loose,
+tight, and so forth. That's just to say if you
+look at the literature, and I think this applies
+not only in text but in other places too. This manual approach accounts for a lot of what
+people have done. There are smaller
+number of papers using more
+sophisticated methods. I think the scope for
+more papers to use more sophisticated
+methods is probably high. The final thing
+I'll say and then I'll hand it over to Jesse. Another just detail of the practical implementation of this that becomes very important when you're thinking
+about texts is the representations that Matt talked about all begin from, there's this matrix n by k
+of data x and you have that. In the texts contexts
+that would mean that all of these phrases that you want to count and
+for every document you have counts of all
+of those phrases. It's easy to think about
+what you do in that context. The reality is in many
+of the situations, many of the contexts where
+people actually do this, you don't have access
+to the raw text. You cannot download the full
+matrix of Google searches. You cannot download the full
+text of all newspapers. You cannot download
+the full text of four counts of Google Books, although Google
+Books has made now and full n-gram counts available
+that makes that easier. So in practice, people are often accessing text via
+search interfaces, and that is a
+practical constraint. What that means is
+just you have to use some apriori judgment
+initially to narrow things down to some set of phrases which is small
+enough that you can then run those as automated
+searches and then construct a matrix
+out of those searches. Either doing data
+mining algorithms and some external source
+to try to select what phrases are
+going to matter, or doing it yourself, but this means that the actual analysis of text in many of these
+contracts has to start from a pretty small p. I'll turn it over to Jesse. Jesse: The first set of applications that
+we'll talk about using taxes data all fall under the umbrella of what some people call Sentiment Analysis. This is going to look familiar from some of the stuff that Taddy was talking
+about earlier, the basic template and sentiment analysis
+works like this. We have some outcome
+we care about Y, we have a set of features X, and then we have a data. Usually, we divide
+it into n objects, we'll call training data, and then an n plus first
+object we'll call the target. We're going to have n cases
+where we know both X and Y, then we're going
+to have an n plus first case where we know X, and we want to be able to say
+something about what Y is. The classic example
+are actually a lot of this was developed as the
+context of your spam filter. How does the spam filter work? Basically, you start with a training set of some
+number of emails. Each email is classified
+by some human as either spam or what's
+called an industry ham, which is the opposite of span, that's an email you want. Humans go through any of
+these cases and classify emails as either emails that
+should be passed through to the user or emails that
+should be blocked by filter. After we see these
+entraining cases, some machine is going
+to have to make a decision for the n plus
+first case when that email shows up about whether to deliver that to the
+user or filter it. That's your classic sentiment
+analysis situation. This raises a bunch
+of issues that we're going to need to
+use some combination of judgment and modeling to tackle. First set of issues
+basically boil down to what set of things do
+we include as features. If we're building a spam
+filter, what do we use? Do we use counts of all the different
+words in the emails? Do we use counts of
+all the characters? Do we use the complete
+binary representation of the email to be
+really agnostic, so that X is just
+one of any number of possible binary stored emails
+that can come through? Then conditional on the set of features we're going to pick, we're going to have to
+face the issue that Taddy started with today, which is, how are we going to
+avoid overfitting and finding a really good way
+to predict what spam or what's harm and these
+n training sets and these n training emails that doesn't do a
+good job at all of predicting once we go
+outside the training set? There is over a million words
+depending on exactly who you ask in the English language. If you took an Ascii file
+with 100 principal characters and said what are all the
+possible such Ascii files, there are 95 to the
+100 of those, so being totally agnostic and
+just putting them on our regression model
+is obviously useless. You're going to have to
+find some way to reduce the dimensionality of
+this problem that's just intrinsic to this problem, and that's why this
+problem has been such a good motivation for so much of the literature in machine
+learning on this subject. Today, I'll talk about two applications
+of this approach. I'm going to talk about using this approach to estimate the partisanship
+of the news media, where we're going to turn
+millions of words or phrases into a unidimensional index
+of media slant or bias. I'll talk about some
+applications and financial news where
+we're going to take data from news or chat room discussions
+and classify them as, for example, positive
+or negative or being in disagreement
+versus being in agreement. Then tomorrow, Victorian
+Christian are going to talk about estimating causal
+effects, taking a really, really big dataset
+and collapsing it down into a low-dimensional
+control for endogeneity, where actually a lot of
+the conceptual issues are the same as what
+you've come up with, where you confront
+your spam folder. We're going to use them
+in a different way. Partisanship in the news media. This is a case where there is a social science question or set of social
+science questions like how centrist or
+the news media or the news media to the left
+or to the right of say, the typical American, or what
+are the economic factors? Is it that preferences of
+owners like Rupert Murdoch? Or is it the preferences of consumers like the people
+who watch Fox News that ultimately determine
+how Fox News spins the news? These are social
+science questions. These are questions
+that are not about prediction or machine learning or dimensionality reduction, these are fundamentally
+just questions about the causal structure of
+a variable of interests. The problem is just taking
+Fox News and turning it into a single-dimensional
+index that tells you where Fox News is on some left-right spectrum
+is non-trivial. We need to take all of the different phrases or images or whatever
+other features we care about on Fox News or in the Wall Street Journal
+or The New York Times, and turn that into a number that we know how to do
+social science with. There is basically
+going to be two issues that come up in doing this, one is how are we going to
+construct our training set. That is, how are we going
+to get a set of documents whose partisanship we can consider known to
+the researcher? Are we going to have
+research assistants go through and classify documents? Are we going to run surveys
+of individuals asking them to rate documents or
+rate news outlets or what? Then we're going to confront this issue of dimensionality. What features are we
+going to look at? Are we going to use the
+images of the captions, of the images or phrases
+or words or whatever, and how are we going to have a model that's
+parsimonious, takes those millions of phrases, and throws away most of them to find where the
+strongest signal is? Groseclose and Mylo, which is a very important
+paper in this area, solve both of these
+problems in a creative way. They use as their training
+set the US Congress. What they observe is, well for people in Congress, based on the kinds of
+roll-call vote methods that tidy talked about, we already think we know
+their ideology, that is, we think we can
+array them pretty well on a scale
+from left to right. We obviously know
+their political party, so that's the start and we can probably do even
+better than that. We can easily assign a scalar ideology
+score to members of Congress based on roll-call
+voting, let's call that Y. We can use that ideology score to construct our training
+set because if we can find the features of congressional
+speech that are predictive of a Congress
+person's ideology, we can apply those stats, same logic to the news media and identify features that we can use to array news outlets
+on a left-right spectrum. The next thing that
+they have to do creatively is address the
+problem of dimensionality. They can use all the words and have some giant
+regression model. What they do, going back to what Matt said is the reduced
+dimension by hand, they basically say, well, let's find a feature that's probably used in
+congressional tax is also used in the news media
+that we think is probably diagnostic of the
+speaker's ideology. What they do is they
+look at think tanks which are cited by
+members of Congress and their floor speeches
+and are also cited by news outlets as authoritative
+sources on issues, and they say, well, think tanks because we know that
+some think tanks, so to the right of
+other think tanks, citations to think
+tanks are going to be a good indicator of the
+ideology of the sider. If I tend to cite the
+Heritage Foundation a lot, that probably makes me more right-wing than
+somebody who's citing, I don't know the ACLU a lot or people for the Ethical
+Treatment of Animals. They're using ex-ante criteria and to reduce dimensionality. What do they actually do is one of the things
+I wanted to do is highlight just the
+practical details of how this actually gets done. What they do is they go or they have a
+research assistant go to the searchable index of the congressional record online, which is freely available of
+course anybody can do this, and they execute searches
+for the names of different thing tanks like
+the Brookings Institution. They will search for all
+instances of the phrase Brookings Institution
+and then they'll go and figure out who
+is referencing them. The congressional record,
+just to take a step back, that's a transcript of
+everything that was said in the floor of the
+House and Senate in the US, plus a little bit
+of other stuff. Here's an example of what
+might come up if you search for Brookings Institution
+and the 105th Congress. Here's a speech by Dorgan from North Dakota saying a study by a tax expert at the
+Brookings Institution says, if you have a
+national sales tax, the rates would probably
+be over 30 percent. Dorgan is using
+Brookings Institution as an authority and that
+goes into their dataset. Plop, drop that down
+to your dataset, now you have one
+hit to think tank, Brookings Institution
+Speaker Dorgan. They go into exact thing, the exact same procedure
+with an online index of news media tax then
+count references to the same think tanks
+in the news media. Then they need a
+modeling framework to turn these think-tank
+counts into a number, and so what they do is they take an ideology score for
+every member of Congress, it's called the ADA score, and it goes from
+zero most right-wing to 100 most left-wing, the source of the
+data is not that important for our purposes. For every day, let X be
+an indicator for Senator I setting think tank J
+on occasion T and they model X with a logic
+link to ideology. Everything tank j is going to have an overall
+popularity Alpha, which is going to
+index how often, in general, it's
+going to be spoken. Then it's going to have
+a ideology weight Beta, which tells me how much more often is this think
+tanks cited by people who are more left-wing according
+to this ADA score. Beta is going to tell me the ideological weight
+of the think tank. Then they're going to assume the exact same
+modeling structure is applicable to the news media, and they're going to estimate the Alpha for every think tank, the Beta for every think tank, and the y for every outlet in their dataset of news media
+using maximum likelihood. No penalization necessary
+because they've already reduced
+the dimensionality of the data significantly. In fact, they go further than reducing it
+to the number of think tanks because some
+think tanks are used rarely, they grew about 150 of them into six groups so they end up with 44 think tanks and six groups
+of similar thing texts, which I think they
+call mega think tanks. They have about an opposite, about 500, some observations,
+Members of Congress, less those who never
+cite a think tank, and then they have
+a dimension p, which is about 50 so the number of think
+tanks that they include. From here, they just do on penalized maximum likelihood
+because the dimensionality is small enough to make
+that method credible. What did they find? These are the ADA scores, remember, higher score
+is more liberal. These are the ADA scores
+for some Senators. You have John McCain is to
+the right of our inspectors, to the right of Joe Lieberman. Then these are the ADA scores that they estimate
+for news outlets. Here's the ADA
+score for Fox News. It looks like it's
+somewhere between John McCain and Arlen Specter, and The New York Times
+looks like Joe Lieberman. This is a plot of a
+bunch of their data. What we're doing
+here is plotting the ADA score from high to low, we were rated so that high
+scores go on the left to align with unusual
+left-right notion of the political axis in the US. The Washington Times, which
+is a very republican outlet, are very right-wing, it is all the way on the right here, but the other thing
+that they emphasize about their data is that these news outlets
+are all clustered to the left of that
+Congress people. From a social science
+standpoint is one of the main conclusions
+that they argue in this paper is that
+the news media are centered to the left of the average
+member of Congress. Again, that's a major social
+scientific conclusion that they reach in the paper. Let me pause and
+take a question. Yeah, question. MALE_1: [inaudible] Jesse: The question is, what if the underlying
+factors that caused me to cite a think tank differ between the news media
+and members of Congress. Maybe the news media
+use think tanks to criticize them and members
+of Congress don't. Criticism per se, they actually address in the way
+they construct the data. They actually
+construct noncynical, straightforward references to these think tanks
+as authorities but in general,
+anything that creates a difference between the
+way that these think tanks are cited in Congress
+and the way they're cited by the news
+media means that this modeling approach might not be correct and
+that's going to be a theme through the work
+that I'll talk about next, which is by Matt and me, so it's not specific
+to their paper. You're using the Congress as a training set and so
+that's only valid if the same data-generating process applies to your training
+set as your target. If that's not true,
+then this approach is no longer going to have the nice properties you'd
+like it to have. So it's important for what they're doing and
+what I'll show you. We did that the same data-generating
+process is applicable to both members of Congress
+citing think tanks and outlets in the news
+media citing think tanks. That's a good
+question. To continue a little bit the
+story and show you a different code of the
+same basic problem. We are interested also in constructing an index
+of the partisanship of news media and we did it in a way that involves
+automated feature selection. That's one of the main
+differences between the way we did this and
+Groseclose and Mylo. We had a scripted pipeline, basically a script
+that went online, downloaded the US
+congressional record. Another script that would
+split up the text according to speech and identify who's speaking at every
+point in the text. Then another script
+that would count all two or three
+word phrase is so that for every speaker
+we know how often they use every two or
+three word phrase. Then we're left with
+this big super phrases, like a high-dimensional dataset there and we have to
+reduce it somehow. Just like Groseclose and Mylo, we assign every member of
+Congress an ideology score. In this case, we use the partisanship of
+their constituents, although you can also
+use the ADA score or some other roll-call
+voting based measure, and to reduce the
+dimensionality of the problem, we computed a simple
+frequency table of phrase counts by party and we computed the chi-squared
+statistic for the independence between party
+and the use of a phrase, the same one that
+Taddy defined earlier, and then we identified the 1,000 phrases with the
+highest chi-squared. The 1,000 phrases that in a statistical sense
+are on their own, most diagnostic of
+the speakers party. What does that produce? This is from a leaked
+memo that went out to Republican congressional
+candidates telling them what to say, and it said when you're talking about Social Security reform, never say privatization
+or private accounts. Instead say personalization
+or personal accounts because 2/3 of America wants to personalize Social Security, but only 1/3 want
+the privatize it. Why? Personalizing
+social security suggests ownership
+and control over your retirement savings
+while privatizing it suggests a profit motive
+in winners and losers. Republicans had decided
+strategically to use the phrase
+personal accounts and issue the phrase
+private accounts and actually that shows up
+very clearly in the data. Personal accounts are used 48 times by Democrats in 2005, but 184 times by Republicans. Private accounts are
+used 542 times by Democrats and only five times by Republican. What does that mean? That means if you
+tell me nothing else about a speaker except that that person said
+private accounts at some point in 2005, I'm pretty much know that
+person is a Democrat. Indeed, when we
+construct our list of the most partisan two
+or three-word phrases, the phrase private
+accounts jumps to the top of the list as the most partisan democratic two-word phrase in the dataset. Likewise, on other topics, Republicans talk about
+the war on terror, Democrats talked about
+the war in Iraq, Republicans talked about the
+death tax and tax relief, Democrats talk about tax breaks and tax cuts for the wealthy. Then after we identified our set of the 1,000 most
+diagnostic phrases, we were able to count
+them in newspapers using the same search interface
+that Matt talked about. Here, we're searching on
+newslibrary.com for the phrase personal retirement account in The Washington Times and
+what we find is that, I don't know if this is
+too light to see it, but you can see right down here it tells us
+the number of hits, so our little script goes
+and grabs that number. There are 54 references to personal retirement
+account and the Washington Times in 2005 and we move on to
+our next search, similarly using
+other interfaces. Indeed it turns out
+phrases like this are used in the news media in a way that is consistent with our intuitions about the
+partisanship of the outlets. Here's the Washington
+Post talking about Bush's private accounts
+and on the exact same day, the more conservative
+Washington Times talking about personal accounts,
+June 23rd, 2005. Then just like Groseclose and Mylo, we write down a model, in this case a linear
+model that relates how often I use a given
+phrase to my ideology and we can estimate the intercept and the slope in that model using data from the Congress where we know the speakers ideology and then apply the same model to infer the ideology of newspapers. This linear model is called
+marginal regression, sometimes also known as the first partial least
+squares direction. We didn't know any of
+that when we did this, but now, thanks to
+Taddy, we do now. This is a well-known procedure that's been out there
+for awhile and it's basically just a way to
+construct a linear index of your Xs that tries to hit
+your Y as best as possible. When we do that, we get an index which we
+call the slant index, which are raised
+newspapers from left to right and we went and tried to validate that
+against other sources. Here's the scatter plot
+of our slant index against survey results from a website called the Mondo Times where users went online
+and rated news outlets as conservative or liberal and there's some positive
+correlation there. That raises a good
+question, which is, once you do something like this, how do you know if it's working? How do you know if it's doing
+what you want it to do? Obviously, for Congress, the answer to that question
+is easy in some sense, we can go and do out-of-sample validation to see
+if it's working, Getting us what we want
+for members of Congress. Is it doing a good job
+of predicting, say, that roll call voting,
+but for news outlets, we don't have an analog
+of their roll-call vote. So we have to come up
+with other ways to try to see whether what we're
+getting makes sense. One way is what I showed you, which is look for external sources that
+have rated news outlets. Another way is to look at the lexical content of the
+phrases themselves and say, do these phrases actually
+seem to correspond to partisan or ideological
+issues the way I'd like. Just like with any research, you want to do
+sensitivity analysis, change how you're
+measuring your Y, or change the set of phrases that are in
+your axis and make sure you're not seeing
+explosive sensitivity to small changes in your design. Look for agreement across
+different sources, so we had a couple of
+different sources for news text and we
+went and checked that they were
+basically giving us similar or very highly
+correlated results. Then of course, the last
+thing you definitely want to spend some time doing is
+looking at the newspapers. Look at the text surrounding the uses of these phrases
+that you're finding as highly diagnostic
+and see whether they're being used in the
+way that you think or whether personal accounts
+or private accounts are being used in some
+totally apolitical how to or self-help contexts. Way back in the back
+of our published paper is an audit of a whole bunch of search results where we
+had people go through by hand and classify them. Now that we have a measure, I won't spend most of my time today on
+the social science, but just to highlight
+that these data are not there for them
+just to sit there, but they're there to go and test social science hypotheses. Now that we have a
+measure that tells us for each news outlet to what extent is it's slanting the news to the right
+or to the left. We can go test
+economic hypotheses. We can use it to model
+newspaper ideology and ask questions like, what are the economic
+factor that drive whether a given news outlet
+slats that news to the right or slats
+the news to the left. We can try to assess
+questions like, to what extent are news outlets responding to their consumers? Or to what extent is our
+ideology associated with the political affiliations of their owners and what have you. Let me give you one example of a somewhat substantive
+result from the paper, which is that the slant index is very positively correlated with the political orientation of
+the news outlets audience. If I'm in a Republican market, I covered the news in
+a more republican way. This is the Y-axis here
+is purely based on taxed. The X-axis here is based on voting in
+presidential elections, and indeed there is a
+positive correlation. Now, I don't want
+to belabor this, but I just want to pause
+to mention that we need to keep our social science hats on throughout this exercise. The fact that we use
+some dimensionality reduction method to get this number doesn't tell us that we don't have
+to worry about all of our favorite
+things to worry about, and we look at
+correlations like this. Maybe there's reverse causality. Maybe it's the news
+outlets coverage of the news that's changing
+how people vote or maybe slant is actually a proxy for some other
+attribute of the newspaper, like the extent to
+which it's picking it's covering business topics
+rather than sports topics, and maybe that's
+also correlated with how people vote in the
+news outlets market. So we're seeing here
+has nothing to do with politics is just a proxy
+for some third thing or maybe an even
+deeper problem is slant itself is a proxy for other attributes
+of the market. It's like geography. What do I mean by that? Well, what we're showing here is that in places that vote more Republican than newspapers use more Republicans
+sounding language but that can mean a lot
+of different things. For example, these are
+idea on where in the US, different phrases are used
+as generics for soft index. In the part of the country
+that I'm originally from, we correctly refer
+to that as soda, in the part of the
+country where I now live, I have to order on
+under the name pop, and there's also places in the United States where
+I have not lived, where it's referred
+to as a Coke, even if it actually
+isn't made by Coca-Cola, which is by far the strangest. If we were to construct and naive slant index and say which members of
+Congress say Coke, in which members of
+Congress say soda? We might find, wow, the slant index is very correlated with other measures of Congressional ideology. Because people from the people representing constituencies
+in the South are going to be more Republican, and it's very correlated
+with the ideology of the home market when we look at news outlets use of the
+word soda versus Coke. We might conclude that there's a tremendous
+correspondence between how a news outlet
+spins the news to the left and to the right and how its audience would
+like to see the new spawn, but that might be
+totally spurious and might just be a
+geographic confound. We want to be very aware
+of the soda versus pop confound and
+worry about it the same way we would worry about in any social science endeavor, controlled carefully for
+geography when we relate slant to other
+economic variables. This is something that's actually very easy to do with the methods that
+Taddy's developed, which I'll talk about
+in a couple of minutes. We can incorporate geography directly into our
+predictive model. When we're doing our
+dimensionality reduction, rather than trying to predict, say, roll call votes, we could try to predict the component of
+roll-call votes that's orthogonal to region,
+orthogonal to division, orthogonal to regions that correspond to linguistic
+divisions in the US, and try to orthogonalize from
+the get-go with respect to those factors to try to isolate the part of the
+partisanship variation. That's really what we want. Same tactics we'd use and other social science
+applications. That's just a broader lesson that something that's probably important to keep in mind, although I assume
+it's common sense that I think we're going to see more and more predictive
+modeling of the climate we learned about
+this morning used as an aid to social science but just like with anything else, you get what you put in. If your predictors are
+all going to pick up, create mechanical correlations with things like geography, then that's what you're
+going to pick up when you go to D or social science. You need to keep your
+social science hat on and worry about bias and mis-specification
+when you're designing your predictive model or your dimensionality
+reduction strategy, just like you do when you take your low dimensional summary and go use it to do social science. Last paper that I'll talk about in the stream on trying to measure partisanship from tax is a paper that Taddy wrote, and he tries there to address, the way I think about it as two big limitations
+of what we did. One, we separated
+feature selection from estimation in doing
+our predictive models. We had this
+chi-squared statistic which told us which
+phrases to include, and then its linear model which told us how to include them. Then two, which touches on the topic that
+Taddy left us with. He takes advantage
+of the fact that he tries to address
+the fact that the linear model doesn't
+do a good job of exploiting the multinomial
+structure of the data. Some phrases are used very rarely or not at
+all by some people also linearity is
+actually not a great fit here and so what does he do? He actually uses
+something that in terms of the modeling structure, the economic model is basically the same as the
+gross goes in myeloma model. It's a logit link to an
+underlying linear model that says my propensity to use
+a phrase is a function of some intercept and then some slope with respect
+to my ideology. The difference is he's going to estimate this via penalized
+maximum likelihood, and he's going to
+use a log penalty, one of those concave penalties
+for regularization and combine that with
+another Math algorithm for maximization
+that makes it fast. Why is that appealing? It's appealing because
+now we can use girls schools and model, but we don't have
+to use their data. We don't have to
+pick 50 think tanks. We can go and hit this with the entire congressional record
+and let the model select the phrases that matter using exactly the penalized methods that we talked about
+earlier today. The penalty is going to impose
+sparsity and your Betas, so it's going to throw
+away a lot of freezes, and that means we can basically comfortably hit the
+model with tons of data and still get good
+out-of-sample performance. This is actually very nice. I wish we hadn't
+when we were doing this because in principle, you can even tune your penalty. If you only have time, say using your search interface to search for 1,000 phrases. You can even tune your
+penalty so that it gives you the 1,000
+most predictive phrases, the lasso model. The best lasso with a
+thousand phrases or less so that you can basically maximize performance
+in terms of fit, subject to a constraint on the number of searches
+you're able to do online. You can really take
+every decision theoretic approach to research design. Just to give you a sense of the performance, this PLS, that's what we did. It's actually a little bit
+better than what we did. Because Taddy's standardized
+the data and his method blows our method away
+both in terms of the central tendency of
+the quality of the Fed. This is the out-of-sample
+predictive correlation and also the spread. It also has many fewer
+really bad outcomes. It beats a lot of the other
+things that are out there. The literature like Latent
+Dirichlet allocation, which Matt Gentzkow will
+talk about in a little bit. Taddy has now horse raced
+this against everything. This is Taddy versus the world. It does really well against a wide range of alternatives. Here in blue, we've got
+multinomial inverse regression, that's Taddy's model, and then these other horses
+are other people's. The other thing
+you can see here, this is time to fit in seconds using data from 109th Congress, and it's really fast. It's fitting in basically
+on the order of a second. You're getting actually better
+performance in terms of prediction and better
+speed than alternatives. It's basically pushing
+out the frontier in terms of validity and runtime. Let me take questions
+before I go on and talk about
+finance applications. Yeah, I saw you first. MALE_2: Just a quick question. Jesse: Yeah. MALE_2: Can you talk more about the relaxing
+linearity assumption and how you can increase
+its performance? Jesse: The question is, how is this method relaxing
+linearity assumption? I'll go back to the slide. What Gentzkow and I did, that's why I call it Taddy.
+Taddy for better notation. What we did is this marginal regression approach where we treat the expected fraction
+of the time you will use a given phrase J as
+linear in your ideology. In reality, of
+course, phrase uses more naturally model as a count. You need a count model with something and a
+natural thing to do is a logit link because that's
+convenient and tractable, and shows up all over the place. That's how the model is getting better
+performance, basically. MALE_2: That's a
+multinomial logit? Jesse: This is a
+multinomial logit, exactly. An i is a person, and a j is a phrase. This can be for an arbitrary
+number of phrases. Good question. Steve. Steve: A specific question
+about your work with Matt but I think it's also
+a more general issue. Suppose I have a newspaper
+that shows up in the middle of your left,
+right political spectrum. You've given that
+one interpretation. Another possible
+interpretation is symmetric curves are slant seeking and some
+are slant pointing. They're either in the
+middle because they are using a balanced mix of
+these two lowered words, like privatization
+versus personalization, or they are deliberately avoiding both words and
+finding some other terms. The generic issue is
+while you're clapping something which is fundamentally two-dimensional and
+on my discussion, one-dimension, that
+seems different than the issues you've discussed so far or maybe I'm
+missing something. Jesse: Steve's
+question, so everybody hears it and so the
+folks at home hear it. Basically, suppose for example, that what's really
+going on is not that centrist news outlets are
+somewhere in the middle. They would sound like a middle of the road Congressperson but really what they're
+doing is putting say, 50/50 weight on
+extreme Republican and extreme Democratic ideas. Then that's going to show up as middle of the road in
+this single index, but maybe that's not the right representation of the world. In fact, the right
+representation of the world might be
+multi-dimensional. There might be,
+say, left, right, but there might also be balance versus not balanced
+or something like that. That would give
+you something like basically a factor structure or a topic structure. There's
+like the neutral topic, there's the right-wing topic, there's a left-wing topic
+and then news outlets different the weights
+they put on those things. None of this work that I'm
+talking about in terms of the social science
+research addresses that there are basically two
+ways that you could do it. One is, again, you'd have to find a
+training document that is, you'd have to find somebody, maybe a Congressperson or
+maybe another source of say, non-political text that you wanted to say was
+representative of what it means to be neutral or
+non-political so you could get a recipe book
+or something like that, or better homes and gardens and put that in your training set and then use that to
+train two-dimensions. Technically, that's
+not problematic. You could fit that into
+Taddy's framework, that would be no problem. The other thing you could
+do is you could take a more agnostic approach and just go looking
+for factor structure. That's also
+technically possible, but I think much less
+likely to succeed because you're going to pick up whatever dimensions of
+correlation show up. I think conceptually
+not problematic to do. I haven't seen anybody do that. I think the hardest
+thing would be finding a training dataset that
+would permit that. MALE_3: How do you
+handle typos or different spellings
+for the same word when you have text data? Jesse: The question is, how do you handle typos or different spellings
+for the same word when you have text data? I'll give you two answers. The first question I'll
+interpret you to mean me and the answer
+is I ignore those. Those are going to show
+up as just rare phrases, because assuming typos
+are idiosyncratic, they're not going to
+show up very often. I don't think, for example, any of the phrases that
+pop out as the most partisan in our
+data as I recall, are just misspelled garbage. There are some things
+that are weird, but they're not typos
+or misspellings. Then another answer would be, how could you do it? A really simple thing
+that you could do if you had a dataset
+that say was OCR so it was filled with typos and you wanted to handle those, you could try to impose some model on the phrases
+or the words that's hard, that would add another
+modeling layer. Another thing you can
+do that's not hard is you can use basically a machine implementation
+of distance between phrases and group
+similar phrases together. For example, there's a metric which I think is called Levenshtein distance.
+Is that right? Which is basically a measure of how different two words are, which is related to more sophisticated
+approaches that are now used to correct things like typos in your
+address or something. Try to figure out
+whether J-E-S-S-I-E Shapiro and J-E-S-S-E are
+the same person or not. Basically, this measure say how many steps would it take to get from one to the other? How many things we
+do need to transpose or add or subtract? You could use those
+and you can group things according to similarity. If it were me and I had
+a document like that, I'd be inclined to do that
+outside of my modeling. That is, I'd be
+inclined to just try to use a preprocessing step that collapses things in
+some distance metric. MALE_4: This is
+something related to earlier question
+about criticizing [inaudible] Democrats
+use the Republicans in a majoritative way. Is there anyway to
+catch such usage? Jesse: The question is
+what if Democrats use Republican phrases
+in a pejorative way like they say the
+so-called death tax, or what Bush would like you to call the personal
+retirement account? That obviously is going to
+create noise in this measure. The question is what
+can you do about that? Again, I'll give you
+the two answers. We did nothing about that. It turns out sarcasm
+is rare enough that this index performs okay even if you
+don't worry about it. You could worry about it, I've seen a couple
+of different ways to do things like that. One is what Groseclose and Mylo do which is when they're
+counting the phrases. They actually explicitly look
+out for stuff like that. If somebody says those jokers at the Brookings Institution
+would have you believe blah, blah, blah, they don't
+count that as a reference. That's obviously a great idea, but time-intensive,
+so it takes work. There are basically
+dictionaries of word meaning. If you could look at, say, the surrounding phrases with the surrounding
+words and look for indicators of hostility
+or negativity or sarcasm, I don't have a scientific
+basis for this, my casual impression is
+those things are not okay, if what you care about is
+actually measuring negativity, but if what you care
+about is filtering your data to make them useful
+for something like this, they probably add more
+noise than they subtract. I personally wouldn't do that because those measures are
+just not yet refined enough. Someday, when Siri actually knows what we're saying to her, and when she gets it when
+we're making a joke, then we can ask Siri
+to filter the stuff. I think someday we will see things like that that
+work much better. Right now, my impression is maybe if you're
+totally at the frontier, but every time I've ever played with something like that, I've found that's just basically adding another source
+of variability. That's actually a good segue into analysis of
+financial news because actually some of these
+sentiment issues, literal sentiment,
+positive, negative, and so on are in big play there. Here it's very easy to motivate the social science questions. Doesn't take any work
+that way maybe it does with politics in the news media. We want to know as economists, what explains the time series in the cross-section
+of equity returns? That would be great. We've made some progress in
+the last half-century or so, but there's probably
+some more we can make. In particular, maybe a
+narrower question is, we see the market move a lot, it moves in response to things
+that are not captured in quantitative
+fundamentals that are in Compustat like earnings,
+what is going on? What is the
+information out there? One place people
+have gone to look is textual data like
+the news media. A very nice paper by
+Paul Tetlock counts all words used in the Wall Street
+Journal's "Abreast of the Market" column, which is a column talking about what's going on in
+the markets these days. To construct this feature set, he counts how often words show up that are bundled in each of 77 semantic categories by what's called the Harvard-IV
+General Inquirer. It's Harvard branded, so you
+know it must be awesome. This categorizes words into things like weak or
+positive or negative. Weak words are things
+like abandoned, abandonment, abdicate.
+I don't know. If a CEO or stock is advocating
+something that's bad, that's indicating
+negative sentiment. Then Paul creates
+three regressors from these 77 categories. One there's a count
+of weak words, abandoned, abandonment, one, account of negative words, which is an aggregation of a few categories
+that are not good. Then one that is the first principle component
+of the 77 categories, which he calls pessimism. That tends to be loading
+on negative things. It's a different
+way to aggregate the phrases or the words. Here, Paul's deciding which of the categories
+are negative. Here, a principal components
+analysis is deciding which categories basically get collapsed down into a
+single dimension and how. He finds that negative sentiment in the "Abreast of the
+Market" column predicts at least short-run
+negative movements in aggregate equity returns. Antweiler and Frank
+do something related. A little bit more like our
+spam filtering example. They have data from the message boards on Yahoo
+Finance and Raging Bull. Here's somebody's saying that whatever the security is
+is going to do very badly. They have millions of these chat room
+discussions or millions of these exchanges and they need to turn them
+into some number. What they do is they count
+all the words that are used and then they create
+a training set of a thousand of them which they classify as buy, sell, or hold. Using the standard
+mad money lingo, but without all
+the sound effects, and then they use a machine
+algorithm called Naive Bayes classification to
+classify things that they don't have
+in their training set. Now, we have a thousand
+things in our training set, we have, say, a million things
+out there in the world, we want to classify
+them all as buy, sell, or hold, we use this
+Naive Bayes method. What is Naive Bayes? It's just my posterior
+or gas of which of the three categories
+you belong to under some naive assumption that
+the words are independent, which of course is not true. You couldn't write down a coherent model
+of words in which they would be
+literally independent in the statistical sense but this procedure actually
+turns out to do okay. In practice, people have used it a lot in lots
+of applications. It does okay on
+their training set, and so then they can
+go and use it to classify lots of things
+and do social science and ask questions that are
+relevant in finance like how predictable are returns
+from these chat rooms? Not surprisingly, based on the grammar and spelling
+in these chat rooms, these are not people who
+are industry insiders, and the predictability
+in returns based on these chat room
+discussions is not so great. So you can go and construct that Raging Bull or Yahoo
+message board portfolio right now and trade on it but they are pretty
+predictive of volatility. An interesting angle is they use them to construct
+a measure of disagreement, to what extent are
+the recommendations deferring a lot across people, and that actually turns
+out to predict volume, which is interesting to
+them because there's an existing body
+of economic theory that predicts such
+a relationship. So they can use this
+as a task when usually measuring things
+like disagreement among investors is
+quite difficult. Here's a way to assess that in an automated way from
+a rich data source. There are lots of other examples in finance and accounting. There's a paper by Li that uses this exact same Naive
+Bayes method to measure the sentiment of
+forward-looking statements in 10Qs and 10Ks. Hanley and Hoberg use a
+cosine distance metric, which is basically just
+asking how similar are all the Xs to measure
+revisions to IPO perspectives. Then both of these papers
+don't just stop there, they go on to task meaningful
+social science questions using the scores they
+construct with these methods. Any more questions
+before I turn it over to Matt Gentzkow. Great. All yours. Matthew Gentzkow: The last
+of these texts applications we wanted to talk about are topic models returning
+to something that Matt mentioned right at the end of his discussion earlier
+this afternoon. To remind you, one of the distinctions
+that he made was between supervised and
+unsupervised methods. Supervised methods where
+we're reducing dimension, choosing Xs that give us the
+most predictive power for some outcome variable Y. Unsupervised methods
+where there is no Y, there's only X, and we're looking for the low-dimensional
+representation which captures as much of the
+variation in X as possible. That's PCA, factor models,
+and related methods. Topic models fall into that unsupervised
+category, typically. There are lots of examples of applications of dimension
+reduction in general, the congressional
+roll-call votes into common space scores is
+one we talked about, and important one
+in psychology is the literature on
+personality in psychology is largely based on factor
+models where you give people some long questionnaire
+that asks them lots of questions
+about how they behave and how they feel and
+what they do and then do some principal
+components analysis. There's something
+called the big five factors in psychology, which basically says most variation in people
+and how they answer. Are you the life of the party or do you like to sit
+in the corner and do you like playing with your kids or not like
+playing with your kids? If you ask people a thousand
+questions like that, most of the variation
+is captured by these five dimensions, and those five dimensions
+then play a big role in a lot of analysis
+in psychology. Continuing with the theme
+here, in social science, those measures are not
+the goal themselves, but they're then inputs into subsequent social
+science analysis. We can ask, as we said, how has polarization in Congress
+changed over time? There's a paper, a whole
+literature actually asking how these personality measures are related to performance
+in different jobs, because if you're
+hiring people for jobs, you might want to use them as a potential way to
+select job candidates. Topic models, as Matt said, extend basically factor-type methods to multinomial data, taking advantage of
+that functional former or using a model
+which is specific to that functional
+form so it can handle the fact that
+there are a lot of zeros. In what contexts is
+it useful to think about collapsing high-dimensional
+text data into topics, into a low-dimensional set
+of these factors as opposed to using it to predict stock
+returns or something else? You might want to know what
+are people talking about on social networks in
+some general sense, what products are similar
+on Amazon or eBay. This is actually a big thing that eBay spends a lot
+of time thinking about, is how can we group
+things together? We have a million
+different products. We want to be able to show people things that are similar. How do you do that? What
+stories are in the news today? If you go to Google
+News and search for something or just go to the
+homepage of Google News, they show you a bunch of news topics and then associated news stories from
+lots of different sources. It will say there was a
+train crash in Paris. Then you can read the
+New York Times story about that or the Wall Street
+Journal story about that, or the Lamont story about
+that, whatever you want. That's based on a
+topic model algorithm whose goal is to say, start with the
+million news stories we see today and group
+the ones that are similar with the goal of grouping together
+things that are about the same underlying news event. We might ask, if you take the text
+of economics journals, what are the topics that
+economists are studying? How has that changed over time? How is it related to their
+characteristics, etc.? As with everything, this is most interesting as an input into
+subsequent analysis, you can imagine
+studying, for example, how the weights on different topics and Twitter
+predict stock movements, which products are
+close substitutes for the kind of
+goals that eBay has. In the context of our paper that Jesse talked about something which we have long wanted to do
+and never succeeded in doing well despite
+working on it for awhile, is that slant index is really a combination
+of two things. They're synonym pairs like
+death tax and estate tax, and so the slant index
+picks up when you talk about death slash estate taxes, which term do you choose but it also picks up a lot
+of what do you talk about. So words related to poor
+people and unemployment, words related to
+African Americans. Whole bunch of topics that are really associated
+with Democrats. Then things related to foreign policy, things
+related to finance, their whole bunch of topics that are associated with Republicans, and our slant index because
+of the way it's constructed, captures both of those. A newspaper that we classify
+as right-wing could be a newspaper that when it talks about taxes, says death tax, but could also be a
+newspaper that spends a lot of time talking
+about foreign policy, and you might like to decompose
+those things and say, let's separate which topics does a congressperson talk about or a newspaper talk about. When you talk about
+foreign policy, which terms do you use. That would be a natural
+application of topic modeling. You could ask how
+the distribution of topics in economics
+has changed over time. I think a characterization of the very small literature and social science that
+applies topic modeling is, it hasn't really gotten much beyond the descriptive
+measurement stage. This application into
+subsequent analysis, I'm not going to talk
+much about because people haven't really
+done that yet. Topic models are still
+largely been applied as in that kind of
+descriptive mode. The second category I
+talked about earlier, I want to walk you through
+two papers that apply topic models to text of
+interests to social science. The first is a paper by
+Blei Lafferty from 2006, which is based on the
+text of Science Magazine. They're basically trying to say, can we use an automated
+method to throw in all of the texts of all of the
+articles published in Science Magazine
+from 1880 to 2002, and group them together
+to determine what are the underlying topics and
+ask questions about them. Practically what they're doing, they start with
+the full OCR text of science from 1880 to 2002, which they get from J store. Notice this is a case where they're not working through
+a search interface. They have the full text on their computer,
+that's important. I said, as you'll recall
+that there's always a manual step of
+dimension reduction before the automated step
+of dimension reduction. Here they, first of all, only look at words that
+are used 25 or more times. They throw out all of the words that are used
+more rarely than that. They remove stopwords. Remember those are
+things that occur very frequently based on
+just a standard list. When people say they
+dropped stopwords, that means I just took a list. Somebody else came up with a stopwords and I dropped those. They did this thing
+called stemming, which combines economists and economist into the same word. That leaves them at the
+end of the day with a p, the wide dimension
+of the data is 15,955 words and
+the N in the data, the total number of
+articles is about 30,000. This is a case where P
+is not bigger than N, but it's still pretty big. Let me just show
+you the goal and then I'll tell you
+how they got here. Here's the thing that
+this method produces. So these are four of the topics that this
+model outputs with the phrases that are most common or most
+common relative to their baseline frequencies
+in those topics. You see there's a topic
+which seems to be about genetics and includes
+words like genome, DNA, genetic, gene sequence, molecular, and so forth. There's a topic which seems
+to be about evolution, there's a topic which is about disease and bacteria,
+infections, malaria parasites, and
+there's a topic which is about computers and information
+and information science, and there are a bunch of more. This is just four of them. The grouping of these
+words together into these coherent
+topics is something that is produced automatically. Here are time-series of the frequency of different words within particular topics. You might say, if I
+look at articles in science about
+theoretical physics. However, the composition of theoretical physics articles
+in Science Magazine change. This picture shows
+you well, you know, theoretical physics used to involve a lot of
+talk about force. Recently, it involves a
+lot of talk about lasers. Sometime in the middle of people talking about relativity, but that's not so
+interesting anymore. Nobody cares about
+relativity now, and you could do the same
+thing here for neuroscience. Nerves used to be a big
+thing before people knew, I guess that they
+were called neurons. When they're in your brain. That's changed. Oxygen was
+a big thing in the 60s. Not so much anymore.
+This is the goal. How do we get to this thing, and tell you more about what
+those pictures really are. The model in this paper
+which was developed by David by and coauthors is what's called Latent
+Dirichlet allocation. I think both Matt
+and Jesse mentioned that in their discussions. This is really the
+first big step in taking these
+factor type models and applying them
+to discrete data. The setup is N,
+here is documents. Think of articles in
+Science Magazine. P, here is words. The data for an
+individual document I is a one by p vector
+of word counts. This is this bag of words representation that
+we talked about. A factor model, not a
+topic model but just the vanilla linear factor model, you will recall, says
+the expectation of X is a linear
+function of factors. I'm using slightly
+different notation here, but so Theta ik is the value of the kth
+factor for document i, and then beta k is a vector of loadings that says in factor k, how much do each of
+these p components, what is the expected value of each of these p components. LDA transforms that into
+this multinomial model. We're now going to call
+the value of the factors, the weight on the kth topic, and we're going to
+call the loadings the word probabilities
+associated with topic k, and now xi is
+distributed multinomial with probabilities determined
+by this linear function. Just to remind you, Theta ik here is a scalar. That says how much of document i is about
+theoretical physics, how much of document i
+is about neuroscience, how much of document
+i is about computers, and Beta is in topic k,
+say theoretical physics. What are the frequencies
+of each word or what is the probability
+of saying each word? So Beta k, which is
+a one by p vector, is going to have high values for things like relativity in the theoretical
+physics topic and have low values for things like relativity in the
+neuroscience topic. Here's a graphical representation of that. Here is an article, and words are
+color-coded here by the topics in several different topics
+that they appear high in. There's that genetic topic. There's a topic about
+organisms in life science and there's a topic about
+computers and computation. Notice that a really important
+feature of this model is a given document
+is in many topics. One document here has weights on these different
+topics given by these Thetas. It's clearly an article about something to
+do with genetics, but they spend some time
+talking about computers, they spent some time
+talking about genes. We're going think of it as a mixture of those
+different things. The way the model works is this document is associated with weights on those
+different topics. Then those weights in turn determine the probability of different words
+within that document or more precisely,
+if you think of the data-generating process here that corresponds just to that equation that I wrote down. That equation I
+wrote down is this full specification of the model, but you can think of it as a machine that produces
+science articles. The way that you
+assume that that machine works is as follows. Each time I want to
+write an article, I first draw this vector Theta of weights on
+the different topics. That is going to be drawn
+from a directly distribution. That's the distribution on the simplex controlled
+by a parameter Alpha. Alpha is a vector here that determines how that's weighted across the
+different topics. I want to write my article, I draw this Theta, it tells me this is going
+to be 50 percent of the words are about
+theoretical physics, 25 percent about neuroscience, 25 percent about computers. Then, for each word
+in that document, I'm going to first
+figure out which topic I'm in from a multinomial
+draw a cross Theta. It has a 50 percent
+chance of being a theoretical physics
+word and so on. Then once I've
+assigned the topic, I draw the actual word from a multinomial with
+probabilities Beta. This is slightly
+more simple than the process of actually writing articles and publishing
+them in science but as usual as we've
+been stressing, these very crude representations often give you a
+lot of traction. We're ignoring a
+lot of stuff here, but it turns out to
+work pretty well. That's this original LDA model. That's not the
+model introduced in the paper that we're
+talking about here. The advance of this paper
+over the original LDA paper. Here when they apply it
+to Science Magazine, what they're partly
+interested in is making the model dynamic. This algorithm, this
+data-generating process, is assumed to be an IID process across every word
+within a document, and it's IID across
+every document that draw on the
+topic proportions. This says documents
+from 1880-2002. If we apply that model to science are completely
+exchangeable. The probability of talking about theoretical physics in 1880
+must be the same as in 2002. Clearly that's not correct. Both what we talk about and which words we use to talk about a given topic change over time. Here are two articles from science that are both
+about photography, but what we talk
+about when we talked about photography in 1890 is very different than what we talk about when we talk about photography in
+1977 in this case, and it would be not a very good fit to the data to assume
+that the probability is on words in those years were the same within this
+photography topic. What the authors do in
+this paper is divide the whole corpus of texts
+into slices by year. Assume that within a given year, this LDA model holds. We're going to assume
+articles in January and articles in December
+come from the same DGP but we're going to
+allow both Beta, that's the probabilities of
+words within each topic, and Alpha, just the directly parameter governing which topics we choose to evolve over time. They're going to
+evolve according to a mark-off process where basically they're going to
+change smoothly and slowly. The model is going
+to say they're going to change smoothly overtime. There's a whole
+estimation issue here which were basically not
+going to talk about. Bayesian inference for
+this model is hard using what I would have, my very limited
+knowledge of this stuff, thought of as standard methods. Blei, in this paper
+that we're talking about uses something called
+variational inference, which I can tell
+you I completely do not understand at all. Matt and in an R package
+that he wrote that does topic modeling uses
+basically map estimation maximum like finding
+the posterior mode. Basically like likelihood
+estimation and does things very fast
+that I do understand. There's something that tells me called stochastic descent, which is even better, which is how people today
+estimate these things. In any case, if you actually
+estimate topic models, you need to worry about
+this a little bit but the estimates that these guys use come from
+a model with 20 topics. How did they choose 20 topics. They tried 15, they
+tried 20, they tried 25. They looked at it. Twenty
+looked pretty good. As a parentheses, I think there's another
+theme in all of this stuff that we're doing which we haven't
+really talked about. Which is there are a
+tremendous number of tuning parameters and decisions
+and choices and places where the researcher has discretion in implementing
+any of these methods. Just as with all of the methods you guys
+are familiar with, if you want to get
+something to be significant and you're allowed
+to play around with all different control
+variables and all different estimation
+methods and so forth. You have a lot of
+ability to do that. The same thing applies
+here. How many topics in a topic model is
+an example of that. That's one of these
+things where there's not any real theory that grounds, well, there
+is some theory. It's not completely obvious what would be the right
+metric for choosing that, and in practice, researchers exercise
+a lot of discretion. If any of these models
+were talking about, once you really understand them, you'll see there are a lot
+of knobs that are turned and as a consumer of this kind of research and important
+to know what those are. I showed you these are
+four of the topics. Now, you know which words are chosen to list within each
+topic are based on the Betas, they're the ones that have
+the highest Betas relative to their overall frequency. These are those pictures
+I showed you before, which now what are
+these plotting? These are the Beta loadings on these different words in
+a given topic over time. Because we have that
+mark-off process, it's well-defined
+within the model. What is the topic in 2000 which corresponds to
+a given topic in 1880, those things are
+linked over time. We can ask both, what is the power, the proportions of
+theoretical physics and neuroscience changing, and how are the frequency
+of these words? Notice that the model does not provide labels like theoretical physics and neuroscience. The model just provides
+a list of words. This is the authors
+who have said, well, this thing that
+has words like force, laser and relativity seems to be about theoretical physic. A couple of other results
+from the paper to illustrate the things
+that you can do. Here is watching a particular
+topic evolve over time. There is a topic in
+1880 that included words like electric machine, power engines, steam machines,
+iron, battery, wire. You've kind of picture
+what that's about. You can watch that
+evolve over time, so in the 1930s, we start talking
+about tubes, glass, air and mercury
+laboratory pressure. By the time we're in 2000, in this topic which is about
+machines and manufacturing, we're talking about materials
+like silicon and so forth. You can watch this evolution of a given topic overtime in
+which words are important. You can also ask, if I pick an article from 1880, here's an article called
+The Brain of The Orang. I think that's a monkey. You can ask, what is the article in some later year that
+is most similar to it? Can I find a more recent
+article that looks similar in the loading
+on the different topics. This histogram with no labels is the topic loadings for
+The Brain of The Orang, across these 20 topics. Here is the article
+in 1976 that is most close to The Brain of The Orang in terms of its topic loadings, and it turns out to be
+something that's also about brains of monkeys. Again, as I said, none of this is quite
+getting to applying these measures then to go on and ask causal questions
+about social science. We're stopping here
+at description, but it's pretty interesting
+description and it's turning this completely
+unstructured text of Science Magazine into
+something descriptively that tells us a lot about
+how is science changing, how are the topics changing? What are people studying? What's important, and so forth. The last second of these, the last thing we'll talk
+about today before we break for the day is another paper on topic
+modeling and texts by Kevin Quinn and
+coauthors from 2010. This like the work on partisan speech that
+Jesse talked about, uses text from the
+congressional record but here we're not going
+to apply it to newspapers. What is talked about in Congress per se, is going
+to be the subject. The authors use the full
+text of speeches in the US Senate from 1995-2004. That's the raw data. They like us have all of the
+raw data on their computer, so they're not doing searches. So they can do this. Can't do topic modeling, if you have to work through
+a search interface. It doesn't work. They too choose to do some manual steps to reduce
+dimension in the beginning. They only include
+words that appear in at least half a percent
+of all speeches. They stem, they don't
+drop stopwords. That leaves them with 3,807 words in a 118,000 documents. Where a document, here is a
+speech by a congressperson. What are they trying to do? They want to ask, what is Congress debating? What are the words that are important
+in different topics, and how are those
+changing over time? Their model is very similar to the Blei and Lafferty
+model except, one, instead of this
+factor type model where every document is a
+mixture of different topics, their model is going
+to say each speech in Congress is about
+exactly one topic. Two, they're going to allow the distribution of topics
+to change over time, but unlike Blei and Lafferty, the probabilities of words within a topic are going
+to be constant over time. Those are the two differences. Otherwise it's the same model. Just to write that out
+a little bit formally, here's the Blei and Lafferty model which you already saw. The queen et al model says, instead of X_ i being
+multinomial with this linear combination
+of the Betas, it's multinomial with
+probabilities given by a single Beta that Beta
+assigned to document i, and the probability that, that topic is j is
+given by Alpha j. Instead of this
+directly distribution from which we choose weights, we have a multinomial
+distribution of topics and each speech gets
+assigned one topic. Here Alpha will evolve
+over time the weights, but the Betas will
+stay the same. They estimate this
+using an ECM algorithm. They choose 42 topics. Then how did they choose 42? They're very explicit
+in the paper, they tried 35, they tried 45, and 42 based on a variety
+of criteria look good. I want to stress
+that it's objective. If you look at this paper, they actually are quite careful. Jesse talked about
+once you've estimated, say, a slant index, what is the long
+list of things you could do to go get a
+sense of whether it's working right and picking up the things that you want it to? They have a similar
+nice discussion in this paper of ways to validate that this
+42 topic model is picking up
+semantically relevant, coherent topics
+and do a bunch of different things to look about and talk
+about conceptually, what is the goal, what would it mean for this to be working well or
+not working well? Which isn't completely obvious. Here's what comes out of this. Again, they're not going
+to go do anything with it. You could imagine going
+and doing things with it, but it's cool just on its own. You throw in the full text
+of the congressional record for all of these years, and
+this is what comes out. These are the first 17
+of these 42 topics. There's a topic which they give the label
+judicial nominations to and it is associated
+with words like nominee, confirmed, nominate
+circuit here, Court judge, judicial
+case vacancy. Notice that the
+funny spellings in these keys comes from
+that stemming algorithm. That's why suffixes are dropped and stuff because
+they're doing stemming. I said that Blei and
+Lafferty do stemming, and I realized that
+in those lists of words I showed you,
+they're not stemmed. That may mean that I was
+wrong about that or it may mean that they just
+rewrote them for clarity. There's a topic about
+constitutional things, there's a topic about
+campaign finance, there's a topic about abortion. These labels are
+just their labels, but if you look at the actual
+words, they look coherent, they look like
+they're picking up the words that we would have assigned and they're returning the topics that we
+would have thought, we might ourselves
+divide Congress into. They're not the first
+people to try to assign topics to bills and into
+congressional debates. One of the validation things
+they do is compare these to some of those
+previous measures. Once you have that, once you've divided all
+speeches in Congress into remember now every speech is
+associated with one topic, and you have that the weights on those topics evolving
+over time, day-to-day, you can ask how has what it
+Congress is talking about changed over the
+1997-2004 period? This is a time-series of the frequency of
+the total number of words allocated to topics, the total number of speeches in the defense use of
+force category. That's one of their topics. This is number of speeches summed based on their
+number of words, so the Y-axis is
+number of words. You see this spiky picture that basically says usually Congress is not
+talking about defense, but sometimes it
+talks about it a lot. If you look at the spikes, they're all associated with days on which
+Congress was debating something which clearly was
+about national defense. You see the Kosovo bombing, the withdrawal from Kosovo, the largest spike in
+that time series is a day on which
+they were debating the authorization
+for the Iraq War, the Abu Ghraib photos being
+released and disgust, etc. It seems like this is doing a reasonable job of picking up. If the question was, when is Congress talking about
+national defense? This completely hands-off
+automated methods seems to be doing an okay job. Another set of topics that comes out are symbolic bills. This is the way Matt said, if you look at Internet
+browsing data, it turns out the most
+important thing is porn. By analogy here in Congress, you think that they're debating national defense and abortion
+and all of these things, but mostly what they're spending their time doing is voting on, we commend the firefighters of such and such town for
+putting out a fire. If you look at the topics,
+those things show up really big symbolic,
+remembrance, tech topics. Here's the one for
+remembering military heroes. What are the spikes
+in that over time? There's one when
+there was a shooting at the capital in DC. Then interestingly, you see
+the anniversaries of 911, the day after 911 is
+the biggest spike, so 9-12-2001 than the
+first anniversary of 911 in 2002 is almost as big. The second anniversary
+is a bit smaller, the third anniversary
+is even smaller. You see are symbolic
+discussion of 911 on its anniversaries
+declining over time. Finally, the last thing I'll
+show you from their paper, this is a little
+bit hard to read, but I hope you can see. Another thing you can do with these estimated topics
+is to try to organize them into a hierarchy that shows which topics are more and less related
+to each other. The algorithm they
+follow is as follows. Start with all 42 topics, compute the distances
+among them based on just Euclidean distances
+between those Beta vectors, take whichever two are
+closest to each other, and now combine those
+into one topic. Now, averaging the Betas, you now have 41 topics, repeat. Now, you have 40, repeat, now you have 39 and so forth. As you've done
+that, keeping track of what you combined when, that implies picture like this. The organization seems
+conceptually pretty coherent. The highest level division, the biggest
+difference, if you had to draw one line through
+the space of topics, it separates a bunch
+of topics that are basically about
+procedural language, shall we vote on this bill, I yield the remainder
+of my time, so on and so forth
+from everything else. In addition to symbolic stuff, that's the other thing Congress spends a lot of time
+talking about is procedure. Then you have divisions. The symbolic thing is
+like the next big group, and then you have
+everything else, which is actual
+bills and policy, which is divided at
+a pretty high level into domestic versus
+international, and then you can go down. I didn't show you all the
+way down the hierarchy. This all seems like it's
+pretty, it's descriptive. My question is just
+what does Congress seemed to be talking about
+and how are things related, but it corresponds the
+automated completely hands-off, no human intervention
+approach is giving us something pretty close to what we might have come
+up with ourselves. That's the last thing I have to say about
+those applications. Let me take questions, if people have any
+questions about that. Yeah. MALE_5: So, perhaps it
+sounds a bit like that, more like it's just a factor analysis that
+current analysis. Does this consider a [inaudible] factor analysis or
+does this consider a hybrid analysis. Matthew Gentzkow:
+Hybrid of what? MALE_5: Factor analysis
+and just give me a thorough analysis in the
+sense that sees that we're trying to reduce the number
+of variables observations. I notices that the second
+factor has the ring to it to be solid
+body of [inaudible] reduction [inaudible]
+analysis like for falling in their analysis
+so is it a [inaudible] predicted that or I'm not
+aware of the literature but it's like routing methodology used as you put in the
+analysis for example, factor analysis that
+you mentioned that we can help with the narrative so for example we can
+group observation, maybe we can [inaudible] better. What was the expects
+in the analysis, maybe we can better
+define the group there's something
+that's going on? Matthew Gentzkow: The first
+question was, is it right to describe these models
+as most closely related to factor analysis or
+are they more related to discriminatory models or
+clustering-type algorithms like you might use
+in other cases. Let me give you what I think is the answer to that question and then Taddy can correct
+me if I'm wrong, which is, I think that the way you would most commonly use
+the terminology is to say that the LDA model and its variance are in
+the same family as factor models because you have this linear
+structure and so each document is a
+linear combination of a bunch of factors. The Quinn et al model where we say we're now going to
+assign each document to a unique topic or a
+unique cluster is in the same family as
+algorithms like k-means clusters and other
+clustering type algorithms. Is that dead-on?
+Says our expert. Then your second question was, could these clustering
+type algorithms be applied to group
+observations together and some causal analysis in order
+to include fixed effects? I think that that is
+an interesting idea of the place that you might
+do this kind of thing. I'm not aware of specific
+applications that do that, but that seems like in the spirit of the ways that you might take
+something like this. Certainly, if you think
+about if characteristics of the congressional
+speeches are on the left-hand side
+and what people are talking about is something
+you want to control for, then it would be natural to
+include fixed effects for which topic you think
+it's in according to the Quinn model
+here as an example. Other questions. Yeah. MALE_6: Quick question
+on these models. What is the distribution of the beta parameter
+in the LDA model? Matthew Gentzkow: What
+is the distribution of the beta parameter
+in the LDA model? In the LDA model, the beta parameter is fixed
+in this dynamic verge. Remember LDA, the
+original model is the static one shot
+version of that. In the Blei and Lafferty
+model where it's dynamic, roughly the way
+to think about it is the parameter in their
+model is not actually beta, because beta here
+is something that needs to sum to
+one, its weights, but they transform that
+basically using a logit. Think of now a parameter
+defined on the real line, a vector that has domain on the real line and
+then the probability of a given word is a
+logit function of that. Then those parameters that are now defined on
+the real line evolve by something like
+an AR1 process. We should look back at the paper to get the
+exact details right, but it's a little bit
+harder to write down a natural Markov process for this thing on the simplex,
+evolving over time. It's easy to write
+down something like an AR1 process for just
+variables on the real line. That's what they do and then
+they transform it back. Other questions? Yeah. MALE_7: [inaudible] Is this a problem or is
+it not? [inaudible] Matthew Gentzkow: First of all, I don't think there's
+an independence of irrelevant
+alternatives assumption. I mean, sorry, yeah. The question was, in these
+kinds of topic models, is the independence
+assumption a problem? It seems likely to be violated and it is
+the fact that it's violated that we're
+assuming it's true cause problems? Yeah. MALE_8: I guess the assumption we're talking about the red-bus, blue-bus problem or
+there are two problems. Matthew Gentzkow:
+Okay. I'm not sure. In this we don't have the logit
+formula written up. I'm not sure maybe we
+should talk about this. I'm not sure that
+there is really an analog of the red-bus,
+blue-bus problem here, we're assuming independence
+of cross words within a document and then
+documents within a day. That is clearly independence which is violated in the data. I think that's another
+example, of course, model ends up working
+pretty well in practice. The fact that we're
+modeling these is logit probabilities is there's just a
+transformation I don't see, but we
+could talk about it. Sure. Any other questions? Okay. Let me just
+conclude by telling you to remind you of
+this sort of division. Today, we talked about what are basically predictive models, applications of those models. Tomorrow, Chris Hansen and Victor Chernozhukov
+will talk about high-dimensional data in
+a context where you're specifically interested in
+estimating causal effects. Basically, how do I do? We've been talking about
+selecting variables, for example, in order to get
+the best predictor of Y. That's a different
+problem from how do you select X-variables to get the best control if what you're interested
+in as a regression of Y on a particular X. Because there you
+care both about how these variables are related to Y and how they're related to X. You want to include the ones
+that are related to both. They'll talk about the
+specific modifications of these methods to
+that context and applications of those
+things in economics. Thanks everybody for
+coming. Thank you. 

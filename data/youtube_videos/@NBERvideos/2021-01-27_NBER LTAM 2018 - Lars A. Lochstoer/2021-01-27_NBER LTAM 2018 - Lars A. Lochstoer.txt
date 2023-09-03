@@ -1,0 +1,389 @@
+Lars A. Lochstoer: This is
+going to be a paper about anomalies that actually doesn't explicitly talk about
+average returns or Alpha, which begs the question, why are we interested
+in anomalies then? Actually attack we're going
+to take is we're going to think about why
+anomaly portfolios, or long short
+anomaly portfolios, which are zero beta portfolios,
+why they vary at all? What's the source that drives return variation in
+those portfolios? I'm going to try to
+convince you that that is an interesting question that can help us shed some light on why we have some of
+the type of models we need to explain the anomaly returns and the average returns
+to in the end. By way of trying
+to explain this, I want to think about
+what are sources of shocks to driving
+the pricing kernel. There's lots of tax on this. What we're going to think about, we can go back to
+a stylized fact, which if you read the John Cochran's
+presidential address, you will see that if you
+look at market returns, it depends on the sample, etc, but about half of market return variation is
+due to discount rate shocks. The other part is due
+to cash flow shocks. That type of viewing
+of the world has had a profound effect on a lot of our models of aggregate
+stock market. If you think about
+Campbell Cochrane, Bansal and Yaron, and also Jessica Wechter's paper on
+time and disaster risk, the fact that discount rates
+at the market level vary in a persistent manner has caused these papers to introduce either a time and risk aversion, or time varying
+quantity of risk. That's fine. With the
+modern pricing kernel, market risk is only one
+pretty small fraction of the total variation of what we think of
+as a pricing kernel. To give you an example,
+if you think of the former French 5-Factor Model where in addition to the market we have
+book-to-market value, we have size, we have
+profitability in investment, only 85 percent of the variance of
+that pricing kernel is due to the market factor. I'm sorry, only 15 percent
+is due to the market factor, 85 percent is due to
+the non-market factors. What we want to do really is do the same thing as the top here. We want to think about,
+if we view the world in this cash flow fundamental risk versus this discount
+rate shocks. What does the modern
+pricing kernel look like, and how does knowing
+something about that inform us about the
+models we want to write up? This is going to relate also
+to individual papers that argue about the sources of
+non-market factor returns. There's a number of
+theories, we're at myriad. I think that's like
+10,000 or more. Maybe that's a
+stretch, but a lot of theories trying to
+explain the same thing, they're rational and
+they're behavioral. I'm still getting some more
+summary statistics from the data that can help us inform what models are at work. That's where we're trying to go. We're going to argue
+that cash flow versus discount rate
+decomposition is useful. I think most people
+here actually know what I'm talking about when I say cash flow versus
+discount rate shocks, but to make sure we're
+all on the same page, I'm just going to show this
+for 30-second tutorial. In the simplest
+possible way which is, if you think about
+a one-period model, the simplest one that
+present value one period. I know the price is equal
+to the expected dividend or cash flow divided by 1 plus the expected return
+or the discount rate. If prices of claims
+are moving around, it must be that either the expected cash flow has changed, or the expected return or
+discount rate has to change. When we talk about
+cash flow shocks, that's the shocks to the
+top there to numerator. If you're talking about
+discount rate shocks that are shock to
+expect to return. Something I'm going
+to talk about, here's negative cash flow versus discount
+rate correlation, which you're going to
+find a lot in the data. What that says is that if
+cash flows of this animal, we're looking at our portfolio, the expected cash flow goes up, the expected return goes down. That type of dynamic, we're going to see a lot of, and that's what we have in mind. One more point for those
+of you who are not entirely on board with
+what's going on here, when you do a empirical
+decomposition like this, expected return is not
+necessarily rational. Here are two very handsome men, on the left is a Keynes, and on the right we've got Fama. Keynes he's talking
+about animal spirits. If prices are jumping
+around because of investors getting excited about something or not yet
+not excited about it, that is going to be denoted
+that discount rate shock. We're not going to see
+that in a fundamental. Risk aversion, which also show up as a discount
+rate shocks. We're not about behavioral
+versus rational, but we're more about is
+it in the cash flows or is it in the
+valuation levels itself. The final tutorial here
+is what we going to do is something that's been
+done many times before. You can express
+shocks to returns as cash flow shocks minus discount rate shocks is a
+log linear approximation. It just going to raise
+our denominator. That's why it has
+to have the sign. We're going to think about a variance decomposition
+where hey, the reasons return varies either because there are
+shocks to cash flows, or because they're shocks
+to discount rates. Then there's a covariance
+term and I think we can learn something
+from all these terms. Before I get into exactly
+what we're doing, I want to give you a sense of what can we learn potentially? What are the things we
+can glean from this? Let's take a Keynes world of
+value premium for instance, or value minus growth. Or we can think about
+DSSW is noise traders. That's a model where prices
+are just investors all of a sudden get very excited about growth firms and unexcited
+about value firms. Those prices go away
+from each other, and that's a positive to a gross minus value,
+or it can go in. If a lot of variation is due
+to this noise trader stuff, we're going to find
+that as being, if you look at the
+long short portfolio, we're going to look at a lot
+of discount rate variation. This type of mispricing, if that's the main thing that would be in the discount
+rate variation here. If cash flow variation
+is dominating, you can think of models
+that are talking about some fundamentals
+in the earnings process. For instance, Kogan
+and Papanikolaou and multiple other people have talked about new versus
+old technologies. If you think of growth
+as being loading on new technologies
+that displays this old, those type of
+displacement shocks or cross-sectional they lead to cross- section difference
+in cash flows, potentially also discount rate. But the cash flow is the
+fundamental driving source. If we think that overreaction to cash flow news is a big part of understanding
+market dynamics. Well, what does an
+overreaction mean? Overreaction, let's
+say it's a bad news about the future. Investors pushed the price
+of that stock too low. That means that
+discount rates go up as the same time as expected
+cash flow goes down. You can see that in this
+negative correlation between cash flows and discount
+rates at each anomaly level. There are other things
+that our model are talking about, for instance
+cross-correlations. Now you think about
+market cash flow shocks. Are they correlated with an
+anomaly cash flow shocks? There are several theories
+that says they do. Lu Zyang has a beautiful paper. There's a lot of papers
+in this literature on production-based
+asset pricing, that has an idea that maybe if a firm has a hard
+time adjusting, they're more exposed to the aggregates of
+cash flow shocks. That could imply a
+positive correlation between cash flows at the anomaly level and cash
+flows at the market level. I'll conclude and then I'll get into what
+we're doing here. We're saying, what if
+you think risk aversion or sentiment overall
+is driving everything? Well, you think that
+discount rate shocks at these different portfolios
+were all be correlated. People get more risk
+averse, presumably, market prices drop in
+a systematic fashion, and just is high correlation. That's what we're hoping
+to get out of it. We're not going to test
+any one theory in detail, we just want to get at
+some summary stats. Here's what we're going to do, we're going to estimate a firm level panel
+vector autoregression. We're going to impose a firm-level present
+value condition. That's the economic restriction
+we're putting on this, that present value set to hold. We know the return some substitute cash flow
+minus discount rate. Then from the firm-level, we can aggregate firms
+shocks into a portfolio. We have to use
+approximation here, but it's accurate because
+we go from logs to levels and we're going to try to focus results that are robust. This methodology has a
+vector auto-regression. You have to be careful
+with the specification and we tried a lot of things and I'm sure maybe our discussion will tell us
+in what ways were wrong. But we would do think that we really tried to
+be a robust here. We do this because there's
+more power here than just estimating enough
+portfolio by itself. That leads to very
+high standard errors. I talk through this, so these are the
+equations behind us. Either you already
+know it and it's fine or you don't and
+then it's too late. There's the equation.
+The key thing here is that we're going to basically estimate
+future expected returns, and then we're going to
+project them forward in a particular way to the
+VAR allows us to do. We're going to extract cash
+flow shocks as a residual. Because at the firm level
+that's a tricky animal. That's equivalent to
+defining clean surplus. If you want to think about
+earnings as a residual, this is from Ohlson and
+Vuolteenaho equation here. It's the same thing basically. What we get is a panel VAR where every firm at some time t has
+a bunch of characteristic, they have the return we put in this clean surplus earning. X is a bunch of
+other predictors, which I'll talk about
+what we'll do explicitly as Fama-French five
+plus momentum. We're going to have
+profitability, investment, lag return indicator, and
+book-to-market and size. Then book-to-market
+and the present value of the restriction just
+means that there's one less shock here and there are rows because these
+things have to add up. That's how we do that. I'll just click through this. Obviously, specification
+on the VAR is a critical thing and we try a bunch of different things, which I'll discuss a little bit. When we go from
+firm-level to portfolio, you've got log shocks. A portfolio is a weighted
+average of stock returns, but not in logs. To get to levels, we just do a second-order approximation
+that is pretty good. I will also happily
+flip past that, but we get to really
+high correlations with the actual
+portfolio returns. That's how we think of it. What I will say
+is the following, when we aggregate to
+any portfolio level, the shocks in that
+portfolio will either diversify
+or they will not. If you do two random portfolios, presumably, the shocks with basically diversify
+when you go long short. There wouldn't be
+any volatility, there would be nothing
+to talk about. We know the anomaly
+portfolios are volatile, 10 percent are more volatility. We know we're lining up some
+correlated shocks here. Those correlations
+could diversify out of discount rates, or it could diversify
+on cashflows. We don't really know and that's part of what
+we're going to find here. I already mentioned what
+we have in the VAR, returns earnings book-to-market, size divided by GDP to
+get some stationary, profitability,
+investment, momentum. Realized variance we put in because we're doing something in log, you might
+want to have it. It turns out it does not
+necessarily matter that much. I want to say something
+we're going to look at long-short
+portfolios which are quintile 1 and 5 sorted on a
+particular characteristic. We go long the natural side that typically makes more money and short the other side. We also allow for some dummies with book-to-market to interact. We can allow for some
+of the coefficients to be different if
+you're in the extremes. But that just turns out not to be a critical thing
+for our results. In the aggregate, we have
+the real risk-free rate. We also have specifications with aggregate book-to-market and
+a bunch of other things, but this is our
+main specification. The data is from
+62 through 2015. We've dropped the bottom
+NYSE size quintile. Drop utilities and financials. That's often if you think about production functions
+are often outside. I don't think that
+really changes things. We've done some
+stuff with them in. Again, we look at
+long-short portfolio and all the portfolios. Let's go. What do we get? We
+started with anomalies, and I'm going to talk about
+pricing kernel after that. If you look at the
+anomaly return balanced decomposition and I couldn't read
+anything when I was in the back there because
+my eyes are dying on me. This is book-to-market
+profitability, investment, size, momentum. The red bar, this is a fairness
+decomposition. These three bar should
+add to one and they do. The red is the discount
+rate component, the blue is the
+cashflow components, and the greenish
+thingy (sic) hear is the covariance component. What you see is that
+for all of these, the cash-flow component
+is dominating. Remember these things
+have zero market beta. Why are these things volatile? Well, they must line up somehow with some
+fundamental cashflow shock. These aren't industries too. Remember that these
+long-short portfolios aren't industry
+portfolios. We know that. They could have some
+industry exposure, but that's not the main thing. We know that their cashflows are lining up in a particular way. We see that the
+covariance term says, we know cashflows
+are more important. The covariance term is positive, it means that the correlation
+between discount rates and cash flows is negative. That means that when
+there's bad cashflow news, that means discount rates go up. What are we to make of this? Well, a couple of
+things we can note. It seems inconsistent will raise pure noise trader story. I'm not saying there
+are no noise traders, but it's not like the
+dominant thing causing co-variation is some crazy
+investor movement in prices. There is actually a
+fundamental component and that fundamental components
+earnings seems to be highly correlated with
+the discount rates. This is more consistent, maybe with a model where investors might be
+overreacting to cashflow. I don't have time in
+the presentation, but what we show is that this correlation is due
+to long run cashflows. That's consistent
+with, for instance, Daniel Hirshleifer
+and Subrahmanyan, where you have overconfident
+investors that learn about a long-run cash-flow component as opposed to just
+the short run. That's what's driving
+miss valuation. This is happening at firm
+and portfolio levels. It's also consistent with firm betas increasing
+in bad times. That things happens pretty naturally and production-based asset pricing model is too. That bad news about firm earnings makes
+the firms less able to adjust to shocks. It's potentially
+consistent with Kogan and Papanikolaou because
+this is where growth being less risky. That's where we are. We're
+going to do a couple of more cuts to see if we can
+learn something else here. What about the mean-variance
+efficient combination? Here's three
+mean-variance portfolio, the left one is the market
+and it's the MVE of the anomaly portfolios x market and then there's a total one. Broadly that's the same pattern. Let me say one thing
+which I think is notable, if you go from the markets to the MVE with
+everything in it, the amount of discount rate
+variation is changing. That it was not my prior. My prior is the following. You have a bunch of factors out there to have
+cash flow shocks. Discount rate shocks are
+common across the factors. You put them all together, cash flow component
+is going to drop, discount rate component
+is going to go up. That is not what we see,
+we see the opposite here. I find that a pretty
+interesting observations which I'm going to link
+later to the fact that it doesn't seem like the
+discount rate shocks to the market have much to do with this current shocks anomalies. Later being now. Here is the Market CF on
+top and Market DR, and what we're looking at is the MVE combination of
+those five factors, momentum and the
+Fama-French extra flow, the MVE combination of
+those extra market. Market cashflows versus
+anomaly cashflows, this MVE portfolio
+have zero correlation. Market discount
+rates, there's just going to raise
+insignificant zero, but it is like a negative. You can say, if
+the Beta is zero, why should there be any
+correlation of all, there's a lot of stories that
+tell us that there should be some correlation
+that the discount rate level or the casual level. We just don't find
+a lot of that. That seem pretty
+robust across a number of specifications to us. These are some numbers, but
+why does it make sense? Let me give you a couple
+of examples that I think is really intuitive that
+this is what's going on. I'm going to start
+at the bottom here. What I'm plotting from
+64 or so to 2015 is the discount rate
+shocks to the market and MVE combination
+of the anomalies. I want to focus on this
+period, this is a .comboom. The blue line is the discount
+rate shocks in the market. What happened in .comboom? Discount rate shocks went down, negative because prices
+just kept going up. It's a bubble, arguably,
+I didn't say that word. I want to take it back.
+It's not a bubble. I don't know, but this
+strikes, didn't go down. What happened to say value. Thinking about this
+as MVE combination, but think about value
+during the .comboom, that was a time where
+value is losing money. But the spreads between market-to-book ratios of growth and value was increasing. Actually, the expected return to value strategy was going up
+as you are losing money. That's a very
+negative correlation. These episodes cause this
+type of dislocations again. I can briefly also note
+in the financial crisis, very bad for market cashflows. Managed devices was a
+hard time's type shock, as someone has said, and
+nothing any anomalies. Anomalies was because, it was a market level shock and anomalies
+you can see that the return to the
+anomalies wasn't that rough either
+during this period. The price risks in
+the MVE portfolio originate from cashflow shocks mainly to the underlying firms. I think that's good news for a model which has
+production-based type flavor, this is not all about craziness. At least if there
+is some craziness. It seems to be correlated with the cashflows in
+a particular way. It's not like a message,
+just come up with things. Maybe they have a hard time getting at long-term earnings. Broadly uncorrelated markets,
+CFD, or shocks with MVE. I think that's hard to square. It does not approve, but it
+seems harder to square with a classic model where
+the discount factor is risk aversion times
+whatever factors are in there. If this guy is hitting
+every one of those factors. You would think that there'll
+be a common component that DR shocks that
+is very strong. It looks maybe more
+something like this where markets and anomaly, risk prices are moving
+more independently. It's not a proof, but
+it's suggestive evidence. I wanted to note a couple
+of things at the end here in terms of correlation
+with aggregates. I think it's important that
+our VAR makes some sense. If you look at
+market cash flows. They're very strongly correlated
+significantly so with GDP growth and
+consumption growth. That makes some sense. When the economy is going well, there are positive
+shocks to earnings, etc. Then I think it's an interesting significant here to send a negative correlation with the change in the labor share. If labor gets more of the Pi, that's a bad news for the
+cashflows of the market. That also makes sense.
+I quite like that. The other shock that shows up as the default spreadsheet shows up in the way you
+would expect the factor that's got a bad times. Broker, dealer leverage factor lines up exactly across market. The MVE x market is has
+this positive correlation. If we for a minute sticking
+into that one dropped, a DR has got the same for
+the anomaly portfolios, at least it's got
+the right sign. I think the one thing
+that lines the most up it's broken your
+leverage factor, but it doesn't really
+explain the fundamental. It just seems, there's
+some guys that are unconstrained and
+their marginal utility is moving with returns. That's not about the cash
+flow discounted rates. That's a fundamental explanation of the underlying firm dynamics. If you look at the
+MVE portfolios, there's just not a
+whole lot there. The only thing I really see
+is that with sentiments, there is this one
+sentiment goes up. The discount rates drop on the MVE portfolios and
+that makes some sense too, people get really excited. Then maybe, the anomaly portfolios have a decrease in their
+discount rates. That's our main thing. I think I've maybe have
+thirty-seconds or so or no. We do a lot of things. I'm sure we don't do enough we will here. Without the interaction domains, we add market book-to-market to a specification does if you can get like an overall market, that turns out to really mess up the long-term
+predictability if that gets badly behaved because
+of the persistence, mess up the long-term
+profitability of earnings at the market level. We prefer our
+specification without it. We add interaction. We didn't fix the effects. Fixed effects are tricky
+because the dynamic panel, you have this
+stumbled bias thing when you have lots
+of fixed effects. We did them trying to use shrinkage and I'll
+have a look at bias. This is a time T forecast or to fix the fact that
+each point in time. Our main specification
+has chosen basis a little bit longer and predictability in play from the VAR roles of data,
+so I'll conclude. I think we're in a part in the literature now where
+we want to write up models of the cross section will have a cross-section of firms. These models should explain co-movement of these factors mainly due to cash flow shocks. The cash flow discounted
+rate shocks are strongly negatively correlated
+in our estimation. There's not a
+particularly strong link to market CF and DR shocks. Whatever is going on there is approximately uncorrelated. We like two types of models. Investor long-run
+cash-flow overreactions is pretty consistent
+because that's a firm or a factors specific thing or bad long-run cash-flow
+news increases firm risk and is correlated
+as anomalous, independent on our portfolios. Hard to just find
+malls with timing, risk aversion, or overall
+sentiment, we think. This is where the
+long-term asset management conference
+which says, if anomaly cashflows
+are uncorrelated, you don't like
+cashflow shocks as a long-term investor
+because they're permanent, these kinds of shocks
+or not so bad. But if anomaly
+cashflow structure own correlated with market
+cashflow shocks, then you can put them
+together and achieve less overall volatility of cashflows shocks now
+should be a good thing. 
