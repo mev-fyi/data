@@ -11,6 +11,24 @@ logger = logging.getLogger('arxiv')
 logger.setLevel(logging.WARNING)
 
 
+def ensure_newline_in_csv(csv_file: str) -> None:
+    """
+    Ensure that a CSV file ends with a newline.
+
+    Parameters:
+    - csv_file (str): Path to the CSV file.
+    """
+    with open(csv_file, 'a', newline='') as f:
+        # Move to the end of file
+        f.seek(0, os.SEEK_END)
+
+        # Check if the file ends with a newline, if not add one
+        if f.tell() > 0:
+            f.seek(f.tell() - 1, os.SEEK_SET)
+            if f.read(1) != '\n':
+                f.write('\n')
+
+
 def get_paper_details_from_arxiv_id(arxiv_id: str) -> dict or None:
     """
        Retrieve paper details from Arxiv using its ID.
@@ -93,6 +111,9 @@ def download_and_save_paper(link: str, csv_file: str, existing_papers: list, hea
     if paper_exists_in_list(paper_details['title'], existing_papers):
         logging.info(f"Arxiv paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
         return
+
+    # Ensure CSV ends with a newline
+    ensure_newline_in_csv(csv_file)
 
     # Append to CSV
     with open(csv_file, 'a', newline='') as csvfile:  # open in append mode to write data
@@ -260,6 +281,9 @@ def reference_and_log_ssrn_paper(link: str, csv_file: str) -> None:
     if paper_exists_in_csv(paper_details['title'], csv_file):
         logging.info(f"SSRN paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
         return
+
+    # Ensure CSV ends with a newline
+    ensure_newline_in_csv(csv_file)
 
     # Write to CSV
     with open(csv_file, 'a', newline='') as csvfile:  # Open in append mode to write data
