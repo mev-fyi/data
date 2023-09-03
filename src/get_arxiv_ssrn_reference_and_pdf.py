@@ -11,7 +11,17 @@ logger = logging.getLogger('arxiv')
 logger.setLevel(logging.WARNING)
 
 
-def get_paper_details_from_arxiv_id(arxiv_id):
+def get_paper_details_from_arxiv_id(arxiv_id: str) -> dict or None:
+    """
+       Retrieve paper details from Arxiv using its ID.
+
+       Parameters:
+       - arxiv_id (str): The ID of the paper on Arxiv.
+
+       Returns:
+       - dict: A dictionary containing details about the paper such as title, authors, pdf link, topics, and release date.
+       - None: If there's an error during retrieval.
+   """
     try:
         search = arxiv.Search(id_list=[arxiv_id])
         paper = next(search.results())
@@ -29,8 +39,16 @@ def get_paper_details_from_arxiv_id(arxiv_id):
         return None
 
 
-def read_existing_papers(csv_file):
-    """Read existing papers from a CSV file."""
+def read_existing_papers(csv_file: str) -> list:
+    """
+    Read paper titles from a given CSV file.
+
+    Parameters:
+    - csv_file (str): Path to the CSV file.
+
+    Returns:
+    - list: A list containing titles of the papers from the CSV.
+    """
     existing_papers = []
     if os.path.exists(csv_file):
         with open(csv_file, 'r', newline='') as csvfile:
@@ -40,12 +58,30 @@ def read_existing_papers(csv_file):
     return existing_papers
 
 
-def paper_exists_in_list(title, existing_papers):
-    """Check if the paper title exists in the list of existing papers."""
+def paper_exists_in_list(title: str, existing_papers: list) -> bool:
+    """
+    Check if a paper title already exists in a list of existing papers.
+
+    Parameters:
+    - title (str): The title of the paper.
+    - existing_papers (list): List of existing paper titles.
+
+    Returns:
+    - bool: True if title exists in the list, False otherwise.
+    """
     return title in existing_papers
 
 
-def download_and_save_paper(link, csv_file, existing_papers, headers):
+def download_and_save_paper(link: str, csv_file: str, existing_papers: list, headers: dict) -> None:
+    """
+    Download a paper from its link and save its details to a CSV file.
+
+    Parameters:
+    - link (str): Direct link to the paper's PDF.
+    - csv_file (str): Path to the CSV file.
+    - existing_papers (list): List of existing paper titles.
+    - headers (dict): Headers for the request.
+    """
     arxiv_id = link.split('/')[-1].replace('.pdf', '')
     paper_details = get_paper_details_from_arxiv_id(arxiv_id)
 
@@ -76,7 +112,14 @@ def download_and_save_paper(link, csv_file, existing_papers, headers):
     logging.info(f"Downloaded Arxiv paper {pdf_filename}")
 
 
-def download_arxiv_papers(paper_links, csv_file):
+def download_arxiv_papers(paper_links: list, csv_file: str) -> None:
+    """
+    Download multiple papers from Arxiv and save their details to a CSV file.
+
+    Parameters:
+    - paper_links (list): List of links to the papers.
+    - csv_file (str): Path to the CSV file.
+    """
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
@@ -95,7 +138,13 @@ def download_arxiv_papers(paper_links, csv_file):
         executor.map(download_and_save_paper, paper_links, [csv_file]*len(paper_links), [existing_papers]*len(paper_links), [headers]*len(paper_links))
 
 
-def root_directory():
+def root_directory() -> str:
+    """
+    Determine the root directory of the project based on the presence of '.git' directory.
+
+    Returns:
+    - str: The path to the root directory of the project.
+    """
     current_dir = os.getcwd()
 
     while True:
@@ -106,7 +155,17 @@ def root_directory():
             current_dir = os.path.dirname(current_dir)
 
 
-def quickSoup(url):
+def quickSoup(url) -> BeautifulSoup or None:
+    """
+    Quickly retrieve and parse an HTML page into a BeautifulSoup object.
+
+    Parameters:
+    - url (str): The URL of the page to be fetched.
+
+    Returns:
+    - BeautifulSoup object: Parsed HTML of the page.
+    - None: If there's an error during retrieval.
+    """
     try:
         header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
         soup = BeautifulSoup(requests.get(url, headers=header, timeout=10).content, 'html.parser')
@@ -115,7 +174,17 @@ def quickSoup(url):
         return None
 
 
-def get_ssrn_details_from_url(url):
+def get_ssrn_details_from_url(url: str) -> dict or None:
+    """
+    Retrieve paper details from an SSRN URL.
+
+    Parameters:
+    - url (str): The URL of the SSRN paper.
+
+    Returns:
+    - dict: A dictionary containing details about the paper.
+    - None: If there's an error during retrieval or the abstract is not found.
+    """
     try:
         article = quickSoup(url)
         t = article.get_text()
@@ -151,7 +220,18 @@ def get_ssrn_details_from_url(url):
         return None
 
 
-def paper_exists_in_csv(title, csv_file):
+def paper_exists_in_csv(title: str, csv_file: str) -> bool:
+    """
+    Check if a paper title already exists in a given CSV file.
+
+    Parameters:
+    - title (str): The title of the paper.
+    - csv_file (str): Path to the CSV file.
+
+    Returns:
+    - bool: True if title exists in the CSV, False otherwise.
+    """
+
     try:
         with open(csv_file, 'r', newline='') as csvfile:
             reader = csv.DictReader(csvfile)
@@ -163,7 +243,14 @@ def paper_exists_in_csv(title, csv_file):
     return False
 
 
-def download_and_save_ssrn_paper(link, csv_file):
+def reference_and_log_ssrn_paper(link: str, csv_file: str) -> None:
+    """
+    Download a paper's details from its SSRN link and save to a CSV file.
+
+    Parameters:
+    - link (str): URL link to the SSRN paper.
+    - csv_file (str): Path to the CSV file.
+    """
     paper_details = get_ssrn_details_from_url(link)
     if paper_details is None:
         logging.warning(f"Failed to fetch details for {link}. Skipping...")
@@ -182,14 +269,34 @@ def download_and_save_ssrn_paper(link, csv_file):
     logging.info(f"Added details for SSRN paper titled '{paper_details['title']}' to CSV.")
 
 
-def download_ssrn_papers(paper_links, csv_file):
+def reference_and_log_ssrn_papers(paper_links: list, csv_file: str) -> None:
+    """
+    Download multiple papers' details from SSRN and save them to a CSV file.
+
+    Parameters:
+    - paper_links (list): List of links to the SSRN papers.
+    - csv_file (str): Path to the CSV file.
+    """
     # Use ProcessPoolExecutor to run tasks in parallel
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        executor.map(download_and_save_ssrn_paper, paper_links, [csv_file]*len(paper_links))
+        executor.map(reference_and_log_ssrn_paper, paper_links, [csv_file] * len(paper_links))
 
 
 # Main execution
 if __name__ == "__main__":
+    """
+    Main execution script to download paper details and save them to a CSV file.
+
+    This script does the following:
+    1. Sets up directories for saving papers.
+    2. Determines the path for the CSV file where paper details will be saved.
+    3. Reads links of arXiv papers from a text file, fetches their details, and saves them to the CSV.
+    4. Reads links of SSRN papers from a text file, fetches their details, and saves them to the CSV.
+
+    Note: 
+    The SSRN scraping logic credits to https://github.com/karthiktadepalli1/ssrn-scraper.
+    It assumes a file of SSRN links similar to the arXiv links file is present.
+    """
     papers_directory = os.path.join(root_directory(), 'data', 'papers')
     os.makedirs(papers_directory, exist_ok=True)
 
@@ -204,5 +311,5 @@ if __name__ == "__main__":
     # Assuming you have a file of SSRN links similar to arXiv
     with open(os.path.join(root_directory(), 'data', 'links', 'ssrn_papers.txt'), 'r') as f:
         ssrn_links = [line.strip() for line in f.readlines()]
-    download_ssrn_papers(paper_links=ssrn_links, csv_file=csv_file)
+    reference_and_log_ssrn_papers(paper_links=ssrn_links, csv_file=csv_file)
 
