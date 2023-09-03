@@ -4,6 +4,11 @@ import requests
 import csv
 from bs4 import BeautifulSoup
 import concurrent.futures
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger('arxiv')
+logger.setLevel(logging.WARNING)
 
 
 def get_paper_details_from_arxiv_id(arxiv_id):
@@ -20,7 +25,7 @@ def get_paper_details_from_arxiv_id(arxiv_id):
         }
         return details
     except Exception as e:
-        print(f"Failed to fetch details for {arxiv_id}. Error: {e}")
+        logging.error(f"Failed to fetch details for {arxiv_id}. Error: {e}")
         return None
 
 
@@ -45,12 +50,12 @@ def download_and_save_paper(link, csv_file, existing_papers, headers):
     paper_details = get_paper_details_from_arxiv_id(arxiv_id)
 
     if paper_details is None:
-        print(f"Failed to fetch details for {arxiv_id}. Skipping...")
+        logging.error(f"Failed to fetch details for {arxiv_id}")
         return
 
     # Check if paper exists in CSV
     if paper_exists_in_list(paper_details['title'], existing_papers):
-        print(f"Arxiv paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
+        logging.info(f"Arxiv paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
         return
 
     # Append to CSV
@@ -68,7 +73,7 @@ def download_and_save_paper(link, csv_file, existing_papers, headers):
     pdf_path = os.path.join(root_directory(), 'data', 'papers', pdf_filename)
     with open(pdf_path, 'wb') as f:
         f.write(pdf_response.content)
-    print(f"Downloaded Arxiv paper {pdf_filename}")
+    logging.info(f"Downloaded Arxiv paper {pdf_filename}")
 
 
 def download_arxiv_papers(paper_links, csv_file):
@@ -142,7 +147,7 @@ def get_ssrn_details_from_url(url):
         return details
 
     except Exception as e:
-        print(f"Failed to fetch details for {url}. Error: {e}")
+        logging.error(f"Failed to fetch details for {url}. Error: {e}")
         return None
 
 
@@ -161,12 +166,12 @@ def paper_exists_in_csv(title, csv_file):
 def download_and_save_ssrn_paper(link, csv_file):
     paper_details = get_ssrn_details_from_url(link)
     if paper_details is None:
-        print(f"Failed to fetch details for {link}. Skipping...")
+        logging.warning(f"Failed to fetch details for {link}. Skipping...")
         return
 
     # Check if paper exists in CSV
     if paper_exists_in_csv(paper_details['title'], csv_file):
-        print(f"SSRN paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
+        logging.info(f"SSRN paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
         return
 
     # Write to CSV
@@ -174,7 +179,7 @@ def download_and_save_ssrn_paper(link, csv_file):
         fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writerow(paper_details)
-    print(f"Added details for SSRN paper titled '{paper_details['title']}' to CSV.")
+    logging.info(f"Added details for SSRN paper titled '{paper_details['title']}' to CSV.")
 
 
 def download_ssrn_papers(paper_links, csv_file):
