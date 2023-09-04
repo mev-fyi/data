@@ -1,4 +1,4 @@
-### Quick links for hustlers: [Research Google Sheet](https://docs.google.com/spreadsheets/d/1POtuj3DtF3A-uwm4MtKvwNYtnl_PW6DPUYj6x7yJUIs/edit#gid=1299175463)
+### Quick links for hustlers: [Uploaded research: data.mev.fyi](data.mev.fyi)
 
 # MEV.FYI
 
@@ -51,7 +51,9 @@ We welcome contributions from everyone, irrespective of your background or exper
 
 1. **Fork the Repository**: Start by forking this repository.
 2. **Clone & Create a New Branch**: Clone the repository to your local machine and create a new branch.
-3. **Make Changes**: Add your contributions e.g. link to a relevant research paper in data/links/papers.txt. Articles, discussion thread, forum post or any educational content can be added to data/links/articles.txt.
+3. **Make Changes**: Add your contributions namely 
+   1. link to a relevant research paper in data/links/arxiv_papers.csv alongside your handle if you want to be noted as paper referrer. 
+   2. Articles, discussion thread, forum post or any educational content can be added to data/links/articles.csv alongside your handle if you want to be noted as article referrer.
 4. **Push & Create a Pull Request**: Push your changes to your fork and then open a pull request against this repository.
 
 ## Support the Initiative

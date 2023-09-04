@@ -9,8 +9,10 @@
 - [ ] [Optimise sorting of topics on Google Sheet](#task-1)
 ## Codebase
 ### Devops
+- [ ] [Create Google sheet staging environment](#task-2)
 - [ ] [Host site on Google Cloud](#task-2)
   - [ ] [Blocker: Streamlit LLM-app frontend](#task-2)
+
 
 ### Back-end
 ####
