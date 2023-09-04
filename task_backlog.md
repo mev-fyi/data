@@ -8,6 +8,9 @@
     - [ ] [Fork youtube_video_and_transcript_downloader to this repo](#task-1)
 - [ ] [Optimise sorting of topics on Google Sheet](#task-1)
 ## Codebase
+### Devops
+- [ ] [Host site on Google Cloud](#task-2)
+  - [ ] [Blocker: Streamlit LLM-app frontend](#task-2)
 
 ### Back-end
 ####
@@ -24,5 +27,5 @@
 - [ ] [Improve transcript generation e.g. with LLM inference (AssemblyAI) on .mp3 youtube video content](#task-5)
 
 ### Frontend
-- [ ] [Add Streamlit frontend for LLM-based chatbot for papers, blogs, podcast recommendation (backend)](#task-4)
+- [ ] [Add Streamlit frontend for LLM-based chatbot for papers, blogs, podcast recommendation](#task-4)
 
