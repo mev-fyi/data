@@ -1,4 +1,4 @@
-### Quick links for hustlers: [Uploaded research: data.mev.fyi](data.mev.fyi)
+### Quick links for hustlers: (1) uploaded research: [data.mev.fyi](https://data.mev.fyi), (2) website: [mev.fyi](https://mev.fyi)
 
 # MEV.FYI
 
