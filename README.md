@@ -1,4 +1,4 @@
-### Quick links for hustlers: [Research Google Sheet](https://docs.google.com/spreadsheets/d/1POtuj3DtF3A-uwm4MtKvwNYtnl_PW6DPUYj6x7yJUIs/edit#gid=1299175463); [mev.fyi](mev.fyi)
+### Quick links for hustlers: [Research Google Sheet](https://docs.google.com/spreadsheets/d/1POtuj3DtF3A-uwm4MtKvwNYtnl_PW6DPUYj6x7yJUIs/edit#gid=1299175463)
 
 # MEV.FYI
 
