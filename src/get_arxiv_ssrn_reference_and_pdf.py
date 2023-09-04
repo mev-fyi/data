@@ -5,7 +5,14 @@ import csv
 from bs4 import BeautifulSoup
 import concurrent.futures
 import logging
+import gspread
+import gspread_dataframe
+from googleapiclient.discovery import build
+from oauth2client.service_account import ServiceAccountCredentials
+from dotenv import load_dotenv
+import pandas as pd
 
+load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('arxiv')
 logger.setLevel(logging.WARNING)
@@ -306,6 +313,63 @@ def reference_and_log_ssrn_papers(paper_links: list, csv_file: str) -> None:
         executor.map(reference_and_log_ssrn_paper, paper_links, [csv_file] * len(paper_links))
 
 
+def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
+    """
+    Update a Google Sheet with the contents of a CSV file.
+
+    Parameters:
+    - csv_file (str): Path to the CSV file.
+    - sheet_id (str): ID of the Google Sheet to update.
+    """
+    # Set up credentials
+    creds = ServiceAccountCredentials.from_json_keyfile_name(os.getenv("GOOGLE_SHEET_CREDENTIALS_JSON"), [
+        'https://spreadsheets.google.com/feeds',
+        'https://www.googleapis.com/auth/spreadsheets',
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/drive'
+    ])
+
+    # Open the Google Sheet using gspread
+    client = gspread.authorize(creds)
+    sheet = client.open_by_key(sheet_id).sheet1
+
+    # Clear the sheet before inserting new data
+    sheet.clear()
+
+    # Load CSV data into a pandas DataFrame
+    df = pd.read_csv(csv_file)
+
+    # Use gspread's `set_dataframe` to upload the whole DataFrame at once
+    gspread_dataframe.set_with_dataframe(sheet, df, row=1, col=1, include_index=False, resize=True)
+
+    # Set up filters for all columns using Google Sheets API
+    service = build('sheets', 'v4', credentials=creds)
+
+    # Determine the range for the filter based on the shape of the DataFrame
+    grid_range = {
+        'sheetId': sheet.id,
+        'startRowIndex': 0,
+        'endRowIndex': df.shape[0] + 1,
+        'startColumnIndex': 0,
+        'endColumnIndex': df.shape[1]
+    }
+
+    # Set the filter using the setBasicFilter method
+    body = {
+        'requests': [{
+            'setBasicFilter': {
+                'filter': {
+                    'range': grid_range
+                }
+            }
+        }]
+    }
+
+    service.spreadsheets().batchUpdate(spreadsheetId=sheet_id, body=body).execute()
+
+    logging.info("Saved CSV data to Google Sheet and added filters.")
+
+
 # Main execution
 if __name__ == "__main__":
     """
@@ -336,4 +400,8 @@ if __name__ == "__main__":
     with open(os.path.join(root_directory(), 'data', 'links', 'ssrn_papers.txt'), 'r') as f:
         ssrn_links = [line.strip() for line in f.readlines()]
     reference_and_log_ssrn_papers(paper_links=ssrn_links, csv_file=csv_file)
+
+    # Update the Google Sheet after updating the CSV
+    update_google_sheet_with_csv(csv_file=csv_file, sheet_id="1POtuj3DtF3A-uwm4MtKvwNYtnl_PW6DPUYj6x7yJUIs")
+
 
