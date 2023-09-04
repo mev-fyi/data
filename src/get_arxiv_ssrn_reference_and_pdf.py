@@ -12,6 +12,8 @@ from oauth2client.service_account import ServiceAccountCredentials
 from dotenv import load_dotenv
 import pandas as pd
 
+from src.utils import root_directory
+
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('arxiv')
@@ -164,23 +166,6 @@ def download_arxiv_papers(paper_links: list, csv_file: str) -> None:
     # Use ProcessPoolExecutor to run tasks in parallel
     with concurrent.futures.ProcessPoolExecutor() as executor:
         executor.map(download_and_save_paper, paper_links, [csv_file]*len(paper_links), [existing_papers]*len(paper_links), [headers]*len(paper_links))
-
-
-def root_directory() -> str:
-    """
-    Determine the root directory of the project based on the presence of '.git' directory.
-
-    Returns:
-    - str: The path to the root directory of the project.
-    """
-    current_dir = os.getcwd()
-
-    while True:
-        if '.git' in os.listdir(current_dir):
-            return current_dir
-        else:
-            # Go up one level
-            current_dir = os.path.dirname(current_dir)
 
 
 def quickSoup(url) -> BeautifulSoup or None:
