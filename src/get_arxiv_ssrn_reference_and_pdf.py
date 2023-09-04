@@ -379,9 +379,9 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
     # Set up filters, format header row in bold, and freeze the header using Google Sheets API
     service = build('sheets', 'v4', credentials=creds)
 
-    # Prepare the requests for bold formatting and freezing header
+    # Prepare the requests for bold formatting, center-align header, left-align content, and freezing header
     requests = [
-        # Bold formatting request
+        # Bold formatting request for header
         {
             'repeatCell': {
                 'range': {
@@ -393,10 +393,27 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
                     'userEnteredFormat': {
                         'textFormat': {
                             'bold': True
-                        }
+                        },
+                        'horizontalAlignment': 'CENTER'  # Center-align header text
                     }
                 },
-                'fields': 'userEnteredFormat.textFormat.bold'
+                'fields': 'userEnteredFormat.textFormat.bold, userEnteredFormat.horizontalAlignment'
+            }
+        },
+        # Left-align content rows
+        {
+            'repeatCell': {
+                'range': {
+                    'sheetId': sheet.id,
+                    'startRowIndex': 1,  # Start from the row after header
+                    'endRowIndex': df.shape[0] + 1
+                },
+                'cell': {
+                    'userEnteredFormat': {
+                        'horizontalAlignment': 'LEFT'  # Left-align content
+                    }
+                },
+                'fields': 'userEnteredFormat.horizontalAlignment'
             }
         },
         # Freeze header row request
@@ -426,6 +443,20 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
             }
         }
     ]
+
+    # Add request to rename the worksheet
+    rename_sheet_request = {
+        'updateSheetProperties': {
+            'properties': {
+                'sheetId': sheet.id,
+                'title': "Papers"
+            },
+            'fields': 'title'
+        }
+    }
+
+    # Append the request to the existing list
+    requests.append(rename_sheet_request)
 
     # Execute the requests
     body = {
@@ -457,13 +488,14 @@ if __name__ == "__main__":
 
     csv_file = os.path.join(root_directory(), 'data', 'paper_details.csv')
 
-    # For arXiv links
-    arxiv_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'arxiv_papers.csv'))
-    download_arxiv_papers(paper_links_and_referrers=arxiv_links_and_referrers, csv_file=csv_file)
+    if os.getenv("FETCH_NEW_PDF") == "True":
+        # For arXiv links
+        arxiv_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'arxiv_papers.csv'))
+        download_arxiv_papers(paper_links_and_referrers=arxiv_links_and_referrers, csv_file=csv_file)
 
-    # For SSRN links. Credits to https://github.com/karthiktadepalli1/ssrn-scraper
-    ssrn_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'ssrn_papers.csv'))
-    reference_and_log_ssrn_papers(paper_links_and_referrers=ssrn_links_and_referrers, csv_file=csv_file)
+        # For SSRN links. Credits to https://github.com/karthiktadepalli1/ssrn-scraper
+        ssrn_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'ssrn_papers.csv'))
+        reference_and_log_ssrn_papers(paper_links_and_referrers=ssrn_links_and_referrers, csv_file=csv_file)
 
     # Update the Google Sheet after updating the CSV
     update_google_sheet_with_csv(csv_file=csv_file, sheet_id=os.getenv("GOOGLE_SHEET_ID"))
