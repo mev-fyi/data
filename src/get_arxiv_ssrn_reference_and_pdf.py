@@ -20,6 +20,12 @@ logger = logging.getLogger('arxiv')
 logger.setLevel(logging.WARNING)
 
 
+def read_csv_links_and_referrers(file_path):
+    with open(file_path, mode='r') as f:
+        reader = csv.DictReader(f)
+        return [(row['paper'], row['referrer']) for row in reader]
+
+
 def ensure_newline_in_csv(csv_file: str) -> None:
     """
     Ensure that a CSV file ends with a newline.
@@ -27,15 +33,23 @@ def ensure_newline_in_csv(csv_file: str) -> None:
     Parameters:
     - csv_file (str): Path to the CSV file.
     """
-    with open(csv_file, 'a', newline='') as f:
-        # Move to the end of file
-        f.seek(0, os.SEEK_END)
+    try:
+        with open(csv_file, 'a+', newline='') as f:  # Using 'a+' mode to allow reading
+            # Move to the beginning of the file to check its content
+            f.seek(0, os.SEEK_SET)
+            if not f.read():  # File is empty
+                return
 
-        # Check if the file ends with a newline, if not add one
-        if f.tell() > 0:
-            f.seek(f.tell() - 1, os.SEEK_SET)
-            if f.read(1) != '\n':
-                f.write('\n')
+            # Move to the end of the file
+            f.seek(0, os.SEEK_END)
+
+            # Check if the file ends with a newline, if not, add one
+            if f.tell() > 0:
+                f.seek(f.tell() - 1, os.SEEK_SET)
+                if f.read(1) != '\n':
+                    f.write('\n')
+    except Exception as e:
+        logging.error(f"Failed to ensure newline in {csv_file}. Error: {e}")
 
 
 def get_paper_details_from_arxiv_id(arxiv_id: str) -> dict or None:
@@ -99,7 +113,7 @@ def paper_exists_in_list(title: str, existing_papers: list) -> bool:
     return title in existing_papers
 
 
-def download_and_save_paper(link: str, csv_file: str, existing_papers: list, headers: dict) -> None:
+def download_and_save_arxiv_paper(link: str, csv_file: str, existing_papers: list, headers: dict, referrer: str) -> None:
     """
     Download a paper from its link and save its details to a CSV file.
 
@@ -124,9 +138,11 @@ def download_and_save_paper(link: str, csv_file: str, existing_papers: list, hea
     # Ensure CSV ends with a newline
     ensure_newline_in_csv(csv_file)
 
+    paper_details["referrer"] = referrer
+
     # Append to CSV
     with open(csv_file, 'a', newline='') as csvfile:  # open in append mode to write data
-        fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date']
+        fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date', 'referrer']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writerow(paper_details)
 
@@ -142,12 +158,12 @@ def download_and_save_paper(link: str, csv_file: str, existing_papers: list, hea
     logging.info(f"Downloaded Arxiv paper {pdf_filename}")
 
 
-def download_arxiv_papers(paper_links: list, csv_file: str) -> None:
+def download_arxiv_papers(paper_links_and_referrers: list, csv_file: str) -> None:
     """
     Download multiple papers from Arxiv and save their details to a CSV file.
 
     Parameters:
-    - paper_links (list): List of links to the papers.
+    - paper_links_and_referrers (list): List of links and their referrers to the papers.
     - csv_file (str): Path to the CSV file.
     """
     headers = {
@@ -159,13 +175,20 @@ def download_arxiv_papers(paper_links: list, csv_file: str) -> None:
     # Write header only if CSV file is empty (newly created)
     if not existing_papers:
         with open(csv_file, 'w', newline='') as csvfile:  # open in write mode only to write the header
-            fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date']
+            fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date', 'referrer']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
 
     # Use ProcessPoolExecutor to run tasks in parallel
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        executor.map(download_and_save_paper, paper_links, [csv_file]*len(paper_links), [existing_papers]*len(paper_links), [headers]*len(paper_links))
+        executor.map(
+            download_and_save_arxiv_paper,
+            [link for link, referrer in paper_links_and_referrers],
+            [csv_file] * len(paper_links_and_referrers),
+            [existing_papers] * len(paper_links_and_referrers),
+            [headers] * len(paper_links_and_referrers),
+            [referrer for link, referrer in paper_links_and_referrers]
+        )
 
 
 def quickSoup(url) -> BeautifulSoup or None:
@@ -256,7 +279,7 @@ def paper_exists_in_csv(title: str, csv_file: str) -> bool:
     return False
 
 
-def reference_and_log_ssrn_paper(link: str, csv_file: str) -> None:
+def reference_and_log_ssrn_paper(link: str, csv_file: str, referrer: str) -> None:
     """
     Download a paper's details from its SSRN link and save to a CSV file.
 
@@ -277,25 +300,29 @@ def reference_and_log_ssrn_paper(link: str, csv_file: str) -> None:
     # Ensure CSV ends with a newline
     ensure_newline_in_csv(csv_file)
 
+    paper_details["referrer"] = referrer
+
     # Write to CSV
     with open(csv_file, 'a', newline='') as csvfile:  # Open in append mode to write data
-        fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date']
+        fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date', 'referrer']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writerow(paper_details)
     logging.info(f"Added details for SSRN paper titled '{paper_details['title']}' to CSV.")
 
 
-def reference_and_log_ssrn_papers(paper_links: list, csv_file: str) -> None:
+def reference_and_log_ssrn_papers(paper_links_and_referrers: list, csv_file: str) -> None:
     """
     Download multiple papers' details from SSRN and save them to a CSV file.
 
     Parameters:
-    - paper_links (list): List of links to the SSRN papers.
+    - paper_links_and_referrers (list): List of tuples with links to the SSRN papers and their referrers.
     - csv_file (str): Path to the CSV file.
     """
     # Use ProcessPoolExecutor to run tasks in parallel
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        executor.map(reference_and_log_ssrn_paper, paper_links, [csv_file] * len(paper_links))
+        # Unpack links and referrers for the executor
+        paper_links, referrers = zip(*paper_links_and_referrers)
+        executor.map(reference_and_log_ssrn_paper, paper_links, [csv_file] * len(paper_links), referrers)
 
 
 def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
@@ -314,15 +341,26 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
         'https://www.googleapis.com/auth/drive'
     ])
 
+    # Load CSV data into a pandas DataFrame
+    df = pd.read_csv(csv_file)
+
+    # Transform the 'referrer' column
+    def create_hyperlink_formula(value):
+        if pd.isna(value) or value == "":
+            return "anon"
+        elif "http" not in value:
+            return value
+        link_name = value.split("/")[-1]
+        return f'=HYPERLINK("{value}", "{link_name}")'
+
+    df['referrer'] = df['referrer'].apply(create_hyperlink_formula)
+
     # Open the Google Sheet using gspread
     client = gspread.authorize(creds)
     sheet = client.open_by_key(sheet_id).sheet1
 
     # Clear the sheet before inserting new data
     sheet.clear()
-
-    # Load CSV data into a pandas DataFrame
-    df = pd.read_csv(csv_file)
 
     # Use gspread's `set_dataframe` to upload the whole DataFrame at once
     gspread_dataframe.set_with_dataframe(sheet, df, row=1, col=1, include_index=False, resize=True)
@@ -376,15 +414,12 @@ if __name__ == "__main__":
     csv_file = os.path.join(root_directory(), 'data', 'paper_details.csv')
 
     # For arXiv links
-    with open(os.path.join(root_directory(), 'data', 'links', 'arxiv_papers.txt'), 'r') as f:
-        arxiv_links = [line.strip() for line in f.readlines()]
-    download_arxiv_papers(paper_links=arxiv_links, csv_file=csv_file)
+    arxiv_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'arxiv_papers.csv'))
+    download_arxiv_papers(paper_links_and_referrers=arxiv_links_and_referrers, csv_file=csv_file)
 
     # For SSRN links. Credits to https://github.com/karthiktadepalli1/ssrn-scraper
-    # Assuming you have a file of SSRN links similar to arXiv
-    with open(os.path.join(root_directory(), 'data', 'links', 'ssrn_papers.txt'), 'r') as f:
-        ssrn_links = [line.strip() for line in f.readlines()]
-    reference_and_log_ssrn_papers(paper_links=ssrn_links, csv_file=csv_file)
+    ssrn_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'ssrn_papers.csv'))
+    reference_and_log_ssrn_papers(paper_links_and_referrers=ssrn_links_and_referrers, csv_file=csv_file)
 
     # Update the Google Sheet after updating the CSV
     update_google_sheet_with_csv(csv_file=csv_file, sheet_id=os.getenv("GOOGLE_SHEET_ID"))
