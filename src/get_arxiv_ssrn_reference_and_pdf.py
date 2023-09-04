@@ -344,7 +344,18 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
     # Load CSV data into a pandas DataFrame
     df = pd.read_csv(csv_file)
 
-    # Transform the 'referrer' column
+    # Rename the columns to your desired names
+    column_mapping = {
+        'title': 'Title',
+        'authors': 'Authors',
+        'pdf_link': 'PDF link',
+        'topics': 'Topics',
+        'release_date': 'Release date',
+        'referrer': 'Referrer'
+    }
+    df.rename(columns=column_mapping, inplace=True)
+
+    # Transform the 'Referrer' column
     def create_hyperlink_formula(value):
         if pd.isna(value) or value == "":
             return "anon"
@@ -353,7 +364,7 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
         link_name = value.split("/")[-1]
         return f'=HYPERLINK("{value}", "{link_name}")'
 
-    df['referrer'] = df['referrer'].apply(create_hyperlink_formula)
+    df['Referrer'] = df['Referrer'].apply(create_hyperlink_formula)
 
     # Open the Google Sheet using gspread
     client = gspread.authorize(creds)
@@ -365,32 +376,65 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
     # Use gspread's `set_dataframe` to upload the whole DataFrame at once
     gspread_dataframe.set_with_dataframe(sheet, df, row=1, col=1, include_index=False, resize=True)
 
-    # Set up filters for all columns using Google Sheets API
+    # Set up filters, format header row in bold, and freeze the header using Google Sheets API
     service = build('sheets', 'v4', credentials=creds)
 
-    # Determine the range for the filter based on the shape of the DataFrame
-    grid_range = {
-        'sheetId': sheet.id,
-        'startRowIndex': 0,
-        'endRowIndex': df.shape[0] + 1,
-        'startColumnIndex': 0,
-        'endColumnIndex': df.shape[1]
-    }
-
-    # Set the filter using the setBasicFilter method
-    body = {
-        'requests': [{
+    # Prepare the requests for bold formatting and freezing header
+    requests = [
+        # Bold formatting request
+        {
+            'repeatCell': {
+                'range': {
+                    'sheetId': sheet.id,
+                    'startRowIndex': 0,
+                    'endRowIndex': 1
+                },
+                'cell': {
+                    'userEnteredFormat': {
+                        'textFormat': {
+                            'bold': True
+                        }
+                    }
+                },
+                'fields': 'userEnteredFormat.textFormat.bold'
+            }
+        },
+        # Freeze header row request
+        {
+            'updateSheetProperties': {
+                'properties': {
+                    'sheetId': sheet.id,
+                    'gridProperties': {
+                        'frozenRowCount': 1
+                    }
+                },
+                'fields': 'gridProperties.frozenRowCount'
+            }
+        },
+        # Filter request
+        {
             'setBasicFilter': {
                 'filter': {
-                    'range': grid_range
+                    'range': {
+                        'sheetId': sheet.id,
+                        'startRowIndex': 0,
+                        'endRowIndex': df.shape[0] + 1,
+                        'startColumnIndex': 0,
+                        'endColumnIndex': df.shape[1]
+                    }
                 }
             }
-        }]
+        }
+    ]
+
+    # Execute the requests
+    body = {
+        'requests': requests
     }
 
     service.spreadsheets().batchUpdate(spreadsheetId=sheet_id, body=body).execute()
 
-    logging.info("Saved CSV data to Google Sheet and added filters.")
+    logging.info("Saved CSV data to Google Sheet, formatted header, and added filters.")
 
 
 # Main execution
