@@ -3,7 +3,8 @@
 - [ ] [Improve contribution UX for papers, links](#task-1)
     - [ ] [e.g. with forms for smoothest UX / .csv or .txt uploads?](#task-1)
     - [ ] [Figure out how to securely read and upload if validated the papers and links list from .csv or .txt uploads](#task-1)
-- [ ] [Add a referrer (person who sourced the research document) column to each sheet for credit assignment / reward](#task-1) 
+- [ ] [Automatically run Google Sheet refresh at each new relevant contribution](#task-1) 
+- [ ] [Automate transcript downloads workflow as YouTube channels are added](#task-1)
 
 ## Codebase
 
