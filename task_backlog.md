@@ -5,6 +5,7 @@
     - [ ] [Figure out how to securely read and upload if validated the papers and links list from .csv or .txt uploads](#task-1)
 - [ ] [Automatically run Google Sheet refresh at each new relevant contribution](#task-1) 
 - [ ] [Automate transcript downloads workflow as YouTube channels are added](#task-1)
+    - [ ] [Fork youtube_video_and_transcript_downloader to this repo](#task-1)
 
 ## Codebase
 
