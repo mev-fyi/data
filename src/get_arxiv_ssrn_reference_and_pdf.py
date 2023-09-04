@@ -402,6 +402,6 @@ if __name__ == "__main__":
     reference_and_log_ssrn_papers(paper_links=ssrn_links, csv_file=csv_file)
 
     # Update the Google Sheet after updating the CSV
-    update_google_sheet_with_csv(csv_file=csv_file, sheet_id="1POtuj3DtF3A-uwm4MtKvwNYtnl_PW6DPUYj6x7yJUIs")
+    update_google_sheet_with_csv(csv_file=csv_file, sheet_id=os.getenv("GOOGLE_SHEET_ID"))
 
 
