@@ -6,14 +6,17 @@
 - [ ] [Automatically run Google Sheet refresh at each new relevant contribution](#task-1) 
 - [ ] [Automate transcript downloads workflow as YouTube channels are added](#task-1)
     - [ ] [Fork youtube_video_and_transcript_downloader to this repo](#task-1)
-
+- [ ] [Optimise sorting of topics on Google Sheet](#task-1)
 ## Codebase
 
 ### Back-end
 ####
 - [ ] [Add support for Twitter threads](#task-2)
   - [ ] [Should they be written as blogs first?](#task-2)
+- [ ] [Add support for blogs, articles](#task-2)
+- [ ] [Add support for other research sites, journals](#task-2)
 - [ ] [Check https://apify.com/apify/website-content-crowler](#task-2)
+
 #### LLM chatbot and inference
 - [ ] [Design architecture for LLM-based chatbot for papers, blogs, podcast recommendation (backend)](#task-2)
 - [ ] [Add LLM-based chatbot for recommending papers, blogs, podcast recommendation (backend)](#task-3)

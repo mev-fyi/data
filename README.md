@@ -1,3 +1,5 @@
+### Quick links for hustlers: [Research Google Sheet](https://docs.google.com/spreadsheets/d/1POtuj3DtF3A-uwm4MtKvwNYtnl_PW6DPUYj6x7yJUIs/edit#gid=1299175463); [mev.fyi](mev.fyi)
+
 # MEV.FYI
 
 Welcome to `mev.fyi` - an open-source initiative dedicated to gathering and curating research on Maximal Extractable Value (MEV), incentive alignment, mechanism design, and their implications in the blockchain ecosystem, with a specific focus on Ethereum.
