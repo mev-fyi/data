@@ -136,7 +136,7 @@ def update_google_sheet_with_youtube_handles(txt_file: str, sheet_id: str, new_t
     # Create DataFrame with names and links
     df = pd.DataFrame({
         'YouTube Channel Handle': handles,
-        'Link': ['https://www.youtube.com/channel/' + handle.strip() for handle in handles]
+        'Link': ['https://www.youtube.com/' + handle.strip() for handle in handles]
     })
 
     # Use gspread's `set_dataframe` to upload the whole DataFrame at once
