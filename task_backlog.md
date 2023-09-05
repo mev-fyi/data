@@ -22,11 +22,13 @@ Priority set: Low, Medium, High
 ####
 - [ ] [Add support for Twitter threads](#task-2)
   - [ ] [Should they be written as blogs first?](#task-2)
-  - Priority: Medium
+  - Priority: High
 - [ ] [Add support for blogs, articles](#task-2)
-  - Priority: Medium
+  - Priority: High
 - [ ] [Add support for other research sites, journals](#task-2)
-  - Priority: Medium
+  - Priority: High
+- [ ] [Automagically parse forms filled by contributors and append them to the relevant lists](#task-2)
+  - Priority: High
 - [ ] [Check https://apify.com/apify/website-content-crowler](#task-2)
   - Priority: Low
 

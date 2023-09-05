@@ -1,4 +1,4 @@
-### Quick links for hustlers: (1) Contribute research: [add.mev.fyi](https://add.mev.fyi), (2) uploaded research: [data.mev.fyi](https://data.mev.fyi), (3) website: [mev.fyi](https://mev.fyi)
+### (1) Contribute research: [add.mev.fyi](https://add.mev.fyi), (2) uploaded research: [data.mev.fyi](https://data.mev.fyi), (3) website: [mev.fyi](https://mev.fyi)
 
 # MEV.FYI
 
@@ -48,6 +48,7 @@ And, more broadly:
 ## How to Contribute
 
 We welcome contributions from everyone, irrespective of your background or expertise level!
+You can contribute either using the form here [add.mev.fyi](https://add.mev.fyi) or using via GitHub as per the instructions below:
 
 1. **Fork the Repository**: Start by forking this repository.
 2. **Clone & Create a New Branch**: Clone the repository to your local machine and create a new branch.
