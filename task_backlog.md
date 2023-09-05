@@ -2,15 +2,13 @@
 Priority set: Low, Medium, High
 
 ## Contribution UX
-- [ ] [Improve contribution UX for papers, links](#task-1)
-    - [ ] [e.g. with forms for smoothest UX / .csv or .txt uploads?](#task-1)
-    - [ ] [Figure out how to securely read and upload if validated the papers and links list from .csv or .txt uploads](#task-1)
-    - Priority: High
 - [ ] [Automate transcript downloads workflow as YouTube channels are added](#task-1)
     - [ ] [Fork youtube_video_and_transcript_downloader to this repo](#task-1)
     - Priority: Low
 - [ ] [Optimise sorting of topics on Google Sheet](#task-1)
   - Priority: Low. Context: right now the topics are a single written to each cell. I believe the best UX would be a dropdown list which is populated for each cell such that a given user could select (ideally from a single column) all the tags of interest. 
+- [ ] [Improve contribution UX for links beyond form](#task-1)
+    - Priority: Low
 
 ## Codebase
 ### Devops
@@ -30,12 +28,14 @@ Priority set: Low, Medium, High
 - [ ] [Add support for other research sites, journals](#task-2)
   - Priority: Medium
 - [ ] [Check https://apify.com/apify/website-content-crowler](#task-2)
+  - Priority: Low
 
 #### LLM chatbot and inference
 - [ ] [Design architecture for LLM-based chatbot for papers, blogs, podcast recommendation (backend)](#task-2)
   - Priority: Medium
-  - Context: There is a trade-off between using off-the-shelf solution (IBM Watson Discovery for summarizing + service client like Intercom) vs. building from scratch with Langchain + vector database and HuggingFace or GPT backend
+  - Context: There is a trade-off between using off-the-shelf solution (IBM Watson Discovery for summarizing + service client like Intercom) vs. building from scratch with Langchain + vector database and HuggingFace or GPT backend. Latter likely more scalable with open-source contributions.
 - [ ] [Add LLM-based chatbot for recommending papers, blogs, podcast recommendation (backend)](#task-3)
+  - Priority: Medium
 - [ ] [Generate MEV glossary, definitions based on Youtube transcripts, podcasts, papers](#task-6)
   - Priority: Low
 - [ ] [Improve transcript generation e.g. with LLM inference (AssemblyAI) on .mp3 youtube video content](#task-5)
