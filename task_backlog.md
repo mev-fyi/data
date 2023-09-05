@@ -9,6 +9,17 @@ Priority set: Low, Medium, High
   - Priority: Low. Context: right now the topics are a single written to each cell. I believe the best UX would be a dropdown list which is populated for each cell such that a given user could select (ideally from a single column) all the tags of interest. 
 - [ ] [Improve contribution UX for links beyond form](#task-1)
     - Priority: Low
+- [ ] [Create Twitter bot to contribute either a whole thread when called, else the links in the tweet content](#task-1)
+    - Priority: Low
+
+## Research exploitation UX
+- [ ] [Scrape all websites for new uploads and add links to uploads in most recent order on a single worksheet](#task-1)
+  - Priority: Medium
+- [ ] [add GPT-generated tags to each link](#task-1)
+  - Priority: Low
+
+## mev.fyi governance
+- [ ] [Deprecate typeform for scalable open-source solution with links waiting to be uploaded](#task-1)
 
 ## Codebase
 ### Devops
