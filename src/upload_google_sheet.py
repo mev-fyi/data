@@ -171,6 +171,25 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
             "fields": "userEnteredFormat.numberFormat"
         }
     }
+    # Sort request for 'Release date' column in descending order
+    sort_request = {
+        'sortRange': {
+            'range': {
+                'sheetId': sheet.id,
+                'startRowIndex': 1,  # Start from the row after header
+                'endRowIndex': df.shape[0] + 1,
+                'startColumnIndex': 0,
+                'endColumnIndex': df.shape[1]
+            },
+            'sortSpecs': [{
+                'dimensionIndex': release_date_index,
+                'sortOrder': 'DESCENDING'
+            }]
+        }
+    }
+
+    # Append the sort request to the existing list
+    requests.append(sort_request)
 
     requests.append(date_format_request)
 
