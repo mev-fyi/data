@@ -27,6 +27,17 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
     # Load CSV data into a pandas DataFrame
     df = pd.read_csv(csv_file)
 
+    def convert_to_standard_date_format(date_str):
+        try:
+            # First, try the default format
+            return pd.to_datetime(date_str, format='%Y-%m-%d').strftime('%Y-%m-%d')
+        except ValueError:
+            # If it fails, try the "dd MMM yyyy" format
+            return pd.to_datetime(date_str, format='%d %b %Y').strftime('%Y-%m-%d')
+
+    # Apply the conversion function
+    df['release_date'] = df['release_date'].apply(convert_to_standard_date_format)
+
     # Rename the columns to your desired names
     column_mapping = {
         'title': 'Title',
@@ -137,6 +148,31 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
             'fields': 'title'
         }
     }
+
+    release_date_index = df.columns.get_loc(column_mapping['release_date'])
+
+    date_format_request = {
+        "repeatCell": {
+            "range": {
+                "sheetId": sheet.id,
+                "startRowIndex": 1,
+                "endRowIndex": df.shape[0] + 1,
+                "startColumnIndex": release_date_index,
+                "endColumnIndex": release_date_index + 1
+            },
+            "cell": {
+                "userEnteredFormat": {
+                    "numberFormat": {
+                        "type": "DATE",
+                        "pattern": "yyyy-mm-dd"
+                    }
+                }
+            },
+            "fields": "userEnteredFormat.numberFormat"
+        }
+    }
+
+    requests.append(date_format_request)
 
     # Append the request to the existing list
     requests.append(rename_sheet_request)
