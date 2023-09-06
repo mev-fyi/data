@@ -4,6 +4,11 @@
 
 Welcome to `mev.fyi` - an open-source initiative dedicated to gathering and curating research on Maximal Extractable Value (MEV), incentive alignment, mechanism design, and their implications in the blockchain ecosystem, with a specific focus on Ethereum.
 
+`mev.fyi`'s end-game is to become the go-to resource for MEV research and related topics using a chatbot interface to recommend papers, articles, and videos based on user input, something like [nfx.com/chat](https://www.nfx.com/chat).
+This repository can be the basis to create guides and formal definitions of MEV and the relevant Ethereum research as a whole, for education purposes e.g. to formalise and agree on definitions, onboard new (re)searchers [...].
+
+If you have a grander vision for this project, please do share it!
+
 ## What is MEV?
 
 Maximal Extractable Value (MEV) refers to the total amount that can be extracted from blockchain users by strategically ordering, including, or censoring transactions. It's an emerging area of study and concern in the blockchain space.
@@ -45,7 +50,7 @@ And, more broadly:
 - Auction theory and its Applications in Blockchain
 - Potential Solutions and Mitigations for MEV
 
-## How to Contribute
+## How to Contribute with Research
 
 We welcome contributions from everyone, irrespective of your background or expertise level!
 You can contribute either using the form here [add.mev.fyi](https://add.mev.fyi) or using via GitHub as per the instructions below:
@@ -56,6 +61,9 @@ You can contribute either using the form here [add.mev.fyi](https://add.mev.fyi)
    1. link to a relevant research paper in data/links/arxiv_papers.csv alongside your handle if you want to be noted as paper referrer. 
    2. Articles, discussion thread, forum post or any educational content can be added to data/links/articles.csv alongside your handle if you want to be noted as article referrer.
 4. **Push & Create a Pull Request**: Push your changes to your fork and then open a pull request against this repository.
+
+## How to Contribute to the tools around Research
+There is maintained work item list [here](task_backlog.md) that you can pick up and work on. If you want to add a new item, please open an issue and we will discuss it.
 
 ## Support the Initiative
 
