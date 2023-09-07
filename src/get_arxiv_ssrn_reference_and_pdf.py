@@ -8,7 +8,7 @@ import logging
 from dotenv import load_dotenv
 
 from src.upload_google_sheet import update_google_sheet_with_csv
-from src.utils import root_directory
+from src.utils import root_directory, ensure_newline_in_csv
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -20,32 +20,6 @@ def read_csv_links_and_referrers(file_path):
     with open(file_path, mode='r') as f:
         reader = csv.DictReader(f)
         return [(row['paper'], row['referrer']) for row in reader]
-
-
-def ensure_newline_in_csv(csv_file: str) -> None:
-    """
-    Ensure that a CSV file ends with a newline.
-
-    Parameters:
-    - csv_file (str): Path to the CSV file.
-    """
-    try:
-        with open(csv_file, 'a+', newline='') as f:  # Using 'a+' mode to allow reading
-            # Move to the beginning of the file to check its content
-            f.seek(0, os.SEEK_SET)
-            if not f.read():  # File is empty
-                return
-
-            # Move to the end of the file
-            f.seek(0, os.SEEK_END)
-
-            # Check if the file ends with a newline, if not, add one
-            if f.tell() > 0:
-                f.seek(f.tell() - 1, os.SEEK_SET)
-                if f.read(1) != '\n':
-                    f.write('\n')
-    except Exception as e:
-        logging.error(f"Failed to ensure newline in {csv_file}. Error: {e}")
 
 
 def get_paper_details_from_arxiv_id(arxiv_id: str) -> dict or None:

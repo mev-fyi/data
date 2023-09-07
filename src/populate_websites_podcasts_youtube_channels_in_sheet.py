@@ -9,7 +9,7 @@ import logging
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-from src.utils import root_directory
+from src.utils import root_directory, parse_and_categorize_links
 
 
 def update_google_sheet_with_websites(txt_file: str, sheet_id: str, new_tab_name: str) -> None:
@@ -194,6 +194,7 @@ def update_google_sheet_with_youtube_handles(txt_file: str, sheet_id: str, new_t
 # Main execution
 if __name__ == "__main__":
     repo_dir = root_directory()
+    parse_and_categorize_links(input_filepath=os.path.join(repo_dir, "data/links/to_parse.csv"))
     update_google_sheet_with_websites(txt_file=os.path.join(repo_dir, "data/links/websites.txt"),
                                       sheet_id=os.getenv("GOOGLE_SHEET_ID"),
                                       new_tab_name="Website Links")
