@@ -126,9 +126,9 @@ if __name__ == "__main__":
     updater = GoogleSheetUpdater(sheet_id=os.getenv("GOOGLE_SHEET_ID"), credentials_json=os.getenv("GOOGLE_SHEET_CREDENTIALS_JSON"))
 
     # Update Google Sheet with websites
-    websites_txt_file = os.path.join(repo_dir, "data/links/websites.txt")
-    websites_data = {'Websites': open(websites_txt_file, 'r').readlines()}
-    updater.update_google_sheet(data=websites_data, tab_name="Website Links", num_rows=1000, num_cols=1)
+    websites_csv_file = os.path.join(repo_dir, "data/links/websites.csv")
+    websites_data = pd.read_csv(websites_csv_file)
+    updater.update_google_sheet(data=websites_data, tab_name="Website Links", num_rows=1000, num_cols=len(websites_data.columns))
 
     # Update Google Sheet with YouTube handles
     youtube_txt_file = os.path.join(repo_dir, "data/links/youtube_channel_handles.txt")

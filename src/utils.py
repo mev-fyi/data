@@ -4,6 +4,7 @@ import logging
 import os
 import pandas as pd
 from urllib.parse import urlparse
+import re
 
 import requests
 from bs4 import BeautifulSoup
@@ -81,7 +82,21 @@ def parse_and_categorize_links(input_filepath: str, domains_filepath: str, resea
             domains.append(final_domain)
 
 
-def parse_and_categorize_links(input_filepath: str, domains_filepath: str, research_websites: list) -> None:
+def categorize_url(url, url_patterns, existing_domains):
+    if "twitter.com" in url and "/status/" in url:
+        return "Twitter thread"
+
+    for domain, pattern in url_patterns.items():
+        if re.match(pattern, url):
+            return "article"  # Categorize as an article
+
+    for domain in existing_domains:
+        if re.match(fr'^{re.escape(domain)}', url, re.IGNORECASE):
+            return "article"  # Categorize as an article based on existing domains
+
+    return "website"  # Default to categorizing as a website
+
+def parse_and_categorize_links(input_filepath: str, domains_filepath: str, research_websites: list, url_patterns) -> None:
     # Load your data
     df = pd.read_csv(input_filepath)
 
@@ -96,14 +111,26 @@ def parse_and_categorize_links(input_filepath: str, domains_filepath: str, resea
     iacr_mask = df['paper'].str.contains('iacr', case=False)
     youtube_mask = df['paper'].str.startswith('https://www.youtube.com/watch') | df['paper'].str.startswith('https://youtu.be/')
 
-    # Creating a mask for articles based on specified domains
-    articles_mask = df['paper'].str.contains('|'.join([fr'^{domain}' for domain in domains]), case=False) & ~pdf_mask
+
+    # Create separate DataFrames based on the conditions
+    articles_mask = df['paper'].apply(lambda url: categorize_url(url, url_patterns, domains) == "article")
+
+    website_mask = ~articles_mask
 
     pdf_df = df[pdf_mask]
     arxiv_df = df[arxiv_mask]
     ssrn_df = df[ssrn_mask]
     iacr_df = df[iacr_mask]
     articles_df = df[articles_mask]
+    websites_df = df[website_mask]
+
+    # Separate filtering for Twitter threads and other articles
+    twitter_thread_mask = articles_df['paper'].apply(lambda url: "twitter.com" in url and "/status/" in url)
+    other_articles_mask = ~twitter_thread_mask
+
+    # Create separate DataFrames for Twitter threads and other articles
+    twitter_thread_df = articles_df[twitter_thread_mask]
+    other_articles_df = articles_df[other_articles_mask]
 
     # Creating a separate DataFrame for YouTube videos
     youtube_df = df[youtube_mask]
@@ -132,6 +159,8 @@ def parse_and_categorize_links(input_filepath: str, domains_filepath: str, resea
         "iacr_papers.csv": iacr_df,
         "youtube_videos.csv": youtube_df,
         "articles.csv": articles_df,
+        "twitter_threads.csv": twitter_thread_df,
+        "websites.csv": websites_df,
     }
 
     # Update paths_and_dfs to include data frames from research_dfs
@@ -170,6 +199,23 @@ def parse_and_categorize_links(input_filepath: str, domains_filepath: str, resea
 if __name__ == "__main__":
     repo_dir = root_directory()
 
+    url_patterns = {
+        "notion_site": r"^https://[^/]+/[^/]+$",
+        "medium_article": r"^https://\w+\.medium\.com/.+",
+        "blog_metrika_article": r"^https://blog\.metrika\.co/.+",
+        "mirror_xyz_article_1": r"^https://\w+\.mirror\.xyz/.+",
+        "mirror_xyz_website": r"^https://mirror\.xyz/.+",
+        "drive_google_article": r"^https://drive\.google\.com/file/d/.+",
+        "galaxy_insights_article_1": r"^https://www\.galaxy\.com/insights/.+/.+",
+        "galaxy_insights_website": r"^https://www\.galaxy\.com/insights/.+",
+        "ethereum_notes_website": r"^https://notes\.ethereum\.org/@[^/]+/$",
+        "ethereum_notes_article": r"^https://notes\.ethereum\.org/@[^/]+/[^/]+$",
+        "medium_article_2": r"^https://medium\.com/.+/.+",
+        "medium_website": r"^https://medium\.com/.+",
+        "twitter_website": r"^https://twitter\.com/[^/]+/$",
+        "twitter_thread": r"^https://twitter\.com/bertcmiller/status/.+",
+    }
+
     parse_and_categorize_links(
         input_filepath=os.path.join(repo_dir, "data/links/to_parse.csv"),
         domains_filepath=os.path.join(repo_dir, "data/links/websites.txt"),
@@ -177,7 +223,8 @@ if __name__ == "__main__":
             'arxiv', 'ssrn', 'iacr', 'pubmed', 'ieeexplore', 'springer',
             'sciencedirect', 'dl.acm', 'jstor', 'nature', 'researchgate',
             'scholar.google', 'semanticscholar'
-        ]
+        ],
+        url_patterns=url_patterns
     )
 
 
