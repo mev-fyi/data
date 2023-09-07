@@ -1,8 +1,12 @@
+import csv
 import functools
 import logging
 import os
 import pandas as pd
 from urllib.parse import urlparse
+
+import requests
+from bs4 import BeautifulSoup
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -175,3 +179,84 @@ if __name__ == "__main__":
             'scholar.google', 'semanticscholar'
         ]
     )
+
+
+def read_existing_papers(csv_file: str) -> list:
+    """
+    Read paper titles from a given CSV file.
+
+    Parameters:
+    - csv_file (str): Path to the CSV file.
+
+    Returns:
+    - list: A list containing titles of the papers from the CSV.
+    """
+    existing_papers = []
+    if os.path.exists(csv_file):
+        with open(csv_file, 'r', newline='') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                existing_papers.append(row['title'])
+    return existing_papers
+
+
+def read_csv_links_and_referrers(file_path):
+    with open(file_path, mode='r') as f:
+        reader = csv.DictReader(f)
+        return [(row['paper'], row['referrer']) for row in reader]
+
+
+def paper_exists_in_list(title: str, existing_papers: list) -> bool:
+    """
+    Check if a paper title already exists in a list of existing papers.
+
+    Parameters:
+    - title (str): The title of the paper.
+    - existing_papers (list): List of existing paper titles.
+
+    Returns:
+    - bool: True if title exists in the list, False otherwise.
+    """
+    return title in existing_papers
+
+
+def paper_exists_in_csv(title: str, csv_file: str) -> bool:
+    """
+    Check if a paper title already exists in a given CSV file.
+
+    Parameters:
+    - title (str): The title of the paper.
+    - csv_file (str): Path to the CSV file.
+
+    Returns:
+    - bool: True if title exists in the CSV, False otherwise.
+    """
+
+    try:
+        with open(csv_file, 'r', newline='') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                if row['title'] == title:
+                    return True
+    except FileNotFoundError:
+        return False
+    return False
+
+
+def quickSoup(url) -> BeautifulSoup or None:
+    """
+    Quickly retrieve and parse an HTML page into a BeautifulSoup object.
+
+    Parameters:
+    - url (str): The URL of the page to be fetched.
+
+    Returns:
+    - BeautifulSoup object: Parsed HTML of the page.
+    - None: If there's an error during retrieval.
+    """
+    try:
+        header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+        soup = BeautifulSoup(requests.get(url, headers=header, timeout=10).content, 'html.parser')
+        return soup
+    except Exception:
+        return None
