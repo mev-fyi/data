@@ -318,9 +318,7 @@ def fetch_and_parse_paper_details(url):
         # Extract authors using regular expression
         authors_match = re.findall(r'author = {(.*)}', bibtex)
         if authors_match:
-            paper_authors = [author.strip() for author in authors_match[0].split(' and ')]
-            # remove [, ], ' from paper_authors
-            paper_authors = [author.replace('[', '').replace(']', '').replace("'", '') for author in paper_authors]
+            paper_authors = ', '.join([author.strip().replace('[', '').replace(']', '').replace("'", '') for author in authors_match[0].split(' and ')])
 
         paper_release_date = soup.select_one('#metadata > dl:nth-child(2) > dd:nth-child(12)').get_text()
         if 'See all versions' in paper_release_date:
