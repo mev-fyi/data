@@ -5,6 +5,8 @@ import csv
 from bs4 import BeautifulSoup
 import concurrent.futures
 import logging
+import re
+from datetime import datetime
 from dotenv import load_dotenv
 
 from src.upload_google_sheet import update_google_sheet_with_csv
@@ -212,12 +214,18 @@ def get_ssrn_details_from_url(url: str) -> dict or None:
         # Extract the date
         date = date[0].strip()
 
+        # Parse the original date string
+        original_date = datetime.strptime(date, '%d %b %Y')
+
+        # Format the date as 'yyyy-mm-dd'
+        formatted_date = original_date.strftime('%Y-%m-%d')
+
         details = {
             'title': title,
             'authors': authors,
             'pdf_link': url,
             'topics': 'SSRN',
-            'release_date': date  # Extracted date from SSRN
+            'release_date': formatted_date  # Extracted date from SSRN
         }
         return details
 
@@ -295,6 +303,79 @@ def reference_and_log_ssrn_papers(paper_links_and_referrers: list, csv_file: str
         executor.map(reference_and_log_ssrn_paper, paper_links, [csv_file] * len(paper_links), referrers)
 
 
+def fetch_and_parse_paper_details(url):
+    try:
+        response = requests.get(url.replace('.pdf', ''))
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # select the bibtex with css selector #bibtex
+        # extract authors from such string template # author = {author1 and author2 and author3}
+
+        paper_title = soup.select_one('head > title:nth-child(4)').get_text()
+
+        bibtex = soup.select_one('#bibtex').get_text()
+        # Extract authors using regular expression
+        authors_match = re.findall(r'author = {(.*)}', bibtex)
+        if authors_match:
+            paper_authors = [author.strip() for author in authors_match[0].split(' and ')]
+            # remove [, ], ' from paper_authors
+            paper_authors = [author.replace('[', '').replace(']', '').replace("'", '') for author in paper_authors]
+
+        paper_release_date = soup.select_one('#metadata > dl:nth-child(2) > dd:nth-child(12)').get_text()
+        if 'See all versions' in paper_release_date:
+            paper_release_date = soup.select_one('#metadata > dl:nth-child(2) > dd:nth-child(10)').get_text()
+        if ':' in paper_release_date:
+            paper_release_date = paper_release_date.split(':')[0].strip()
+
+        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'iacr', "release_date": paper_release_date}
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to fetch the paper details: {e}")
+        return None
+    except AttributeError as e:
+        print(f"Failed to parse the paper details: {e}")
+        return None
+
+
+def reference_and_log_iacr_paper(link, csv_file, referrer):
+    paper_details = fetch_and_parse_paper_details(link)
+    if paper_details is None:
+        logging.warning(f"Failed to fetch details for {link}. Skipping...")
+        return
+
+    if paper_exists_in_csv(paper_details['title'], csv_file):
+        logging.info(f"IACR paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
+        return
+
+    ensure_newline_in_csv(csv_file)
+
+    paper_details["referrer"] = referrer
+
+    try:
+        with open(csv_file, 'a', newline='') as csvfile:
+            fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date', 'referrer']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writerow(paper_details)
+        logging.info(f"Added details for IACR paper titled '{paper_details['title']}' to CSV.")
+    except Exception as e:
+        logging.error(f"[IACR] Failed to write to csv: {e}")
+
+
+def reference_and_log_iacr_papers(paper_links_and_referrers: list, csv_file: str) -> None:
+    """
+    Download multiple papers' details from IACR and save them to a CSV file.
+
+    Parameters:
+    - paper_links_and_referrers (list): List of tuples with links to the IACR papers and their referrers.
+    - csv_file (str): Path to the CSV file.
+    """
+    # Use ProcessPoolExecutor to run tasks in parallel
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        # Unpack links and referrers for the executor
+        paper_links, referrers = zip(*paper_links_and_referrers)
+        executor.map(reference_and_log_iacr_paper, paper_links, [csv_file] * len(paper_links), referrers)
+
+
 # Main execution
 if __name__ == "__main__":
     """
@@ -323,6 +404,10 @@ if __name__ == "__main__":
         # For SSRN links. Credits to https://github.com/karthiktadepalli1/ssrn-scraper
         ssrn_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'ssrn_papers.csv'))
         reference_and_log_ssrn_papers(paper_links_and_referrers=ssrn_links_and_referrers, csv_file=csv_file)
+
+        # For IACR links
+        iacr_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'iacr_papers.csv'))
+        reference_and_log_iacr_papers(paper_links_and_referrers=iacr_links_and_referrers, csv_file=csv_file)
 
     # Update the Google Sheet after updating the CSV
     update_google_sheet_with_csv(csv_file=csv_file, sheet_id=os.getenv("GOOGLE_SHEET_ID"))

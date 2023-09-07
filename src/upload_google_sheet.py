@@ -29,11 +29,16 @@ def update_google_sheet_with_csv(csv_file: str, sheet_id: str) -> None:
 
     def convert_to_standard_date_format(date_str):
         try:
-            # First, try the default format
+            # Try parsing the date with the format '%Y-%m-%d'
             return pd.to_datetime(date_str, format='%Y-%m-%d').strftime('%Y-%m-%d')
         except ValueError:
-            # If it fails, try the "dd MMM yyyy" format
-            return pd.to_datetime(date_str, format='%d %b %Y').strftime('%Y-%m-%d')
+            try:
+                # Try parsing the date with the format '%d %b %Y'
+                return pd.to_datetime(date_str, format='%d %b %Y').strftime('%Y-%m-%d')
+            except ValueError:
+                # Return 'N/A' for dates that cannot be parsed
+                return date_str
+                #return 'N/A'
 
     # Apply the conversion function
     df['release_date'] = df['release_date'].apply(convert_to_standard_date_format)
