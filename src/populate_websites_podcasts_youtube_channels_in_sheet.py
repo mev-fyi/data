@@ -7,10 +7,33 @@ from googleapiclient.discovery import build
 from dotenv import load_dotenv
 import logging
 
+from bs4 import BeautifulSoup
+import requests
+
 from src.utils import root_directory
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+def create_hyperlink_formula(value):
+    if pd.isna(value) or value == "":
+        return "anon"
+    elif "http" not in value:
+        return value
+    link_name = value.split("/")[-1]  # TODO: this is not very robust, need to upgrade
+    return f'=HYPERLINK("{value}", "{link_name}")'
+
+
+def get_title_from_url(url):
+    try:
+        response = requests.get(url)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        title = soup.title.string
+        return title
+    except Exception as e:
+        logging.error(f"Error fetching title for URL '{url}': {str(e)}")
+        return ""
 
 
 class GoogleSheetUpdater:
@@ -40,6 +63,17 @@ class GoogleSheetUpdater:
     def update_google_sheet(self, data, tab_name, num_rows, num_cols):
         sheet = self.create_or_get_worksheet(tab_name, num_rows, num_cols)
         df = pd.DataFrame(data)
+
+        # pascale case all columns names
+        df.columns = [col[0].upper() + col[1:] for col in df.columns]
+
+        # Replace hyperlinks with titles using the create_hyperlink_formula function
+        if 'Link' in df.columns:
+            df['Link'] = df['Link'].apply(create_hyperlink_formula)
+
+        if 'Referrer' in df.columns:
+            df['Referrer'] = df['Referrer'].apply(create_hyperlink_formula)
+
         set_with_dataframe(sheet, df, row=1, col=1, include_index=False, resize=True)
 
         service = build('sheets', 'v4', credentials=self.credentials)
@@ -113,3 +147,8 @@ if __name__ == "__main__":
     twitter_threads_csv_file = os.path.join(repo_dir, "data/links/twitter_threads.csv")
     twitter_threads_data = pd.read_csv(twitter_threads_csv_file)
     updater.update_google_sheet(data=twitter_threads_data, tab_name="Twitter Threads", num_rows=1000, num_cols=2)
+
+    # Update Google Sheet with papers
+    papers_csv_file = os.path.join(repo_dir, "data/links/papers.csv")
+    papers_data = pd.read_csv(papers_csv_file)
+    updater.update_google_sheet(data=papers_data, tab_name="Non parsed papers", num_rows=1000, num_cols=2)
