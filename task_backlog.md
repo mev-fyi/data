@@ -11,12 +11,17 @@ Priority set: Low, Medium, High
     - Priority: Low
 - [ ] [Create Twitter bot to contribute either a whole thread when called, else the links in the tweet content](#task-1)
     - Priority: Low
+- [ ] [Add a safe zotero parser and filter for MEV contributions](#task-1)
+    - Priority: Medium
 
 ## Research exploitation UX
 - [ ] [Scrape all websites for new uploads and add links to uploads in most recent order on a single worksheet](#task-1)
   - Priority: Medium
-- [ ] [add GPT-generated tags to each link](#task-1)
+- [ ] [Add Twitter bot to Tweet for each new scrapped research document](#task-1)
   - Priority: Low
+
+- [ ] [add GPT-generated tags to each link](#task-1)
+  - Priority: Low 
 
 ## mev.fyi governance
 - [ ] [Deprecate typeform for scalable open-source solution with links waiting to be uploaded](#task-1)
