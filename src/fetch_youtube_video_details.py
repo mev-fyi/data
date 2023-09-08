@@ -365,13 +365,13 @@ if __name__ == '__main__':
             "No channels or playlists provided. Please provide channel names, IDs, or playlist IDs via command line argument or .env file.")
 
     # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
-    keywords = ['order flow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage',
+    keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage',
                 'maximal extractable value', 'games', 'timing', 'onc0chain games', 'pepc', 'proposer', 'builder', 'barnabe',
                 'fees', 'pbs', '4337', 'account abstraction', 'wallet', 'boost', 'defi', 'uniswap', 'hook', 'anoma', 'espresso',
                 'suave', 'flashbots', 'celestia', 'gas war', 'hasu', 'dan robinson', 'jon charbonneau', 'robert miller', 'paradigm',
                 'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
                 'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'research', 'rollups', 'uniswap', '1inch',
                 'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
-                'eth global', 'zk', 'erc', 'eip']
+                'eth global', 'zk', 'erc', 'eip', 'auction']
     run(api_key, yt_channels, yt_playlists, keywords)
 

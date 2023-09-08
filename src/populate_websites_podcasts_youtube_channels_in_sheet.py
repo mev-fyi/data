@@ -64,7 +64,7 @@ class GoogleSheetUpdater:
         sheet = self.create_or_get_worksheet(tab_name, num_rows, num_cols)
         df = pd.DataFrame(data)
 
-        # pascale case all columns names
+        # Pascal case all columns names
         df.columns = [col[0].upper() + col[1:] for col in df.columns]
 
         # Replace hyperlinks with titles using the create_hyperlink_formula function
@@ -85,16 +85,81 @@ class GoogleSheetUpdater:
             'startColumnIndex': 0,
             'endColumnIndex': df.shape[1]
         }
+        if 'youtube videos' in tab_name.lower():
+            publish_date_column_index = df.columns.get_loc(' publish date')
+        # get the index of the column Published Date
 
         body = {
-            'requests': [{
-                'setBasicFilter': {
-                    'filter': {
-                        'range': grid_range
+            'requests': [
+                # Bold formatting request for header
+                {
+                    'repeatCell': {
+                        'range': {
+                            'sheetId': sheet.id,
+                            'startRowIndex': 0,
+                            'endRowIndex': 1
+                        },
+                        'cell': {
+                            'userEnteredFormat': {
+                                'textFormat': {
+                                    'bold': True
+                                },
+                                'horizontalAlignment': 'CENTER'  # Center-align header text
+                            }
+                        },
+                        'fields': 'userEnteredFormat.textFormat.bold,userEnteredFormat.horizontalAlignment'
                     }
-                }
-            }]
+                },
+                # Left-align content rows
+                {
+                    'repeatCell': {
+                        'range': {
+                            'sheetId': sheet.id,
+                            'startRowIndex': 1,  # Start from the row after the header
+                            'endRowIndex': df.shape[0] + 1
+                        },
+                        'cell': {
+                            'userEnteredFormat': {
+                                'horizontalAlignment': 'LEFT'  # Left-align content
+                            }
+                        },
+                        'fields': 'userEnteredFormat.horizontalAlignment'
+                    }
+                },
+                # Freeze header row request
+                {
+                    'updateSheetProperties': {
+                        'properties': {
+                            'sheetId': sheet.id,
+                            'gridProperties': {
+                                'frozenRowCount': 1
+                            }
+                        },
+                        'fields': 'gridProperties.frozenRowCount'
+                    }
+                },
+            ]
         }
+        if 'youtube videos' in tab_name.lower():
+            # Filter and sort request by 'Published Date' in descending order
+            published_date = {
+                'sortRange': {
+                    'range': {
+                        'sheetId': sheet.id,
+                        'startRowIndex': 1,  # Start from the row after header
+                        'endRowIndex': df.shape[0] + 1,
+                        'startColumnIndex': 0,
+                        'endColumnIndex': df.shape[1]
+                    },
+                    'sortSpecs': [{
+                        'dimensionIndex': publish_date_column_index,  # Replace with the correct index
+                        'sortOrder': 'DESCENDING'
+                    }]
+                }
+            }
+
+            # Append the sort request to the existing list
+            body["requests"].append(published_date)
 
         service.spreadsheets().batchUpdate(spreadsheetId=self.sheet_id, body=body).execute()
 
@@ -153,7 +218,8 @@ if __name__ == "__main__":
     papers_data = pd.read_csv(papers_csv_file)
     updater.update_google_sheet(data=papers_data, tab_name="Non parsed papers", num_rows=1000, num_cols=2)
 
-    # Update Google Sheet with youtube videos
+    # Update Google Sheet with YouTube videos
     papers_csv_file = os.path.join(repo_dir, "data/links/youtube_videos.csv")
     papers_data = pd.read_csv(papers_csv_file)
-    updater.update_google_sheet(data=papers_data, tab_name="Youtube videos", num_rows=1000, num_cols=2)
+    updater.update_google_sheet(data=papers_data, tab_name="Filtered Youtube Videos", num_rows=1000, num_cols=2)
+
