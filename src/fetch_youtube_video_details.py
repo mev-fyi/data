@@ -232,16 +232,19 @@ def get_channel_id(credentials: Optional[ServiceAccountCredentials], api_key: st
         return None
 
 
-def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None, keywords: [List[str]] = None):
+def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None,
+        keywords: [List[str]] = None, keywords_to_exclude: [List[str]] = None, fetch_videos: bool =True):
     """
-    Run function that takes a YouTube Data API key and a list of YouTube channel names, fetches video transcripts,
+    Run function that takes a YouTube Data API key and a list of YouTube channel names or playlist IDs, fetches video transcripts,
     and saves them as .txt files in a data directory.
 
     Args:
-        yt_playlists:
         api_key (str): Your YouTube Data API key.
-        yt_channels (List[str]): A list of YouTube channel names.
-        :param keywords:
+        yt_channels (List[str], optional): A list of YouTube channel names to fetch videos from. Default is None.
+        yt_playlists (List[str], optional): A list of YouTube playlist IDs to fetch videos from. Default is None.
+        keywords (List[str], optional): A list of keywords to filter videos to keep. Default is None.
+        keywords_to_exclude (List[str], optional): A list of keywords to filter videos to exclude. Default is None.
+        fetch_videos (bool, optional): Whether to fetch videos from the specified channels and playlists. Default is True.
     """
     service_account_file = os.environ.get('SERVICE_ACCOUNT_FILE')
     credentials = None
@@ -255,19 +258,20 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
     # Create a list to store video information
     video_info_list = []
 
-    if yt_channels:
-        # Iterate through the list of channel names
-        for channel_name in yt_channels:
-            # Get channel ID from channel name
-            channel_id = get_channel_id(credentials=credentials, api_key=api_key, channel_name=channel_name)
+    if fetch_videos:
+        if yt_channels:
+            # Iterate through the list of channel names
+            for channel_name in yt_channels:
+                # Get channel ID from channel name
+                channel_id = get_channel_id(credentials=credentials, api_key=api_key, channel_name=channel_name)
 
-            if channel_id:
-                # Get video information from the channel
-                video_info_list.extend(get_video_info(credentials, api_key, channel_id, channel_name))
+                if channel_id:
+                    # Get video information from the channel
+                    video_info_list.extend(get_video_info(credentials, api_key, channel_id, channel_name))
 
-    if yt_playlists:
-        for playlist_id in yt_playlists:
-            video_info_list.extend(get_videos_from_playlist(credentials, api_key, playlist_id))
+        if yt_playlists:
+            for playlist_id in yt_playlists:
+                video_info_list.extend(get_videos_from_playlist(credentials, api_key, playlist_id))
 
     # Save video information as a CSV file
     csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
@@ -281,8 +285,6 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
                 cleaned_row = {k.strip(): v.strip() for k, v in row.items()}
                 existing_data.append(cleaned_row)
                 existing_video_names.add(cleaned_row['name'])
-
-    write_header = not os.path.exists(csv_file_path)
 
     # Cleaning the keys and values of video info list
     video_info_list = [
@@ -313,12 +315,10 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
     # Define your headers here
     headers = ['link', 'id', 'name', 'publish date']
 
-    # Write filtered video info list to csv
-    with open(csv_file_path, mode='a', newline='', encoding='utf-8') as csv_file:
+    # Write filtered video info list to csv, overwriting the file
+    with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=headers)
-
-        if write_header:
-            writer.writeheader()
+        writer.writeheader()  # Write the header
 
         for video_info in filtered_video_info_list:
             writer.writerow(video_info)
@@ -367,11 +367,12 @@ if __name__ == '__main__':
     # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
     keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage',
                 'maximal extractable value', 'games', 'timing', 'onc0chain games', 'pepc', 'proposer', 'builder', 'barnabe',
-                'fees', 'pbs', '4337', 'account abstraction', 'wallet', 'boost', 'defi', 'uniswap', 'hook', 'anoma', 'espresso',
+                'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'anoma', 'espresso',
                 'suave', 'flashbots', 'celestia', 'gas war', 'hasu', 'dan robinson', 'jon charbonneau', 'robert miller', 'paradigm',
                 'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
-                'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'research', 'rollups', 'uniswap', '1inch',
+                'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
                 'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
-                'eth global', 'zk', 'erc', 'eip', 'auction']
-    run(api_key, yt_channels, yt_playlists, keywords)
+                'eth global', 'erc', 'eip', 'auction', 'daian', 'vitalik', 'buterin', 'smart contract']
+    keywords_to_exclude = ['DAO', 'NFTs']
+    run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=False)
 

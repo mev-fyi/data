@@ -86,7 +86,7 @@ class GoogleSheetUpdater:
             'endColumnIndex': df.shape[1]
         }
         if 'youtube videos' in tab_name.lower():
-            publish_date_column_index = df.columns.get_loc(' publish date')
+            publish_date_column_index = df.columns.get_loc('Publish date')
         # get the index of the column Published Date
 
         body = {
