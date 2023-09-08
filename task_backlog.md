@@ -1,5 +1,6 @@
 # Task backlog for project management purposes
 Priority set: Low, Medium, High
+Complexity set: Low, Medium, High
 
 ## Contributions
 ###  UX
@@ -8,6 +9,8 @@ Priority set: Low, Medium, High
     - Priority: Low
 - [ ] [Optimise sorting of topics on Google Sheet](#task-1)
   - Priority: Low. Context: right now the topics are a single written to each cell. I believe the best UX would be a dropdown list which is populated for each cell such that a given user could select (ideally from a single column) all the tags of interest. 
+- [ ] [Optimise sorting of authors on Google Sheet](#task-1)
+  - Priority: Low. Context: right now the authors are a single written to each cell. I believe the best UX would be a dropdown list which is populated for each cell such that a given user could select (ideally from a single column) all the authors of interest.
 - [ ] [Improve contribution UX for links beyond form](#task-1)
     - Priority: Low
 - [ ] [Create Twitter bot to contribute either a whole thread when called, else the links in the tweet content](#task-1)
@@ -22,7 +25,6 @@ Priority set: Low, Medium, High
 - [ ] [Create a community-led curation mechanism?](#task-1)
     - Priority: Medium
     - Context: It would be powerful for community to flag paper complexity and create a "MEV onboarding roadmap" from beginner to advanced. In the best case scenario, there would be a large amount of inbound content. We would hopefully need to curate its complexity sooner or later.
-
 
 ## Research exploitation UX
 - [ ] [Scrape all websites for new uploads and add links to uploads in most recent order on a single worksheet](#task-1)
