@@ -96,6 +96,7 @@ def categorize_url(url, url_patterns, existing_domains):
 
     return "website"  # Default to categorizing as a website
 
+# TODO 2023-09-08: spin off parse_and_categorize_links from utils.py to standalone script
 def parse_and_categorize_links(input_filepath: str, domains_filepath: str, research_websites: list, url_patterns) -> None:
     # Load your data
     df = pd.read_csv(input_filepath)
@@ -214,11 +215,15 @@ if __name__ == "__main__":
         "medium_website": r"^https://medium\.com/.+",
         "twitter_website": r"^https://twitter\.com/[^/]+/$",
         "twitter_thread": r"^https://twitter\.com/bertcmiller/status/.+",
+        "flashbots_article": r"^https://collective\.flashbots\.net/t/.+/\d+$",
+        "url_vitalik_article": r"^https://vitalik\.ca/.+/.+/.+\.html$",
+        "vitalik_website": r"^https://vitalik\.ca/$",
+        "url_qje_article": r"^https://academic\.oup\.com/qje/article/.+",
     }
-
+    # TODO 2023-09-08: fix the website writing to .csv logic.
     parse_and_categorize_links(
         input_filepath=os.path.join(repo_dir, "data/links/to_parse.csv"),
-        domains_filepath=os.path.join(repo_dir, "data/links/websites.txt"),
+        domains_filepath=os.path.join(repo_dir, "data/links/websites.csv"),
         research_websites=[
             'arxiv', 'ssrn', 'iacr', 'pubmed', 'ieeexplore', 'springer',
             'sciencedirect', 'dl.acm', 'jstor', 'nature', 'researchgate',
