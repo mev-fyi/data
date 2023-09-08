@@ -1,7 +1,8 @@
 # Task backlog for project management purposes
 Priority set: Low, Medium, High
 
-## Contribution UX
+## Contributions
+###  UX
 - [ ] [Automate transcript downloads workflow as YouTube channels are added](#task-1)
     - [ ] [Fork youtube_video_and_transcript_downloader to this repo](#task-1)
     - Priority: Low
@@ -13,6 +14,11 @@ Priority set: Low, Medium, High
     - Priority: Low
 - [ ] [Add a safe zotero parser and filter for MEV contributions](#task-1)
     - Priority: Medium
+- [ ] [Run routine / event-based script on Typeform Results content to be uploaded](#task-1)
+    - Priority: Medium
+### Content  
+- [ ] [Add the content from bookmarks dotted all over](#task-1)
+    - Priority: High
 
 ## Research exploitation UX
 - [ ] [Scrape all websites for new uploads and add links to uploads in most recent order on a single worksheet](#task-1)
@@ -25,11 +31,14 @@ Priority set: Low, Medium, High
 
 ## mev.fyi governance
 - [ ] [Deprecate typeform for scalable open-source solution with links waiting to be uploaded](#task-1)
+- [ ] [Decentralise domain name ownership](#task-1)
+- [ ] [Decentralise google sheet ownership](#task-1)
+- [ ] [Decentralise github repo ownership](#task-1)
 
 ## Codebase
 ### Devops
 - [ ] [Create Google sheet staging environment](#task-2)
-- Priority: Medium
+  - Priority: Medium
 - [ ] [Host site on Google Cloud](#task-2)
   - [ ] [Blocker: Streamlit LLM-app frontend](#task-2)
   - Priority: Low
@@ -39,12 +48,9 @@ Priority set: Low, Medium, High
 - [ ] [Add support for Twitter threads](#task-2)
   - [ ] [Should they be written as blogs first?](#task-2)
   - Priority: High
-- [ ] [Add support for blogs, articles](#task-2)
+- [ ] [Continue adding support for other research sites and journals](#task-2)
   - Priority: High
-- [ ] [Add support for other research sites, journals](#task-2)
-  - Priority: High
-- [ ] [Automagically parse forms filled by contributors and append them to the relevant lists](#task-2)
-  - Priority: High
+
 - [ ] [Check https://apify.com/apify/website-content-crowler](#task-2)
   - Priority: Low
 
