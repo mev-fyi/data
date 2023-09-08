@@ -21,7 +21,7 @@ Priority set: Low, Medium, High
     - Priority: High
 - [ ] [Create a community-led curation mechanism?](#task-1)
     - Priority: Medium
-    - Context: It would be powerful for community to flag paper complexity and create a "MEV onboarding roadmap" from beginner to advanced. In the best case scenario, there would be a large amount of inbound content. We would hopefully need to curate its quality sooner or later.
+    - Context: It would be powerful for community to flag paper complexity and create a "MEV onboarding roadmap" from beginner to advanced. In the best case scenario, there would be a large amount of inbound content. We would hopefully need to curate its complexity sooner or later.
 
 
 ## Research exploitation UX
@@ -45,7 +45,7 @@ Priority set: Low, Medium, High
 ## Codebase
 ### Devops
 - [ ] [Create Google sheet staging environment](#task-2)
-  - Priority: Medium
+  - Priority: High :) 
 - [ ] [Host site on Google Cloud](#task-2)
   - [ ] [Blocker: Streamlit LLM-app frontend](#task-2)
   - Priority: Low
