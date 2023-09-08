@@ -157,7 +157,7 @@ def parse_and_categorize_links(input_filepath: str, domains_filepath: str, resea
         "arxiv_papers.csv": arxiv_df,
         "ssrn_papers.csv": ssrn_df,
         "iacr_papers.csv": iacr_df,
-        "youtube_videos.csv": youtube_df,
+        "recommended_youtube_videos.csv": youtube_df,
         "articles.csv": articles_df,
         "twitter_threads.csv": twitter_thread_df,
         "websites.csv": websites_df,

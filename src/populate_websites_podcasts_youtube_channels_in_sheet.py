@@ -136,7 +136,7 @@ if __name__ == "__main__":
         'YouTube Channel Handle': open(youtube_txt_file, 'r').read().split(','),
         'Link': ['https://www.youtube.com/' + handle.strip() for handle in open(youtube_txt_file, 'r').read().split(',')]
     }
-    updater.update_google_sheet(data=youtube_data, tab_name="Podcasts and Youtube videos", num_rows=1000, num_cols=2)
+    updater.update_google_sheet(data=youtube_data, tab_name="Podcasts and Youtube channels", num_rows=1000, num_cols=2)
 
     # Update Google Sheet with articles
     articles_csv_file = os.path.join(repo_dir, "data/links/articles.csv")
@@ -148,7 +148,12 @@ if __name__ == "__main__":
     twitter_threads_data = pd.read_csv(twitter_threads_csv_file)
     updater.update_google_sheet(data=twitter_threads_data, tab_name="Twitter Threads", num_rows=1000, num_cols=2)
 
-    # Update Google Sheet with papers
+    # Update Google Sheet with Non parsed papers
     papers_csv_file = os.path.join(repo_dir, "data/links/papers.csv")
     papers_data = pd.read_csv(papers_csv_file)
     updater.update_google_sheet(data=papers_data, tab_name="Non parsed papers", num_rows=1000, num_cols=2)
+
+    # Update Google Sheet with youtube videos
+    papers_csv_file = os.path.join(repo_dir, "data/links/youtube_videos.csv")
+    papers_data = pd.read_csv(papers_csv_file)
+    updater.update_google_sheet(data=papers_data, tab_name="Youtube videos", num_rows=1000, num_cols=2)
