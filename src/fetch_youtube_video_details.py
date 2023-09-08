@@ -105,9 +105,9 @@ def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel
             # Parse the timestamp to yyyy-mm-dd format
             parsed_published_at = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ")
             video_info.append({
-                'title': item["snippet"]["title"],
+                'name': item["snippet"]["title"],
                 'channel_name': channel_name,
-                'publishedAt': parsed_published_at.strftime("%Y-%m-%d"),
+                'published_date': parsed_published_at.strftime("%Y-%m-%d"),
                 'url': f'https://www.youtube.com/watch?v={video_id}',
                 'id': video_id,
             })
@@ -232,7 +232,7 @@ def get_channel_id(credentials: Optional[ServiceAccountCredentials], api_key: st
         return None
 
 
-def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None):
+def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None, keywords: [List[str]] = None):
     """
     Run function that takes a YouTube Data API key and a list of YouTube channel names, fetches video transcripts,
     and saves them as .txt files in a data directory.
@@ -241,6 +241,7 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
         yt_playlists:
         api_key (str): Your YouTube Data API key.
         yt_channels (List[str]): A list of YouTube channel names.
+        :param keywords:
     """
     service_account_file = os.environ.get('SERVICE_ACCOUNT_FILE')
     credentials = None
@@ -254,9 +255,6 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
     # Create a list to store video information
     video_info_list = []
 
-    # Create a dictionary with headers
-    headers = ['title', 'youtube_channel_name', 'video_link', 'published_date']
-
     if yt_channels:
         # Iterate through the list of channel names
         for channel_name in yt_channels:
@@ -269,30 +267,76 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
 
     if yt_playlists:
         for playlist_id in yt_playlists:
-            playlist_title = get_playlist_title(credentials, api_key, playlist_id)
-            # Ensure the title is filesystem-friendly (replacing slashes, for example)
-            playlist_title = playlist_title.replace('/', '_') if playlist_title else f"playlist_{playlist_id}"
-
             video_info_list.extend(get_videos_from_playlist(credentials, api_key, playlist_id))
 
     # Save video information as a CSV file
     csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
+    existing_data = []
+    existing_video_names = set()
 
-    write_header = not os.path.exists(csv_file_path)  # Check if the file already exists
+    if os.path.exists(csv_file_path):
+        with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
+            reader = csv.DictReader(csv_file)
+            for row in reader:
+                cleaned_row = {k.strip(): v.strip() for k, v in row.items()}
+                existing_data.append(cleaned_row)
+                existing_video_names.add(cleaned_row['name'])
 
+    write_header = not os.path.exists(csv_file_path)
+
+    # Cleaning the keys and values of video info list
+    video_info_list = [
+        {k.strip(): v.strip() for k, v in video_info.items()}
+        for video_info in video_info_list
+    ]
+
+    # Removing duplicates based on video names
+    video_info_list = [
+        video_info for video_info in video_info_list
+        if video_info['name'] not in existing_video_names
+    ]
+
+    # Combine new and existing data
+    all_video_data = existing_data + video_info_list
+
+    # Create filtered list and filtered away list based on keywords
+    filtered_video_info_list = [
+        video_info for video_info in all_video_data
+        if any(keyword.lower() in video_info['name'].lower() for keyword in keywords)
+    ]
+
+    filtered_away_video_info_list = [
+        video_info for video_info in all_video_data
+        if not any(keyword.lower() in video_info['name'].lower() for keyword in keywords)
+    ]
+
+    # Define your headers here
+    headers = ['link', 'id', 'name', 'publish date']
+
+    # Write filtered video info list to csv
     with open(csv_file_path, mode='a', newline='', encoding='utf-8') as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=headers)
 
         if write_header:
             writer.writeheader()
 
-        for video_info in video_info_list:
-            writer.writerow({
-                'title': video_info['title'],
-                'youtube_channel_name': video_info['channel_name'],
-                'video_link': video_info['url'],
-                'published_date': video_info['publishedAt']
-            })
+        for video_info in filtered_video_info_list:
+            writer.writerow(video_info)
+
+    # Write filtered away video info list to a new csv file
+    filtered_away_csv_file_path = f"{root_directory()}/data/links/filtered_away_youtube_videos.csv"
+
+    # Check if the filtered away csv file already exists
+    write_filtered_away_header = not os.path.exists(filtered_away_csv_file_path)
+
+    with open(filtered_away_csv_file_path, mode='a', newline='', encoding='utf-8') as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=headers)
+
+        if write_filtered_away_header:
+            writer.writeheader()
+
+        for video_info in filtered_away_video_info_list:
+            writer.writerow(video_info)
 
 
 # Function to read the channel handles from a file
@@ -320,5 +364,14 @@ if __name__ == '__main__':
         raise ValueError(
             "No channels or playlists provided. Please provide channel names, IDs, or playlist IDs via command line argument or .env file.")
 
-    run(api_key, yt_channels, yt_playlists)
+    # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
+    keywords = ['order flow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage',
+                'maximal extractable value', 'games', 'timing', 'onc0chain games', 'pepc', 'proposer', 'builder', 'barnabe',
+                'fees', 'pbs', '4337', 'account abstraction', 'wallet', 'boost', 'defi', 'uniswap', 'hook', 'anoma', 'espresso',
+                'suave', 'flashbots', 'celestia', 'gas war', 'hasu', 'dan robinson', 'jon charbonneau', 'robert miller', 'paradigm',
+                'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
+                'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'research', 'rollups', 'uniswap', '1inch',
+                'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
+                'eth global', 'zk', 'erc', 'eip']
+    run(api_key, yt_channels, yt_playlists, keywords)
 
