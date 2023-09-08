@@ -19,10 +19,17 @@ Priority set: Low, Medium, High
 ### Content  
 - [ ] [Add the content from bookmarks dotted all over](#task-1)
     - Priority: High
+- [ ] [Create a community-led curation mechanism?](#task-1)
+    - Priority: Medium
+    - Context: It would be powerful for community to flag paper complexity and create a "MEV onboarding roadmap" from beginner to advanced. In the best case scenario, there would be a large amount of inbound content. We would hopefully need to curate its quality sooner or later.
+
 
 ## Research exploitation UX
 - [ ] [Scrape all websites for new uploads and add links to uploads in most recent order on a single worksheet](#task-1)
   - Priority: Medium
+- [ ] [Add a youtube video & podcast tab sorted by most recent of content from the Youtube channels/podcasts](#task-1)
+    - Priority: Medium
+    - Context: Right now besides going into each Youtube/Podcast channel, there is no way to see the most recent content. This would be a powerful way to keep up to date with the latest content.
 - [ ] [Add Twitter bot to Tweet for each new scrapped research document](#task-1)
   - Priority: Low
 
