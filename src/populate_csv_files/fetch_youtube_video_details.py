@@ -9,6 +9,7 @@ from datetime import datetime
 import logging
 import csv
 import re
+from concurrent.futures import ThreadPoolExecutor
 
 
 from src.utils import root_directory
@@ -17,6 +18,16 @@ from src.utils import root_directory
 # Load environment variables from the .env file
 load_dotenv()
 
+# Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
+keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage',
+            'maximal extractable value', 'games', 'timing', 'onc0chain games', 'pepc', 'proposer', 'builder', 'barnabe',
+            'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'anoma', 'espresso',
+            'suave', 'flashbots', 'celestia', 'gas war', 'hasu', 'dan robinson', 'jon charbonneau', 'robert miller', 'paradigm',
+            'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
+            'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
+            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
+            'eth global', 'erc', 'eip', 'auction', 'daian', 'vitalik', 'buterin', 'smart contract']
+keywords_to_exclude = ['DAO', 'NFTs']
 
 def background(f):
     """
@@ -120,7 +131,7 @@ def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel
                         'published_date': parsed_published_at.strftime("%Y-%m-%d"),
                         'url': f'https://www.youtube.com/watch?v={video_id}',
                     })
-                    logging.info(f"Added video: {video_info_item['title']}")
+                    logging.info(f"[{video_info_item['channelTitle']}] Added video: {video_info_item['title']}")
             except Exception as e:
                 logging.error(f"Error occurred while fetching video details. Error: {e}")
 
@@ -252,8 +263,28 @@ def get_channel_id(credentials: Optional[ServiceAccountCredentials], api_key: st
         return None
 
 
+def save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers):
+    # Remove duplicates based on video titles
+    video_info_list = [
+        video_info for video_info in video_info_list
+        if video_info['title'] not in existing_video_names
+    ]
+
+    # Append new data to the CSV file
+    with open(csv_file_path, mode='a', newline='', encoding='utf-8') as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=headers)
+        for video_info in video_info_list:
+            writer.writerow(video_info)
+
+
+def fetch_and_save_channel_videos(channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers):
+    video_info_list = get_video_info(credentials, api_key, channel_id, channel_name)
+    save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
+    logging.info(f"[{channel_name}] Saved {len(video_info_list)} videos to CSV file {csv_file_path}.")
+
+
 def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None,
-        keywords: [List[str]] = None, keywords_to_exclude: [List[str]] = None, fetch_videos: bool =True):
+        keywords: List[str] = None, keywords_to_exclude: List[str] = None, fetch_videos: bool = True):
     """
     Run function that takes a YouTube Data API key and a list of YouTube channel names or playlist IDs, fetches video transcripts,
     and saves them as .txt files in a data directory.
@@ -271,32 +302,20 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
 
     if service_account_file:
         credentials = authenticate_service_account(service_account_file)
-        print("\nService account file found. Proceeding with public channels, playlists, or private videos if accessible via Google Service Account.")
+        logging.info("\nService account file found. Proceeding with public channels, playlists, or private videos if accessible via Google Service Account.")
     else:
-        print("\nNo service account file found. Proceeding with public channels or playlists.")
+        logging.info("\nNo service account file found. Proceeding with public channels or playlists.")
 
     # Create a list to store video information
     video_info_list = []
 
-    if fetch_videos:
-        if yt_channels:
-            # Iterate through the list of channel names
-            for channel_name in yt_channels:
-                # Get channel ID from channel name
-                channel_id = get_channel_id(credentials=credentials, api_key=api_key, channel_name=channel_name)
-
-                if channel_id:
-                    # Get video information from the channel
-                    video_info_list.extend(get_video_info(credentials, api_key, channel_id, channel_name))
-
-        if yt_playlists:
-            for playlist_id in yt_playlists:
-                video_info_list.extend(get_videos_from_playlist(credentials, api_key, playlist_id))
-
-    # Save video information as a CSV file
-    csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
+    # Create a list to store existing data read from the CSV file
     existing_data = []
+
     existing_video_names = set()
+
+    # Define the csv_file_path before using it
+    csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
 
     if os.path.exists(csv_file_path):
         with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
@@ -305,6 +324,31 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
                 cleaned_row = {k.strip(): v.strip() for k, v in row.items()}
                 existing_data.append(cleaned_row)
                 existing_video_names.add(cleaned_row['title'])
+
+    headers = ['title', 'channel_name', 'Publish date', 'link', 'referrer']
+
+    if fetch_videos:
+        if yt_channels:
+            # Using ThreadPoolExecutor to fetch video info in parallel
+            with ThreadPoolExecutor() as executor:
+                for channel_name in yt_channels:
+                    channel_id = get_channel_id(credentials=credentials, api_key=api_key, channel_name=channel_name)
+                    if channel_id:
+                        executor.submit(fetch_and_save_channel_videos, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
+
+        if yt_playlists:
+            for playlist_id in yt_playlists:
+                # Fetch videos from playlists and save them channel-wise (assuming your function get_videos_from_playlist returns a list of video_info dictionaries)
+                video_info_list = get_videos_from_playlist(credentials, api_key, playlist_id)
+                save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
+
+    if os.path.exists(csv_file_path):
+            with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
+                reader = csv.DictReader(csv_file)
+                for row in reader:
+                    cleaned_row = {k.strip(): v.strip() for k, v in row.items()}
+                    existing_data.append(cleaned_row)
+                    existing_video_names.add(cleaned_row['title'])
 
     # Cleaning the keys and values of video info list
     video_info_list = [
@@ -384,16 +428,5 @@ if __name__ == '__main__':
         raise ValueError(
             "No channels or playlists provided. Please provide channel names, IDs, or playlist IDs via command line argument or .env file.")
 
-    # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
-    keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage',
-                'maximal extractable value', 'games', 'timing', 'onc0chain games', 'pepc', 'proposer', 'builder', 'barnabe',
-                'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'anoma', 'espresso',
-                'suave', 'flashbots', 'celestia', 'gas war', 'hasu', 'dan robinson', 'jon charbonneau', 'robert miller', 'paradigm',
-                'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
-                'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
-                'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
-                'eth global', 'erc', 'eip', 'auction', 'daian', 'vitalik', 'buterin', 'smart contract']
-    keywords_to_exclude = ['DAO', 'NFTs']
-    # TODO 2023-09-09: optimise the loop to not keep everything in memory and save to csv file in chunks to avoid reaching quota and losing local mem
     run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True)
 
