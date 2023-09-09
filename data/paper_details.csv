@@ -99,3 +99,12 @@ An Axiomatic Characterization of CFMMs and Equivalence to Prediction Markets,"Ra
 Axioms for Constant Function Market Makers,"Jan Christoph Schlegel, Mateusz Kwaśnicki, Akaki Mamageishvili",http://arxiv.org/pdf/2210.00048v4,"cs.GT, econ.TH",2022-09-30,
 Lanturn: Measuring Economic Security of Smart Contracts Through Adaptive Learning,"Kushal Babel, Mojan Javaheripi, Yan Ji, Mahimna Kelkar, Farinaz Koushanfar, Ari Juels",https://eprint.iacr.org/2023/1338,iacr,2023-09-08,https://www.twitter.com/unlock_VALue
 Augmenting Batch Exchanges with Constant Function Market Makers,"Geoffrey Ramseyer, Mohak Goyal, Ashish Goel, David Mazières",http://arxiv.org/pdf/2210.04929v5,cs.GT,2022-10-10,https://www.twitter.com/freddmannen
+The Pricing And Hedging Of Constant Function Market Makers,"Richard Dewey, Craig Newbold",http://arxiv.org/pdf/2306.11580v1,"cs.CR, q-fin.PR",2023-06-20,https://www.twitter.com/unlock_VALue
+The Cost of Misspecifying Price Impact,"Natascha Hey, Jean-Philippe Bouchaud, Iacopo Mastromatteo, Johannes Muhle-Karbe, Kevin Webster",http://arxiv.org/pdf/2306.00599v1,q-fin.TR,2023-06-01,https://www.twitter.com/unlock_VALue
+Effective and simple VWAP option pricing model,"Alexander Buryak, Ivan Guo",http://arxiv.org/pdf/1407.7315v1,q-fin.PR,2014-07-28,https://www.twitter.com/unlock_VALue
+Phantom Liquidity and High Frequency Quoting,"Jesse Blocher, Ricky Cooper, Jonathan Seddon, Ben Van Vliet",https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2776745,SSRN,2019-05-21,https://www.twitter.com/unlock_VALue
+Block-Crossing Networks and the Value of Natural Liquidity,"Vladimir Markov, Tito Ingargiola",https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2337094,SSRN,2019-05-21,https://www.twitter.com/unlock_VALue
+Differential Privacy in Constant Function Market Makers,"Tarun Chitra, Guillermo Angeris, Alex Evans",https://eprint.iacr.org/2021/1101,IACR,2021-08-26,https://www.twitter.com/unlock_VALue
+Suboptimality in DeFi,"Aviv Yaish, Maya Dotan, Kaihua Qin, Aviv Zohar, Arthur Gervais",https://eprint.iacr.org/2023/892,IACR,2023-06-12,https://www.twitter.com/unlock_VALue
+LedgerHedger: Gas Reservation for Smart-Contract Security,"Itay Tsabary, Alex Manuskin, Ittay Eyal",https://eprint.iacr.org/2022/056,IACR,2022-06-02,https://www.twitter.com/unlock_VALue
+Speculative Denial-of-Service Attacks in Ethereum,"Aviv Yaish, Kaihua Qin, Liyi Zhou, Aviv Zohar, Arthur Gervais",https://eprint.iacr.org/2023/956,IACR,2023-06-19,https://www.twitter.com/unlock_VALue
