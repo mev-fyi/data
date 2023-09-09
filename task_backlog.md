@@ -19,6 +19,9 @@ Complexity set: Low, Medium, High
     - Priority: Medium
 - [ ] [Run routine / event-based script on Typeform Results content to be uploaded](#task-1)
     - Priority: Medium
+- [ ] [Create new URL patterns with LLM call given existing URL base](#task-1)
+    - Priority: Medium
+    - Context: adding url patterns is tedious and low added value. It would be great to have a script that can generate the URL patterns given a base URL and knowledge base of previous URL patterns.
 ### Content  
 - [ ] [Add the content from bookmarks dotted all over](#task-1)
     - Priority: High
