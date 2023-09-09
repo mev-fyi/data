@@ -195,14 +195,6 @@ if __name__ == "__main__":
     websites_data = pd.read_csv(websites_csv_file)
     updater.update_google_sheet(data=websites_data, tab_name="Website Links", num_rows=1000, num_cols=len(websites_data.columns))
 
-    # Update Google Sheet with YouTube handles
-    youtube_txt_file = os.path.join(repo_dir, "data/links/youtube_channel_handles.txt")
-    youtube_data = {
-        'YouTube Channel Handle': open(youtube_txt_file, 'r').read().split(','),
-        'Link': ['https://www.youtube.com/' + handle.strip() for handle in open(youtube_txt_file, 'r').read().split(',')]
-    }
-    updater.update_google_sheet(data=youtube_data, tab_name="Podcasts and Youtube channels", num_rows=1000, num_cols=2)
-
     # Update Google Sheet with articles
     articles_csv_file = os.path.join(repo_dir, "data/links/articles.csv")
     articles_data = pd.read_csv(articles_csv_file)
@@ -218,8 +210,24 @@ if __name__ == "__main__":
     papers_data = pd.read_csv(papers_csv_file)
     updater.update_google_sheet(data=papers_data, tab_name="Non parsed papers", num_rows=1000, num_cols=2)
 
+    # TODO 2023-09-09: create public youtube playlist for each youtube video .csv
+
+    # Update Google Sheet with YouTube videos
+    papers_csv_file = os.path.join(repo_dir, "data/links/recommended_youtube_videos_with_details.csv")
+    papers_data = pd.read_csv(papers_csv_file)
+    updater.update_google_sheet(data=papers_data, tab_name="Recommended Youtube Videos", num_rows=1000, num_cols=2)
+
     # Update Google Sheet with YouTube videos
     papers_csv_file = os.path.join(repo_dir, "data/links/youtube_videos.csv")
     papers_data = pd.read_csv(papers_csv_file)
-    updater.update_google_sheet(data=papers_data, tab_name="Filtered Youtube Videos", num_rows=1000, num_cols=2)
+    updater.update_google_sheet(data=papers_data, tab_name="Youtube Videos (from channel list)", num_rows=1000, num_cols=2)
+
+    # Update Google Sheet with YouTube handles
+    youtube_txt_file = os.path.join(repo_dir, "data/links/youtube_channel_handles.txt")
+    youtube_data = {
+        'YouTube Channel Handle': open(youtube_txt_file, 'r').read().split(','),
+        'Link': ['https://www.youtube.com/' + handle.strip() for handle in open(youtube_txt_file, 'r').read().split(',')]
+    }
+    updater.update_google_sheet(data=youtube_data, tab_name="Podcasts & Youtube handles", num_rows=1000, num_cols=2)
+
 
