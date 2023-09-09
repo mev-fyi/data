@@ -5,6 +5,7 @@ from googleapiclient.discovery import build
 from dotenv import load_dotenv
 from google.oauth2.service_account import Credentials as ServiceAccountCredentials
 from datetime import datetime
+import logging
 import csv
 
 
@@ -94,7 +95,7 @@ def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel
         try:
             playlist_response = playlist_request.execute()
         except Exception as e:
-            print(f"Error occurred while fetching videos from the channel. Error: {e}")
+            logging.error(f"Error occurred while fetching videos from the channel. Error: {e}")
             return video_info
         items = playlist_response.get('items', [])
 
@@ -111,6 +112,7 @@ def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel
                 'url': f'https://www.youtube.com/watch?v={video_id}',
                 'id': video_id,
             })
+            logging.info(f"Added video: {item['snippet']['title']}")
 
 
 def get_playlist_title(credentials: ServiceAccountCredentials, api_key: str, playlist_id: str) -> Optional[str]:
@@ -192,6 +194,7 @@ def get_root_directory():
         else:
             # Go up one level
             current_dir = os.path.dirname(current_dir)
+
 
 def get_channel_id(credentials: Optional[ServiceAccountCredentials], api_key: str, channel_name: str) -> Optional[str]:
     """
@@ -374,5 +377,5 @@ if __name__ == '__main__':
                 'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
                 'eth global', 'erc', 'eip', 'auction', 'daian', 'vitalik', 'buterin', 'smart contract']
     keywords_to_exclude = ['DAO', 'NFTs']
-    run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=False)
+    run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True)
 
