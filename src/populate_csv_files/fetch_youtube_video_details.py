@@ -1,4 +1,5 @@
 import asyncio
+import concurrent
 import os
 from typing import List, Optional, Dict
 from googleapiclient.discovery import build
@@ -7,6 +8,7 @@ from google.oauth2.service_account import Credentials as ServiceAccountCredentia
 from datetime import datetime
 import logging
 import csv
+import re
 
 
 from src.utils import root_directory
@@ -53,9 +55,9 @@ def authenticate_service_account(service_account_file: str) -> ServiceAccountCre
     return credentials
 
 
-def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel_id: str, channel_name: str, max_results: int = 500000) -> List[dict]:
+def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel_id: str, channel_name: str, max_results: int = 50) -> List[dict]:
     """
-    Retrieves video information (URL, ID, and title) from a YouTube channel using the YouTube Data API.
+    Retrieves video information (URL, ID, title, and published date) from a YouTube channel using the YouTube Data API.
 
     Args:
         api_key (str): Your YouTube Data API key.
@@ -63,13 +65,10 @@ def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel
         max_results (int, optional): Maximum number of results to retrieve. Defaults to 50.
 
     Returns:
-        list: A list of dictionaries containing video URL, ID, and title from the channel.
+        list: A list of dictionaries containing video URL, ID, title, and published date from the channel.
     """
     # Initialize the YouTube API client
-    if credentials is None:
-        youtube = build('youtube', 'v3', developerKey=api_key)
-    else:
-        youtube = build('youtube', 'v3', credentials=credentials, developerKey=api_key)
+    youtube = build('youtube', 'v3', credentials=credentials, developerKey=api_key)
 
     # Get the "Uploads" playlist ID
     channel_request = youtube.channels().list(
@@ -90,7 +89,6 @@ def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel
             playlistId=uploads_playlist_id,
             maxResults=max_results,
             pageToken=next_page_token,
-            fields="nextPageToken,items(snippet(publishedAt,resourceId(videoId),title))"
         )
         try:
             playlist_response = playlist_request.execute()
@@ -105,14 +103,33 @@ def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel
 
             # Parse the timestamp to yyyy-mm-dd format
             parsed_published_at = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ")
-            video_info.append({
-                'name': item["snippet"]["title"],
-                'channel_name': channel_name,
-                'published_date': parsed_published_at.strftime("%Y-%m-%d"),
-                'url': f'https://www.youtube.com/watch?v={video_id}',
-                'id': video_id,
-            })
-            logging.info(f"Added video: {item['snippet']['title']}")
+
+            # Request video details
+            video_request = youtube.videos().list(
+                part="snippet",
+                id=video_id
+            )
+
+            try:
+                video_response = video_request.execute()
+                if video_response and 'items' in video_response:
+                    video_info_item = video_response['items'][0]['snippet']
+                    video_info.append({
+                        'title': video_info_item['title'],
+                        'channel_name': video_info_item['channelTitle'],
+                        'published_date': parsed_published_at.strftime("%Y-%m-%d"),
+                        'url': f'https://www.youtube.com/watch?v={video_id}',
+                    })
+                    logging.info(f"Added video: {video_info_item['title']}")
+            except Exception as e:
+                logging.error(f"Error occurred while fetching video details. Error: {e}")
+
+        next_page_token = playlist_response.get('nextPageToken')
+
+        if not next_page_token:
+            break
+
+    return video_info
 
 
 def get_playlist_title(credentials: ServiceAccountCredentials, api_key: str, playlist_id: str) -> Optional[str]:
@@ -287,7 +304,7 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
             for row in reader:
                 cleaned_row = {k.strip(): v.strip() for k, v in row.items()}
                 existing_data.append(cleaned_row)
-                existing_video_names.add(cleaned_row['name'])
+                existing_video_names.add(cleaned_row['title'])
 
     # Cleaning the keys and values of video info list
     video_info_list = [
@@ -298,7 +315,7 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
     # Removing duplicates based on video names
     video_info_list = [
         video_info for video_info in video_info_list
-        if video_info['name'] not in existing_video_names
+        if video_info['title'] not in existing_video_names
     ]
 
     # Combine new and existing data
@@ -307,16 +324,16 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
     # Create filtered list and filtered away list based on keywords
     filtered_video_info_list = [
         video_info for video_info in all_video_data
-        if any(keyword.lower() in video_info['name'].lower() for keyword in keywords)
+        if any(keyword.lower() in video_info['title'].lower() for keyword in keywords)
     ]
 
     filtered_away_video_info_list = [
         video_info for video_info in all_video_data
-        if not any(keyword.lower() in video_info['name'].lower() for keyword in keywords)
+        if not any(keyword.lower() in video_info['title'].lower() for keyword in keywords)
     ]
 
     # Define your headers here
-    headers = ['link', 'id', 'name', 'publish date']
+    headers = ['link', 'id', 'title', 'publish date']
 
     # Write filtered video info list to csv, overwriting the file
     with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
