@@ -377,5 +377,6 @@ if __name__ == '__main__':
                 'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
                 'eth global', 'erc', 'eip', 'auction', 'daian', 'vitalik', 'buterin', 'smart contract']
     keywords_to_exclude = ['DAO', 'NFTs']
+    # TODO 2023-09-09: optimise the loop to not keep everything in memory and save to csv file in chunks to avoid reaching quota and losing local mem
     run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True)
 

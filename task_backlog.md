@@ -42,6 +42,7 @@ Complexity set: Low, Medium, High
 - [ ] [Deprecate typeform for scalable open-source solution with links waiting to be uploaded](#task-1)
 - [ ] [Decentralise domain name ownership](#task-1)
 - [ ] [Decentralise google sheet ownership](#task-1)
+  - Context: for now the google sheet is updated by a single person via a google service account which is quite centralised. Technically if the .env were pointed to another sheet that can be replicated or become the new source of truth (would require a new url forwarding which is easy to do). 
 - [ ] [Decentralise github repo ownership](#task-1)
 
 ## Codebase
