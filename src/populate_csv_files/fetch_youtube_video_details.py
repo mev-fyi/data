@@ -1,18 +1,18 @@
-import asyncio
-import concurrent
 import os
-from typing import List, Optional, Dict
+import traceback
+import random
+from typing import List, Optional
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
 from google.oauth2.service_account import Credentials as ServiceAccountCredentials
 from datetime import datetime
 import logging
 import csv
-import re
-from concurrent.futures import ThreadPoolExecutor
+import asyncio
+from aiohttp import ClientSession
 
 
-from src.utils import root_directory
+from src.utils import root_directory, authenticate_service_account, get_videos_from_playlist, get_channel_id
 
 
 # Load environment variables from the .env file
@@ -26,47 +26,43 @@ keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 
             'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
-            'eth global', 'erc', 'eip', 'auction', 'daian', 'vitalik', 'buterin', 'smart contract']
-keywords_to_exclude = ['DAO', 'NFTs']
-
-def background(f):
-    """
-    Decorator that turns a synchronous function into an asynchronous function by running it in an
-    executor using the default event loop.
-
-    Args:
-        f (Callable): The function to be turned into an asynchronous function.
-
-    Returns:
-        Callable: The wrapped function that can be called asynchronously.
-    """
-    def wrapped(*args, **kwargs):
-        """
-        Wrapper function that calls the original function 'f' in an executor using the default event loop.
-
-        Args:
-            *args: Positional arguments to pass to the original function 'f'.
-            **kwargs: Keyword arguments to pass to the original function 'f'.
-
-        Returns:
-            Any: The result of the original function 'f'.
-        """
-        return asyncio.get_event_loop().run_in_executor(None, f, *args, **kwargs)
-
-    return wrapped
+            'eth global', 'erc', 'eip', 'auction', 'daian', 'vitalik', 'buterin', 'smart contract', 'mechanism design', ]
+keywords_to_exclude = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts']
 
 
-def authenticate_service_account(service_account_file: str) -> ServiceAccountCredentials:
-    """Authenticates using service account and returns the session."""
-
-    credentials = ServiceAccountCredentials.from_service_account_file(
-        service_account_file,
-        scopes=["https://www.googleapis.com/auth/youtube.readonly"]
+async def get_video_details(youtube, video_id, keywords, keywords_to_exclude):
+    video_request = youtube.videos().list(
+        part="snippet",
+        id=video_id
     )
-    return credentials
+
+    try:
+        video_response = video_request.execute()
+        video_info_item = video_response['items'][0]['snippet']
+        video_title = video_info_item['title']
+
+        # Check if the video title contains any of the keywords
+        if any(keyword.lower() in video_title.lower() for keyword in keywords) and not any(keyword.lower() in video_title.lower() for keyword in keywords_to_exclude):
+            published_at = video_info_item['publishedAt']
+            parsed_published_at = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ")
+            logging.info(f"[{video_info_item['channelTitle']}] added video: [{video_title}]")
+            return {
+                'title': video_title,
+                'channel_name': video_info_item['channelTitle'],
+                'published_date': parsed_published_at.strftime("%Y-%m-%d"),
+                'url': f'https://www.youtube.com/watch?v={video_id}',
+            }
+        else:
+            # logging.info(f"[{video_info_item['channelTitle']}] Skipped video: [{video_title}] (Title doesn't match keyword criteria)")
+            return None
+    except Exception as e:
+        logging.error(f"[{youtube}] and id [{video_id}] Error occurred while fetching video details. Error: {e}")
+        traceback.print_exc()
+        return None
 
 
-def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel_id: str, channel_name: str, max_results: int = 50) -> List[dict]:
+
+async def get_video_info(session, credentials: ServiceAccountCredentials, api_key: str, channel_id: str, channel_name: str, max_results: int = 50) -> List[dict]:
     """
     Retrieves video information (URL, ID, title, and published date) from a YouTube channel using the YouTube Data API.
 
@@ -106,34 +102,12 @@ def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel
         except Exception as e:
             logging.error(f"Error occurred while fetching videos from the channel. Error: {e}")
             return video_info
-        items = playlist_response.get('items', [])
+        video_ids = [item["snippet"]["resourceId"]["videoId"] for item in playlist_response.get('items', [])]
+        # logging.info(f"[{channel_name}] Fetched video IDs from the channel: {video_ids}")
+        # Fetch video details in parallel
+        video_details = await asyncio.gather(*[get_video_details(youtube, video_id, keywords, keywords_to_exclude) for video_id in video_ids])
 
-        for item in items:
-            video_id = item["snippet"]["resourceId"]["videoId"]
-            published_at = item["snippet"]["publishedAt"]
-
-            # Parse the timestamp to yyyy-mm-dd format
-            parsed_published_at = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ")
-
-            # Request video details
-            video_request = youtube.videos().list(
-                part="snippet",
-                id=video_id
-            )
-
-            try:
-                video_response = video_request.execute()
-                if video_response and 'items' in video_response:
-                    video_info_item = video_response['items'][0]['snippet']
-                    video_info.append({
-                        'title': video_info_item['title'],
-                        'channel_name': video_info_item['channelTitle'],
-                        'published_date': parsed_published_at.strftime("%Y-%m-%d"),
-                        'url': f'https://www.youtube.com/watch?v={video_id}',
-                    })
-                    logging.info(f"[{video_info_item['channelTitle']}] Added video: {video_info_item['title']}")
-            except Exception as e:
-                logging.error(f"Error occurred while fetching video details. Error: {e}")
+        video_info.extend([video for video in video_details if video])  # Extend the list instead of overwriting it
 
         next_page_token = playlist_response.get('nextPageToken')
 
@@ -141,126 +115,6 @@ def get_video_info(credentials: ServiceAccountCredentials, api_key: str, channel
             break
 
     return video_info
-
-
-def get_playlist_title(credentials: ServiceAccountCredentials, api_key: str, playlist_id: str) -> Optional[str]:
-    """
-    Retrieves the title of a YouTube playlist using the YouTube Data API.
-
-    Args:
-        api_key (str): Your YouTube Data API key.
-        playlist_id (str): The YouTube playlist ID.
-
-    Returns:
-        Optional[str]: The title of the playlist if found, otherwise None.
-    """
-    # Initialize the YouTube API client
-    if credentials is None:
-        youtube = build('youtube', 'v3', developerKey=api_key)
-    else:
-        youtube = build('youtube', 'v3', credentials=credentials, developerKey=api_key)
-
-    request = youtube.playlists().list(
-        part='snippet',
-        id=playlist_id,
-        fields='items(snippet/title)',
-        maxResults=1
-    )
-    response = request.execute()
-    items = response.get('items', [])
-
-    if items:
-        return items[0]['snippet']['title']
-    else:
-        return None
-
-
-def get_videos_from_playlist(credentials: ServiceAccountCredentials, api_key: str, playlist_id: str, max_results: int = 5000) -> List[dict]:
-    # Initialize the YouTube API client
-    if credentials is None:
-        youtube = build('youtube', 'v3', developerKey=api_key)
-    else:
-        youtube = build('youtube', 'v3', credentials=credentials, developerKey=api_key)
-
-    video_info = []
-    next_page_token = None
-
-    while True:
-        playlist_request = youtube.playlistItems().list(
-            part="snippet",
-            playlistId=playlist_id,
-            maxResults=max_results,
-            pageToken=next_page_token,
-            fields="nextPageToken,items(snippet(publishedAt,resourceId(videoId),title))"
-        )
-        playlist_response = playlist_request.execute()
-        items = playlist_response.get('items', [])
-
-        for item in items:
-            video_id = item["snippet"]["resourceId"]["videoId"]
-            video_info.append({
-                'url': f'https://www.youtube.com/watch?v={video_id}',
-                'id': video_id,
-                'title': item["snippet"]["title"],
-                'publishedAt': item["snippet"]["publishedAt"]
-            })
-
-        next_page_token = playlist_response.get("nextPageToken")
-
-        if next_page_token is None or len(video_info) >= max_results:
-            break
-
-    return video_info
-
-
-def get_root_directory():
-    current_dir = os.getcwd()
-
-    while True:
-        if '.git' in os.listdir(current_dir):
-            return current_dir
-        else:
-            # Go up one level
-            current_dir = os.path.dirname(current_dir)
-
-
-def get_channel_id(credentials: Optional[ServiceAccountCredentials], api_key: str, channel_name: str) -> Optional[str]:
-    """
-    Get the channel ID of a YouTube channel by its name.
-
-    Args:
-        api_key (str): Your YouTube Data API key.
-        channel_name (str): The name of the YouTube channel.
-
-    Returns:
-        Optional[str]: The channel ID if found, otherwise None.
-    """
-    # Initialize the YouTube API client
-    if credentials is None:
-        youtube = build('youtube', 'v3', developerKey=api_key)
-    else:
-        youtube = build('youtube', 'v3', credentials=credentials, developerKey=api_key)
-
-    # Create a search request to find the channel by name
-    request = youtube.search().list(
-        part='snippet',
-        type='channel',
-        q=channel_name,
-        maxResults=1,
-        fields='items(id(channelId))'
-    )
-
-    # Execute the request and get the response
-    response = request.execute()
-
-    # Get the list of items (channels) from the response
-    items = response.get('items', [])
-
-    # If there is at least one item, return the channel ID, otherwise return None
-    if items:
-        return items[0]['id']['channelId']
-    else:
-        return None
 
 
 def save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers):
@@ -272,30 +126,41 @@ def save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names,
 
     # Append new data to the CSV file
     with open(csv_file_path, mode='a', newline='', encoding='utf-8') as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=headers)
+        writer = csv.DictWriter(csv_file, fieldnames=headers, quoting=csv.QUOTE_MINIMAL)  # Add quoting option
         for video_info in video_info_list:
+            # Ensure titles are enclosed in double quotes
+            video_info['title'] = f'"{video_info["title"]}"'
             writer.writerow(video_info)
 
 
-def fetch_and_save_channel_videos(channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers):
-    video_info_list = get_video_info(credentials, api_key, channel_id, channel_name)
+async def fetch_and_save_channel_videos(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers):
+    video_info_list = await get_video_info(session, credentials, api_key, channel_id, channel_name)
+
     save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
     logging.info(f"[{channel_name}] Saved {len(video_info_list)} videos to CSV file {csv_file_path}.")
 
 
-def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None,
-        keywords: List[str] = None, keywords_to_exclude: List[str] = None, fetch_videos: bool = True):
+async def fetch_and_save_channel_videos_async(session, youtube, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers):
+    video_info_list = await get_video_info(session, credentials, api_key, channel_id, channel_name)
+
+    save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
+    logging.info(f"[{channel_name}] Saved {len(video_info_list)} videos to CSV file {csv_file_path}.")
+
+
+async def fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos):
     """
-    Run function that takes a YouTube Data API key and a list of YouTube channel names or playlist IDs, fetches video transcripts,
-    and saves them as .txt files in a data directory.
+    Fetches YouTube video information from specified channels and playlists, and optionally filters them based on keywords.
 
     Args:
         api_key (str): Your YouTube Data API key.
-        yt_channels (List[str], optional): A list of YouTube channel names to fetch videos from. Default is None.
-        yt_playlists (List[str], optional): A list of YouTube playlist IDs to fetch videos from. Default is None.
-        keywords (List[str], optional): A list of keywords to filter videos to keep. Default is None.
-        keywords_to_exclude (List[str], optional): A list of keywords to filter videos to exclude. Default is None.
-        fetch_videos (bool, optional): Whether to fetch videos from the specified channels and playlists. Default is True.
+        yt_channels (Optional[List[str]]): List of YouTube channel names or IDs to fetch videos from.
+        yt_playlists (Optional[List[str]]): List of YouTube playlist IDs to fetch videos from.
+        keywords (List[str]): Keywords to filter videos by.
+        keywords_to_exclude (List[str]): Keywords to exclude videos by.
+        fetch_videos (bool): Whether to fetch videos or not.
+
+    Returns:
+        List[dict]: A list of dictionaries containing video information.
     """
     service_account_file = os.environ.get('SERVICE_ACCOUNT_FILE')
     credentials = None
@@ -306,18 +171,33 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
     else:
         logging.info("\nNo service account file found. Proceeding with public channels or playlists.")
 
-    # Create a list to store video information
-    video_info_list = []
+    # Check if the CSV file already exists
+    csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
+    csv_file_exists = os.path.exists(csv_file_path)
+
+    headers = ['title', 'channel_name', 'published_date', 'url', 'referrer']
+
+    # Check if the CSV file exists and if its headers match the expected headers
+    if csv_file_exists:
+        with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
+            reader = csv.DictReader(csv_file)
+            existing_headers = reader.fieldnames
+        if existing_headers != headers:
+            # Create a new CSV file with the specified headers
+            with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
+                writer = csv.DictWriter(csv_file, fieldnames=headers)
+                writer.writeheader()
+    else:
+        # Create a new CSV file with the specified headers
+        with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
+            writer = csv.DictWriter(csv_file, fieldnames=headers)
+            writer.writeheader()
 
     # Create a list to store existing data read from the CSV file
     existing_data = []
-
     existing_video_names = set()
 
-    # Define the csv_file_path before using it
-    csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
-
-    if os.path.exists(csv_file_path):
+    if csv_file_exists:
         with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
             reader = csv.DictReader(csv_file)
             for row in reader:
@@ -325,72 +205,53 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
                 existing_data.append(cleaned_row)
                 existing_video_names.add(cleaned_row['title'])
 
-    headers = ['title', 'channel_name', 'Publish date', 'link', 'referrer']
-
     if fetch_videos:
         if yt_channels:
-            # Using ThreadPoolExecutor to fetch video info in parallel
-            with ThreadPoolExecutor() as executor:
+            async with ClientSession() as session:
+                youtube = build('youtube', 'v3', developerKey=api_key)
                 for channel_name in yt_channels:
-                    channel_id = get_channel_id(credentials=credentials, api_key=api_key, channel_name=channel_name)
-                    if channel_id:
-                        executor.submit(fetch_and_save_channel_videos, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
+                    channel_id = get_channel_id(youtube, channel_name)
+                    if channel_id is not None:
+                        await fetch_and_save_channel_videos_async(session, youtube, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
 
         if yt_playlists:
             for playlist_id in yt_playlists:
-                # Fetch videos from playlists and save them channel-wise (assuming your function get_videos_from_playlist returns a list of video_info dictionaries)
                 video_info_list = get_videos_from_playlist(credentials, api_key, playlist_id)
                 save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
 
-    if os.path.exists(csv_file_path):
-            with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
-                reader = csv.DictReader(csv_file)
-                for row in reader:
-                    cleaned_row = {k.strip(): v.strip() for k, v in row.items()}
-                    existing_data.append(cleaned_row)
-                    existing_video_names.add(cleaned_row['title'])
+    return existing_data
 
-    # Cleaning the keys and values of video info list
+
+def filter_and_save_video_info(existing_data, keywords, csv_file_path):
+    video_info_list = existing_data
+
     video_info_list = [
         {k.strip(): v.strip() for k, v in video_info.items()}
         for video_info in video_info_list
     ]
 
-    # Removing duplicates based on video names
-    video_info_list = [
-        video_info for video_info in video_info_list
-        if video_info['title'] not in existing_video_names
-    ]
+    existing_video_names = set(video_info['title'] for video_info in video_info_list)
 
-    # Combine new and existing data
-    all_video_data = existing_data + video_info_list
+    headers = ['link', 'id', 'title', 'publish date']
 
-    # Create filtered list and filtered away list based on keywords
     filtered_video_info_list = [
-        video_info for video_info in all_video_data
+        video_info for video_info in video_info_list
         if any(keyword.lower() in video_info['title'].lower() for keyword in keywords)
     ]
 
     filtered_away_video_info_list = [
-        video_info for video_info in all_video_data
+        video_info for video_info in video_info_list
         if not any(keyword.lower() in video_info['title'].lower() for keyword in keywords)
     ]
 
-    # Define your headers here
-    headers = ['link', 'id', 'title', 'publish date']
-
-    # Write filtered video info list to csv, overwriting the file
     with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=headers)
-        writer.writeheader()  # Write the header
+        writer.writeheader()
 
         for video_info in filtered_video_info_list:
             writer.writerow(video_info)
 
-    # Write filtered away video info list to a new csv file
     filtered_away_csv_file_path = f"{root_directory()}/data/links/filtered_away_youtube_videos.csv"
-
-    # Check if the filtered away csv file already exists
     write_filtered_away_header = not os.path.exists(filtered_away_csv_file_path)
 
     with open(filtered_away_csv_file_path, mode='a', newline='', encoding='utf-8') as csv_file:
@@ -401,6 +262,13 @@ def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Opt
 
         for video_info in filtered_away_video_info_list:
             writer.writerow(video_info)
+
+
+async def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None,
+              keywords: List[str] = None, keywords_to_exclude: List[str] = None, fetch_videos: bool = True):
+    csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
+    existing_data = await fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos)
+    filter_and_save_video_info(existing_data, keywords, csv_file_path)
 
 
 # Function to read the channel handles from a file
@@ -428,5 +296,4 @@ if __name__ == '__main__':
         raise ValueError(
             "No channels or playlists provided. Please provide channel names, IDs, or playlist IDs via command line argument or .env file.")
 
-    run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True)
-
+    asyncio.run(run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True))

@@ -6,8 +6,7 @@ import logging
 from datetime import datetime
 
 from googleapiclient.discovery import build
-from src.populate_csv_files.fetch_youtube_video_details import authenticate_service_account
-from src.utils import root_directory
+from src.utils import root_directory, authenticate_service_account
 
 
 # Function to extract video ID from a YouTube link

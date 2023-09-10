@@ -7,6 +7,8 @@ import re
 
 from src.utils import root_directory, ensure_newline_in_csv
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 def add_domain_to_file(domain: str, filepath: str) -> None:
     with open(filepath, 'a') as file:
