@@ -1,7 +1,11 @@
 import os
+import shutil
+import tempfile
 import traceback
 import random
 from typing import List, Optional
+
+import pandas as pd
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
 from google.oauth2.service_account import Credentials as ServiceAccountCredentials
@@ -19,15 +23,16 @@ from src.utils import root_directory, authenticate_service_account, get_videos_f
 load_dotenv()
 
 # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
-keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage',
-            'maximal extractable value', 'games', 'timing', 'onc0chain games', 'pepc', 'proposer', 'builder', 'barnabe',
+keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage', 'back-running',
+            'maximal extractable value', 'trading games', 'timing games', 'arbitrage games', 'timing', 'on-chain games', 'pepc', 'proposer', 'builder', 'barnabe',
             'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'anoma', 'espresso',
             'suave', 'flashbots', 'celestia', 'gas war', 'hasu', 'dan robinson', 'jon charbonneau', 'robert miller', 'paradigm',
             'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
-            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
-            'eth global', 'erc', 'eip', 'auction', 'daian', 'vitalik', 'buterin', 'smart contract', 'mechanism design', ]
-keywords_to_exclude = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#']
+            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge',
+            'erc', 'eip', 'auction', 'daian', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'stephane gosselin', ]  # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin'
+
+keywords_to_exclude = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler']
 
 
 async def get_video_details(youtube, video_id, keywords, keywords_to_exclude):
@@ -264,6 +269,24 @@ def filter_and_save_video_info(existing_data, keywords, csv_file_path):
             writer.writerow(video_info)
 
 
+def filter_and_remove_videos(input_csv_path, keywords):
+    # Read the CSV file into a DataFrame
+    df = pd.read_csv(input_csv_path)
+
+    # Filter the DataFrame based on keywords
+    filtered_df = df[df['title'].str.lower().str.contains('|'.join(keywords).lower())]
+
+    # Identify removed videos
+    removed_df = df[~df['title'].isin(filtered_df['title'])]
+
+    # Log the removed video titles
+    for _, removed_video in removed_df.iterrows():
+        logging.info(f"Removed video: {removed_video['title']}")
+
+    # Write the filtered data back to the CSV file
+    filtered_df.to_csv(input_csv_path, index=False)
+
+
 async def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None,
               keywords: List[str] = None, keywords_to_exclude: List[str] = None, fetch_videos: bool = True):
     csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
@@ -279,21 +302,31 @@ def get_youtube_channels_from_file(file_path):
 
 
 if __name__ == '__main__':
-    api_key = os.environ.get('YOUTUBE_API_KEY')
-    if not api_key:
-        raise ValueError("No API key provided. Please provide an API key via command line argument or .env file.")
+    fetch_videos = False
 
-    yt_channels_file = os.path.join(root_directory(), 'data/links/youtube_channel_handles.txt')
+    if fetch_videos:
+        api_key = os.environ.get('YOUTUBE_API_KEY')
+        if not api_key:
+            raise ValueError("No API key provided. Please provide an API key via command line argument or .env file.")
 
-    # Fetch the yt_channels from the file
-    yt_channels = get_youtube_channels_from_file(yt_channels_file)
+        yt_channels_file = os.path.join(root_directory(), 'data/links/youtube_channel_handles.txt')
 
-    yt_playlists = os.environ.get('YOUTUBE_PLAYLISTS')
-    if yt_playlists:
-        yt_playlists = [playlist.strip() for playlist in yt_playlists.split(',')]
+        # Fetch the yt_channels from the file
+        yt_channels = get_youtube_channels_from_file(yt_channels_file)
 
-    if not yt_channels and not yt_playlists:
-        raise ValueError(
-            "No channels or playlists provided. Please provide channel names, IDs, or playlist IDs via command line argument or .env file.")
+        yt_playlists = os.environ.get('YOUTUBE_PLAYLISTS')
+        if yt_playlists:
+            yt_playlists = [playlist.strip() for playlist in yt_playlists.split(',')]
 
-    asyncio.run(run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True))
+        if not yt_channels and not yt_playlists:
+            raise ValueError(
+                "No channels or playlists provided. Please provide channel names, IDs, or playlist IDs via command line argument or .env file.")
+
+        asyncio.run(run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True))
+
+    # Specify the input and output CSV file paths
+    input_csv_path = f"{root_directory()}/data/links/youtube_videos.csv"
+    output_csv_path = f"{root_directory()}/data/links/filtered_and_updated_youtube_videos.csv"
+
+    # Call the filter_and_log_removed_videos method to filter and log removed videos
+    filter_and_remove_videos(input_csv_path, keywords)
