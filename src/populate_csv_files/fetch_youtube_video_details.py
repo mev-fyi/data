@@ -29,10 +29,11 @@ keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 
             'suave', 'flashbots', 'celestia', 'gas war', 'hasu', 'dan robinson', 'jon charbonneau', 'robert miller', 'paradigm',
             'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
-            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge',
-            'erc', 'eip', 'auction', 'daian', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'stephane gosselin', ]  # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin'
+            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization',
+            'erc', 'eip', 'auction', 'daian', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'stephane gosselin', 'su zhu']
+            # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin', bridge',
 
-keywords_to_exclude = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler']
+keywords_to_exclude = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler', 'sec']
 
 
 async def get_video_details(youtube, video_id, keywords, keywords_to_exclude):
