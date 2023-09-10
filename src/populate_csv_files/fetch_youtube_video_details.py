@@ -16,8 +16,7 @@ import asyncio
 from aiohttp import ClientSession
 
 
-from src.utils import root_directory, authenticate_service_account, get_videos_from_playlist, get_channel_id
-
+from src.utils import root_directory, authenticate_service_account, get_videos_from_playlist, get_channel_id, get_channel_name
 
 # Load environment variables from the .env file
 load_dotenv()
@@ -177,55 +176,108 @@ async def fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, key
     else:
         logging.info("\nNo service account file found. Proceeding with public channels or playlists.")
 
-    # Check if the CSV file already exists
-    csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
-    csv_file_exists = os.path.exists(csv_file_path)
+    csv_file_exists, csv_file_path, headers = setup_csv()
 
-    headers = ['title', 'channel_name', 'published_date', 'url', 'referrer']
+    existing_data, existing_video_names = load_existing_data(csv_file_exists, csv_file_path)
 
-    # Check if the CSV file exists and if its headers match the expected headers
-    if csv_file_exists:
-        with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
-            reader = csv.DictReader(csv_file)
-            existing_headers = reader.fieldnames
-        if existing_headers != headers:
-            # Create a new CSV file with the specified headers
-            with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
-                writer = csv.DictWriter(csv_file, fieldnames=headers)
-                writer.writeheader()
-    else:
-        # Create a new CSV file with the specified headers
-        with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=headers)
-            writer.writeheader()
+    channel_handle_to_name = get_channel_names(api_key, yt_channels)
 
-    # Create a list to store existing data read from the CSV file
-    existing_data = []
-    existing_video_names = set()
-
-    if csv_file_exists:
-        with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
-            reader = csv.DictReader(csv_file)
-            for row in reader:
-                cleaned_row = {k.strip(): v.strip() for k, v in row.items()}
-                existing_data.append(cleaned_row)
-                existing_video_names.add(cleaned_row['title'])
+    channels_in_csv, channels_not_in_csv = separate_channels_based_on_csv(channel_handle_to_name, existing_video_names, yt_channels)
 
     if fetch_videos:
-        if yt_channels:
-            async with ClientSession() as session:
-                youtube = build('youtube', 'v3', developerKey=api_key)
-                for channel_name in yt_channels:
+        await fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv, channels_not_in_csv, credentials, csv_file_path, existing_video_names, headers, yt_channels)
+
+        await fetch_playlist_videos(api_key, credentials, csv_file_path, existing_video_names, headers, yt_playlists)
+
+    return existing_data
+
+
+async def fetch_playlist_videos(api_key, credentials, csv_file_path, existing_video_names, headers, yt_playlists):
+    if yt_playlists:
+        for playlist_id in yt_playlists:
+            video_info_list = get_videos_from_playlist(credentials, api_key, playlist_id)
+            save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
+
+
+async def fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv, channels_not_in_csv, credentials, csv_file_path, existing_video_names, headers, yt_channels):
+    if yt_channels:
+        async with ClientSession() as session:
+            youtube = build('youtube', 'v3', developerKey=api_key)
+            # Fetching videos from channels not in the CSV file first
+            for channel_handle in channels_not_in_csv:
+                channel_name = channel_handle_to_name.get(channel_handle)
+                if channel_name:
                     channel_id = get_channel_id(youtube, channel_name)
                     if channel_id is not None:
                         await fetch_and_save_channel_videos_async(session, youtube, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
 
-        if yt_playlists:
-            for playlist_id in yt_playlists:
-                video_info_list = get_videos_from_playlist(credentials, api_key, playlist_id)
-                save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
+            # Fetching videos from channels already in the CSV file
+            for channel_handle in channels_in_csv:
+                channel_name = channel_handle_to_name.get(channel_handle)
+                if channel_name:
+                    channel_id = get_channel_id(youtube, channel_name)
+                    if channel_id is not None:
+                        await fetch_and_save_channel_videos_async(session, youtube, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
 
-    return existing_data
+
+def separate_channels_based_on_csv(channel_handle_to_name, existing_video_names, yt_channels):
+    # Creating two separate lists for channels: one for channels not in the CSV file,
+    # and another for channels already in the CSV file
+    channels_not_in_csv = []
+    channels_in_csv = []
+    for channel_handle in yt_channels:
+        channel_name = channel_handle_to_name.get(channel_handle)
+        if channel_name:
+            if channel_name in existing_video_names:
+                channels_in_csv.append(channel_handle)
+            else:
+                channels_not_in_csv.append(channel_handle)
+    return channels_in_csv, channels_not_in_csv
+
+
+def get_channel_names(api_key, yt_channels):
+    channel_handle_to_name = {}
+    for channel_handle in yt_channels:
+        channel_name = get_channel_name(api_key, channel_handle)
+        if channel_name:
+            channel_handle_to_name[channel_handle] = channel_name
+    return channel_handle_to_name
+
+
+def load_existing_data(csv_file_exists, csv_file_path):
+    # Create a DataFrame to store existing data read from the CSV file and create sets of existing video names and channel names
+    if csv_file_exists:
+        existing_data_df = pd.read_csv(csv_file_path, encoding='utf-8')
+
+        # Create a set for existing video names for faster lookup
+        existing_video_names = set(existing_data_df['title'].str.strip())
+
+        # Convert the DataFrame back to a list of dictionaries to create existing_data
+        existing_data = existing_data_df.to_dict('records')
+    else:
+        # If the CSV file does not exist, initialize empty sets and list
+        existing_data = []
+        existing_video_names = set()
+    return existing_data, existing_video_names
+
+
+def setup_csv():
+    # Check if the CSV file already exists
+    csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
+    csv_file_exists = os.path.exists(csv_file_path)
+    headers = ['title', 'channel_name', 'published_date', 'url', 'referrer']
+    # Check if the CSV file exists and if its headers match the expected headers
+    if csv_file_exists:
+        existing_data_df = pd.read_csv(csv_file_path, encoding='utf-8', nrows=0)  # Read just the header
+        existing_headers = existing_data_df.columns.tolist()
+
+        if existing_headers != headers:
+            # Create a new CSV file with the specified headers
+            pd.DataFrame(columns=headers).to_csv(csv_file_path, index=False, encoding='utf-8')
+    else:
+        # Create a new CSV file with the specified headers
+        pd.DataFrame(columns=headers).to_csv(csv_file_path, index=False, encoding='utf-8')
+    return csv_file_exists, csv_file_path, headers
 
 
 def filter_and_save_video_info(existing_data, keywords, csv_file_path):
@@ -303,7 +355,9 @@ def get_youtube_channels_from_file(file_path):
 
 
 if __name__ == '__main__':
-    fetch_videos = False
+    fetch_videos = True
+    if not fetch_videos:
+        logging.info(f"Applying new filters only, not fetching videos.")
 
     if fetch_videos:
         api_key = os.environ.get('YOUTUBE_API_KEY')

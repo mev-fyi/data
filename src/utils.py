@@ -256,6 +256,24 @@ def get_root_directory():
             current_dir = os.path.dirname(current_dir)
 
 
+def get_channel_name(api_key, channel_handle):
+    youtube = build('youtube', 'v3', developerKey=api_key)
+
+    request = youtube.search().list(
+        part='snippet',
+        type='channel',
+        q=channel_handle,
+        maxResults=1,
+        fields='items(snippet(channelTitle))'
+    )
+    response = request.execute()
+
+    if response['items']:
+        return response['items'][0]['snippet']['channelTitle']
+    else:
+        return None
+
+
 def get_channel_id(youtube, channel_name: str) -> Optional[str]:
     """
     Get the channel ID of a YouTube channel by its name.
