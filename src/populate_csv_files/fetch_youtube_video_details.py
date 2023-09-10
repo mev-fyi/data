@@ -27,7 +27,7 @@ keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', 'bridge', 'evm',
             'eth global', 'erc', 'eip', 'auction', 'daian', 'vitalik', 'buterin', 'smart contract', 'mechanism design', ]
-keywords_to_exclude = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts']
+keywords_to_exclude = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#']
 
 
 async def get_video_details(youtube, video_id, keywords, keywords_to_exclude):

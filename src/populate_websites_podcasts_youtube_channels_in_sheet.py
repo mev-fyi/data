@@ -6,6 +6,7 @@ from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
 import logging
+import re
 
 from bs4 import BeautifulSoup
 import requests
@@ -60,10 +61,8 @@ class GoogleSheetUpdater:
             logging.info(f"Created new worksheet: '{tab_name}'.")
         return sheet
 
-    def update_google_sheet(self, data, tab_name, num_rows, num_cols):
-        sheet = self.create_or_get_worksheet(tab_name, num_rows, num_cols)
-        df = pd.DataFrame(data)
 
+    def format_worksheet(self, sheet, df, tab_name):
         # Pascal case all columns names
         df.columns = [col[0].upper() + col[1:] for col in df.columns]
 
@@ -78,70 +77,69 @@ class GoogleSheetUpdater:
 
         service = build('sheets', 'v4', credentials=self.credentials)
 
-        grid_range = {
-            'sheetId': sheet.id,
-            'startRowIndex': 0,
-            'endRowIndex': df.shape[0] + 1,
-            'startColumnIndex': 0,
-            'endColumnIndex': df.shape[1]
-        }
-        if 'youtube videos' in tab_name.lower():
-            publish_date_column_index = df.columns.get_loc('Publish date')
-        # get the index of the column Published Date
+        requests = [
+            # Bold formatting request for header
+            {
+                'repeatCell': {
+                    'range': {
+                        'sheetId': sheet.id,
+                        'startRowIndex': 0,
+                        'endRowIndex': 1
+                    },
+                    'cell': {
+                        'userEnteredFormat': {
+                            'textFormat': {
+                                'bold': True
+                            },
+                            'horizontalAlignment': 'CENTER'  # Center-align header text
+                        }
+                    },
+                    'fields': 'userEnteredFormat.textFormat.bold,userEnteredFormat.horizontalAlignment'
+                }
+            },
+            # Left-align content rows
+            {
+                'repeatCell': {
+                    'range': {
+                        'sheetId': sheet.id,
+                        'startRowIndex': 1,  # Start from the row after the header
+                        'endRowIndex': df.shape[0] + 1
+                    },
+                    'cell': {
+                        'userEnteredFormat': {
+                            'horizontalAlignment': 'LEFT'  # Left-align content
+                        }
+                    },
+                    'fields': 'userEnteredFormat.horizontalAlignment'
+                }
+            },
+            # Freeze header row request
+            {
+                'updateSheetProperties': {
+                    'properties': {
+                        'sheetId': sheet.id,
+                        'gridProperties': {
+                            'frozenRowCount': 1
+                        }
+                    },
+                    'fields': 'gridProperties.frozenRowCount'
+                }
+            }
+        ]
 
-        body = {
-            'requests': [
-                # Bold formatting request for header
-                {
-                    'repeatCell': {
-                        'range': {
-                            'sheetId': sheet.id,
-                            'startRowIndex': 0,
-                            'endRowIndex': 1
-                        },
-                        'cell': {
-                            'userEnteredFormat': {
-                                'textFormat': {
-                                    'bold': True
-                                },
-                                'horizontalAlignment': 'CENTER'  # Center-align header text
-                            }
-                        },
-                        'fields': 'userEnteredFormat.textFormat.bold,userEnteredFormat.horizontalAlignment'
-                    }
-                },
-                # Left-align content rows
-                {
-                    'repeatCell': {
-                        'range': {
-                            'sheetId': sheet.id,
-                            'startRowIndex': 1,  # Start from the row after the header
-                            'endRowIndex': df.shape[0] + 1
-                        },
-                        'cell': {
-                            'userEnteredFormat': {
-                                'horizontalAlignment': 'LEFT'  # Left-align content
-                            }
-                        },
-                        'fields': 'userEnteredFormat.horizontalAlignment'
-                    }
-                },
-                # Freeze header row request
-                {
-                    'updateSheetProperties': {
-                        'properties': {
-                            'sheetId': sheet.id,
-                            'gridProperties': {
-                                'frozenRowCount': 1
-                            }
-                        },
-                        'fields': 'gridProperties.frozenRowCount'
-                    }
-                },
-            ]
-        }
-        if 'youtube videos' in tab_name.lower():
-            # Filter and sort request by 'Published Date' in descending order
+        # Function to find the publish date column index
+        def find_publish_date_column(df):
+            # Define a regular expression pattern to match column names
+            pattern = re.compile(r'publish(ed)?[_\s]?date', re.IGNORECASE)
+
+            # Iterate through the column names
+            for col_name in df.columns:
+                if pattern.search(col_name):
+                    return df.columns.get_loc(col_name)
+            return None
+        # Usage
+        publish_date_column_index = find_publish_date_column(df)
+        if publish_date_column_index is not None:
             published_date = {
                 'sortRange': {
                     'range': {
@@ -152,14 +150,34 @@ class GoogleSheetUpdater:
                         'endColumnIndex': df.shape[1]
                     },
                     'sortSpecs': [{
-                        'dimensionIndex': publish_date_column_index,  # Replace with the correct index
+                        'dimensionIndex': publish_date_column_index,
                         'sortOrder': 'DESCENDING'
                     }]
                 }
             }
+            requests.append(published_date)
 
-            # Append the sort request to the existing list
-            body["requests"].append(published_date)
+        # Update the filter request to specify the exact range
+        filter_request = {
+            'setBasicFilter': {
+                'filter': {
+                    'range': {
+                        'sheetId': sheet.id,
+                        'startRowIndex': 0,  # Start from the header row
+                        'endRowIndex': df.shape[0] + 1,  # Extend to the end of the data
+                        'startColumnIndex': 0,
+                        'endColumnIndex': df.shape[1]
+                    }
+                }
+            }
+        }
+
+        # Append the filter request to the existing list of requests
+        requests.append(filter_request)
+
+        body = {
+            'requests': requests
+        }
 
         service.spreadsheets().batchUpdate(spreadsheetId=self.sheet_id, body=body).execute()
 
@@ -184,6 +202,12 @@ class GoogleSheetUpdater:
 
         service.spreadsheets().batchUpdate(spreadsheetId=self.sheet_id, body=body).execute()
         logging.info(f"Saved data to new tab '{tab_name}' in Google Sheet and added filters.")
+
+    def update_google_sheet(self, data, tab_name, num_rows, num_cols):
+        sheet = self.create_or_get_worksheet(tab_name, num_rows, num_cols)
+        df = pd.DataFrame(data)
+
+        self.format_worksheet(sheet, df, tab_name)
 
 
 if __name__ == "__main__":
