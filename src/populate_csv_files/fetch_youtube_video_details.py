@@ -4,7 +4,7 @@ import tempfile
 import traceback
 import random
 from typing import List, Optional
-
+import json
 import pandas as pd
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
@@ -64,7 +64,6 @@ async def get_video_details(youtube, video_id, keywords, keywords_to_exclude):
         logging.error(f"[{youtube}] and id [{video_id}] Error occurred while fetching video details. Error: {e}")
         traceback.print_exc()
         return None
-
 
 
 async def get_video_info(session, credentials: ServiceAccountCredentials, api_key: str, channel_id: str, channel_name: str, max_results: int = 50) -> List[dict]:
@@ -178,11 +177,11 @@ async def fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, key
 
     csv_file_exists, csv_file_path, headers = setup_csv()
 
-    existing_data, existing_video_names = load_existing_data(csv_file_exists, csv_file_path)
+    existing_data, existing_video_names, existing_channel_names = load_existing_data(csv_file_exists, csv_file_path)
 
     channel_handle_to_name = get_channel_names(api_key, yt_channels)
 
-    channels_in_csv, channels_not_in_csv = separate_channels_based_on_csv(channel_handle_to_name, existing_video_names, yt_channels)
+    channels_in_csv, channels_not_in_csv = separate_channels_based_on_csv(channel_handle_to_name, existing_channel_names, yt_channels)
 
     if fetch_videos:
         await fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv, channels_not_in_csv, credentials, csv_file_path, existing_video_names, headers, yt_channels)
@@ -220,7 +219,7 @@ async def fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv,
                         await fetch_and_save_channel_videos_async(session, youtube, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
 
 
-def separate_channels_based_on_csv(channel_handle_to_name, existing_video_names, yt_channels):
+def separate_channels_based_on_csv(channel_handle_to_name, existing_channel_names, yt_channels):
     # Creating two separate lists for channels: one for channels not in the CSV file,
     # and another for channels already in the CSV file
     channels_not_in_csv = []
@@ -228,7 +227,7 @@ def separate_channels_based_on_csv(channel_handle_to_name, existing_video_names,
     for channel_handle in yt_channels:
         channel_name = channel_handle_to_name.get(channel_handle)
         if channel_name:
-            if channel_name in existing_video_names:
+            if channel_name in existing_channel_names:
                 channels_in_csv.append(channel_handle)
             else:
                 channels_not_in_csv.append(channel_handle)
@@ -236,11 +235,28 @@ def separate_channels_based_on_csv(channel_handle_to_name, existing_video_names,
 
 
 def get_channel_names(api_key, yt_channels):
-    channel_handle_to_name = {}
-    for channel_handle in yt_channels:
+    mapping_filepath = os.path.join(root_directory(), "data/links/channel_handle_to_name_mapping.json")
+
+    # Check if mapping file exists, if so, load it
+    if os.path.exists(mapping_filepath):
+        with open(mapping_filepath, 'r', encoding='utf-8') as file:
+            channel_handle_to_name = json.load(file)
+    else:
+        channel_handle_to_name = {}
+
+    # Check if any channel handles are missing in the loaded/existing mapping, and fetch those
+    missing_handles = [handle for handle in yt_channels if handle not in channel_handle_to_name]
+
+    for channel_handle in missing_handles:
         channel_name = get_channel_name(api_key, channel_handle)
         if channel_name:
             channel_handle_to_name[channel_handle] = channel_name
+            logging.info(f"[{channel_handle}] added channel name: {channel_name}")
+
+    # Save the updated mapping to file
+    with open(mapping_filepath, 'w', encoding='utf-8') as file:
+        json.dump(channel_handle_to_name, file, ensure_ascii=False, indent=4)
+
     return channel_handle_to_name
 
 
@@ -252,13 +268,18 @@ def load_existing_data(csv_file_exists, csv_file_path):
         # Create a set for existing video names for faster lookup
         existing_video_names = set(existing_data_df['title'].str.strip())
 
+        # Create a set for existing channel names for faster lookup
+        existing_channel_names = set(existing_data_df['channel_name'].str.strip())
+
         # Convert the DataFrame back to a list of dictionaries to create existing_data
         existing_data = existing_data_df.to_dict('records')
     else:
         # If the CSV file does not exist, initialize empty sets and list
         existing_data = []
         existing_video_names = set()
-    return existing_data, existing_video_names
+        existing_channel_names = set()
+
+    return existing_data, existing_video_names, existing_channel_names
 
 
 def setup_csv():
@@ -355,7 +376,9 @@ def get_youtube_channels_from_file(file_path):
 
 
 if __name__ == '__main__':
-    fetch_videos = True
+    # TODO 2023-09-11: add functionality to only load the difference between the existing data and the new data, expectedly being able to see only videos from a given timestamp and on
+    # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
+    fetch_videos = False
     if not fetch_videos:
         logging.info(f"Applying new filters only, not fetching videos.")
 
