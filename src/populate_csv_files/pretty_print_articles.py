@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import requests
 from src.utils import root_directory
 from concurrent.futures import ThreadPoolExecutor
+from selenium import webdriver
 
 
 def fetch_title_from_url(url, css_selector):
@@ -43,6 +44,98 @@ def fetch_flashbots_writings_titles(url):
     return fetch_title_from_url(url, '.blogPostTitle_RC3s')
 
 
+def fetch_mirror_titles(url):
+    return fetch_title_from_url(url, 'head > title:nth-child(7)')
+
+
+def fetch_iex_titles(url):
+    return fetch_title_from_url(url, '.header-content-title')
+
+
+def fetch_paradigm_titles(url):
+    return fetch_title_from_url(url, '.Post_post__J7vh4 > h1:nth-child(1)')
+
+
+def fetch_jump_titles(url):
+    return fetch_title_from_url(url, 'h1.MuiTypography-root')
+
+
+def fetch_notion_titles(url):
+    """
+    Fetch the title of a notion.site page using Selenium to handle dynamic JavaScript content.
+
+    Parameters:
+    - url (str): The URL of the notion.site page.
+
+    Returns:
+    - str: The title of the page, or None if the title could not be fetched.
+    """
+    # set up Chrome driver options
+    options = webdriver.ChromeOptions()
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_argument("--start-maximized")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--disable-features=IsolateOrigins,site-per-process")
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
+    CHROME_BINARY_PATH = './env/chrome-linux64/chrome'
+    CHROMEDRIVER_PATH = './env/chromedriver-linux64/chromedriver'
+
+    options.binary_location = CHROME_BINARY_PATH
+
+    # Initialize service with the path to your ChromeDriver
+    service = webdriver.chrome.service.Service(executable_path=CHROMEDRIVER_PATH)
+
+    browser = webdriver.Chrome(options=options, service=service)
+
+    try:
+        browser.get(url)
+
+        # Wait for some time to allow JavaScript to load content
+        browser.implicitly_wait(10)  # Adjust the wait time as necessary
+
+        # Get the page title
+        title = browser.title
+        print(f"Fetched title [{title}] for URL {url}")
+        return title
+    except Exception as e:
+        print(f"Could not fetch title for URL {url}: {e}")
+        return None
+    finally:
+        # Always close the browser to clean up
+        browser.quit()
+
+
+def fetch_hackmd_titles(url):
+    """
+    Fetch the title of an article from a HackMD URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - str: The title of the article, or None if the title could not be fetched.
+    """
+    title = None
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+        title_element = soup.find('title')
+        if title_element:
+            title = title_element.get_text()
+            print(f"Fetched title [{title}] for URL {url}")
+        else:
+            print(f"Title not found for URL {url}")
+    except Exception as e:
+        print(f"Could not fetch title for URL {url}: {e}")
+        return None
+    return title
+
+
 def fetch_medium_titles(url):
     title = None
     try:
@@ -59,6 +152,7 @@ def fetch_medium_titles(url):
         print(f"Could not fetch title for URL {url}: {e}")
         return None
     return title
+
 
 def fetch_vitalik_ca_titles(url):
     title = None
@@ -85,7 +179,7 @@ def fetch_title(row, url_to_title):
     # do a random sleep from 1 to 3 seconds
     time.sleep(random.randint(1, 3))
 
-    if 'ethresear.ch' in url or 'collective.flashbots.net' in url:
+    if 'ethresear.ch' in url or 'collective.flashbots.net' in url or 'lido.fi' in url:
         return fetch_discourse_titles(url)
     elif 'frontier.tech' in url:
         return fetch_frontier_tech_titles(url)
@@ -95,6 +189,18 @@ def fetch_title(row, url_to_title):
         return fetch_flashbots_writings_titles(url)
     elif 'medium.com' in url:
         return fetch_medium_titles(url)
+    elif 'mirror.xyz' in url:
+        return fetch_mirror_titles(url)
+    elif 'iex.io' in url:
+        return fetch_iex_titles(url)
+    elif 'paradigm.xyz' in url:
+        return fetch_paradigm_titles(url)
+    elif 'hackmd.io' in url:
+        return fetch_hackmd_titles(url)
+    elif 'jumpcrypto.com' in url:
+        return fetch_jump_titles(url)
+    elif 'notion.site' in url:
+        return fetch_notion_titles(url)
     else:
         return None
 
