@@ -30,7 +30,7 @@ PROF: Fair Transaction-Ordering in a Profit-Seeking World | by IC3 | Medium,http
 ,https://succulent-throat-0ce.notion.site/MEV-Driven-Centralization-in-Ethereum-Part-2-by-Simon-Brown-Dec-2022-Medium-507efc380b454791b362dddc7e2e066c,https://www.twitter.com/freddmannen
 ,https://verilog-solutions.notion.site/The-MEV-Conundrum-6d66001b150148739be14d73a8836903,https://www.twitter.com/freddmannen
 ,https://efdn.notion.site/PEPC-FAQ-0787ba2f77e14efba771ff2d903d67e4,https://www.twitter.com/freddmannen
-,https://blog.metrika.co/relays-are-a-latency-game-303aadb393ce,https://www.twitter.com/freddmannen
+Relays are a Latency Game. | By Alvaro Blazquez and Sachin Lal | by Metrika | Medium,https://blog.metrika.co/relays-are-a-latency-game-303aadb393ce,https://www.twitter.com/freddmannen
 "The Little Transaction that Could: Sequencers, MEV, Intents, and… — Archetype",https://archetype.mirror.xyz/McPqaV9WVyHhky1AAgGyS6DsZ8O0_OIBtED34sWpcUw,https://www.twitter.com/freddmannen
 L2 MEV wat — Taiko Labs,https://taiko.mirror.xyz/VjNjFws6OOVez5YCDMwjy4BUiDqZBHYDvcW4-JZGDkc,https://www.twitter.com/freddmannen
 ,https://www.galaxy.com/insights/research/mev-the-rise-of-the-builders/,https://www.twitter.com/freddmannen
@@ -130,10 +130,9 @@ SUAVE Spec - HackMD,https://hackmd.io/@sxysun/suavespec,https://www.twitter.com/
 "Short Note on {Monarch, Moloch, Mafia} Extractable Value - HackMD",https://hackmd.io/@sxysun/short-note-ext,https://www.twitter.com/unlock_VALue
 ,https://scrt.network/blog/secret-auctions-decentralized-otc-dark-pools/,https://www.twitter.com/unlock_VALue
 MEV capturing AMM (McAMM) - Applications - Ethereum Research,https://ethresear.ch/t/mev-capturing-amm-mcamm/13336,https://www.twitter.com/unlock_VALue
-,https://jumpcrypto.com/writing/research/,https://www.twitter.com/unlock_VALue
 SLOB: Searcher Limit Order Book,https://jumpcrypto.com/writing/searcher-limit-order-book/,https://www.twitter.com/unlock_VALue
 DERPs: Decentralized Reinsurance Pools,https://jumpcrypto.com/writing/decentralized-reinsurance-pools/,https://www.twitter.com/unlock_VALue
-,https://www.propellerheads.xyz/blog/mev-is-dead-long-live-mev,https://www.twitter.com/unlock_VALue
+MEV is disappearing,https://www.propellerheads.xyz/blog/mev-is-dead-long-live-mev,https://www.twitter.com/unlock_VALue
 MEV burn—a simple design - Economics - Ethereum Research,https://ethresear.ch/t/mev-burn-a-simple-design/15590,https://www.twitter.com/unlock_VALue
 How much can we constrain builders without bringing back heavy burdens to proposers? - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/how-much-can-we-constrain-builders-without-bringing-back-heavy-burdens-to-proposers/13808,https://www.twitter.com/unlock_VALue
 Cascading Network Effects on Ethereum's Finality - Consensus - Ethereum Research,https://ethresear.ch/t/cascading-network-effects-on-ethereums-finality/15871,https://www.twitter.com/unlock_VALue
@@ -147,16 +146,15 @@ mev [re]search-athon ([sign up](https://lu.ma/bs3kx2pr)) - HackMD,https://hackmd
 AugmentHack - HackMD,https://hackmd.io/@sxysun/hackideas,https://www.twitter.com/unlock_VALue
 Why AI? - HackMD,https://hackmd.io/@sxysun/crypto-ai,https://www.twitter.com/unlock_VALue
 Why Cooperative AI and Blockchain Researchers Should Collaborate - HackMD,https://hackmd.io/@sxysun/coopaimev,https://www.twitter.com/unlock_VALue
-,https://www.propellerheads.xyz/blog/blockchain-and-llms,https://www.twitter.com/unlock_VALue
+Blockchain in the age of LLMs,https://www.propellerheads.xyz/blog/blockchain-and-llms,https://www.twitter.com/unlock_VALue
 Survey: What the Buyside Really Thinks About the SEC’s Reg NMS Proposal,https://www.iex.io/article/survey-what-the-buyside-really-thinks-about-the-secs-reg-nms-proposal?utm_source=twitter&utm_medium=blog&utm_campaign=buyside_survey&utm_id=marketstructure&utm_term=exchange,https://www.twitter.com/unlock_VALue
 LVR-minimization in Uniswap V4 - Decentralized exchanges - Ethereum Research,https://ethresear.ch/t/lvr-minimization-in-uniswap-v4/15900,https://www.twitter.com/unlock_VALue
 Unbundling PBS: Towards protocol-enforced proposer commitments (PEPC) - #4 by barnabe - Economics - Ethereum Research,https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879/4?u=barnabe,https://www.twitter.com/unlock_VALue
 The Open Problems of Onchain Games,https://www.paradigm.xyz/2023/08/onchain-games,https://www.twitter.com/unlock_VALue
 Breaking Down the SEC Plan on Exchange Fees,https://www.iex.io/article/breaking-down-the-sec-plan-on-exchange-fees,https://www.twitter.com/unlock_VALue
-,https://a16zcrypto.com/posts/article/on-the-impossibility-of-stateless-blockchains/,https://www.twitter.com/unlock_VALue
+On the impossibility of stateless blockchains,https://a16zcrypto.com/posts/article/on-the-impossibility-of-stateless-blockchains/,https://www.twitter.com/unlock_VALue
 Strong Builder Identity for Combating Builder Imposter Attacks - Cryptography - Ethereum Research,https://ethresear.ch/t/strong-builder-identity-for-combating-builder-imposter-attacks/16550,https://www.twitter.com/unlock_VALue
 ,https://twitter.com/PropellerSwap,https://www.twitter.com/unlock_VALue
-,https://docs.flashbots.net/new-to-mev/,https://www.twitter.com/unlock_VALue
 Structuring Blockspace Derivatives — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/WKa3GFC03uY34d2MufTyD0c595xVRUEZi9RNG-dHNKs,https://www.twitter.com/unlock_VALue
 Modular Searcher Design: A Framework for Building Searchers — Taker,https://mirror.xyz/0x00000a2A02540A0D92e209F9f5F7e104745e06Ba/hB-XeiOfkV5neiwX34lBD0uLHlWdefbGX6oBz1B4o7w,https://www.twitter.com/unlock_VALue
 Block vs. Slot Auction PBS — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/CPYI91s98cp9zKFkanKs_qotYzw09kWvouaAa9GXBrQ,https://www.twitter.com/unlock_VALue

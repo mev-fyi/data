@@ -60,6 +60,18 @@ def fetch_jump_titles(url):
     return fetch_title_from_url(url, 'h1.MuiTypography-root')
 
 
+def fetch_propellerheads_titles(url):
+    return fetch_title_from_url(url, '.article-title_heading')
+
+
+def fetch_a16z_titles(url):
+    return fetch_title_from_url(url, '.highlight-display > h2:nth-child(1)')
+
+
+def fetch_uniswap_titles(url):
+    return fetch_title_from_url(url, '.p.Type__Title-sc-ga2v53-2:nth-child(1)')
+
+
 def fetch_notion_titles(url):
     """
     Fetch the title of a notion.site page using Selenium to handle dynamic JavaScript content.
@@ -187,7 +199,7 @@ def fetch_title(row, url_to_title):
         return fetch_vitalik_ca_titles(url)
     elif 'writings.flashbots' in url:
         return fetch_flashbots_writings_titles(url)
-    elif 'medium.com' in url:
+    elif 'medium.com' in url or 'blog.metrika' in url:
         return fetch_medium_titles(url)
     elif 'mirror.xyz' in url:
         return fetch_mirror_titles(url)
@@ -199,8 +211,14 @@ def fetch_title(row, url_to_title):
         return fetch_hackmd_titles(url)
     elif 'jumpcrypto.com' in url:
         return fetch_jump_titles(url)
-    elif 'notion.site' in url:
-        return fetch_notion_titles(url)
+    elif 'notion.site' in url or 'notes.ethereum.org' in url or 'succulent-throat-0ce.' in url:
+        return None  # fetch_notion_titles(url)
+    elif 'propellerheads.xyz' in url:
+        return fetch_propellerheads_titles(url)
+    elif 'a16z' in url:
+        return fetch_a16z_titles(url)
+    elif 'blog.uniswap' in url:
+        return None  # fetch_uniswap_titles(url)
     else:
         return None
 
