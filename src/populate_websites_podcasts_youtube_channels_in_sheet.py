@@ -22,7 +22,13 @@ def create_hyperlink_formula(value):
         return "anon"
     elif "http" not in value:
         return value
-    link_name = value.split("/")[-1]  # TODO: this is not very robust, need to upgrade
+    elif 'twitter.com' in value:
+        link_name = value.split('/')[-1]
+        return f'=HYPERLINK("{value}", "{link_name}")'
+    link_name = value
+    max_length = 30  # Set the maximum length of the hyperlink text
+    if len(link_name) > max_length:
+        link_name = link_name[:max_length] + '...'  # Add ellipsis to indicate the text has been clipped
     return f'=HYPERLINK("{value}", "{link_name}")'
 
 
@@ -72,6 +78,9 @@ class GoogleSheetUpdater:
 
         if 'Referrer' in df.columns:
             df['Referrer'] = df['Referrer'].apply(create_hyperlink_formula)
+
+        if 'Article' in df.columns:
+            df['Article'] = df['Article'].apply(create_hyperlink_formula)
 
         set_with_dataframe(sheet, df, row=1, col=1, include_index=False, resize=True)
 
@@ -220,7 +229,7 @@ if __name__ == "__main__":
     updater.update_google_sheet(data=websites_data, tab_name="Website Links", num_rows=1000, num_cols=len(websites_data.columns))
 
     # Update Google Sheet with articles
-    articles_csv_file = os.path.join(repo_dir, "data/links/articles.csv")
+    articles_csv_file = os.path.join(repo_dir, "data/links/articles_updated.csv")
     articles_data = pd.read_csv(articles_csv_file)
     updater.update_google_sheet(data=articles_data, tab_name="Articles", num_rows=1000, num_cols=2)
 
