@@ -72,6 +72,14 @@ def fetch_uniswap_titles(url):
     return fetch_title_from_url(url, '.p.Type__Title-sc-ga2v53-2:nth-child(1)')
 
 
+def fetch_osmosis_titles(url):
+    return fetch_title_from_url(url, '.article-head > h1:nth-child(1)')
+
+
+def fetch_mechanism_titles(url):
+    return fetch_title_from_url(url, '.heading-7')
+
+
 def fetch_notion_titles(url):
     """
     Fetch the title of a notion.site page using Selenium to handle dynamic JavaScript content.
@@ -188,39 +196,41 @@ def fetch_title(row, url_to_title):
     if url in url_to_title and (url_to_title[url] is not None) and not pd.isna(url_to_title[url]):
         return url_to_title[url]
 
-    # do a random sleep from 1 to 3 seconds
-    time.sleep(random.randint(1, 3))
+    # Define a mapping of URL patterns to functions
+    url_patterns = {
+        'ethresear.ch': fetch_discourse_titles,
+        'collective.flashbots.net': fetch_discourse_titles,
+        'lido.fi': fetch_discourse_titles,
+        'research.anoma': fetch_discourse_titles,
+        'frontier.tech': fetch_frontier_tech_titles,
+        'vitalik.ca': fetch_vitalik_ca_titles,
+        'writings.flashbots': fetch_flashbots_writings_titles,
+        'medium.com': fetch_medium_titles,
+        'blog.metrika': fetch_medium_titles,
+        'mirror.xyz': fetch_mirror_titles,
+        'iex.io': fetch_iex_titles,
+        'paradigm.xyz': fetch_paradigm_titles,
+        'hackmd.io': fetch_hackmd_titles,
+        'jumpcrypto.com': fetch_jump_titles,
+        'notion.site': None,  # Placeholder for fetch_notion_titles
+        'notes.ethereum.org': None,  # Placeholder for fetch_notion_titles
+        'succulent-throat-0ce.': None,  # Placeholder for fetch_notion_titles
+        'propellerheads.xyz': fetch_propellerheads_titles,
+        'a16z': fetch_a16z_titles,
+        'blog.uniswap': None,  # Placeholder for fetch_uniswap_titles
+        'osmosis.zone': fetch_osmosis_titles,
+        'mechanism.org': fetch_mechanism_titles,
+    }
 
-    if 'ethresear.ch' in url or 'collective.flashbots.net' in url or 'lido.fi' in url:
-        return fetch_discourse_titles(url)
-    elif 'frontier.tech' in url:
-        return fetch_frontier_tech_titles(url)
-    elif 'vitalik.ca' in url:
-        return fetch_vitalik_ca_titles(url)
-    elif 'writings.flashbots' in url:
-        return fetch_flashbots_writings_titles(url)
-    elif 'medium.com' in url or 'blog.metrika' in url:
-        return fetch_medium_titles(url)
-    elif 'mirror.xyz' in url:
-        return fetch_mirror_titles(url)
-    elif 'iex.io' in url:
-        return fetch_iex_titles(url)
-    elif 'paradigm.xyz' in url:
-        return fetch_paradigm_titles(url)
-    elif 'hackmd.io' in url:
-        return fetch_hackmd_titles(url)
-    elif 'jumpcrypto.com' in url:
-        return fetch_jump_titles(url)
-    elif 'notion.site' in url or 'notes.ethereum.org' in url or 'succulent-throat-0ce.' in url:
-        return None  # fetch_notion_titles(url)
-    elif 'propellerheads.xyz' in url:
-        return fetch_propellerheads_titles(url)
-    elif 'a16z' in url:
-        return fetch_a16z_titles(url)
-    elif 'blog.uniswap' in url:
-        return None  # fetch_uniswap_titles(url)
-    else:
-        return None
+    # Iterate through URL patterns and fetch titles
+    for pattern, fetch_function in url_patterns.items():
+        if pattern in url:
+            if fetch_function:
+                return fetch_function(url)
+            else:
+                return None
+
+    return None  # Default case if no match is found
 
 
 def fetch_article_titles(csv_filepath, output_filepath):
