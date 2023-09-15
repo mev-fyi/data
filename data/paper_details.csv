@@ -110,3 +110,6 @@ LedgerHedger: Gas Reservation for Smart-Contract Security,"Itay Tsabary, Alex Ma
 Speculative Denial-of-Service Attacks in Ethereum,"Aviv Yaish, Kaihua Qin, Liyi Zhou, Aviv Zohar, Arthur Gervais",https://eprint.iacr.org/2023/956,IACR,2023-06-19,https://www.twitter.com/unlock_VALue
 Analyzing Geospatial Distribution in Blockchains,"Shashank Motepalli, Hans-Arno Jacobsen",http://arxiv.org/pdf/2305.17771v1,"cs.DC, cs.CY",2023-05-28,https://www.twitter.com/unlock_VALue
 FLAIR: A Metric for Liquidity Provider Competitiveness in Automated Market Makers,"Jason Milionis, Xin Wan, Austin Adams",http://arxiv.org/pdf/2306.09421v1,"q-fin.PM, cs.CE, math.OC, q-fin.MF",2023-06-15,https://www.twitter.com/unlock_VALue
+Complexity-Approximation Trade-offs in Exchange Mechanisms: AMMs vs. LOBs,"Jason Milionis, Ciamac C. Moallemi, Tim Roughgarden",http://arxiv.org/pdf/2302.11652v3,"math.FA, cs.GT, math.OC, q-fin.PM, q-fin.TR",2023-02-22,https://www.twitter.com/unlock_VALue
+Approximately Optimal Mechanism Design,"Tim Roughgarden, Inbal Talgam-Cohen",http://arxiv.org/pdf/1812.11896v2,"econ.TH, cs.DS, cs.GT",2018-12-31,https://www.twitter.com/unlock_VALue
+Undetectable Selfish Mining,"Maryam Bahrani, S. Matthew Weinberg",http://arxiv.org/pdf/2309.06847v1,"cs.GT, cs.CR, cs.DC, cs.DS",2023-09-13,https://www.twitter.com/unlock_VALue
