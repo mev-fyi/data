@@ -9,7 +9,6 @@ import re
 from datetime import datetime
 from dotenv import load_dotenv
 
-from src.upload_google_sheet import update_google_sheet_with_csv
 from src.utils import root_directory, ensure_newline_in_csv, read_existing_papers, read_csv_links_and_referrers, paper_exists_in_list, quickSoup
 
 load_dotenv()
@@ -240,7 +239,7 @@ if __name__ == "__main__":
 
     if os.getenv("FETCH_NEW_PDF") == "True":
         # For arXiv links
-        arxiv_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'arxiv_papers.csv'))
+        arxiv_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'research_papers/arxiv_papers.csv'))
         download_and_save_paper(
             paper_site='arXiv',
             paper_links_and_referrers=arxiv_links_and_referrers,
@@ -249,7 +248,7 @@ if __name__ == "__main__":
         )
 
         # For SSRN links
-        ssrn_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'ssrn_papers.csv'))
+        ssrn_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'research_papers/ssrn_papers.csv'))
         download_and_save_paper(
             paper_site='SSRN',
             paper_links_and_referrers=ssrn_links_and_referrers,
@@ -258,15 +257,12 @@ if __name__ == "__main__":
         )
 
         # For IACR links
-        iacr_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'iacr_papers.csv'))
+        iacr_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'research_papers/iacr_papers.csv'))
         download_and_save_paper(
             paper_site='IACR',
             paper_links_and_referrers=iacr_links_and_referrers,
             csv_file=csv_file,
             parsing_method=get_paper_details_from_iacr
         )
-
-    # Update the Google Sheet after updating the CSV
-    update_google_sheet_with_csv(csv_file=csv_file, sheet_id=os.getenv("GOOGLE_SHEET_ID"))
 
 
