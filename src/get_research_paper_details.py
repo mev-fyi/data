@@ -128,7 +128,7 @@ def get_paper_details_from_iacr(url: str):
         if ':' in paper_release_date:
             paper_release_date = paper_release_date.split(':')[0].strip()
 
-        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'IACR', "release_date": paper_release_date}
+        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'iacr', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch the paper details: {e}")
         return None
@@ -498,7 +498,7 @@ def main():
              'parsing_method': get_paper_details_from_ssrn
          },
          {
-             'name': 'IACR',
+             'name': 'iacr',
              'link_file': 'iacr_papers.csv',
              'parsing_method': get_paper_details_from_iacr
          },
