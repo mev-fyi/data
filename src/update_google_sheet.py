@@ -412,51 +412,34 @@ class GoogleSheetUpdater:
         service.spreadsheets().batchUpdate(spreadsheetId=self.sheet_id, body=body).execute()
 
 
-if __name__ == "__main__":
-    repo_dir = root_directory()
+def update_google_sheet(csv_file, tab_name, num_rows=1000, num_cols=None):
     updater = GoogleSheetUpdater(sheet_id=os.getenv("GOOGLE_SHEET_ID"), credentials_json=os.getenv("GOOGLE_SHEET_CREDENTIALS_JSON"))
+    data = pd.read_csv(csv_file)
 
-    # Update the Google Sheet after updating the CSV
-    papers_directory = f"{repo_dir}/data/papers"
-    os.makedirs(papers_directory, exist_ok=True)
+    if num_cols is None:
+        num_cols = len(data.columns)
 
-    # Call update_google_sheet with Papers tab-specific formatting
-    papers_csv_file = f"{repo_dir}/data/paper_details.csv"
-    papers_data = pd.read_csv(papers_csv_file)
-    updater.update_google_sheet(data=papers_data, tab_name="Papers", num_rows=1000, num_cols=len(papers_data.columns))
+    updater.update_google_sheet(data=data, tab_name=tab_name, num_rows=num_rows, num_cols=num_cols)
 
-    # Update Google Sheet with websites
-    websites_csv_file = f"{repo_dir}/data/links/websites.csv"
-    websites_data = pd.read_csv(websites_csv_file)
-    updater.update_google_sheet(data=websites_data, tab_name="Website Links", num_rows=1000, num_cols=len(websites_data.columns))
 
-    # Update Google Sheet with articles
-    articles_csv_file = f"{repo_dir}/data/links/articles_updated.csv"
-    articles_data = pd.read_csv(articles_csv_file)
-    updater.update_google_sheet(data=articles_data, tab_name="Articles", num_rows=1000, num_cols=2)
+def main():
+    repo_dir = root_directory()
 
-    # Update Google Sheet with Twitter threads
-    twitter_threads_csv_file = f"{repo_dir}/data/links/twitter_threads.csv"
-    twitter_threads_data = pd.read_csv(twitter_threads_csv_file)
-    updater.update_google_sheet(data=twitter_threads_data, tab_name="Twitter Threads", num_rows=1000, num_cols=2)
+    # Define the sheet update configurations
+    sheets_to_update = [
+        {"csv_file": f"{repo_dir}/data/paper_details.csv", "tab_name": "Papers", "num_cols": None},
+        {"csv_file": f"{repo_dir}/data/links/websites.csv", "tab_name": "Website Links", "num_cols": None},
+        {"csv_file": f"{repo_dir}/data/links/articles_updated.csv", "tab_name": "Articles", "num_cols": 2},
+        {"csv_file": f"{repo_dir}/data/links/twitter_threads.csv", "tab_name": "Twitter Threads", "num_cols": 2},
+        {"csv_file": f"{repo_dir}/data/links/research_papers/papers.csv", "tab_name": "Non parsed papers", "num_cols": 2},
+        {"csv_file": f"{repo_dir}/data/links/youtube/recommended_youtube_videos_with_details.csv", "tab_name": "Recommended Youtube Videos", "num_cols": 2},
+        {"csv_file": f"{repo_dir}/data/links/youtube/youtube_videos.csv", "tab_name": "Youtube Videos (from channel list)", "num_cols": 2},
+    ]
 
-    # Update Google Sheet with Non parsed papers
-    papers_csv_file = f"{repo_dir}/data/links/research_papers/papers.csv"
-    papers_data = pd.read_csv(papers_csv_file)
-    updater.update_google_sheet(data=papers_data, tab_name="Non parsed papers", num_rows=1000, num_cols=2)
+    for config in sheets_to_update:
+        update_google_sheet(config["csv_file"], config["tab_name"], num_cols=config["num_cols"])
 
-    # TODO 2023-09-09: create public YouTube playlist for each YouTube video .csv
-
-    # Update Google Sheet with YouTube videos
-    recommended_youtube_csv_file = f"{repo_dir}/data/links/youtube/recommended_youtube_videos_with_details.csv"
-    recommended_youtube_data = pd.read_csv(recommended_youtube_csv_file)
-    updater.update_google_sheet(data=recommended_youtube_data, tab_name="Recommended Youtube Videos", num_rows=1000, num_cols=2)
-
-    # Update Google Sheet with YouTube videos
-    youtube_videos_csv_file = f"{repo_dir}/data/links/youtube/youtube_videos.csv"
-    youtube_videos_data = pd.read_csv(youtube_videos_csv_file)
-    updater.update_google_sheet(data=youtube_videos_data, tab_name="Youtube Videos (from channel list)", num_rows=1000, num_cols=2)
-
+    updater = GoogleSheetUpdater(sheet_id=os.getenv("GOOGLE_SHEET_ID"), credentials_json=os.getenv("GOOGLE_SHEET_CREDENTIALS_JSON"))
     # Update Google Sheet with YouTube handles
     youtube_txt_file = f"{repo_dir}/data/links/youtube/youtube_channel_handles.txt"
     youtube_data = {
@@ -464,3 +447,9 @@ if __name__ == "__main__":
         'Link': [f'https://www.youtube.com/{handle.strip()}' for handle in open(youtube_txt_file, 'r').read().split(',')]
     }
     updater.update_google_sheet(data=youtube_data, tab_name="Podcasts & Youtube handles", num_rows=1000, num_cols=2)
+
+
+if __name__ == "__main__":
+    load_dotenv()
+    main()
+
