@@ -417,52 +417,50 @@ if __name__ == "__main__":
     updater = GoogleSheetUpdater(sheet_id=os.getenv("GOOGLE_SHEET_ID"), credentials_json=os.getenv("GOOGLE_SHEET_CREDENTIALS_JSON"))
 
     # Update the Google Sheet after updating the CSV
-    papers_directory = os.path.join(root_directory(), 'data', 'papers')
+    papers_directory = f"{repo_dir}/data/papers"
     os.makedirs(papers_directory, exist_ok=True)
 
     # Call update_google_sheet with Papers tab-specific formatting
-    papers_csv_file = os.path.join(root_directory(), 'data', 'paper_details.csv')
+    papers_csv_file = f"{repo_dir}/data/paper_details.csv"
     papers_data = pd.read_csv(papers_csv_file)
     updater.update_google_sheet(data=papers_data, tab_name="Papers", num_rows=1000, num_cols=len(papers_data.columns))
 
     # Update Google Sheet with websites
-    websites_csv_file = os.path.join(repo_dir, "data/links/websites.csv")
+    websites_csv_file = f"{repo_dir}/data/links/websites.csv"
     websites_data = pd.read_csv(websites_csv_file)
     updater.update_google_sheet(data=websites_data, tab_name="Website Links", num_rows=1000, num_cols=len(websites_data.columns))
 
     # Update Google Sheet with articles
-    articles_csv_file = os.path.join(repo_dir, "data/links/articles_updated.csv")
+    articles_csv_file = f"{repo_dir}/data/links/articles_updated.csv"
     articles_data = pd.read_csv(articles_csv_file)
     updater.update_google_sheet(data=articles_data, tab_name="Articles", num_rows=1000, num_cols=2)
 
     # Update Google Sheet with Twitter threads
-    twitter_threads_csv_file = os.path.join(repo_dir, "data/links/twitter_threads.csv")
+    twitter_threads_csv_file = f"{repo_dir}/data/links/twitter_threads.csv"
     twitter_threads_data = pd.read_csv(twitter_threads_csv_file)
     updater.update_google_sheet(data=twitter_threads_data, tab_name="Twitter Threads", num_rows=1000, num_cols=2)
 
     # Update Google Sheet with Non parsed papers
-    papers_csv_file = os.path.join(repo_dir, "data/links/research_papers/papers.csv")
+    papers_csv_file = f"{repo_dir}/data/links/research_papers/papers.csv"
     papers_data = pd.read_csv(papers_csv_file)
     updater.update_google_sheet(data=papers_data, tab_name="Non parsed papers", num_rows=1000, num_cols=2)
 
-    # TODO 2023-09-09: create public youtube playlist for each youtube video .csv
+    # TODO 2023-09-09: create public YouTube playlist for each YouTube video .csv
 
     # Update Google Sheet with YouTube videos
-    papers_csv_file = os.path.join(repo_dir, "data/links/youtube/recommended_youtube_videos_with_details.csv")
-    papers_data = pd.read_csv(papers_csv_file)
-    updater.update_google_sheet(data=papers_data, tab_name="Recommended Youtube Videos", num_rows=1000, num_cols=2)
+    recommended_youtube_csv_file = f"{repo_dir}/data/links/youtube/recommended_youtube_videos_with_details.csv"
+    recommended_youtube_data = pd.read_csv(recommended_youtube_csv_file)
+    updater.update_google_sheet(data=recommended_youtube_data, tab_name="Recommended Youtube Videos", num_rows=1000, num_cols=2)
 
     # Update Google Sheet with YouTube videos
-    papers_csv_file = os.path.join(repo_dir, "data/links/youtube/youtube_videos.csv")
-    papers_data = pd.read_csv(papers_csv_file)
-    updater.update_google_sheet(data=papers_data, tab_name="Youtube Videos (from channel list)", num_rows=1000, num_cols=2)
+    youtube_videos_csv_file = f"{repo_dir}/data/links/youtube/youtube_videos.csv"
+    youtube_videos_data = pd.read_csv(youtube_videos_csv_file)
+    updater.update_google_sheet(data=youtube_videos_data, tab_name="Youtube Videos (from channel list)", num_rows=1000, num_cols=2)
 
     # Update Google Sheet with YouTube handles
-    youtube_txt_file = os.path.join(repo_dir, "data/links/youtube/youtube_channel_handles.txt")
+    youtube_txt_file = f"{repo_dir}/data/links/youtube/youtube_channel_handles.txt"
     youtube_data = {
         'YouTube Channel Handle': open(youtube_txt_file, 'r').read().split(','),
-        'Link': ['https://www.youtube.com/' + handle.strip() for handle in open(youtube_txt_file, 'r').read().split(',')]
+        'Link': [f'https://www.youtube.com/{handle.strip()}' for handle in open(youtube_txt_file, 'r').read().split(',')]
     }
     updater.update_google_sheet(data=youtube_data, tab_name="Podcasts & Youtube handles", num_rows=1000, num_cols=2)
-
-

@@ -1,6 +1,6 @@
-### (1) Contribute research: [add.mev.fyi](https://add.mev.fyi), (2) uploaded research: [data.mev.fyi](https://data.mev.fyi), (3) website: [mev.fyi](https://mev.fyi)
+### (1) View: [data.mev.fyi](https://data.mev.fyi), (2) Contribute: [add.mev.fyi](https://add.mev.fyi), (3) site: [mev.fyi](https://mev.fyi)
 
-# MEV.FYI
+# MEV.FYI is the MEV research content aggregator and search engine
 
 Welcome to `mev.fyi` - an open-source initiative dedicated to gathering and curating research on Maximal Extractable Value (MEV), incentive alignment, mechanism design, and their implications in the blockchain ecosystem, with a specific focus on Ethereum.
 
