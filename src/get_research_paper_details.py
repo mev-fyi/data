@@ -422,7 +422,7 @@ def download_and_save_unique_paper(args):
 
     # Save the PDF locally
     pdf_filename = f"{paper_details['title']}.pdf"
-    pdf_path = os.path.join(root_directory(), 'data', 'papers', pdf_filename)
+    pdf_path = os.path.join(root_directory(), 'data', 'papers_pdf_downloads', pdf_filename)
     with open(pdf_path, 'wb') as f:
         f.write(pdf_response.content)
     logging.info(f"[{paper_site}] Downloaded paper {pdf_filename}")
