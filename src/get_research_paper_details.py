@@ -277,6 +277,70 @@ def get_paper_details_from_research_gate(url: str):
         driver.quit()
 
 
+def get_paper_details_from_sciendirect(url: str):
+    try:
+        driver = return_driver()
+
+        driver.get(url.replace('.pdf', ''))
+        WebDriverWait(driver, 10)
+
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+
+        paper_title = soup.select_one('.title-text').get_text()
+
+        # Get Paper Authors
+        # Select all <li> elements with class "loa__item"
+        author_items = soup.select('.react-xocs-alternative-link')
+
+        # Initialize a list to store the extracted author names
+        author_names = []
+
+        # Loop through the author items
+        for author_item in author_items:
+            # Find the <span> elements with class "given-name" and "text surname"
+            given_name = author_item.select_one('.given-name').get_text()
+            surname = author_item.select_one('.text.surname').get_text()
+
+            # Concatenate the given name and surname without spaces
+            full_name = f"{given_name} {surname}"
+
+            # Append the full name to the list
+            author_names.append(full_name)
+
+        # Join all authors in author_names into a single string separated with spaces
+        paper_authors = ' '.join(author_names)
+
+        # Remove extra spaces and clean up the string
+        paper_authors = ' '.join(paper_authors.split())  # Remove extra spaces
+
+        date_string = soup.select_one('div.text-xs:nth-child(2)').get_text()
+
+        # Define a regular expression pattern for "Month Year" format
+        pattern = r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}\b'
+
+        # Search for the pattern in the input string
+        match = re.search(pattern, date_string)
+
+        if match:
+            date_string = match.group()
+            print(date_string)
+        else:
+            print("Date not found in the input string.")
+
+        # Parse the date string
+        date_obj = datetime.strptime(date_string, '%B %Y')
+
+        # Format the date as yyyy-mm-dd
+        paper_release_date = date_obj.strftime('%Y-%m-%d')
+
+        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'ScienceDirect', "release_date": paper_release_date}
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to fetch the paper details: {e}")
+        return None
+    except AttributeError as e:
+        print(f"Failed to parse the paper details: {e}")
+        return None
+
 def download_and_save_unique_paper(args):
     """
     Download a paper from its link and save its details to a CSV file.
@@ -389,35 +453,40 @@ def main():
     csv_file = os.path.join(root_data_directory, 'paper_details.csv')
 
     paper_sites = [
+        # {
+        #     'name': 'arXiv',
+        #     'link_file': 'arxiv_papers.csv',
+        #     'parsing_method': get_paper_details_from_arxiv
+        # },
+        # {
+        #     'name': 'SSRN',
+        #     'link_file': 'ssrn_papers.csv',
+        #     'parsing_method': get_paper_details_from_ssrn
+        # },
+        # {
+        #     'name': 'IACR',
+        #     'link_file': 'iacr_papers.csv',
+        #     'parsing_method': get_paper_details_from_iacr
+        # },
+        # {
+        #     'name': 'Nature',
+        #     'link_file': 'nature_papers.csv',
+        #     'parsing_method': get_paper_details_from_nature
+        # },
+        # {
+        #     'name': 'Research Gate',
+        #     'link_file': 'researchgate_papers.csv',
+        #     'parsing_method': get_paper_details_from_research_gate
+        # },
+        # {
+        #     'name': 'DL-ACM',
+        #     'link_file': 'dl.acm_papers.csv',
+        #     'parsing_method': get_paper_details_from_dl_acm
+        # },
         {
-            'name': 'arXiv',
-            'link_file': 'arxiv_papers.csv',
-            'parsing_method': get_paper_details_from_arxiv
-        },
-        {
-            'name': 'SSRN',
-            'link_file': 'ssrn_papers.csv',
-            'parsing_method': get_paper_details_from_ssrn
-        },
-        {
-            'name': 'IACR',
-            'link_file': 'iacr_papers.csv',
-            'parsing_method': get_paper_details_from_iacr
-        },
-        {
-            'name': 'Nature',
-            'link_file': 'nature_papers.csv',
-            'parsing_method': get_paper_details_from_nature
-        },
-        {
-            'name': 'Research Gate',
-            'link_file': 'researchgate_papers.csv',
-            'parsing_method': get_paper_details_from_research_gate
-        },
-        {
-            'name': 'DL-ACM',
-            'link_file': 'dl.acm_papers.csv',
-            'parsing_method': get_paper_details_from_dl_acm
+            'name': 'ScienceDirect',
+            'link_file': 'sciencedirect_papers.csv',
+            'parsing_method': get_paper_details_from_sciendirect
         }
     ]
 
