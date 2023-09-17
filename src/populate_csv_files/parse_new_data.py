@@ -150,11 +150,11 @@ def parse_and_categorize_links(input_filepath: str, domains_filepath: str, resea
 
     # Define file paths and dataframes in a dictionary
     paths_and_dfs = {
-        "papers.csv": (pdf_df, ["paper", "referrer"]),
-        "arxiv_papers.csv": (arxiv_df, ["paper", "referrer"]),
-        "ssrn_papers.csv": (ssrn_df, ["paper", "referrer"]),
-        "iacr_papers.csv": (iacr_df, ["paper", "referrer"]),
-        "recommended_youtube_videos.csv": (youtube_df, ["video", "referrer"]),
+        "research_papers/papers.csv": (pdf_df, ["paper", "referrer"]),
+        "research_papers/arxiv_papers.csv": (arxiv_df, ["paper", "referrer"]),
+        "research_papers/ssrn_papers.csv": (ssrn_df, ["paper", "referrer"]),
+        "research_papers/iacr_papers.csv": (iacr_df, ["paper", "referrer"]),
+        "youtube/recommended_youtube_videos.csv": (youtube_df, ["video", "referrer"]),
         "articles.csv": (articles_df, ["article", "referrer"]),
         "twitter_threads.csv": (twitter_thread_df, ["twitter thread", "referrer"]),
         "websites.csv": (websites_df, ["website", "referrer"]),
