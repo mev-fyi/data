@@ -37,6 +37,9 @@ def get_paper_details_from_arxiv(arxiv_url: str) -> dict or None:
         search = arxiv.Search(id_list=[arxiv_id])
         paper = next(search.results())
 
+        # start list of paper.categories with 'arXiv'
+        paper.categories = ['arXiv'] + paper.categories
+
         details = {
             'title': paper.title,
             'authors': ", ".join([author.name for author in paper.authors]),
@@ -160,6 +163,9 @@ def get_paper_details_from_dl_acm(url: str):
                 if author_name:
                     paper_authors.append(author_name)
 
+        # join all authors in paper_authors in a single string separated with comma and space
+        paper_authors = ', '.join(paper_authors)
+
         date_string = soup.select_one('.CitationCoverDate').get_text()
 
         # Parse the date string
@@ -168,7 +174,7 @@ def get_paper_details_from_dl_acm(url: str):
         # Format the date as yyyy-mm-dd
         paper_release_date = date_obj.strftime('%Y-%m-%d')
 
-        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'dl-acm', "release_date": paper_release_date}
+        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'DL-ACM', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch the paper details: {e}")
         return None
@@ -219,7 +225,7 @@ def get_paper_details_from_nature(url: str):
             date_obj = datetime.strptime(date_string, '%d %B %Y')  # Parse the date string
             paper_release_date = date_obj.strftime('%Y-%m-%d')  # Format the date as yyyy-mm-dd
 
-        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'nature', "release_date": paper_release_date}
+        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'Nature', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch the paper details: {e}")
         return None
@@ -242,10 +248,15 @@ def get_paper_details_from_research_gate(url: str):
         # Loop through the author list
         authors = soup.select('.nova-legacy-l-flex .research-detail-author-list__item a')
         paper_authors = [author.get_text().strip() for author in authors if author]
-        # remove empty string, remove duplicates
-        paper_authors = list(dict.fromkeys(filter(None, paper_authors)))
+        # remove empty strings or only spaces
+        paper_authors = [author for author in paper_authors if author.strip()]
+        # remove duplicates
+        paper_authors = list(dict.fromkeys(paper_authors))
+
         # Try some manual cleaning and see if that goes through
         paper_authors = [author for author in paper_authors if not re.search(r'university|institute|school', author, flags=re.IGNORECASE)]
+        # join all authors in paper_authors in a single string separated with comma and space
+        paper_authors = ', '.join(paper_authors)
 
         date_string = soup.select_one('div.nova-legacy-e-text--spacing-xxs:nth-child(1) > ul:nth-child(1) > li:nth-child(1)').get_text()
 
@@ -354,76 +365,67 @@ def download_and_save_paper(paper_site, paper_links_and_referrers, csv_file, par
 
 
 # Main execution
+def create_directory(directory):
+    os.makedirs(directory, exist_ok=True)
+
+
+def main():
+    """
+     Main execution script to download paper details and save them to a CSV file.
+
+     This script does the following:
+     1. Sets up directories for saving papers.
+     2. Determines the path for the CSV file where paper details will be saved.
+     3. Reads links of papers from various sources, fetches their details, and saves them to the CSV.
+
+     Note:
+     The script supports multiple paper sites, each with its own link file and parsing method.
+     The links of papers to be processed should be organized in CSV files.
+     The CSV file format for saving paper details includes columns for title, authors, PDF link, topics, release date, and referrer.
+     """
+    root_data_directory = os.path.join(root_directory(), 'data')
+    papers_directory = os.path.join(root_data_directory, 'papers')
+    create_directory(papers_directory)
+    csv_file = os.path.join(root_data_directory, 'paper_details.csv')
+
+    paper_sites = [
+        {
+            'name': 'arXiv',
+            'link_file': 'arxiv_papers.csv',
+            'parsing_method': get_paper_details_from_arxiv
+        },
+        {
+            'name': 'SSRN',
+            'link_file': 'ssrn_papers.csv',
+            'parsing_method': get_paper_details_from_ssrn
+        },
+        {
+            'name': 'IACR',
+            'link_file': 'iacr_papers.csv',
+            'parsing_method': get_paper_details_from_iacr
+        },
+        {
+            'name': 'Nature',
+            'link_file': 'nature_papers.csv',
+            'parsing_method': get_paper_details_from_nature
+        },
+        {
+            'name': 'Research Gate',
+            'link_file': 'researchgate_papers.csv',
+            'parsing_method': get_paper_details_from_research_gate
+        },
+        {
+            'name': 'DL-ACM',
+            'link_file': 'dl.acm_papers.csv',
+            'parsing_method': get_paper_details_from_dl_acm
+        }
+    ]
+
+    for site in paper_sites:
+        link_file_path = os.path.join(root_data_directory, 'links', 'research_papers', site['link_file'])
+        links_and_referrers = read_csv_links_and_referrers(link_file_path)
+        download_and_save_paper(site['name'], links_and_referrers, csv_file, site['parsing_method'])
+
+
 if __name__ == "__main__":
-    """
-    Main execution script to download paper details and save them to a CSV file.
-
-    This script does the following:
-    1. Sets up directories for saving papers.
-    2. Determines the path for the CSV file where paper details will be saved.
-    3. Reads links of arXiv papers from a text file, fetches their details, and saves them to the CSV.
-    4. Reads links of SSRN papers from a text file, fetches their details, and saves them to the CSV.
-
-    Note: 
-    The SSRN scraping logic credits to https://github.com/karthiktadepalli1/ssrn-scraper.
-    It assumes a file of SSRN links similar to the arXiv links file is present.
-    """
-    papers_directory = os.path.join(root_directory(), 'data', 'papers')
-    os.makedirs(papers_directory, exist_ok=True)
-
-    csv_file = os.path.join(root_directory(), 'data', 'paper_details.csv')
-
-    if os.getenv("FETCH_NEW_PDF") == "True":
-        # For arXiv links
-        arxiv_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'research_papers/arxiv_papers.csv'))
-        download_and_save_paper(
-            paper_site='arXiv',
-            paper_links_and_referrers=arxiv_links_and_referrers,
-            csv_file=csv_file,
-            parsing_method=get_paper_details_from_arxiv
-        )
-
-        # For SSRN links
-        ssrn_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'research_papers/ssrn_papers.csv'))
-        download_and_save_paper(
-            paper_site='SSRN',
-            paper_links_and_referrers=ssrn_links_and_referrers,
-            csv_file=csv_file,
-            parsing_method=get_paper_details_from_ssrn
-        )
-
-        # For IACR links
-        iacr_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'research_papers/iacr_papers.csv'))
-        download_and_save_paper(
-            paper_site='IACR',
-            paper_links_and_referrers=iacr_links_and_referrers,
-            csv_file=csv_file,
-            parsing_method=get_paper_details_from_iacr
-        )
-
-        # For DL-ACM links
-        dl_acm_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'research_papers/dl.acm_papers.csv'))
-        download_and_save_paper(
-            paper_site='DL-ACM',
-            paper_links_and_referrers=dl_acm_links_and_referrers,
-            csv_file=csv_file,
-            parsing_method=get_paper_details_from_dl_acm
-        )
-
-        # For nature links
-        nature_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'research_papers/nature_papers.csv'))
-        download_and_save_paper(
-            paper_site='Nature',
-            paper_links_and_referrers=nature_links_and_referrers,
-            csv_file=csv_file,
-            parsing_method=get_paper_details_from_nature
-        )
-
-        # For ResearchGate links
-        research_gate_links_and_referrers = read_csv_links_and_referrers(os.path.join(root_directory(), 'data', 'links', 'research_papers/researchgate_papers.csv'))
-        download_and_save_paper(
-            paper_site='Research Gate',
-            paper_links_and_referrers=research_gate_links_and_referrers,
-            csv_file=csv_file,
-            parsing_method=get_paper_details_from_research_gate
-        )
+    main()
