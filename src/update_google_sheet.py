@@ -4,6 +4,7 @@ import gspread
 from gspread_dataframe import set_with_dataframe
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
+import gspread_dataframe
 from dotenv import load_dotenv
 import logging
 import re
@@ -216,12 +217,213 @@ class GoogleSheetUpdater:
         sheet = self.create_or_get_worksheet(tab_name, num_rows, num_cols)
         df = pd.DataFrame(data)
 
-        self.format_worksheet(sheet, df, tab_name)
+        # Add specific formatting for the "Papers" tab
+        if tab_name == "Papers":
+            self.format_papers_tab(sheet, df)
+        else:
+            self.format_worksheet(sheet, df, tab_name)
+
+    def format_papers_tab(self, sheet, df):
+
+        def convert_to_standard_date_format(date_str):
+            try:
+                # Try parsing the date with the format '%Y-%m-%d'
+                return pd.to_datetime(date_str, format='%Y-%m-%d').strftime('%Y-%m-%d')
+            except ValueError:
+                try:
+                    # Try parsing the date with the format '%d %b %Y'
+                    return pd.to_datetime(date_str, format='%d %b %Y').strftime('%Y-%m-%d')
+                except ValueError:
+                    # Return 'N/A' for dates that cannot be parsed
+                    return date_str
+                    # return 'N/A'
+
+        # Apply the conversion function
+        df['release_date'] = df['release_date'].apply(convert_to_standard_date_format)
+
+        # Rename the columns to your desired names
+        column_mapping = {
+            'title': 'Title',
+            'authors': 'Authors',
+            'pdf_link': 'PDF link',
+            'topics': 'Topics',
+            'release_date': 'Release date',
+            'referrer': 'Referrer'
+        }
+        df.rename(columns=column_mapping, inplace=True)
+
+        # Transform the 'Referrer' column
+        def create_hyperlink_formula(value):
+            if pd.isna(value) or value == "":
+                return "anon"
+            elif "http" not in value:
+                return value
+            link_name = value.split("/")[-1]
+            return f'=HYPERLINK("{value}", "{link_name}")'
+
+        df['Referrer'] = df['Referrer'].apply(create_hyperlink_formula)
+
+        # Clear the sheet before inserting new data
+        sheet.clear()
+
+        # Use gspread's `set_dataframe` to upload the whole DataFrame at once
+        gspread_dataframe.set_with_dataframe(sheet, df, row=1, col=1, include_index=False, resize=True)
+
+        # Set up filters, format header row in bold, and freeze the header using Google Sheets API
+        service = build('sheets', 'v4', credentials=self.credentials)
+
+        # Prepare the requests for bold formatting, center-align header, left-align content, and freezing header
+        requests = [
+            # Bold formatting request for header
+            {
+                'repeatCell': {
+                    'range': {
+                        'sheetId': sheet.id,
+                        'startRowIndex': 0,
+                        'endRowIndex': 1
+                    },
+                    'cell': {
+                        'userEnteredFormat': {
+                            'textFormat': {
+                                'bold': True
+                            },
+                            'horizontalAlignment': 'CENTER'  # Center-align header text
+                        }
+                    },
+                    'fields': 'userEnteredFormat.textFormat.bold, userEnteredFormat.horizontalAlignment'
+                }
+            },
+            # Left-align content rows
+            {
+                'repeatCell': {
+                    'range': {
+                        'sheetId': sheet.id,
+                        'startRowIndex': 1,  # Start from the row after header
+                        'endRowIndex': df.shape[0] + 1
+                    },
+                    'cell': {
+                        'userEnteredFormat': {
+                            'horizontalAlignment': 'LEFT'  # Left-align content
+                        }
+                    },
+                    'fields': 'userEnteredFormat.horizontalAlignment'
+                }
+            },
+            # Freeze header row request
+            {
+                'updateSheetProperties': {
+                    'properties': {
+                        'sheetId': sheet.id,
+                        'gridProperties': {
+                            'frozenRowCount': 1
+                        }
+                    },
+                    'fields': 'gridProperties.frozenRowCount'
+                }
+            },
+            # Filter request
+            {
+                'setBasicFilter': {
+                    'filter': {
+                        'range': {
+                            'sheetId': sheet.id,
+                            'startRowIndex': 0,
+                            'endRowIndex': df.shape[0] + 1,
+                            'startColumnIndex': 0,
+                            'endColumnIndex': df.shape[1]
+                        }
+                    }
+                }
+            }
+        ]
+
+        # Add request to rename the worksheet
+        rename_sheet_request = {
+            'updateSheetProperties': {
+                'properties': {
+                    'sheetId': sheet.id,
+                    'title': "Papers"
+                },
+                'fields': 'title'
+            }
+        }
+
+        release_date_index = df.columns.get_loc(column_mapping['release_date'])
+
+        date_format_request = {
+            "repeatCell": {
+                "range": {
+                    "sheetId": sheet.id,
+                    "startRowIndex": 1,
+                    "endRowIndex": df.shape[0] + 1,
+                    "startColumnIndex": release_date_index,
+                    "endColumnIndex": release_date_index + 1
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {
+                            "type": "DATE",
+                            "pattern": "yyyy-mm-dd"
+                        }
+                    }
+                },
+                "fields": "userEnteredFormat.numberFormat"
+            }
+        }
+        # Sort request for 'Release date' column in descending order
+        sort_request = {
+            'sortRange': {
+                'range': {
+                    'sheetId': sheet.id,
+                    'startRowIndex': 1,  # Start from the row after header
+                    'endRowIndex': df.shape[0] + 1,
+                    'startColumnIndex': 0,
+                    'endColumnIndex': df.shape[1]
+                },
+                'sortSpecs': [{
+                    'dimensionIndex': release_date_index,
+                    'sortOrder': 'DESCENDING'
+                }]
+            }
+        }
+
+        # Append the sort request to the existing list
+        requests.append(sort_request)
+
+        requests.append(date_format_request)
+
+        # Append the request to the existing list
+        requests.append(rename_sheet_request)
+
+        # Execute the requests
+        body = {
+            'requests': requests
+        }
+
+        service.spreadsheets().batchUpdate(spreadsheetId=os.getenv("GOOGLE_SHEET_ID"), body=body).execute()
+
+        logging.info("Saved CSV data to Google Sheet, formatted header, and added filters.")
+
+    def execute_requests(self, requests):
+        body = {
+            'requests': requests
+        }
+        service = build('sheets', 'v4', credentials=self.credentials)
+        service.spreadsheets().batchUpdate(spreadsheetId=self.sheet_id, body=body).execute()
 
 
 if __name__ == "__main__":
     repo_dir = root_directory()
     updater = GoogleSheetUpdater(sheet_id=os.getenv("GOOGLE_SHEET_ID"), credentials_json=os.getenv("GOOGLE_SHEET_CREDENTIALS_JSON"))
+
+    # Update the Google Sheet after updating the CSV
+    papers_directory = os.path.join(root_directory(), 'data', 'papers')
+    os.makedirs(papers_directory, exist_ok=True)
+
+    # Call update_google_sheet with Papers tab-specific formatting
+    papers_csv_file = os.path.join(root_directory(), 'data', 'paper_details.csv')
+    papers_data = pd.read_csv(papers_csv_file)
+    updater.update_google_sheet(data=papers_data, tab_name="Papers", num_rows=1000, num_cols=len(papers_data.columns))
 
     # Update Google Sheet with websites
     websites_csv_file = os.path.join(repo_dir, "data/links/websites.csv")
@@ -239,24 +441,24 @@ if __name__ == "__main__":
     updater.update_google_sheet(data=twitter_threads_data, tab_name="Twitter Threads", num_rows=1000, num_cols=2)
 
     # Update Google Sheet with Non parsed papers
-    papers_csv_file = os.path.join(repo_dir, "data/links/papers.csv")
+    papers_csv_file = os.path.join(repo_dir, "data/links/research_papers/papers.csv")
     papers_data = pd.read_csv(papers_csv_file)
     updater.update_google_sheet(data=papers_data, tab_name="Non parsed papers", num_rows=1000, num_cols=2)
 
     # TODO 2023-09-09: create public youtube playlist for each youtube video .csv
 
     # Update Google Sheet with YouTube videos
-    papers_csv_file = os.path.join(repo_dir, "data/links/recommended_youtube_videos_with_details.csv")
+    papers_csv_file = os.path.join(repo_dir, "data/links/youtube/recommended_youtube_videos_with_details.csv")
     papers_data = pd.read_csv(papers_csv_file)
     updater.update_google_sheet(data=papers_data, tab_name="Recommended Youtube Videos", num_rows=1000, num_cols=2)
 
     # Update Google Sheet with YouTube videos
-    papers_csv_file = os.path.join(repo_dir, "data/links/youtube_videos.csv")
+    papers_csv_file = os.path.join(repo_dir, "data/links/youtube/youtube_videos.csv")
     papers_data = pd.read_csv(papers_csv_file)
     updater.update_google_sheet(data=papers_data, tab_name="Youtube Videos (from channel list)", num_rows=1000, num_cols=2)
 
     # Update Google Sheet with YouTube handles
-    youtube_txt_file = os.path.join(repo_dir, "data/links/youtube_channel_handles.txt")
+    youtube_txt_file = os.path.join(repo_dir, "data/links/youtube/youtube_channel_handles.txt")
     youtube_data = {
         'YouTube Channel Handle': open(youtube_txt_file, 'r').read().split(','),
         'Link': ['https://www.youtube.com/' + handle.strip() for handle in open(youtube_txt_file, 'r').read().split(',')]
