@@ -1,6 +1,4 @@
 import os
-import random
-import time
 import arxiv
 import requests
 import csv
@@ -10,50 +8,17 @@ import logging
 import re
 from datetime import datetime
 from dotenv import load_dotenv
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-from src.utils import root_directory, ensure_newline_in_csv, read_existing_papers, read_csv_links_and_referrers, paper_exists_in_list, quickSoup
+from src.utils import root_directory, ensure_newline_in_csv, read_existing_papers, read_csv_links_and_referrers, paper_exists_in_list, quickSoup, return_driver
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('arxiv')
 logger.setLevel(logging.WARNING)
-
-
-# Define the return_driver function
-def return_driver():
-    # set up Chrome driver options
-    options = webdriver.ChromeOptions()
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument("--start-maximized")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--remote-debugging-port=9222")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--disable-features=IsolateOrigins,site-per-process")
-    options.add_experimental_option('excludeSwitches', ['enable-logging'])
-
-    # driver_version = "112.0.5615.49"
-    # driver_version = "114.0.5735.106"
-    # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
-    # NOTE: as of 2023-08-24, the ChromeDriverManager().install() no longer works
-    # needed to manually go here https://googlechromelabs.github.io/chrome-for-testing/#stable
-    # and provide direct paths to script for both binary and driver
-    # First run the script get_correct_chromedriver.sh
-    # Paths for the Chrome binary and ChromeDriver
-    CHROME_BINARY_PATH = f'{root_directory()}/src/chromium/chrome-linux64/chrome'
-    CHROMEDRIVER_PATH = f'{root_directory()}/src/chromium/chromedriver-linux64/chromedriver'
-
-    options = webdriver.ChromeOptions()
-    options.binary_location = CHROME_BINARY_PATH
-
-    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
-    return driver
 
 
 def get_paper_details_from_arxiv(arxiv_url: str) -> dict or None:

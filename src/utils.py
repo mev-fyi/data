@@ -8,6 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 from google.oauth2.service_account import Credentials as ServiceAccountCredentials
 from googleapiclient.discovery import build
+from selenium import webdriver
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -306,3 +307,30 @@ def get_channel_id(youtube, channel_name: str) -> Optional[str]:
         return items[0]['id']['channelId']
     else:
         return None
+
+
+def return_driver():
+    # set up Chrome driver options
+    options = webdriver.ChromeOptions()
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_argument("--start-maximized")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--disable-features=IsolateOrigins,site-per-process")
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
+    # NOTE: as of 2023-08-24, the ChromeDriverManager().install() no longer works
+    # needed to manually go here https://googlechromelabs.github.io/chrome-for-testing/#stable
+    # and provide direct paths to script for both binary and driver
+    # First run the script get_correct_chromedriver.sh
+    # Paths for the Chrome binary and ChromeDriver
+    CHROME_BINARY_PATH = f'{root_directory()}/src/chromium/chrome-linux64/chrome'
+    CHROMEDRIVER_PATH = f'{root_directory()}/src/chromium/chromedriver-linux64/chromedriver'
+
+    options = webdriver.ChromeOptions()
+    options.binary_location = CHROME_BINARY_PATH
+
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
+    return driver

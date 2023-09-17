@@ -4,7 +4,7 @@ import random
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
-from src.utils import root_directory
+from src.utils import root_directory, return_driver
 from concurrent.futures import ThreadPoolExecutor
 from selenium import webdriver
 
@@ -90,35 +90,17 @@ def fetch_notion_titles(url):
     Returns:
     - str: The title of the page, or None if the title could not be fetched.
     """
-    # set up Chrome driver options
-    options = webdriver.ChromeOptions()
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument("--start-maximized")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--remote-debugging-port=9222")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--disable-features=IsolateOrigins,site-per-process")
-    options.add_experimental_option('excludeSwitches', ['enable-logging'])
-
-    CHROME_BINARY_PATH = './env/chrome-linux64/chrome'
-    CHROMEDRIVER_PATH = './env/chromedriver-linux64/chromedriver'
-
-    options.binary_location = CHROME_BINARY_PATH
-
-    # Initialize service with the path to your ChromeDriver
-    service = webdriver.chrome.service.Service(executable_path=CHROMEDRIVER_PATH)
-
-    browser = webdriver.Chrome(options=options, service=service)
+    driver = return_driver()
 
     try:
-        browser.get(url)
+        driver.get(url)
 
         # Wait for some time to allow JavaScript to load content
-        browser.implicitly_wait(10)  # Adjust the wait time as necessary
+        driver.implicitly_wait(10)  # Adjust the wait time as necessary
+        time.sleep(5)
 
         # Get the page title
-        title = browser.title
+        title = driver.title
         print(f"Fetched title [{title}] for URL {url}")
         return title
     except Exception as e:
@@ -126,7 +108,7 @@ def fetch_notion_titles(url):
         return None
     finally:
         # Always close the browser to clean up
-        browser.quit()
+        driver.quit()
 
 
 def fetch_hackmd_titles(url):
@@ -212,9 +194,9 @@ def fetch_title(row, url_to_title):
         'paradigm.xyz': fetch_paradigm_titles,
         'hackmd.io': fetch_hackmd_titles,
         'jumpcrypto.com': fetch_jump_titles,
-        'notion.site': None,  # Placeholder for fetch_notion_titles
-        'notes.ethereum.org': None,  # Placeholder for fetch_notion_titles
-        'succulent-throat-0ce.': None,  # Placeholder for fetch_notion_titles
+        'notion.site': fetch_notion_titles,  # Placeholder for fetch_notion_titles
+        'notes.ethereum.org': fetch_notion_titles,  # Placeholder for fetch_notion_titles
+        'succulent-throat-0ce.': fetch_notion_titles,  # Placeholder for fetch_notion_titles
         'propellerheads.xyz': fetch_propellerheads_titles,
         'a16z': fetch_a16z_titles,
         'blog.uniswap': None,  # Placeholder for fetch_uniswap_titles
