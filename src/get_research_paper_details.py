@@ -326,6 +326,7 @@ def get_paper_details_from_sciendirect(url: str):
             print(date_string)
         else:
             print("Date not found in the input string.")
+            date_string = ''
 
         # Parse the date string
         date_obj = datetime.strptime(date_string, '%B %Y')
@@ -334,6 +335,39 @@ def get_paper_details_from_sciendirect(url: str):
         paper_release_date = date_obj.strftime('%Y-%m-%d')
 
         return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'ScienceDirect', "release_date": paper_release_date}
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to fetch the paper details: {e}")
+        return None
+    except AttributeError as e:
+        print(f"Failed to parse the paper details: {e}")
+        return None
+
+
+def get_paper_details_from_semanticscholar(url: str):
+    try:
+        driver = return_driver()
+
+        driver.get(url.replace('.pdf', ''))
+        WebDriverWait(driver, 10)
+
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+
+        paper_title = soup.select_one('.fresh-paper-detail-page__header > h1:nth-child(2)').get_text()
+
+        # Select the .c-article-author-list element
+        author_list_text = soup.select_one('.author-list__link').get_text()
+
+        # Remove non-alphabet characters, split the text by commas, and clean up spaces
+        paper_authors = ', '.join([re.sub(r'[^a-zA-Z, ]', '', author.replace('&', ',')).strip() for author in author_list_text.split(',')])
+
+        paper_authors = re.sub(r'\s+', ' ', paper_authors)  # Replace multiple spaces with a single space
+
+        # get published date
+        date_string = soup.select_one('li.paper-meta-item:nth-child(2) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)').get_text()
+        date_obj = datetime.strptime(date_string, '%d %B %Y')  # Parse the date string
+        paper_release_date = date_obj.strftime('%Y-%m-%d')  # Format the date as yyyy-mm-dd
+
+        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'Nature', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch the paper details: {e}")
         return None
@@ -453,40 +487,45 @@ def main():
     csv_file = os.path.join(root_data_directory, 'paper_details.csv')
 
     paper_sites = [
-        # {
-        #     'name': 'arXiv',
-        #     'link_file': 'arxiv_papers.csv',
-        #     'parsing_method': get_paper_details_from_arxiv
-        # },
-        # {
-        #     'name': 'SSRN',
-        #     'link_file': 'ssrn_papers.csv',
-        #     'parsing_method': get_paper_details_from_ssrn
-        # },
-        # {
-        #     'name': 'IACR',
-        #     'link_file': 'iacr_papers.csv',
-        #     'parsing_method': get_paper_details_from_iacr
-        # },
-        # {
-        #     'name': 'Nature',
-        #     'link_file': 'nature_papers.csv',
-        #     'parsing_method': get_paper_details_from_nature
-        # },
-        # {
-        #     'name': 'Research Gate',
-        #     'link_file': 'researchgate_papers.csv',
-        #     'parsing_method': get_paper_details_from_research_gate
-        # },
-        # {
-        #     'name': 'DL-ACM',
-        #     'link_file': 'dl.acm_papers.csv',
-        #     'parsing_method': get_paper_details_from_dl_acm
-        # },
+         {
+             'name': 'arXiv',
+             'link_file': 'arxiv_papers.csv',
+             'parsing_method': get_paper_details_from_arxiv
+         },
+         {
+             'name': 'SSRN',
+             'link_file': 'ssrn_papers.csv',
+             'parsing_method': get_paper_details_from_ssrn
+         },
+         {
+             'name': 'IACR',
+             'link_file': 'iacr_papers.csv',
+             'parsing_method': get_paper_details_from_iacr
+         },
+         {
+             'name': 'Nature',
+             'link_file': 'nature_papers.csv',
+             'parsing_method': get_paper_details_from_nature
+         },
+         {
+             'name': 'Research Gate',
+             'link_file': 'researchgate_papers.csv',
+             'parsing_method': get_paper_details_from_research_gate
+         },
+         {
+             'name': 'DL-ACM',
+             'link_file': 'dl.acm_papers.csv',
+             'parsing_method': get_paper_details_from_dl_acm
+         },
         {
             'name': 'ScienceDirect',
             'link_file': 'sciencedirect_papers.csv',
             'parsing_method': get_paper_details_from_sciendirect
+        },
+        {
+            'name': 'SemanticScholar',
+            'link_file': 'semanticscholar_papers.csv',
+            'parsing_method': get_paper_details_from_semanticscholar
         }
     ]
 
