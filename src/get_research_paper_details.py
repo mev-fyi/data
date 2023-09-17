@@ -323,7 +323,6 @@ def get_paper_details_from_sciendirect(url: str):
 
         if match:
             date_string = match.group()
-            print(date_string)
         else:
             print("Date not found in the input string.")
             date_string = ''
