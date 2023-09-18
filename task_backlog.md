@@ -4,9 +4,6 @@ Complexity set: Low, Medium, High
 
 ## Contributions
 ###  UX
-- [ ] [Automate transcript downloads workflow as YouTube channels are added](#task-1)
-    - [ ] [Fork youtube_video_and_transcript_downloader to this repo](#task-1)
-    - Priority: Low
 - [ ] [Optimise sorting of topics on Google Sheet](#task-1)
   - Priority: Low. Context: right now the topics are a single written to each cell. I believe the best UX would be a dropdown list which is populated for each cell such that a given user could select (ideally from a single column) all the tags of interest. 
 - [ ] [Optimise sorting of authors on Google Sheet](#task-1)
@@ -32,9 +29,9 @@ Complexity set: Low, Medium, High
 ## Research exploitation UX
 - [ ] [Scrape all websites for new uploads and add links to uploads in most recent order on a single worksheet](#task-1)
   - Priority: Medium
-- [ ] [Add a youtube video & podcast tab sorted by most recent of content from the Youtube channels/podcasts](#task-1)
+- [ ] [Add a podcast tab sorted by most recent of content from the podcasts handle worksheet](#task-1)
     - Priority: Medium
-    - Context: Right now besides going into each Youtube/Podcast channel, there is no way to see the most recent content. This would be a powerful way to keep up to date with the latest content.
+    - Context: Right now besides going into each Podcast radio, there is no way to see the most recent content. This would be a powerful way to keep up to date with the latest content.
 - [ ] [Add Twitter bot to Tweet for each new scrapped research document](#task-1)
   - Priority: Low
 
@@ -61,8 +58,6 @@ Complexity set: Low, Medium, High
 - [ ] [Add support for Twitter threads](#task-2)
   - [ ] [Should they be written as blogs first?](#task-2)
   - Priority: High
-- [ ] [Continue adding support for other research sites and journals](#task-2)
-  - Priority: High
 
 - [ ] [Check https://apify.com/apify/website-content-crowler](#task-2)
   - Priority: Low
@@ -80,4 +75,6 @@ Complexity set: Low, Medium, High
 
 ### Frontend
 - [ ] [Add Streamlit frontend for LLM-based chatbot for papers, blogs, podcast recommendation](#task-4)
-
+- [ ] [Consider moving from Google Sheets to self-hosted website for analytics purposes (and UX?)](#task-4)
+  - Priority: Medium
+  - Context: it is hard to gauge how successful the project is without analytics. This is a trade-off between privacy (would rely on cookies) and analytics. Such analytics could help possibly (if approved/validated/not rejected) monetise the project e.g. by adding a job tabs / sponsored content and re-invest proceeds into the development of the project. Such analytics would help on the business development part.

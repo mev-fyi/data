@@ -204,6 +204,8 @@ def fetch_title(row, url_to_title):
         'mechanism.org': fetch_mechanism_titles,
     }
 
+    # TODO 2023-09-18: add substack support
+
     # Iterate through URL patterns and fetch titles
     for pattern, fetch_function in url_patterns.items():
         if pattern in url:

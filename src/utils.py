@@ -321,11 +321,12 @@ def return_driver():
     options.add_argument("--disable-features=IsolateOrigins,site-per-process")
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-    # NOTE: as of 2023-08-24, the ChromeDriverManager().install() no longer works
+    # NOTE: ChromeDriverManager().install() no longer works
     # needed to manually go here https://googlechromelabs.github.io/chrome-for-testing/#stable
     # and provide direct paths to script for both binary and driver
     # First run the script get_correct_chromedriver.sh
     # Paths for the Chrome binary and ChromeDriver
+    # TODO 2023-09-18: add GIT LFS unroll of chromium folder when hitting this script
     CHROME_BINARY_PATH = f'{root_directory()}/src/chromium/chrome-linux64/chrome'
     CHROMEDRIVER_PATH = f'{root_directory()}/src/chromium/chromedriver-linux64/chromedriver'
 
