@@ -256,4 +256,5 @@ def fetch_article_titles(csv_filepath, output_filepath):
 
 
 # Usage example:
-fetch_article_titles(f'{root_directory()}/data/links/articles.csv', f'{root_directory()}/data/links/articles_updated.csv')
+def run():
+    fetch_article_titles(f'{root_directory()}/data/links/articles.csv', f'{root_directory()}/data/links/articles_updated.csv')

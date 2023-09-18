@@ -220,10 +220,8 @@ def parse_and_categorize_links(input_filepath: str, domains_filepath: str, resea
     df.to_csv(input_filepath, index=False)
 
 
-# Main execution
-if __name__ == "__main__":
+def run():
     repo_dir = root_directory()
-
     url_patterns = {
         "notion_site": r"^https://[^/]+/[^/]+$",
         "medium_article": r"^https://\w+\.medium\.com/.+",
@@ -275,3 +273,8 @@ if __name__ == "__main__":
         ],
         url_patterns=url_patterns
     )
+
+
+# Main execution
+if __name__ == "__main__":
+    run()

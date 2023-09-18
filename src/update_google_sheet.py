@@ -423,6 +423,7 @@ def update_google_sheet(csv_file, tab_name, num_rows=1000, num_cols=None):
 
 
 def main():
+    load_dotenv()
     repo_dir = root_directory()
 
     # Define the sheet update configurations
@@ -449,6 +450,5 @@ def main():
 
 
 if __name__ == "__main__":
-    load_dotenv()
     main()
 
