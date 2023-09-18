@@ -431,7 +431,6 @@ def main():
         {"csv_file": f"{repo_dir}/data/links/websites.csv", "tab_name": "Website Links", "num_cols": None},
         {"csv_file": f"{repo_dir}/data/links/articles_updated.csv", "tab_name": "Articles", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/links/twitter_threads.csv", "tab_name": "Twitter Threads", "num_cols": 2},
-        {"csv_file": f"{repo_dir}/data/links/research_papers/papers.csv", "tab_name": "Non parsed papers", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/links/youtube/recommended_youtube_videos_with_details.csv", "tab_name": "Recommended Youtube Videos", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/links/youtube/youtube_videos.csv", "tab_name": "Youtube Videos (from channel list)", "num_cols": 2},
     ]

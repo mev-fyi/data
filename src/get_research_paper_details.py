@@ -13,6 +13,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
+from src.populate_csv_files.parse_pdf_files import get_pdf_details
 from src.utils import root_directory, ensure_newline_in_csv, read_existing_papers, read_csv_links_and_referrers, paper_exists_in_list, quickSoup, return_driver
 
 load_dotenv()
@@ -366,7 +367,7 @@ def get_paper_details_from_semanticscholar(url: str):
         date_obj = datetime.strptime(date_string, '%d %B %Y')  # Parse the date string
         paper_release_date = date_obj.strftime('%Y-%m-%d')  # Format the date as yyyy-mm-dd
 
-        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'Nature', "release_date": paper_release_date}
+        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'SemanticScholar', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch the paper details: {e}")
         return None
@@ -525,7 +526,12 @@ def main():
             'name': 'SemanticScholar',
             'link_file': 'semanticscholar_papers.csv',
             'parsing_method': get_paper_details_from_semanticscholar
-        }
+        },
+        {
+            'name': 'OffHost',
+            'link_file': 'papers.csv',
+            'parsing_method': get_pdf_details
+        },
     ]
 
     for site in paper_sites:
