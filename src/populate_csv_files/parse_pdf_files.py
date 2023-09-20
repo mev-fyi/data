@@ -103,8 +103,24 @@ def get_pdf_details(url):
 
 
 def parse_self_hosted_pdf():
-    # Step 2: Load the CSV file into a pandas DataFrame
+    # Load the existing data into a pandas DataFrame
+    existing_data_filepath = f'{root_directory()}/data/paper_details.csv'
+    existing_df = pd.read_csv(existing_data_filepath)
+
+    # Step 2: Load the CSV file with the links into a pandas DataFrame
     df = pd.read_csv(f'{root_directory()}/data/links/research_papers/papers.csv')
+
+    # Find the rows in df where the PDF link is not already present in existing_df
+    unique_entries = ~df['paper'].isin(existing_df['pdf_link'])
+
+    # Filter df to only include these unique rows
+    df = df[unique_entries]
+
+    if df.empty:
+        print("No new entries to process.")
+        return
+    else:
+        print(f"Processing {len(df)} new entries...")
 
     # Preserve the referrer column for later use
     referrer_series = df['referrer'].copy()

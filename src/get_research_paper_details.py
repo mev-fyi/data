@@ -13,7 +13,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-from src.populate_csv_files.parse_pdf_files import get_pdf_details
+from src.populate_csv_files.parse_pdf_files import get_pdf_details, parse_self_hosted_pdf
 from src.utils import root_directory, ensure_newline_in_csv, read_existing_papers, read_csv_links_and_referrers, paper_exists_in_list, quickSoup, return_driver
 
 load_dotenv()
@@ -402,7 +402,7 @@ def download_and_save_unique_paper(args):
 
     # Check if paper exists in CSV
     if paper_exists_in_list(paper_details['title'], existing_papers):
-        logging.info(f"[{paper_site}] paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
+        # logging.info(f"[{paper_site}] paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
         return
 
     # Ensure CSV ends with a newline
@@ -529,8 +529,8 @@ def main():
         },
         {
             'name': 'OffHost',
-            'link_file': 'papers.csv',
-            'parsing_method': get_pdf_details
+            'link_file': '',
+            'parsing_method': parse_self_hosted_pdf
         },
     ]
 

@@ -29,7 +29,7 @@ keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 
             'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization',
-            'erc', 'eip', 'auction', 'daian', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'stephane gosselin', 'su zhu']
+            'erc', 'eip', 'auction', 'daian', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'stephane gosselin', 'su zhu', 'pools']
             # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin', bridge',
 
 keywords_to_exclude = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler', 'sec']
@@ -284,7 +284,7 @@ def load_existing_data(csv_file_exists, csv_file_path):
 
 def setup_csv():
     # Check if the CSV file already exists
-    csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
+    csv_file_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
     csv_file_exists = os.path.exists(csv_file_path)
     headers = ['title', 'channel_name', 'published_date', 'url', 'referrer']
     # Check if the CSV file exists and if its headers match the expected headers
@@ -378,7 +378,7 @@ def get_youtube_channels_from_file(file_path):
 if __name__ == '__main__':
     # TODO 2023-09-11: add functionality to only load the difference between the existing data and the new data, expectedly being able to see only videos from a given timestamp and on
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
-    fetch_videos = False
+    fetch_videos = True
     if not fetch_videos:
         logging.info(f"Applying new filters only, not fetching videos.")
 
@@ -387,7 +387,7 @@ if __name__ == '__main__':
         if not api_key:
             raise ValueError("No API key provided. Please provide an API key via command line argument or .env file.")
 
-        yt_channels_file = os.path.join(root_directory(), 'data/links/youtube_channel_handles.txt')
+        yt_channels_file = os.path.join(root_directory(), 'data/links/youtube/youtube_channel_handles.txt')
 
         # Fetch the yt_channels from the file
         yt_channels = get_youtube_channels_from_file(yt_channels_file)
@@ -403,8 +403,8 @@ if __name__ == '__main__':
         asyncio.run(run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True))
 
     # Specify the input and output CSV file paths
-    input_csv_path = f"{root_directory()}/data/links/youtube_videos.csv"
-    output_csv_path = f"{root_directory()}/data/links/filtered_and_updated_youtube_videos.csv"
+    input_csv_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
+    output_csv_path = f"{root_directory()}/data/links/youtube/filtered_and_updated_youtube_videos.csv"
 
     # Call the filter_and_log_removed_videos method to filter and log removed videos
     filter_and_remove_videos(input_csv_path, keywords)

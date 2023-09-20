@@ -257,4 +257,5 @@ def fetch_article_titles(csv_filepath, output_filepath):
 
 # Usage example:
 def run():
+    # todo 2023-09-19: only do so if the file is not already present in articles_updated.csv
     fetch_article_titles(f'{root_directory()}/data/links/articles.csv', f'{root_directory()}/data/links/articles_updated.csv')
