@@ -527,17 +527,14 @@ def main():
             'link_file': 'semanticscholar_papers.csv',
             'parsing_method': get_paper_details_from_semanticscholar
         },
-        {
-            'name': 'OffHost',
-            'link_file': '',
-            'parsing_method': parse_self_hosted_pdf
-        },
     ]
 
     for site in paper_sites:
         link_file_path = os.path.join(root_data_directory, 'links', 'research_papers', site['link_file'])
         links_and_referrers = read_csv_links_and_referrers(link_file_path)
         download_and_save_paper(site['name'], links_and_referrers, csv_file, site['parsing_method'])
+    # OffHost
+    parse_self_hosted_pdf()
 
 
 if __name__ == "__main__":
