@@ -343,25 +343,51 @@ def filter_and_save_video_info(existing_data, keywords, csv_file_path):
             writer.writerow(video_info)
 
 
-def filter_and_remove_videos(input_csv_path, keywords):
+def filter_and_remove_videos(input_csv_path, keywords, channel_specific_filters=None):
     # Read the CSV file into a DataFrame
+    if channel_specific_filters is None:
+        channel_specific_filters = {}
     df = pd.read_csv(input_csv_path)
 
-    # Filter the DataFrame based on keywords
-    filtered_df = df[df['title'].str.lower().str.contains('|'.join(keywords).lower())]
+    # Apply global keyword filtering to the entire DataFrame
+    global_filtered_df = df[df['title'].str.lower().str.contains('|'.join(keywords).lower())]
+
+    # Convert keys in channel_specific_filters to lowercase
+    channel_specific_filters = {channel.lower(): filters for channel, filters in channel_specific_filters.items()}
+
+    # Initialize DataFrame for final filtered videos
+    final_filtered_df = pd.DataFrame()
+
+    # Identify the channels in the DataFrame that have channel-specific filters
+    channels_with_specific_filters = set(global_filtered_df['channel_name'].str.lower()) & set(channel_specific_filters.keys())
+
+    # Apply channel-specific keyword filtering to the channels identified
+    for channel in channels_with_specific_filters:
+        channel_keywords = channel_specific_filters[channel]
+        channel_df = global_filtered_df[global_filtered_df['channel_name'].str.lower() == channel]
+        channel_filtered_df = channel_df[channel_df['title'].str.lower().str.contains('|'.join(channel_keywords).lower())]
+        final_filtered_df = pd.concat([final_filtered_df, channel_filtered_df])
+
+    # Concatenate videos from channels that did not have channel-specific filters
+    final_filtered_df = pd.concat([final_filtered_df, global_filtered_df[~global_filtered_df['channel_name'].str.lower().isin(channels_with_specific_filters)]])
 
     # Identify removed videos
-    removed_df = df[~df['title'].isin(filtered_df['title'])]
+    removed_df = df[~df['title'].isin(final_filtered_df['title'])]
 
     # Log the removed video titles
     for _, removed_video in removed_df.iterrows():
-        logging.info(f"Removed video: {removed_video['title']}")
+        logging.info(f"Removed video: {removed_video['title']} - Channel: {removed_video['channel_name']}")
+
+    # Append removed videos to filtered_away_youtube_videos.csv
+    filtered_away_csv_file_path = f"{root_directory()}/data/links/youtube/filtered_away_youtube_videos.csv"
+    write_filtered_away_header = not os.path.exists(filtered_away_csv_file_path)
+    removed_df.to_csv(filtered_away_csv_file_path, mode='a', header=write_filtered_away_header, index=False)
 
     # Write the filtered data back to the CSV file
-    filtered_df.to_csv(input_csv_path, index=False)
+    final_filtered_df.to_csv(input_csv_path, index=False)
 
 
-async def run(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None,
+async def fetch_all_videos(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None,
               keywords: List[str] = None, keywords_to_exclude: List[str] = None, fetch_videos: bool = True):
     csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
     existing_data = await fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos)
@@ -375,10 +401,10 @@ def get_youtube_channels_from_file(file_path):
     return channels
 
 
-if __name__ == '__main__':
+def run():
     # TODO 2023-09-11: add functionality to only load the difference between the existing data and the new data, expectedly being able to see only videos from a given timestamp and on
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
-    fetch_videos = True
+    fetch_videos = False
     if not fetch_videos:
         logging.info(f"Applying new filters only, not fetching videos.")
 
@@ -400,11 +426,19 @@ if __name__ == '__main__':
             raise ValueError(
                 "No channels or playlists provided. Please provide channel names, IDs, or playlist IDs via command line argument or .env file.")
 
-        asyncio.run(run(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True))
+        asyncio.run(fetch_all_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True))
 
     # Specify the input and output CSV file paths
     input_csv_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
-    output_csv_path = f"{root_directory()}/data/links/youtube/filtered_and_updated_youtube_videos.csv"
+
+    # Define the channel-specific filters
+    channel_specific_filters = {
+        "Bankless": ["MEV", "maximal extractable value"],
+    }
 
     # Call the filter_and_log_removed_videos method to filter and log removed videos
-    filter_and_remove_videos(input_csv_path, keywords)
+    filter_and_remove_videos(input_csv_path, keywords, channel_specific_filters)
+
+
+if __name__ == '__main__':
+    run()
