@@ -272,135 +272,136 @@ class GoogleSheetUpdater:
         # Set up filters, format header row in bold, and freeze the header using Google Sheets API
         service = build('sheets', 'v4', credentials=self.credentials)
 
-        # Prepare the requests for bold formatting, center-align header, left-align content, and freezing header
-        requests = [
-            # Bold formatting request for header
-            {
-                'repeatCell': {
-                    'range': {
-                        'sheetId': sheet.id,
-                        'startRowIndex': 0,
-                        'endRowIndex': 1
-                    },
-                    'cell': {
-                        'userEnteredFormat': {
-                            'textFormat': {
-                                'bold': True
-                            },
-                            'horizontalAlignment': 'CENTER'  # Center-align header text
-                        }
-                    },
-                    'fields': 'userEnteredFormat.textFormat.bold, userEnteredFormat.horizontalAlignment'
-                }
-            },
-            # Left-align content rows
-            {
-                'repeatCell': {
-                    'range': {
-                        'sheetId': sheet.id,
-                        'startRowIndex': 1,  # Start from the row after header
-                        'endRowIndex': df.shape[0] + 1
-                    },
-                    'cell': {
-                        'userEnteredFormat': {
-                            'horizontalAlignment': 'LEFT'  # Left-align content
-                        }
-                    },
-                    'fields': 'userEnteredFormat.horizontalAlignment'
-                }
-            },
-            # Freeze header row request
-            {
-                'updateSheetProperties': {
-                    'properties': {
-                        'sheetId': sheet.id,
-                        'gridProperties': {
-                            'frozenRowCount': 1
-                        }
-                    },
-                    'fields': 'gridProperties.frozenRowCount'
-                }
-            },
-            # Filter request
-            {
-                'setBasicFilter': {
-                    'filter': {
+        if df.shape[0] > 0:
+            # Prepare the requests for bold formatting, center-align header, left-align content, and freezing header
+            requests = [
+                # Bold formatting request for header
+                {
+                    'repeatCell': {
                         'range': {
                             'sheetId': sheet.id,
                             'startRowIndex': 0,
-                            'endRowIndex': df.shape[0] + 1,
-                            'startColumnIndex': 0,
-                            'endColumnIndex': df.shape[1]
+                            'endRowIndex': 1
+                        },
+                        'cell': {
+                            'userEnteredFormat': {
+                                'textFormat': {
+                                    'bold': True
+                                },
+                                'horizontalAlignment': 'CENTER'  # Center-align header text
+                            }
+                        },
+                        'fields': 'userEnteredFormat.textFormat.bold, userEnteredFormat.horizontalAlignment'
+                    }
+                },
+                # Left-align content rows
+                {
+                    'repeatCell': {
+                        'range': {
+                            'sheetId': sheet.id,
+                            'startRowIndex': 1,  # Start from the row after header
+                            'endRowIndex': df.shape[0] + 1
+                        },
+                        'cell': {
+                            'userEnteredFormat': {
+                                'horizontalAlignment': 'LEFT'  # Left-align content
+                            }
+                        },
+                        'fields': 'userEnteredFormat.horizontalAlignment'
+                    }
+                },
+                # Freeze header row request
+                {
+                    'updateSheetProperties': {
+                        'properties': {
+                            'sheetId': sheet.id,
+                            'gridProperties': {
+                                'frozenRowCount': 1
+                            }
+                        },
+                        'fields': 'gridProperties.frozenRowCount'
+                    }
+                },
+                # Filter request
+                {
+                    'setBasicFilter': {
+                        'filter': {
+                            'range': {
+                                'sheetId': sheet.id,
+                                'startRowIndex': 0,
+                                'endRowIndex': df.shape[0] + 1,
+                                'startColumnIndex': 0,
+                                'endColumnIndex': df.shape[1]
+                            }
                         }
                     }
                 }
+            ]
+
+            # Add request to rename the worksheet
+            rename_sheet_request = {
+                'updateSheetProperties': {
+                    'properties': {
+                        'sheetId': sheet.id,
+                        'title': "Papers"
+                    },
+                    'fields': 'title'
+                }
             }
-        ]
 
-        # Add request to rename the worksheet
-        rename_sheet_request = {
-            'updateSheetProperties': {
-                'properties': {
-                    'sheetId': sheet.id,
-                    'title': "Papers"
-                },
-                'fields': 'title'
-            }
-        }
+            release_date_index = df.columns.get_loc(column_mapping['release_date'])
 
-        release_date_index = df.columns.get_loc(column_mapping['release_date'])
-
-        date_format_request = {
-            "repeatCell": {
-                "range": {
-                    "sheetId": sheet.id,
-                    "startRowIndex": 1,
-                    "endRowIndex": df.shape[0] + 1,
-                    "startColumnIndex": release_date_index,
-                    "endColumnIndex": release_date_index + 1
-                },
-                "cell": {
-                    "userEnteredFormat": {
-                        "numberFormat": {
-                            "type": "DATE",
-                            "pattern": "yyyy-mm-dd"
+            date_format_request = {
+                "repeatCell": {
+                    "range": {
+                        "sheetId": sheet.id,
+                        "startRowIndex": 1,
+                        "endRowIndex": df.shape[0] + 1,
+                        "startColumnIndex": release_date_index,
+                        "endColumnIndex": release_date_index + 1
+                    },
+                    "cell": {
+                        "userEnteredFormat": {
+                            "numberFormat": {
+                                "type": "DATE",
+                                "pattern": "yyyy-mm-dd"
+                            }
                         }
-                    }
-                },
-                "fields": "userEnteredFormat.numberFormat"
+                    },
+                    "fields": "userEnteredFormat.numberFormat"
+                }
             }
-        }
-        # Sort request for 'Release date' column in descending order
-        sort_request = {
-            'sortRange': {
-                'range': {
-                    'sheetId': sheet.id,
-                    'startRowIndex': 1,  # Start from the row after header
-                    'endRowIndex': df.shape[0] + 1,
-                    'startColumnIndex': 0,
-                    'endColumnIndex': df.shape[1]
-                },
-                'sortSpecs': [{
-                    'dimensionIndex': release_date_index,
-                    'sortOrder': 'DESCENDING'
-                }]
+            # Sort request for 'Release date' column in descending order
+            sort_request = {
+                'sortRange': {
+                    'range': {
+                        'sheetId': sheet.id,
+                        'startRowIndex': 1,  # Start from the row after header
+                        'endRowIndex': df.shape[0] + 1,
+                        'startColumnIndex': 0,
+                        'endColumnIndex': df.shape[1]
+                    },
+                    'sortSpecs': [{
+                        'dimensionIndex': release_date_index,
+                        'sortOrder': 'DESCENDING'
+                    }]
+                }
             }
-        }
 
-        # Append the sort request to the existing list
-        requests.append(sort_request)
+            # Append the sort request to the existing list
+            requests.append(sort_request)
 
-        requests.append(date_format_request)
+            requests.append(date_format_request)
 
-        # Append the request to the existing list
-        requests.append(rename_sheet_request)
+            # Append the request to the existing list
+            requests.append(rename_sheet_request)
 
-        # Execute the requests
-        body = {
-            'requests': requests
-        }
+            # Execute the requests
+            body = {
+                'requests': requests
+            }
 
-        service.spreadsheets().batchUpdate(spreadsheetId=os.getenv("GOOGLE_SHEET_ID"), body=body).execute()
+            service.spreadsheets().batchUpdate(spreadsheetId=os.getenv("GOOGLE_SHEET_ID"), body=body).execute()
 
         logging.info("Saved CSV data to Google Sheet, formatted header, and added filters.")
 

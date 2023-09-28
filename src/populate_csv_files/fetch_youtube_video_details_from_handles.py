@@ -46,8 +46,9 @@ async def get_video_details(youtube, video_id, keywords, keywords_to_exclude):
         video_info_item = video_response['items'][0]['snippet']
         video_title = video_info_item['title']
 
-        # Check if the video title contains any of the keywords
-        if any(keyword.lower() in video_title.lower() for keyword in keywords) and not any(keyword.lower() in video_title.lower() for keyword in keywords_to_exclude):
+        # Check if the video title contains any of the keywords, take all videos if keywords is empty
+        if (not keywords or any(keyword.lower() in video_title.lower() for keyword in keywords)) \
+                and not any(keyword.lower() in video_title.lower() for keyword in keywords_to_exclude):
             published_at = video_info_item['publishedAt']
             parsed_published_at = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ")
             logging.info(f"[{video_info_item['channelTitle']}] added video: [{video_title}]")
