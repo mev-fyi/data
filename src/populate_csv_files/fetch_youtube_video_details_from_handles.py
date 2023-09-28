@@ -404,6 +404,7 @@ def get_youtube_channels_from_file(file_path):
 def run():
     # TODO 2023-09-11: add functionality to only load the difference between the existing data and the new data, expectedly being able to see only videos from a given timestamp and on
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
+    # TODO 2023-09-25: rotate on API keys to avoid hitting the quota limit
     fetch_videos = False
     if not fetch_videos:
         logging.info(f"Applying new filters only, not fetching videos.")
