@@ -441,6 +441,18 @@ def run():
     # Call the filter_and_log_removed_videos method to filter and log removed videos
     filter_and_remove_videos(input_csv_path, keywords, channel_specific_filters)
 
+    # Specify the input CSV file path
+    input_csv_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
+
+    # Load CSV into a pandas DataFrame
+    df = pd.read_csv(input_csv_path, delimiter=',')
+
+    # Drop duplicates
+    df.drop_duplicates(inplace=True)
+
+    # Optionally, save the cleaned data back to the CSV
+    df.to_csv(input_csv_path, index=False)
+
 
 if __name__ == '__main__':
     run()
