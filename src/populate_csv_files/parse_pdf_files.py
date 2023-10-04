@@ -11,6 +11,20 @@ import pikepdf
 from src.utils import root_directory
 
 
+def load_failed_urls():
+    failed_url_path = f'{root_directory()}/data/failed_urls.csv'
+    if Path(failed_url_path).exists():
+        with open(failed_url_path, 'r') as f:
+            return set(f.read().splitlines())
+    return set()
+
+
+def save_failed_url(url):
+    failed_url_path = f'{root_directory()}/data/failed_urls.csv'
+    with open(failed_url_path, 'a') as f:
+        f.write(url + '\n')
+
+
 # Step 3 & 4: Iterating over each row and trying to get the PDF details
 def get_pdf_details(url):
     try:
@@ -99,6 +113,7 @@ def get_pdf_details(url):
             "release_date": None
         }
         print(f"Could not retrieve details from {url}: {e}")
+        save_failed_url(url)
     return details
 
 
@@ -107,8 +122,14 @@ def parse_self_hosted_pdf():
     existing_data_filepath = f'{root_directory()}/data/paper_details.csv'
     existing_df = pd.read_csv(existing_data_filepath)
 
+    # Load failed URLs
+    failed_urls = load_failed_urls()
+
     # Step 2: Load the CSV file with the links into a pandas DataFrame
     df = pd.read_csv(f'{root_directory()}/data/links/research_papers/papers.csv')
+
+    # Filter out failed URLs
+    df = df[~df['paper'].isin(failed_urls)]
 
     # Find the rows in df where the PDF link is not already present in existing_df
     unique_entries = ~df['paper'].isin(existing_df['pdf_link'])

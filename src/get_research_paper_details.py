@@ -423,9 +423,29 @@ def download_and_save_unique_paper(args):
     # Save the PDF locally
     pdf_filename = f"{paper_details['title']}.pdf"
     pdf_path = os.path.join(root_directory(), 'data', 'papers_pdf_downloads', pdf_filename)
-    with open(pdf_path, 'wb') as f:
-        f.write(pdf_response.content)
-    logging.info(f"[{paper_site}] Downloaded paper {pdf_filename}")
+    # Check if the content type is PDF
+    if pdf_response.headers['Content-Type'] == 'application/pdf':
+        with open(file_path, "wb") as f:
+            f.write(pdf_response.content)
+        logging.info(f"[{paper_site}] Downloaded paper {pdf_filename}")
+    else:
+        logging.info(f"Failed to download a valid PDF file from {link}")
+
+
+def validate_pdfs(directory_path: Union[str, Path]):
+    if not isinstance(directory_path, Path):
+        directory_path = Path(directory_path)
+
+    for pdf_file in directory_path.glob("*.pdf"):
+        try:
+            # Try to open and read the PDF
+            with open(pdf_file, "rb") as file:
+                reader = PyPDF2.PdfFileReader(file)
+                # Get the number of pages in the PDF just as a basic check
+                num_pages = reader.getNumPages()
+        except Exception as e:
+            logging.info(f"Invalid PDF {pdf_file}, deleting... Reason: {e}")
+            os.remove(pdf_file)
 
 
 def download_and_save_paper(paper_site, paper_links_and_referrers, csv_file, parsing_method):
@@ -535,6 +555,8 @@ def main():
         download_and_save_paper(site['name'], links_and_referrers, csv_file, site['parsing_method'])
     # OffHost
     parse_self_hosted_pdf()
+    # Validate PDFs
+    validate_pdfs(os.path.join(root_data_directory, 'papers_pdf_downloads'))
 
 
 if __name__ == "__main__":
