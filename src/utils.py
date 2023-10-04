@@ -78,6 +78,9 @@ def read_existing_papers(csv_file: str) -> list:
 
 
 def read_csv_links_and_referrers(file_path):
+    # try to open file path and if it does not exist just return an empty list
+    if not os.path.exists(file_path):
+        return []
     with open(file_path, mode='r') as f:
         reader = csv.DictReader(f)
         return [(row['paper'], row['referrer']) for row in reader]
