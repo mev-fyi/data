@@ -56,25 +56,34 @@ def ensure_newline_in_csv(csv_file: str) -> None:
         logging.error(f"Failed to ensure newline in {csv_file}. Error: {e}")
 
 
-
-
-def read_existing_papers(csv_file: str) -> list:
+def read_existing_papers(csv_file):
     """
-    Read paper titles from a given CSV file.
+    Read existing paper titles from a CSV file.
 
     Parameters:
-    - csv_file (str): Path to the CSV file.
+    - csv_file (str): Path to the CSV file where details are saved.
 
     Returns:
-    - list: A list containing titles of the papers from the CSV.
+    - list: A list of titles of existing papers.
     """
-    existing_papers = []
-    if os.path.exists(csv_file):
-        with open(csv_file, 'r', newline='') as csvfile:
-            reader = csv.DictReader(csvfile)
-            for row in reader:
-                existing_papers.append(row['title'])
-    return existing_papers
+    if not os.path.exists(csv_file):
+        return []
+
+    with open(csv_file, mode='r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        return [row['title'] for row in reader]
+
+
+def paper_exists_in_csv(paper_title: str, csv_file: str) -> bool:
+    """
+    Check if a paper with the given title exists in the CSV file.
+    """
+    with open(csv_file, 'r', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            if row['title'] == paper_title:
+                return True
+    return False
 
 
 def read_csv_links_and_referrers(file_path):
@@ -338,3 +347,7 @@ def return_driver():
 
     driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
     return driver
+
+
+def create_directory(directory):
+    os.makedirs(directory, exist_ok=True)

@@ -1,4 +1,9 @@
 import os
+import random
+import time
+from pathlib import Path
+from typing import Union
+
 import arxiv
 import requests
 import csv
@@ -12,14 +17,26 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+import PyPDF2
+from requests.sessions import Session
+from random import choice
 
-from src.populate_csv_files.parse_pdf_files import get_pdf_details, parse_self_hosted_pdf
-from src.utils import root_directory, ensure_newline_in_csv, read_existing_papers, read_csv_links_and_referrers, paper_exists_in_list, quickSoup, return_driver
+
+from src.populate_csv_files.parse_pdf_files import parse_self_hosted_pdf
+from src.utils import root_directory, ensure_newline_in_csv, read_existing_papers, read_csv_links_and_referrers, quickSoup, return_driver, paper_exists_in_csv, create_directory
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('arxiv')
 logger.setLevel(logging.WARNING)
+
+USER_AGENTS = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15',
+    'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0',
+    # Add more user agents if desired...
+]
+
 
 
 def get_paper_details_from_arxiv(arxiv_url: str) -> dict or None:
@@ -56,7 +73,7 @@ def get_paper_details_from_arxiv(arxiv_url: str) -> dict or None:
 
 def get_paper_details_from_ssrn(url: str) -> dict or None:
     """
-    Retrieve paper details from an SSRN URL.
+    Retrieve paper details from an SSRN URL and download the paper if it doesn't exist locally.
 
     Parameters:
     - url (str): The URL of the SSRN paper.
@@ -77,28 +94,39 @@ def get_paper_details_from_ssrn(url: str) -> dict or None:
         title = article.find('h1').get_text().replace("\n", "").strip()
         test_list = ordered_set_from_list(t.split("\n"))
         authors = test_list[1].replace(title, "").replace(" :: SSRN", "").replace(" by ", "").replace(", ", ":").strip().replace(':', ', ')
-        date = [line.replace("Last revised: ", "") for line in test_list if "Last revised: " in line]
 
-        # Fallback if "Last revised" isn't found
+        date = [line.replace("Last revised: ", "") for line in test_list if "Last revised: " in line]
         if not date:
             date = [line.replace("Posted: ", "") for line in test_list if "Posted: " in line]
-
-        # Extract the date
         date = date[0].strip()
-
-        # Parse the original date string
         original_date = datetime.strptime(date, '%d %b %Y')
-
-        # Format the date as 'yyyy-mm-dd'
         formatted_date = original_date.strftime('%Y-%m-%d')
+
+        pdf_relative_link = article.select_one("div.abstract-buttons:nth-child(1) > div:nth-child(1) > a:nth-child(1)")['href']
+        pdf_link = f"https://papers.ssrn.com/sol3/{pdf_relative_link}"
+
+        # Check if the paper is already downloaded
+        pdf_directory = os.path.join(root_directory(), 'data', 'papers_pdf_downloads')
+        pdf_filename = f"{title}.pdf"
+        pdf_path = os.path.join(pdf_directory, pdf_filename)
+
+        # Download the paper if it doesn't exist locally
+        if not os.path.exists(pdf_path):
+            pdf_content = download_pdf(pdf_link, url)
+            if pdf_content:
+                with open(pdf_path, "wb") as f:
+                    f.write(pdf_content)
+            else:
+                logging.warning(f"Failed to download a valid PDF file from {pdf_link}")
 
         details = {
             'title': title,
             'authors': authors,
-            'pdf_link': url,
+            'pdf_link': pdf_link,
             'topics': 'SSRN',
-            'release_date': formatted_date  # Extracted date from SSRN
+            'release_date': formatted_date
         }
+        logging.info(f"[SSRN] Successfully downloaded {title}")
         return details
 
     except Exception as e:
@@ -375,6 +403,45 @@ def get_paper_details_from_semanticscholar(url: str):
         print(f"Failed to parse the paper details: {e}")
         return None
 
+
+MAX_RETRIES = 3
+MAX_DELAY = 30
+
+
+def download_pdf(pdf_link, original_url, retries=0, delay=1):
+    if retries >= MAX_RETRIES:
+        return None
+
+    headers = {
+        'User-Agent': choice(USER_AGENTS),
+        'Referer': original_url
+    }
+
+    session = Session()
+
+    try:
+        response = session.get(pdf_link, headers=headers)
+        response.raise_for_status()
+
+        if response.headers['Content-Type'] == 'application/pdf':
+            return response.content
+
+    except requests.RequestException as e:
+        if response.status_code == 429:  # Too Many Requests
+            retry_after = response.headers.get('Retry-After')
+            if retry_after:
+                delay = int(retry_after)  # Use the Retry-After header for delay if present
+            else:
+                delay = min(2 * delay, MAX_DELAY)  # Double the delay, but do not exceed MAX_DELAY
+
+            logging.warning(f"[{pdf_link}] Rate limited. Retrying in {delay} seconds...")
+            time.sleep(delay)
+            return download_pdf(pdf_link, original_url, retries + 1, delay)
+        else:
+            logging.error(f"Failed to download PDF from {pdf_link}. Error: {e}")
+            return None
+
+
 def download_and_save_unique_paper(args):
     """
     Download a paper from its link and save its details to a CSV file.
@@ -384,13 +451,10 @@ def download_and_save_unique_paper(args):
         - paper_site (str): The website where the paper is hosted.
         - link (str): Direct link to the paper's details page (not the PDF link).
         - csv_file (str): Path to the CSV file where details should be saved.
-        - existing_papers (list): List of existing paper titles in the CSV to avoid duplicates.
+        - existing_papers (list): List of existing paper titles in the directory.
         - headers (dict): Headers to be used in the HTTP request to fetch paper details.
         - referrer (str): Referrer URL or identifier to be stored alongside paper details.
         - parsing_method (function): The function to use for parsing the paper details from the webpage.
-
-    Note:
-    This function is designed to work with a ProcessPoolExecutor, which is why the parameters are bundled into a single tuple.
     """
     paper_site, link, csv_file, existing_papers, headers, referrer, parsing_method = args
     paper_page_url = link.replace('.pdf', '')
@@ -400,52 +464,32 @@ def download_and_save_unique_paper(args):
         logging.error(f"[{paper_site}]Failed to fetch details for {paper_page_url}")
         return
 
-    # Check if paper exists in CSV
-    if paper_exists_in_list(paper_details['title'], existing_papers):
-        # logging.info(f"[{paper_site}] paper with title '{paper_details['title']}' already exists in the CSV. Skipping...")
-        return
+    # Append details to CSV if paper does not exist in CSV
+    if not paper_exists_in_csv(paper_details['title'], csv_file):
+        # Ensure CSV ends with a newline
+        ensure_newline_in_csv(csv_file)
 
-    # Ensure CSV ends with a newline
-    ensure_newline_in_csv(csv_file)
+        paper_details["referrer"] = referrer
 
-    paper_details["referrer"] = referrer
+        with open(csv_file, 'a', newline='') as csvfile:
+            fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date', 'referrer']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writerow(paper_details)
 
-    # Append to CSV
-    with open(csv_file, 'a', newline='') as csvfile:  # open in append mode to write data
-        fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date', 'referrer']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writerow(paper_details)
-
-    # Download the PDF
-    pdf_response = requests.get(paper_details['pdf_link'], headers=headers)
-    pdf_response.raise_for_status()
-
-    # Save the PDF locally
+    # Define the potential file path
     pdf_filename = f"{paper_details['title']}.pdf"
     pdf_path = os.path.join(root_directory(), 'data', 'papers_pdf_downloads', pdf_filename)
-    # Check if the content type is PDF
-    if pdf_response.headers['Content-Type'] == 'application/pdf':
-        with open(file_path, "wb") as f:
-            f.write(pdf_response.content)
-        logging.info(f"[{paper_site}] Downloaded paper {pdf_filename}")
-    else:
-        logging.info(f"Failed to download a valid PDF file from {link}")
 
-
-def validate_pdfs(directory_path: Union[str, Path]):
-    if not isinstance(directory_path, Path):
-        directory_path = Path(directory_path)
-
-    for pdf_file in directory_path.glob("*.pdf"):
+    # If PDF does not exist, download it
+    if not os.path.exists(pdf_path):
         try:
-            # Try to open and read the PDF
-            with open(pdf_file, "rb") as file:
-                reader = PyPDF2.PdfFileReader(file)
-                # Get the number of pages in the PDF just as a basic check
-                num_pages = reader.getNumPages()
+            pdf_content = download_pdf(paper_details['pdf_link'], '')
+            if pdf_content:
+                with open(pdf_path, "wb") as f:
+                    f.write(pdf_content)
+                logging.info(f"[{paper_site}] Downloaded paper {pdf_filename}")
         except Exception as e:
-            logging.info(f"Invalid PDF {pdf_file}, deleting... Reason: {e}")
-            os.remove(pdf_file)
+            logging.error(f"Failed to download a valid PDF file from {link} after multiple attempts. Error: {e}")
 
 
 def download_and_save_paper(paper_site, paper_links_and_referrers, csv_file, parsing_method):
@@ -482,9 +526,21 @@ def download_and_save_paper(paper_site, paper_links_and_referrers, csv_file, par
         executor.map(download_and_save_unique_paper, tasks)
 
 
+def validate_pdfs(directory_path: Union[str, Path]):
+    if not isinstance(directory_path, Path):
+        directory_path = Path(directory_path)
+
+    for pdf_file in directory_path.glob("*.pdf"):
+        try:
+            # Try to open and read the PDF
+            with open(pdf_file, "rb") as file:
+                reader = PyPDF2.PdfReader(file)
+                # Get the number of pages in the PDF just as a basic check
+                num_pages = len(reader.pages)
+        except Exception as e:
+            logging.info(f"Invalid PDF {pdf_file}, deleting... Reason: {e}")
+            os.remove(pdf_file)
 # Main execution
-def create_directory(directory):
-    os.makedirs(directory, exist_ok=True)
 
 
 def main():
