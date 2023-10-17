@@ -1,8 +1,5 @@
 import os
-import shutil
-import tempfile
 import traceback
-import random
 from typing import List, Optional
 import json
 import pandas as pd
@@ -15,24 +12,11 @@ import csv
 import asyncio
 from aiohttp import ClientSession
 
-
+from src.populate_csv_files.constants import KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE
 from src.utils import root_directory, authenticate_service_account, get_videos_from_playlist, get_channel_id, get_channel_name
 
 # Load environment variables from the .env file
 load_dotenv()
-
-# Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
-keywords = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage', 'back-running',
-            'maximal extractable value', 'trading games', 'timing games', 'arbitrage games', 'timing', 'on-chain games', 'pepc', 'proposer', 'builder', 'barnabe',
-            'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'anoma', 'espresso',
-            'suave', 'flashbots', 'celestia', 'gas war', 'hasu', 'dan robinson', 'jon charbonneau', 'robert miller', 'paradigm',
-            'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
-            'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
-            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization',
-            'erc', 'eip', 'auction', 'daian', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'stephane gosselin', 'su zhu', 'pools']
-            # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin', bridge',
-
-keywords_to_exclude = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler', 'sec']
 
 
 async def get_video_details(youtube, video_id, keywords, keywords_to_exclude):
@@ -110,7 +94,7 @@ async def get_video_info(session, credentials: ServiceAccountCredentials, api_ke
         video_ids = [item["snippet"]["resourceId"]["videoId"] for item in playlist_response.get('items', [])]
         # logging.info(f"[{channel_name}] Fetched video IDs from the channel: {video_ids}")
         # Fetch video details in parallel
-        video_details = await asyncio.gather(*[get_video_details(youtube, video_id, keywords, keywords_to_exclude) for video_id in video_ids])
+        video_details = await asyncio.gather(*[get_video_details(youtube, video_id, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE) for video_id in video_ids])
 
         video_info.extend([video for video in video_details if video])  # Extend the list instead of overwriting it
 
@@ -405,7 +389,6 @@ def get_youtube_channels_from_file(file_path):
 def run():
     # TODO 2023-09-11: add functionality to only load the difference between the existing data and the new data, expectedly being able to see only videos from a given timestamp and on
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
-    # TODO 2023-09-25: rotate on API keys to avoid hitting the quota limit
     fetch_videos = False
     if not fetch_videos:
         logging.info(f"Applying new filters only, not fetching videos.")
@@ -428,7 +411,7 @@ def run():
             raise ValueError(
                 "No channels or playlists provided. Please provide channel names, IDs, or playlist IDs via command line argument or .env file.")
 
-        asyncio.run(fetch_all_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos=True))
+        asyncio.run(fetch_all_videos(api_key, yt_channels, yt_playlists, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE, fetch_videos=True))
 
     # Specify the input and output CSV file paths
     input_csv_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
@@ -439,7 +422,7 @@ def run():
     }
 
     # Call the filter_and_log_removed_videos method to filter and log removed videos
-    filter_and_remove_videos(input_csv_path, keywords, channel_specific_filters)
+    filter_and_remove_videos(input_csv_path, KEYWORDS_TO_INCLUDE, channel_specific_filters)
 
     # Specify the input CSV file path
     input_csv_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
