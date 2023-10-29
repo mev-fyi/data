@@ -1,5 +1,6 @@
 import asyncio
 import csv
+import json
 import logging
 import os
 from typing import Optional, List
@@ -287,38 +288,34 @@ def get_channel_name(api_key, channel_handle):
         return None
 
 
-def get_channel_id(youtube, channel_name: str) -> Optional[str]:
-    """
-    Get the channel ID of a YouTube channel by its name.
 
-    Args:
-        api_key (str): Your YouTube Data API key.
-        channel_name (str): The name of the YouTube channel.
-
-    Returns:
-        Optional[str]: The channel ID if found, otherwise None.
-    """
-
-    # Create a search request to find the channel by name
-    request = youtube.search().list(
-        part='snippet',
-        type='channel',
-        q=channel_name,
-        maxResults=1,
-        fields='items(id(channelId))'
-    )
-
-    # Execute the request and get the response
-    response = request.execute()
-
-    # Get the list of items (channels) from the response
-    items = response.get('items', [])
-
-    # If there is at least one item, return the channel ID, otherwise return None
-    if items:
-        return items[0]['id']['channelId']
+def load_channel_ids(filepath):
+    if os.path.exists(filepath):
+        with open(filepath, 'r', encoding='utf-8') as file:
+            return json.load(file)
     else:
-        return None
+        return {}
+
+
+def save_channel_ids(filepath, channel_name_to_id):
+    with open(filepath, 'w', encoding='utf-8') as file:
+        json.dump(channel_name_to_id, file, ensure_ascii=False, indent=4)
+
+
+async def get_channel_id(session, api_key, channel_name, channel_name_to_id):
+    if channel_name in channel_name_to_id:
+        return channel_name_to_id[channel_name]
+
+    url = f"https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&maxResults=1&q={channel_name}&key={api_key}"
+    async with session.get(url) as response:
+        if response.status == 200:
+            data = await response.json()
+            items = data.get('items', [])
+            if items:
+                channel_id = items[0]['id']['channelId']
+                channel_name_to_id[channel_name] = channel_id  # Update the mapping
+                return channel_id
+        return None  # Handle errors or missing data as appropriate for your application
 
 
 def return_driver():

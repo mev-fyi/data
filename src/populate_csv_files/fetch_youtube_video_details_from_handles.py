@@ -2,6 +2,8 @@ import os
 import traceback
 from typing import List, Optional
 import json
+
+import aiohttp
 import pandas as pd
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
@@ -129,7 +131,7 @@ async def fetch_and_save_channel_videos(session, channel_id, channel_name, crede
     logging.info(f"[{channel_name}] Saved {len(video_info_list)} videos to CSV file {csv_file_path}.")
 
 
-async def fetch_and_save_channel_videos_async(session, youtube, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers):
+async def fetch_and_save_channel_videos_async(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers):
     video_info_list = await get_video_info(session, credentials, api_key, channel_id, channel_name)
 
     save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
@@ -184,24 +186,36 @@ async def fetch_playlist_videos(api_key, credentials, csv_file_path, existing_vi
 
 
 async def fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv, channels_not_in_csv, credentials, csv_file_path, existing_video_names, headers, yt_channels):
-    if yt_channels:
-        async with ClientSession() as session:
-            youtube = build('youtube', 'v3', developerKey=api_key)
-            # Fetching videos from channels not in the CSV file first
-            for channel_handle in channels_not_in_csv:
-                channel_name = channel_handle_to_name.get(channel_handle)
-                if channel_name:
-                    channel_id = get_channel_id(youtube, channel_name)
-                    if channel_id is not None:
-                        await fetch_and_save_channel_videos_async(session, youtube, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
+    # Define the path for storing the mapping between channel names and their IDs
+    channel_mapping_filepath = f"{root_directory()}/data/links/channel_handle_to_id_mapping.json"
 
-            # Fetching videos from channels already in the CSV file
-            for channel_handle in channels_in_csv:
-                channel_name = channel_handle_to_name.get(channel_handle)
-                if channel_name:
-                    channel_id = get_channel_id(youtube, channel_name)
-                    if channel_id is not None:
-                        await fetch_and_save_channel_videos_async(session, youtube, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
+    # Load existing mappings if the file exists, or initialize an empty dictionary
+    channel_name_to_id = {}  # Initialize regardless
+    if os.path.exists(channel_mapping_filepath):
+        with open(channel_mapping_filepath, 'r', encoding='utf-8') as file:
+            channel_name_to_id = json.load(file)
+    else:
+        # Here, the file does not exist, so we're creating a new one with empty data.
+        # This ensures that a file is present from this point forward.
+        with open(channel_mapping_filepath, 'w', encoding='utf-8') as file:
+            json.dump(channel_name_to_id, file, ensure_ascii=False, indent=4)
+
+    async with aiohttp.ClientSession() as session:
+        # This part of the logic is kept as originally intended, processing the channels based on whether they are in the CSV or not
+        all_channels = set(channels_in_csv + channels_not_in_csv)  # Avoid duplicate channel processing
+        for channel_handle in all_channels:
+            channel_name = channel_handle_to_name.get(channel_handle)
+            if channel_name:
+                # Retrieve the channel ID, either from the mapping or by requesting it
+                channel_id = await get_channel_id(session, api_key, channel_handle, channel_name_to_id)
+                if channel_id:
+                    # Your existing method to fetch and save videos
+                    # session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers
+                    await fetch_and_save_channel_videos_async(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
+
+    # After processing all channels, save the potentially updated mapping back to the file
+    with open(channel_mapping_filepath, 'w', encoding='utf-8') as file:
+        json.dump(channel_name_to_id, file, ensure_ascii=False, indent=4)
 
 
 def separate_channels_based_on_csv(channel_handle_to_name, existing_channel_names, yt_channels):
@@ -290,7 +304,7 @@ def filter_and_save_video_info(existing_data, keywords, csv_file_path):
     video_info_list = existing_data
 
     video_info_list = [
-        {k.strip(): v.strip() for k, v in video_info.items()}
+        {k.strip(): v.strip() for k, v in video_info.items() if isinstance(v, str)}  # Strip whitespace from string values
         for video_info in video_info_list
     ]
 
@@ -313,7 +327,11 @@ def filter_and_save_video_info(existing_data, keywords, csv_file_path):
         writer.writeheader()
 
         for video_info in filtered_video_info_list:
-            writer.writerow(video_info)
+            try:
+                writer.writerow(video_info)
+            except Exception as e:
+                logging.error(f"Error occurred while writing video info to CSV file. Error: {e}")
+                continue
 
     filtered_away_csv_file_path = f"{root_directory()}/data/links/filtered_away_youtube_videos.csv"
     write_filtered_away_header = not os.path.exists(filtered_away_csv_file_path)
@@ -389,7 +407,8 @@ def get_youtube_channels_from_file(file_path):
 def run():
     # TODO 2023-09-11: add functionality to only load the difference between the existing data and the new data, expectedly being able to see only videos from a given timestamp and on
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
-    fetch_videos = False
+    # TODO 2023-10-29: fix finding SMG and Lightspeed podcast /HQ
+    fetch_videos = True
     if not fetch_videos:
         logging.info(f"Applying new filters only, not fetching videos.")
 
@@ -419,6 +438,7 @@ def run():
     # Define the channel-specific filters
     channel_specific_filters = {
         "Bankless": ["MEV", "maximal extractable value"],
+        "Unchained Podcast": ["MEV", "maximal extractable value"],
     }
 
     # Call the filter_and_log_removed_videos method to filter and log removed videos
