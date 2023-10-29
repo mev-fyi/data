@@ -21,36 +21,62 @@ from src.utils import root_directory, authenticate_service_account, get_videos_f
 load_dotenv()
 
 
-async def get_video_details(youtube, video_id, keywords, keywords_to_exclude):
-    video_request = youtube.videos().list(
-        part="snippet",
-        id=video_id
-    )
+async def get_multiple_video_details(channel_name, youtube, video_ids, keywords, keywords_to_exclude):
+    MAX_IDS_PER_REQUEST = 50  # YouTube API's limitation
+    logging.info(f"[{channel_name}] Fetching video details for {len(video_ids)} videos...")
 
-    try:
-        video_response = video_request.execute()
-        video_info_item = video_response['items'][0]['snippet']
-        video_title = video_info_item['title']
+    # This function will handle the request and processing of each batch of video IDs
+    async def process_id_batch(id_batch):
+        try:
+            id_list = ','.join(id_batch)
 
-        # Check if the video title contains any of the keywords, take all videos if keywords is empty
-        if (not keywords or any(keyword.lower() in video_title.lower() for keyword in keywords)) \
-                and not any(keyword.lower() in video_title.lower() for keyword in keywords_to_exclude):
-            published_at = video_info_item['publishedAt']
-            parsed_published_at = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ")
-            logging.info(f"[{video_info_item['channelTitle']}] added video: [{video_title}]")
-            return {
-                'title': video_title,
-                'channel_name': video_info_item['channelTitle'],
-                'published_date': parsed_published_at.strftime("%Y-%m-%d"),
-                'url': f'https://www.youtube.com/watch?v={video_id}',
-            }
-        else:
-            # logging.info(f"[{video_info_item['channelTitle']}] Skipped video: [{video_title}] (Title doesn't match keyword criteria)")
-            return None
-    except Exception as e:
-        logging.error(f"[{youtube}] and id [{video_id}] Error occurred while fetching video details. Error: {e}")
-        traceback.print_exc()
-        return None
+            video_response = youtube.videos().list(
+                part="snippet",
+                id=id_list  # Pass a batch of video IDs here
+            ).execute()
+
+            items = video_response.get('items', [])
+
+            youtube_videos_df = pd.read_csv(f"{root_directory()}/data/links/youtube/youtube_videos.csv", encoding='utf-8')
+            youtube_videos_df['title'] = youtube_videos_df['title'].str.replace(' +', ' ', regex=True)
+
+            batch_video_details = []
+
+            for item in items:
+                video_info_item = item['snippet']
+                video_title = video_info_item['title']
+
+                video_row = youtube_videos_df[youtube_videos_df['title'] == video_title]
+
+                if (not keywords or any(keyword.lower() in video_title.lower() for keyword in keywords)) and not any(keyword.lower() in video_title.lower() for keyword in keywords_to_exclude):
+                    if not video_row.empty:
+                        # print(f"Video {video_title} already exists in the CSV file. Skipping...")
+                        continue
+                    published_at = video_info_item['publishedAt']
+                    parsed_published_at = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ")
+
+                    batch_video_details.append({
+                        'title': video_title,
+                        'channel_name': video_info_item['channelTitle'],
+                        'published_date': parsed_published_at.strftime("%Y-%m-%d"),
+                        'url': f'https://www.youtube.com/watch?v={item["id"]}',
+                    })
+
+            return batch_video_details
+
+        except Exception as e:
+            logging.error(f"Error occurred while fetching video details. Error: {e}")
+            traceback.print_exc()
+            return []
+
+    # Now we create batches of video IDs and collect the details
+    all_video_details = []
+    for i in range(0, len(video_ids), MAX_IDS_PER_REQUEST):
+        batch = video_ids[i:i + MAX_IDS_PER_REQUEST]
+        batch_details = await process_id_batch(batch)  # async function to process each batch
+        all_video_details.extend(batch_details)
+
+    return all_video_details
 
 
 async def get_video_info(session, credentials: ServiceAccountCredentials, api_key: str, channel_id: str, channel_name: str, max_results: int = 50) -> List[dict]:
@@ -94,9 +120,7 @@ async def get_video_info(session, credentials: ServiceAccountCredentials, api_ke
             logging.error(f"Error occurred while fetching videos from the channel. Error: {e}")
             return video_info
         video_ids = [item["snippet"]["resourceId"]["videoId"] for item in playlist_response.get('items', [])]
-        # logging.info(f"[{channel_name}] Fetched video IDs from the channel: {video_ids}")
-        # Fetch video details in parallel
-        video_details = await asyncio.gather(*[get_video_details(youtube, video_id, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE) for video_id in video_ids])
+        video_details = await get_multiple_video_details(channel_name, youtube, video_ids, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE)
 
         video_info.extend([video for video in video_details if video])  # Extend the list instead of overwriting it
 
@@ -128,7 +152,7 @@ async def fetch_and_save_channel_videos(session, channel_id, channel_name, crede
     video_info_list = await get_video_info(session, credentials, api_key, channel_id, channel_name)
 
     save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
-    logging.info(f"[{channel_name}] Saved {len(video_info_list)} videos to CSV file {csv_file_path}.")
+    logging.info(f"[{channel_name}] Saved [{len(video_info_list)}] videos to CSV file {csv_file_path}.")
 
 
 async def fetch_and_save_channel_videos_async(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers):
@@ -285,7 +309,7 @@ def setup_csv():
     # Check if the CSV file already exists
     csv_file_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
     csv_file_exists = os.path.exists(csv_file_path)
-    headers = ['title', 'channel_name', 'published_date', 'url', 'referrer']
+    headers = ['title', 'channel_name', 'published_date', 'url']
     # Check if the CSV file exists and if its headers match the expected headers
     if csv_file_exists:
         existing_data_df = pd.read_csv(csv_file_path, encoding='utf-8', nrows=0)  # Read just the header
@@ -407,8 +431,7 @@ def get_youtube_channels_from_file(file_path):
 def run():
     # TODO 2023-09-11: add functionality to only load the difference between the existing data and the new data, expectedly being able to see only videos from a given timestamp and on
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
-    # TODO 2023-10-29: fix finding SMG and Lightspeed podcast /HQ
-    fetch_videos = True
+    fetch_videos = False
     if not fetch_videos:
         logging.info(f"Applying new filters only, not fetching videos.")
 
@@ -438,7 +461,8 @@ def run():
     # Define the channel-specific filters
     channel_specific_filters = {
         "Bankless": ["MEV", "maximal extractable value"],
-        "Unchained Podcast": ["MEV", "maximal extractable value"],
+        "Unchained Crypto": ["MEV", "maximal extractable value", 'pool', 'erc', 'uniswap v4', 'a16z'],
+        "NBER": ["market design"],
     }
 
     # Call the filter_and_log_removed_videos method to filter and log removed videos
