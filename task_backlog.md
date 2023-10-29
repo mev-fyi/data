@@ -28,7 +28,7 @@ Complexity set: Low, Medium, High
 
 ## Research exploitation UX
 - [ ] [Scrape all websites for new uploads and add links to uploads in most recent order on a single worksheet](#task-1)
-  - Priority: Medium
+  - Priority: High
 - [ ] [Add a podcast tab sorted by most recent of content from the podcasts handle worksheet](#task-1)
     - Priority: Medium
     - Context: Right now besides going into each Podcast radio, there is no way to see the most recent content. This would be a powerful way to keep up to date with the latest content.
@@ -48,7 +48,7 @@ Complexity set: Low, Medium, High
 ## Codebase
 ### Devops
 - [ ] [Create Google sheet staging environment](#task-2)
-  - Priority: High :) 
+  - Priority: Medium 
 - [ ] [Host site on Google Cloud](#task-2)
   - [ ] [Blocker: Streamlit LLM-app frontend](#task-2)
   - Priority: Low
