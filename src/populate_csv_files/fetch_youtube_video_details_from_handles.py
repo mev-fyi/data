@@ -14,14 +14,14 @@ import csv
 import asyncio
 from aiohttp import ClientSession
 
-from src.populate_csv_files.constants import KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE
+from src.populate_csv_files.constants import KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE, YOUTUBE_VIDEOS_CSV_FILE_PATH
 from src.utils import root_directory, authenticate_service_account, get_videos_from_playlist, get_channel_id, get_channel_name
 
 # Load environment variables from the .env file
 load_dotenv()
 
 
-async def get_multiple_video_details(channel_name, youtube, video_ids, keywords, keywords_to_exclude):
+async def get_multiple_video_details(channel_name, youtube, video_ids, keywords, keywords_to_exclude, PASSTHROUGH):
     MAX_IDS_PER_REQUEST = 50  # YouTube API's limitation
     logging.info(f"[{channel_name}] Fetching video details for {len(video_ids)} videos...")
 
@@ -37,7 +37,7 @@ async def get_multiple_video_details(channel_name, youtube, video_ids, keywords,
 
             items = video_response.get('items', [])
 
-            youtube_videos_df = pd.read_csv(f"{root_directory()}/data/links/youtube/youtube_videos.csv", encoding='utf-8')
+            youtube_videos_df = pd.read_csv(YOUTUBE_VIDEOS_CSV_FILE_PATH, encoding='utf-8')
             youtube_videos_df['title'] = youtube_videos_df['title'].str.replace(' +', ' ', regex=True)
 
             batch_video_details = []
@@ -48,19 +48,30 @@ async def get_multiple_video_details(channel_name, youtube, video_ids, keywords,
 
                 video_row = youtube_videos_df[youtube_videos_df['title'] == video_title]
 
-                if (not keywords or any(keyword.lower() in video_title.lower() for keyword in keywords)) and not any(keyword.lower() in video_title.lower() for keyword in keywords_to_exclude):
+                def append_video_details(video_row, video_info_item, video_title, item):
                     if not video_row.empty:
                         # print(f"Video {video_title} already exists in the CSV file. Skipping...")
-                        continue
+                        return
+
                     published_at = video_info_item['publishedAt']
                     parsed_published_at = datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ")
 
-                    batch_video_details.append({
+                    return {
                         'title': video_title,
                         'channel_name': video_info_item['channelTitle'],
                         'published_date': parsed_published_at.strftime("%Y-%m-%d"),
                         'url': f'https://www.youtube.com/watch?v={item["id"]}',
-                    })
+                    }
+
+                if video_info_item['channelTitle'] in PASSTHROUGH:
+                    video_detail = append_video_details(video_row, video_info_item, video_title, item)
+                    if video_detail:
+                        batch_video_details.append(video_detail)
+                elif (not keywords or any(keyword.lower() in video_title.lower() for keyword in keywords)) \
+                        and not any(keyword.lower() in video_title.lower() for keyword in keywords_to_exclude):
+                    video_detail = append_video_details(video_row, video_info_item, video_title, item)
+                    if video_detail:
+                        batch_video_details.append(video_detail)
 
             return batch_video_details
 
@@ -79,7 +90,7 @@ async def get_multiple_video_details(channel_name, youtube, video_ids, keywords,
     return all_video_details
 
 
-async def get_video_info(session, credentials: ServiceAccountCredentials, api_key: str, channel_id: str, channel_name: str, max_results: int = 50) -> List[dict]:
+async def get_video_info(session, credentials: ServiceAccountCredentials, api_key: str, channel_id: str, channel_name: str, PASSTHROUGH, max_results: int = 50) -> List[dict]:
     """
     Retrieves video information (URL, ID, title, and published date) from a YouTube channel using the YouTube Data API.
 
@@ -120,7 +131,7 @@ async def get_video_info(session, credentials: ServiceAccountCredentials, api_ke
             logging.error(f"Error occurred while fetching videos from the channel. Error: {e}")
             return video_info
         video_ids = [item["snippet"]["resourceId"]["videoId"] for item in playlist_response.get('items', [])]
-        video_details = await get_multiple_video_details(channel_name, youtube, video_ids, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE)
+        video_details = await get_multiple_video_details(channel_name, youtube, video_ids, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE, PASSTHROUGH)
 
         video_info.extend([video for video in video_details if video])  # Extend the list instead of overwriting it
 
@@ -155,14 +166,14 @@ async def fetch_and_save_channel_videos(session, channel_id, channel_name, crede
     logging.info(f"[{channel_name}] Saved [{len(video_info_list)}] videos to CSV file {csv_file_path}.")
 
 
-async def fetch_and_save_channel_videos_async(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers):
-    video_info_list = await get_video_info(session, credentials, api_key, channel_id, channel_name)
+async def fetch_and_save_channel_videos_async(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers, PASSTHROUGH):
+    video_info_list = await get_video_info(session, credentials, api_key, channel_id, channel_name, PASSTHROUGH)
 
     save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
     logging.info(f"[{channel_name}] Saved {len(video_info_list)} videos to CSV file {csv_file_path}.")
 
 
-async def fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos):
+async def fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, PASSTHROUGH, fetch_videos):
     """
     Fetches YouTube video information from specified channels and playlists, and optionally filters them based on keywords.
 
@@ -195,7 +206,7 @@ async def fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, key
     channels_in_csv, channels_not_in_csv = separate_channels_based_on_csv(channel_handle_to_name, existing_channel_names, yt_channels)
 
     if fetch_videos:
-        await fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv, channels_not_in_csv, credentials, csv_file_path, existing_video_names, headers, yt_channels)
+        await fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv, channels_not_in_csv, credentials, csv_file_path, existing_video_names, headers, yt_channels, PASSTHROUGH)
 
         await fetch_playlist_videos(api_key, credentials, csv_file_path, existing_video_names, headers, yt_playlists)
 
@@ -209,7 +220,7 @@ async def fetch_playlist_videos(api_key, credentials, csv_file_path, existing_vi
             save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
 
 
-async def fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv, channels_not_in_csv, credentials, csv_file_path, existing_video_names, headers, yt_channels):
+async def fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv, channels_not_in_csv, credentials, csv_file_path, existing_video_names, headers, yt_channels, PASSTHROUGH):
     # Define the path for storing the mapping between channel names and their IDs
     channel_mapping_filepath = f"{root_directory()}/data/links/channel_handle_to_id_mapping.json"
 
@@ -235,7 +246,7 @@ async def fetch_channel_videos(api_key, channel_handle_to_name, channels_in_csv,
                 if channel_id:
                     # Your existing method to fetch and save videos
                     # session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers
-                    await fetch_and_save_channel_videos_async(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers)
+                    await fetch_and_save_channel_videos_async(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers, PASSTHROUGH)
 
     # After processing all channels, save the potentially updated mapping back to the file
     with open(channel_mapping_filepath, 'w', encoding='utf-8') as file:
@@ -307,21 +318,39 @@ def load_existing_data(csv_file_exists, csv_file_path):
 
 def setup_csv():
     # Check if the CSV file already exists
-    csv_file_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
-    csv_file_exists = os.path.exists(csv_file_path)
+    csv_file_exists = os.path.exists(YOUTUBE_VIDEOS_CSV_FILE_PATH)
     headers = ['title', 'channel_name', 'published_date', 'url']
     # Check if the CSV file exists and if its headers match the expected headers
     if csv_file_exists:
-        existing_data_df = pd.read_csv(csv_file_path, encoding='utf-8', nrows=0)  # Read just the header
+        existing_data_df = pd.read_csv(YOUTUBE_VIDEOS_CSV_FILE_PATH, encoding='utf-8', nrows=0)  # Read just the header
         existing_headers = existing_data_df.columns.tolist()
 
         if existing_headers != headers:
             # Create a new CSV file with the specified headers
-            pd.DataFrame(columns=headers).to_csv(csv_file_path, index=False, encoding='utf-8')
+            pd.DataFrame(columns=headers).to_csv(YOUTUBE_VIDEOS_CSV_FILE_PATH, index=False, encoding='utf-8')
     else:
         # Create a new CSV file with the specified headers
-        pd.DataFrame(columns=headers).to_csv(csv_file_path, index=False, encoding='utf-8')
-    return csv_file_exists, csv_file_path, headers
+        pd.DataFrame(columns=headers).to_csv(YOUTUBE_VIDEOS_CSV_FILE_PATH, index=False, encoding='utf-8')
+    return csv_file_exists, YOUTUBE_VIDEOS_CSV_FILE_PATH, headers
+
+
+def drop_duplicates_and_write_to_csv(file_path, video_info_list, headers):
+    # Load current CSV data
+    existing_rows = []
+    if os.path.exists(file_path):
+        with open(file_path, 'r', newline='', encoding='utf-8') as csv_file:
+            reader = csv.DictReader(csv_file)
+            existing_rows = [row for row in reader]
+
+    # Combine the existing rows with the new rows, and remove duplicates
+    all_rows = existing_rows + video_info_list
+    deduplicated_rows = {row['url']: row for row in all_rows}.values()
+
+    # Write the deduplicated rows back to the CSV file
+    with open(file_path, 'w', newline='', encoding='utf-8') as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(deduplicated_rows)
 
 
 def filter_and_save_video_info(existing_data, keywords, csv_file_path):
@@ -334,12 +363,9 @@ def filter_and_save_video_info(existing_data, keywords, csv_file_path):
 
     existing_video_names = set(video_info['title'] for video_info in video_info_list)
 
-    headers = ['link', 'id', 'title', 'publish date']
+    headers = ['title', 'channel_name', 'published_date', 'url']
 
-    filtered_video_info_list = [
-        video_info for video_info in video_info_list
-        if any(keyword.lower() in video_info['title'].lower() for keyword in keywords)
-    ]
+    filtered_video_info_list = video_info_list
 
     filtered_away_video_info_list = [
         video_info for video_info in video_info_list
@@ -358,26 +384,26 @@ def filter_and_save_video_info(existing_data, keywords, csv_file_path):
                 continue
 
     filtered_away_csv_file_path = f"{root_directory()}/data/links/filtered_away_youtube_videos.csv"
-    write_filtered_away_header = not os.path.exists(filtered_away_csv_file_path)
+    headers = ['title', 'channel_name', 'published_date', 'url']  # adjust headers as needed
 
-    with open(filtered_away_csv_file_path, mode='a', newline='', encoding='utf-8') as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=headers)
-
-        if write_filtered_away_header:
-            writer.writeheader()
-
-        for video_info in filtered_away_video_info_list:
-            writer.writerow(video_info)
+    drop_duplicates_and_write_to_csv(filtered_away_csv_file_path, filtered_away_video_info_list, headers)
 
 
-def filter_and_remove_videos(input_csv_path, keywords, channel_specific_filters=None):
+def filter_and_remove_videos(input_csv_path, keywords, PASSTHROUGH, channel_specific_filters=None):
     # Read the CSV file into a DataFrame
     if channel_specific_filters is None:
         channel_specific_filters = {}
     df = pd.read_csv(input_csv_path)
 
-    # Apply global keyword filtering to the entire DataFrame
-    global_filtered_df = df[df['title'].str.lower().str.contains('|'.join(keywords).lower())]
+    # Separate rows corresponding to channels in PASSTHROUGH
+    passthrough_df = df[df['channel_name'].str.lower().isin([channel.lower() for channel in PASSTHROUGH])]
+    non_passthrough_df = df[~df['channel_name'].str.lower().isin([channel.lower() for channel in PASSTHROUGH])]
+
+    # Apply global keyword filtering only to non-PASSTHROUGH channels
+    global_filtered_df = non_passthrough_df[non_passthrough_df['title'].str.lower().str.contains('|'.join(keywords).lower())]
+
+    # Concatenate PASSTHROUGH and non-PASSTHROUGH videos
+    global_filtered_df = pd.concat([global_filtered_df, passthrough_df])
 
     # Convert keys in channel_specific_filters to lowercase
     channel_specific_filters = {channel.lower(): filters for channel, filters in channel_specific_filters.items()}
@@ -415,10 +441,9 @@ def filter_and_remove_videos(input_csv_path, keywords, channel_specific_filters=
 
 
 async def fetch_all_videos(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None,
-              keywords: List[str] = None, keywords_to_exclude: List[str] = None, fetch_videos: bool = True):
-    csv_file_path = f"{root_directory()}/data/links/youtube_videos.csv"
-    existing_data = await fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, fetch_videos)
-    filter_and_save_video_info(existing_data, keywords, csv_file_path)
+              keywords: List[str] = None, keywords_to_exclude: List[str] = None, PASSTHROUGH: List[str] = None, fetch_videos: bool = True):
+    existing_data = await fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, PASSTHROUGH, fetch_videos)
+    filter_and_save_video_info(existing_data, keywords, YOUTUBE_VIDEOS_CSV_FILE_PATH)
 
 
 # Function to read the channel handles from a file
@@ -429,9 +454,18 @@ def get_youtube_channels_from_file(file_path):
 
 
 def run():
-    # TODO 2023-09-11: add functionality to only load the difference between the existing data and the new data, expectedly being able to see only videos from a given timestamp and on
+    # TODO 2023-10-31: add functionality to always entirely refresh the whole CSV file for Google compliance
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
-    fetch_videos = False
+    fetch_videos = True
+
+    PASSTHROUGH = ['Tim Roughgarden Lectures']  # do not apply any filtering to these channels
+    # Define the channel-specific filters
+    channel_specific_filters = {
+        "Bankless": ["MEV", "maximal extractable value"],
+        "Unchained Crypto": ["MEV", "maximal extractable value", 'pool', 'ERC-', 'uniswap v4', 'a16z'],
+        "NBER": ["market design"],
+    }
+
     if not fetch_videos:
         logging.info(f"Applying new filters only, not fetching videos.")
 
@@ -453,32 +487,19 @@ def run():
             raise ValueError(
                 "No channels or playlists provided. Please provide channel names, IDs, or playlist IDs via command line argument or .env file.")
 
-        asyncio.run(fetch_all_videos(api_key, yt_channels, yt_playlists, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE, fetch_videos=True))
-
-    # Specify the input and output CSV file paths
-    input_csv_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
-
-    # Define the channel-specific filters
-    channel_specific_filters = {
-        "Bankless": ["MEV", "maximal extractable value"],
-        "Unchained Crypto": ["MEV", "maximal extractable value", 'pool', 'erc', 'uniswap v4', 'a16z'],
-        "NBER": ["market design"],
-    }
+        asyncio.run(fetch_all_videos(api_key, yt_channels, yt_playlists, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE, PASSTHROUGH, fetch_videos=True))
 
     # Call the filter_and_log_removed_videos method to filter and log removed videos
-    filter_and_remove_videos(input_csv_path, KEYWORDS_TO_INCLUDE, channel_specific_filters)
-
-    # Specify the input CSV file path
-    input_csv_path = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
+    filter_and_remove_videos(YOUTUBE_VIDEOS_CSV_FILE_PATH, KEYWORDS_TO_INCLUDE, PASSTHROUGH, channel_specific_filters)
 
     # Load CSV into a pandas DataFrame
-    df = pd.read_csv(input_csv_path, delimiter=',')
+    df = pd.read_csv(YOUTUBE_VIDEOS_CSV_FILE_PATH, delimiter=',')
 
     # Drop duplicates
     df.drop_duplicates(inplace=True)
 
     # Optionally, save the cleaned data back to the CSV
-    df.to_csv(input_csv_path, index=False)
+    df.to_csv(YOUTUBE_VIDEOS_CSV_FILE_PATH, index=False)
 
 
 if __name__ == '__main__':

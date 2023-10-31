@@ -1,3 +1,4 @@
+from src.utils import root_directory
 
 # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
 KEYWORDS_TO_INCLUDE = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage', 'back-running',
@@ -12,3 +13,5 @@ KEYWORDS_TO_INCLUDE = ['order flow', 'orderflow', 'transaction', 'mev', 'orderin
 
 # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin', bridge',
 KEYWORDS_TO_EXCLUDE = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler', 'sec']
+
+YOUTUBE_VIDEOS_CSV_FILE_PATH = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
