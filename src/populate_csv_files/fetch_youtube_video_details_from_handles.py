@@ -154,8 +154,9 @@ def save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names,
     with open(csv_file_path, mode='a', newline='', encoding='utf-8') as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=headers, quoting=csv.QUOTE_MINIMAL)  # Add quoting option
         for video_info in video_info_list:
-            # Ensure titles are enclosed in double quotes
+            # Ensure titles are enclosed in double quotes to avoid error if there are commas in the title name
             video_info['title'] = f'"{video_info["title"]}"'
+            logging.info(f"added [{video_info}]")
             writer.writerow(video_info)
 
 
@@ -361,8 +362,6 @@ def filter_and_save_video_info(existing_data, keywords, csv_file_path):
         for video_info in video_info_list
     ]
 
-    existing_video_names = set(video_info['title'] for video_info in video_info_list)
-
     headers = ['title', 'channel_name', 'published_date', 'url']
 
     filtered_video_info_list = video_info_list
@@ -458,7 +457,7 @@ def run():
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
     fetch_videos = True
 
-    PASSTHROUGH = ['Tim Roughgarden Lectures']  # do not apply any filtering to these channels
+    PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block']  # do not apply any filtering to these channels
     # Define the channel-specific filters
     channel_specific_filters = {
         "Bankless": ["MEV", "maximal extractable value"],
