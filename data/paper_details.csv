@@ -174,3 +174,17 @@ The Centralizing Effects of Private Order Flow on Proposer-Builder Separation,"T
 Mempool Privacy: An Economic Perspective,"Antoine Rondelet, Quintus Kilbourn",http://arxiv.org/pdf/2307.10878v3,"arXiv, cs.CR",2023-07-20,https://www.twitter.com/unlock_VALue
 Shared Sequencing and Latency Competition as a Noisy Contest,"Akaki Mamageishvili, Jan Christoph Schlegel",http://arxiv.org/pdf/2310.02390v1,"arXiv, cs.GT",2023-10-03,https://twitter.com/Freddmannen
 SoK: Decentralized Sequencers for Rollups,"Shashank Motepalli, Luciano Freitas, Benjamin Livshits",http://arxiv.org/pdf/2310.03616v1,"arXiv, cs.NI, cs.DC, cs.MA, cs.SE",2023-10-05,https://twitter.com/Freddmannen
+Perpetual Futures Pricing,"Damien Ackerer, Julien Hugonnier, Urban Jermann",http://arxiv.org/pdf/2310.11771v1,"arXiv, q-fin.PR, q-fin.MF",2023-10-18,https://twitter.com/unlock_VALue
+QNNVerifier: A Tool for Verifying Neural Networks using SMT-Based Model Checking,"Xidan Song, Edoardo Manino, Luiz Sena, Erickson Alves, Eddie de Lima Filho, Iury Bessa, Mikel Lujan, Lucas Cordeiro",http://arxiv.org/pdf/2111.13110v1,"arXiv, cs.AI, cs.LG, cs.LO",2021-11-25,https://twitter.com/OsirisDjed
+Quantifying MEV On Layer 2 Networks,"Arthur Bagourd, Luca Georges Francois",http://arxiv.org/pdf/2309.00629v1,"arXiv, q-fin.GN, cs.GT",2023-08-07,https://twitter.com/OsirisDjed
+Neural Bellman-Ford Networks: A General Graph Neural Network Framework for Link Prediction,"Zhaocheng Zhu, Zuobai Zhang, Louis-Pascal Xhonneux, Jian Tang",http://arxiv.org/pdf/2106.06935v4,"arXiv, cs.LG",2021-06-13,https://twitter.com/OsirisDjed
+A General Framework for Impermanent Loss in Automated Market Makers,"Neelesh Tiruviluamala, Alexander Port, Erik Lewis",http://arxiv.org/pdf/2203.11352v1,"arXiv, q-fin.TR, 91B26",2022-03-21,https://twitter.com/OsirisDjed
+Combining GHOST and Casper,"Vitalik Buterin, Diego Hernandez, Thor Kamphefner, Khiem Pham, Zhi Qiao, Danny Ryan, Juhyeok Sin, Ying Wang, Yan X Zhang",http://arxiv.org/pdf/2003.03052v3,"arXiv, cs.CR, 68W15",2020-03-06,https://twitter.com/0x_emperor
+A Flash(bot) in the Pan: Measuring Maximal Extractable Value in Private Pools,"Ben Weintraub, Christof Ferreira Torres, Cristina Nita-Rotaru, Radu State",http://arxiv.org/pdf/2206.04185v2,"arXiv, cs.CR",2022-06-08,https://twitter.com/0x_emperor
+Opportunistic Algorithmic Double-Spending: How I learned to stop worrying and hedge the Fork,"Nicholas Stifter, Aljosha Judmayer, Philipp Schindler, Edgar Weippl",https://eprint.iacr.org/2021/1182,iacr,2022-08-03,https://twitter.com/0x_emperor
+,,https://angeris.github.io/papers/cfmm-routing.pdf,Self-host,2021-12-20,https://twitter.com/OsirisDjed
+,,https://angeris.github.io/papers/uniswap_analysis.pdf,Self-host,2020-12-15,https://twitter.com/OsirisDjed
+,,https://angeris.github.io/papers/cfmm-chapter.pdf,Self-host,2021-07-29,https://twitter.com/OsirisDjed
+,,https://angeris.github.io/papers/flashbots-mev.pdf,Self-host,2021-08-16,https://twitter.com/OsirisDjed
+,,https://core.ac.uk/download/pdf/82538817.pdf,Self-host,,https://twitter.com/OsirisDjed
+,,http://people.eecs.berkeley.edu/~ksk/files/MEV_Redistribution.pdf,Self-host,2022-08-18,https://twitter.com/0x_emperor
