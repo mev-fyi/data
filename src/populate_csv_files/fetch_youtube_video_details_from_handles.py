@@ -457,7 +457,7 @@ def run():
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
     fetch_videos = True
 
-    PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve']  # do not apply any filtering to these channels
+    PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots']  # do not apply any filtering to these channels
     # Define the channel-specific filters
     channel_specific_filters = {
         "Bankless": ["MEV", "maximal extractable value"],
