@@ -150,21 +150,27 @@ def save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names,
         if video_info['title'] not in existing_video_names
     ]
 
-    # Append new data to the CSV file
-    with open(csv_file_path, mode='a', newline='', encoding='utf-8') as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=headers, quoting=csv.QUOTE_MINIMAL)  # Add quoting option
-        for video_info in video_info_list:
-            # Ensure titles are enclosed in double quotes to avoid error if there are commas in the title name
-            video_info['title'] = f'"{video_info["title"]}"'
-            logging.info(f"added [{video_info}]")
-            writer.writerow(video_info)
+    # Read existing CSV into a DataFrame, or create a new one if the file doesn't exist
+    try:
+        existing_df = pd.read_csv(csv_file_path)
+    except FileNotFoundError:
+        existing_df = pd.DataFrame(columns=headers)
 
+    # Filter out existing video names
+    new_videos = [video for video in video_info_list if video['title'] not in existing_video_names]
 
-async def fetch_and_save_channel_videos(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers):
-    video_info_list = await get_video_info(session, credentials, api_key, channel_id, channel_name)
+    # Convert new video info list to DataFrame
+    new_df = pd.DataFrame(new_videos, columns=headers)
 
-    save_video_info_to_csv(video_info_list, csv_file_path, existing_video_names, headers)
-    logging.info(f"[{channel_name}] Saved [{len(video_info_list)}] videos to CSV file {csv_file_path}.")
+    # Concatenate new data with existing data
+    combined_df = pd.concat([existing_df, new_df], ignore_index=True)
+
+    # Write the combined DataFrame to CSV
+    combined_df.to_csv(csv_file_path, index=False, quoting=csv.QUOTE_MINIMAL)
+
+    # Log the added videos
+    #for video in new_videos:
+    #    logging.info(f"Added: {video}")
 
 
 async def fetch_and_save_channel_videos_async(session, channel_id, channel_name, credentials, api_key, csv_file_path, existing_video_names, headers, PASSTHROUGH):
@@ -335,57 +341,23 @@ def setup_csv():
     return csv_file_exists, YOUTUBE_VIDEOS_CSV_FILE_PATH, headers
 
 
-def drop_duplicates_and_write_to_csv(file_path, video_info_list, headers):
+def drop_duplicates_and_write_to_csv(filtered_away_csv_file_path, filtered_away_video_info_list, headers):
     # Load current CSV data
     existing_rows = []
-    if os.path.exists(file_path):
-        with open(file_path, 'r', newline='', encoding='utf-8') as csv_file:
+    if os.path.exists(filtered_away_csv_file_path):
+        with open(filtered_away_csv_file_path, 'r', newline='', encoding='utf-8') as csv_file:
             reader = csv.DictReader(csv_file)
             existing_rows = [row for row in reader]
 
     # Combine the existing rows with the new rows, and remove duplicates
-    all_rows = existing_rows + video_info_list
+    all_rows = existing_rows + filtered_away_video_info_list
     deduplicated_rows = {row['url']: row for row in all_rows}.values()
 
     # Write the deduplicated rows back to the CSV file
-    with open(file_path, 'w', newline='', encoding='utf-8') as csv_file:
+    with open(filtered_away_csv_file_path, 'w', newline='', encoding='utf-8') as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=headers)
         writer.writeheader()
         writer.writerows(deduplicated_rows)
-
-
-def filter_and_save_video_info(existing_data, keywords, csv_file_path):
-    video_info_list = existing_data
-
-    video_info_list = [
-        {k.strip(): v.strip() for k, v in video_info.items() if isinstance(v, str)}  # Strip whitespace from string values
-        for video_info in video_info_list
-    ]
-
-    headers = ['title', 'channel_name', 'published_date', 'url']
-
-    filtered_video_info_list = video_info_list
-
-    filtered_away_video_info_list = [
-        video_info for video_info in video_info_list
-        if not any(keyword.lower() in video_info['title'].lower() for keyword in keywords)
-    ]
-
-    with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=headers)
-        writer.writeheader()
-
-        for video_info in filtered_video_info_list:
-            try:
-                writer.writerow(video_info)
-            except Exception as e:
-                logging.error(f"Error occurred while writing video info to CSV file. Error: {e}")
-                continue
-
-    filtered_away_csv_file_path = f"{root_directory()}/data/links/filtered_away_youtube_videos.csv"
-    headers = ['title', 'channel_name', 'published_date', 'url']  # adjust headers as needed
-
-    drop_duplicates_and_write_to_csv(filtered_away_csv_file_path, filtered_away_video_info_list, headers)
 
 
 def filter_and_remove_videos(input_csv_path, keywords, PASSTHROUGH, channel_specific_filters=None):
@@ -441,8 +413,7 @@ def filter_and_remove_videos(input_csv_path, keywords, PASSTHROUGH, channel_spec
 
 async def fetch_all_videos(api_key: str, yt_channels: Optional[List[str]] = None, yt_playlists: Optional[List[str]] = None,
               keywords: List[str] = None, keywords_to_exclude: List[str] = None, PASSTHROUGH: List[str] = None, fetch_videos: bool = True):
-    existing_data = await fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, PASSTHROUGH, fetch_videos)
-    filter_and_save_video_info(existing_data, keywords, YOUTUBE_VIDEOS_CSV_FILE_PATH)
+    await fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, keywords_to_exclude, PASSTHROUGH, fetch_videos)
 
 
 # Function to read the channel handles from a file
@@ -457,7 +428,7 @@ def run():
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
     fetch_videos = True
 
-    PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots']  # do not apply any filtering to these channels
+    PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots', 'Finematics']  # do not apply any filtering to these channels
     # Define the channel-specific filters
     channel_specific_filters = {
         "Bankless": ["MEV", "maximal extractable value"],
