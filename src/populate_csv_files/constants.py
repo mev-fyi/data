@@ -9,7 +9,7 @@ KEYWORDS_TO_INCLUDE = ['order flow', 'orderflow', 'transaction', 'mev', 'orderin
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'uniswap', '1inch',
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization',
             'erc', 'eip', 'auction', 'daian', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'stephane gosselin', 'su zhu', 'pools', 'censorship',
-            '1559', 'BFT', 'selfish mining', 'vickrey auctions', 'Alex Nezlobin', 'Jason Milionis',]
+            '1559', 'BFT', 'selfish mining', 'vickrey auctions', 'Alex Nezlobin', 'Jason Milionis', "How They Solved Ethereum's Critical Flaw"]
 
 # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin', bridge',
 KEYWORDS_TO_EXCLUDE = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler', 'sec']

@@ -430,9 +430,9 @@ def run():
 
     PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots', 'Finematics',
                    'a16z crypto', 'SMG']  # do not apply any filtering to these channels
-    # Define the channel-specific filters
+    # Define the channel-specific filters which are applied after the first keyword selection
     channel_specific_filters = {
-        "Bankless": ["MEV", "maximal extractable value", 'SUAVE', "How They Solved Ethereum's Critical Flaw"],
+        "Bankless": ["MEV", "maximal extractable value", "How They Solved Ethereum's Critical Flaw"],
         "Unchained Crypto": ["MEV", "maximal extractable value", 'pool', 'ERC-', 'uniswap v4', 'a16z'],
         "NBER": ["market design"],
     }
