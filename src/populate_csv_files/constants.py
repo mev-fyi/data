@@ -12,6 +12,6 @@ KEYWORDS_TO_INCLUDE = ['order flow', 'orderflow', 'transaction', 'mev', 'orderin
             '1559', 'BFT', 'selfish mining', 'vickrey auctions', 'Alex Nezlobin', 'Jason Milionis', "How They Solved Ethereum's Critical Flaw"]
 
 # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin', bridge',
-KEYWORDS_TO_EXCLUDE = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler', 'sec']
+KEYWORDS_TO_EXCLUDE = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler', 'sec', 'T-Shirt']
 
 YOUTUBE_VIDEOS_CSV_FILE_PATH = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
