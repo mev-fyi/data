@@ -26,42 +26,6 @@ def get_file_list(GITHUB_API_URL="https://api.github.com/repos/flashbots/flashbo
         return []
 
 
-def process_mdx_files(output_dir, file_list):
-    def extract_title_from_mdx(mdx_content, default_title):
-        try:
-            # Splitting the content by lines and extracting the front matter
-            lines = mdx_content.split('\n')
-            if lines[0] == '---':
-                end_of_front_matter = lines.index('---', 1)
-                front_matter = '\n'.join(lines[1:end_of_front_matter])
-                front_matter_yaml = yaml.safe_load(front_matter)
-                return front_matter_yaml.get('title', default_title)
-        except Exception as e:
-            logging.error(f"Error extracting title: {e}")
-        return default_title
-
-    def convert_mdx_to_pdf(mdx_content, output_pdf_path):
-        html_content = '<meta charset="UTF-8">' + markdown.markdown(mdx_content)
-        options = {
-            'encoding': "UTF-8",
-            'custom-header': [('Content-Encoding', 'utf-8')],
-            'no-outline': None
-        }
-        pdfkit.from_string(html_content, output_pdf_path, options=options)
-
-    for file_info in file_list:
-        if file_info['name'].endswith('.mdx'):
-            mdx_url = file_info['download_url']
-            mdx_content = requests.get(mdx_url).text
-            # Use the file name (without extension) as the default title
-            default_title = os.path.splitext(file_info['name'])[0]
-            title = extract_title_from_mdx(mdx_content, default_title)
-            file_name = title + '.pdf'
-            output_pdf_path = os.path.join(output_dir, file_name)
-            convert_mdx_to_pdf(mdx_content, output_pdf_path)
-            logging.info(f"Processed {file_name}")
-
-
 def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='articleBody']"):
     """
     Fetch and neatly parse the content of an article from a URL using the specified CSS selector.
@@ -98,7 +62,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
         return None
 
 
-def fetch_content(row, output_dir, flashbots_writings_file_list):
+def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
     # Define a mapping of URL patterns to functions
@@ -108,8 +72,7 @@ def fetch_content(row, output_dir, flashbots_writings_file_list):
         'collective.flashbots.net': fetch_discourse_content_from_url,
         'lido.fi': fetch_discourse_content_from_url,
         'research.anoma': fetch_discourse_content_from_url,
-        'writings.flashbots': process_mdx_files(output_dir, flashbots_writings_file_list),
-        
+
         # 'frontier.tech': fetch_frontier_tech_titles,
         # 'vitalik.ca': fetch_vitalik_ca_titles,
         # 'writings.flashbots': fetch_flashbots_writings_titles,
@@ -167,14 +130,16 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
         article_url = getattr(row, 'article')
         article_title = getattr(row, 'title')
 
-        # Create a sanitized file name for the PDF from the article title
-        pdf_filename = os.path.join(output_dir, sanitize_filename(article_title))
+        import numpy as np
+        if article_title is np.nan:
+            article_title = article_url
 
-        flashbots_writings_file_list = get_file_list()
+        # Create a sanitized file name for the PDF from the article title
+        pdf_filename = os.path.join(output_dir, article_title.replace("/", "-") + '.pdf')
 
         # Check if PDF already exists
         if not os.path.exists(pdf_filename) or overwrite:
-            content = fetch_content(row, output_dir, flashbots_writings_file_list)
+            content = fetch_content(row, output_dir)
             if content:
                 # Specify additional options for pdfkit to ensure UTF-8 encoding
                 options = {
@@ -198,8 +163,8 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 def run():
     csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
-    fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
-    # fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path, output_dir=output_directory, overwrite=False)
+    # fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
+    fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path, output_dir=output_directory, overwrite=False)
 
 
 run()
