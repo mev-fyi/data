@@ -55,8 +55,3 @@ def fetch_flashbots_writing_contents_and_save_as_pdf(csv_filepath, output_dir, n
     with ThreadPoolExecutor() as executor:
         list(executor.map(lambda row: fetch_content(row, output_dir, flashbots_writings_file_list), df.itertuples()))
 
-
-# Example usage
-output_directory = '/path/to/output/pdfs'
-csv_file_path = '/path/to/csv/file.csv'
-fetch_flashbots_writing_contents_and_save_as_pdf(csv_file_path, output_directory, num_articles=10)
