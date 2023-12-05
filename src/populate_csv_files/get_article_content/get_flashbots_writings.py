@@ -8,6 +8,7 @@ import yaml
 import markdown
 
 from src.utils import root_directory
+from datetime import datetime
 from utils import markdown_to_html, sanitize_filename
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -36,13 +37,16 @@ def extract_title_from_mdx(mdx_content, default_title):
 
 
 def convert_mdx_to_pdf(mdx_content, output_pdf_path):
-    html_content = '<meta charset="UTF-8">' + markdown.markdown(mdx_content)
-    options = {
-        'encoding': "UTF-8",
-        'custom-header': [('Content-Encoding', 'utf-8')],
-        'no-outline': None
-    }
-    pdfkit.from_string(html_content, output_pdf_path, options=options)
+    try:
+        html_content = '<meta charset="UTF-8">' + markdown.markdown(mdx_content)
+        options = {
+            'encoding': "UTF-8",
+            'custom-header': [('Content-Encoding', 'utf-8')],
+            'no-outline': None
+        }
+        pdfkit.from_string(html_content, output_pdf_path, options=options)
+    except Exception as e:
+        logging.error(f"Error converting MDX to PDF: {e}")
 
 
 def process_file_info(output_dir, file_info):
@@ -56,13 +60,46 @@ def process_file_info(output_dir, file_info):
         convert_mdx_to_pdf(mdx_content, output_pdf_path)
         logging.info(f"Processed {file_name}")
 
+        # Extract the release date from the filename
+        try:
+            release_date = datetime.strptime(file_info['name'][:10], '%Y-%m-%d').date()
+        except ValueError:
+            release_date = None  # or use a default date if required
+        return title, release_date
+
 
 def fetch_flashbots_writing_contents_and_save_as_pdf(output_dir):
     os.makedirs(output_dir, exist_ok=True)
     flashbots_writings_file_list = get_file_list()
+
+    # Initialize a list to store data before converting to DataFrame
+    articles_data = []
+
     with ThreadPoolExecutor() as executor:
-        executor.map(lambda file_info: process_file_info(output_dir, file_info), flashbots_writings_file_list)
+        for result in executor.map(lambda file_info: process_file_info(output_dir, file_info), flashbots_writings_file_list):
+            if result:
+                # Append the result tuple to the list
+                articles_data.append({'title': result[0], 'release_date': result[1]})
+
+    # Convert the list to a DataFrame
+    articles_df = pd.DataFrame(articles_data)
+
+    # Update the CSV file
+    csv_path = f'{root_directory()}/data/links/articles_updated.csv'
+    existing_df = pd.read_csv(csv_path)
+
+    # Check if the 'release_date' column exists, if not, add it
+    if 'release_date' not in existing_df.columns:
+        existing_df['release_date'] = None
+
+    # Update the existing DataFrame with the new release dates
+    for idx, row in articles_df.iterrows():
+        existing_df.loc[existing_df['title'] == row['title'], 'release_date'] = row['release_date']
+
+    # Save the updated DataFrame
+    existing_df.to_csv(csv_path, index=False)
 
 
+# Call the function
 output_directory = f'{root_directory()}/data/articles_pdf_download/'
 fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
