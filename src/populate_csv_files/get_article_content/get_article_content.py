@@ -144,7 +144,7 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
             article_title = article_url
 
         # Create a sanitized file name for the PDF from the article title
-        pdf_filename = os.path.join(output_dir, article_title.replace("/", "-") + '.pdf')
+        pdf_filename = os.path.join(output_dir, article_title.replace("/", "<slash>") + '.pdf')
 
         # Check if PDF already exists
         if not os.path.exists(pdf_filename) or overwrite:
@@ -179,8 +179,8 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 def run():
     csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
-    # fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
     fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path, output_dir=output_directory, overwrite=True)
+    fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
 
 
 run()
