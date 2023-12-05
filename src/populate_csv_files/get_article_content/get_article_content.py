@@ -2,9 +2,9 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import requests
 
-from get_article_content.utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, sanitize_filename
+from utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, sanitize_filename
 
-from get_article_content.get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
+from get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
 from src.utils import root_directory
 from concurrent.futures import ThreadPoolExecutor
 import os
@@ -196,9 +196,10 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 
 
 def run():
-    csv_file_path = f'{root_directory()}/data/links/articles_updated.csv',
-    output_directory = f'{root_directory()}/data/articles_pdf_download/',
-    fetch_flashbots_writing_contents_and_save_as_pdf(csv_file_path, output_directory, num_articles=10)
-    fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path, output_dir=output_directory, overwrite=False)
+    csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
+    output_directory = f'{root_directory()}/data/articles_pdf_download/'
+    fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
+    # fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path, output_dir=output_directory, overwrite=False)
+
 
 run()
