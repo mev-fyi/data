@@ -1,158 +1,65 @@
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
-from src.utils import root_directory, return_driver
+
+from get_article_content.utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, sanitize_filename
+
+from get_article_content.get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
+from src.utils import root_directory
 from concurrent.futures import ThreadPoolExecutor
 import os
 import pdfkit
 import logging
-import re
-import time
-import markdown  # You may need to install this with `pip install markdown`
+import markdown
+import yaml
+
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def safe_request(url, max_retries=5, backoff_factor=0.3):
-    """
-    Safe request handling with retries and exponential backoff.
-
-    Parameters:
-    - url (str): The URL to fetch.
-    - max_retries (int): Maximum number of retries.
-    - backoff_factor (float): Factor by which to increase delay between retries.
-
-    Returns:
-    - Response object or None if all retries fail.
-    """
-    for attempt in range(max_retries):
-        try:
-            response = requests.get(url)
-            response.raise_for_status()
-            return response
-        except requests.exceptions.HTTPError as e:
-            if e.response.status_code == 429:  # Too Many Requests
-                sleep_duration = backoff_factor * (2 ** attempt)
-                logging.warning(f"Rate limit hit. Retrying in {sleep_duration} seconds.")
-                time.sleep(sleep_duration)
-            else:
-                raise
-    logging.error(f"Failed to fetch URL {url} after {max_retries} retries.")
-    return None
-
-
-def clean_up_mojibake(text):
-    """
-    Replace common mojibake occurrences with the correct character.
-    """
-    replacements = {
-        'â€™': "'",
-        'â€œ': '"',
-        'â€�': '"',
-        'â€”': '—',
-        'â€“': '-',
-        'â€¦': '...',
-        'â€˜': '‘',
-        'â€™': '’',
-        'â€¢': '•',
-        'Ã ': 'à',
-        'Ã©': 'é',
-        'Ã¨': 'è',
-        'Ã¯': 'ï',
-        'Ã´': 'ô',
-        'Ã¶': 'ö',
-        'Ã»': 'û',
-        'Ã§': 'ç',
-        'Ã¤': 'ä',
-        'Ã«': 'ë',
-        'Ã¬': 'ì',
-        'Ã­': 'í',
-        'Ã¢': 'â',
-        'Ã¼': 'ü',
-        'Ã±': 'ñ',
-        'Ã¡': 'á',
-        'Ãº': 'ú',
-        'Ã£': 'ã',
-        'Ãµ': 'õ',
-        'Ã¦': 'æ',
-        'Ã°': 'ð',
-        'Ã¿': 'ÿ',
-        'Ã½': 'ý',
-        'Ã¾': 'þ',
-        'Ã': 'í',
-        'â‚¬': '€',
-        'â€™s': "'s",
-        'doesnâ€™t': "doesn't",
-        'donâ€™t': "don't",
-        'canâ€™t': "can't",
-        'isnâ€™t': "isn't",
-        'arenâ€™t': "aren't",
-        'werenâ€™t': "weren't",
-        'havenâ€™t': "haven't",
-        'hasnâ€™t': "hasn't",
-        'didnâ€™t': "didn't",
-        'wouldnâ€™t': "wouldn't",
-        'shouldnâ€™t': "shouldn't",
-        'couldnâ€™t': "couldn't",
-        'â€™ll': "'ll",
-        'â€™re': "'re",
-        'â€™ve': "'ve",
-        'â€™d': "'d",
-        'â€™m': "'m",
-        # Add more replacements as needed
-    }
-    for wrong, right in replacements.items():
-        text = text.replace(wrong, right)
-    return text
-
-
-def sanitize_mojibake(text):
-    # Regex patterns for common mojibake sequences
-    mojibake_patterns = {
-        re.compile(r'â€™'): "'",
-        re.compile(r'â€œ'): '“',
-        re.compile(r'â€'): '”',
-        re.compile(r'â€”'): '—',
-        re.compile(r'â€“'): '–',
-        # Add more patterns as needed
-    }
-
-    # Replace each mojibake pattern with the correct character
-    for pattern, replacement in mojibake_patterns.items():
-        text = pattern.sub(replacement, text)
-
-    return text
-
-
-def html_to_markdown(element):
-    """
-    Convert an HTML element to its Markdown representation.
-    """
-    # Retrieve text from the HTML element directly, without cleaning up mojibake
-    tag_name = element.name
-    text = element.get_text()
-
-    if tag_name == 'p':
-        return text.strip() + '\n\n'
-    elif tag_name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
-        header_level = int(tag_name[1])
-        return '#' * header_level + ' ' + text.strip() + '\n\n'
-    elif tag_name == 'ul':
-        return '\n'.join([f"* {li.get_text().strip()}" for li in element.find_all('li')]) + '\n\n'
-    elif tag_name == 'ol':
-        return '\n'.join([f"1. {li.get_text().strip()}" for li in element.find_all('li')]) + '\n\n'
-    # Add more HTML to Markdown conversions here as needed
+def get_file_list(GITHUB_API_URL="https://api.github.com/repos/flashbots/flashbots-writings-website/contents/content"):
+    response = requests.get(GITHUB_API_URL)
+    if response.status_code == 200:
+        return response.json()  # Returns a list of file information
     else:
-        return text.strip() + '\n\n'
+        logging.info(f"Failed to fetch file list from {GITHUB_API_URL}, response code {response.status_code}")
+        return []
 
 
-def markdown_to_html(markdown_content):
-    """
-    Convert Markdown content to HTML with UTF-8 encoding specified.
-    """
-    # Add the UTF-8 meta charset tag
-    html_content = '<meta charset="UTF-8">' + markdown.markdown(markdown_content)
-    return html_content
+def process_mdx_files(output_dir, file_list):
+    def extract_title_from_mdx(mdx_content, default_title):
+        try:
+            # Splitting the content by lines and extracting the front matter
+            lines = mdx_content.split('\n')
+            if lines[0] == '---':
+                end_of_front_matter = lines.index('---', 1)
+                front_matter = '\n'.join(lines[1:end_of_front_matter])
+                front_matter_yaml = yaml.safe_load(front_matter)
+                return front_matter_yaml.get('title', default_title)
+        except Exception as e:
+            logging.error(f"Error extracting title: {e}")
+        return default_title
+
+    def convert_mdx_to_pdf(mdx_content, output_pdf_path):
+        html_content = '<meta charset="UTF-8">' + markdown.markdown(mdx_content)
+        options = {
+            'encoding': "UTF-8",
+            'custom-header': [('Content-Encoding', 'utf-8')],
+            'no-outline': None
+        }
+        pdfkit.from_string(html_content, output_pdf_path, options=options)
+
+    for file_info in file_list:
+        if file_info['name'].endswith('.mdx'):
+            mdx_url = file_info['download_url']
+            mdx_content = requests.get(mdx_url).text
+            # Use the file name (without extension) as the default title
+            default_title = os.path.splitext(file_info['name'])[0]
+            title = extract_title_from_mdx(mdx_content, default_title)
+            file_name = title + '.pdf'
+            output_pdf_path = os.path.join(output_dir, file_name)
+            convert_mdx_to_pdf(mdx_content, output_pdf_path)
+            logging.info(f"Processed {file_name}")
 
 
 def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='articleBody']"):
@@ -191,21 +98,17 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
         return None
 
 
-
-
-def fetch_discourse_titles(url):
-    return fetch_discourse_content_from_url(url)
-
-
-def fetch_content(row):
+def fetch_content(row, output_dir, flashbots_writings_file_list):
     url = getattr(row, 'article')
 
     # Define a mapping of URL patterns to functions
+
     url_patterns = {
         'ethresear.ch': fetch_discourse_content_from_url,
         'collective.flashbots.net': fetch_discourse_content_from_url,
         'lido.fi': fetch_discourse_content_from_url,
         'research.anoma': fetch_discourse_content_from_url,
+        'writings.flashbots': process_mdx_files(output_dir, flashbots_writings_file_list),
         
         # 'frontier.tech': fetch_frontier_tech_titles,
         # 'vitalik.ca': fetch_vitalik_ca_titles,
@@ -240,18 +143,6 @@ def fetch_content(row):
     return None  # Default case if no match is found
 
 
-def sanitize_filename(title):
-    """
-    Sanitize the title to create a valid filename.
-    Handles cases where the title might not be a string (e.g., NaN values).
-    """
-    if not isinstance(title, str):
-        # Handle non-string titles, for example, replace NaNs with a placeholder
-        title = "untitled"
-
-    return "".join([c for c in title if c.isalpha() or c.isdigit() or c==' ']).rstrip() + ".pdf"
-
-
 def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True):
     """
     Fetch the contents of articles and save each content as a PDF in the specified directory.
@@ -279,9 +170,11 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
         # Create a sanitized file name for the PDF from the article title
         pdf_filename = os.path.join(output_dir, sanitize_filename(article_title))
 
+        flashbots_writings_file_list = get_file_list()
+
         # Check if PDF already exists
         if not os.path.exists(pdf_filename) or overwrite:
-            content = fetch_content(row)
+            content = fetch_content(row, output_dir, flashbots_writings_file_list)
             if content:
                 # Specify additional options for pdfkit to ensure UTF-8 encoding
                 options = {
@@ -294,7 +187,8 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
                 pdfkit.from_string(markdown_to_html(content), pdf_filename, options=options)
                 logging.info(f"Saved PDF for {article_url}")
             else:
-                logging.warning(f"No content fetched for {article_url}")
+                # logging.warning(f"No content fetched for {article_url}")
+                pass
 
     # Use ThreadPoolExecutor to process rows in parallel
     with ThreadPoolExecutor() as executor:
@@ -302,10 +196,9 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 
 
 def run():
-    fetch_article_contents_and_save_as_pdf(
-        f'{root_directory()}/data/links/articles_updated.csv',
-        f'{root_directory()}/data/articles_pdf_download/',
-        # num_articles=5
-    )
+    csv_file_path = f'{root_directory()}/data/links/articles_updated.csv',
+    output_directory = f'{root_directory()}/data/articles_pdf_download/',
+    fetch_flashbots_writing_contents_and_save_as_pdf(csv_file_path, output_directory, num_articles=10)
+    fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path, output_dir=output_directory, overwrite=False)
 
 run()
