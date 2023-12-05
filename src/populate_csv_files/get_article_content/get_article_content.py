@@ -41,7 +41,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
     try:
         response = safe_request(url)  # Use the safe_request function to handle potential 429 errors.
         if response is None:
-            return None
+            return None, None
 
         response.encoding = 'utf-8'  # Force UTF-8 encoding
         content = response.text
@@ -51,15 +51,23 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
 
         if not content_container:
             logging.warning(f"No content found for URL {url} with selector {css_selector}")
-            return None
+            return None, None
 
         markdown_content = ''.join(html_to_markdown(element) for element in content_container if element.name is not None)
         markdown_content = sanitize_mojibake(markdown_content)  # Clean up the content after parsing
+
+        # Extracting release date
+        meta_tag = soup.find('meta', {'property': 'article:published_time'})
+        if meta_tag and 'content' in meta_tag.attrs:
+            release_date = meta_tag['content'].split('T')[0]
+        else:
+            release_date = None
+
         logging.info(f"Fetched content for URL {url}")
-        return markdown_content
+        return markdown_content, release_date
     except Exception as e:
         logging.error(f"Could not fetch content for URL {url}: {e}")
-        return None
+        return None, None
 
 
 def fetch_content(row, output_dir):
@@ -72,7 +80,6 @@ def fetch_content(row, output_dir):
         'collective.flashbots.net': fetch_discourse_content_from_url,
         'lido.fi': fetch_discourse_content_from_url,
         'research.anoma': fetch_discourse_content_from_url,
-
         # 'frontier.tech': fetch_frontier_tech_titles,
         # 'vitalik.ca': fetch_vitalik_ca_titles,
         # 'writings.flashbots': fetch_flashbots_writings_titles,
@@ -95,15 +102,15 @@ def fetch_content(row, output_dir):
 
     # TODO 2023-09-18: add substack support
 
-    # Iterate through URL patterns and fetch contents
     for pattern, fetch_function in url_patterns.items():
         if pattern in url:
             if fetch_function:
-                return fetch_function(url)
+                content, release_date = fetch_function(url)
+                return content, release_date
             else:
-                return None
+                return None, None
 
-    return None  # Default case if no match is found
+    return None, None  # Default case if no match is found
 
 
 def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True):
@@ -115,8 +122,10 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
     - output_dir (str): The directory where the article PDFs should be saved.
     - num_articles (int, optional): Number of articles to process. If None, process all articles.
     """
-    # Step 1: Read the CSV file
+    # Read the CSV file and prepare for updating
     df = pd.read_csv(csv_filepath)
+    if 'release_date' not in df.columns:
+        df['release_date'] = None
 
     # If num_articles is specified, slice the DataFrame
     if num_articles is not None:
@@ -139,7 +148,7 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 
         # Check if PDF already exists
         if not os.path.exists(pdf_filename) or overwrite:
-            content = fetch_content(row, output_dir)
+            content, release_date = fetch_content(row, output_dir)
             if content:
                 # Specify additional options for pdfkit to ensure UTF-8 encoding
                 options = {
@@ -151,20 +160,27 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
                 }
                 pdfkit.from_string(markdown_to_html(content), pdf_filename, options=options)
                 logging.info(f"Saved PDF for {article_url}")
+
             else:
                 # logging.warning(f"No content fetched for {article_url}")
                 pass
+                # Update the dataframe with the release date
+            if release_date:
+                df.loc[df['title'] == getattr(row, 'title'), 'release_date'] = release_date
 
     # Use ThreadPoolExecutor to process rows in parallel
     with ThreadPoolExecutor() as executor:
         list(executor.map(process_row, df.itertuples()))
+
+    # Save the updated DataFrame
+    df.to_csv(csv_filepath, index=False)
 
 
 def run():
     csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
     # fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
-    fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path, output_dir=output_directory, overwrite=False)
+    fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path, output_dir=output_directory, overwrite=True)
 
 
 run()
