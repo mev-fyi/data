@@ -6,11 +6,11 @@ from concurrent.futures import ThreadPoolExecutor
 import os
 import pdfkit
 import logging
-
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
+import re
 import time
 import markdown  # You may need to install this with `pip install markdown`
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 def safe_request(url, max_retries=5, backoff_factor=0.3):
@@ -40,45 +40,119 @@ def safe_request(url, max_retries=5, backoff_factor=0.3):
     logging.error(f"Failed to fetch URL {url} after {max_retries} retries.")
     return None
 
+
 def clean_up_mojibake(text):
-    # Replace common mojibake occurrences with the correct character
-    return (text.replace('â€™', "'")
-                .replace('â€œ', '"')
-                .replace('â€', '"')
-                .replace('â€”', '—')
-                .replace('â€“', '–')
-                .replace('â€¦', '…')
-                .replace('â€˜', '‘')
-                .replace('â€™', '’')
-                .replace('â€¢', '•')
-                # Add more replacements as needed
-           )
+    """
+    Replace common mojibake occurrences with the correct character.
+    """
+    replacements = {
+        'â€™': "'",
+        'â€œ': '"',
+        'â€�': '"',
+        'â€”': '—',
+        'â€“': '-',
+        'â€¦': '...',
+        'â€˜': '‘',
+        'â€™': '’',
+        'â€¢': '•',
+        'Ã ': 'à',
+        'Ã©': 'é',
+        'Ã¨': 'è',
+        'Ã¯': 'ï',
+        'Ã´': 'ô',
+        'Ã¶': 'ö',
+        'Ã»': 'û',
+        'Ã§': 'ç',
+        'Ã¤': 'ä',
+        'Ã«': 'ë',
+        'Ã¬': 'ì',
+        'Ã­': 'í',
+        'Ã¢': 'â',
+        'Ã¼': 'ü',
+        'Ã±': 'ñ',
+        'Ã¡': 'á',
+        'Ãº': 'ú',
+        'Ã£': 'ã',
+        'Ãµ': 'õ',
+        'Ã¦': 'æ',
+        'Ã°': 'ð',
+        'Ã¿': 'ÿ',
+        'Ã½': 'ý',
+        'Ã¾': 'þ',
+        'Ã': 'í',
+        'â‚¬': '€',
+        'â€™s': "'s",
+        'doesnâ€™t': "doesn't",
+        'donâ€™t': "don't",
+        'canâ€™t': "can't",
+        'isnâ€™t': "isn't",
+        'arenâ€™t': "aren't",
+        'werenâ€™t': "weren't",
+        'havenâ€™t': "haven't",
+        'hasnâ€™t': "hasn't",
+        'didnâ€™t': "didn't",
+        'wouldnâ€™t': "wouldn't",
+        'shouldnâ€™t': "shouldn't",
+        'couldnâ€™t': "couldn't",
+        'â€™ll': "'ll",
+        'â€™re': "'re",
+        'â€™ve': "'ve",
+        'â€™d': "'d",
+        'â€™m': "'m",
+        # Add more replacements as needed
+    }
+    for wrong, right in replacements.items():
+        text = text.replace(wrong, right)
+    return text
+
+
+def sanitize_mojibake(text):
+    # Regex patterns for common mojibake sequences
+    mojibake_patterns = {
+        re.compile(r'â€™'): "'",
+        re.compile(r'â€œ'): '“',
+        re.compile(r'â€'): '”',
+        re.compile(r'â€”'): '—',
+        re.compile(r'â€“'): '–',
+        # Add more patterns as needed
+    }
+
+    # Replace each mojibake pattern with the correct character
+    for pattern, replacement in mojibake_patterns.items():
+        text = pattern.sub(replacement, text)
+
+    return text
 
 
 def html_to_markdown(element):
     """
     Convert an HTML element to its Markdown representation.
     """
+    # Retrieve text from the HTML element directly, without cleaning up mojibake
     tag_name = element.name
+    text = element.get_text()
+
     if tag_name == 'p':
-        return element.text.strip() + '\n\n'
+        return text.strip() + '\n\n'
     elif tag_name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
         header_level = int(tag_name[1])
-        return '#' * header_level + ' ' + element.text.strip() + '\n\n'
+        return '#' * header_level + ' ' + text.strip() + '\n\n'
     elif tag_name == 'ul':
-        return '\n'.join([f"* {li.text.strip()}" for li in element.find_all('li')]) + '\n\n'
+        return '\n'.join([f"* {li.get_text().strip()}" for li in element.find_all('li')]) + '\n\n'
     elif tag_name == 'ol':
-        return '\n'.join([f"1. {li.text.strip()}" for li in element.find_all('li')]) + '\n\n'
+        return '\n'.join([f"1. {li.get_text().strip()}" for li in element.find_all('li')]) + '\n\n'
     # Add more HTML to Markdown conversions here as needed
     else:
-        return element.text.strip() + '\n\n'
+        return text.strip() + '\n\n'
+
 
 def markdown_to_html(markdown_content):
     """
-    Convert Markdown content to HTML.
+    Convert Markdown content to HTML with UTF-8 encoding specified.
     """
-    html = markdown.markdown(markdown_content)
-    return html
+    # Add the UTF-8 meta charset tag
+    html_content = '<meta charset="UTF-8">' + markdown.markdown(markdown_content)
+    return html_content
 
 
 def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='articleBody']"):
@@ -98,23 +172,18 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
         if response is None:
             return None
 
-        soup = BeautifulSoup(response.content, 'html.parser')
+        response.encoding = 'utf-8'  # Force UTF-8 encoding
+        content = response.text
+
+        soup = BeautifulSoup(content, 'html.parser')
         content_container = soup.select_one(css_selector)
 
         if not content_container:
             logging.warning(f"No content found for URL {url} with selector {css_selector}")
             return None
 
-        # Convert HTML content to Markdown
-        markdown_content = ''
-        for element in content_container.descendants:
-            if element.name in ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
-                markdown_content += html_to_markdown(element)
-
-            elif element.name in ['ul', 'ol']:
-                # Extract the entire list as a block
-                markdown_content += html_to_markdown(element) + '\n'
-
+        markdown_content = ''.join(html_to_markdown(element) for element in content_container if element.name is not None)
+        markdown_content = sanitize_mojibake(markdown_content)  # Clean up the content after parsing
         logging.info(f"Fetched content for URL {url}")
         return markdown_content
     except Exception as e:
@@ -183,7 +252,7 @@ def sanitize_filename(title):
     return "".join([c for c in title if c.isalpha() or c.isdigit() or c==' ']).rstrip() + ".pdf"
 
 
-def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None):
+def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True):
     """
     Fetch the contents of articles and save each content as a PDF in the specified directory.
 
@@ -211,16 +280,21 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
         pdf_filename = os.path.join(output_dir, sanitize_filename(article_title))
 
         # Check if PDF already exists
-        if not os.path.exists(pdf_filename):
+        if not os.path.exists(pdf_filename) or overwrite:
             content = fetch_content(row)
             if content:
-                pdfkit.from_string(markdown_to_html(content), pdf_filename)
-                print(f"Saved PDF for {article_url}")
+                # Specify additional options for pdfkit to ensure UTF-8 encoding
+                options = {
+                    'encoding': "UTF-8",
+                    'custom-header': [
+                        ('Content-Encoding', 'utf-8'),
+                    ],
+                    'no-outline': None
+                }
+                pdfkit.from_string(markdown_to_html(content), pdf_filename, options=options)
+                logging.info(f"Saved PDF for {article_url}")
             else:
-                # print(f"No content fetched for {article_url}")
-                pass
-        else:
-            print(f"PDF already exists for {article_url}")
+                logging.warning(f"No content fetched for {article_url}")
 
     # Use ThreadPoolExecutor to process rows in parallel
     with ThreadPoolExecutor() as executor:
@@ -231,7 +305,7 @@ def run():
     fetch_article_contents_and_save_as_pdf(
         f'{root_directory()}/data/links/articles_updated.csv',
         f'{root_directory()}/data/articles_pdf_download/',
-        num_articles=5
+        # num_articles=5
     )
 
 run()
