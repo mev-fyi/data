@@ -1,241 +1,241 @@
-title,article,referrer,release_date
-PEPC-DVT: PEPC with no changes to the consensus protocol - Economics - Ethereum Research,https://ethresear.ch/t/pepc-dvt-pepc-with-no-changes-to-the-consensus-protocol/16514,https://www.twitter.com/freddmannen,2023-08-31
-Three dichotomies in ePBS - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/three-dichotomies-in-epbs/16267,https://www.twitter.com/freddmannen,2023-08-03
-Shared sequencer for MEV protection and profitable marketplace - Layer 2 - Ethereum Research,https://ethresear.ch/t/shared-sequencer-for-mev-protection-and-profitable-marketplace/15313,https://www.twitter.com/freddmannen,2023-04-16
-Burning MEV through block proposer auctions - Economics - Ethereum Research,https://ethresear.ch/t/burning-mev-through-block-proposer-auctions/14029,https://www.twitter.com/freddmannen,2022-10-26
-Single-slot PBS using attesters as distributed availability oracle - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/single-slot-pbs-using-attesters-as-distributed-availability-oracle/11877,https://www.twitter.com/freddmannen,2022-01-27
-Two-slot proposer/builder separation - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/two-slot-proposer-builder-separation/10980,https://www.twitter.com/freddmannen,2021-10-10
-Timing games in Proof-of-Stake - Economics - Ethereum Research,https://ethresear.ch/t/timing-games-in-proof-of-stake/13980,https://www.twitter.com/freddmannen,2022-10-20
-Latency arms race concerns in blockspace markets - Economics - Ethereum Research,https://ethresear.ch/t/latency-arms-race-concerns-in-blockspace-markets/14957,https://www.twitter.com/freddmannen,2023-03-03
-Unbundling PBS: Towards protocol-enforced proposer commitments (PEPC) - Economics - Ethereum Research,https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879,https://www.twitter.com/freddmannen,2022-10-08
-Equivocation attacks in mev-boost and ePBS - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/equivocation-attacks-in-mev-boost-and-epbs/15338,https://www.twitter.com/freddmannen,2023-04-18
-Why enshrine Proposer-Builder Separation? A viable path to ePBS - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/why-enshrine-proposer-builder-separation-a-viable-path-to-epbs/15710,https://www.twitter.com/freddmannen,2023-05-25
-Increase the MAX_EFFECTIVE_BALANCE – a modest proposal - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/increase-the-max-effective-balance-a-modest-proposal/15801,https://www.twitter.com/freddmannen,2023-06-06
-Payload-timeliness committee (PTC) – an ePBS design - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/payload-timeliness-committee-ptc-an-epbs-design/16054,https://www.twitter.com/freddmannen,2023-07-06
-Relays in a post-ePBS world - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/relays-in-a-post-epbs-world/16278,https://www.twitter.com/freddmannen,2023-08-04
-Bid cancellations considered harmful - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/bid-cancellations-considered-harmful/15500,https://www.twitter.com/freddmannen,2023-05-05
-Slashing penalty analysis; EIP-7251 - Economics - Ethereum Research,https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509,https://www.twitter.com/freddmannen,2023-08-30
-No free lunch – a new inclusion list design - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/no-free-lunch-a-new-inclusion-list-design/16389,https://www.twitter.com/freddmannen,2023-08-15
-"Cumulative, Non-Expiring Inclusion Lists - Proof-of-Stake - Ethereum Research",https://ethresear.ch/t/cumulative-non-expiring-inclusion-lists/16520,https://www.twitter.com/freddmannen,2023-08-31
-Estimating inclusion delays for censored transactions - Economics - Ethereum Research,https://ethresear.ch/t/estimating-inclusion-delays-for-censored-transactions/15115,https://www.twitter.com/freddmannen,2023-03-22
-Game-theoretic Model for MEV-boost Auctions (MMA) 🥊 - Economics - Ethereum Research,https://ethresear.ch/t/game-theoretic-model-for-mev-boost-auctions-mma/16206,https://www.twitter.com/freddmannen,2023-07-27
-Empirical analysis of Builders' Behavioral Profiles (BBPs) - Economics - Ethereum Research,https://ethresear.ch/t/empirical-analysis-of-builders-behavioral-profiles-bbps/16327,https://www.twitter.com/freddmannen,2023-08-10
-The_Merge__Reduced_Uncertainty__and_Front_Running_Bots.pdf - Google Drive,https://drive.google.com/file/d/1M5Y_Dc52O3QTFerEkIRErl4_6ywDB4iq/view,https://www.twitter.com/freddmannen,
-Towards a Theory of Maximal Extractable Value II: Uncertainty.pdf - Google Drive,https://drive.google.com/file/d/1mLrlYTy6SLPVg4by-PJ9wqEuFZJOjhG4/preview,https://www.twitter.com/freddmannen,
-The Merge series (part 3): MEV landscape — Rated,https://mirror.xyz/ratedw3b.eth/xltDyY32_xQyDiHHphj230kc0iEQL43Pwb7b6t_fzWQ,https://www.twitter.com/freddmannen,
-MEV Resilient Ethereum - HackMD,https://notes.ethereum.org/@RMFhKOrSSEWxmqjZMOT1Ag/rJb_cq8Co,https://www.twitter.com/freddmannen,
-PROF: Fair Transaction-Ordering in a Profit-Seeking World | by IC3 | Medium,https://initc3org.medium.com/prof-fair-transaction-ordering-in-a-profit-seeking-world-b6dadd71f086,https://www.twitter.com/freddmannen,
-Rollups are Real — Rollup Economics 2.0,https://davidecrapis.notion.site/Rollups-are-Real-Rollup-Economics-2-0-2516079f62a745b598133a101ba5a3de,https://www.twitter.com/freddmannen,
-"Block Builder Decentralization is coming, but maybe not so soon",https://succulent-throat-0ce.notion.site/Block-Builder-Decentralization-is-coming-but-maybe-not-so-soon-6e54e7d7e1d34d61af55e5d98a51eb8b,https://www.twitter.com/freddmannen,
-"MEV Driven Centralization in Ethereum: Part 2 | by Simon Brown | Dec, 2022 | Medium",https://succulent-throat-0ce.notion.site/MEV-Driven-Centralization-in-Ethereum-Part-2-by-Simon-Brown-Dec-2022-Medium-507efc380b454791b362dddc7e2e066c,https://www.twitter.com/freddmannen,
-The MEV Conundrum,https://verilog-solutions.notion.site/The-MEV-Conundrum-6d66001b150148739be14d73a8836903,https://www.twitter.com/freddmannen,
-PEPC FAQ,https://efdn.notion.site/PEPC-FAQ-0787ba2f77e14efba771ff2d903d67e4,https://www.twitter.com/freddmannen,
-Relays are a Latency Game. | By Alvaro Blazquez and Sachin Lal | by Metrika | Medium,https://blog.metrika.co/relays-are-a-latency-game-303aadb393ce,https://www.twitter.com/freddmannen,
-"The Little Transaction that Could: Sequencers, MEV, Intents, and… — Archetype",https://archetype.mirror.xyz/McPqaV9WVyHhky1AAgGyS6DsZ8O0_OIBtED34sWpcUw,https://www.twitter.com/freddmannen,
-L2 MEV wat — Taiko Labs,https://taiko.mirror.xyz/VjNjFws6OOVez5YCDMwjy4BUiDqZBHYDvcW4-JZGDkc,https://www.twitter.com/freddmannen,
-MEV: Maximal Extractable Value Pt. 2 | Galaxy,https://www.galaxy.com/insights/research/mev-the-rise-of-the-builders/,https://www.twitter.com/freddmannen,
-MEV: The First Five Years | James Prestwich | Medium,https://medium.com/@Prestwich/mev-c417d9a5eb3d,https://www.twitter.com/freddmannen,
-MEV: The Next Five Years. That’s right I just won’t shut up | by James Prestwich | Medium,https://medium.com/@Prestwich/mev-the-next-five-years-63f84fffdf36,https://www.twitter.com/freddmannen,
-Decentralized crypto needs you: to be a geographical decentralization maxi - Research - The Flashbots Collective,https://collective.flashbots.net/t/decentralized-crypto-needs-you-to-be-a-geographical-decentralization-maxi/1385,,2023-03-07
-On Path Independence,https://vitalik.ca/general/2017/06/22/marketmakers.html,,
-"order flow, auctions and centralisation I - a warning",https://writings.flashbots.net/order-flow-auctions-and-centralisation,https://www.twitter.com/unlock_VALue,2022-09-12
-Endgame,https://vitalik.ca/general/2021/12/06/endgame.html,https://www.twitter.com/unlock_VALue,
-The Limits to Blockchain Scalability,https://vitalik.ca/general/2021/05/23/scaling.html,https://www.twitter.com/unlock_VALue,
-Flashbots: Frontrunning the MEV crisis | Flashbots,https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752,https://www.twitter.com/unlock_VALue,
-The Cost of Resilience,https://writings.flashbots.net/the-cost-of-resilience,https://www.twitter.com/unlock_VALue,2022-11-22
-The Future of MEV is SUAVE,https://writings.flashbots.net/the-future-of-mev-is-suave,https://www.twitter.com/unlock_VALue,2022-11-23
-MEV Driven Centralization in Ethereum: Part 1 | by Simon Brown | Medium,https://simbro.medium.com/mev-driven-centralization-in-ethereum-ec829a214f18,https://www.twitter.com/unlock_VALue,
-"Running Geth within SGX: Our Experience, Learnings and Code",https://writings.flashbots.net/geth-inside-sgx,https://www.twitter.com/unlock_VALue,2022-12-20
-Quantifying Info I: Quantifying The Information Leakage of Computing on Encrypted Transactions - Research - The Flashbots Collective,https://collective.flashbots.net/t/quantifying-info-i-quantifying-the-information-leakage-of-computing-on-encrypted-transactions/1752,https://www.twitter.com/unlock_VALue,2023-05-08
-Can First Come First Served-Based Transaction Ordering Prevent Front-Running?,https://writings.flashbots.net/fcfs-and-front-running,https://www.twitter.com/unlock_VALue,2022-09-08
-Opportunities and Considerations of Ethereum’s Blockspace Future,https://frontier.tech/ethereums-blockspace-future,https://www.twitter.com/barnabemonnot,
-A Tale of Two Arbitrages,https://frontier.tech/a-tale-of-two-arbitrages,https://www.twitter.com/unlock_VALue,
-Builder Dominance and Searcher Dependence,https://frontier.tech/builder-dominance-and-searcher-dependence,https://www.twitter.com/unlock_VALue,
-The next steps in DEX design,https://frontier.tech/the-next-steps-in-dex-design,https://www.twitter.com/unlock_VALue,
-Exploration of MEV Latencies,https://frontier.tech/exploration-of-mev-latencies,https://www.twitter.com/unlock_VALue,
-Optimistic relays and where to find them,https://frontier.tech/optimistic-relays-and-where-to-find-them,https://www.twitter.com/unlock_VALue,
-The NFT MEV Landscape,https://frontier.tech/the-nft-mev-landscape,https://www.twitter.com/unlock_VALue,
-The Orderflow Auction Design Space,https://frontier.tech/the-orderflow-auction-design-space,https://www.twitter.com/unlock_VALue,
-Beyond Extraction: The Role of Block Building in the Future of Ethereum,https://frontier.tech/beyond-extraction,https://www.twitter.com/unlock_VALue,
-Unpacking ERC-4337,https://frontier.tech/unpacking-erc-4337,https://www.twitter.com/unlock_VALue,
-MEV-Share: programmably private orderflow to share MEV with users - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/mev-share-programmably-private-orderflow-to-share-mev-with-users/1264/1,https://www.twitter.com/unlock_VALue,2023-02-15
-The dream of redistributing the extracted value - Research - The Flashbots Collective,https://collective.flashbots.net/t/the-dream-of-redistributing-the-extracted-value/642,https://www.twitter.com/unlock_VALue,2022-10-27
-Bookmarks relevant for redistribution researchers - #35 by chayoterabit - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663/35,https://www.twitter.com/unlock_VALue,
-Bookmarks relevant for redistribution researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663,https://www.twitter.com/unlock_VALue,2023-11-27
-Forward inclusion list - HackMD,https://notes.ethereum.org/@fradamt/forward-inclusion-lists,https://www.twitter.com/unlock_VALue,
-Unified ERC-4337 mempool - HackMD,https://notes.ethereum.org/@yoav/unified-erc-4337-mempool,https://www.twitter.com/unlock_VALue,
-Structuring Blockspace Derivatives — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/WKa3GFC03uY34d2MufTyD0c595xVRUEZi9RNG-dHNKs,https://www.twitter.com/unlock_VALue,
-Bookmarks relevant for Proposer-Builder Separation (PBS) researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-proposer-builder-separation-pbs-researchers/1319,https://www.twitter.com/unlock_VALue,2023-02-22
-Proposer/Builder Separation material - HackMD,https://notes.ethereum.org/@domothy/pbs_links,https://www.twitter.com/unlock_VALue,
-A beginner’s guide to buying an ENS domain | by Nick Johnson | Medium,https://weka.medium.com/a-beginners-guide-to-buying-an-ens-domain-3ccac2bdc770,https://www.twitter.com/unlock_VALue,
-"Post mortem: April 3rd, 2023 mev-boost relay incident and related timing issue - The Flashbots Ship - The Flashbots Collective",https://collective.flashbots.net/t/post-mortem-april-3rd-2023-mev-boost-relay-incident-and-related-timing-issue/1540,https://www.twitter.com/unlock_VALue,2023-04-04
-Ideas for Incentivizing Relays - #4 by dmarz - Relays - The Flashbots Collective,https://collective.flashbots.net/t/ideas-for-incentivizing-relays/586/4,https://www.twitter.com/unlock_VALue,2022-10-19
-State of research: increasing censorship resistance of transactions under proposer/builder separation (PBS) - HackMD,https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance,https://www.twitter.com/unlock_VALue,
-"Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.",https://efdn.notion.site/Robust-Incentives-Group-homepage-802339956f2745a5964d8461c5ccef02,https://www.twitter.com/unlock_VALue,
-FRP Year in Review,https://writings.flashbots.net/frp-year-in-review,https://www.twitter.com/unlock_VALue,2023-07-10
-MEV-sbc Workshop,https://www.flashbots.net/mev-sbc-workshop,https://www.twitter.com/unlock_VALue,
-HackMD - Collaborative Markdown Knowledge Base,https://hackmd.io/@sxysun,https://www.twitter.com/unlock_VALue,
-Worldcoin Edges Closer to AI-Driven Crypto Identity Device - The Defiant,https://thedefiant.io/worldcoin-ai-privacy-orb,https://www.twitter.com/unlock_VALue,
-Redefining Sequencers: Understanding the Aggregator and the Header Producer | by NashQ | Medium,https://medium.com/@nashqueue/redefining-sequencers-understanding-the-aggregator-and-the-header-producer-76ee198dd4,https://www.twitter.com/unlock_VALue,
-Backrunning Private Transactions Using Multi-Party Computation,https://writings.flashbots.net/backrunning-private-txs-MPC,https://www.twitter.com/unlock_VALue,2023-02-27
-Technology | IEX Exchange | IEX,https://www.iexexchange.io/technology,https://www.twitter.com/unlock_VALue,
-"The MEVM, SUAVE Centauri, and Beyond",https://writings.flashbots.net/mevm-suave-centauri-and-beyond,https://www.twitter.com/unlock_VALue,2023-07-13
-Risk Management Case Study: Agora / Metis | by Gauntlet | Gauntlet | Medium,https://medium.com/gauntlet-networks/risk-management-case-study-agora-metis-9a304ce46de0,https://www.twitter.com/unlock_VALue,
-Modular Searcher Design: A Framework for Building Searchers — Taker,https://mirror.xyz/0x00000a2A02540A0D92e209F9f5F7e104745e06Ba/hB-XeiOfkV5neiwX34lBD0uLHlWdefbGX6oBz1B4o7w,https://www.twitter.com/unlock_VALue,
-Don't overload Ethereum's consensus,https://vitalik.ca/general/2023/05/21/dont_overload.html,https://www.twitter.com/unlock_VALue,
-Improved Coordination with Failsafes and Belief-Conditioned Programs.pdf - Google Drive,https://drive.google.com/file/d/1qxJJf2Jsz3LJ3l__x4GVNBui6TvfJoYh/view,https://www.twitter.com/unlock_VALue,
-"Coordination, Good and Bad",https://vitalik.ca/general/2020/09/11/coordination.html,https://www.twitter.com/unlock_VALue,
-"Ethereum is game-changing technology, literally. | by Virgil Griffith | Medium",https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8,https://www.twitter.com/unlock_VALue,
-"FRP-23: Constant Function Market Making, Social Welfare and Maximal Extractable Value - FRPs - Flashbots Research Proposals - The Flashbots Collective",https://collective.flashbots.net/t/frp-23-constant-function-market-making-social-welfare-and-maximal-extractable-value/752,https://www.twitter.com/unlock_VALue,2022-11-21
-Why Cryptoeconomics and X-Risk Researchers Should Listen to Each Other More | by Vitalik Buterin | Medium,https://medium.com/@VitalikButerin/why-cryptoeconomics-and-x-risk-researchers-should-listen-to-each-other-more-a2db72b3e86b,https://www.twitter.com/unlock_VALue,
-FRP-26: Credible Commitments via Open Games - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-26-credible-commitments-via-open-games/1616,https://www.twitter.com/unlock_VALue,2022-12-06
-FRP-28: Contingent Fees in Order Flow Auctions - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-28-contingent-fees-in-order-flow-auctions/1594,https://www.twitter.com/unlock_VALue,2023-04-12
-"MEV… do this.. MEV is not inevitable, it is a network… | by Pmcgoohan | Medium",https://pmcgoohan.medium.com/mev-do-this-beb2754bca63,https://www.twitter.com/unlock_VALue,
-Presenting: VeeDo. a STARK-based VDF Service | by StarkWare | StarkWare | Medium,https://medium.com/starkware/presenting-veedo-e4bbff77c7ae,https://www.twitter.com/unlock_VALue,
-Introducing the UniswapX Protocol,https://blog.uniswap.org/uniswapx-protocol,https://www.twitter.com/unlock_VALue,
-Will the real MEV please stand up? - Data - The Flashbots Collective,https://collective.flashbots.net/t/will-the-real-mev-please-stand-up/1686,https://www.twitter.com/unlock_VALue,2023-04-25
-How and Why to Manipulate Your Own Agent: On the Incentives of Users of Learning Agents | OpenReview,https://openreview.net/forum?id=9i7Sf1aRYq,https://www.twitter.com/unlock_VALue,
-Block vs. Slot Auction PBS — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/CPYI91s98cp9zKFkanKs_qotYzw09kWvouaAa9GXBrQ,https://www.twitter.com/unlock_VALue,
-Cross-chain Auctions via Bitcoin Double Spends | by James Prestwich | Summa | Medium,https://medium.com/summa-technology/summa-auction-bitcoin-technical-7344096498f2,https://www.twitter.com/unlock_VALue,
-"New D-Limit Functionality, New D-Limit Optionality",https://www.iex.io/article/new-d-limit-functionality-new-d-limit-optionality,https://www.twitter.com/unlock_VALue,
-It’s time to talk about DeFi’s risk management problems. — Morpho,https://morpho.mirror.xyz/F652srnxjv4qsIEHLUrDwOvrYgXU8p0io2cNogb2BJY,https://www.twitter.com/unlock_VALue,
-"order flow, auctions and centralisation II - order flow auctions",https://writings.flashbots.net/order-flow-auctions-and-centralisation-II,https://www.twitter.com/unlock_VALue,2022-09-19
-Discrimination of Toxic Flow in Uniswap V3: Part 1 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-1-fb5b6e01398b,https://www.twitter.com/unlock_VALue,
-Discrimination of Toxic Flow in Uniswap V3: Part 2 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-2-21d84aaa33f5,https://www.twitter.com/unlock_VALue,
-Discrimination of Toxic Flow in Uniswap V3: Part 3 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-3-4afb386311c0,https://www.twitter.com/unlock_VALue,
-Discrimination of Toxic Flow in Uniswap V3: Part 4 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-4-c09656ec016e,https://www.twitter.com/unlock_VALue,
-"Flashbots Transparency Report: SUAVE Centauri, MEV-Share CTF, PBS Guild & EthCC - The Flashbots Ship - The Flashbots Collective",https://collective.flashbots.net/t/flashbots-transparency-report-suave-centauri-mev-share-ctf-and-pbs-guild/2264,https://www.twitter.com/unlock_VALue,2023-08-25
-"Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.",https://flashbots.notion.site/Batching-Bidding-and-Latency-db23db03ca4745df9409289283cd4d1b,https://www.twitter.com/unlock_VALue,
-Uniswap v4 TWAMM Hook,https://blog.uniswap.org/v4-twamm-hook,https://www.twitter.com/unlock_VALue,
-"Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.",https://nftperp.notion.site/Protocol-Mechanism-nftperp-V2-8e4cb30f08b94aa2a576097a5008df24,https://www.twitter.com/unlock_VALue,
-"Wintermute DeFi Governance Digest — September 2023 | Week 1 | by Callen | Wintermute | Sep, 2023 | Medium",https://medium.com/wintermute-trading/wintermute-defi-governance-digest-september-2023-week-1-cb4fc6c24db2,https://www.twitter.com/unlock_VALue,
-Why Exchange Rebate Tiers Are Anti-Competitive,https://www.iex.io/article/why-exchange-rebate-tiers-are-anti-competitive,https://www.twitter.com/unlock_VALue,
-"The Rising Tide of Broker Costs, and the Shrinking Pool of Competitors",https://www.iex.io/article/the-rising-tide-of-broker-costs-and-the-shrinking-pool-of-competitors,https://www.twitter.com/unlock_VALue,
-The Comment Letters Are In. Here's What They Actually Say.,https://www.iex.io/article/the-comment-letters-are-in-heres-what-they-actually-say,https://www.twitter.com/unlock_VALue,
-The SEC Plan to Light Up Better Prices: Lots Still to Do,https://www.iex.io/article/the-sec-plan-to-light-up-better-prices-lots-still-to-do,https://www.twitter.com/unlock_VALue,
-IEX Exchange’s Position on the SEC’s Proposed Changes to Regulation NMS,https://www.iex.io/article/iex-exchanges-position-on-the-secs-proposed-changes-to-regulation-nms,https://www.twitter.com/unlock_VALue,
-Exploring the Impact of Signal V6 on D-Peg and P-Peg Performance,https://www.iex.io/article/exploring-the-impact-of-signal-v6-on-d-peg-and-p-peg-performance,https://www.twitter.com/unlock_VALue,
-Updating the Signal for Today’s Markets,https://www.iex.io/article/updating-the-signal-for-todays-markets,https://www.twitter.com/unlock_VALue,
-"Flash Boys' exchange IEX ramps up effort to cater to Reddit retail crowd, forms broker commuttee to improve stock-market structure",https://www.iex.io/article/flash-boys-exchange-iex-ramps-up-effort-to-cater-to-reddit-retail-crowd-forms-broker-commuttee-to-improve-stock-market-structure,https://www.twitter.com/unlock_VALue,
-"order flow, auctions and centralisation II - order flow auctions",https://writings.flashbots.net/order-flow-auctions-and-centralisation-II/,https://www.twitter.com/unlock_VALue,2022-09-19
-Ethereum is a Dark Forest,https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest,https://www.twitter.com/unlock_VALue,
-Ethereum Blockspace - Who Gets What and Why,https://www.paradigm.xyz/2021/03/ethereum-blockspace-who-gets-what-and-why,https://www.twitter.com/barnabemonnot,
-Intent-Based Architectures and Their Risks,https://www.paradigm.xyz/2023/06/intents,https://www.twitter.com/unlock_VALue,
-Awesome SGX & TEE on Blockchain - HackMD,https://hackmd.io/@erayack/BJhNZ_l_h,https://www.twitter.com/unlock_VALue,
-"Time, slots, and the ordering of events in Ethereum Proof-of-Stake",https://www.paradigm.xyz/2023/04/mev-boost-ethereum-consensus,https://www.twitter.com/unlock_VALue,
-CredibleCommitments.WTF - HackMD,https://hackmd.io/@sxysun/ccdwtf,https://www.twitter.com/unlock_VALue,
-Programmable Privacy - HackMD,https://hackmd.io/@sxysun/progpriv,https://www.twitter.com/unlock_VALue,
-SUAVE Spec - HackMD,https://hackmd.io/@sxysun/suavespec,https://www.twitter.com/barnabemonnot,
-"Short Note on {Monarch, Moloch, Mafia} Extractable Value - HackMD",https://hackmd.io/@sxysun/short-note-ext,https://www.twitter.com/unlock_VALue,
-Secret Auctions: Towards Decentralized OTC and Dark Pools | Secret Network Blog,https://scrt.network/blog/secret-auctions-decentralized-otc-dark-pools/,https://www.twitter.com/unlock_VALue,
-MEV capturing AMM (McAMM) - Applications - Ethereum Research,https://ethresear.ch/t/mev-capturing-amm-mcamm/13336,https://www.twitter.com/unlock_VALue,2022-08-10
-SLOB: Searcher Limit Order Book,https://jumpcrypto.com/writing/searcher-limit-order-book/,https://www.twitter.com/unlock_VALue,
-DERPs: Decentralized Reinsurance Pools,https://jumpcrypto.com/writing/decentralized-reinsurance-pools/,https://www.twitter.com/unlock_VALue,
-MEV is disappearing,https://www.propellerheads.xyz/blog/mev-is-dead-long-live-mev,https://www.twitter.com/unlock_VALue,
-MEV burn—a simple design - Economics - Ethereum Research,https://ethresear.ch/t/mev-burn-a-simple-design/15590,https://www.twitter.com/unlock_VALue,2023-05-15
-How much can we constrain builders without bringing back heavy burdens to proposers? - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/how-much-can-we-constrain-builders-without-bringing-back-heavy-burdens-to-proposers/13808,https://www.twitter.com/unlock_VALue,2022-10-01
-Cascading Network Effects on Ethereum's Finality - Consensus - Ethereum Research,https://ethresear.ch/t/cascading-network-effects-on-ethereums-finality/15871,https://www.twitter.com/unlock_VALue,2023-06-13
-Proposer/block builder separation-friendly fee market designs - Economics - Ethereum Research,https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725,https://www.twitter.com/unlock_VALue,2021-06-04
-MEV-SGX: A sealed bid MEV auction design - #14 by yoavw - Economics - Ethereum Research,https://ethresear.ch/t/mev-sgx-a-sealed-bid-mev-auction-design/9677/14,https://www.twitter.com/unlock_VALue,2021-06-08
-Payload-timeliness committee (PTC) – an ePBS design - #2 by addyxvii - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/payload-timeliness-committee-ptc-an-epbs-design/16054/2,https://www.twitter.com/unlock_VALue,2023-07-07
-The Centralizing Effects of Private Order Flow on Proposer-Builder Separation,https://www.mechanism.org/spec/02,https://www.twitter.com/unlock_VALue,
-Unbundling PBS: Towards protocol-enforced proposer commitments (PEPC) - Economics - Ethereum Research,https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879?u=barnabe,https://www.twitter.com/unlock_VALue,2022-10-08
-MEV Auctions Will Kill Ethereum - Economics - Ethereum Research,https://ethresear.ch/t/mev-auctions-will-kill-ethereum/9060,https://www.twitter.com/unlock_VALue,2021-03-31
-mev [re]search-athon ([sign up](https://lu.ma/bs3kx2pr)) - HackMD,https://hackmd.io/@Carboclanc/H1ZvjQmAj,https://www.twitter.com/unlock_VALue,
-AugmentHack - HackMD,https://hackmd.io/@sxysun/hackideas,https://www.twitter.com/unlock_VALue,
-Why AI? - HackMD,https://hackmd.io/@sxysun/crypto-ai,https://www.twitter.com/unlock_VALue,
-Why Cooperative AI and Blockchain Researchers Should Collaborate - HackMD,https://hackmd.io/@sxysun/coopaimev,https://www.twitter.com/unlock_VALue,
-Blockchain in the age of LLMs,https://www.propellerheads.xyz/blog/blockchain-and-llms,https://www.twitter.com/unlock_VALue,
-Survey: What the Buyside Really Thinks About the SEC’s Reg NMS Proposal,https://www.iex.io/article/survey-what-the-buyside-really-thinks-about-the-secs-reg-nms-proposal?utm_source=twitter&utm_medium=blog&utm_campaign=buyside_survey&utm_id=marketstructure&utm_term=exchange,https://www.twitter.com/unlock_VALue,
-LVR-minimization in Uniswap V4 - Decentralized exchanges - Ethereum Research,https://ethresear.ch/t/lvr-minimization-in-uniswap-v4/15900,https://www.twitter.com/unlock_VALue,2023-06-16
-Unbundling PBS: Towards protocol-enforced proposer commitments (PEPC) - #4 by barnabe - Economics - Ethereum Research,https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879/4?u=barnabe,https://www.twitter.com/unlock_VALue,2022-10-16
-The Open Problems of Onchain Games,https://www.paradigm.xyz/2023/08/onchain-games,https://www.twitter.com/unlock_VALue,
-Breaking Down the SEC Plan on Exchange Fees,https://www.iex.io/article/breaking-down-the-sec-plan-on-exchange-fees,https://www.twitter.com/unlock_VALue,
-On the impossibility of stateless blockchains,https://a16zcrypto.com/posts/article/on-the-impossibility-of-stateless-blockchains/,https://www.twitter.com/unlock_VALue,
-Strong Builder Identity for Combating Builder Imposter Attacks - Cryptography - Ethereum Research,https://ethresear.ch/t/strong-builder-identity-for-combating-builder-imposter-attacks/16550,https://www.twitter.com/unlock_VALue,2023-09-05
-Policy Recommendations for Decentralized Finance (DeFi) Consultation Report,https://www.iosco.org/library/pubdocs/pdf/IOSCOPD744.pdf,https://www.twitter.com/freddmannen,
-Borderless Ethereum - Measuring the geographical distribution of validators - Projects - Lido Governance,https://research.lido.fi/t/borderless-ethereum-measuring-the-geographical-distribution-of-validators/4472,https://www.twitter.com/unlock_VALue,2023-04-25
-Towards an intent-centric topology [draft] - Comparative Architecture - Anoma | Research & Development Forum,https://research.anoma.net/t/towards-an-intent-centric-topology-draft/214,https://www.twitter.com/barnabemonnot,2023-08-25
-Shutterized Beacon Chain - Execution Layer Research - Ethereum Research,https://ethresear.ch/t/shutterized-beacon-chain/12249,https://www.twitter.com/barnabemonnot,2022-03-24
-"Protocol-Owned Builders, The Future of Sovereign Cosmos MEV",https://osmosis.zone/blog/protocol-owned-builders-the-future-of-sovereign-cosmos-mev,https://www.twitter.com/barnabemonnot,
-MEV Markets Part 1: Proof of Work — 0xShitTrader,https://mirror.xyz/0xshittrader.eth/WiV8DM3I6abNMVsXf-DqioYb2NglnfjmM-zSsw2ruG8,https://twitter.com/0xTaker,
-MEV Markets Part 2: Proof of Stake — 0xShitTrader,https://mirror.xyz/0xshittrader.eth/c6J_PCK87K3joTWmLEtG6qVN6BFXLBZxQniReYSEjLI,https://twitter.com/0xTaker,
-MEV Markets Part 3: Payment for Order Flow — 0xShitTrader,https://mirror.xyz/0xshittrader.eth/f2VSuoZ91vAbCv82MtWM-Gosyf_DeUXfPlDx3EYV3RM,https://twitter.com/0xTaker,
-Commitments and privacy in the MEV supply chain,https://docs.google.com/presentation/d/1F0v0cnLIxJ5ZbBTmUHjoeyw23U9zDYlo/edit,https://www.twitter.com/unlock_VALue,
-Analysis of EIP-2593 (Escalator),https://insights.deribit.com/market-research/analysis-of-eip-2593-escalator/,https://www.twitter.com/unlock_VALue,
-EIP-2938: Account Abstraction,https://eips.ethereum.org/EIPS/eip-2938,https://www.twitter.com/unlock_VALue,
-Notes on Proposer-Builder Separation (PBS),https://barnabe.substack.com/p/pbs,https://www.twitter.com/unlock_VALue,
-All is Fair in Arb and MEV on Avalanche C-Chain,https://www.ddmckinnon.com/2022/11/27/all-is-fair-in-arb-and-mev-on-avalanche-c-chain/,https://www.twitter.com/unlock_VALue,
-The Cost of Decentralization in 0x and EtherDelta,https://hackingdistributed.com/2017/08/13/cost-of-decent/,https://twitter.com/0xTaker,
-Anatomy of an MEV Strategy: Synthetix,https://bertcmiller.com/2021/09/05/mev-synthetix.html,https://twitter.com/0xTaker,
-Order Flows: Kingmaker of the Block Builders 👑,https://noxx.substack.com/p/order-flows-kingmaker-of-the-block,https://twitter.com/0xTaker,
-"DEX Arbitrage, Mathematical Optimisations & Me",https://noxx.substack.com/p/dex-arbitrage-mathematical-optimisations,https://twitter.com/0xTaker,
-Designing Multi-Dimensional Blockchain Fee Markets — Emperor,https://crypto.mirror.xyz/ztCt3eXw-wCEwqBE6xCRTf-bZleezhyuW3ubxohYbBQ,https://www.twitter.com/unlock_VALue,
-Defining the Latencies involved in MEV Strategies — Taker,https://taker.mirror.xyz/uYOelwkLc4K7nlo5XV_zpuqsV6MwIMMp-py4e-u4qnE,https://www.twitter.com/unlock_VALue,
-Merge Anniversary - A Year In Review - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/merge-anniversary-a-year-in-review/2400,https://www.twitter.com/unlock_VALue,2023-11-14
-"Ethereum Proposer-Builder Separation: Past, Present, and Future — Chaskin OnChain",https://mirror.xyz/0x218932707a30bE62Ef8559d32d954863933b412f/MhJM9li409wxuOSYaw5EcLjUQoLSx5iYZXZNgMZU4uM,https://www.twitter.com/unlock_VALue,
-,https://www.steakhouse.financial/projects/stablecoin-manual,https://www.twitter.com/unlock_VALue,
-Operating Manual for Decentralized Stablecoins 1st ed. — Steakhouse Financial,https://ipfs.io/ipfs/QmdtK6QQqXBkaBh7bNNKr2FTSwGSPxDMDiCnpR88LMc84d,https://www.twitter.com/unlock_VALue,
-Xangle: EIP4844 and Its Impact on Rollup Economics,https://coinmarketcap.com/alexandria/article/xangle-eip4844-and-its-impact-on-rollup-economics,https://twitter.com/Freddmannen,
-Quantifying MEV: Introducing MEV-Explore v0 | by Alex Obadia | Flashbots | Medium,https://medium.com/flashbots/quantifying-mev-introducing-mev-explore-v0-5ccbee0f6d02,https://twitter.com/Freddmannen,
-MEV Auction: Auctioning transaction ordering rights as a solution to Miner Extractable Value - Economics - Ethereum Research,https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788,https://twitter.com/Freddmannen,2020-01-15
-Spam resistant block creator selection via burn auction - Miscellaneous - Ethereum Research,https://ethresear.ch/t/spam-resistant-block-creator-selection-via-burn-auction/5851,https://twitter.com/Freddmannen,2019-07-21
-Ethereum is a Dark Forest - Dan Robinson - Medium,https://medium.com/@danrobinson/ethereum-is-a-dark-forest-ecc5f0505dff,https://twitter.com/Freddmannen,
-Exploring DeFi Trading Strategies: Arbitrage in DeFi | by Alex Obadia | Cambrial Capital | Medium,https://medium.com/cambrial-capital/exploring-defi-trading-strategies-arbitrage-in-defi-7736dc5dd77a,https://twitter.com/Freddmannen,
-How to munch on pickles from a whale dinner | by Tomasz Mierzwa | Token Flow Insights | Medium,https://medium.com/token-flow-insights/how-to-munch-on-pickles-from-a-whale-dinner-edb5628cc769,https://twitter.com/Freddmannen,
-Gas Gambits — Game Theory Example of Incentivized Collaboration | by KeeperDAO | KeeperDAO | Medium,https://medium.com/keeperdao/gas-gambits-game-theory-example-of-incentivized-collaboration-9a42e9c9b867,https://twitter.com/Freddmannen,
-MEV auctions considered harmful. Front-running is a persistent problem… | by Ed Felten | Offchain Labs | Medium,https://medium.com/offchainlabs/mev-auctions-considered-harmful-fa72f61a40ea,https://twitter.com/Freddmannen,
-An Incomplete Primer on Intents — Emperor,https://crypto.mirror.xyz/Wvzro_O92V5Z_RBfZnZUqdbYC_4X6v2YrBuy9RkZCxo,https://twitter.com/unlock_VALue,
-The High-Frequency Trading Arms Race: Frequent Batch Auctions as a Market Design Response,https://academic.oup.com/qje/article/130/4/1547/1916146?login=false,https://twitter.com/Freddmannen,
-,https://signalsandthreads.com/state-machine-replication-and-why-you-should-care/,https://twitter.com/Freddmannen,
-,https://www.binance.com/en/research/analysis/oracle-less-challenging-the-status-quo,https://twitter.com/unlock_VALue,
-,https://www.umbraresearch.xyz/writings/ethereum-supply-chain-part-1,https://twitter.com/Freddmannen,
-,https://blog.mangata.finance/blog/2021-10-10-themis-protocol/,https://twitter.com/uPeterKris,
-HackMD - Collaborative Markdown Knowledge Base,https://hackmd.io/@EspressoSystems,https://twitter.com/Freddmannen,
-Spec'ing out Forward Inclusion-List w/ Dedicated Gas Limits - Block proposer - Ethereum Research,https://ethresear.ch/t/specing-out-forward-inclusion-list-w-dedicated-gas-limits/17115,https://twitter.com/Freddmannen,2023-10-17
-Profile - diego - Ethereum Research,https://ethresear.ch/u/diego,https://twitter.com/Freddmannen,
-,https://taiko.mirror.xyz/7dfMydX1FqEx9_sOvhRt3V8hJksKSIWjzhCVu7FyMZ,https://twitter.com/Freddmannen,
-Ending LP's Losing Game: Exploring the Loss-Versus-Rebalancing (… — 0xKeyu,https://mirror.xyz/0xbdA5bCe76bF62d97D9C9dF0425CC10079Df1aD75/bWOCccjVC7eoYKOzgmjXFdhWDc8rrUL6Yei-eugF52s,https://twitter.com/Freddmannen,
-Escaping the Dark Forest,https://www.paradigm.xyz/2020/09/escaping-the-dark-forest,https://twitter.com/0x_emperor,
-MEV-SGX -- A sealed bid MEV auction design,https://writings.flashbots.net/mev-sgx,https://twitter.com/0x_emperor,2021-05-31
-On the Formalization of MEV,https://writings.flashbots.net/formalization-mev,https://twitter.com/0x_emperor,2021-12-04
-MEV in eth2 - an early exploration,https://writings.flashbots.net/mev-eth2,https://twitter.com/0x_emperor,2021-06-09
-MEV and EIP-1559 - HackMD,https://hackmd.io/@flashbots/MEV-1559,https://twitter.com/0x_emperor,
-MEV-Boost: Merge ready Flashbots Architecture - The Merge - Ethereum Research,https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177,https://twitter.com/0x_emperor,2021-11-04
-Quantifying Total Extracted MEV -- A List of Resources - Research - The Flashbots Collective,https://collective.flashbots.net/t/quantifying-total-extracted-mev-a-list-of-resources/936,https://twitter.com/0x_emperor,2022-12-20
-,https://github.com/flashbots/mev-research,https://twitter.com/0x_emperor,
-Searching Post-Merge,https://writings.flashbots.net/searching-post-merge,https://twitter.com/unlock_VALue,2022-08-25
-Flashbots Protect -- The Merge & Beyond,https://writings.flashbots.net/flashbots-protect-merge-and-beyond,https://twitter.com/unlock_VALue,2022-08-23
-Open sourcing the Flashbots Relay,https://writings.flashbots.net/Flashbots-Relay-open-sourcing,https://twitter.com/unlock_VALue,2022-08-17
-Understanding liveness risks from mev-boost,https://writings.flashbots.net/understanding-mev-boost-liveness-risks,https://twitter.com/unlock_VALue,2022-08-05
-Boost your MEV in Ethereum proof-of-stake,https://writings.flashbots.net/mev-boost-call-for-testing,https://twitter.com/unlock_VALue,2022-06-20
-Beginner's Guide to mev-boost,https://writings.flashbots.net/beginners-guide-mevboost,https://twitter.com/unlock_VALue,2022-06-15
-Why run mev-boost?,https://writings.flashbots.net/why-run-mevboost,https://twitter.com/unlock_VALue,2022-06-07
-The MEV Supply Chain - a peek into the future of this industry,https://writings.flashbots.net/mev-supply-chain,https://twitter.com/unlock_VALue,2022-05-02
-Speeding up the EVM (part 1),https://writings.flashbots.net/speeding-up-evm-part-1,https://twitter.com/unlock_VALue,2022-01-17
-Flashbots Transparency Report — Sept-Dec 2021,https://writings.flashbots.net/transparency-21q4,https://twitter.com/unlock_VALue,2022-01-17
-How To Light Up The Dark Forest - A Walkthrough of Building A Cryptopunk MEV Inspector,https://writings.flashbots.net/the-anatomy-of-an-inspector,https://twitter.com/unlock_VALue,2021-12-15
-Why Building the Most Profitable Block is Important,https://writings.flashbots.net/on-the-most-profitable-block,https://twitter.com/unlock_VALue,2021-12-12
-Unity is Strength - A Formalization of Cross-Domain Maximal Extractable Value,https://writings.flashbots.net/cross-domain-mev,https://twitter.com/unlock_VALue,2021-12-03
-Announcing the Flashbots Eth2 Working Group,https://writings.flashbots.net/announcing-eth2-working-group,https://twitter.com/unlock_VALue,2021-11-30
-Ken Griffin and the MEV dystopia,https://writings.flashbots.net/ken-griffin-mev,https://twitter.com/unlock_VALue,2021-11-22
-MEV-Boost -- Merge ready Flashbots Architecture,https://writings.flashbots.net/mev-boost,https://twitter.com/unlock_VALue,2021-11-03
-Announcing Flashbots Protect,https://writings.flashbots.net/announcing-protect,https://twitter.com/unlock_VALue,2021-10-06
-Flashbots Transparency Report — July & August 2021,https://writings.flashbots.net/transparency-july-august,https://twitter.com/unlock_VALue,2021-09-21
-On the Design of MEV Marketplaces,https://writings.flashbots.net/design-mev-marketplaces,https://twitter.com/unlock_VALue,2021-08-04
-MEV and EIP-1559,https://writings.flashbots.net/mev-1559,https://twitter.com/unlock_VALue,2021-07-19
-Flashbots on Reorgs,https://writings.flashbots.net/flashbots-reorgs,https://twitter.com/unlock_VALue,2021-07-16
-Flashbots Transparency Report — May & June 2021,https://writings.flashbots.net/transparency-may-june,https://twitter.com/unlock_VALue,2021-06-28
-Quantifying Realized Extractable Value,https://writings.flashbots.net/quantifying-rev,https://twitter.com/unlock_VALue,2021-05-16
-Flashbots Transparency Report — April 2021,https://writings.flashbots.net/transparency-april,https://twitter.com/unlock_VALue,2021-05-13
-Flashbots Transparency Report — March 2021,https://writings.flashbots.net/transparency-march,https://twitter.com/unlock_VALue,2021-04-12
-Flashbots Transparency Report — February 2021,https://writings.flashbots.net/transparency-february,https://twitter.com/unlock_VALue,2021-03-18
-Quantifying MEV—Introducing MEV-Explore v0,https://writings.flashbots.net/quantifying-mev,https://twitter.com/unlock_VALue,2021-02-22
-Flashbots Transparency Report — January 2021,https://writings.flashbots.net/transparency-january,https://twitter.com/unlock_VALue,2021-02-07
-Flashbots -- Frontrunning the MEV crisis,https://writings.flashbots.net/ethr-frontrunning-mev-crisis,https://twitter.com/unlock_VALue,2020-11-23
-Flashbots—Frontrunning the MEV Crisis,https://writings.flashbots.net/frontrunning-mev-crisis,https://twitter.com/unlock_VALue,2020-11-23
-Open sourcing the Flashbots MEV-Share Node,https://writings.flashbots.net/open-sourcing-flashbots-mev-share-node,https://twitter.com/unlock_VALue,2023-07-24
-Searching On MEV-Share,https://writings.flashbots.net/searching-on-mev-share,https://twitter.com/unlock_VALue,2023-05-02
-Block Building inside SGX,https://writings.flashbots.net/block-building-inside-sgx,https://twitter.com/unlock_VALue,2023-03-03
-Open sourcing the Flashbots Builder,https://writings.flashbots.net/open-sourcing-the-flashbots-builder,https://twitter.com/unlock_VALue,2022-11-18
-"MEV for the Next Trillion, It's Time to Get Serious…",https://writings.flashbots.net/mev-for-the-next-trillion,https://twitter.com/unlock_VALue,2022-10-11
+title,article,referrer,release_date,authors
+PEPC-DVT: PEPC with no changes to the consensus protocol - Economics - Ethereum Research,https://ethresear.ch/t/pepc-dvt-pepc-with-no-changes-to-the-consensus-protocol/16514,https://www.twitter.com/freddmannen,2023-08-31,https://ethresear.ch/u/diego
+Three dichotomies in ePBS - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/three-dichotomies-in-epbs/16267,https://www.twitter.com/freddmannen,2023-08-03,https://ethresear.ch/u/potuz
+Shared sequencer for MEV protection and profitable marketplace - Layer 2 - Ethereum Research,https://ethresear.ch/t/shared-sequencer-for-mev-protection-and-profitable-marketplace/15313,https://www.twitter.com/freddmannen,2023-04-16,https://ethresear.ch/u/0xTariz
+Burning MEV through block proposer auctions - Economics - Ethereum Research,https://ethresear.ch/t/burning-mev-through-block-proposer-auctions/14029,https://www.twitter.com/freddmannen,2022-10-26,https://ethresear.ch/u/domothy
+Single-slot PBS using attesters as distributed availability oracle - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/single-slot-pbs-using-attesters-as-distributed-availability-oracle/11877,https://www.twitter.com/freddmannen,2022-01-27,https://ethresear.ch/u/vbuterin
+Two-slot proposer/builder separation - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/two-slot-proposer-builder-separation/10980,https://www.twitter.com/freddmannen,2021-10-10,https://ethresear.ch/u/vbuterin
+Timing games in Proof-of-Stake - Economics - Ethereum Research,https://ethresear.ch/t/timing-games-in-proof-of-stake/13980,https://www.twitter.com/freddmannen,2022-10-20,https://ethresear.ch/u/barnabe
+Latency arms race concerns in blockspace markets - Economics - Ethereum Research,https://ethresear.ch/t/latency-arms-race-concerns-in-blockspace-markets/14957,https://www.twitter.com/freddmannen,2023-03-03,https://ethresear.ch/u/dcrapis
+Unbundling PBS: Towards protocol-enforced proposer commitments (PEPC) - Economics - Ethereum Research,https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879,https://www.twitter.com/freddmannen,2022-10-08,https://ethresear.ch/u/barnabe
+Equivocation attacks in mev-boost and ePBS - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/equivocation-attacks-in-mev-boost-and-epbs/15338,https://www.twitter.com/freddmannen,2023-04-18,https://ethresear.ch/u/mikeneuder
+Why enshrine Proposer-Builder Separation? A viable path to ePBS - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/why-enshrine-proposer-builder-separation-a-viable-path-to-epbs/15710,https://www.twitter.com/freddmannen,2023-05-25,https://ethresear.ch/u/mikeneuder
+Increase the MAX_EFFECTIVE_BALANCE – a modest proposal - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/increase-the-max-effective-balance-a-modest-proposal/15801,https://www.twitter.com/freddmannen,2023-06-06,https://ethresear.ch/u/mikeneuder
+Payload-timeliness committee (PTC) – an ePBS design - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/payload-timeliness-committee-ptc-an-epbs-design/16054,https://www.twitter.com/freddmannen,2023-07-06,https://ethresear.ch/u/mikeneuder
+Relays in a post-ePBS world - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/relays-in-a-post-epbs-world/16278,https://www.twitter.com/freddmannen,2023-08-04,https://ethresear.ch/u/mikeneuder
+Bid cancellations considered harmful - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/bid-cancellations-considered-harmful/15500,https://www.twitter.com/freddmannen,2023-05-05,https://ethresear.ch/u/mikeneuder
+Slashing penalty analysis; EIP-7251 - Economics - Ethereum Research,https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509,https://www.twitter.com/freddmannen,2023-08-30,https://ethresear.ch/u/mikeneuder
+No free lunch – a new inclusion list design - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/no-free-lunch-a-new-inclusion-list-design/16389,https://www.twitter.com/freddmannen,2023-08-15,https://ethresear.ch/u/mikeneuder
+"Cumulative, Non-Expiring Inclusion Lists - Proof-of-Stake - Ethereum Research",https://ethresear.ch/t/cumulative-non-expiring-inclusion-lists/16520,https://www.twitter.com/freddmannen,2023-08-31,https://ethresear.ch/u/Nerolation
+Estimating inclusion delays for censored transactions - Economics - Ethereum Research,https://ethresear.ch/t/estimating-inclusion-delays-for-censored-transactions/15115,https://www.twitter.com/freddmannen,2023-03-22,https://ethresear.ch/u/soispoke
+Game-theoretic Model for MEV-boost Auctions (MMA) 🥊 - Economics - Ethereum Research,https://ethresear.ch/t/game-theoretic-model-for-mev-boost-auctions-mma/16206,https://www.twitter.com/freddmannen,2023-07-27,https://ethresear.ch/u/soispoke
+Empirical analysis of Builders' Behavioral Profiles (BBPs) - Economics - Ethereum Research,https://ethresear.ch/t/empirical-analysis-of-builders-behavioral-profiles-bbps/16327,https://www.twitter.com/freddmannen,2023-08-10,https://ethresear.ch/u/soispoke
+The_Merge__Reduced_Uncertainty__and_Front_Running_Bots.pdf - Google Drive,https://drive.google.com/file/d/1M5Y_Dc52O3QTFerEkIRErl4_6ywDB4iq/view,https://www.twitter.com/freddmannen,,
+Towards a Theory of Maximal Extractable Value II: Uncertainty.pdf - Google Drive,https://drive.google.com/file/d/1mLrlYTy6SLPVg4by-PJ9wqEuFZJOjhG4/preview,https://www.twitter.com/freddmannen,,
+The Merge series (part 3): MEV landscape — Rated,https://mirror.xyz/ratedw3b.eth/xltDyY32_xQyDiHHphj230kc0iEQL43Pwb7b6t_fzWQ,https://www.twitter.com/freddmannen,,
+MEV Resilient Ethereum - HackMD,https://notes.ethereum.org/@RMFhKOrSSEWxmqjZMOT1Ag/rJb_cq8Co,https://www.twitter.com/freddmannen,,
+PROF: Fair Transaction-Ordering in a Profit-Seeking World | by IC3 | Medium,https://initc3org.medium.com/prof-fair-transaction-ordering-in-a-profit-seeking-world-b6dadd71f086,https://www.twitter.com/freddmannen,,
+Rollups are Real — Rollup Economics 2.0,https://davidecrapis.notion.site/Rollups-are-Real-Rollup-Economics-2-0-2516079f62a745b598133a101ba5a3de,https://www.twitter.com/freddmannen,,
+"Block Builder Decentralization is coming, but maybe not so soon",https://succulent-throat-0ce.notion.site/Block-Builder-Decentralization-is-coming-but-maybe-not-so-soon-6e54e7d7e1d34d61af55e5d98a51eb8b,https://www.twitter.com/freddmannen,,
+"MEV Driven Centralization in Ethereum: Part 2 | by Simon Brown | Dec, 2022 | Medium",https://succulent-throat-0ce.notion.site/MEV-Driven-Centralization-in-Ethereum-Part-2-by-Simon-Brown-Dec-2022-Medium-507efc380b454791b362dddc7e2e066c,https://www.twitter.com/freddmannen,,
+The MEV Conundrum,https://verilog-solutions.notion.site/The-MEV-Conundrum-6d66001b150148739be14d73a8836903,https://www.twitter.com/freddmannen,,
+PEPC FAQ,https://efdn.notion.site/PEPC-FAQ-0787ba2f77e14efba771ff2d903d67e4,https://www.twitter.com/freddmannen,,
+Relays are a Latency Game. | By Alvaro Blazquez and Sachin Lal | by Metrika | Medium,https://blog.metrika.co/relays-are-a-latency-game-303aadb393ce,https://www.twitter.com/freddmannen,,
+"The Little Transaction that Could: Sequencers, MEV, Intents, and… — Archetype",https://archetype.mirror.xyz/McPqaV9WVyHhky1AAgGyS6DsZ8O0_OIBtED34sWpcUw,https://www.twitter.com/freddmannen,,
+L2 MEV wat — Taiko Labs,https://taiko.mirror.xyz/VjNjFws6OOVez5YCDMwjy4BUiDqZBHYDvcW4-JZGDkc,https://www.twitter.com/freddmannen,,
+MEV: Maximal Extractable Value Pt. 2 | Galaxy,https://www.galaxy.com/insights/research/mev-the-rise-of-the-builders/,https://www.twitter.com/freddmannen,,
+MEV: The First Five Years | James Prestwich | Medium,https://medium.com/@Prestwich/mev-c417d9a5eb3d,https://www.twitter.com/freddmannen,,
+MEV: The Next Five Years. That’s right I just won’t shut up | by James Prestwich | Medium,https://medium.com/@Prestwich/mev-the-next-five-years-63f84fffdf36,https://www.twitter.com/freddmannen,,
+Decentralized crypto needs you: to be a geographical decentralization maxi - Research - The Flashbots Collective,https://collective.flashbots.net/t/decentralized-crypto-needs-you-to-be-a-geographical-decentralization-maxi/1385,,2023-03-07,https://collective.flashbots.net/u/phil
+On Path Independence,https://vitalik.ca/general/2017/06/22/marketmakers.html,,,
+"order flow, auctions and centralisation I - a warning",https://writings.flashbots.net/order-flow-auctions-and-centralisation,https://www.twitter.com/unlock_VALue,2022-09-12,https://collective.flashbots.net/u/quintus
+Endgame,https://vitalik.ca/general/2021/12/06/endgame.html,https://www.twitter.com/unlock_VALue,,
+The Limits to Blockchain Scalability,https://vitalik.ca/general/2021/05/23/scaling.html,https://www.twitter.com/unlock_VALue,,
+Flashbots: Frontrunning the MEV crisis | Flashbots,https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752,https://www.twitter.com/unlock_VALue,,
+The Cost of Resilience,https://writings.flashbots.net/the-cost-of-resilience,https://www.twitter.com/unlock_VALue,2022-11-22,"https://collective.flashbots.net/u/elaine, https://collective.flashbots.net/u/alejo, https://collective.flashbots.net/u/hasu"
+The Future of MEV is SUAVE,https://writings.flashbots.net/the-future-of-mev-is-suave,https://www.twitter.com/unlock_VALue,2022-11-23,https://collective.flashbots.net/u/flashbots
+MEV Driven Centralization in Ethereum: Part 1 | by Simon Brown | Medium,https://simbro.medium.com/mev-driven-centralization-in-ethereum-ec829a214f18,https://www.twitter.com/unlock_VALue,,
+"Running Geth within SGX: Our Experience, Learnings and Code",https://writings.flashbots.net/geth-inside-sgx,https://www.twitter.com/unlock_VALue,2022-12-20,"https://collective.flashbots.net/u/metachris, https://collective.flashbots.net/u/frieder"
+Quantifying Info I: Quantifying The Information Leakage of Computing on Encrypted Transactions - Research - The Flashbots Collective,https://collective.flashbots.net/t/quantifying-info-i-quantifying-the-information-leakage-of-computing-on-encrypted-transactions/1752,https://www.twitter.com/unlock_VALue,2023-05-08,https://collective.flashbots.net/u/Quintus
+Can First Come First Served-Based Transaction Ordering Prevent Front-Running?,https://writings.flashbots.net/fcfs-and-front-running,https://www.twitter.com/unlock_VALue,2022-09-08,https://collective.flashbots.net/u/ra
+Opportunities and Considerations of Ethereum’s Blockspace Future,https://frontier.tech/ethereums-blockspace-future,https://www.twitter.com/barnabemonnot,,
+A Tale of Two Arbitrages,https://frontier.tech/a-tale-of-two-arbitrages,https://www.twitter.com/unlock_VALue,,
+Builder Dominance and Searcher Dependence,https://frontier.tech/builder-dominance-and-searcher-dependence,https://www.twitter.com/unlock_VALue,,
+The next steps in DEX design,https://frontier.tech/the-next-steps-in-dex-design,https://www.twitter.com/unlock_VALue,,
+Exploration of MEV Latencies,https://frontier.tech/exploration-of-mev-latencies,https://www.twitter.com/unlock_VALue,,
+Optimistic relays and where to find them,https://frontier.tech/optimistic-relays-and-where-to-find-them,https://www.twitter.com/unlock_VALue,,
+The NFT MEV Landscape,https://frontier.tech/the-nft-mev-landscape,https://www.twitter.com/unlock_VALue,,
+The Orderflow Auction Design Space,https://frontier.tech/the-orderflow-auction-design-space,https://www.twitter.com/unlock_VALue,,
+Beyond Extraction: The Role of Block Building in the Future of Ethereum,https://frontier.tech/beyond-extraction,https://www.twitter.com/unlock_VALue,,
+Unpacking ERC-4337,https://frontier.tech/unpacking-erc-4337,https://www.twitter.com/unlock_VALue,,
+MEV-Share: programmably private orderflow to share MEV with users - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/mev-share-programmably-private-orderflow-to-share-mev-with-users/1264/1,https://www.twitter.com/unlock_VALue,2023-02-15,https://collective.flashbots.net/u/bert
+The dream of redistributing the extracted value - Research - The Flashbots Collective,https://collective.flashbots.net/t/the-dream-of-redistributing-the-extracted-value/642,https://www.twitter.com/unlock_VALue,2022-10-27,https://collective.flashbots.net/u/chayoterabit
+Bookmarks relevant for redistribution researchers - #35 by chayoterabit - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663/35,https://www.twitter.com/unlock_VALue,,
+Bookmarks relevant for redistribution researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663,https://www.twitter.com/unlock_VALue,2023-11-27,https://collective.flashbots.net/u/chayoterabit
+Forward inclusion list - HackMD,https://notes.ethereum.org/@fradamt/forward-inclusion-lists,https://www.twitter.com/unlock_VALue,,
+Unified ERC-4337 mempool - HackMD,https://notes.ethereum.org/@yoav/unified-erc-4337-mempool,https://www.twitter.com/unlock_VALue,,
+Structuring Blockspace Derivatives — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/WKa3GFC03uY34d2MufTyD0c595xVRUEZi9RNG-dHNKs,https://www.twitter.com/unlock_VALue,,
+Bookmarks relevant for Proposer-Builder Separation (PBS) researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-proposer-builder-separation-pbs-researchers/1319,https://www.twitter.com/unlock_VALue,2023-02-22,https://collective.flashbots.net/u/alex
+Proposer/Builder Separation material - HackMD,https://notes.ethereum.org/@domothy/pbs_links,https://www.twitter.com/unlock_VALue,,
+A beginner’s guide to buying an ENS domain | by Nick Johnson | Medium,https://weka.medium.com/a-beginners-guide-to-buying-an-ens-domain-3ccac2bdc770,https://www.twitter.com/unlock_VALue,,
+"Post mortem: April 3rd, 2023 mev-boost relay incident and related timing issue - The Flashbots Ship - The Flashbots Collective",https://collective.flashbots.net/t/post-mortem-april-3rd-2023-mev-boost-relay-incident-and-related-timing-issue/1540,https://www.twitter.com/unlock_VALue,2023-04-04,https://collective.flashbots.net/u/bert
+Ideas for Incentivizing Relays - #4 by dmarz - Relays - The Flashbots Collective,https://collective.flashbots.net/t/ideas-for-incentivizing-relays/586/4,https://www.twitter.com/unlock_VALue,2022-10-19,https://collective.flashbots.net/u/dmarz
+State of research: increasing censorship resistance of transactions under proposer/builder separation (PBS) - HackMD,https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance,https://www.twitter.com/unlock_VALue,,
+"Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.",https://efdn.notion.site/Robust-Incentives-Group-homepage-802339956f2745a5964d8461c5ccef02,https://www.twitter.com/unlock_VALue,,
+FRP Year in Review,https://writings.flashbots.net/frp-year-in-review,https://www.twitter.com/unlock_VALue,2023-07-10,https://collective.flashbots.net/u/sarah
+MEV-sbc Workshop,https://www.flashbots.net/mev-sbc-workshop,https://www.twitter.com/unlock_VALue,,
+HackMD - Collaborative Markdown Knowledge Base,https://hackmd.io/@sxysun,https://www.twitter.com/unlock_VALue,,
+Worldcoin Edges Closer to AI-Driven Crypto Identity Device - The Defiant,https://thedefiant.io/worldcoin-ai-privacy-orb,https://www.twitter.com/unlock_VALue,,
+Redefining Sequencers: Understanding the Aggregator and the Header Producer | by NashQ | Medium,https://medium.com/@nashqueue/redefining-sequencers-understanding-the-aggregator-and-the-header-producer-76ee198dd4,https://www.twitter.com/unlock_VALue,,
+Backrunning Private Transactions Using Multi-Party Computation,https://writings.flashbots.net/backrunning-private-txs-MPC,https://www.twitter.com/unlock_VALue,2023-02-27,https://collective.flashbots.net/u/ra
+Technology | IEX Exchange | IEX,https://www.iexexchange.io/technology,https://www.twitter.com/unlock_VALue,,
+"The MEVM, SUAVE Centauri, and Beyond",https://writings.flashbots.net/mevm-suave-centauri-and-beyond,https://www.twitter.com/unlock_VALue,2023-07-13,https://collective.flashbots.net/u/robert
+Risk Management Case Study: Agora / Metis | by Gauntlet | Gauntlet | Medium,https://medium.com/gauntlet-networks/risk-management-case-study-agora-metis-9a304ce46de0,https://www.twitter.com/unlock_VALue,,
+Modular Searcher Design: A Framework for Building Searchers — Taker,https://mirror.xyz/0x00000a2A02540A0D92e209F9f5F7e104745e06Ba/hB-XeiOfkV5neiwX34lBD0uLHlWdefbGX6oBz1B4o7w,https://www.twitter.com/unlock_VALue,,
+Don't overload Ethereum's consensus,https://vitalik.ca/general/2023/05/21/dont_overload.html,https://www.twitter.com/unlock_VALue,,
+Improved Coordination with Failsafes and Belief-Conditioned Programs.pdf - Google Drive,https://drive.google.com/file/d/1qxJJf2Jsz3LJ3l__x4GVNBui6TvfJoYh/view,https://www.twitter.com/unlock_VALue,,
+"Coordination, Good and Bad",https://vitalik.ca/general/2020/09/11/coordination.html,https://www.twitter.com/unlock_VALue,,
+"Ethereum is game-changing technology, literally. | by Virgil Griffith | Medium",https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8,https://www.twitter.com/unlock_VALue,,
+"FRP-23: Constant Function Market Making, Social Welfare and Maximal Extractable Value - FRPs - Flashbots Research Proposals - The Flashbots Collective",https://collective.flashbots.net/t/frp-23-constant-function-market-making-social-welfare-and-maximal-extractable-value/752,https://www.twitter.com/unlock_VALue,2022-11-21,https://collective.flashbots.net/u/nikete
+Why Cryptoeconomics and X-Risk Researchers Should Listen to Each Other More | by Vitalik Buterin | Medium,https://medium.com/@VitalikButerin/why-cryptoeconomics-and-x-risk-researchers-should-listen-to-each-other-more-a2db72b3e86b,https://www.twitter.com/unlock_VALue,,
+FRP-26: Credible Commitments via Open Games - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-26-credible-commitments-via-open-games/1616,https://www.twitter.com/unlock_VALue,2022-12-06,https://collective.flashbots.net/u/system
+FRP-28: Contingent Fees in Order Flow Auctions - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-28-contingent-fees-in-order-flow-auctions/1594,https://www.twitter.com/unlock_VALue,2023-04-12,https://collective.flashbots.net/u/MaxR
+"MEV… do this.. MEV is not inevitable, it is a network… | by Pmcgoohan | Medium",https://pmcgoohan.medium.com/mev-do-this-beb2754bca63,https://www.twitter.com/unlock_VALue,,
+Presenting: VeeDo. a STARK-based VDF Service | by StarkWare | StarkWare | Medium,https://medium.com/starkware/presenting-veedo-e4bbff77c7ae,https://www.twitter.com/unlock_VALue,,
+Introducing the UniswapX Protocol,https://blog.uniswap.org/uniswapx-protocol,https://www.twitter.com/unlock_VALue,,
+Will the real MEV please stand up? - Data - The Flashbots Collective,https://collective.flashbots.net/t/will-the-real-mev-please-stand-up/1686,https://www.twitter.com/unlock_VALue,2023-04-25,https://collective.flashbots.net/u/elainehu
+How and Why to Manipulate Your Own Agent: On the Incentives of Users of Learning Agents | OpenReview,https://openreview.net/forum?id=9i7Sf1aRYq,https://www.twitter.com/unlock_VALue,,
+Block vs. Slot Auction PBS — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/CPYI91s98cp9zKFkanKs_qotYzw09kWvouaAa9GXBrQ,https://www.twitter.com/unlock_VALue,,
+Cross-chain Auctions via Bitcoin Double Spends | by James Prestwich | Summa | Medium,https://medium.com/summa-technology/summa-auction-bitcoin-technical-7344096498f2,https://www.twitter.com/unlock_VALue,,
+"New D-Limit Functionality, New D-Limit Optionality",https://www.iex.io/article/new-d-limit-functionality-new-d-limit-optionality,https://www.twitter.com/unlock_VALue,,
+It’s time to talk about DeFi’s risk management problems. — Morpho,https://morpho.mirror.xyz/F652srnxjv4qsIEHLUrDwOvrYgXU8p0io2cNogb2BJY,https://www.twitter.com/unlock_VALue,,
+"order flow, auctions and centralisation II - order flow auctions",https://writings.flashbots.net/order-flow-auctions-and-centralisation-II,https://www.twitter.com/unlock_VALue,2022-09-19,https://collective.flashbots.net/u/quintus
+Discrimination of Toxic Flow in Uniswap V3: Part 1 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-1-fb5b6e01398b,https://www.twitter.com/unlock_VALue,,
+Discrimination of Toxic Flow in Uniswap V3: Part 2 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-2-21d84aaa33f5,https://www.twitter.com/unlock_VALue,,
+Discrimination of Toxic Flow in Uniswap V3: Part 3 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-3-4afb386311c0,https://www.twitter.com/unlock_VALue,,
+Discrimination of Toxic Flow in Uniswap V3: Part 4 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-4-c09656ec016e,https://www.twitter.com/unlock_VALue,,
+"Flashbots Transparency Report: SUAVE Centauri, MEV-Share CTF, PBS Guild & EthCC - The Flashbots Ship - The Flashbots Collective",https://collective.flashbots.net/t/flashbots-transparency-report-suave-centauri-mev-share-ctf-and-pbs-guild/2264,https://www.twitter.com/unlock_VALue,2023-08-25,https://collective.flashbots.net/u/Fred
+"Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.",https://flashbots.notion.site/Batching-Bidding-and-Latency-db23db03ca4745df9409289283cd4d1b,https://www.twitter.com/unlock_VALue,,
+Uniswap v4 TWAMM Hook,https://blog.uniswap.org/v4-twamm-hook,https://www.twitter.com/unlock_VALue,,
+"Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.",https://nftperp.notion.site/Protocol-Mechanism-nftperp-V2-8e4cb30f08b94aa2a576097a5008df24,https://www.twitter.com/unlock_VALue,,
+"Wintermute DeFi Governance Digest — September 2023 | Week 1 | by Callen | Wintermute | Sep, 2023 | Medium",https://medium.com/wintermute-trading/wintermute-defi-governance-digest-september-2023-week-1-cb4fc6c24db2,https://www.twitter.com/unlock_VALue,,
+Why Exchange Rebate Tiers Are Anti-Competitive,https://www.iex.io/article/why-exchange-rebate-tiers-are-anti-competitive,https://www.twitter.com/unlock_VALue,,
+"The Rising Tide of Broker Costs, and the Shrinking Pool of Competitors",https://www.iex.io/article/the-rising-tide-of-broker-costs-and-the-shrinking-pool-of-competitors,https://www.twitter.com/unlock_VALue,,
+The Comment Letters Are In. Here's What They Actually Say.,https://www.iex.io/article/the-comment-letters-are-in-heres-what-they-actually-say,https://www.twitter.com/unlock_VALue,,
+The SEC Plan to Light Up Better Prices: Lots Still to Do,https://www.iex.io/article/the-sec-plan-to-light-up-better-prices-lots-still-to-do,https://www.twitter.com/unlock_VALue,,
+IEX Exchange’s Position on the SEC’s Proposed Changes to Regulation NMS,https://www.iex.io/article/iex-exchanges-position-on-the-secs-proposed-changes-to-regulation-nms,https://www.twitter.com/unlock_VALue,,
+Exploring the Impact of Signal V6 on D-Peg and P-Peg Performance,https://www.iex.io/article/exploring-the-impact-of-signal-v6-on-d-peg-and-p-peg-performance,https://www.twitter.com/unlock_VALue,,
+Updating the Signal for Today’s Markets,https://www.iex.io/article/updating-the-signal-for-todays-markets,https://www.twitter.com/unlock_VALue,,
+"Flash Boys' exchange IEX ramps up effort to cater to Reddit retail crowd, forms broker commuttee to improve stock-market structure",https://www.iex.io/article/flash-boys-exchange-iex-ramps-up-effort-to-cater-to-reddit-retail-crowd-forms-broker-commuttee-to-improve-stock-market-structure,https://www.twitter.com/unlock_VALue,,
+"order flow, auctions and centralisation II - order flow auctions",https://writings.flashbots.net/order-flow-auctions-and-centralisation-II/,https://www.twitter.com/unlock_VALue,2022-09-19,https://collective.flashbots.net/u/quintus
+Ethereum is a Dark Forest,https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest,https://www.twitter.com/unlock_VALue,,
+Ethereum Blockspace - Who Gets What and Why,https://www.paradigm.xyz/2021/03/ethereum-blockspace-who-gets-what-and-why,https://www.twitter.com/barnabemonnot,,
+Intent-Based Architectures and Their Risks,https://www.paradigm.xyz/2023/06/intents,https://www.twitter.com/unlock_VALue,,
+Awesome SGX & TEE on Blockchain - HackMD,https://hackmd.io/@erayack/BJhNZ_l_h,https://www.twitter.com/unlock_VALue,,
+"Time, slots, and the ordering of events in Ethereum Proof-of-Stake",https://www.paradigm.xyz/2023/04/mev-boost-ethereum-consensus,https://www.twitter.com/unlock_VALue,,
+CredibleCommitments.WTF - HackMD,https://hackmd.io/@sxysun/ccdwtf,https://www.twitter.com/unlock_VALue,,
+Programmable Privacy - HackMD,https://hackmd.io/@sxysun/progpriv,https://www.twitter.com/unlock_VALue,,
+SUAVE Spec - HackMD,https://hackmd.io/@sxysun/suavespec,https://www.twitter.com/barnabemonnot,,
+"Short Note on {Monarch, Moloch, Mafia} Extractable Value - HackMD",https://hackmd.io/@sxysun/short-note-ext,https://www.twitter.com/unlock_VALue,,
+Secret Auctions: Towards Decentralized OTC and Dark Pools | Secret Network Blog,https://scrt.network/blog/secret-auctions-decentralized-otc-dark-pools/,https://www.twitter.com/unlock_VALue,,
+MEV capturing AMM (McAMM) - Applications - Ethereum Research,https://ethresear.ch/t/mev-capturing-amm-mcamm/13336,https://www.twitter.com/unlock_VALue,2022-08-10,https://ethresear.ch/u/josojo
+SLOB: Searcher Limit Order Book,https://jumpcrypto.com/writing/searcher-limit-order-book/,https://www.twitter.com/unlock_VALue,,
+DERPs: Decentralized Reinsurance Pools,https://jumpcrypto.com/writing/decentralized-reinsurance-pools/,https://www.twitter.com/unlock_VALue,,
+MEV is disappearing,https://www.propellerheads.xyz/blog/mev-is-dead-long-live-mev,https://www.twitter.com/unlock_VALue,,
+MEV burn—a simple design - Economics - Ethereum Research,https://ethresear.ch/t/mev-burn-a-simple-design/15590,https://www.twitter.com/unlock_VALue,2023-05-15,https://ethresear.ch/u/JustinDrake
+How much can we constrain builders without bringing back heavy burdens to proposers? - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/how-much-can-we-constrain-builders-without-bringing-back-heavy-burdens-to-proposers/13808,https://www.twitter.com/unlock_VALue,2022-10-01,https://ethresear.ch/u/vbuterin
+Cascading Network Effects on Ethereum's Finality - Consensus - Ethereum Research,https://ethresear.ch/t/cascading-network-effects-on-ethereums-finality/15871,https://www.twitter.com/unlock_VALue,2023-06-13,https://ethresear.ch/u/soispoke
+Proposer/block builder separation-friendly fee market designs - Economics - Ethereum Research,https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725,https://www.twitter.com/unlock_VALue,2021-06-04,https://ethresear.ch/u/vbuterin
+MEV-SGX: A sealed bid MEV auction design - #14 by yoavw - Economics - Ethereum Research,https://ethresear.ch/t/mev-sgx-a-sealed-bid-mev-auction-design/9677/14,https://www.twitter.com/unlock_VALue,2021-06-08,https://ethresear.ch/u/bertmiller
+Payload-timeliness committee (PTC) – an ePBS design - #2 by addyxvii - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/payload-timeliness-committee-ptc-an-epbs-design/16054/2,https://www.twitter.com/unlock_VALue,2023-07-07,https://ethresear.ch/u/mikeneuder
+The Centralizing Effects of Private Order Flow on Proposer-Builder Separation,https://www.mechanism.org/spec/02,https://www.twitter.com/unlock_VALue,,
+Unbundling PBS: Towards protocol-enforced proposer commitments (PEPC) - Economics - Ethereum Research,https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879?u=barnabe,https://www.twitter.com/unlock_VALue,2022-10-08,https://ethresear.ch/u/barnabe
+MEV Auctions Will Kill Ethereum - Economics - Ethereum Research,https://ethresear.ch/t/mev-auctions-will-kill-ethereum/9060,https://www.twitter.com/unlock_VALue,2021-03-31,https://ethresear.ch/u/pmcgoohan
+mev [re]search-athon ([sign up](https://lu.ma/bs3kx2pr)) - HackMD,https://hackmd.io/@Carboclanc/H1ZvjQmAj,https://www.twitter.com/unlock_VALue,,
+AugmentHack - HackMD,https://hackmd.io/@sxysun/hackideas,https://www.twitter.com/unlock_VALue,,
+Why AI? - HackMD,https://hackmd.io/@sxysun/crypto-ai,https://www.twitter.com/unlock_VALue,,
+Why Cooperative AI and Blockchain Researchers Should Collaborate - HackMD,https://hackmd.io/@sxysun/coopaimev,https://www.twitter.com/unlock_VALue,,
+Blockchain in the age of LLMs,https://www.propellerheads.xyz/blog/blockchain-and-llms,https://www.twitter.com/unlock_VALue,,
+Survey: What the Buyside Really Thinks About the SEC’s Reg NMS Proposal,https://www.iex.io/article/survey-what-the-buyside-really-thinks-about-the-secs-reg-nms-proposal?utm_source=twitter&utm_medium=blog&utm_campaign=buyside_survey&utm_id=marketstructure&utm_term=exchange,https://www.twitter.com/unlock_VALue,,
+LVR-minimization in Uniswap V4 - Decentralized exchanges - Ethereum Research,https://ethresear.ch/t/lvr-minimization-in-uniswap-v4/15900,https://www.twitter.com/unlock_VALue,2023-06-16,https://ethresear.ch/u/The-CTra1n
+Unbundling PBS: Towards protocol-enforced proposer commitments (PEPC) - #4 by barnabe - Economics - Ethereum Research,https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879/4?u=barnabe,https://www.twitter.com/unlock_VALue,2022-10-16,https://ethresear.ch/u/barnabe
+The Open Problems of Onchain Games,https://www.paradigm.xyz/2023/08/onchain-games,https://www.twitter.com/unlock_VALue,,
+Breaking Down the SEC Plan on Exchange Fees,https://www.iex.io/article/breaking-down-the-sec-plan-on-exchange-fees,https://www.twitter.com/unlock_VALue,,
+On the impossibility of stateless blockchains,https://a16zcrypto.com/posts/article/on-the-impossibility-of-stateless-blockchains/,https://www.twitter.com/unlock_VALue,,
+Strong Builder Identity for Combating Builder Imposter Attacks - Cryptography - Ethereum Research,https://ethresear.ch/t/strong-builder-identity-for-combating-builder-imposter-attacks/16550,https://www.twitter.com/unlock_VALue,2023-09-05,https://ethresear.ch/u/MaxResnick
+Policy Recommendations for Decentralized Finance (DeFi) Consultation Report,https://www.iosco.org/library/pubdocs/pdf/IOSCOPD744.pdf,https://www.twitter.com/freddmannen,,
+Borderless Ethereum - Measuring the geographical distribution of validators - Projects - Lido Governance,https://research.lido.fi/t/borderless-ethereum-measuring-the-geographical-distribution-of-validators/4472,https://www.twitter.com/unlock_VALue,2023-04-25,https://research.lido.fi/u/orbmis
+Towards an intent-centric topology [draft] - Comparative Architecture - Anoma | Research & Development Forum,https://research.anoma.net/t/towards-an-intent-centric-topology-draft/214,https://www.twitter.com/barnabemonnot,2023-08-25,https://research.anoma.net/u/cwgoes
+Shutterized Beacon Chain - Execution Layer Research - Ethereum Research,https://ethresear.ch/t/shutterized-beacon-chain/12249,https://www.twitter.com/barnabemonnot,2022-03-24,https://ethresear.ch/u/cducrest
+"Protocol-Owned Builders, The Future of Sovereign Cosmos MEV",https://osmosis.zone/blog/protocol-owned-builders-the-future-of-sovereign-cosmos-mev,https://www.twitter.com/barnabemonnot,,
+MEV Markets Part 1: Proof of Work — 0xShitTrader,https://mirror.xyz/0xshittrader.eth/WiV8DM3I6abNMVsXf-DqioYb2NglnfjmM-zSsw2ruG8,https://twitter.com/0xTaker,,
+MEV Markets Part 2: Proof of Stake — 0xShitTrader,https://mirror.xyz/0xshittrader.eth/c6J_PCK87K3joTWmLEtG6qVN6BFXLBZxQniReYSEjLI,https://twitter.com/0xTaker,,
+MEV Markets Part 3: Payment for Order Flow — 0xShitTrader,https://mirror.xyz/0xshittrader.eth/f2VSuoZ91vAbCv82MtWM-Gosyf_DeUXfPlDx3EYV3RM,https://twitter.com/0xTaker,,
+Commitments and privacy in the MEV supply chain,https://docs.google.com/presentation/d/1F0v0cnLIxJ5ZbBTmUHjoeyw23U9zDYlo/edit,https://www.twitter.com/unlock_VALue,,
+Analysis of EIP-2593 (Escalator),https://insights.deribit.com/market-research/analysis-of-eip-2593-escalator/,https://www.twitter.com/unlock_VALue,,
+EIP-2938: Account Abstraction,https://eips.ethereum.org/EIPS/eip-2938,https://www.twitter.com/unlock_VALue,,
+Notes on Proposer-Builder Separation (PBS),https://barnabe.substack.com/p/pbs,https://www.twitter.com/unlock_VALue,,
+All is Fair in Arb and MEV on Avalanche C-Chain,https://www.ddmckinnon.com/2022/11/27/all-is-fair-in-arb-and-mev-on-avalanche-c-chain/,https://www.twitter.com/unlock_VALue,,
+The Cost of Decentralization in 0x and EtherDelta,https://hackingdistributed.com/2017/08/13/cost-of-decent/,https://twitter.com/0xTaker,,
+Anatomy of an MEV Strategy: Synthetix,https://bertcmiller.com/2021/09/05/mev-synthetix.html,https://twitter.com/0xTaker,,
+Order Flows: Kingmaker of the Block Builders 👑,https://noxx.substack.com/p/order-flows-kingmaker-of-the-block,https://twitter.com/0xTaker,,
+"DEX Arbitrage, Mathematical Optimisations & Me",https://noxx.substack.com/p/dex-arbitrage-mathematical-optimisations,https://twitter.com/0xTaker,,
+Designing Multi-Dimensional Blockchain Fee Markets — Emperor,https://crypto.mirror.xyz/ztCt3eXw-wCEwqBE6xCRTf-bZleezhyuW3ubxohYbBQ,https://www.twitter.com/unlock_VALue,,
+Defining the Latencies involved in MEV Strategies — Taker,https://taker.mirror.xyz/uYOelwkLc4K7nlo5XV_zpuqsV6MwIMMp-py4e-u4qnE,https://www.twitter.com/unlock_VALue,,
+Merge Anniversary - A Year In Review - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/merge-anniversary-a-year-in-review/2400,https://www.twitter.com/unlock_VALue,2023-11-14,https://collective.flashbots.net/u/Fred
+"Ethereum Proposer-Builder Separation: Past, Present, and Future — Chaskin OnChain",https://mirror.xyz/0x218932707a30bE62Ef8559d32d954863933b412f/MhJM9li409wxuOSYaw5EcLjUQoLSx5iYZXZNgMZU4uM,https://www.twitter.com/unlock_VALue,,
+,https://www.steakhouse.financial/projects/stablecoin-manual,https://www.twitter.com/unlock_VALue,,
+Operating Manual for Decentralized Stablecoins 1st ed. — Steakhouse Financial,https://ipfs.io/ipfs/QmdtK6QQqXBkaBh7bNNKr2FTSwGSPxDMDiCnpR88LMc84d,https://www.twitter.com/unlock_VALue,,
+Xangle: EIP4844 and Its Impact on Rollup Economics,https://coinmarketcap.com/alexandria/article/xangle-eip4844-and-its-impact-on-rollup-economics,https://twitter.com/Freddmannen,,
+Quantifying MEV: Introducing MEV-Explore v0 | by Alex Obadia | Flashbots | Medium,https://medium.com/flashbots/quantifying-mev-introducing-mev-explore-v0-5ccbee0f6d02,https://twitter.com/Freddmannen,,
+MEV Auction: Auctioning transaction ordering rights as a solution to Miner Extractable Value - Economics - Ethereum Research,https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788,https://twitter.com/Freddmannen,2020-01-15,https://ethresear.ch/u/karl
+Spam resistant block creator selection via burn auction - Miscellaneous - Ethereum Research,https://ethresear.ch/t/spam-resistant-block-creator-selection-via-burn-auction/5851,https://twitter.com/Freddmannen,2019-07-21,https://ethresear.ch/u/barryWhiteHat
+Ethereum is a Dark Forest - Dan Robinson - Medium,https://medium.com/@danrobinson/ethereum-is-a-dark-forest-ecc5f0505dff,https://twitter.com/Freddmannen,,
+Exploring DeFi Trading Strategies: Arbitrage in DeFi | by Alex Obadia | Cambrial Capital | Medium,https://medium.com/cambrial-capital/exploring-defi-trading-strategies-arbitrage-in-defi-7736dc5dd77a,https://twitter.com/Freddmannen,,
+How to munch on pickles from a whale dinner | by Tomasz Mierzwa | Token Flow Insights | Medium,https://medium.com/token-flow-insights/how-to-munch-on-pickles-from-a-whale-dinner-edb5628cc769,https://twitter.com/Freddmannen,,
+Gas Gambits — Game Theory Example of Incentivized Collaboration | by KeeperDAO | KeeperDAO | Medium,https://medium.com/keeperdao/gas-gambits-game-theory-example-of-incentivized-collaboration-9a42e9c9b867,https://twitter.com/Freddmannen,,
+MEV auctions considered harmful. Front-running is a persistent problem… | by Ed Felten | Offchain Labs | Medium,https://medium.com/offchainlabs/mev-auctions-considered-harmful-fa72f61a40ea,https://twitter.com/Freddmannen,,
+An Incomplete Primer on Intents — Emperor,https://crypto.mirror.xyz/Wvzro_O92V5Z_RBfZnZUqdbYC_4X6v2YrBuy9RkZCxo,https://twitter.com/unlock_VALue,,
+The High-Frequency Trading Arms Race: Frequent Batch Auctions as a Market Design Response,https://academic.oup.com/qje/article/130/4/1547/1916146?login=false,https://twitter.com/Freddmannen,,
+,https://signalsandthreads.com/state-machine-replication-and-why-you-should-care/,https://twitter.com/Freddmannen,,
+,https://www.binance.com/en/research/analysis/oracle-less-challenging-the-status-quo,https://twitter.com/unlock_VALue,,
+,https://www.umbraresearch.xyz/writings/ethereum-supply-chain-part-1,https://twitter.com/Freddmannen,,
+,https://blog.mangata.finance/blog/2021-10-10-themis-protocol/,https://twitter.com/uPeterKris,,
+HackMD - Collaborative Markdown Knowledge Base,https://hackmd.io/@EspressoSystems,https://twitter.com/Freddmannen,,
+Spec'ing out Forward Inclusion-List w/ Dedicated Gas Limits - Block proposer - Ethereum Research,https://ethresear.ch/t/specing-out-forward-inclusion-list-w-dedicated-gas-limits/17115,https://twitter.com/Freddmannen,2023-10-17,https://ethresear.ch/u/terence
+Profile - diego - Ethereum Research,https://ethresear.ch/u/diego,https://twitter.com/Freddmannen,,
+,https://taiko.mirror.xyz/7dfMydX1FqEx9_sOvhRt3V8hJksKSIWjzhCVu7FyMZ,https://twitter.com/Freddmannen,,
+Ending LP's Losing Game: Exploring the Loss-Versus-Rebalancing (… — 0xKeyu,https://mirror.xyz/0xbdA5bCe76bF62d97D9C9dF0425CC10079Df1aD75/bWOCccjVC7eoYKOzgmjXFdhWDc8rrUL6Yei-eugF52s,https://twitter.com/Freddmannen,,
+Escaping the Dark Forest,https://www.paradigm.xyz/2020/09/escaping-the-dark-forest,https://twitter.com/0x_emperor,,
+MEV-SGX -- A sealed bid MEV auction design,https://writings.flashbots.net/mev-sgx,https://twitter.com/0x_emperor,2021-05-31,https://collective.flashbots.net/u/robert
+On the Formalization of MEV,https://writings.flashbots.net/formalization-mev,https://twitter.com/0x_emperor,2021-12-04,https://collective.flashbots.net/u/alejo
+MEV in eth2 - an early exploration,https://writings.flashbots.net/mev-eth2,https://twitter.com/0x_emperor,2021-06-09,"https://collective.flashbots.net/u/obadiaa, https://collective.flashbots.net/u/fireball"
+MEV and EIP-1559 - HackMD,https://hackmd.io/@flashbots/MEV-1559,https://twitter.com/0x_emperor,,
+MEV-Boost: Merge ready Flashbots Architecture - The Merge - Ethereum Research,https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177,https://twitter.com/0x_emperor,2021-11-04,https://ethresear.ch/u/thegostep
+Quantifying Total Extracted MEV -- A List of Resources - Research - The Flashbots Collective,https://collective.flashbots.net/t/quantifying-total-extracted-mev-a-list-of-resources/936,https://twitter.com/0x_emperor,2022-12-20,https://collective.flashbots.net/u/alex
+,https://github.com/flashbots/mev-research,https://twitter.com/0x_emperor,,
+Searching Post-Merge,https://writings.flashbots.net/searching-post-merge,https://twitter.com/unlock_VALue,2022-08-25,https://collective.flashbots.net/u/brock
+Flashbots Protect -- The Merge & Beyond,https://writings.flashbots.net/flashbots-protect-merge-and-beyond,https://twitter.com/unlock_VALue,2022-08-23,https://collective.flashbots.net/u/angela
+Open sourcing the Flashbots Relay,https://writings.flashbots.net/Flashbots-Relay-open-sourcing,https://twitter.com/unlock_VALue,2022-08-17,https://collective.flashbots.net/u/flashbots
+Understanding liveness risks from mev-boost,https://writings.flashbots.net/understanding-mev-boost-liveness-risks,https://twitter.com/unlock_VALue,2022-08-05,https://collective.flashbots.net/u/hasu
+Boost your MEV in Ethereum proof-of-stake,https://writings.flashbots.net/mev-boost-call-for-testing,https://twitter.com/unlock_VALue,2022-06-20,"https://collective.flashbots.net/u/metachris, https://collective.flashbots.net/u/elopio"
+Beginner's Guide to mev-boost,https://writings.flashbots.net/beginners-guide-mevboost,https://twitter.com/unlock_VALue,2022-06-15,https://collective.flashbots.net/u/jolene
+Why run mev-boost?,https://writings.flashbots.net/why-run-mevboost,https://twitter.com/unlock_VALue,2022-06-07,"https://collective.flashbots.net/u/hasu, https://collective.flashbots.net/u/thegostep"
+The MEV Supply Chain - a peek into the future of this industry,https://writings.flashbots.net/mev-supply-chain,https://twitter.com/unlock_VALue,2022-05-02,https://collective.flashbots.net/u/thegostep
+Speeding up the EVM (part 1),https://writings.flashbots.net/speeding-up-evm-part-1,https://twitter.com/unlock_VALue,2022-01-17,https://collective.flashbots.net/u/sxysun
+Flashbots Transparency Report — Sept-Dec 2021,https://writings.flashbots.net/transparency-21q4,https://twitter.com/unlock_VALue,2022-01-17,https://collective.flashbots.net/u/sxysun
+How To Light Up The Dark Forest - A Walkthrough of Building A Cryptopunk MEV Inspector,https://writings.flashbots.net/the-anatomy-of-an-inspector,https://twitter.com/unlock_VALue,2021-12-15,https://collective.flashbots.net/u/robert
+Why Building the Most Profitable Block is Important,https://writings.flashbots.net/on-the-most-profitable-block,https://twitter.com/unlock_VALue,2021-12-12,https://collective.flashbots.net/u/robert
+Unity is Strength - A Formalization of Cross-Domain Maximal Extractable Value,https://writings.flashbots.net/cross-domain-mev,https://twitter.com/unlock_VALue,2021-12-03,"https://collective.flashbots.net/u/obadiaa, https://collective.flashbots.net/u/alejo, https://collective.flashbots.net/u/lakshman, https://collective.flashbots.net/u/tarun, https://collective.flashbots.net/u/phil, https://collective.flashbots.net/u/vaibhav"
+Announcing the Flashbots Eth2 Working Group,https://writings.flashbots.net/announcing-eth2-working-group,https://twitter.com/unlock_VALue,2021-11-30,https://collective.flashbots.net/u/thegostep
+Ken Griffin and the MEV dystopia,https://writings.flashbots.net/ken-griffin-mev,https://twitter.com/unlock_VALue,2021-11-22,https://collective.flashbots.net/u/thegostep
+MEV-Boost -- Merge ready Flashbots Architecture,https://writings.flashbots.net/mev-boost,https://twitter.com/unlock_VALue,2021-11-03,https://collective.flashbots.net/u/thegostep
+Announcing Flashbots Protect,https://writings.flashbots.net/announcing-protect,https://twitter.com/unlock_VALue,2021-10-06,https://collective.flashbots.net/u/robert
+Flashbots Transparency Report — July & August 2021,https://writings.flashbots.net/transparency-july-august,https://twitter.com/unlock_VALue,2021-09-21,https://collective.flashbots.net/u/robert
+On the Design of MEV Marketplaces,https://writings.flashbots.net/design-mev-marketplaces,https://twitter.com/unlock_VALue,2021-08-04,https://collective.flashbots.net/u/robert
+MEV and EIP-1559,https://writings.flashbots.net/mev-1559,https://twitter.com/unlock_VALue,2021-07-19,"https://collective.flashbots.net/u/alejo, https://collective.flashbots.net/u/kristof"
+Flashbots on Reorgs,https://writings.flashbots.net/flashbots-reorgs,https://twitter.com/unlock_VALue,2021-07-16,https://collective.flashbots.net/u/phil
+Flashbots Transparency Report — May & June 2021,https://writings.flashbots.net/transparency-may-june,https://twitter.com/unlock_VALue,2021-06-28,https://collective.flashbots.net/u/robert
+Quantifying Realized Extractable Value,https://writings.flashbots.net/quantifying-rev,https://twitter.com/unlock_VALue,2021-05-16,https://collective.flashbots.net/u/alejo
+Flashbots Transparency Report — April 2021,https://writings.flashbots.net/transparency-april,https://twitter.com/unlock_VALue,2021-05-13,https://collective.flashbots.net/u/robert
+Flashbots Transparency Report — March 2021,https://writings.flashbots.net/transparency-march,https://twitter.com/unlock_VALue,2021-04-12,https://collective.flashbots.net/u/thegostep
+Flashbots Transparency Report — February 2021,https://writings.flashbots.net/transparency-february,https://twitter.com/unlock_VALue,2021-03-18,https://collective.flashbots.net/u/thegostep
+Quantifying MEV—Introducing MEV-Explore v0,https://writings.flashbots.net/quantifying-mev,https://twitter.com/unlock_VALue,2021-02-22,https://collective.flashbots.net/u/obadiaa
+Flashbots Transparency Report — January 2021,https://writings.flashbots.net/transparency-january,https://twitter.com/unlock_VALue,2021-02-07,https://collective.flashbots.net/u/thegostep
+Flashbots -- Frontrunning the MEV crisis,https://writings.flashbots.net/ethr-frontrunning-mev-crisis,https://twitter.com/unlock_VALue,2020-11-23,https://collective.flashbots.net/u/thegostep
+Flashbots—Frontrunning the MEV Crisis,https://writings.flashbots.net/frontrunning-mev-crisis,https://twitter.com/unlock_VALue,2020-11-23,https://collective.flashbots.net/u/obadiaa
+Open sourcing the Flashbots MEV-Share Node,https://writings.flashbots.net/open-sourcing-flashbots-mev-share-node,https://twitter.com/unlock_VALue,2023-07-24,https://collective.flashbots.net/u/flashbots
+Searching On MEV-Share,https://writings.flashbots.net/searching-on-mev-share,https://twitter.com/unlock_VALue,2023-05-02,"https://collective.flashbots.net/u/brock, https://collective.flashbots.net/u/shea"
+Block Building inside SGX,https://writings.flashbots.net/block-building-inside-sgx,https://twitter.com/unlock_VALue,2023-03-03,"https://collective.flashbots.net/u/metachris, https://collective.flashbots.net/u/frieder"
+Open sourcing the Flashbots Builder,https://writings.flashbots.net/open-sourcing-the-flashbots-builder,https://twitter.com/unlock_VALue,2022-11-18,https://collective.flashbots.net/u/flashbots
+"MEV for the Next Trillion, It's Time to Get Serious…",https://writings.flashbots.net/mev-for-the-next-trillion,https://twitter.com/unlock_VALue,2022-10-11,https://collective.flashbots.net/u/flashbots

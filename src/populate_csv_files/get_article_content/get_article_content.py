@@ -41,7 +41,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
     try:
         response = safe_request(url)  # Use the safe_request function to handle potential 429 errors.
         if response is None:
-            return None, None
+            return None, None, None
 
         response.encoding = 'utf-8'  # Force UTF-8 encoding
         content = response.text
@@ -51,7 +51,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
 
         if not content_container:
             logging.warning(f"No content found for URL {url} with selector {css_selector}")
-            return None, None
+            return None, None, None
 
         markdown_content = ''.join(html_to_markdown(element) for element in content_container if element.name is not None)
         markdown_content = sanitize_mojibake(markdown_content)  # Clean up the content after parsing
@@ -63,11 +63,17 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
         else:
             release_date = None
 
+        # Find the 'a' tag within the 'span' with class 'creator'
+        a_tag = soup.select_one('.creator a')
+
+        # Extract the 'href' attribute
+        authors = a_tag['href'] if a_tag else None
+
         logging.info(f"Fetched content for URL {url}")
-        return markdown_content, release_date
+        return markdown_content, release_date, authors
     except Exception as e:
         logging.error(f"Could not fetch content for URL {url}: {e}")
-        return None, None
+        return None, None, None
 
 
 def fetch_content(row, output_dir):
@@ -105,12 +111,12 @@ def fetch_content(row, output_dir):
     for pattern, fetch_function in url_patterns.items():
         if pattern in url:
             if fetch_function:
-                content, release_date = fetch_function(url)
-                return content, release_date
+                content, release_date, authors = fetch_function(url)
+                return content, release_date, authors
             else:
-                return None, None
+                return None, None, None
 
-    return None, None  # Default case if no match is found
+    return None, None, None  # Default case if no match is found
 
 
 def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True):
@@ -126,6 +132,9 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
     df = pd.read_csv(csv_filepath)
     if 'release_date' not in df.columns:
         df['release_date'] = None
+
+    if 'authors' not in df.columns:
+        df['authors'] = None
 
     # If num_articles is specified, slice the DataFrame
     if num_articles is not None:
@@ -148,7 +157,7 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 
         # Check if PDF already exists
         if not os.path.exists(pdf_filename) or overwrite:
-            content, release_date = fetch_content(row, output_dir)
+            content, release_date, authors = fetch_content(row, output_dir)
             if content:
                 # Specify additional options for pdfkit to ensure UTF-8 encoding
                 options = {
@@ -167,6 +176,8 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
                 # Update the dataframe with the release date
             if release_date:
                 df.loc[df['title'] == getattr(row, 'title'), 'release_date'] = release_date
+            if authors:
+                df.loc[df['title'] == getattr(row, 'title'), 'authors'] = authors
 
     # Use ThreadPoolExecutor to process rows in parallel
     with ThreadPoolExecutor() as executor:

@@ -36,6 +36,29 @@ def extract_title_from_mdx(mdx_content, default_title):
     return default_title
 
 
+def extract_authors_from_mdx(mdx_content, default_authors='Flashbots'):
+    try:
+        lines = mdx_content.split('\n')
+        if lines[0] == '---':
+            end_of_front_matter = lines.index('---', 1)
+            front_matter = '\n'.join(lines[1:end_of_front_matter])
+            front_matter_yaml = yaml.safe_load(front_matter)
+            authors = str(front_matter_yaml.get('authors', default_authors))
+
+            # Process each author to create the link
+            author_links = [
+                f"""https://collective.flashbots.net/u/{author.strip("[]").replace("'", "")}"""
+                for author in authors.split(', ')
+            ]
+
+            # Join the links with ", "
+            return ', '.join(author_links)
+    except Exception as e:
+        logging.error(f"Error extracting authors: {e}")
+
+    return default_authors
+
+
 def convert_mdx_to_pdf(mdx_content, output_pdf_path):
     try:
         html_content = '<meta charset="UTF-8">' + markdown.markdown(mdx_content)
@@ -55,6 +78,7 @@ def process_file_info(output_dir, file_info):
         mdx_content = requests.get(mdx_url).text
         default_title = os.path.splitext(file_info['name'])[0]
         title = extract_title_from_mdx(mdx_content, default_title)
+        authors = extract_authors_from_mdx(mdx_content)
         file_name = title + '.pdf'
         output_pdf_path = os.path.join(output_dir, file_name)
         convert_mdx_to_pdf(mdx_content, output_pdf_path)
@@ -65,7 +89,7 @@ def process_file_info(output_dir, file_info):
             release_date = datetime.strptime(file_info['name'][:10], '%Y-%m-%d').date()
         except ValueError:
             release_date = None  # or use a default date if required
-        return title, release_date
+        return title, release_date, authors
 
 
 def fetch_flashbots_writing_contents_and_save_as_pdf(output_dir):
@@ -79,7 +103,7 @@ def fetch_flashbots_writing_contents_and_save_as_pdf(output_dir):
         for result in executor.map(lambda file_info: process_file_info(output_dir, file_info), flashbots_writings_file_list):
             if result:
                 # Append the result tuple to the list
-                articles_data.append({'title': result[0], 'release_date': result[1]})
+                articles_data.append({'title': result[0], 'release_date': result[1], 'authors': result[2]})
 
     # Convert the list to a DataFrame
     articles_df = pd.DataFrame(articles_data)
@@ -92,9 +116,13 @@ def fetch_flashbots_writing_contents_and_save_as_pdf(output_dir):
     if 'release_date' not in existing_df.columns:
         existing_df['release_date'] = None
 
+    if 'authors' not in existing_df.columns:
+        existing_df['authors'] = None
+
     # Update the existing DataFrame with the new release dates
     for idx, row in articles_df.iterrows():
         existing_df.loc[existing_df['title'] == row['title'], 'release_date'] = row['release_date']
+        existing_df.loc[existing_df['title'] == row['title'], 'authors'] = row['authors']
 
     # Save the updated DataFrame
     existing_df.to_csv(csv_path, index=False)
