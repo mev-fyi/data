@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 import time
 from PIL import Image
@@ -7,6 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+import concurrent.futures
 
 from selenium.common.exceptions import NoSuchElementException
 from src.utils import return_driver, root_directory
@@ -81,17 +84,30 @@ def take_screenshot(url, title, output_dir, zoom=100, screenshot_height_percent=
     finally:
         driver.quit()
 
-# Read URLs and titles from CSV
-csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
-df = pd.read_csv(csv_file_path)
 
-# Output directory for screenshots
-output_dir = f"{root_directory()}/data/article_thumbnails"
-
-# Iterate over the rows in the dataframe
-for index, row in df.iterrows():
-    if 'medium.com' not in row['article']:
-        continue
+def process_row(row):
+    output_dir = f"{root_directory()}/data/article_thumbnails"
     take_screenshot(row['article'], row['title'], output_dir)
-    # if index == 1:  # Stop after taking two screenshots for testing
-    #     break
+
+
+def main():
+    """
+    Created with 1280x720 16:9 resolution
+    """
+    # Read URLs and titles from CSV
+    csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
+    df = pd.read_csv(csv_file_path)
+
+    # Filter for specific domains if necessary
+    # df = df[df['article'].str.contains('medium.com')]
+
+    # Determine number of workers based on the number of available cores
+    num_workers = os.cpu_count() // 2
+
+    # Use ThreadPoolExecutor to parallelize the task
+    with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
+        executor.map(process_row, df.to_dict('records'))
+
+
+if __name__ == "__main__":
+    main()
