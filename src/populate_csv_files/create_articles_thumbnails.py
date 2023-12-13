@@ -3,7 +3,12 @@ import time
 from PIL import Image
 from io import BytesIO
 import re
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
+from selenium.common.exceptions import NoSuchElementException
 from src.utils import return_driver, root_directory
 
 def sanitize_title(title):
@@ -11,12 +16,38 @@ def sanitize_title(title):
     sanitized_title = re.sub(r'[^a-zA-Z0-9]', ' ', title)
     return re.sub(r'\s+', ' ', sanitized_title).strip()
 
-def take_screenshot(url, title, output_dir, zoom=100, screenshot_height_percent=0.15):
+def close_popups(driver, url):
+    if "medium.com" in url:
+        popups = [
+            '//*[@id="root"]/div/div[3]/div[2]/div[4]/div/div/div/div[1]/div[2]/div/button',
+            '/html/body/div[2]/div/div/div/div[2]/div/button'
+        ]
+
+        for popup_xpath in popups:
+            try:
+                # Wait for the element to be clickable and then click
+                WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, popup_xpath))).click()
+            except TimeoutException:
+                # If the element is not clickable after the wait, try JavaScript click
+                try:
+                    close_button = driver.find_element(By.XPATH, popup_xpath)
+                    driver.execute_script("arguments[0].click();", close_button)
+                except NoSuchElementException:
+                    # If the popup is not found, pass
+                    pass
+        time.sleep(2)
+
+
+
+def take_screenshot(url, title, output_dir, zoom=100, screenshot_height_percent=0.15, min_width=600, min_height=300):
     driver = return_driver()
 
     try:
         driver.get(url)
-        time.sleep(3)  # Allow for full page loading
+        time.sleep(5)  # Allow for full page loading
+
+        # Close popups if necessary
+        close_popups(driver, url)
 
         # Apply zoom
         driver.execute_script(f"document.body.style.zoom='{zoom}%'")
@@ -40,11 +71,13 @@ def take_screenshot(url, title, output_dir, zoom=100, screenshot_height_percent=
         image = Image.open(BytesIO(png))
         cropped_image = image.crop((0, 0, image.width, min(desired_height, image.height)))
 
-        # Format title for file name
-        formatted_title = sanitize_title(title)
+        # Sanity check for image dimensions
+        if cropped_image.width >= min_width and cropped_image.height >= min_height:
+            # Format title for file name
+            formatted_title = sanitize_title(title)
 
-        # Save cropped screenshot
-        cropped_image.save(f"{output_dir}/{formatted_title}.png")
+            # Save cropped screenshot
+            cropped_image.save(f"{output_dir}/{formatted_title}.png")
     finally:
         driver.quit()
 
@@ -57,6 +90,8 @@ output_dir = f"{root_directory()}/data/article_thumbnails"
 
 # Iterate over the rows in the dataframe
 for index, row in df.iterrows():
+    if 'medium.com' not in row['article']:
+        continue
     take_screenshot(row['article'], row['title'], output_dir)
     # if index == 1:  # Stop after taking two screenshots for testing
     #     break
