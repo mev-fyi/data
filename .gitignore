@@ -7,3 +7,5 @@ __pycache__/
 *.pyd
 .Python
 /data/article_thumbnails/
+/data/links/filtered_away_youtube_videos.csv
+/data/failed_urls.csv
