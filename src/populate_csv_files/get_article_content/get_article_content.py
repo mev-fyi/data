@@ -2,7 +2,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import requests
 
-from utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, sanitize_filename
+from utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, sanitize_filename, convert_date_format
 
 from get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
 from src.utils import root_directory
@@ -12,7 +12,8 @@ import pdfkit
 import logging
 import markdown
 import yaml
-
+import re
+import json
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -41,7 +42,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
     try:
         response = safe_request(url)  # Use the safe_request function to handle potential 429 errors.
         if response is None:
-            return None, None, None
+            return None, None, None, None, None
 
         response.encoding = 'utf-8'  # Force UTF-8 encoding
         content = response.text
@@ -51,7 +52,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
 
         if not content_container:
             logging.warning(f"No content found for URL {url} with selector {css_selector}")
-            return None, None, None
+            return None, None, None, None, None
 
         markdown_content = ''.join(html_to_markdown(element) for element in content_container if element.name is not None)
         markdown_content = sanitize_mojibake(markdown_content)  # Clean up the content after parsing
@@ -70,10 +71,72 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
         authors = a_tag['href'] if a_tag else None
 
         logging.info(f"Fetched content for URL {url}")
-        return markdown_content, release_date, authors
+        return markdown_content, release_date, authors, None, None
     except Exception as e:
         logging.error(f"Could not fetch content for URL {url}: {e}")
-        return None, None, None
+        return None, None, None, None, None
+
+
+def fetch_medium_content_from_url(url):
+    try:
+        response = requests.get(url)
+        response.encoding = 'utf-8'
+        content = response.text
+
+        soup = BeautifulSoup(content, 'html.parser')
+        # Find the article tag
+        article_tag = soup.find('article')
+
+        # Within the article tag, find the section
+        section_tag = article_tag.find('section') if article_tag else None
+
+        # Within the section, find the third div which seems to be the container of the content
+        content_div = section_tag.find_all('div')[2] if section_tag else None  # Indexing starts at 0; 2 means the third div
+
+        # Initialize a list to hold all markdown content
+        content_list = []
+
+        # Loop through all content elements
+        for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+            markdown = html_to_markdown(elem)  # Assuming html_to_markdown is defined
+            content_list.append(markdown)
+
+        # Join all the content into a single string with markdown
+        markdown_content = '\n'.join(content_list)
+        markdown_content = sanitize_mojibake(markdown_content)  # Assuming sanitize_mojibake is defined
+
+        # Extract title
+        title_tag = soup.find('title')
+        title = title_tag.text if title_tag else None
+
+        # Extract author URL
+        author_meta_tag = soup.find('meta', {'property': 'article:author'})
+        author_url = author_meta_tag['content'] if author_meta_tag else None
+
+        author_name_tag = soup.find('meta', {'name': 'author'})
+        author_name = author_name_tag['content'] if author_name_tag else None
+
+        # Extract publish date using 'data-testid' attribute
+        publish_date_tag = soup.find(attrs={"data-testid": "storyPublishDate"})
+        publish_date = publish_date_tag.text.strip() if publish_date_tag else None
+        formatted_date = convert_date_format(publish_date)
+
+        # Extract firm name and URL from script tag
+        script_tag = soup.find('script', type='application/ld+json')
+        if script_tag:
+            data = json.loads(script_tag.string)
+            author_firm_name = data.get("publisher", {}).get("name")
+            author_firm_url = data.get("publisher", {}).get("url")
+        else:
+            author_firm_name = None
+            author_firm_url = None
+
+        # Your existing content parsing logic goes here
+
+        return markdown_content, publish_date, author_name, author_url, author_firm_name, author_firm_url  # title,
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return None, None, None, None, None, None
 
 
 def fetch_content(row, output_dir):
@@ -88,8 +151,7 @@ def fetch_content(row, output_dir):
         'research.anoma': fetch_discourse_content_from_url,
         # 'frontier.tech': fetch_frontier_tech_titles,
         # 'vitalik.ca': fetch_vitalik_ca_titles,
-        # 'writings.flashbots': fetch_flashbots_writings_titles,
-        # 'medium.com': fetch_medium_titles,
+        'medium.com': fetch_medium_content_from_url,
         # 'blog.metrika': fetch_medium_titles,
         # 'mirror.xyz': fetch_mirror_titles,
         # 'iex.io': fetch_iex_titles,
@@ -111,15 +173,15 @@ def fetch_content(row, output_dir):
     for pattern, fetch_function in url_patterns.items():
         if pattern in url:
             if fetch_function:
-                content, release_date, authors = fetch_function(url)
-                return content, release_date, authors
+                content, release_date, authors, author_urls, author_firm_name, author_firm_url = fetch_function(url)
+                return content, release_date, authors, author_urls, author_firm_name, author_firm_url
             else:
-                return None, None, None
+                return None, None, None, None, None, None
 
-    return None, None, None  # Default case if no match is found
+    return None, None, None, None, None, None  # Default case if no match is found
 
 
-def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True):
+def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True, url_filters=None):
     """
     Fetch the contents of articles and save each content as a PDF in the specified directory.
 
@@ -135,6 +197,10 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 
     if 'authors' not in df.columns:
         df['authors'] = None
+
+    # Apply URL filters if provided
+    if url_filters is not None:
+        df = df[df['article'].str.contains('|'.join(url_filters))]
 
     # If num_articles is specified, slice the DataFrame
     if num_articles is not None:
@@ -157,7 +223,7 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 
         # Check if PDF already exists
         if not os.path.exists(pdf_filename) or overwrite:
-            content, release_date, authors = fetch_content(row, output_dir)
+            content, release_date, authors, authors_urls, author_firm_name, author_firm_url = fetch_content(row, output_dir)
             if content:
                 # Specify additional options for pdfkit to ensure UTF-8 encoding
                 options = {
@@ -190,8 +256,11 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 def run():
     csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
-    fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path, output_dir=output_directory, overwrite=True)
-    fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
+    fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path,
+                                           output_dir=output_directory,
+                                           overwrite=True,
+                                           url_filters=['medium.com'])
+    # fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
 
 
 run()

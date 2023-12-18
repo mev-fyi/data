@@ -15,9 +15,15 @@ from selenium.common.exceptions import NoSuchElementException
 from src.utils import return_driver, root_directory
 
 def sanitize_title(title):
-    # Replace non-alphanumeric characters with a space and collapse multiple spaces
-    sanitized_title = re.sub(r'[^a-zA-Z0-9]', ' ', title)
-    return re.sub(r'\s+', ' ', sanitized_title).strip()
+    # Replace '/' with '<slash>'
+    title_with_slash_replaced = title.replace('/', '<slash>')
+
+    # Keep all non-alphanumeric characters (except replacing '/' with '<slash>')
+    # sanitized_title = re.sub(r'[^a-zA-Z0-9\-#]', ' ', title_with_slash_replaced)
+
+    # Collapse multiple spaces
+    # return re.sub(r'\s+', ' ', sanitized_title).strip()
+    return title_with_slash_replaced.strip()
 
 def close_popups(driver, url):
     if "medium.com" in url:
@@ -41,8 +47,7 @@ def close_popups(driver, url):
         time.sleep(2)
 
 
-
-def take_screenshot(url, title, output_dir, zoom=100, screenshot_height_percent=0.15, min_width=600, min_height=300):
+def take_screenshot(url, title, output_dir, zoom=100, screenshot_height_percent=0.60, min_width=600, min_height=300):
     driver = return_driver()
 
     try:
@@ -62,7 +67,7 @@ def take_screenshot(url, title, output_dir, zoom=100, screenshot_height_percent=
         desired_height = int(total_height * screenshot_height_percent)
 
         # Set a large fixed width to avoid horizontal scroll and adjust the height
-        adjusted_width = 2000  # Set a large width to avoid horizontal scrollbar
+        adjusted_width = 1200  # Set a large width to avoid horizontal scrollbar
 
         # Set window size to capture the required part of the page
         driver.set_window_size(adjusted_width, desired_height)
@@ -102,7 +107,7 @@ def main():
     # df = df[df['article'].str.contains('medium.com')]
 
     # Determine number of workers based on the number of available cores
-    num_workers = os.cpu_count() // 2
+    num_workers = int(os.cpu_count() // 1.5)
 
     # Use ThreadPoolExecutor to parallelize the task
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:

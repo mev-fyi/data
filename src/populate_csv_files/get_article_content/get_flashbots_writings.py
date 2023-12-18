@@ -128,6 +128,7 @@ def fetch_flashbots_writing_contents_and_save_as_pdf(output_dir):
     existing_df.to_csv(csv_path, index=False)
 
 
-# Call the function
-output_directory = f'{root_directory()}/data/articles_pdf_download/'
-fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
+if __name__ == "__main__":
+    # Call the function
+    output_directory = f'{root_directory()}/data/articles_pdf_download/'
+    fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)

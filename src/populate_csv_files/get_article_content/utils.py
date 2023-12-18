@@ -4,6 +4,8 @@ import time
 
 import markdown
 import requests
+from datetime import datetime
+
 
 
 def safe_request(url, max_retries=5, backoff_factor=0.3):
@@ -158,3 +160,18 @@ def sanitize_filename(title):
         title = "untitled"
 
     return "".join([c for c in title if c.isalpha() or c.isdigit() or c==' ']).rstrip() + ".pdf"
+
+
+def convert_date_format(date_str):
+    try:
+        # Try to parse the date with the full format including the year
+        date_obj = datetime.strptime(date_str, '%b %d, %Y')
+    except ValueError:
+        try:
+            # If the year is missing, parse without the year and use the current year
+            date_obj = datetime.strptime(date_str, '%b %d').replace(year=datetime.now().year)
+        except ValueError:
+            # Return None or raise an error if the date format is incorrect
+            return None
+    # Format the date to yyyy-mm-dd
+    return date_obj.strftime('%Y-%m-%d')
