@@ -1,19 +1,17 @@
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
+import pdfkit
+import logging
+import json
+import os
+import re
+import markdown
 
-from utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, sanitize_filename, convert_date_format, convert_frontier_tech_date_format
-
+from utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, convert_date_format, convert_frontier_tech_date_format
 from get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
 from src.utils import root_directory
 from concurrent.futures import ThreadPoolExecutor
-import os
-import pdfkit
-import logging
-import markdown
-import yaml
-import re
-import json
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -42,7 +40,14 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
     try:
         response = safe_request(url)  # Use the safe_request function to handle potential 429 errors.
         if response is None:
-            return None, None, None, None, None, None
+            return {
+                'content': None,
+                'release_date': None,
+                'authors': None,
+                'author_urls': None,
+                'author_firm_name': None,
+                'author_firm_url': None
+            }
 
         response.encoding = 'utf-8'  # Force UTF-8 encoding
         content = response.text
@@ -52,7 +57,14 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
 
         if not content_container:
             logging.warning(f"No content found for URL {url} with selector {css_selector}")
-            return None, None, None, None, None, None
+            return {
+                'content': None,
+                'release_date': None,
+                'authors': None,
+                'author_urls': None,
+                'author_firm_name': None,
+                'author_firm_url': None
+            }
 
         markdown_content = ''.join(html_to_markdown(element) for element in content_container if element.name is not None)
         markdown_content = sanitize_mojibake(markdown_content)  # Clean up the content after parsing
@@ -71,10 +83,24 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
         authors = a_tag['href'] if a_tag else None
 
         logging.info(f"Fetched content for URL {url}")
-        return markdown_content, release_date, authors, None, None, None
+        return {
+            'content': markdown_content,
+            'release_date': release_date,
+            'authors': authors,
+            'author_urls': None,
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
     except Exception as e:
         logging.error(f"Could not fetch content for URL {url}: {e}")
-        return None, None, None, None, None, None
+        return {
+            'content': None,
+            'release_date': None,
+            'authors': None,
+            'author_urls': None,
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
 
 
 def fetch_medium_content_from_url(url):
@@ -86,7 +112,6 @@ def fetch_medium_content_from_url(url):
         soup = BeautifulSoup(content, 'html.parser')
         # Find the article tag
         article_tag = soup.find('article')
-
         # Within the article tag, find the section
         section_tag = article_tag.find('section') if article_tag else None
 
@@ -131,12 +156,24 @@ def fetch_medium_content_from_url(url):
             author_firm_name = None
             author_firm_url = None
 
-        # Your existing content parsing logic goes here
-
-        return markdown_content, publish_date, author_name, author_url, author_firm_name, author_firm_url  # title,
+        return {
+            'content': markdown_content,
+            'release_date': publish_date,
+            'authors': author_name,
+            'author_urls': author_url,
+            'author_firm_name': author_firm_name,
+            'author_firm_url': author_firm_url
+        }
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
-        return None, None, None, None, None, None
+        return {
+            'content': None,
+            'release_date': None,
+            'authors': None,
+            'author_urls': None,
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
 
 
 def fetch_frontier_tech_content_from_url(url):
@@ -156,7 +193,7 @@ def fetch_frontier_tech_content_from_url(url):
         author = author_tag.text.strip() if author_tag else None
 
         # Extract date
-        date_tag = soup.find('div', class_='notion-callout__content', text=re.compile(r'\d{1,2} \w+ \d{4}'))
+        date_tag = soup.find('div', class_='notion-callout__content', string=re.compile(r'\d{1,2} \w+ \d{4}'))
         date = date_tag.text.strip() if date_tag else None
         date = convert_frontier_tech_date_format(date)
 
@@ -169,11 +206,10 @@ def fetch_frontier_tech_content_from_url(url):
 
         return {
             'title': title,
-            'author': author,
-            'date': date,
+            'authors': author,
+            'release_date': date,
             'content': content_markdown
         }
-
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
         return None
@@ -213,12 +249,18 @@ def fetch_content(row, output_dir):
     for pattern, fetch_function in url_patterns.items():
         if pattern in url:
             if fetch_function:
-                content, release_date, authors, author_urls, author_firm_name, author_firm_url = fetch_function(url)
-                return content, release_date, authors, author_urls, author_firm_name, author_firm_url
-            else:
-                return None, None, None, None, None, None
+                content_info = fetch_function(url)
+                return content_info
 
-    return None, None, None, None, None, None  # Default case if no match is found
+    # Default case if no match is found
+    return {
+        'content': None,
+        'release_date': None,
+        'authors': None,
+        'author_urls': None,
+        'author_firm_name': None,
+        'author_firm_url': None
+    }
 
 
 def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True, url_filters=None):
@@ -234,7 +276,6 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
     df = pd.read_csv(csv_filepath)
     if 'release_date' not in df.columns:
         df['release_date'] = None
-
     if 'authors' not in df.columns:
         df['authors'] = None
 
@@ -263,8 +304,8 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 
         # Check if PDF already exists
         if not os.path.exists(pdf_filename) or overwrite:
-            content, release_date, authors, authors_urls, author_firm_name, author_firm_url = fetch_content(row, output_dir)
-            if content:
+            content_info = fetch_content(row, output_dir)
+            if content_info['content']:
                 # Specify additional options for pdfkit to ensure UTF-8 encoding
                 options = {
                     'encoding': "UTF-8",
@@ -273,17 +314,17 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
                     ],
                     'no-outline': None
                 }
-                pdfkit.from_string(markdown_to_html(content), pdf_filename, options=options)
+                pdfkit.from_string(markdown_to_html(content_info['content']), pdf_filename, options=options)
                 logging.info(f"Saved PDF for {article_url}")
 
             else:
                 # logging.warning(f"No content fetched for {article_url}")
                 pass
                 # Update the dataframe with the release date
-            if release_date:
-                df.loc[df['title'] == getattr(row, 'title'), 'release_date'] = release_date
-            if authors:
-                df.loc[df['title'] == getattr(row, 'title'), 'authors'] = authors
+            if content_info['release_date']:
+                df.loc[df['title'] == getattr(row, 'title'), 'release_date'] = content_info['release_date']
+            if content_info['authors']:
+                df.loc[df['title'] == getattr(row, 'title'), 'authors'] = content_info['authors']
 
     # Use ThreadPoolExecutor to process rows in parallel
     with ThreadPoolExecutor() as executor:

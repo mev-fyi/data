@@ -178,13 +178,32 @@ def convert_date_format(date_str):
 
 
 def convert_frontier_tech_date_format(date_str):
-    # Attempt to parse the date from the given format
-    try:
-        date_obj = datetime.strptime(date_str, '%d %B %Y')
-    except ValueError:
-        # If the format is just 'Month Year', assume the first of the month
-        date_obj = datetime.strptime(date_str, '%B %Y')
-        date_obj = date_obj.replace(day=1)
+    # Check if date_str is not None
+    if date_str is None:
+        return None
 
-    # Format the date to yyyy-mm-dd
-    return date_obj.strftime('%Y-%m-%d')
+    # Define a list of possible date formats to try
+    date_formats = ['%d %B %Y', '%B %Y', '%d %b %Y']
+
+    # Attempt to parse the date using different formats
+    for date_format in date_formats:
+        try:
+            date_obj = datetime.strptime(date_str, date_format)
+            # If the parsing is successful, return the formatted date
+            return date_obj.strftime('%Y-%m-%d')
+        except ValueError:
+            # Try to parse with the current year if only month and day are given
+            if date_format == '%d %b':
+                try:
+                    # Assume current year if only month and day are provided
+                    current_year = datetime.now().year
+                    date_str_with_year = f"{date_str} {current_year}"
+                    date_obj = datetime.strptime(date_str_with_year, '%d %b %Y')
+                    return date_obj.strftime('%Y-%m-%d')
+                except ValueError:
+                    pass
+            continue  # Try the next format if parsing fails
+
+    # If none of the formats match, return None or raise an exception
+    return None  # Return None if the date cannot be parsed with any of the formats
+

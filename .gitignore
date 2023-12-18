@@ -6,3 +6,4 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
+/data/article_thumbnails/
