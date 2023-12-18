@@ -8,8 +8,8 @@ import os
 import re
 import markdown
 
-from utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, convert_date_format, convert_frontier_tech_date_format
-from get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
+from src.populate_csv_files.get_article_content.utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, convert_date_format, convert_frontier_tech_date_format
+from src.populate_csv_files.get_article_content.get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
 from src.utils import root_directory
 from concurrent.futures import ThreadPoolExecutor
 
@@ -339,9 +339,10 @@ def run():
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
     fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path,
                                            output_dir=output_directory,
-                                           overwrite=True,
-                                           url_filters=['frontier.tech'])
-    # fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
+                                           overwrite=True) #,
+                                           #url_filters=['frontier.tech'])
+    fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
 
 
-run()
+if __name__ == "__main__":
+    run()

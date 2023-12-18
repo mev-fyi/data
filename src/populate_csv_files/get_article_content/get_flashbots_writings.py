@@ -9,7 +9,7 @@ import markdown
 
 from src.utils import root_directory
 from datetime import datetime
-from utils import markdown_to_html, sanitize_filename
+from src.populate_csv_files.get_article_content.utils import markdown_to_html, sanitize_filename
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
