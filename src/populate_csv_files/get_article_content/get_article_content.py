@@ -2,7 +2,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import requests
 
-from utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, sanitize_filename, convert_date_format
+from utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, sanitize_filename, convert_date_format, convert_frontier_tech_date_format
 
 from get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
 from src.utils import root_directory
@@ -139,6 +139,46 @@ def fetch_medium_content_from_url(url):
         return None, None, None, None, None, None
 
 
+def fetch_frontier_tech_content_from_url(url):
+    try:
+        response = requests.get(url)
+        response.encoding = 'utf-8'
+        content = response.text
+
+        soup = BeautifulSoup(content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.find('h1', class_='notion-header__title')
+        title = title_tag.text.strip() if title_tag else None
+
+        # Extract author
+        author_tag = soup.find('div', class_='notion-callout__content')
+        author = author_tag.text.strip() if author_tag else None
+
+        # Extract date
+        date_tag = soup.find('div', class_='notion-callout__content', text=re.compile(r'\d{1,2} \w+ \d{4}'))
+        date = date_tag.text.strip() if date_tag else None
+        date = convert_frontier_tech_date_format(date)
+
+        # Extract content
+        content_list = []
+        for content_tag in soup.select('.notion-text, .notion-heading, .notion-bulleted-list'):
+            markdown = html_to_markdown(content_tag)
+            content_list.append(markdown)
+        content_markdown = ''.join(content_list)
+
+        return {
+            'title': title,
+            'author': author,
+            'date': date,
+            'content': content_markdown
+        }
+
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return None
+
+
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
@@ -149,7 +189,7 @@ def fetch_content(row, output_dir):
         'collective.flashbots.net': fetch_discourse_content_from_url,
         'lido.fi': fetch_discourse_content_from_url,
         'research.anoma': fetch_discourse_content_from_url,
-        # 'frontier.tech': fetch_frontier_tech_titles,
+        'frontier.tech': fetch_frontier_tech_content_from_url,
         # 'vitalik.ca': fetch_vitalik_ca_titles,
         'medium.com': fetch_medium_content_from_url,
         # 'blog.metrika': fetch_medium_titles,
@@ -258,8 +298,8 @@ def run():
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
     fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path,
                                            output_dir=output_directory,
-                                           overwrite=True)# ,
-                                           #url_filters=['medium.com'])
+                                           overwrite=True,
+                                           url_filters=['frontier.tech'])
     # fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
 
 

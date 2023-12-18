@@ -175,3 +175,16 @@ def convert_date_format(date_str):
             return None
     # Format the date to yyyy-mm-dd
     return date_obj.strftime('%Y-%m-%d')
+
+
+def convert_frontier_tech_date_format(date_str):
+    # Attempt to parse the date from the given format
+    try:
+        date_obj = datetime.strptime(date_str, '%d %B %Y')
+    except ValueError:
+        # If the format is just 'Month Year', assume the first of the month
+        date_obj = datetime.strptime(date_str, '%B %Y')
+        date_obj = date_obj.replace(day=1)
+
+    # Format the date to yyyy-mm-dd
+    return date_obj.strftime('%Y-%m-%d')
