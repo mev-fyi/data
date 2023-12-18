@@ -42,7 +42,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
     try:
         response = safe_request(url)  # Use the safe_request function to handle potential 429 errors.
         if response is None:
-            return None, None, None, None, None
+            return None, None, None, None, None, None
 
         response.encoding = 'utf-8'  # Force UTF-8 encoding
         content = response.text
@@ -52,7 +52,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
 
         if not content_container:
             logging.warning(f"No content found for URL {url} with selector {css_selector}")
-            return None, None, None, None, None
+            return None, None, None, None, None, None
 
         markdown_content = ''.join(html_to_markdown(element) for element in content_container if element.name is not None)
         markdown_content = sanitize_mojibake(markdown_content)  # Clean up the content after parsing
@@ -71,10 +71,10 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
         authors = a_tag['href'] if a_tag else None
 
         logging.info(f"Fetched content for URL {url}")
-        return markdown_content, release_date, authors, None, None
+        return markdown_content, release_date, authors, None, None, None
     except Exception as e:
         logging.error(f"Could not fetch content for URL {url}: {e}")
-        return None, None, None, None, None
+        return None, None, None, None, None, None
 
 
 def fetch_medium_content_from_url(url):
@@ -119,7 +119,7 @@ def fetch_medium_content_from_url(url):
         # Extract publish date using 'data-testid' attribute
         publish_date_tag = soup.find(attrs={"data-testid": "storyPublishDate"})
         publish_date = publish_date_tag.text.strip() if publish_date_tag else None
-        formatted_date = convert_date_format(publish_date)
+        publish_date = convert_date_format(publish_date)
 
         # Extract firm name and URL from script tag
         script_tag = soup.find('script', type='application/ld+json')
@@ -258,8 +258,8 @@ def run():
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
     fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path,
                                            output_dir=output_directory,
-                                           overwrite=True,
-                                           url_filters=['medium.com'])
+                                           overwrite=True)# ,
+                                           #url_filters=['medium.com'])
     # fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
 
 
