@@ -1,11 +1,4 @@
 title,channel_name,published_date,url
-David's Takes: A Hitchhiker's Guide to Riding an MEV Bot,Bankless,2023-08-17,https://www.youtube.com/watch?v=uqxyHz4jn4o
-ETH’s Biggest Upgrade Since EIP1559 | MEV Burn w/ Justin Drake and Dom,Bankless,2023-05-08,https://www.youtube.com/watch?v=nb7x7n8Ga3U
-What is MEV and Why Is It Important?,Bankless,2022-08-25,https://www.youtube.com/watch?v=4-b6zxTW1KU
-Will the Merge Cause MEV Chaos?,Bankless,2022-08-24,https://www.youtube.com/watch?v=DYkbsxwGVqg
-133 - Flashbots and MEV,Bankless,2022-08-22,https://www.youtube.com/watch?v=xex9WVmVfbg
-"66 - Crypto’s Existential Threat | MEV Panel: Phil Daian, Georgios Konstantopoulos, Charlie Noyes",Bankless,2021-05-24,https://www.youtube.com/watch?v=rOVz7dOrGyY
-How They Solved Ethereum's Critical Flaw,Bankless,2023-11-27,https://www.youtube.com/watch?v=j3ZM2ZdUWXU
 Ep. 542: Jacob Illum discusses privacy pools to filter good and bad deposits.,Unchained Crypto,2023-09-08,https://www.youtube.com/watch?v=yPYpZoHBo_g
 Episode 515: 🛑 ERC-7265 proposes a standard for “circuit breakers” in DeFi protocols.,Unchained Crypto,2023-07-24,https://www.youtube.com/watch?v=v-Cr4UpeSy8
 Episode 514: 👩‍🎨 How can creators utilize ERC-6511?,Unchained Crypto,2023-07-23,https://www.youtube.com/watch?v=tnAYs9a9teQ
@@ -49,6 +42,13 @@ Zaki Manian: How Cosmos Upgrades Will Improve MEV Value Capture for ATOM Token H
 "2023, New Directions in Market Design, Paul Milgrom, ""Artificial Intelligence and Market Design...""",NBER,2023-07-19,https://www.youtube.com/watch?v=07ehK1YvjNk
 "2016 Methods Lecture, Atila Abdulkadiroglu, ""Research Design Meets Market Design: Using...""",NBER,2020-05-22,https://www.youtube.com/watch?v=yu8clDvQmEM
 "2016 Methods Lecture, Alvin Roth, ""Introduction to Matching Markets and Market Design Theory and...""",NBER,2020-05-22,https://www.youtube.com/watch?v=FMuny0BWRzU
+David's Takes: A Hitchhiker's Guide to Riding an MEV Bot,Bankless,2023-08-17,https://www.youtube.com/watch?v=uqxyHz4jn4o
+ETH’s Biggest Upgrade Since EIP1559 | MEV Burn w/ Justin Drake and Dom,Bankless,2023-05-08,https://www.youtube.com/watch?v=nb7x7n8Ga3U
+What is MEV and Why Is It Important?,Bankless,2022-08-25,https://www.youtube.com/watch?v=4-b6zxTW1KU
+Will the Merge Cause MEV Chaos?,Bankless,2022-08-24,https://www.youtube.com/watch?v=DYkbsxwGVqg
+133 - Flashbots and MEV,Bankless,2022-08-22,https://www.youtube.com/watch?v=xex9WVmVfbg
+"66 - Crypto’s Existential Threat | MEV Panel: Phil Daian, Georgios Konstantopoulos, Charlie Noyes",Bankless,2021-05-24,https://www.youtube.com/watch?v=rOVz7dOrGyY
+How They Solved Ethereum's Critical Flaw,Bankless,2023-11-27,https://www.youtube.com/watch?v=j3ZM2ZdUWXU
 the latest in defi research [tldr] announcement,Research Day,2023-06-06,https://www.youtube.com/watch?v=CVC0xEzPh6Y
 Credible DEX Design via Verifiable Sequencing Rules - Matheus Ferreira,Research Day,2023-05-27,https://www.youtube.com/watch?v=OvqOIBRS3ys
 ZK-based Improvements to Celestia - Nick White,Research Day,2023-05-27,https://www.youtube.com/watch?v=NCLuU-NS3IU
@@ -776,6 +776,21 @@ Redefining Web 3 Wallets with Account Abstraction,Altlayer,2023-11-29,https://ww
 PBS Expansion Pack: Land of L2s - Dmarz @flashbots,SevenX Ventures,2023-11-30,https://www.youtube.com/watch?v=Gi3zqrv_hHk
 ZK Fault Proofs - Amrit @Altlayer,SevenX Ventures,2023-11-29,https://www.youtube.com/watch?v=lpOQCji2HCI
 Celestia Core Devs Call 1,Celestia,2023-11-30,https://www.youtube.com/watch?v=EhWHHmPo_5Q
+The Builder-Hero's Journey,ETHGlobal,2023-12-09,https://www.youtube.com/watch?v=SSo0cEjPCrs
+Celestia Core Devs Call 2,Celestia,2023-12-14,https://www.youtube.com/watch?v=yYt600kvf4g
+Ed Felten 🛸 Improving Deadline Protocols via Censorship Detection,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=DbWvfHGh_Ak
+Mallesh Pai 🛸 An Economic Definition for Censorship Resistance,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=mX0VGeqtcLQ
+Omar Espejel 🛸 Urgent Anti-Censorship Solution for Specific Transactions,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=lPtLouCJjO4
+Justin Drake 🛸 Weak Censorship Resistance,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=sTfATirYqGA
+Yoav Weiss 🛸 Account abstraction is easy… unless you care about censorship resistance,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=TbPttlHGsbU
+Sajida Zouarhi 🛸 Observability and Censorship in Ethereum,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=LEsXZsCqOZg
+Nixo 🛸 Are Solo Stakers Valuable for Censorship Resistance?,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=K95VU053CnQ
+Sreeram Kannan 🛸 Increasing the Observability of Attestor Censorship,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=_7PtU1IiOoY
+Toni Wahrstätter 🛸 Exploring Censorship Across The PBS Stack,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=WcJlseuhbX8
+Danno Ferrin 🛸 State Proofs and Transaction Verification,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=_I7pNPgWo34
+Costanza Gallo 🛸 Censorship From 0 to 60,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=EjT9ogo-l6c
+Alon Muroch 🛸 Improving Censorship Resistance Using DVT,ETHGlobal,2023-12-16,https://www.youtube.com/watch?v=3FK3V3hbWHQ
+"A Guide to Solana's New Paradigm | Mert Mumtaz, Garrett Harper",Lightspeed,2023-12-12,https://www.youtube.com/watch?v=bowisyjCCgE
 Censorship Resistance: An Economic Model and a Solution,SMG,2023-07-27,https://www.youtube.com/watch?v=344YhVMi6xs
 'Censorship Resistance in On-Chain Auctions',SMG,2023-06-26,https://www.youtube.com/watch?v=p4hA47S4d9A
 Manipulating Leader Selection in BFT Protocols with Matt Weinberg | a16z crypto research talks,a16z crypto,2023-10-24,https://www.youtube.com/watch?v=mIAPQ0DHKak
@@ -1539,3 +1554,9 @@ Security Considerations for ZK Systems by Innokentii from Aztec,Fenbushi Capital
 Open Talk - Zero Knowledge,Fenbushi Capital,2023-09-07,https://www.youtube.com/watch?v=cgw18zbTUHA
 Why the Cosmos Hub is Forking and BLAST L2 Will Probably Work | Roundup,Bell Curve,2023-12-01,https://www.youtube.com/watch?v=bMZseEV9Tao
 A Creator's Journey to Self-Sovereignty: The Why Is in the Who,a16z crypto,2023-12-02,https://www.youtube.com/watch?v=soe-NoMAH34
+"Into the Next Cycle: Jito Airdrop, BTC NFTs, and The Return of VCs | Roundup",Bell Curve,2023-12-08,https://www.youtube.com/watch?v=iTVCgL7T1qU
+How Appchains Align DEX Incentives | Season 6 Episode 7,Bell Curve,2023-12-05,https://www.youtube.com/watch?v=5txEBPGJnmA
+Art and Awe in the Age of Machine Intelligence,a16z crypto,2023-12-11,https://www.youtube.com/watch?v=bdfRWdCZHYk
+A Creator's Journey to Self-Sovereignty: 'The Why Is in the Who',a16z crypto,2023-12-02,https://www.youtube.com/watch?v=soe-NoMAH34
+Data Availability Bake-off and Solana Fee Market | Roundup,Bell Curve,2023-12-15,https://www.youtube.com/watch?v=iFMZp5ftnw8
+mev-boost community call #7,just a block,2023-12-14,https://www.youtube.com/watch?v=xUFcgzytQXY
