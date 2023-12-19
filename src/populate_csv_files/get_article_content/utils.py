@@ -6,8 +6,6 @@ import markdown
 import requests
 from datetime import datetime
 
-
-
 def safe_request(url, max_retries=5, backoff_factor=0.3):
     """
     Safe request handling with retries and exponential backoff.

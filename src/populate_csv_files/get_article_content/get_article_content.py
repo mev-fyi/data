@@ -290,8 +290,12 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
 
+    # List to store indices of modified rows
+    modified_indices = []
+
     # Function to process each row
-    def process_row(row):
+    def process_row(row, index):
+        nonlocal modified_indices
         article_url = getattr(row, 'article')
         article_title = getattr(row, 'title')
 
@@ -326,12 +330,17 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
             if content_info['authors']:
                 df.loc[df['title'] == getattr(row, 'title'), 'authors'] = content_info['authors']
 
+        # Update the modified rows list
+        modified_indices.append(index)
+
     # Use ThreadPoolExecutor to process rows in parallel
     with ThreadPoolExecutor() as executor:
-        list(executor.map(process_row, df.itertuples()))
+        executor.map(lambda pair: process_row(pair[0], pair[1]), enumerate(df.itertuples()))
 
-    # Save the updated DataFrame
-    df.to_csv(csv_filepath, index=False)
+    # Update only the modified rows in the DataFrame
+    if modified_indices:
+        modified_df = df.iloc[modified_indices]
+        modified_df.to_csv(csv_filepath, mode='a', header=False, index=False)
 
 
 def run():
