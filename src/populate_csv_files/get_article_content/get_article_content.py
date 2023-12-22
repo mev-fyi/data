@@ -383,8 +383,13 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
                     ],
                     'no-outline': None
                 }
+                if article_title == article_url:
+                    # Create a sanitized file name for the PDF from the article title
+                    article_title = content_info['title']
+                    pdf_filename = os.path.join(output_dir, article_title.replace("/", "<slash>") + '.pdf')
+
                 pdfkit.from_string(markdown_to_html(content_info['content']), pdf_filename, options=options)
-                logging.info(f"Saved PDF for {article_url}")
+                logging.info(f"Saved PDF for {article_url} with name {article_title}")
 
             else:
                 # logging.warning(f"No content fetched for {article_url}")
@@ -421,7 +426,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['mirror.xyz']
+    url_filters = None  # ['mirror.xyz']
     get_flashbots_writings = False
     thread_count = None
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
