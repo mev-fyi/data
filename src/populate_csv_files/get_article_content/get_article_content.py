@@ -176,6 +176,79 @@ def fetch_medium_content_from_url(url):
         }
 
 
+def fetch_mirror_content_from_url(url):
+    try:
+        response = requests.get(url)
+        response.encoding = 'utf-8'
+        content = response.text
+
+        soup = BeautifulSoup(content, 'html.parser')
+        # Find the article tag
+        article_tag = soup.find('article')
+        # Within the article tag, find the section
+        section_tag = article_tag.find('section') if article_tag else None
+
+        # Within the section, find the third div which seems to be the container of the content
+        content_div = section_tag.find_all('div')[2] if section_tag else None  # Indexing starts at 0; 2 means the third div
+
+        # Initialize a list to hold all markdown content
+        content_list = []
+
+        # Loop through all content elements
+        for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+            markdown = html_to_markdown(elem)  # Assuming html_to_markdown is defined
+            content_list.append(markdown)
+
+        # Join all the content into a single string with markdown
+        markdown_content = '\n'.join(content_list)
+        markdown_content = sanitize_mojibake(markdown_content)  # Assuming sanitize_mojibake is defined
+
+        # Extract title
+        title_tag = soup.find('title')
+        title = title_tag.text if title_tag else None
+
+        # Extract author URL
+        author_meta_tag = soup.find('meta', {'property': 'article:author'})
+        author_url = author_meta_tag['content'] if author_meta_tag else None
+
+        author_name_tag = soup.find('meta', {'name': 'author'})
+        author_name = author_name_tag['content'] if author_name_tag else None
+
+        # Extract publish date using 'data-testid' attribute
+        publish_date_tag = soup.find(attrs={"data-testid": "storyPublishDate"})
+        publish_date = publish_date_tag.text.strip() if publish_date_tag else None
+        publish_date = convert_date_format(publish_date)
+
+        # Extract firm name and URL from script tag
+        script_tag = soup.find('script', type='application/ld+json')
+        if script_tag:
+            data = json.loads(script_tag.string)
+            author_firm_name = data.get("publisher", {}).get("name")
+            author_firm_url = data.get("publisher", {}).get("url")
+        else:
+            author_firm_name = None
+            author_firm_url = None
+
+        return {
+            'content': markdown_content,
+            'release_date': publish_date,
+            'authors': author_name,
+            'author_urls': author_url,
+            'author_firm_name': author_firm_name,
+            'author_firm_url': author_firm_url
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {
+            'content': None,
+            'release_date': None,
+            'authors': None,
+            'author_urls': None,
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
+
+
 def fetch_frontier_tech_content_from_url(url):
     try:
         response = requests.get(url)
@@ -229,7 +302,7 @@ def fetch_content(row, output_dir):
         # 'vitalik.ca': fetch_vitalik_ca_titles,
         'medium.com': fetch_medium_content_from_url,
         # 'blog.metrika': fetch_medium_titles,
-        # 'mirror.xyz': fetch_mirror_titles,
+        'mirror.xyz': fetch_mirror_content_from_url,
         # 'iex.io': fetch_iex_titles,
         # 'paradigm.xyz': fetch_paradigm_titles,
         # 'hackmd.io': fetch_hackmd_titles,
@@ -335,7 +408,7 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
 
     # Use ThreadPoolExecutor to process rows in parallel
     with ThreadPoolExecutor() as executor:
-        executor.map(lambda pair: process_row(pair[0], pair[1]), enumerate(df.itertuples()))
+        executor.map(lambda pair: process_row(pair[1], pair[0]), enumerate(df.itertuples()))
 
     # Update only the modified rows in the DataFrame
     if modified_indices:
@@ -343,15 +416,18 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
         modified_df.to_csv(csv_filepath, mode='a', header=False, index=False)
 
 
-def run():
+def run(url_filters=None, get_flashbots_writings=True):
     csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
     fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path,
                                            output_dir=output_directory,
-                                           overwrite=True) #,
-                                           #url_filters=['frontier.tech'])
-    fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
+                                           overwrite=True,
+                                           url_filters=url_filters)
+    if get_flashbots_writings:
+        fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
 
 
 if __name__ == "__main__":
-    run()
+    url_filters = ['mirror.xyz']
+    get_flashbots_writings = False
+    run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings)
