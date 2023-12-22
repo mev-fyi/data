@@ -119,24 +119,27 @@ def sanitize_mojibake(text):
 
 def html_to_markdown(element):
     """
-    Convert an HTML element to its Markdown representation.
+    Convert an HTML element to its Markdown representation, keeping URLs.
     """
-    # Retrieve text from the HTML element directly, without cleaning up mojibake
     tag_name = element.name
-    text = element.get_text()
 
     if tag_name == 'p':
-        return text.strip() + '\n\n'
+        return ''.join(html_to_markdown(child) for child in element.contents).strip() + '\n\n'
     elif tag_name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
         header_level = int(tag_name[1])
-        return '#' * header_level + ' ' + text.strip() + '\n\n'
+        return '#' * header_level + ' ' + ''.join(html_to_markdown(child) for child in element.contents).strip() + '\n\n'
     elif tag_name == 'ul':
-        return '\n'.join([f"* {li.get_text().strip()}" for li in element.find_all('li')]) + '\n\n'
+        return '\n'.join([f"* {html_to_markdown(li)}" for li in element.find_all('li')]).strip() + '\n\n'
     elif tag_name == 'ol':
-        return '\n'.join([f"1. {li.get_text().strip()}" for li in element.find_all('li')]) + '\n\n'
-    # Add more HTML to Markdown conversions here as needed
+        return '\n'.join([f"1. {html_to_markdown(li)}" for li in element.find_all('li')]).strip() + '\n\n'
+    elif tag_name == 'a':
+        url = element.get('href', '')
+        text = ''.join(html_to_markdown(child) for child in element.contents)
+        return f"[{text}]({url})"
+    elif tag_name is None:  # Handle NavigableString elements
+        return element.string
     else:
-        return text.strip() + '\n\n'
+        return ''.join(html_to_markdown(child) for child in element.contents).strip() + '\n\n'
 
 
 def markdown_to_html(markdown_content):
@@ -205,3 +208,17 @@ def convert_frontier_tech_date_format(date_str):
     # If none of the formats match, return None or raise an exception
     return None  # Return None if the date cannot be parsed with any of the formats
 
+
+def convert_mirror_date_format(date_str):
+    try:
+        # Remove the suffixes from the day part
+        date_str = re.sub(r'(\d+)(st|nd|rd|th),', r'\1,', date_str)
+
+        # Parse the date with the full format including the year
+        date_obj = datetime.strptime(date_str, '%B %d, %Y')
+    except ValueError:
+        # Return None or raise an error if the date format is incorrect
+        return None
+
+    # Format the date to yyyy-mm-dd
+    return date_obj.strftime('%Y-%m-%d')

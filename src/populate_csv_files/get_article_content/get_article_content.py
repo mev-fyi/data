@@ -8,7 +8,7 @@ import os
 import re
 import markdown
 
-from src.populate_csv_files.get_article_content.utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, convert_date_format, convert_frontier_tech_date_format
+from src.populate_csv_files.get_article_content.utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, convert_date_format, convert_frontier_tech_date_format, convert_mirror_date_format
 from src.populate_csv_files.get_article_content.get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
 from src.utils import root_directory
 from concurrent.futures import ThreadPoolExecutor
@@ -179,67 +179,59 @@ def fetch_medium_content_from_url(url):
 def fetch_mirror_content_from_url(url):
     try:
         response = requests.get(url)
-        response.encoding = 'utf-8'
+        response.raise_for_status()  # This will raise an HTTPError if the HTTP request returned an unsuccessful status code
         content = response.text
 
         soup = BeautifulSoup(content, 'html.parser')
-        # Find the article tag
-        article_tag = soup.find('article')
-        # Within the article tag, find the section
-        section_tag = article_tag.find('section') if article_tag else None
 
-        # Within the section, find the third div which seems to be the container of the content
-        content_div = section_tag.find_all('div')[2] if section_tag else None  # Indexing starts at 0; 2 means the third div
+        # Extract title
+        title_tag = soup.find('title')
+        title = title_tag.text if title_tag else 'N/A'
+
+        # Extract publish date
+        publish_date_tag = soup.find('span', string=re.compile(r'\b(?:\d{1,2}(?:st|nd|rd|th), \d{4})\b'))
+        publish_date = publish_date_tag.text.strip() if publish_date_tag else 'N/A'
+        publish_date = convert_mirror_date_format(publish_date)  # Assuming convert_mirror_date_format is defined
+
+        # Extract author URL
+        author_a_tag = soup.find('a', {'data-state': 'closed'})
+
+        # Extract the URL
+        author_url = author_a_tag['href'] if author_a_tag and author_a_tag.has_attr('href') else None
+
+        # Extract author name
+        # Find the div that contains the author name 'Rated'
+        author_name_div = soup.find('div', class_='_2gklefg')
+        author_name = author_name_div.text if author_name_div else 'N/A'
 
         # Initialize a list to hold all markdown content
         content_list = []
 
-        # Loop through all content elements
-        for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
-            markdown = html_to_markdown(elem)  # Assuming html_to_markdown is defined
-            content_list.append(markdown)
+        # Find the container for the content
+        content_container = soup.select_one('.css-72ne1l > div:nth-child(1)')
+        if content_container is not None:
+            # Loop through all content elements within the container
+            for elem in content_container.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'div']):
+                markdown = html_to_markdown(elem)  # Assuming html_to_markdown is defined
+                content_list.append(markdown)
 
         # Join all the content into a single string with markdown
         markdown_content = '\n'.join(content_list)
         markdown_content = sanitize_mojibake(markdown_content)  # Assuming sanitize_mojibake is defined
 
-        # Extract title
-        title_tag = soup.find('title')
-        title = title_tag.text if title_tag else None
-
-        # Extract author URL
-        author_meta_tag = soup.find('meta', {'property': 'article:author'})
-        author_url = author_meta_tag['content'] if author_meta_tag else None
-
-        author_name_tag = soup.find('meta', {'name': 'author'})
-        author_name = author_name_tag['content'] if author_name_tag else None
-
-        # Extract publish date using 'data-testid' attribute
-        publish_date_tag = soup.find(attrs={"data-testid": "storyPublishDate"})
-        publish_date = publish_date_tag.text.strip() if publish_date_tag else None
-        publish_date = convert_date_format(publish_date)
-
-        # Extract firm name and URL from script tag
-        script_tag = soup.find('script', type='application/ld+json')
-        if script_tag:
-            data = json.loads(script_tag.string)
-            author_firm_name = data.get("publisher", {}).get("name")
-            author_firm_url = data.get("publisher", {}).get("url")
-        else:
-            author_firm_name = None
-            author_firm_url = None
-
         return {
+            'title': title,
             'content': markdown_content,
             'release_date': publish_date,
             'authors': author_name,
             'author_urls': author_url,
-            'author_firm_name': author_firm_name,
-            'author_firm_url': author_firm_url
+            'author_firm_name': None,  # No information provided for this
+            'author_firm_url': None  # No information provided for this
         }
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
         return {
+            'title': 'N/A',
             'content': None,
             'release_date': None,
             'authors': None,
@@ -336,7 +328,7 @@ def fetch_content(row, output_dir):
     }
 
 
-def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True, url_filters=None):
+def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True, url_filters=None, thread_count=None):
     """
     Fetch the contents of articles and save each content as a PDF in the specified directory.
 
@@ -407,7 +399,7 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
         modified_indices.append(index)
 
     # Use ThreadPoolExecutor to process rows in parallel
-    with ThreadPoolExecutor() as executor:
+    with ThreadPoolExecutor(max_workers=thread_count) as executor:
         executor.map(lambda pair: process_row(pair[1], pair[0]), enumerate(df.itertuples()))
 
     # Update only the modified rows in the DataFrame
@@ -416,13 +408,14 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
         modified_df.to_csv(csv_filepath, mode='a', header=False, index=False)
 
 
-def run(url_filters=None, get_flashbots_writings=True):
+def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
     csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
     fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path,
                                            output_dir=output_directory,
                                            overwrite=True,
-                                           url_filters=url_filters)
+                                           url_filters=url_filters,
+                                           thread_count=thread_count)
     if get_flashbots_writings:
         fetch_flashbots_writing_contents_and_save_as_pdf(output_directory)
 
@@ -430,4 +423,5 @@ def run(url_filters=None, get_flashbots_writings=True):
 if __name__ == "__main__":
     url_filters = ['mirror.xyz']
     get_flashbots_writings = False
-    run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings)
+    thread_count = None
+    run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
