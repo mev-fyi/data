@@ -287,26 +287,42 @@ def extract_notion_content(page_source):
     soup = BeautifulSoup(page_source, 'html.parser')
     content_list = []
 
+    # This function will extract text and links recursively and maintain structure
+    def extract_content(html_element):
+        for child in html_element.children:
+            if child.name == 'a':
+                href = child.get('href', '')
+                text = child.get_text(strip=True)
+                if href:
+                    content_list.append(f'[{text}]({href})')
+            elif child.name in {'div', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br'} and not isinstance(child, str):
+                # Add a newline before the block-level element if the last addition wasn't a newline
+                if content_list and content_list[-1] != '\n':
+                    content_list.append('\n')
+                extract_content(child)
+                # Add a newline after the block-level element
+                if child.name != 'div':
+                    content_list.append('\n')
+            elif child.name is None and isinstance(child, str):  # This is a NavigableString
+                stripped_text = child.strip()
+                if stripped_text:
+                    # Append text to content list, maintaining inline structure
+                    content_list.append(stripped_text + ' ')
+            else:
+                # If it's none of the above, recurse into the child
+                extract_content(child)
+
     # Find the main content container
     content_div = soup.find('div', class_='notion-page-content')
     if content_div:
-        # Loop through all divs and their children
-        for child in content_div.find_all(recursive=False):
-            # Check if the child is a div and has text
-            if child.name == 'div' and child.text:
-                # Append text to content list
-                content_list.append(child.get_text())
-            # Check for nested divs and recurse
-            elif child.name == 'div':
-                nested_content = extract_notion_content(str(child))
-                content_list.extend(nested_content)
-            # Check for links (a tags) and format them in Markdown
-            elif child.name == 'a':
-                href = child.get('href', '')
-                text = child.get_text()
-                content_list.append(f'[{text}]({href})')
+        extract_content(content_div)
 
-    return content_list
+    # Correctly join the content list while respecting the structure
+    structured_content = ''.join(content_list).strip()
+    # Replace multiple newlines with a single newline
+    structured_content = '\n\n'.join(filter(None, structured_content.split('\n')))
+
+    return structured_content
 
 
 def extract_author_details(url):
@@ -356,9 +372,6 @@ def fetch_notion_content_from_url(url):
             page_source = driver.page_source  # The page source obtained from Selenium
             content = extract_notion_content(page_source)
 
-            # Combine the list into a single string
-            content = '\n\n'.join(content)
-
             author_details = extract_author_details(url)
             print(f"Fetched title [{title}] for URL {url}")
 
@@ -366,8 +379,8 @@ def fetch_notion_content_from_url(url):
                 'title': title,
                 'content': content,
                 'release_date': publish_date,
-                'authors': author_details['name'],  # get author name which is the URL subdomain
-                'author_urls': author_details['author_url'],  # get the whole URL domain
+                'authors': author_details['authors'],  # get author name which is the URL subdomain
+                'author_urls': author_details['author_urls'],  # get the whole URL domain
                 'author_firm_name': None,  # No information provided for this
                 'author_firm_url': None  # No information provided for this
             }
