@@ -208,6 +208,10 @@ def fetch_mirror_content_from_url(url):
         author_name_div = soup.find('div', class_='_2gklefg')
         author_name = author_name_div.text if author_name_div else 'N/A'
 
+        if (author_name == 'N/A') or author_name == '':
+            author_details = extract_mirror_author_details(url)
+            author_name = author_details['authors']
+
         # Initialize a list to hold all markdown content
         content_list = []
 
@@ -361,33 +365,59 @@ def extract_hackmd_author_details(url):
     parsed_url = urlparse(url)
     path_parts = parsed_url.path.split('/')
 
-    # Check if the domain is hackmd.io
-    if 'hackmd.io' in parsed_url.netloc:
-        # Check if there is an author part in the path
-        if len(path_parts) > 1 and path_parts[1].startswith('@'):
-            author_name = path_parts[1][1:]  # Remove '@' to get the author name
-            author_url = f"https://hackmd.io/@{author_name}"
-            # Determine if it's a website or an article
-            is_website = len(path_parts) == 2 or (len(path_parts) == 3 and path_parts[2] == '')
-            return {
-                'authors': author_name,
-                'authors_urls': author_url,
-                'is_website': is_website
-            }
-        else:
-            # No author in the URL, return None
-            return {
-                'authors': None,
-                'authors_urls': None,
-                'is_website': False
-            }
+    # Check if there is an author part in the path
+    if len(path_parts) > 1 and path_parts[1].startswith('@'):
+        author_name = path_parts[1][1:]  # Remove '@' to get the author name
+        author_url = f"https://hackmd.io/@{author_name}"
+        # Determine if it's a website or an article
+        is_website = len(path_parts) == 2 or (len(path_parts) == 3 and path_parts[2] == '')
+        return {
+            'authors': author_name,
+            'authors_urls': author_url,
+            'is_website': is_website
+        }
     else:
-        # Not a HackMD URL, return None
+        # No author in the URL, return None
         return {
             'authors': None,
             'authors_urls': None,
             'is_website': False
         }
+
+
+def extract_mirror_author_details(url):
+    """
+    Extracts the author name from a given mirror.xyz URL.
+
+    :param url: The mirror.xyz URL to extract details from.
+    :return: A dictionary with author name and a flag indicating if it's a website.
+    """
+    parsed_url = urlparse(url)
+    domain = parsed_url.netloc
+    path_parts = parsed_url.path.split('/')
+
+    # Default values
+    author_name = None
+    is_website = False
+
+    # Check if there is a subdomain (author name as subdomain)
+    domain_parts = domain.split('.')
+    if domain_parts[0] != 'mirror' and len(domain_parts) > 2:
+        author_name = domain_parts[0]
+        is_website = True  # A subdomain usually indicates a personal site
+    # Check if the author name is in the path
+    elif len(path_parts) > 1 and path_parts[1].endswith('.eth'):
+        author_name = path_parts[1]
+        is_website = False  # No subdomain usually indicates an article
+
+    # Construct the author URL if author_name was found
+    author_url = f"https://{domain}/{author_name}" if author_name else None
+
+    return {
+        'authors': author_name,
+        'authors_urls': author_url,
+        'is_website': is_website
+    }
 
 
 def fetch_notion_content_from_url(url):
@@ -742,7 +772,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['notion']  # None # ['hackmd']
+    url_filters = ['mirror']  # None # ['hackmd']
     get_flashbots_writings = False
     thread_count = 20
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
