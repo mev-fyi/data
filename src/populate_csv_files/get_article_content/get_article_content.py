@@ -585,7 +585,68 @@ def fetch_vitalik_ca_article_content(url):
 
 
 def fetch_paradigm_article_content(url):
-    return fetch_title_from_url(url, '.Post_post__J7vh4 > h1:nth-child(1)')
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract the title
+        title_tag = soup.select_one('.Post_post__J7vh4 h1')
+        title = title_tag.text.strip() if title_tag else 'N/A'
+
+        # Extract the publish date
+        details_tag = soup.select_one('.Post_post__details__W3e0e')
+        release_date = None
+        if details_tag:
+            # Find date within the details tag
+            date_str = details_tag.text.strip().split('|')[0].strip()
+            release_date = datetime.datetime.strptime(date_str, '%b %d, %Y').strftime('%Y-%m-%d')
+
+        # Extract the authors
+        authors = []
+        author_urls = []
+        for author_tag in details_tag.select('span a'):
+            authors.append(author_tag.text.strip())
+            if 'team' in author_tag["href"]:
+                author_url = f'https://www.paradigm.xyz{author_tag["href"]}'
+            else:
+                author_url = author_tag["href"]
+            author_urls.append(author_url)
+
+        # Extract the content
+        content_div = soup.select_one('.Post_post__content__dMuW4')
+        if content_div is None:
+            content_div = soup.select_one('.Post_post__content__dmuW4')
+        content_list = []
+        if content_div is not None:
+            # Loop through all content elements within the container
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'div']):
+                markdown = html_to_markdown(elem)  # Assuming html_to_markdown is defined
+                content_list.append(markdown)
+
+        # Join all the content into a single string with markdown
+        content = '\n'.join(content_list)
+        return {
+            'title': title,
+            'content': content.strip(),
+            'release_date': release_date,
+            'authors': authors,
+            'author_urls': ['https://mirror.xyz' + url for url in author_urls],
+            'author_firm_name': None,  # No information provided for this
+            'author_firm_url': None  # No information provided for this
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {
+            'title': 'N/A',
+            'content': None,
+            'release_date': None,
+            'authors': None,
+            'author_urls': None,
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
+
 
 def fetch_jump_article_content(url):
     return fetch_title_from_url(url, 'h1.MuiTypography-root')
@@ -772,7 +833,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['mirror']  # None # ['hackmd']
+    url_filters = ['paradigm']  # None # ['hackmd']
     get_flashbots_writings = False
-    thread_count = 20
+    thread_count = 1
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
