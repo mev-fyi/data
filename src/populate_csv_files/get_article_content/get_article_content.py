@@ -328,6 +328,31 @@ def extract_notion_content(page_source):
 
 def extract_author_details(url):
     """
+    Extracts the author name and author URL from a given URL.
+
+    :param url: The URL to extract details from.
+    :return: A dictionary with author name and author URL.
+    """
+    parsed_url = urlparse(url)
+    subdomain = parsed_url.netloc.split('.')[0]  # Assuming the author name is the subdomain
+    domain = parsed_url.netloc
+
+    if subdomain == 'www':
+        # If the subdomain is www, we assume the second part is the author name
+        author_name = parsed_url.netloc.split('.')[1]
+    else:
+        author_name = subdomain
+
+    author_url = f"{parsed_url.scheme}://{domain}"
+
+    return {
+        'authors': author_name,
+        'authors_urls': author_url
+    }
+
+
+def extract_hackmd_author_details(url):
+    """
     Extracts the author name and author URL from a given HackMD URL.
 
     :param url: The HackMD URL to extract details from.
@@ -396,7 +421,7 @@ def fetch_notion_content_from_url(url):
                 'content': content,
                 'release_date': publish_date,
                 'authors': author_details['authors'],  # get author name which is the URL subdomain
-                'author_urls': author_details['author_urls'],  # get the whole URL domain
+                'author_urls': author_details['authors_urls'],  # get the whole URL domain
                 'author_firm_name': None,  # No information provided for this
                 'author_firm_url': None  # No information provided for this
             }
@@ -472,7 +497,7 @@ def fetch_hackmd_article_content(url):
         response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        author_details = extract_author_details(url)
+        author_details = extract_hackmd_author_details(url)
         if author_details['is_website']:
             return {  # TODO 2023-12-23: if authors is None namely there's no subdomain then it is a website and not an article. To be parsed later
                 'title': 'N/A',
@@ -717,7 +742,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['hackmd']
+    url_filters = ['notion']  # None # ['hackmd']
     get_flashbots_writings = False
-    thread_count = 1
+    thread_count = 20
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
