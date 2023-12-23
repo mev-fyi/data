@@ -543,7 +543,7 @@ def fetch_hackmd_article_content(url):
         title = title_tag.text if title_tag else 'N/A'
 
         release_date = soup.select_one('.ui-status-lastchange').parent.contents[3].get('data-createtime')
-        release_date = datetime.datetime.fromtimestamp(int(release_date)/1000).strftime('%Y-%m-%d')
+        release_date = datetime.datetime.fromtimestamp(int(release_date)/1000).strftime('%Y-%m-%d') if release_date is not None else 'N/A'
         # Find the main content container
         content = extract_hackmd_content(response.content)
 
@@ -680,14 +680,14 @@ def fetch_content(row, output_dir):
         # 'blog.metrika': fetch_medium_article_content,
         'mirror.xyz': fetch_mirror_content_from_url,
         # 'iex.io': fetch_iex_article_content,
-        'paradigm.xyz': fetch_paradigm_article_content,  # TODO 2023-12-23
-        'hackmd.io': fetch_hackmd_article_content,  # TODO 2023-12-23
+        'paradigm.xyz': fetch_paradigm_article_content,
+        'hackmd.io': fetch_hackmd_article_content,
         # 'jumpcrypto.com': fetch_jump_article_content,
         'notion.site': fetch_notion_content_from_url,  # Placeholder for fetch_notion_article_content
-        # 'notes.ethereum.org': fetch_notion_article_content,  # Placeholder for fetch_notion_article_content
+        'notes.ethereum.org': fetch_hackmd_article_content,  # Placeholder for fetch_notion_article_content
         # 'succulent-throat-0ce.': fetch_notion_article_content,  # Placeholder for fetch_notion_article_content
         # 'propellerheads.xyz': fetch_propellerheads_article_content,  # TODO 2023-12-23
-        # 'a16z': fetch_a16z_article_content,
+        'a16z': fetch_a16z_article_content,  # TODO 2023-12-23
         # 'blog.uniswap': None,  # Placeholder for fetch_uniswap_article_content
         # 'osmosis.zone': fetch_osmosis_article_content,
         # 'mechanism.org': fetch_mechanism_article_content,
@@ -833,7 +833,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['paradigm']  # None # ['hackmd']
+    url_filters = ['notes.ethereum.org']  # None # ['hackmd']
     get_flashbots_writings = False
-    thread_count = 1
+    thread_count = 20
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
