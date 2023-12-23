@@ -328,6 +328,30 @@ def fetch_content(row, output_dir):
     }
 
 
+def update_csv(full_df, df, modified_indices, csv_filepath):
+    """
+    Update specific rows in the full DataFrame based on the modified subset DataFrame and save it to a CSV file.
+
+    :param full_df: The original full DataFrame.
+    :param df: The modified subset DataFrame.
+    :param modified_indices: A list of indices in df corresponding to the rows modified.
+    :param csv_filepath: File path of the CSV file to be updated.
+    """
+    for idx in modified_indices:
+        # Identify the article URL in the modified subset DataFrame
+        article_url = df.iloc[idx]['article']
+
+        # Find the corresponding row in the full DataFrame based on article URL
+        full_row_index = full_df[full_df['article'] == article_url].index
+
+        # Update the corresponding row in full_df with the modified row in df
+        if not full_row_index.empty:
+            full_df.loc[full_row_index[0]] = df.iloc[idx]
+
+    # Write the updated full DataFrame to CSV
+    full_df.to_csv(csv_filepath, index=False)
+
+
 def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_articles=None, overwrite=True, url_filters=None, thread_count=None):
     """
     Fetch the contents of articles and save each content as a PDF in the specified directory.
@@ -337,18 +361,17 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
     - output_dir (str): The directory where the article PDFs should be saved.
     - num_articles (int, optional): Number of articles to process. If None, process all articles.
     """
-    # Read the CSV file and prepare for updating
-    df = pd.read_csv(csv_filepath)
-    if 'release_date' not in df.columns:
-        df['release_date'] = None
-    if 'authors' not in df.columns:
-        df['authors'] = None
+    # Read the entire CSV file into a DataFrame
+    full_df = pd.read_csv(csv_filepath)
+    if 'release_date' not in full_df.columns:
+        full_df['release_date'] = None
+    if 'authors' not in full_df.columns:
+        full_df['authors'] = None
 
-    # Apply URL filters if provided
+    # Create a filtered subset for processing
+    df = full_df.copy()
     if url_filters is not None:
         df = df[df['article'].str.contains('|'.join(url_filters))]
-
-    # If num_articles is specified, slice the DataFrame
     if num_articles is not None:
         df = df.head(num_articles)
 
@@ -385,11 +408,13 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
                 }
                 if article_title == article_url:
                     # Create a sanitized file name for the PDF from the article title
-                    article_title = content_info['title']
-                    pdf_filename = os.path.join(output_dir, article_title.replace("/", "<slash>") + '.pdf')
+                    if content_info['title']:
+                        article_title = content_info['title']
+                        df.loc[df['article'] == getattr(row, 'article'), 'title'] = article_title
+                        pdf_filename = os.path.join(output_dir, article_title.replace("/", "<slash>") + '.pdf')
 
                 pdfkit.from_string(markdown_to_html(content_info['content']), pdf_filename, options=options)
-                logging.info(f"Saved PDF for {article_url} with name {article_title}")
+                logging.info(f"Saved PDF {article_title} for {article_url}")
 
             else:
                 # logging.warning(f"No content fetched for {article_url}")
@@ -407,10 +432,8 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
     with ThreadPoolExecutor(max_workers=thread_count) as executor:
         executor.map(lambda pair: process_row(pair[1], pair[0]), enumerate(df.itertuples()))
 
-    # Update only the modified rows in the DataFrame
-    if modified_indices:
-        modified_df = df.iloc[modified_indices]
-        modified_df.to_csv(csv_filepath, mode='a', header=False, index=False)
+    # Update only the modified rows in the full DataFrame
+    update_csv(full_df, df, modified_indices, csv_filepath)
 
 
 def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
@@ -426,7 +449,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = None  # ['mirror.xyz']
+    url_filters = ['mirror.xyz']
     get_flashbots_writings = False
-    thread_count = None
+    thread_count = 20
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
