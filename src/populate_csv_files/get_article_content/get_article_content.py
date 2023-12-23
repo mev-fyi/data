@@ -1,3 +1,4 @@
+import datetime
 import time
 from urllib.parse import urlparse
 
@@ -327,27 +328,42 @@ def extract_notion_content(page_source):
 
 def extract_author_details(url):
     """
-    Extracts the author name and author URL from a given URL.
+    Extracts the author name and author URL from a given HackMD URL.
 
-    :param url: The URL to extract details from.
-    :return: A dictionary with author name and author URL.
+    :param url: The HackMD URL to extract details from.
+    :return: A dictionary with author name, author URL, and a flag indicating if it's a website.
     """
     parsed_url = urlparse(url)
-    subdomain = parsed_url.netloc.split('.')[0]  # Assuming the author name is the subdomain
-    domain = parsed_url.netloc
+    path_parts = parsed_url.path.split('/')
 
-    if subdomain == 'www':
-        # If the subdomain is www, we assume the second part is the author name
-        author_name = parsed_url.netloc.split('.')[1]
+    # Check if the domain is hackmd.io
+    if 'hackmd.io' in parsed_url.netloc:
+        # Check if there is an author part in the path
+        if len(path_parts) > 1 and path_parts[1].startswith('@'):
+            author_name = path_parts[1][1:]  # Remove '@' to get the author name
+            author_url = f"https://hackmd.io/@{author_name}"
+            # Determine if it's a website or an article
+            is_website = len(path_parts) == 2 or (len(path_parts) == 3 and path_parts[2] == '')
+            return {
+                'authors': author_name,
+                'authors_urls': author_url,
+                'is_website': is_website
+            }
+        else:
+            # No author in the URL, return None
+            return {
+                'authors': None,
+                'authors_urls': None,
+                'is_website': False
+            }
     else:
-        author_name = subdomain
+        # Not a HackMD URL, return None
+        return {
+            'authors': None,
+            'authors_urls': None,
+            'is_website': False
+        }
 
-    author_url = f"{parsed_url.scheme}://{domain}"
-
-    return {
-        'authors': author_name,
-        'author_urls': author_url
-    }
 
 def fetch_notion_content_from_url(url):
     try:
@@ -400,6 +416,138 @@ def fetch_notion_content_from_url(url):
         driver.quit()
 
 
+def extract_hackmd_content(page_source):
+    soup = BeautifulSoup(page_source, 'html.parser')
+    content_list = []
+
+    # This function will extract text and links recursively and maintain structure
+    def extract_content(html_element):
+        for child in html_element.children:
+            if child.name == 'a':
+                href = child.get('href', '')
+                text = child.get_text(strip=True)
+                if href:
+                    content_list.append(f'[{text}]({href})')
+            elif child.name in {'div', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br'} and not isinstance(child, str):
+                # Add a newline before the block-level element if the last addition wasn't a newline
+                if content_list and content_list[-1] != '\n':
+                    content_list.append('\n')
+                extract_content(child)
+                # Add a newline after the block-level element
+                if child.name != 'div':
+                    content_list.append('\n')
+            elif child.name is None and isinstance(child, str):  # This is a NavigableString
+                stripped_text = child.strip()
+                if stripped_text:
+                    # Append text to content list, maintaining inline structure
+                    content_list.append(stripped_text + ' ')
+            else:
+                # If it's none of the above, recurse into the child
+                extract_content(child)
+
+    # Find the main content container
+    content_div = soup.find('div', id='doc')
+    if content_div:
+        extract_content(content_div)
+
+    # Correctly join the content list while respecting the structure
+    structured_content = ''.join(content_list).strip()
+    # Replace multiple newlines with a single newline
+    structured_content = '\n\n'.join(filter(None, structured_content.split('\n')))
+
+    return structured_content
+
+def fetch_hackmd_article_content(url):
+    """
+    Fetch the title of an article from a HackMD URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - str: The title of the article, or None if the title could not be fetched.
+    """
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        author_details = extract_author_details(url)
+        if author_details['is_website']:
+            return {  # TODO 2023-12-23: if authors is None namely there's no subdomain then it is a website and not an article. To be parsed later
+                'title': 'N/A',
+                'content': None,
+                'release_date': None,
+                'authors': None,
+                'author_urls': None,
+                'author_firm_name': None,
+                'author_firm_url': None
+            }
+
+        title_tag = soup.find('title')
+        title = title_tag.text if title_tag else 'N/A'
+
+        release_date = soup.select_one('.ui-status-lastchange').parent.contents[3].get('data-createtime')
+        release_date = datetime.datetime.fromtimestamp(int(release_date)/1000).strftime('%Y-%m-%d')
+        # Find the main content container
+        content = extract_hackmd_content(response.content)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': author_details['authors'],
+            'author_urls': author_details['authors_urls'],
+            'author_firm_name': None,  # No information provided for this
+            'author_firm_url': None  # No information provided for this
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {
+            'title': 'N/A',
+            'content': None,
+            'release_date': None,
+            'authors': None,
+            'author_urls': None,
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
+
+
+def fetch_vitalik_ca_article_content(url):
+    title = None
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+        title_element = soup.find('link', {'rel': 'alternate', 'type': 'application/rss+xml'})
+        if title_element and 'title' in title_element.attrs:
+            title = title_element['title'].strip()
+            print(f"Fetched title [{title}] for URL {url}")
+    except Exception as e:
+        print(f"Could not fetch title for URL {url} using the rel='alternate' method: {e}")
+    return title
+
+
+def fetch_paradigm_article_content(url):
+    return fetch_title_from_url(url, '.Post_post__J7vh4 > h1:nth-child(1)')
+
+def fetch_jump_article_content(url):
+    return fetch_title_from_url(url, 'h1.MuiTypography-root')
+
+
+def fetch_propellerheads_article_content(url):
+    return fetch_title_from_url(url, '.article-title_heading')
+
+
+def fetch_a16z_article_content(url):
+    return fetch_title_from_url(url, '.highlight-display > h2:nth-child(1)')
+
+
+def fetch_uniswap_article_content(url):
+    return fetch_title_from_url(url, '.p.Type__Title-sc-ga2v53-2:nth-child(1)')
+
+
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
@@ -411,22 +559,22 @@ def fetch_content(row, output_dir):
         'lido.fi': fetch_discourse_content_from_url,
         'research.anoma': fetch_discourse_content_from_url,
         'frontier.tech': fetch_frontier_tech_content_from_url,
-        # 'vitalik.ca': fetch_vitalik_ca_titles,
+        # 'vitalik.ca': fetch_vitalik_ca_article_content,  # TODO 2023-12-23
         'medium.com': fetch_medium_content_from_url,
-        # 'blog.metrika': fetch_medium_titles,
+        # 'blog.metrika': fetch_medium_article_content,
         'mirror.xyz': fetch_mirror_content_from_url,
-        # 'iex.io': fetch_iex_titles,
-        # 'paradigm.xyz': fetch_paradigm_titles,
-        # 'hackmd.io': fetch_hackmd_titles,
-        # 'jumpcrypto.com': fetch_jump_titles,
-        'notion.site': fetch_notion_content_from_url,  # Placeholder for fetch_notion_titles
-        # 'notes.ethereum.org': fetch_notion_titles,  # Placeholder for fetch_notion_titles
-        # 'succulent-throat-0ce.': fetch_notion_titles,  # Placeholder for fetch_notion_titles
-        # 'propellerheads.xyz': fetch_propellerheads_titles,
-        # 'a16z': fetch_a16z_titles,
-        # 'blog.uniswap': None,  # Placeholder for fetch_uniswap_titles
-        # 'osmosis.zone': fetch_osmosis_titles,
-        # 'mechanism.org': fetch_mechanism_titles,
+        # 'iex.io': fetch_iex_article_content,
+        'paradigm.xyz': fetch_paradigm_article_content,  # TODO 2023-12-23
+        'hackmd.io': fetch_hackmd_article_content,  # TODO 2023-12-23
+        # 'jumpcrypto.com': fetch_jump_article_content,
+        'notion.site': fetch_notion_content_from_url,  # Placeholder for fetch_notion_article_content
+        # 'notes.ethereum.org': fetch_notion_article_content,  # Placeholder for fetch_notion_article_content
+        # 'succulent-throat-0ce.': fetch_notion_article_content,  # Placeholder for fetch_notion_article_content
+        # 'propellerheads.xyz': fetch_propellerheads_article_content,  # TODO 2023-12-23
+        # 'a16z': fetch_a16z_article_content,
+        # 'blog.uniswap': None,  # Placeholder for fetch_uniswap_article_content
+        # 'osmosis.zone': fetch_osmosis_article_content,
+        # 'mechanism.org': fetch_mechanism_article_content,
     }
 
     # TODO 2023-09-18: add substack support
@@ -569,7 +717,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['notion']
+    url_filters = ['hackmd']
     get_flashbots_writings = False
     thread_count = 1
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
