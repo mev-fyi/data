@@ -1,3 +1,6 @@
+import time
+from urllib.parse import urlparse
+
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
@@ -10,7 +13,7 @@ import markdown
 
 from src.populate_csv_files.get_article_content.utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, convert_date_format, convert_frontier_tech_date_format, convert_mirror_date_format
 from src.populate_csv_files.get_article_content.get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
-from src.utils import root_directory
+from src.utils import root_directory, return_driver
 from concurrent.futures import ThreadPoolExecutor
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -280,6 +283,110 @@ def fetch_frontier_tech_content_from_url(url):
         return None
 
 
+def extract_notion_content(page_source):
+    soup = BeautifulSoup(page_source, 'html.parser')
+    content_list = []
+
+    # Find the main content container
+    content_div = soup.find('div', class_='notion-page-content')
+    if content_div:
+        # Loop through all divs and their children
+        for child in content_div.find_all(recursive=False):
+            # Check if the child is a div and has text
+            if child.name == 'div' and child.text:
+                # Append text to content list
+                content_list.append(child.get_text())
+            # Check for nested divs and recurse
+            elif child.name == 'div':
+                nested_content = extract_notion_content(str(child))
+                content_list.extend(nested_content)
+            # Check for links (a tags) and format them in Markdown
+            elif child.name == 'a':
+                href = child.get('href', '')
+                text = child.get_text()
+                content_list.append(f'[{text}]({href})')
+
+    return content_list
+
+
+def extract_author_details(url):
+    """
+    Extracts the author name and author URL from a given URL.
+
+    :param url: The URL to extract details from.
+    :return: A dictionary with author name and author URL.
+    """
+    parsed_url = urlparse(url)
+    subdomain = parsed_url.netloc.split('.')[0]  # Assuming the author name is the subdomain
+    domain = parsed_url.netloc
+
+    if subdomain == 'www':
+        # If the subdomain is www, we assume the second part is the author name
+        author_name = parsed_url.netloc.split('.')[1]
+    else:
+        author_name = subdomain
+
+    author_url = f"{parsed_url.scheme}://{domain}"
+
+    return {
+        'authors': author_name,
+        'author_urls': author_url
+    }
+
+def fetch_notion_content_from_url(url):
+    try:
+        driver = return_driver()
+
+        try:
+            driver.get(url)
+
+            # Wait for some time to allow JavaScript to load content
+            driver.implicitly_wait(10)  # Adjust the wait time as necessary
+            time.sleep(5)
+            soup = BeautifulSoup(driver.page_source, 'html.parser')
+
+            # Get the page title
+            title = driver.title
+
+            date_pattern = re.compile(r'\d{4}/\d{2}/\d{2}')
+            # Find the release date using the date pattern
+            date_match = date_pattern.search(soup.get_text())
+            publish_date = date_match.group(0) if date_match else 'N/A'
+
+            page_source = driver.page_source  # The page source obtained from Selenium
+            content = extract_notion_content(page_source)
+
+            # Combine the list into a single string
+            content = '\n\n'.join(content)
+
+            author_details = extract_author_details(url)
+            print(f"Fetched title [{title}] for URL {url}")
+
+            return {
+                'title': title,
+                'content': content,
+                'release_date': publish_date,
+                'authors': author_details['name'],  # get author name which is the URL subdomain
+                'author_urls': author_details['author_url'],  # get the whole URL domain
+                'author_firm_name': None,  # No information provided for this
+                'author_firm_url': None  # No information provided for this
+            }
+        except Exception as e:
+            print(f"Error fetching content from URL {url}: {e}")
+            return {
+                'title': 'N/A',
+                'content': None,
+                'release_date': None,
+                'authors': None,
+                'author_urls': None,
+                'author_firm_name': None,
+                'author_firm_url': None
+            }
+    finally:
+        # Always close the browser to clean up
+        driver.quit()
+
+
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
@@ -299,7 +406,7 @@ def fetch_content(row, output_dir):
         # 'paradigm.xyz': fetch_paradigm_titles,
         # 'hackmd.io': fetch_hackmd_titles,
         # 'jumpcrypto.com': fetch_jump_titles,
-        # 'notion.site': fetch_notion_titles,  # Placeholder for fetch_notion_titles
+        'notion.site': fetch_notion_content_from_url,  # Placeholder for fetch_notion_titles
         # 'notes.ethereum.org': fetch_notion_titles,  # Placeholder for fetch_notion_titles
         # 'succulent-throat-0ce.': fetch_notion_titles,  # Placeholder for fetch_notion_titles
         # 'propellerheads.xyz': fetch_propellerheads_titles,
@@ -449,7 +556,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['mirror.xyz']
+    url_filters = ['notion']
     get_flashbots_writings = False
-    thread_count = 20
+    thread_count = 1
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
