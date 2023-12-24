@@ -1,3 +1,5 @@
+import logging
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -10,7 +12,7 @@ from pdfminer.pdfparser import PDFParser
 from pdfminer.pdfdocument import PDFDocument
 import pikepdf
 
-from src.utils import root_directory
+from src.utils import root_directory, download_pdf
 
 
 def load_failed_urls():
@@ -116,6 +118,22 @@ def get_pdf_details(url):
         }
         print(f"Could not retrieve details from {url}: {e}")
         save_failed_url(url)
+
+    # Check if the paper is already downloaded
+    pdf_directory = os.path.join(root_directory(), 'data', 'papers_pdf_downloads')
+    pdf_filename = f"{paper_title}.pdf"
+    pdf_path = os.path.join(pdf_directory, pdf_filename)
+
+    # Download the paper if it doesn't exist locally
+    if not os.path.exists(pdf_path):
+        pdf_content = download_pdf(f"{url}.pdf", url)
+        if pdf_content:
+            with open(pdf_path, "wb") as f:
+                f.write(pdf_content)
+            logging.info(f"[Self-host] Successfully downloaded {paper_title}")
+        else:
+            logging.warning(f"Failed to download a valid PDF file from {url}")
+
     return details
 
 

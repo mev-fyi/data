@@ -1,14 +1,8 @@
 import os
-import random
-import time
-from pathlib import Path
-from typing import Union
 
 import arxiv
 import requests
-import csv
 from bs4 import BeautifulSoup
-import concurrent.futures
 import logging
 import re
 from datetime import datetime
@@ -17,13 +11,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-import PyPDF2
-from requests.sessions import Session
-from random import choice
-
 
 from src.populate_csv_files.parse_pdf_files import parse_self_hosted_pdf
-from src.utils import root_directory, ensure_newline_in_csv, read_existing_papers, read_csv_links_and_referrers, quickSoup, return_driver, paper_exists_in_csv, create_directory
+from src.utils import root_directory, read_csv_links_and_referrers, quickSoup, return_driver, create_directory, download_pdf, download_and_save_paper, validate_pdfs
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -424,138 +414,6 @@ MAX_RETRIES = 3
 MAX_DELAY = 30
 
 
-def download_pdf(pdf_link, original_url, retries=0, delay=1):
-    if retries >= MAX_RETRIES:
-        return None
-
-    headers = {
-        'User-Agent': choice(USER_AGENTS),
-        'Referer': original_url
-    }
-
-    session = Session()
-
-    try:
-        response = session.get(pdf_link, headers=headers)
-        response.raise_for_status()
-
-        if response.headers['Content-Type'] == 'application/pdf':
-            return response.content
-
-    except requests.RequestException as e:
-        if response.status_code == 429:  # Too Many Requests
-            retry_after = response.headers.get('Retry-After')
-            if retry_after:
-                delay = int(retry_after)  # Use the Retry-After header for delay if present
-            else:
-                delay = min(2 * delay, MAX_DELAY)  # Double the delay, but do not exceed MAX_DELAY
-
-            logging.warning(f"[{pdf_link}] Rate limited. Retrying in {delay} seconds...")
-            time.sleep(delay)
-            return download_pdf(pdf_link, original_url, retries + 1, delay)
-        else:
-            logging.error(f"Failed to download PDF from {pdf_link}. Error: {e}")
-            return None
-
-
-def download_and_save_unique_paper(args):
-    """
-    Download a paper from its link and save its details to a CSV file.
-
-    Parameters:
-    - args (tuple): A tuple containing the following elements:
-        - paper_site (str): The website where the paper is hosted.
-        - link (str): Direct link to the paper's details page (not the PDF link).
-        - csv_file (str): Path to the CSV file where details should be saved.
-        - existing_papers (list): List of existing paper titles in the directory.
-        - headers (dict): Headers to be used in the HTTP request to fetch paper details.
-        - referrer (str): Referrer URL or identifier to be stored alongside paper details.
-        - parsing_method (function): The function to use for parsing the paper details from the webpage.
-    """
-    paper_site, link, csv_file, existing_papers, headers, referrer, parsing_method = args
-    paper_page_url = link.replace('.pdf', '')
-    paper_details = parsing_method(paper_page_url)
-
-    if paper_details is None:
-        logging.error(f"[{paper_site}] Failed to fetch details for {paper_page_url}")
-        return
-
-    # Append details to CSV if paper does not exist in CSV
-    if not paper_exists_in_csv(paper_details['title'], csv_file):
-        # Ensure CSV ends with a newline
-        ensure_newline_in_csv(csv_file)
-
-        paper_details["referrer"] = referrer
-
-        with open(csv_file, 'a', newline='') as csvfile:
-            fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date', 'referrer']
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writerow(paper_details)
-
-    # Define the potential file path
-    pdf_filename = f"{paper_details['title']}.pdf"
-    pdf_path = os.path.join(root_directory(), 'data', 'papers_pdf_downloads', pdf_filename)
-
-    # If PDF does not exist, download it
-    if not os.path.exists(pdf_path):
-        try:
-            pdf_content = download_pdf(paper_details['pdf_link'], '')
-            if pdf_content:
-                with open(pdf_path, "wb") as f:
-                    f.write(pdf_content)
-                logging.info(f"[{paper_site}] Downloaded paper {pdf_filename}")
-        except Exception as e:
-            logging.error(f"Failed to download a valid PDF file from {link} after multiple attempts. Error: {e}")
-
-
-def download_and_save_paper(paper_site, paper_links_and_referrers, csv_file, parsing_method):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-    }
-
-    existing_papers = read_existing_papers(csv_file)
-
-    # Write header only if CSV file is empty (newly created)
-    if not existing_papers:
-        with open(csv_file, 'w', newline='') as csvfile:  # open in write mode only to write the header
-            fieldnames = ['title', 'authors', 'pdf_link', 'topics', 'release_date', 'referrer']
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writeheader()
-
-    # Create a list of tuples where each tuple contains the arguments for a single call
-    # to download_and_save_unique_paper
-    tasks = [
-        (
-            paper_site,
-            link,
-            csv_file,
-            existing_papers,
-            headers,
-            referrer,
-            parsing_method
-        )
-        for link, referrer in paper_links_and_referrers
-    ]
-
-    # Use ProcessPoolExecutor to run tasks in parallel
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        executor.map(download_and_save_unique_paper, tasks)
-
-
-def validate_pdfs(directory_path: Union[str, Path]):
-    if not isinstance(directory_path, Path):
-        directory_path = Path(directory_path)
-
-    for pdf_file in directory_path.glob("*.pdf"):
-        try:
-            # Try to open and read the PDF
-            with open(pdf_file, "rb") as file:
-                reader = PyPDF2.PdfReader(file)
-                # Get the number of pages in the PDF just as a basic check
-                num_pages = len(reader.pages)
-        except Exception as e:
-            logging.info(f"Invalid PDF {pdf_file}, deleting... Reason: {e}")
-            os.remove(pdf_file)
 # Main execution
 
 
