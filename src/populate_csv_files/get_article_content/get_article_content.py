@@ -512,6 +512,7 @@ def extract_hackmd_content(page_source):
 
     return structured_content
 
+
 def fetch_hackmd_article_content(url):
     """
     Fetch the title of an article from a HackMD URL.
@@ -664,6 +665,83 @@ def fetch_uniswap_article_content(url):
     return fetch_title_from_url(url, '.p.Type__Title-sc-ga2v53-2:nth-child(1)')
 
 
+def fetch_dba_article_content(url):
+    """
+    Fetch the content of an article from a dba.xyz URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, authors, and author URLs of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_selector = '.page-section > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h1:nth-child(2)'
+        title_tag = soup.select_one(title_selector)
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date
+        release_date_selector = '.post-meta-data > span:nth-child(1)'
+        release_date_tag = soup.select_one(release_date_selector)
+        if release_date_tag:
+            # Get the current year
+            current_year = datetime.datetime.now().year
+            # Combine the extracted date with the current year
+            date_str = release_date_tag.get_text(strip=True) + f", {current_year}"
+            # Parse the date assuming it's in the format "Month Day, Year"
+            release_date = datetime.datetime.strptime(date_str, '%B %d, %Y').strftime('%Y-%m-%d')
+        else:
+            release_date = 'N/A'
+
+        # Extract author
+        author_selector = '.post-meta-data > a:nth-child(2)'
+        author_tag = soup.select_one(author_selector)
+        author_name = author_tag.get_text(strip=True) if author_tag else 'N/A'
+        author_url = author_tag['href'] if author_tag and author_tag.has_attr('href') else 'N/A'
+
+        # Extract content
+        content_selector = '.page-section > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)'
+        content_div = soup.select_one(content_selector)
+        content_list = []
+        if content_div:
+            # Loop through all content elements within the container
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                # Text from each element is extracted and added to the content list
+                content_list.append(html_to_markdown(elem))  # Assuming html_to_markdown is defined
+
+        # Join all the content into a single string with newlines
+        content = '\n\n'.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': author_name,
+            'author_urls': author_url,
+            'author_firm_name': None,  # No information provided for this
+            'author_firm_url': None  # No information provided for this
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {
+            'title': 'N/A',
+            'content': None,
+            'release_date': None,
+            'authors': None,
+            'author_urls': None,
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
+
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
@@ -685,6 +763,7 @@ def fetch_content(row, output_dir):
         # 'jumpcrypto.com': fetch_jump_article_content,
         'notion.site': fetch_notion_content_from_url,  # Placeholder for fetch_notion_article_content
         'notes.ethereum.org': fetch_hackmd_article_content,  # Placeholder for fetch_notion_article_content
+        'dba.xyz':  fetch_dba_article_content,
         # 'succulent-throat-0ce.': fetch_notion_article_content,  # Placeholder for fetch_notion_article_content
         # 'propellerheads.xyz': fetch_propellerheads_article_content,  # TODO 2023-12-23
         'a16z': fetch_a16z_article_content,  # TODO 2023-12-23
@@ -820,9 +899,31 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
     update_csv(full_df, df, modified_indices, csv_filepath)
 
 
+def add_new_articles():
+    # Paths to the CSV files
+    original_csv_file_path = os.path.join(root_directory(), 'data', 'links', 'articles.csv')
+    updated_csv_file_path = os.path.join(root_directory(), 'data', 'links', 'articles_updated.csv')
+
+    # Read the original and updated articles into DataFrames
+    original_df = pd.read_csv(original_csv_file_path)
+    updated_df = pd.read_csv(updated_csv_file_path)
+
+    # Assuming 'article' is the column name that uniquely identifies rows
+    # Identify new articles not present in the updated DataFrame
+    new_articles = original_df[~original_df['article'].isin(updated_df['article'])]
+
+    # Append new unique articles to the updated DataFrame and save
+    if not new_articles.empty:
+        # Use concat instead of append and drop duplicates just in case
+        updated_df = pd.concat([updated_df, new_articles]).drop_duplicates(subset='article')
+        # Save the updated DataFrame back to the updated CSV file
+        updated_df.to_csv(updated_csv_file_path, index=False)
+
+
 def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
     csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
+    add_new_articles()
     fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path,
                                            output_dir=output_directory,
                                            overwrite=True,
@@ -833,7 +934,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['notes.ethereum.org']  # None # ['hackmd']
+    url_filters = ['pbsfoundation']  # None # ['hackmd']
     get_flashbots_writings = False
-    thread_count = 20
+    thread_count = 1
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)

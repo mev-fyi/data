@@ -260,6 +260,10 @@ def run():
         "flashbots_docs_website": r"^https://docs\.flashbots\.net/$",  # New pattern for Flashbots docs website
         "mirror_xyz_article_2": r"^https://mirror\.xyz/[^/]+/[^/]+$",  # Pattern for articles under mirror.xyz
         "mirror_xyz_website_2": r"^https://mirror\.xyz/[^/]+/$",  # Pattern for the base mirror.xyz website
+        "dba_xyz_website": r"^https://dba\.xyz/$",  # Match the base dba.xyz website
+        "dba_xyz_article": r"^https://dba\.xyz/.+$",  # Match articles under dba.xyz
+        "pbsfoundation_notion_website": r"^https://pbsfoundation\.notion\.site/$",  # Match the base pbsfoundation.notion.site website
+        "pbsfoundation_notion_article": r"^https://pbsfoundation\.notion\.site/[^/]+$",  # Match articles under pbsfoundation.notion.site
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.
