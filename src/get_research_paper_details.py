@@ -38,7 +38,6 @@ USER_AGENTS = [
 ]
 
 
-
 def get_paper_details_from_arxiv(arxiv_url: str) -> dict or None:
     """
        Retrieve paper details from Arxiv using its ID.
@@ -150,12 +149,29 @@ def get_paper_details_from_iacr(url: str):
         authors_match = re.findall(r'author = {(.*)}', bibtex)
         if authors_match:
             paper_authors = ', '.join([author.strip().replace('[', '').replace(']', '').replace("'", '') for author in authors_match[0].split(' and ')])
+        else:
+            paper_authors = ''
 
         paper_release_date = soup.select_one('#metadata > dl:nth-child(2) > dd:nth-child(12)').get_text()
         if 'See all versions' in paper_release_date:
             paper_release_date = soup.select_one('#metadata > dl:nth-child(2) > dd:nth-child(10)').get_text()
         if ':' in paper_release_date:
             paper_release_date = paper_release_date.split(':')[0].strip()
+
+        # Check if the paper is already downloaded
+        pdf_directory = os.path.join(root_directory(), 'data', 'papers_pdf_downloads')
+        pdf_filename = f"{paper_title}.pdf"
+        pdf_path = os.path.join(pdf_directory, pdf_filename)
+
+        # Download the paper if it doesn't exist locally
+        if not os.path.exists(pdf_path):
+            pdf_content = download_pdf(f"{url}.pdf", url)
+            if pdf_content:
+                with open(pdf_path, "wb") as f:
+                    f.write(pdf_content)
+                logging.info(f"[IACR] Successfully downloaded {paper_title}")
+            else:
+                logging.warning(f"Failed to download a valid PDF file from {url}")
 
         return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'iacr', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
@@ -461,7 +477,7 @@ def download_and_save_unique_paper(args):
     paper_details = parsing_method(paper_page_url)
 
     if paper_details is None:
-        logging.error(f"[{paper_site}]Failed to fetch details for {paper_page_url}")
+        logging.error(f"[{paper_site}] Failed to fetch details for {paper_page_url}")
         return
 
     # Append details to CSV if paper does not exist in CSV

@@ -5,6 +5,10 @@ import time
 import markdown
 import requests
 from datetime import datetime
+from urllib.parse import urlparse
+
+from src.utils import root_directory
+
 
 def safe_request(url, max_retries=5, backoff_factor=0.3):
     """
@@ -251,3 +255,56 @@ def convert_mirror_date_format(date_str):
 
     # Format the date to yyyy-mm-dd
     return date_obj.strftime('%Y-%m-%d')
+
+
+import pandas as pd
+from pathlib import Path
+
+
+# Define the function to get the unmatched PDFs.
+def get_unmatched_pdfs(papers_directory: Path, details_csv: Path):
+    # Read the dataframe from CSV
+    paper_details_df = pd.read_csv(details_csv)
+
+    # Extract the list of titles from the dataframe
+    titles_from_df = set(paper_details_df['title'])
+
+    # Get the list of PDF filenames from the directory
+    pdf_filenames = {file.stem for file in papers_directory.glob('*.pdf')}
+
+    # Find the titles that are in the dataframe but not in the directory
+    unmatched_titles = titles_from_df - pdf_filenames
+
+    # Filter the dataframe to only include rows with titles that are not matched
+    unmatched_papers_df = paper_details_df[paper_details_df['title'].isin(unmatched_titles)]
+
+    return unmatched_papers_df
+
+
+def extract_unique_domains_from_dataframe(dataframe):
+    # Extract the 'pdf_link' column
+    pdf_links = dataframe['pdf_link']
+
+    # Extract the domains from the URLs
+    domains = pdf_links.apply(lambda x: urlparse(x).netloc).unique()
+
+    return set(domains)
+
+
+if __name__ == '__main__':
+    # Assuming the root_directory() function is defined elsewhere and returns the correct path.
+    # For demonstration, let's assume the root directory is the current working directory.
+    root_dir = root_directory()
+
+    # Paths are constructed based on the assumed root directory function.
+    papers_directory = Path(f'{root_dir}/data/papers_pdf_downloads')
+    details_csv = Path(f'{root_dir}/data/paper_details.csv')
+
+    # Call the function and print the result.
+    # Note: This will only work if the actual data exists in the specified paths.
+    unmatched_pdfs_df = get_unmatched_pdfs(papers_directory, details_csv)
+    unique_domains = extract_unique_domains_from_dataframe(unmatched_pdfs_df)
+    print(unique_domains)
+
+    # Since we cannot execute with actual file paths in this environment, the above lines are commented out.
+    # They are provided for reference to show how the function should be called in a real scenario.
