@@ -142,6 +142,35 @@ def html_to_markdown(element):
         return ''.join(html_to_markdown(child) for child in element.contents).strip() + '\n\n'
 
 
+def html_to_markdown_a16z(element):
+    """
+    Convert an HTML element to its Markdown representation, keeping URLs.
+    """
+    tag_name = element.name
+
+    if tag_name == 'p':
+        # Use ' '.join to concatenate text nodes and inline elements with a space
+        return ' '.join(html_to_markdown_a16z(child) for child in element.contents).strip() + '\n\n'
+    elif tag_name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
+        header_level = int(tag_name[1])
+        return '#' * header_level + ' ' + ' '.join(html_to_markdown_a16z(child) for child in element.contents).strip() + '\n\n'
+    elif tag_name == 'ul':
+        return '\n'.join([f"* {html_to_markdown_a16z(li)}" for li in element.find_all('li')]).strip() + '\n\n'
+    elif tag_name == 'ol':
+        return '\n'.join([f"1. {html_to_markdown_a16z(li)}" for li in element.find_all('li')]).strip() + '\n\n'
+    elif tag_name == 'a':
+        url = element.get('href', '')
+        text = ' '.join(html_to_markdown_a16z(child) for child in element.contents).strip()
+        return f"[{text}]({url})"
+    elif tag_name == 'span':
+        # Concatenate span contents directly
+        return ''.join(html_to_markdown_a16z(child) for child in element.contents)
+    elif isinstance(element, NavigableString):
+        return element.string
+    else:
+        # Joining child elements with a space for other tags
+        return ' '.join(html_to_markdown_a16z(child) for child in element.contents).strip()
+
 def markdown_to_html(markdown_content):
     """
     Convert Markdown content to HTML with UTF-8 encoding specified.

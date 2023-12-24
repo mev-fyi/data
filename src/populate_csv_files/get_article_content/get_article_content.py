@@ -12,13 +12,22 @@ import os
 import re
 import markdown
 
-from src.populate_csv_files.get_article_content.utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, convert_date_format, convert_frontier_tech_date_format, convert_mirror_date_format
+from src.populate_csv_files.get_article_content.utils import safe_request, sanitize_mojibake, html_to_markdown, markdown_to_html, convert_date_format, convert_frontier_tech_date_format, convert_mirror_date_format, html_to_markdown_a16z
 from src.populate_csv_files.get_article_content.get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
 from src.utils import root_directory, return_driver
 from concurrent.futures import ThreadPoolExecutor
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+
+empty_content = {
+        'content': None,
+        'release_date': None,
+        'authors': None,
+        'author_urls': None,
+        'author_firm_name': None,
+        'author_firm_url': None
+    }
 
 def get_file_list(GITHUB_API_URL="https://api.github.com/repos/flashbots/flashbots-writings-website/contents/content"):
     response = requests.get(GITHUB_API_URL)
@@ -44,14 +53,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
     try:
         response = safe_request(url)  # Use the safe_request function to handle potential 429 errors.
         if response is None:
-            return {
-                'content': None,
-                'release_date': None,
-                'authors': None,
-                'author_urls': None,
-                'author_firm_name': None,
-                'author_firm_url': None
-            }
+            return empty_content
 
         response.encoding = 'utf-8'  # Force UTF-8 encoding
         content = response.text
@@ -61,14 +63,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
 
         if not content_container:
             logging.warning(f"No content found for URL {url} with selector {css_selector}")
-            return {
-                'content': None,
-                'release_date': None,
-                'authors': None,
-                'author_urls': None,
-                'author_firm_name': None,
-                'author_firm_url': None
-            }
+            return empty_content
 
         markdown_content = ''.join(html_to_markdown(element) for element in content_container if element.name is not None)
         markdown_content = sanitize_mojibake(markdown_content)  # Clean up the content after parsing
@@ -97,14 +92,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
         }
     except Exception as e:
         logging.error(f"Could not fetch content for URL {url}: {e}")
-        return {
-            'content': None,
-            'release_date': None,
-            'authors': None,
-            'author_urls': None,
-            'author_firm_name': None,
-            'author_firm_url': None
-        }
+        return empty_content
 
 
 def fetch_medium_content_from_url(url):
@@ -170,15 +158,7 @@ def fetch_medium_content_from_url(url):
         }
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
-        return {
-            'content': None,
-            'release_date': None,
-            'authors': None,
-            'author_urls': None,
-            'author_firm_name': None,
-            'author_firm_url': None
-        }
-
+        return empty_content
 
 def fetch_mirror_content_from_url(url):
     try:
@@ -238,15 +218,7 @@ def fetch_mirror_content_from_url(url):
         }
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
-        return {
-            'title': 'N/A',
-            'content': None,
-            'release_date': None,
-            'authors': None,
-            'author_urls': None,
-            'author_firm_name': None,
-            'author_firm_url': None
-        }
+        return empty_content
 
 
 def fetch_frontier_tech_content_from_url(url):
@@ -285,7 +257,7 @@ def fetch_frontier_tech_content_from_url(url):
         }
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
-        return None
+        return empty_content
 
 
 def extract_notion_content(page_source):
@@ -457,15 +429,7 @@ def fetch_notion_content_from_url(url):
             }
         except Exception as e:
             print(f"Error fetching content from URL {url}: {e}")
-            return {
-                'title': 'N/A',
-                'content': None,
-                'release_date': None,
-                'authors': None,
-                'author_urls': None,
-                'author_firm_name': None,
-                'author_firm_url': None
-            }
+            return empty_content
     finally:
         # Always close the browser to clean up
         driver.quit()
@@ -530,15 +494,7 @@ def fetch_hackmd_article_content(url):
 
         author_details = extract_hackmd_author_details(url)
         if author_details['is_website']:
-            return {  # TODO 2023-12-23: if authors is None namely there's no subdomain then it is a website and not an article. To be parsed later
-                'title': 'N/A',
-                'content': None,
-                'release_date': None,
-                'authors': None,
-                'author_urls': None,
-                'author_firm_name': None,
-                'author_firm_url': None
-            }
+            return empty_content
 
         title_tag = soup.find('title')
         title = title_tag.text if title_tag else 'N/A'
@@ -559,15 +515,7 @@ def fetch_hackmd_article_content(url):
         }
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
-        return {
-            'title': 'N/A',
-            'content': None,
-            'release_date': None,
-            'authors': None,
-            'author_urls': None,
-            'author_firm_name': None,
-            'author_firm_url': None
-        }
+        return empty_content
 
 
 def fetch_vitalik_ca_article_content(url):
@@ -638,27 +586,165 @@ def fetch_paradigm_article_content(url):
         }
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
-        return {
-            'title': 'N/A',
-            'content': None,
-            'release_date': None,
-            'authors': None,
-            'author_urls': None,
-            'author_firm_name': None,
-            'author_firm_url': None
-        }
-
-
-def fetch_jump_article_content(url):
-    return fetch_title_from_url(url, 'h1.MuiTypography-root')
+        return empty_content
 
 
 def fetch_propellerheads_article_content(url):
-    return fetch_title_from_url(url, '.article-title_heading')
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract the title
+        title_tag = soup.select_one('.article-title_heading')
+        title = title_tag.text.strip() if title_tag else 'N/A'
+
+        # Extract the publish date
+        date_tag = soup.select_one('.article-title_content > div:nth-child(1)')
+        release_date = None
+        if date_tag:
+            date_str = date_tag.text.strip()
+            # Assuming the date format is like "August 7, 2023"
+            release_date = datetime.datetime.strptime(date_str, '%B %d, %Y').strftime('%Y-%m-%d')
+
+        # Extract the author name
+        author_tag = soup.select_one('.article-content_author-text > div:nth-child(2)')
+        authors = [author_tag.text.strip()] if author_tag else []
+
+        # Extract the content
+        content_div = soup.select_one('.article-content_rich-text')
+        content_list = []
+        if content_div:
+            # Loop through all content elements within the container
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                markdown = html_to_markdown(elem)  # Assuming html_to_markdown is defined
+                content_list.append(markdown)
+
+        # Join all the content into a single string with newlines
+        content = '\n\n'.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors,
+            'author_urls': [],  # Assuming no specific author URL is provided
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return empty_content
+
+
+def fetch_jump_article_content(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract the title
+        title_tag = soup.select_one('h1.MuiTypography-root')
+        title = title_tag.text.strip() if title_tag else 'N/A'
+
+        # Extract the author name
+        author_tag = soup.select_one('h6.MuiTypography-root:nth-child(2)')
+        authors = [author_tag.text.strip()] if author_tag else []
+
+        # Extract the publish date
+        date_tag = soup.select_one('.css-k1xgly')
+        release_date = None
+        if date_tag:
+            date_str = date_tag.text.strip().split('_')[0].strip()
+            # Assuming the date format is like "Apr 20 2022"
+            release_date = datetime.datetime.strptime(date_str, '%b %d %Y').strftime('%Y-%m-%d')
+
+        # Extract the content
+        content_div = soup.select_one('#postStyle')
+        content_list = []
+        if content_div:
+            # Loop through all content elements within the container
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                markdown = html_to_markdown(elem)  # Assuming html_to_markdown is defined
+                content_list.append(markdown)
+
+        # Join all the content into a single string with newlines
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors,
+            'author_urls': [],  # Assuming no specific author URL is provided
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return empty_content
 
 
 def fetch_a16z_article_content(url):
-    return fetch_title_from_url(url, '.highlight-display > h2:nth-child(1)')
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract the title
+        title_tag = soup.select_one('.highlight-display > h2:nth-child(1)')
+        title = title_tag.text.strip() if title_tag else 'N/A'
+
+        # Extract the authors
+        authors = []
+        author_tags = soup.select('.sep-comma-and span')
+        for tag in author_tags:
+            authors.append(tag.text.strip())
+
+        # Extract the publish date
+        date_tag = soup.select_one('.caption-2')
+        release_date = None
+        if date_tag:
+            date_str = date_tag.text.strip()
+            # Assuming the date format is like "8.24.23"
+            date_components = date_str.split('.')
+            if len(date_components) == 3:
+                month, day, year_suffix = date_components
+                current_year = datetime.datetime.now().year
+                year = str(current_year)[:2] + year_suffix
+                formatted_date_str = f"{month}.{day}.{year}"
+                release_date = datetime.datetime.strptime(formatted_date_str, '%m.%d.%Y').strftime('%Y-%m-%d')
+            else:
+                release_date = 'N/A'
+
+        # Extract the content
+        content_div = soup.select_one('.wysiwyg')
+        content_list = []
+        if content_div:
+            # Loop through all content elements within the container
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                markdown = html_to_markdown_a16z(elem)  # Assuming html_to_markdown is defined
+                content_list.append(markdown)
+
+        # Join all the content into a single string with newlines
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors,
+            'author_urls': [],  # Assuming no specific author URL is provided
+            'author_firm_name': None,
+            'author_firm_url': None
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return empty_content
 
 
 def fetch_uniswap_article_content(url):
@@ -732,15 +818,7 @@ def fetch_dba_article_content(url):
         }
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
-        return {
-            'title': 'N/A',
-            'content': None,
-            'release_date': None,
-            'authors': None,
-            'author_urls': None,
-            'author_firm_name': None,
-            'author_firm_url': None
-        }
+        return empty_content
 
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
@@ -760,12 +838,11 @@ def fetch_content(row, output_dir):
         # 'iex.io': fetch_iex_article_content,
         'paradigm.xyz': fetch_paradigm_article_content,
         'hackmd.io': fetch_hackmd_article_content,
-        # 'jumpcrypto.com': fetch_jump_article_content,
+        'jumpcrypto.com': fetch_jump_article_content,
         'notion.site': fetch_notion_content_from_url,  # Placeholder for fetch_notion_article_content
         'notes.ethereum.org': fetch_hackmd_article_content,  # Placeholder for fetch_notion_article_content
         'dba.xyz':  fetch_dba_article_content,
-        # 'succulent-throat-0ce.': fetch_notion_article_content,  # Placeholder for fetch_notion_article_content
-        # 'propellerheads.xyz': fetch_propellerheads_article_content,  # TODO 2023-12-23
+        'propellerheads.xyz': fetch_propellerheads_article_content,  # TODO 2023-12-23
         'a16z': fetch_a16z_article_content,  # TODO 2023-12-23
         # 'blog.uniswap': None,  # Placeholder for fetch_uniswap_article_content
         # 'osmosis.zone': fetch_osmosis_article_content,
@@ -781,14 +858,7 @@ def fetch_content(row, output_dir):
                 return content_info
 
     # Default case if no match is found
-    return {
-        'content': None,
-        'release_date': None,
-        'authors': None,
-        'author_urls': None,
-        'author_firm_name': None,
-        'author_firm_url': None
-    }
+    return empty_content
 
 
 def update_csv(full_df, df, modified_indices, csv_filepath):
@@ -877,7 +947,7 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
                         pdf_filename = os.path.join(output_dir, article_title.replace("/", "<slash>") + '.pdf')
 
                 pdfkit.from_string(markdown_to_html(content_info['content']), pdf_filename, options=options)
-                logging.info(f"Saved PDF {article_title} for {article_url}")
+                logging.info(f"Saved PDF [{article_title}] for {article_url}")
 
             else:
                 # logging.warning(f"No content fetched for {article_url}")
@@ -934,7 +1004,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['pbsfoundation']  # None # ['hackmd']
+    url_filters = ['a16z']  # ['pbs']  # None # ['hackmd']
     get_flashbots_writings = False
     thread_count = 1
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
