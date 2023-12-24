@@ -264,6 +264,12 @@ def run():
         "dba_xyz_article": r"^https://dba\.xyz/.+$",  # Match articles under dba.xyz
         "pbsfoundation_notion_website": r"^https://pbsfoundation\.notion\.site/$",  # Match the base pbsfoundation.notion.site website
         "pbsfoundation_notion_article": r"^https://pbsfoundation\.notion\.site/[^/]+$",  # Match articles under pbsfoundation.notion.site
+        "multicoin_capital_website": r"^https://multicoin\.capital/writing/$",  # Match the Multicoin Capital writings homepage
+        "multicoin_capital_article": r"^https://multicoin\.capital/writing/.+$",  # Match articles under Multicoin Capital writings
+        "anoma_blog_website": r"^https://anoma\.net/blog/?$",  # Match the Anoma blog homepage
+        "anoma_blog_article": r"^https://anoma\.net/blog/.+$",  # Match articles under Anoma blog
+        "bcc_research_article": r"^https://bcc-research\.github\.io/CFMMRouter\.jl/dev/.*$",  # Match BCC Research article
+        "princeton_press_book": r"^https://press\.princeton\.edu/books/hardcover/\d+/[^/]+$",  # Match Princeton Press book
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.
