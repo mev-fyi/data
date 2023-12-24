@@ -20,12 +20,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger('arxiv')
 logger.setLevel(logging.WARNING)
 
-USER_AGENTS = [
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15',
-    'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0',
-    # Add more user agents if desired...
-]
+
 
 
 def get_paper_details_from_arxiv(arxiv_url: str) -> dict or None:
@@ -106,7 +101,7 @@ def get_paper_details_from_ssrn(url: str) -> dict or None:
                 with open(pdf_path, "wb") as f:
                     f.write(pdf_content)
             else:
-                logging.warning(f"Failed to download a valid PDF file from {pdf_link}")
+                logging.warning(f"[SSRN] Failed to download a valid PDF file from {pdf_link}")
 
         details = {
             'title': title,
@@ -119,7 +114,7 @@ def get_paper_details_from_ssrn(url: str) -> dict or None:
         return details
 
     except Exception as e:
-        logging.error(f"Failed to fetch details for {url}. Error: {e}")
+        logging.error(f"[SSRN] Failed to fetch details for {url}. Error: {e}")
         return None
 
 
@@ -159,16 +154,16 @@ def get_paper_details_from_iacr(url: str):
             if pdf_content:
                 with open(pdf_path, "wb") as f:
                     f.write(pdf_content)
-                logging.info(f"[IACR] Successfully downloaded {paper_title}")
+                logging.info(f"[IACR] Successfully downloaded [{paper_title}]")
             else:
-                logging.warning(f"Failed to download a valid PDF file from {url}")
+                logging.warning(f"[IACR] Failed to download a valid PDF file from {url}")
 
         return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'iacr', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
-        print(f"Failed to fetch the paper details: {e}")
+        logging.error(f"[IACR] Failed to fetch the paper details: {e}")
         return None
     except AttributeError as e:
-        print(f"Failed to parse the paper details: {e}")
+        logging.error(f"[IACR] Failed to parse the paper details: {e}")
         return None
 
 
@@ -211,10 +206,10 @@ def get_paper_details_from_dl_acm(url: str):
 
         return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'DL-ACM', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
-        print(f"Failed to fetch the paper details: {e}")
+        logging.error(f"[DL ACM] Failed to fetch the paper details: {e}")
         return None
     except AttributeError as e:
-        print(f"Failed to parse the paper details: {e}")
+        logging.error(f"[DL ACM] Failed to parse the paper details: {e}")
         return None
 
 
@@ -262,7 +257,7 @@ def get_paper_details_from_nature(url: str):
 
         return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'Nature', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
-        print(f"Failed to fetch the paper details: {e}")
+        logging.error(f"[Nature] Failed to fetch the paper details: {e}")
         return None
     except AttributeError as e:
         print(f"Failed to parse the paper details: {e}")
@@ -370,7 +365,7 @@ def get_paper_details_from_sciendirect(url: str):
 
         return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'ScienceDirect', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
-        print(f"Failed to fetch the paper details: {e}")
+        logging.error(f"[Science Direct] Failed to fetch the paper details: {e}")
         return None
     except AttributeError as e:
         print(f"Failed to parse the paper details: {e}")
@@ -403,15 +398,14 @@ def get_paper_details_from_semanticscholar(url: str):
 
         return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'SemanticScholar', "release_date": paper_release_date}
     except requests.exceptions.RequestException as e:
-        print(f"Failed to fetch the paper details: {e}")
+        logging.error(f"[Semantics Scholar] Failed to fetch the paper details: {e}")
         return None
     except AttributeError as e:
         print(f"Failed to parse the paper details: {e}")
         return None
 
 
-MAX_RETRIES = 3
-MAX_DELAY = 30
+
 
 
 # Main execution

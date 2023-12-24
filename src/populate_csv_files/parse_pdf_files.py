@@ -1,7 +1,10 @@
 import logging
 import os
+from functools import partial
 from pathlib import Path
+from urllib.parse import urlparse
 
+import numpy as np
 import pandas as pd
 from PyPDF2 import PdfReader
 import requests
@@ -12,6 +15,7 @@ from pdfminer.pdfparser import PDFParser
 from pdfminer.pdfdocument import PDFDocument
 import pikepdf
 
+from src.populate_csv_files.get_article_content.get_article_content import update_csv
 from src.utils import root_directory, download_pdf
 
 
@@ -29,10 +33,33 @@ def save_failed_url(url):
         f.write(url + '\n')
 
 
+def download_self_hosted_pdfs(df, url, paper_title):
+    # Try fetching the paper title from the DataFrame
+    paper_title_row = df[df['pdf_link'] == url]
+    if paper_title_row['title'].iloc[0] != np.nan:
+        paper_title_from_df = paper_title_row['title'].iloc[0] if not paper_title_row.empty else str(urlparse(url).path.split('/')[-1]).replace('.pdf', '').replace('%20', ' ')
+        paper_title = paper_title_from_df
+
+    pdf_directory = os.path.join(root_directory(), 'data', 'papers_pdf_downloads')
+    pdf_filename = f"{paper_title.replace('/', '<slash>').replace('.pdf', '').replace('docx', '').replace('Microsoft Word - ', '')}"
+    pdf_path = os.path.join(pdf_directory, f"{pdf_filename}.pdf")
+
+    # Download the paper if it doesn't exist locally
+    pdf_content = download_pdf(f"{url}", url)
+    if pdf_content:
+        with open(pdf_path, "wb") as f:
+            f.write(pdf_content)
+        logging.info(f"[Self-host] Successfully downloaded [{paper_title}]")
+    else:
+        logging.warning(f"[Self-host] Failed to download a valid PDF file from {url}")
+
+
 # Step 3 & 4: Iterating over each row and trying to get the PDF details
-def get_pdf_details(url):
+def get_pdf_details(url, df):
+    paper_title = None
     try:
-        response = requests.get(url)
+        # Attempt to download the PDF content
+        response = requests.get(url, stream=True)
         response.raise_for_status()
 
         # Step 5: Using PyPDF2 to get the PDF details
@@ -45,7 +72,7 @@ def get_pdf_details(url):
                 try:
                     paper_title = info.title
                 except Exception as e:
-                    print(f"Could not retrieve details with [PyPDF] from {url}: {e}")
+                    logging.info(f"Could not retrieve [{paper_title}] details with [PyPDF] from {url}: {e}")
             if not paper_title:  # If details retrieval still fails, try with PyMuPDF
                 try:
                     f.seek(0)
@@ -53,7 +80,7 @@ def get_pdf_details(url):
                     info = doc.metadata
                     paper_title = info['title']
                 except Exception as e:
-                    print(f"Could not retrieve details with [PyMuPDF] from {url}: {e}")
+                    logging.info(f"Could not retrieve [{paper_title}] details with [PyMuPDF] from {url}: {e}")
 
             if not paper_title:  # If details retrieval still fails, try with pdfminer
                 try:
@@ -63,7 +90,7 @@ def get_pdf_details(url):
                     info = doc.info[0]
                     paper_title = info['Title'].decode('utf-8', 'ignore') if 'Title' in info else ''
                 except Exception as e:
-                    print(f"Could not retrieve details with [pdfminer] from {url}: {e}")
+                    logging.info(f"Could not retrieve details [{paper_title}] with [pdfminer] from {url}: {e}")
 
             if not paper_title:  # If details retrieval still fails, try with pikepdf
                 try:
@@ -72,10 +99,10 @@ def get_pdf_details(url):
                     info = doc.open_metadata()
                     paper_title = info['Title'] if 'Title' in info else ''
                 except Exception as e:
-                    print(f"Could not retrieve details with [pikepdf] from {url}: {e}")
+                    logging.info(f"Could not retrieve details [{paper_title}] with [pikepdf] from {url}: {e}")
 
             # Extract creation date and format it to "yyyy-mm-dd"
-            print('\n', info)
+            # print('\n', info)
             # if paper_title:
             f.seek(0)
             reader = PdfReader(f)
@@ -98,6 +125,9 @@ def get_pdf_details(url):
             if 'adobe' or 'acrobat' or 'apache' or 'version' or 'tex' or 'context' in paper_authors.lower():
                 paper_authors = None
 
+            paper_title = paper_title.strip()
+            download_self_hosted_pdfs(df, url, paper_title)
+
             # Creating and returning the details dictionary
             details = {
                 "title": paper_title,
@@ -106,70 +136,41 @@ def get_pdf_details(url):
                 "topics": 'Self-host',
                 "release_date": paper_release_date
             }
-            print(f"Retrieved: {details}\n\n")
-    except Exception as e:
-        # Creating and returning the details dictionary
-        details = {
-            "title": None,
-            "authors": None,
-            "pdf_link": url,
-            "topics": 'Self-host',
-            "release_date": None
-        }
-        print(f"Could not retrieve details from {url}: {e}")
+            # print(f"Retrieved: {details}\n\n")
+    except requests.exceptions.RequestException as e:
+        logging.warning(f"Network error for {url}: {e}")
         save_failed_url(url)
-
-    # Check if the paper is already downloaded
-    pdf_directory = os.path.join(root_directory(), 'data', 'papers_pdf_downloads')
-    pdf_filename = f"{paper_title}.pdf"
-    pdf_path = os.path.join(pdf_directory, pdf_filename)
-
-    # Download the paper if it doesn't exist locally
-    if not os.path.exists(pdf_path):
-        pdf_content = download_pdf(f"{url}.pdf", url)
-        if pdf_content:
-            with open(pdf_path, "wb") as f:
-                f.write(pdf_content)
-            logging.info(f"[Self-host] Successfully downloaded {paper_title}")
-        else:
-            logging.warning(f"Failed to download a valid PDF file from {url}")
-
+        return {'title': None, 'authors': None, 'pdf_link': url, 'topics': 'Self-host', 'release_date': None}
+    except Exception as e:
+        logging.error(f"[get_pdf_details] Unexpected error for {url}: {e}")
+        save_failed_url(url)
+        return {'title': None, 'authors': None, 'pdf_link': url, 'topics': 'Self-host', 'release_date': None}
     return details
 
 
-def parse_self_hosted_pdf():
-    # Load the existing data into a pandas DataFrame
+def parse_self_hosted_pdf(overwrite=False):
     existing_data_filepath = f'{root_directory()}/data/paper_details.csv'
     existing_df = pd.read_csv(existing_data_filepath)
 
-    # Load failed URLs
     failed_urls = load_failed_urls()
-
-    # Step 2: Load the CSV file with the links into a pandas DataFrame
     df = pd.read_csv(f'{root_directory()}/data/links/research_papers/papers.csv')
 
-    # Filter out failed URLs
-    df = df[~df['paper'].isin(failed_urls)]
-
-    # Find the rows in df where the PDF link is not already present in existing_df
-    unique_entries = ~df['paper'].isin(existing_df['pdf_link'])
-
-    # Filter df to only include these unique rows
-    df = df[unique_entries]
+    if not overwrite:
+        df = df[~df['paper'].isin(failed_urls)]
+        df = df[~df['paper'].isin(existing_df['pdf_link'])]
 
     if df.empty:
-        print("No new entries to process.")
+        logging.info("No new entries to process.")
         return
     else:
-        print(f"Processing {len(df)} new entries...")
+        logging.info(f"Processing {len(df)} new entries...")
 
-    # Preserve the referrer column for later use
     referrer_series = df['referrer'].copy()
 
-    # Step 6: Storing the details in a new column in the DataFrame
-    # Creating a ThreadPoolExecutor to parallelize the operation
+    get_pdf_details_partial = partial(get_pdf_details, df=existing_df)
+
     with ThreadPoolExecutor() as executor:
-        df['paper_details'] = list(executor.map(get_pdf_details, df['paper']))
+        df['paper_details'] = list(executor.map(get_pdf_details_partial, df['paper']))
 
     # Add the referrer series to the DataFrame
     df['referrer'] = referrer_series
@@ -206,5 +207,6 @@ def parse_self_hosted_pdf():
     print(f"The DataFrame has been saved to {existing_data_filepath}")
 
 
-parse_self_hosted_pdf()
+if __name__ == "__main__":
+    parse_self_hosted_pdf(overwrite=True)
 
