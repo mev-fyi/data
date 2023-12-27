@@ -747,10 +747,6 @@ def fetch_a16z_article_content(url):
         return empty_content
 
 
-def fetch_uniswap_article_content(url):
-    return fetch_title_from_url(url, '.p.Type__Title-sc-ga2v53-2:nth-child(1)')
-
-
 def fetch_dba_article_content(url):
     """
     Fetch the content of an article from a dba.xyz URL.
@@ -820,6 +816,182 @@ def fetch_dba_article_content(url):
         print(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
+def fetch_iex_article_content(url):
+    """
+    Fetch the content of an article from a iex.io URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, authors, and author URLs of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.header-content-title')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date
+        release_date_tag = soup.select_one('div.se-date:nth-child(3)')
+        if release_date_tag:
+            date_str = release_date_tag.get_text(strip=True)
+            release_date = datetime.datetime.strptime(date_str, '%b %d, %Y').strftime('%Y-%m-%d')
+        else:
+            release_date = 'N/A'
+
+        # Extract author and corporate title
+        author_name_tag = soup.select_one('div.label:nth-child(2)')
+        author_name = author_name_tag.get_text(strip=True) if author_name_tag else 'N/A'
+        corporate_title_tag = soup.select_one('.paragraph-large')
+        corporate_title = corporate_title_tag.get_text(strip=True) if corporate_title_tag else 'N/A'
+        authors = f"{author_name}, {corporate_title}" if author_name != 'N/A' else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.summary-component-content')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = '\n\n'.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors,
+            'author_urls': '',  # URL not provided in the new format
+            'author_firm_name': '',  # Not provided
+            'author_firm_url': ''  # Not provided
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return empty_content
+
+
+
+def fetch_uniswap_article_content(url):
+    """
+    Fetch the content of an article from a uniswap blog URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and authors of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('head > title:nth-child(4)')
+        title = title_tag.get_text(strip=True).split('|')[0].strip() if title_tag else 'N/A'
+
+        # Extract release date
+        release_date_tag = soup.select_one('div.Type__SubTitle-sc-ga2v53-3:nth-child(2)')
+        if release_date_tag:
+            date_str = release_date_tag.get_text(strip=True)
+            release_date = datetime.datetime.strptime(date_str, '%B %d, %Y').strftime('%Y-%m-%d')
+        else:
+            release_date = 'N/A'
+
+        # Authors are not specified on the page, set as 'N/A'
+        authors = 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.slug__ProseWrapper-sc-1flmkfl-4')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'blockquote']):
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = '\n\n'.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return empty_content
+
+
+def fetch_substack_article_content(url):
+    """
+    Fetch the content of an article from a Substack URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and authors of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.post-title')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract author
+        author_tag = soup.select_one('a.frontend-pencraft-Text-module__decoration-hover-underline--BEYAn')
+        author_name = author_tag.get_text(strip=True) if author_tag else 'N/A'
+
+        # Extract release date
+        date_tag = soup.select_one('div.frontend-pencraft-Text-module__color-pub-secondary-text--OzRTa:nth-child(1)')
+        date_str = date_tag.get_text(strip=True) if date_tag else 'N/A'
+        try:
+            release_date = datetime.datetime.strptime(date_str, '%b %d, %Y').strftime('%Y-%m-%d')
+        except ValueError:
+            # Handle different date format if necessary
+            release_date = 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.body')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = '\n\n'.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': author_name
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {
+            'title': '',
+            'content': '',
+            'release_date': '',
+            'authors': ''
+        }
+
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
@@ -833,23 +1005,21 @@ def fetch_content(row, output_dir):
         'frontier.tech': fetch_frontier_tech_content_from_url,
         # 'vitalik.ca': fetch_vitalik_ca_article_content,  # TODO 2023-12-23
         'medium.com': fetch_medium_content_from_url,
-        # 'blog.metrika': fetch_medium_article_content,
+        'blog.metrika': fetch_medium_content_from_url,
         'mirror.xyz': fetch_mirror_content_from_url,
-        # 'iex.io': fetch_iex_article_content,
+        'iex.io': fetch_iex_article_content,
         'paradigm.xyz': fetch_paradigm_article_content,
         'hackmd.io': fetch_hackmd_article_content,
         'jumpcrypto.com': fetch_jump_article_content,
-        'notion.site': fetch_notion_content_from_url,  # Placeholder for fetch_notion_article_content
-        'notes.ethereum.org': fetch_hackmd_article_content,  # Placeholder for fetch_notion_article_content
+        'notion.site': fetch_notion_content_from_url,
+        'notes.ethereum.org': fetch_hackmd_article_content,
         'dba.xyz':  fetch_dba_article_content,
-        'propellerheads.xyz': fetch_propellerheads_article_content,  # TODO 2023-12-23
-        'a16z': fetch_a16z_article_content,  # TODO 2023-12-23
-        # 'blog.uniswap': None,  # Placeholder for fetch_uniswap_article_content
+        'propellerheads.xyz': fetch_propellerheads_article_content,
+        'a16z': fetch_a16z_article_content,
+        'blog.uniswap': fetch_uniswap_article_content,
+        'substack.com': fetch_substack_article_content,
         # 'osmosis.zone': fetch_osmosis_article_content,
-        # 'mechanism.org': fetch_mechanism_article_content,
     }
-
-    # TODO 2023-09-18: add substack support
 
     for pattern, fetch_function in url_patterns.items():
         if pattern in url:
@@ -990,13 +1160,13 @@ def add_new_articles():
         updated_df.to_csv(updated_csv_file_path, index=False)
 
 
-def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
+def run(url_filters=None, get_flashbots_writings=True, thread_count=None, overwrite=False):
     csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
     output_directory = f'{root_directory()}/data/articles_pdf_download/'
     add_new_articles()
     fetch_article_contents_and_save_as_pdf(csv_filepath=csv_file_path,
                                            output_dir=output_directory,
-                                           overwrite=True,
+                                           overwrite=overwrite,
                                            url_filters=url_filters,
                                            thread_count=thread_count)
     if get_flashbots_writings:
@@ -1004,7 +1174,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None):
 
 
 if __name__ == "__main__":
-    url_filters = ['a16z']  # ['pbs']  # None # ['hackmd']
-    get_flashbots_writings = False
+    url_filters = ['metrika.co']  # ['a16z']  # ['pbs']  # None # ['hackmd']
     thread_count = 1
-    run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count)
+    get_flashbots_writings = False
+    run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count, overwrite=True)
