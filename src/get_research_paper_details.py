@@ -21,8 +21,6 @@ logger = logging.getLogger('arxiv')
 logger.setLevel(logging.WARNING)
 
 
-
-
 def get_paper_details_from_arxiv(arxiv_url: str) -> dict or None:
     """
        Retrieve paper details from Arxiv using its ID.
@@ -295,6 +293,23 @@ def get_paper_details_from_research_gate(url: str):
 
         # Format the date as yyyy-mm-dd
         paper_release_date = date_obj.strftime('%Y-%m-%d')
+
+        # TODO 2023-12-17: retrieve .pdf URL from researchGate else use selenium
+        # Check if the paper is already downloaded
+        # pdf_directory = os.path.join(root_directory(), 'data', 'papers_pdf_downloads')
+        # pdf_filename = f"{paper_title}.pdf"
+        # pdf_path = os.path.join(pdf_directory, pdf_filename)
+#
+        # # Download the paper if it doesn't exist locally
+        # if not os.path.exists(pdf_path):
+        #     pdf_content = download_pdf(f"{url}.pdf", url)
+        #     if pdf_content:
+        #         with open(pdf_path, "wb") as f:
+        #             f.write(pdf_content)
+        #         logging.info(f"[ResearchGate] Successfully downloaded [{paper_title}]")
+        #     else:
+        #         logging.warning(f"[ResearchGate] Failed to download a valid PDF file from {url}")
+
 
         return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'ResearchGate', "release_date": paper_release_date}
     except TimeoutException as e:

@@ -240,7 +240,8 @@ def run():
         "url_vitalik_article": r"^https://vitalik\.ca/.+/.+/.+\.html$",
         "vitalik_website": r"^https://vitalik\.ca/$",
         "url_qje_article": r"^https://academic\.oup\.com/qje/article/.+",
-        "hackmd_article": r"^https://hackmd\.io/[^/]+/[^/]+$",  # New pattern for hackmd.io URLs
+        "hackmd_blog_post_article": r"^https://hackmd\.io/@[^/]+/[^/]+/$",  # Pattern for hackmd.io blog posts
+        "hackmd_website": r"^https://hackmd\.io/?$",  # Pattern for hackmd.io website
         "flashbots_article_2": r"^https://collective\.flashbots\.net/t/.+/\d+$",  # New pattern for flashbots.net URLs
         "scrt_network_website": r"^https://scrt\.network/$",  # Match https://scrt.network/
         "scrt_network_blog_website": r"^https://scrt\.network/blog$",  # Match https://scrt.network/blog
@@ -270,6 +271,9 @@ def run():
         "anoma_blog_article": r"^https://anoma\.net/blog/.+$",  # Match articles under Anoma blog
         "bcc_research_article": r"^https://bcc-research\.github\.io/CFMMRouter\.jl/dev/.*$",  # Match BCC Research article
         "princeton_press_book": r"^https://press\.princeton\.edu/books/hardcover/\d+/[^/]+$",  # Match Princeton Press book
+        "sec_gov_article": r"^https://sec\.gov/comments/.+$",  # Match articles under SEC comments
+        'blog.20squares.xyz_website': r"^https://blog.20squares.xyz/?$",  # Match the base blog.20squares.xyz website
+        'blog.20squares.xyz_article': r"^https://blog.20squares.xyz/.*$",  # Match the base blog.20squares.xyz articles
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.

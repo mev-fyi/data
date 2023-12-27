@@ -14,6 +14,7 @@ import concurrent.futures
 from selenium.common.exceptions import NoSuchElementException
 from src.utils import return_driver, root_directory
 
+
 def sanitize_title(title):
     # Replace '/' with '<slash>'
     title_with_slash_replaced = title.replace('/', '<slash>')
@@ -24,6 +25,7 @@ def sanitize_title(title):
     # Collapse multiple spaces
     # return re.sub(r'\s+', ' ', sanitized_title).strip()
     return title_with_slash_replaced.strip()
+
 
 def close_popups(driver, url):
     if "medium.com" in url:

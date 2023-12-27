@@ -281,9 +281,9 @@ def get_unmatched_pdfs(papers_directory: Path, details_csv: Path):
     return unmatched_papers_df
 
 
-def extract_unique_domains_from_dataframe(dataframe):
+def extract_unique_domains_from_dataframe(dataframe, link_field='pdf_link'):
     # Extract the 'pdf_link' column
-    pdf_links = dataframe['pdf_link']
+    pdf_links = dataframe[link_field]
 
     # Extract the domains from the URLs
     domains = pdf_links.apply(lambda x: urlparse(x).netloc).unique()
@@ -297,13 +297,23 @@ if __name__ == '__main__':
     root_dir = root_directory()
 
     # Paths are constructed based on the assumed root directory function.
-    papers_directory = Path(f'{root_dir}/data/papers_pdf_downloads')
-    details_csv = Path(f'{root_dir}/data/paper_details.csv')
+    # papers_directory = Path(f'{root_dir}/data/papers_pdf_downloads')
+    # details_csv = Path(f'{root_dir}/data/paper_details.csv')
 
     # Call the function and print the result.
     # Note: This will only work if the actual data exists in the specified paths.
-    unmatched_pdfs_df = get_unmatched_pdfs(papers_directory, details_csv)
-    unique_domains = extract_unique_domains_from_dataframe(unmatched_pdfs_df)
+    # unmatched_pdfs_df = get_unmatched_pdfs(papers_directory, details_csv)
+    # unique_domains = extract_unique_domains_from_dataframe(unmatched_pdfs_df)
+    # print(unique_domains)
+
+    # Paths are constructed based on the assumed root directory function.
+    articles_directory = Path(f'{root_dir}/data/articles_pdf_download')
+    article_details_csv = Path(f'{root_dir}/data/links/articles_updated.csv')
+
+    # Call the function and print the result.
+    # Note: This will only work if the actual data exists in the specified paths.
+    unmatched_pdfs_articles_df = get_unmatched_pdfs(articles_directory, article_details_csv)
+    unique_domains = extract_unique_domains_from_dataframe(unmatched_pdfs_articles_df, link_field='article')
     print(unique_domains)
 
     # Since we cannot execute with actual file paths in this environment, the above lines are commented out.
