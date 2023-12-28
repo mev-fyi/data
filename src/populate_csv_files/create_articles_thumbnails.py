@@ -100,9 +100,6 @@ def process_row(row):
 
 
 def main():
-    """
-    Created with 1280x720 16:9 resolution
-    """
     # Read URLs and titles from CSV
     csv_file_path = f'{root_directory()}/data/links/articles_updated.csv'
     df = pd.read_csv(csv_file_path)

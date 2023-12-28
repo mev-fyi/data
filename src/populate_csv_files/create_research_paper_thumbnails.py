@@ -1,35 +1,41 @@
 import os
-
 import fitz
-
+from PIL import Image
+from io import BytesIO
 from src.utils import root_directory
 
 
-def generate_pdf_thumbnails(pdf_directory, output_directory, thumb_scale=2, page_fraction=0.6):
+def generate_pdf_thumbnails(pdf_directory, output_directory, page_fraction=0.4, min_px=600, max_px=900):
     """
-    Generate high-resolution thumbnails for a portion of the first page of all PDFs.
-    Args:
-    pdf_directory (str): Directory containing PDF files.
-    output_directory (str): Directory to save the thumbnails.
-    thumb_scale (float): Scale factor for the thumbnail resolution.
-    page_fraction (float): Fraction of the page to be shown in the thumbnail (0 to 1).
+    Generate thumbnails for the top portion of the first page of all PDFs in the pdf_directory.
+    Thumbnails will have a size between min_px and max_px on the longest side.
     """
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
+
     for filename in os.listdir(pdf_directory):
         if filename.lower().endswith('.pdf'):
             pdf_path = os.path.join(pdf_directory, filename)
             thumbnail_path = os.path.join(output_directory, os.path.splitext(filename)[0] + '.png')
-            # Open the PDF
+
             with fitz.open(pdf_path) as doc:
-                page = doc.load_page(0)  # First page
-                # Define the rectangle for the specified portion of the page
-                portion_rect = fitz.Rect(0, 0, page.rect.width, page.rect.height * page_fraction)
-                # Create a pixmap for the specified rectangle with increased resolution
-                matrix = fitz.Matrix(thumb_scale, thumb_scale).prescale(portion_rect.width / page.rect.width, portion_rect.width / page.rect.width)
-                pix = page.get_pixmap(matrix=matrix, clip=portion_rect)
-                pix.save(thumbnail_path)
-                print(f"High-resolution thumbnail generated for {filename} at {thumbnail_path}")
+                page = doc[0]  # First page
+
+                # Calculate zoom factors based on the desired pixel size and actual page size
+                scale = min_px / min(page.rect.width, page.rect.height)
+                if scale * max(page.rect.width, page.rect.height) > max_px:
+                    scale = max_px / max(page.rect.width, page.rect.height)
+
+                mat = fitz.Matrix(scale, scale)  # Create the matrix with the zoom scale
+                pix = page.get_pixmap(matrix=mat)  # Render page to an image
+                img = Image.open(BytesIO(pix.tobytes()))  # Convert to a PIL image
+
+                # Crop the image to the desired page_fraction
+                img_cropped = img.crop((0, 0, img.width, int(img.height * page_fraction)))
+
+                # Save the thumbnail
+                img_cropped.save(thumbnail_path)
+                print(f"Thumbnail generated for {filename} at {thumbnail_path}")
 
 
 def run():
