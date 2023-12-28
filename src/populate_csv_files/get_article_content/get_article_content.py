@@ -852,7 +852,7 @@ def fetch_iex_article_content(url):
         author_name = author_name_tag.get_text(strip=True) if author_name_tag else 'N/A'
         corporate_title_tag = soup.select_one('.paragraph-large')
         corporate_title = corporate_title_tag.get_text(strip=True) if corporate_title_tag else 'N/A'
-        authors = f"{author_name}, {corporate_title}" if author_name != 'N/A' else 'N/A'
+        authors = f"{author_name} - {corporate_title}" if author_name != 'N/A' else 'N/A'
 
         # Extract content
         content_div = soup.select_one('.summary-component-content')
