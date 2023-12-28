@@ -9,3 +9,4 @@ __pycache__/
 /data/article_thumbnails/
 /data/links/filtered_away_youtube_videos.csv
 /data/failed_urls.csv
+/data/research_papers_pdf_thumbnails/
