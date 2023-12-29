@@ -32,7 +32,6 @@ The MEV Conundrum,https://verilog-solutions.notion.site/The-MEV-Conundrum-6d6600
 PEPC FAQ,https://efdn.notion.site/PEPC-FAQ-0787ba2f77e14efba771ff2d903d67e4,https://www.twitter.com/freddmannen,,efdn
 Relays are a Latency Game. | By Alvaro Blazquez and Sachin Lal | by Metrika | Medium,https://blog.metrika.co/relays-are-a-latency-game-303aadb393ce,https://www.twitter.com/freddmannen,2023-03-23,Metrika
 "The Little Transaction that Could: Sequencers, MEV, Intents, and… — Archetype",https://archetype.mirror.xyz/McPqaV9WVyHhky1AAgGyS6DsZ8O0_OIBtED34sWpcUw,https://www.twitter.com/freddmannen,2023-05-31,archetype
-L2 MEV wat — Taiko Labs,https://taiko.mirror.xyz/VjNjFws6OOVez5YCDMwjy4BUiDqZBHYDvcW4-JZGDkc,https://www.twitter.com/freddmannen,2023-06-13,taiko
 ,https://www.galaxy.com/insights/research/mev-the-rise-of-the-builders/,https://www.twitter.com/freddmannen,,
 MEV: The First Five Years | James Prestwich | Medium,https://medium.com/@Prestwich/mev-c417d9a5eb3d,https://www.twitter.com/freddmannen,2022-12-26,James Prestwich
 MEV: The Next Five Years. That’s right I just won’t shut up | by James Prestwich | Medium,https://medium.com/@Prestwich/mev-the-next-five-years-63f84fffdf36,https://www.twitter.com/freddmannen,2023-01-10,James Prestwich
@@ -192,6 +191,7 @@ An Incomplete Primer on Intents — Emperor,https://crypto.mirror.xyz/Wvzro_O92V
 ,https://blog.mangata.finance/blog/2021-10-10-themis-protocol/,https://twitter.com/uPeterKris,,
 Spec'ing out Forward Inclusion-List w/ Dedicated Gas Limits - Block proposer - Ethereum Research,https://ethresear.ch/t/specing-out-forward-inclusion-list-w-dedicated-gas-limits/17115,https://twitter.com/Freddmannen,2023-10-17,https://ethresear.ch/u/terence
 Profile - diego - Ethereum Research,https://ethresear.ch/u/diego,https://twitter.com/Freddmannen,,
+,https://taiko.mirror.xyz/7dfMydX1FqEx9_sOvhRt3V8hJksKSIWjzhCVu7FyMZ,https://twitter.com/Freddmannen,,
 Ending LP's Losing Game: Exploring the Loss-Versus-Rebalancing (… — 0xKeyu ,https://mirror.xyz/0xbdA5bCe76bF62d97D9C9dF0425CC10079Df1aD75/bWOCccjVC7eoYKOzgmjXFdhWDc8rrUL6Yei-eugF52s,https://twitter.com/Freddmannen,2023-10-26,
 Escaping the Dark Forest,https://www.paradigm.xyz/2020/09/escaping-the-dark-forest,https://twitter.com/0x_emperor,2020-09-24,samczsun
 MEV-SGX -- A sealed bid MEV auction design,https://writings.flashbots.net/mev-sgx,https://twitter.com/0x_emperor,2021-05-31,https://collective.flashbots.net/u/robert
@@ -264,3 +264,108 @@ Timing Games: Implications and Possible Mitigations - Proof-of-Stake - Ethereum 
 When To Sell Your Blocks - Research - The Flashbots Collective,https://collective.flashbots.net/t/when-to-sell-your-blocks/2814,https://ethresear.ch/u/mikeneuder,2023-12-14,https://collective.flashbots.net/u/Quintus
 The Impact of Uniswap X on the DEX Ecosystem — Orange Finance,https://mirror.xyz/0x6FA2aF9a4d6fFe654361F713780963C10412e7c3/jMBMzyDROC92wPGr8BHI5GAh0OD-hbwqzQ8PYvyoB3E,https://twitter.com/Freddmannen,2023-11-08,
 "An Overview of NFT Financialization | by Fenbushi Capital | 分布式资本 | Dec, 2023 | Medium",https://fenbushicapital.medium.com/an-overview-of-nft-financialization-c7bcc4181f35,https://www.twitter.com/unlock_VALue,,
+,https://blog.20squares.xyz/mechanics-intent-search-ii/,https://twitter.com/unlock_VALue,,
+,https://blog.20squares.xyz/mev-cui-bono/,https://twitter.com/unlock_VALue,,
+,https://blog.20squares.xyz/lagrangian-intent-search-i/,https://twitter.com/unlock_VALue,,
+Make Ethereum Cypherpunk Again,https://vitalik.eth.limo/general/2023/12/28/cypherpunk.html,https://www.twitter.com/unlock_VALue,,
+My techno-optimism,https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html,https://www.twitter.com/unlock_VALue,,
+Exit games for EVM validiums: the return of Plasma,https://vitalik.eth.limo/general/2023/11/14/neoplasma.html,https://www.twitter.com/unlock_VALue,,
+Different types of layer 2s,https://vitalik.eth.limo/general/2023/10/31/l2types.html,https://www.twitter.com/unlock_VALue,,
+Should Ethereum be okay with enshrining more things in the protocol?,https://vitalik.eth.limo/general/2023/09/30/enshrinement.html,https://www.twitter.com/unlock_VALue,,
+What do I think about Community Notes?,https://vitalik.eth.limo/general/2023/08/16/communitynotes.html,https://www.twitter.com/unlock_VALue,,
+What do I think about biometric proof of personhood?,https://vitalik.eth.limo/general/2023/07/24/biometric.html,https://www.twitter.com/unlock_VALue,,
+Deeper dive on cross-L2 reading for wallets and other use cases,https://vitalik.eth.limo/general/2023/06/20/deeperdive.html,https://www.twitter.com/unlock_VALue,,
+The Three Transitions,https://vitalik.eth.limo/general/2023/06/09/three_transitions.html,https://www.twitter.com/unlock_VALue,,
+Don't overload Ethereum's consensus,https://vitalik.eth.limo/general/2023/05/21/dont_overload.html,https://www.twitter.com/unlock_VALue,,
+Travel time ~= 750 * distance ^ 0.6,https://vitalik.eth.limo/general/2023/04/14/traveltime.html,https://www.twitter.com/unlock_VALue,,
+How will Ethereum's multi-client philosophy interact with ZK-EVMs?,https://vitalik.eth.limo/general/2023/03/31/zkmulticlient.html,https://www.twitter.com/unlock_VALue,,
+Some personal user experiences,https://vitalik.eth.limo/general/2023/02/28/ux.html,https://www.twitter.com/unlock_VALue,,
+An incomplete guide to stealth addresses,https://vitalik.eth.limo/general/2023/01/20/stealth.html,https://www.twitter.com/unlock_VALue,,
+What even is an institution?,https://vitalik.eth.limo/general/2022/12/30/institutions.html,https://www.twitter.com/unlock_VALue,,
+What in the Ethereum application ecosystem excites me,https://vitalik.eth.limo/general/2022/12/05/excited.html,https://www.twitter.com/unlock_VALue,,
+Having a safe CEX: proof of solvency and beyond,https://vitalik.eth.limo/general/2022/11/19/proof_of_solvency.html,https://www.twitter.com/unlock_VALue,,
+The Revenue-Evil Curve: a different way to think about prioritizing public goods funding,https://vitalik.eth.limo/general/2022/10/28/revenue_evil.html,https://www.twitter.com/unlock_VALue,,
+DAOs are not corporations: where decentralization in autonomous organizations matters,https://vitalik.eth.limo/general/2022/09/20/daos.html,https://www.twitter.com/unlock_VALue,,
+What kind of layer 3s make sense?,https://vitalik.eth.limo/general/2022/09/17/layer_3.html,https://www.twitter.com/unlock_VALue,,
+Should there be demand-based recurring fees on ENS domains?,https://vitalik.eth.limo/general/2022/09/09/ens.html,https://www.twitter.com/unlock_VALue,,
+The different types of ZK-EVMs,https://vitalik.eth.limo/general/2022/08/04/zkevm.html,https://www.twitter.com/unlock_VALue,,
+What do I think about network states?,https://vitalik.eth.limo/general/2022/07/13/networkstates.html,https://www.twitter.com/unlock_VALue,,
+Some ways to use ZK-SNARKs for privacy,https://vitalik.eth.limo/general/2022/06/15/using_snarks.html,https://www.twitter.com/unlock_VALue,,
+Where to use a blockchain in non-financial applications?,https://vitalik.eth.limo/general/2022/06/12/nonfin.html,https://www.twitter.com/unlock_VALue,,
+Two thought experiments to evaluate automated stablecoins,https://vitalik.eth.limo/general/2022/05/25/stable.html,https://www.twitter.com/unlock_VALue,,
+In Defense of Bitcoin Maximalism,https://vitalik.eth.limo/general/2022/04/01/maximalist.html,https://www.twitter.com/unlock_VALue,,
+The roads not taken,https://vitalik.eth.limo/general/2022/03/29/road.html,https://www.twitter.com/unlock_VALue,,
+How do trusted setups work?,https://vitalik.eth.limo/general/2022/03/14/trustedsetup.html,https://www.twitter.com/unlock_VALue,,
+Encapsulated vs systemic complexity in protocol design,https://vitalik.eth.limo/general/2022/02/28/complexity.html,https://www.twitter.com/unlock_VALue,,
+Soulbound,https://vitalik.eth.limo/general/2022/01/26/soulbound.html,https://www.twitter.com/unlock_VALue,,
+The bulldozer vs vetocracy political axis,https://vitalik.eth.limo/general/2021/12/19/bullveto.html,https://www.twitter.com/unlock_VALue,,
+Endgame,https://vitalik.eth.limo/general/2021/12/06/endgame.html,https://www.twitter.com/unlock_VALue,,
+Review of Optimism retro funding round 1,https://vitalik.eth.limo/general/2021/11/16/retro1.html,https://www.twitter.com/unlock_VALue,,
+Halo and more: exploring incremental verification and SNARKs without pairings,https://vitalik.eth.limo/general/2021/11/05/halo.html,https://www.twitter.com/unlock_VALue,,
+Crypto Cities,https://vitalik.eth.limo/general/2021/10/31/cities.html,https://www.twitter.com/unlock_VALue,,
+On Nathan Schneider on the limits of cryptoeconomics,https://vitalik.eth.limo/general/2021/09/26/limits.html,https://www.twitter.com/unlock_VALue,,
+"Alternatives to selling at below-market-clearing prices for achieving fairness (or community sentiment, or fun)",https://vitalik.eth.limo/general/2021/08/22/prices.html,https://www.twitter.com/unlock_VALue,,
+Moving beyond coin voting governance,https://vitalik.eth.limo/general/2021/08/16/voting3.html,https://www.twitter.com/unlock_VALue,,
+Against overuse of the Gini coefficient,https://vitalik.eth.limo/general/2021/07/29/gini.html,https://www.twitter.com/unlock_VALue,,
+Verkle trees,https://vitalik.eth.limo/general/2021/06/18/verkle.html,https://www.twitter.com/unlock_VALue,,
+Blockchain voting is overrated among uninformed people but underrated among informed people,https://vitalik.eth.limo/general/2021/05/25/voting2.html,https://www.twitter.com/unlock_VALue,,
+The Limits to Blockchain Scalability,https://vitalik.eth.limo/general/2021/05/23/scaling.html,https://www.twitter.com/unlock_VALue,,
+Why sharding is great: demystifying the technical properties,https://vitalik.eth.limo/general/2021/04/07/sharding.html,https://www.twitter.com/unlock_VALue,,
+Gitcoin Grants Round 9: The Next Phase of Growth,https://vitalik.eth.limo/general/2021/04/02/round9.html,https://www.twitter.com/unlock_VALue,,
+The Most Important Scarce Resource is Legitimacy,https://vitalik.eth.limo/general/2021/03/23/legitimacy.html,https://www.twitter.com/unlock_VALue,,
+Prediction Markets: Tales from the Election,https://vitalik.eth.limo/general/2021/02/18/election.html,https://www.twitter.com/unlock_VALue,2021-02-18,Vitalik Buterin
+An approximate introduction to how zk-SNARKs are possible,https://vitalik.eth.limo/general/2021/01/26/snarks.html,https://www.twitter.com/unlock_VALue,,
+Why we need wide adoption of social recovery wallets,https://vitalik.eth.limo/general/2021/01/11/recovery.html,https://www.twitter.com/unlock_VALue,,
+An Incomplete Guide to Rollups,https://vitalik.eth.limo/general/2021/01/05/rollup.html,https://www.twitter.com/unlock_VALue,,
+Endnotes on 2020: Crypto and Beyond,https://vitalik.eth.limo/general/2020/12/28/endnotes.html,https://www.twitter.com/unlock_VALue,2020-12-28,Vitalik Buterin
+Convex and Concave Dispositions,https://vitalik.eth.limo/general/2020/11/08/concave.html,https://www.twitter.com/unlock_VALue,2020-11-08,Vitalik Buterin
+Why Proof of Stake (Nov 2020),https://vitalik.eth.limo/general/2020/11/06/pos2020.html,https://www.twitter.com/unlock_VALue,,
+Gitcoin Grants Round 7 Retrospective,https://vitalik.eth.limo/general/2020/10/18/round7.html,https://www.twitter.com/unlock_VALue,,
+"Coordination, Good and Bad",https://vitalik.eth.limo/general/2020/09/11/coordination.html,https://www.twitter.com/unlock_VALue,,
+Trust Models,https://vitalik.eth.limo/general/2020/08/20/trust.html,https://www.twitter.com/unlock_VALue,,
+A Philosophy of Blockchain Validation,https://vitalik.eth.limo/general/2020/08/17/philosophy.html,https://www.twitter.com/unlock_VALue,,
+Gitcoin Grants Round 6 Retrospective,https://vitalik.eth.limo/general/2020/07/22/round6.html,https://www.twitter.com/unlock_VALue,,
+Exploring Fully Homomorphic Encryption,https://vitalik.eth.limo/general/2020/07/20/homomorphic.html,https://www.twitter.com/unlock_VALue,,
+Gitcoin Grants Round 5 Retrospective,https://vitalik.eth.limo/general/2020/04/30/round5.html,https://www.twitter.com/unlock_VALue,,
+A Quick Garbled Circuits Primer,https://vitalik.eth.limo/general/2020/03/21/garbled.html,https://www.twitter.com/unlock_VALue,,
+Review of Gitcoin Quadratic Funding Round 4,https://vitalik.eth.limo/general/2020/01/28/round4.html,https://www.twitter.com/unlock_VALue,,
+Base Layers And Functionality Escape Velocity,https://vitalik.eth.limo/general/2019/12/26/mvb.html,https://www.twitter.com/unlock_VALue,,
+Christmas Special,https://vitalik.eth.limo/general/2019/12/24/christmas.html,https://www.twitter.com/unlock_VALue,,
+Quadratic Payments: A Primer,https://vitalik.eth.limo/general/2019/12/07/quadratic.html,https://www.twitter.com/unlock_VALue,,
+,https://vitalik.eth.limo/general/2019/11/22/progress.html,https://www.twitter.com/unlock_VALue,,
+Review of Gitcoin Quadratic Funding Round 3,https://vitalik.eth.limo/general/2019/10/24/gitcoin.html,https://www.twitter.com/unlock_VALue,2019-10-24,Vitalik Buterin
+In-person meatspace protocol to prove unconditional possession of a private key,https://vitalik.eth.limo/general/2019/10/01/story.html,https://www.twitter.com/unlock_VALue,,
+Understanding PLONK,https://vitalik.eth.limo/general/2019/09/22/plonk.html,https://www.twitter.com/unlock_VALue,,
+The Dawn of Hybrid Layer 2 Protocols,https://vitalik.eth.limo/general/2019/08/28/hybrid_layer_2.html,https://www.twitter.com/unlock_VALue,,
+Sidechains vs Plasma vs Sharding,https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html,https://www.twitter.com/unlock_VALue,,
+Fast Fourier Transforms,https://vitalik.eth.limo/general/2019/05/12/fft.html,https://www.twitter.com/unlock_VALue,2019-05-12,Vitalik Buterin
+Control as Liability,https://vitalik.eth.limo/general/2019/05/09/control_as_liability.html,https://www.twitter.com/unlock_VALue,,
+On Free Speech,https://vitalik.eth.limo/general/2019/04/16/free_speech.html,https://www.twitter.com/unlock_VALue,,
+On Collusion,https://vitalik.eth.limo/general/2019/04/03/collusion.html,https://www.twitter.com/unlock_VALue,2019-04-03,Vitalik Buterin
+[Mirror] Cantor was Wrong: debunking the infinite set hierarchy,https://vitalik.eth.limo/general/2019/04/01/cantor.html,https://www.twitter.com/unlock_VALue,,
+A CBC Casper Tutorial,https://vitalik.eth.limo/general/2018/12/05/cbc_casper.html,https://www.twitter.com/unlock_VALue,,
+[Mirror] Central Planning as Overfitting,https://vitalik.eth.limo/general/2018/11/25/central_planning.html,https://www.twitter.com/unlock_VALue,,
+Layer 1 Should Be Innovative in the Short Term but Less in the Long Term,https://vitalik.eth.limo/general/2018/08/26/layer_1.html,https://www.twitter.com/unlock_VALue,,
+A Guide to 99% Fault Tolerant Consensus,https://vitalik.eth.limo/general/2018/08/07/99_fault_tolerant.html,https://www.twitter.com/unlock_VALue,,
+"STARKs, Part 3: Into the Weeds",https://vitalik.eth.limo/general/2018/07/21/starks_part_3.html,https://www.twitter.com/unlock_VALue,,
+On Radical Markets,https://vitalik.eth.limo/general/2018/04/20/radical_markets.html,https://www.twitter.com/unlock_VALue,,
+"Governance, Part 2: Plutocracy Is Still Bad",https://vitalik.eth.limo/general/2018/03/28/plutocracy.html,https://www.twitter.com/unlock_VALue,,
+Proof of Stake FAQ,https://vitalik.eth.limo/general/2017/12/31/pos_faq.html,https://www.twitter.com/unlock_VALue,2017-12-31,Vitalik Buterin
+Sharding FAQ,https://vitalik.eth.limo/general/2017/12/31/sharding_faq.html,https://www.twitter.com/unlock_VALue,2017-12-31,Vitalik Buterin
+Notes on Blockchain Governance,https://vitalik.eth.limo/general/2017/12/17/voting.html,https://www.twitter.com/unlock_VALue,,
+A Quick Gasprice Market Analysis,https://vitalik.eth.limo/general/2017/12/14/gas_analysis.html,https://www.twitter.com/unlock_VALue,,
+"STARKs, Part II: Thank Goodness It's FRI-day",https://vitalik.eth.limo/general/2017/11/22/starks_part_2.html,https://www.twitter.com/unlock_VALue,,
+"STARKs, Part I: Proofs with Polynomials",https://vitalik.eth.limo/general/2017/11/09/starks_part_1.html,https://www.twitter.com/unlock_VALue,,
+On Medium-of-Exchange Token Valuations,https://vitalik.eth.limo/general/2017/10/17/moe.html,https://www.twitter.com/unlock_VALue,,
+A Prehistory of the Ethereum Protocol,https://vitalik.eth.limo/general/2017/09/14/prehistory.html,https://www.twitter.com/unlock_VALue,,
+"A Note on Metcalfe's Law, Externalities and Ecosystem Splits",https://vitalik.eth.limo/general/2017/07/27/metcalfe.html,https://www.twitter.com/unlock_VALue,,
+The Triangle of Harm,https://vitalik.eth.limo/general/2017/07/16/triangle_of_harm.html,https://www.twitter.com/unlock_VALue,,
+On Path Independence,https://vitalik.eth.limo/general/2017/06/22/marketmakers.html,https://www.twitter.com/unlock_VALue,,
+Analyzing Token Sale Models,https://vitalik.eth.limo/general/2017/06/09/sales.html,https://www.twitter.com/unlock_VALue,,
+Engineering Security Through Coordination Problems,https://vitalik.eth.limo/general/2017/05/08/coordination_problems.html,https://www.twitter.com/unlock_VALue,2017-05-08,Vitalik Buterin
+"Hard Forks, Soft Forks, Defaults and Coercion",https://vitalik.eth.limo/general/2017/03/14/forks_and_markets.html,https://www.twitter.com/unlock_VALue,2017-03-14,Vitalik Buterin
+[Mirror] Zk-SNARKs: Under the Hood,https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html,https://www.twitter.com/unlock_VALue,2017-02-01,Vitalik Buterin
+[Mirror] Exploring Elliptic Curve Pairings,https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html,https://www.twitter.com/unlock_VALue,2017-01-14,Vitalik Buterin
+[Mirror] A Proof of Stake Design Philosophy,https://vitalik.eth.limo/general/2016/12/29/pos_design.html,https://www.twitter.com/unlock_VALue,2016-12-29,Vitalik Buterin
+[Mirror] Quadratic Arithmetic Programs: from Zero to Hero,https://vitalik.eth.limo/general/2016/12/10/qap.html,https://www.twitter.com/unlock_VALue,2016-12-10,Vitalik Buterin
+A Note On Charity Through Marginal Price Discrimination,https://vitalik.eth.limo/general/2017/03/11/a_note_on_charity.html,https://www.twitter.com/unlock_VALue,2017-03-11,Vitalik Buterin
