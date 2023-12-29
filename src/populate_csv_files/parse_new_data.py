@@ -276,6 +276,8 @@ def run():
         'blog.20squares.xyz_article': r"^https://blog.20squares.xyz/.*$",  # Match the base blog.20squares.xyz articles
         "vitalik_eth_limo_website": r"^https://vitalik\.eth\.limo/?$",  # Match the base vitalik.eth.limo website
         "vitalik_eth_limo_article": r"^https://vitalik\.eth\.limo/.+/.+$",  # Match articles under vitalik.eth.limo
+        "monoceros_insights_website": r"^https://www\.monoceros\.com/insights/?$",
+        "monoceros_insights_article": r"^https://www\.monoceros\.com/insights/.+$",
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.

@@ -1037,12 +1037,54 @@ def fetch_vitalik_article_content(url):
         }
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
-        return {
-            'title': '',
-            'content': '',
-            'release_date': '',
-            'authors': ''
+        return empty_content
+
+def fetch_monoceros_article_content(url):
+    """
+    Fetch the content of an article from a Monoceros URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, and authors of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
         }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('h1.rY14H8')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract authors
+        authors_tag = soup.select_one('section.n_FyzB:nth-child(1) > div:nth-child(2) > div:nth-child(2)')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('section.n_FyzB:nth-child(1) > div:nth-child(2) > div:nth-child(4)')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                # Assuming html_to_markdown is a function you've defined elsewhere to convert HTML to Markdown
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+        return {
+            'title': title,
+            'content': content,
+            'release_date': 'N/A',  # No release date available
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return empty_content
+
 
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
@@ -1072,6 +1114,7 @@ def fetch_content(row, output_dir):
         'substack.com': fetch_substack_article_content,
         'vitalik.eth.limo': fetch_vitalik_article_content,
         # 'osmosis.zone': fetch_osmosis_article_content,
+        'monoceros': fetch_monoceros_article_content,
     }
 
     for pattern, fetch_function in url_patterns.items():
@@ -1227,7 +1270,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None, overwr
 
 
 if __name__ == "__main__":
-    url_filters = ['vitalik.eth.limo']  # ['a16z']  # ['pbs']  # None # ['hackmd']
+    url_filters = ['monoceros']  # ['a16z']  # ['pbs']  # None # ['hackmd']
     thread_count = 1
     get_flashbots_writings = False
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count, overwrite=True)
