@@ -70,9 +70,6 @@ class GoogleSheetUpdater:
 
 
     def format_worksheet(self, sheet, df, tab_name):
-        # Pascal case all columns names
-        df.columns = [col[0].upper() + col[1:] for col in df.columns]
-
         # Replace hyperlinks with titles using the create_hyperlink_formula function
         if 'Link' in df.columns:
             df['Link'] = df['Link'].apply(create_hyperlink_formula)
@@ -80,8 +77,30 @@ class GoogleSheetUpdater:
         if 'Referrer' in df.columns:
             df['Referrer'] = df['Referrer'].apply(create_hyperlink_formula)
 
-        if 'Article' in df.columns:
+        if tab_name == 'Articles':
+            # Rename the columns to your desired names
+            # title,article,referrer,release_date,authors
+            column_mapping = {
+                'title': 'Title',
+                'authors': 'Authors',
+                'article': 'Article',
+                'release_date': 'Release date',
+                'referrer': 'Referrer'
+            }
+            df.rename(columns=column_mapping, inplace=True)
             df['Article'] = df['Article'].apply(create_hyperlink_formula)
+
+            # Reorder columns as per column_mapping
+            df = df[list(column_mapping.values())]
+
+            # Sort DataFrame in descending order by 'Release date' if the tab is 'Articles'
+            df['Release date'] = pd.to_datetime(df['Release date'], errors='coerce')
+            df.sort_values('Release date', ascending=False, inplace=True, na_position='last')
+            # Convert 'Release date' back to string in 'yyyy-mm-dd' format
+            df['Release date'] = df['Release date'].dt.strftime('%Y-%m-%d')
+
+        # Pascal case all columns names
+        df.columns = [col[0].upper() + col[1:] for col in df.columns]
 
         set_with_dataframe(sheet, df, row=1, col=1, include_index=False, resize=True)
 
@@ -138,7 +157,7 @@ class GoogleSheetUpdater:
         ]
 
         # Function to find the publish date column index
-        def find_publish_date_column(df):
+        def find_publish_or_release_date_column(df):
             # Define a regular expression pattern to match column names
             pattern = re.compile(r'publish(ed)?[_\s]?date', re.IGNORECASE)
 
@@ -146,9 +165,16 @@ class GoogleSheetUpdater:
             for col_name in df.columns:
                 if pattern.search(col_name):
                     return df.columns.get_loc(col_name)
+            # Define a regular expression pattern to match column names
+            pattern = re.compile(r'releas(ed)?[_\s]?date', re.IGNORECASE)
+
+            # Iterate through the column names
+            for col_name in df.columns:
+                if pattern.search(col_name):
+                    return df.columns.get_loc(col_name)
             return None
         # Usage
-        publish_date_column_index = find_publish_date_column(df)
+        publish_date_column_index = find_publish_or_release_date_column(df)
         if publish_date_column_index is not None:
             published_date = {
                 'sortRange': {
@@ -195,16 +221,17 @@ class GoogleSheetUpdater:
         resize_requests = []
 
         for col in range(num_columns):
-            resize_requests.append({
-                "autoResizeDimensions": {
-                    "dimensions": {
-                        "sheetId": sheet.id,
-                        "dimension": "COLUMNS",
-                        "startIndex": col,
-                        "endIndex": col + 1
+            if df.columns[col].lower() != 'authors':
+                resize_requests.append({
+                    "autoResizeDimensions": {
+                        "dimensions": {
+                            "sheetId": sheet.id,
+                            "dimension": "COLUMNS",
+                            "startIndex": col,
+                            "endIndex": col + 1
+                        }
                     }
-                }
-            })
+                })
 
         body = {
             'requests': resize_requests
