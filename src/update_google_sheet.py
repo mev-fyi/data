@@ -68,14 +68,13 @@ class GoogleSheetUpdater:
             logging.info(f"Created new worksheet: '{tab_name}'.")
         return sheet
 
-
     def format_worksheet(self, sheet, df, tab_name):
         # Replace hyperlinks with titles using the create_hyperlink_formula function
-        if 'Link' in df.columns:
-            df['Link'] = df['Link'].apply(create_hyperlink_formula)
+        if 'link' in df.columns:
+            df['link'] = df['link'].apply(create_hyperlink_formula)
 
-        if 'Referrer' in df.columns:
-            df['Referrer'] = df['Referrer'].apply(create_hyperlink_formula)
+        if 'referrer' in df.columns:
+            df['referrer'] = df['referrer'].apply(create_hyperlink_formula)
 
         if tab_name == 'Articles':
             # Rename the columns to your desired names
