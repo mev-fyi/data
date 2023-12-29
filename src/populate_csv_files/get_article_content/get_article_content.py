@@ -1015,14 +1015,9 @@ def fetch_vitalik_article_content(url):
         # Author is always 'Vitalik Buterin'
         author_name = 'Vitalik Buterin'
 
-        # Extract release date from the small tag
-        date_tag = soup.find('small', style=lambda value: value and 'float:left; color: #888' in value)
-        date_str = date_tag.get_text(strip=True) if date_tag else 'N/A'
-        try:
-            release_date = datetime.datetime.strptime(date_str.strip(), '%Y %b %d').strftime('%Y-%m-%d')
-        except ValueError:
-            # Handle different date format if necessary
-            release_date = 'N/A'
+        # Extract release date from the URL
+        date_match = re.search(r'/(\d{4}/\d{2}/\d{2})/', url)
+        release_date = date_match.group(1).replace('/', '-') if date_match else 'N/A'
 
         # Extract content
         content_div = soup.select_one('#doc')
