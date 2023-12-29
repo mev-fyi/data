@@ -274,6 +274,8 @@ def run():
         "sec_gov_article": r"^https://sec\.gov/comments/.+$",  # Match articles under SEC comments
         'blog.20squares.xyz_website': r"^https://blog.20squares.xyz/?$",  # Match the base blog.20squares.xyz website
         'blog.20squares.xyz_article': r"^https://blog.20squares.xyz/.*$",  # Match the base blog.20squares.xyz articles
+        "vitalik_eth_limo_website": r"^https://vitalik\.eth\.limo/?$",  # Match the base vitalik.eth.limo website
+        "vitalik_eth_limo_article": r"^https://vitalik\.eth\.limo/.+/.+$",  # Match articles under vitalik.eth.limo
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.

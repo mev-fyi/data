@@ -992,6 +992,63 @@ def fetch_substack_article_content(url):
             'authors': ''
         }
 
+
+def fetch_vitalik_article_content(url):
+    """
+    Fetch the content of an article from a Vitalik Buterin's website URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title from the meta tag
+        title_tag = soup.find('meta', attrs={'name': 'twitter:title'})
+        title = title_tag['content'] if title_tag else 'N/A'
+
+        # Author is always 'Vitalik Buterin'
+        author_name = 'Vitalik Buterin'
+
+        # Extract release date from the small tag
+        date_tag = soup.find('small', style=lambda value: value and 'float:left; color: #888' in value)
+        date_str = date_tag.get_text(strip=True) if date_tag else 'N/A'
+        try:
+            release_date = datetime.datetime.strptime(date_str.strip(), '%Y %b %d').strftime('%Y-%m-%d')
+        except ValueError:
+            # Handle different date format if necessary
+            release_date = 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('#doc')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                # Assuming html_to_markdown is a function you've defined elsewhere to convert HTML to Markdown
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = '\n\n'.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': author_name
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {
+            'title': '',
+            'content': '',
+            'release_date': '',
+            'authors': ''
+        }
+
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
@@ -1018,6 +1075,7 @@ def fetch_content(row, output_dir):
         'a16z': fetch_a16z_article_content,
         'blog.uniswap': fetch_uniswap_article_content,
         'substack.com': fetch_substack_article_content,
+        'vitalik.eth.limo': fetch_vitalik_article_content,
         # 'osmosis.zone': fetch_osmosis_article_content,
     }
 
@@ -1174,7 +1232,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None, overwr
 
 
 if __name__ == "__main__":
-    url_filters = ['metrika.co']  # ['a16z']  # ['pbs']  # None # ['hackmd']
+    url_filters = ['vitalik.eth.limo']  # ['a16z']  # ['pbs']  # None # ['hackmd']
     thread_count = 1
     get_flashbots_writings = False
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count, overwrite=True)
