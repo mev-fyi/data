@@ -8,7 +8,7 @@ import re
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, WebDriverException
 import concurrent.futures
 
 from selenium.common.exceptions import NoSuchElementException
@@ -49,12 +49,27 @@ def close_popups(driver, url):
         time.sleep(2)
 
 
-def take_screenshot(url, title, output_dir, zoom=120, screenshot_height_percent=0.35, max_height=900, min_width=400, min_height=600):
+def take_screenshot(url, title, output_dir, zoom=150, screenshot_height_percent=0.35, max_height=900, min_width=400, min_height=600):
     driver = return_driver()
 
-    try:
-        driver.get(url)
-        time.sleep(5)  # Allow for full page loading
+    attempt = 0
+    page_loaded = False
+    while attempt < 3 and not page_loaded:
+        try:
+            driver.get(url)
+            # Wait up to 10 seconds for the presence of a specific element, or until the page is loaded
+            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+            page_loaded = True
+        except TimeoutException:
+            print(f"Timeout occurred while loading {url}")
+            attempt += 1
+            time.sleep(5)  # Wait before retrying
+        except WebDriverException as e:
+            print(f"Error occurred: {e}")
+            attempt += 1
+            time.sleep(5)  # Wait before retrying
+
+        time.sleep(3)  # Allow for full page loading after successful status code check
 
         # Close popups if necessary
         close_popups(driver, url)
@@ -68,29 +83,19 @@ def take_screenshot(url, title, output_dir, zoom=120, screenshot_height_percent=
         # Calculate the desired height (percentage of the total height)
         desired_height = int(total_height * screenshot_height_percent)
 
-        # Set a large fixed width to avoid horizontal scroll and adjust the height
-        # adjusted_width = 1200  # Set a large width to avoid horizontal scrollbar
-
-        # Set window size to capture the required part of the page
-        # driver.set_window_size(adjusted_width, desired_height)
-
         # Take screenshot of the required part of the page
         time.sleep(0.5)
         png = driver.get_screenshot_as_png()
 
         # Open the screenshot and crop the top portion
         image = Image.open(BytesIO(png))
-        # cropped_image = image.crop((0, 0, image.width, min(desired_height, image.height)))
         cropped_image = image.crop((0, 0, image.width, max(min(max_height, desired_height), min_height)))
 
-        # Sanity check for image dimensions
-        # if cropped_image.width >= min_width and cropped_image.height >= min_height:
         # Format title for file name
         formatted_title = sanitize_title(title)
 
         # Save cropped screenshot
         cropped_image.save(f"{output_dir}/{formatted_title}.png")
-    finally:
         driver.quit()
 
 
@@ -108,8 +113,8 @@ def main():
     # df = df[df['article'].str.contains('medium.com')]
 
     # Determine number of workers based on the number of available cores
-    # num_workers = int(os.cpu_count() // 1.5)
-    num_workers = int(os.cpu_count())
+    num_workers = int(os.cpu_count() // 2)
+    # num_workers = int(os.cpu_count())
 
     # Use ThreadPoolExecutor to parallelize the task
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
