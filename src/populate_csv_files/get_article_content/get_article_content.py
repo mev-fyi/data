@@ -149,6 +149,7 @@ def fetch_medium_content_from_url(url):
             author_firm_url = None
 
         return {
+            'title': title,
             'content': markdown_content,
             'release_date': publish_date,
             'authors': author_name,
@@ -177,20 +178,27 @@ def fetch_mirror_content_from_url(url):
         publish_date = publish_date_tag.text.strip() if publish_date_tag else 'N/A'
         publish_date = convert_mirror_date_format(publish_date)  # Assuming convert_mirror_date_format is defined
 
+        # Try to extract author using the new CSS selector
+        author_name_div = soup.select_one(
+            '#__next > div._1sjywpl0._1sjywpl1.bc5nciih.bc5ncit1.bc5nci37p > div > div._1sjywpl0._1sjywpl1.bc5nci23u.bc5nci2bm.bc5nci3mz.bc5nci3na.bc5nci3ti.bc5nci3tt.bc5nci316.bc5nci4ow > div > div._1sjywpl0._1sjywpl1.bc5nci5.bc5nciih.bc5nciuz.bc5nciyg.bc5nci1hr > a > div > div > div._1sjywpl0._1sjywpl1.bc5nci546.bc5nci4sx.bc5nciwd.bc5ncix7._2gklefg')
+        author_name = author_name_div.text if author_name_div else None
+
         # Extract author URL
         author_a_tag = soup.find('a', {'data-state': 'closed'})
 
         # Extract the URL
         author_url = author_a_tag['href'] if author_a_tag and author_a_tag.has_attr('href') else None
 
-        # Extract author name
-        # Find the div that contains the author name 'Rated'
-        author_name_div = soup.find('div', class_='_2gklefg')
-        author_name = author_name_div.text if author_name_div else 'N/A'
+        # If the new method didn't work, fall back to the old method
+        if not author_name:
+            # Extract author name
+            # Find the div that contains the author name 'Rated'
+            author_name_div = soup.find('div', class_='_2gklefg')
+            author_name = author_name_div.text if author_name_div else 'N/A'
 
-        if (author_name == 'N/A') or author_name == '':
-            author_details = extract_mirror_author_details(url)
-            author_name = author_details['authors']
+            if (author_name == 'N/A') or author_name == '':
+                author_details = extract_mirror_author_details(url)
+                author_name = author_details['authors']
 
         # Initialize a list to hold all markdown content
         content_list = []
@@ -1270,7 +1278,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None, overwr
 
 
 if __name__ == "__main__":
-    url_filters = ['monoceros']  # ['a16z']  # ['pbs']  # None # ['hackmd']
-    thread_count = 1
+    url_filters = ['@EspressoSystems']  # ['a16z']  # ['pbs']  # None # ['hackmd']
+    thread_count = 20
     get_flashbots_writings = False
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count, overwrite=True)
