@@ -31,7 +31,7 @@ def get_content_list(github_api_url, headers, retry_count=3, delay=5):
         logging.error(f"Error fetching content from {github_api_url}: {e}")
         return []
 
-def process_directory(output_dir, api_url, headers, overwrite=True, exclude_dirs=None):
+def process_directory(output_dir, api_url, headers, overwrite=True, exclude_dirs=None, executor=None):
     # Check if the current directory is in the exclude list
     if exclude_dirs and any(ex_dir in output_dir for ex_dir in exclude_dirs):
         logging.info(f"Skipping excluded directory: {output_dir}")
@@ -44,30 +44,47 @@ def process_directory(output_dir, api_url, headers, overwrite=True, exclude_dirs
 
     logging.info(f"Processing directory: {output_dir}")
 
-    with ThreadPoolExecutor() as executor:
-        futures = []
+    dir_futures = []
+    file_futures = []
 
+    if executor is None:
+        # Executor is only created at the top level; nested calls use the same executor
+        with ThreadPoolExecutor() as executor:
+            for content in contents:
+                if content['type'] == 'dir':
+                    new_output_dir = os.path.join(output_dir, content['name'])
+                    new_api_url = content['url']
+                    os.makedirs(new_output_dir, exist_ok=True)
+                    future = executor.submit(process_directory, new_output_dir, new_api_url, headers, overwrite, exclude_dirs, executor)
+                    dir_futures.append(future)
+                elif content['type'] == 'file' and content['name'].endswith(('.md', '.mdx')):
+                    file_future = process_file(output_dir, content, headers, overwrite)  # Process files serially
+                    file_futures.append(file_future)
+
+            # Wait for all directory futures to complete
+            for future in as_completed(dir_futures):
+                try:
+                    future.result()
+                except Exception as e:
+                    logging.error(f"Error processing a directory: {e}")
+    else:
+        # For nested calls, use the passed executor to process directories in parallel
         for content in contents:
-            if content['type'] == 'file' and content['name'].endswith(('.md', '.mdx')):
-                future = executor.submit(process_file, output_dir, content, headers, overwrite)
-                futures.append(future)
+            if content['type'] == 'dir':
+                new_output_dir = os.path.join(output_dir, content['name'])
+                new_api_url = content['url']
+                os.makedirs(new_output_dir, exist_ok=True)
+                future = executor.submit(process_directory, new_output_dir, new_api_url, headers, overwrite, exclude_dirs, executor)
+                dir_futures.append(future)
 
-        for future in as_completed(futures):
-            try:
-                future.result()
-            except Exception as e:
-                logging.error(f"Error processing a file: {e}")
+    # Wait for all file futures to complete
+    for future in file_futures:
+        try:
+            future.result()
+        except Exception as e:
+            logging.error(f"Error processing a file: {e}")
 
-    # Process subdirectories sequentially
-    for content in contents:
-        if content['type'] == 'dir':
-            new_output_dir = os.path.join(output_dir, content['name'])
-            new_api_url = content['url']
-            os.makedirs(new_output_dir, exist_ok=True)
-            logging.info(f"Processing subdirectory: {content['name']}")
-            process_directory(new_output_dir, new_api_url, headers, overwrite, exclude_dirs)
-
-    # logging.info(f"Finished processing directory: {output_dir}")
+    logging.info(f"Finished processing directory: {output_dir}")
 
 
 
