@@ -7,6 +7,7 @@ from markdown import markdown
 from src.utils import root_directory
 import dotenv
 from concurrent.futures import ThreadPoolExecutor
+from weasyprint import HTML
 
 
 # Load environment variables
@@ -60,12 +61,13 @@ def process_file(output_dir, file_info, headers, overwrite):
     try:
         file_url = file_info['download_url']
         file_content = requests.get(file_url, headers=headers).text
-        convert_to_pdf(file_content, output_pdf_path)
+        convert_to_pdf_with_fallback(file_content, output_pdf_path)
         logging.info(f"Successfully processed and saved: {output_pdf_path}")
     except Exception as e:
         logging.error(f"Error processing file {file_name}: {e}")
 
-def convert_to_pdf(markdown_content, output_pdf_path, retry_count=3, delay=5):
+def convert_to_pdf_with_fallback(markdown_content, output_pdf_path, retry_count=3, delay=5):
+    # First try using pdfkit
     try:
         html_content = '<meta charset="UTF-8">' + markdown(markdown_content, extensions=['md_in_html'])
         options = {
@@ -74,13 +76,22 @@ def convert_to_pdf(markdown_content, output_pdf_path, retry_count=3, delay=5):
             'no-outline': None
         }
         pdfkit.from_string(html_content, output_pdf_path, options=options)
+        return True  # Successfully converted using pdfkit
+    except Exception as e:
+        logging.warning(f"pdfkit failed to convert to PDF: {e}. Trying WeasyPrint...")
+
+    # If pdfkit fails, try using WeasyPrint
+    try:
+        HTML(string=html_content).write_pdf(output_pdf_path)
+        return True  # Successfully converted using WeasyPrint
     except Exception as e:
         if retry_count > 0:
-            logging.warning(f"Error converting to PDF: {e}. Retrying in {delay} seconds...")
+            logging.warning(f"WeasyPrint also failed to convert to PDF: {e}. Retrying in {delay} seconds...")
             time.sleep(delay)
-            convert_to_pdf(markdown_content, output_pdf_path, retry_count-1, delay*2)
-        else:
-            logging.error(f"Failed to convert to PDF after retries: {output_pdf_path}")
+            return convert_to_pdf_with_fallback(markdown_content, output_pdf_path, retry_count-1, delay*2)
+
+    logging.error(f"Failed to convert to PDF after retries: {output_pdf_path}")
+    return None  # Failed conversion in all attempts
 
 
 def fetch_and_save_as_pdf(output_dir, repo_api_url, headers, overwrite=True):
