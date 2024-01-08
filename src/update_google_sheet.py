@@ -11,6 +11,7 @@ import re
 
 from bs4 import BeautifulSoup
 import requests
+from concurrent.futures import ThreadPoolExecutor
 
 from src.utils import root_directory
 
@@ -449,6 +450,16 @@ def update_google_sheet(csv_file, tab_name, num_rows=1000, num_cols=None):
     updater.update_google_sheet(data=data, tab_name=tab_name, num_rows=num_rows, num_cols=num_cols)
 
 
+def update_youtube_data(repo_dir):
+    updater = GoogleSheetUpdater(sheet_id=os.getenv("GOOGLE_SHEET_ID"), credentials_json=os.getenv("GOOGLE_SHEET_CREDENTIALS_JSON"))
+    youtube_txt_file = f"{repo_dir}/data/links/youtube/youtube_channel_handles.txt"
+    youtube_data = {
+        'YouTube Channel Handle': open(youtube_txt_file, 'r').read().split(','),
+        'Link': [f'https://www.youtube.com/{handle.strip()}' for handle in open(youtube_txt_file, 'r').read().split(',')]
+    }
+    updater.update_google_sheet(data=youtube_data, tab_name="Podcasts & Youtube handles", num_rows=1000, num_cols=2)
+
+
 def main():
     load_dotenv()
     repo_dir = root_directory()
@@ -463,19 +474,16 @@ def main():
         {"csv_file": f"{repo_dir}/data/links/youtube/youtube_videos.csv", "tab_name": "Youtube Videos (from channel list)", "num_cols": 2},
     ]
 
-    for config in sheets_to_update:
-        update_google_sheet(config["csv_file"], config["tab_name"], num_cols=config["num_cols"])
+    # Using ThreadPoolExecutor to parallelize the updates
+    with ThreadPoolExecutor() as executor:
+        futures = [executor.submit(update_google_sheet, config["csv_file"], config["tab_name"], config["num_cols"]) for
+                   config in sheets_to_update]
 
-    updater = GoogleSheetUpdater(sheet_id=os.getenv("GOOGLE_SHEET_ID"), credentials_json=os.getenv("GOOGLE_SHEET_CREDENTIALS_JSON"))
-    # Update Google Sheet with YouTube handles
-    youtube_txt_file = f"{repo_dir}/data/links/youtube/youtube_channel_handles.txt"
-    youtube_data = {
-        'YouTube Channel Handle': open(youtube_txt_file, 'r').read().split(','),
-        'Link': [f'https://www.youtube.com/{handle.strip()}' for handle in open(youtube_txt_file, 'r').read().split(',')]
-    }
-    updater.update_google_sheet(data=youtube_data, tab_name="Podcasts & Youtube handles", num_rows=1000, num_cols=2)
+        # Wait for all futures to complete
+        for future in futures:
+            future.result()
 
+    update_youtube_data(repo_dir)
 
 if __name__ == "__main__":
     main()
-
