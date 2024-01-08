@@ -783,12 +783,21 @@ def fetch_dba_article_content(url):
         release_date_selector = '.post-meta-data > span:nth-child(1)'
         release_date_tag = soup.select_one(release_date_selector)
         if release_date_tag:
-            # Get the current year
-            current_year = datetime.datetime.now().year
-            # Combine the extracted date with the current year
-            date_str = release_date_tag.get_text(strip=True) + f", {current_year}"
-            # Parse the date assuming it's in the format "Month Day, Year"
-            release_date = datetime.datetime.strptime(date_str, '%B %d, %Y').strftime('%Y-%m-%d')
+            # Get the current date
+            current_date = datetime.datetime.now()
+            # Extract the text for the date
+            date_text = release_date_tag.get_text(strip=True)
+            # Parse the date without the year
+            extracted_date = datetime.datetime.strptime(date_text, '%B %d')
+            # Assign the current year initially
+            year = current_date.year
+            # Check if the extracted date is later in the year than the current date
+            if extracted_date.month > current_date.month or \
+                    (extracted_date.month == current_date.month and extracted_date.day > current_date.day):
+                # If the extracted date is later in the year, it must be from the previous year
+                year -= 1
+            # Combine the extracted date with the year
+            release_date = datetime.datetime(year, extracted_date.month, extracted_date.day).strftime('%Y-%m-%d')
         else:
             release_date = 'N/A'
 
