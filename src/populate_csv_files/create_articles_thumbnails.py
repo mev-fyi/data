@@ -44,7 +44,7 @@ def close_popups(driver, url):
                     logging.warning(f"Popup not found for {url}.")
         time.sleep(2)
 
-def take_screenshot(url, title, output_dir, zoom=120, screenshot_height_percent=0.35, max_height=900, min_height=600):
+def take_screenshot(url, title, output_dir, zoom=140, screenshot_height_percent=0.35, max_height=900, min_height=600):
     driver = return_driver()
 
     attempt = 0
@@ -99,11 +99,19 @@ def process_row(row):
     output_dir = f"{root_directory()}/data/article_thumbnails"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    take_screenshot(row['article'], row['title'], output_dir)
+    if 'article' in row.keys():
+        take_screenshot(row['article'], row['title'], output_dir)
+    elif 'pdf_link' in row.keys():
+        take_screenshot(row['pdf_link'], row['title'], output_dir)
+    else:
+        logging.error("Could not find link in row")
 
 def main():
     logging.basicConfig(level=logging.INFO)
-    csv_file_paths = [f'{root_directory()}/data/links/articles_updated.csv', f'{root_directory()}/data/docs_details.csv']
+    csv_file_paths = [
+        f'{root_directory()}/data/links/articles_updated.csv',
+        f'{root_directory()}/data/docs_details.csv'
+    ]
     for csv_file_path in csv_file_paths:
         try:
             df = pd.read_csv(csv_file_path)
@@ -119,4 +127,5 @@ def main():
             executor.map(process_row, df.to_dict('records'))
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     main()

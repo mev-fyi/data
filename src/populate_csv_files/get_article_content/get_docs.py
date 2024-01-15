@@ -15,7 +15,7 @@ dotenv.load_dotenv()
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 def get_content_list(github_api_url, headers, retry_count=3, delay=5):
     try:
@@ -178,9 +178,9 @@ def process_repositories(overwrite=True):
     exclude_dirs = ['translations']  # List of directories to exclude
 
     # Flashbots Docs
-    # flashbots_output_dir = f'{root_directory()}/data/flashbots_docs_pdf/'
-    # flashbots_repo_api_url = "https://api.github.com/repos/flashbots/flashbots-docs/contents/docs"
-    # fetch_and_save_as_pdf(flashbots_output_dir, flashbots_repo_api_url, headers, overwrite)
+    flashbots_output_dir = f'{root_directory()}/data/flashbots_docs_pdf/'
+    flashbots_repo_api_url = "https://api.github.com/repos/flashbots/flashbots-docs/contents/docs"
+    fetch_and_save_as_pdf(flashbots_output_dir, flashbots_repo_api_url, headers, overwrite)
 
     # Ethereum Org Website
     ethereum_output_dir = f'{root_directory()}/data/ethereum_org_website_content/'
@@ -189,6 +189,7 @@ def process_repositories(overwrite=True):
     fetch_and_save_as_pdf(ethereum_output_dir, ethereum_repo_api_url, headers, overwrite, exclude_dirs)
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     try:
         process_repositories(overwrite=False)
     except Exception as e:

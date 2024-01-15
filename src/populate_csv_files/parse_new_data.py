@@ -278,6 +278,10 @@ def run():
         "vitalik_eth_limo_article": r"^https://vitalik\.eth\.limo/.+/.+$",  # Match articles under vitalik.eth.limo
         "monoceros_insights_website": r"^https://www\.monoceros\.com/insights/?$",
         "monoceros_insights_article": r"^https://www\.monoceros\.com/insights/.+$",
+        "kelvinfichter_website": r"^https://kelvinfichter\.com/pages/thoughts/?$",
+        "kelvinfichter_article": r"^https://kelvinfichter\.com/pages/thoughts/.+$",
+        "a16zcrypto_website": r"^https://a16zcrypto\.com/posts/?$",  # Match the base a16zcrypto.com/posts website
+        "a16zcrypto_article": r"^https://a16zcrypto\.com/posts/.+$",  # Match articles under a16zcrypto.com/posts
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.
