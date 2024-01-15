@@ -6,13 +6,11 @@ Smart contract libraries,Ethereum.org,https://ethereum.org/en/developers/docs/sm
 The Beacon Chain,Ethereum.org,https://ethereum.org/en/roadmap/beacon-chain/,2023-11-30,roadmap-beacon-chain-index.pdf
 Mining algorithms,Ethereum.org,https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/mining-algorithms/,,developers-docs-consensus-mechanisms-pow-mining-algorithms-index.pdf
 A more secure Ethereum,Ethereum.org,https://ethereum.org/en/roadmap/security/,,roadmap-security-index.pdf
-"""The Graph: Fixing Web3 data querying""",Ethereum.org,https://ethereum.org/en/contributing/translation-program/content-buckets/#tutorials-2,2023-11-02,developers-tutorials-the-graph-fixing-web3-data-querying-index.pdf
 Ethereum Governance,Ethereum.org,https://ethereum.org/en/governance/#introduction,2023-07-30,governance-index.pdf
 "How to develop and test a dApp on a local, multi-client testnet",Ethereum.org,https://ethereum.org/en/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/,,developers-tutorials-develop-and-test-dapps-with-a-multi-client-local-eth-testnet-index.pdf
 How to swap tokens,Ethereum.org,https://ethereum.org/en/guides/how-to-swap-tokens/#how-to-swap-tokens,2023-11-30,guides-how-to-swap-tokens-index.pdf
 """Vyper ERC-721 Contract Walkthrough""",Ethereum.org,https://ethereum.org/en/developers/tutorials/erc-721-vyper-annotated-code/,,developers-tutorials-erc-721-vyper-annotated-code-index.pdf
 Ethereum for Go developers,Ethereum.org,https://ethereum.org/en/developers/docs/programming-languages/golang/,,developers-docs-programming-languages-golang-index.pdf
-Adding staking products or services,Ethereum.org,https://ethereum.org/en/contributing/adding-staking-products/#adding-staking-products-or-services,2023-07-11,contributing-adding-staking-products-index.pdf
 Ethereum for Ruby Developers,Ethereum.org,https://ethereum.org/en/developers/docs/programming-languages/ruby/,,developers-docs-programming-languages-ruby-index.pdf
 Decentralized autonomous organizations (DAOs),Ethereum.org,https://ethereum.org/en/dao/,,dao-index.pdf
 Staking withdrawals,Ethereum.org,https://ethereum.org/en/staking/withdrawals/,,staking-withdrawals-index.pdf
@@ -20,9 +18,7 @@ Smart contract security,Ethereum.org,https://ethereum.org/en/developers/docs/sma
 Blocks,Ethereum.org,https://ethereum.org/en/,,developers-docs-blocks-index.pdf
 Client diversity,Ethereum.org,https://ethereum.org/en/developers/docs/nodes-and-clients/client-diversity/,,developers-docs-nodes-and-clients-client-diversity-index.pdf
 Frequently Asked Questions,Ethereum.org,https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/faqs/,,developers-docs-consensus-mechanisms-pos-faqs-index.pdf
-Translation Program lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/playbook/#workflow,2023-10-29,contributing-translation-program-index.pdf
 Optimistic Rollups,Ethereum.org,https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/,,developers-docs-scaling-optimistic-rollups-index.pdf
-Content buckets lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/content-buckets/#use-ethereum-pages,2023-11-02,contributing-translation-program-content-buckets-index.pdf
 Ethereum Archive Node,Ethereum.org,https://ethereum.org/en/developers/docs/nodes-and-clients/archive-nodes/,,developers-docs-nodes-and-clients-archive-nodes-index.pdf
 Ethereum for JavaScript developers,Ethereum.org,https://ethereum.org/en/developers/docs/programming-languages/javascript/,,developers-docs-programming-languages-javascript-index.pdf
 Network addresses,Ethereum.org,https://ethereum.org/en/developers/docs/networking-layer/network-addresses/,,developers-docs-networking-layer-network-addresses-index.pdf
@@ -39,12 +35,10 @@ Data availability,Ethereum.org,https://ethereum.org/en/developers/docs/data-avai
 Nodes as a service,Ethereum.org,https://ethereum.org/en/staking/saas/,,developers-docs-nodes-and-clients-nodes-as-a-service-index.pdf
 Solo stake your ETH,Ethereum.org,https://ethereum.org/en/staking/solo/,,staking-solo-index.pdf
 Verkle trees,Ethereum.org,https://ethereum.org/en/roadmap/verkle-trees/#verkle-trees,2023-05-24,roadmap-verkle-trees-index.pdf
-Adding developer tools lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/playbook/#workflow,2023-10-29,contributing-adding-developer-tools-index.pdf
 Validium,Ethereum.org,https://ethereum.org/en/developers/docs/scaling/validium/,,developers-docs-scaling-validium-index.pdf
 Monitoring Geth with InfluxDB and Grafana,Ethereum.org,https://ethereum.org/en/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/,,developers-tutorials-monitoring-geth-with-influxdb-and-grafana-index.pdf
 How to use a wallet,Ethereum.org,https://ethereum.org/en/guides/how-to-use-a-wallet/#how-to-use-a-wallet,2023-08-27,guides-how-to-use-a-wallet-index.pdf
 Gasper,Ethereum.org,https://ethereum.org/en/,,developers-docs-consensus-mechanisms-pos-gasper-index.pdf
-Contributing,Ethereum.org,https://ethereum.org/en/contributing/#contributing-to-ethereumorg,2023-12-06,contributing-index.pdf
 Hello World Smart Contract for Beginners - Fullstack,Ethereum.org,https://ethereum.org/en/developers/tutorials/hello-world-smart-contract-fullstack/,,developers-tutorials-hello-world-smart-contract-fullstack-index.pdf
 Deploying your first smart contract,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/security/#contract-upgrades,,developers-tutorials-deploying-your-first-smart-contract-index.pdf
 Single slot finality,Ethereum.org,https://ethereum.org/en/roadmap/single-slot-finality/#single-slot-finality,2023-11-30,roadmap-single-slot-finality-index.pdf
@@ -52,20 +46,14 @@ Secret leader election,Ethereum.org,https://ethereum.org/en/roadmap/secret-leade
 Merkle Patricia Trie,Ethereum.org,https://ethereum.org/en/developers/docs/data-structures-and-encoding/patricia-merkle-trie/,,developers-docs-data-structures-and-encoding-patricia-merkle-trie-index.pdf
 Smart contract composability,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/composability/,,developers-docs-smart-contracts-composability-index.pdf
 NFT Minter Tutorial,Ethereum.org,https://ethereum.org/en/developers/tutorials/nft-minter/,,developers-tutorials-nft-minter-index.pdf
-Design contribution,Ethereum.org,https://ethereum.org/en/contributing/design/#design-contributions,2023-06-28,contributing-design-index.pdf
-Style Guide,Ethereum.org,https://ethereum.org/en/contributing/style-guide/#style-guide,2023-04-14,contributing-style-guide-index.pdf
-Translation Program frequently asked questions (FAQ) lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/faq/#compensation,2023-12-06,contributing-translation-program-faq-index.pdf
-Translators guide lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/translators-guide/#translating-metadata,2023-12-06,contributing-translation-program-translators-guide-index.pdf
 Networking layer,Ethereum.org,https://ethereum.org/en/developers/docs/networking-layer/,,developers-docs-networking-layer-index.pdf
 Dagger-Hashimoto,Ethereum.org,https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/,,developers-docs-consensus-mechanisms-pow-mining-algorithms-dagger-hashimoto-index.pdf
 How to Write & Deploy an NFT (Part 1/3 of NFT Tutorial Series),Ethereum.org,https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/,,developers-tutorials-how-to-write-and-deploy-an-nft-index.pdf
 Token integration checklist,Ethereum.org,https://ethereum.org/en/developers/docs/standards/tokens/#related-tutorials,,developers-tutorials-token-integration-checklist-index.pdf
-Language resources,Ethereum.org,https://ethereum.org/en/community/language-resources/#language-resources,2023-10-16,community-language-resources-index.pdf
 Verifying smart contracts,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/verifying/,,developers-docs-smart-contracts-verifying-index.pdf
 Web2 vs Web3,Ethereum.org,https://ethereum.org/en/developers/docs/web2-vs-web3/,,developers-docs-web2-vs-web3-index.pdf
 ERC-20 Token Standard,Ethereum.org,https://ethereum.org/en/developers/docs/standards/tokens/erc-20/,,developers-docs-standards-tokens-erc-20-index.pdf
 Formal verification of smart contracts,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/formal-verification/,,developers-docs-smart-contracts-formal-verification-index.pdf
-Resources for translators lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/playbook/#workflow,2023-10-29,contributing-translation-program-resources-index.pdf
 Maximal extractable value (MEV),Ethereum.org,https://ethereum.org/en/developers/docs/mev/,,developers-docs-mev-index.pdf
 Keys in proof-of-stake Ethereum,Ethereum.org,https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/keys/,,developers-docs-consensus-mechanisms-pos-keys-index.pdf
 """All you can cache""",Ethereum.org,https://ethereum.org/en/developers/tutorials/all-you-can-cache/,,developers-tutorials-all-you-can-cache-index.pdf
@@ -80,7 +68,6 @@ Nodes and clients,Ethereum.org,https://ethereum.org/en/developers/docs/nodes-and
 Learn Foundational Ethereum Topics with SQL,Ethereum.org,https://ethereum.org/en/developers/tutorials/,,developers-tutorials-learn-foundational-ethereum-topics-with-sql-index.pdf
 Regenerative Finance (ReFi),Ethereum.org,https://ethereum.org/en/refi/,,refi-index.pdf
 Ethereum Energy Consumption,Ethereum.org,https://ethereum.org/en/energy-consumption/#proof-of-stake-energy,2023-08-27,energy-consumption-index.pdf
-Code of conduct,Ethereum.org,https://ethereum.org/en/,,community-code-of-conduct-index.pdf
 Backend API libraries,Ethereum.org,https://ethereum.org/en/developers/docs/apis/backend/,,developers-docs-apis-backend-index.pdf
 Getting Started with Ethereum Development,Ethereum.org,https://ethereum.org/en/developers/docs/programming-languages/golang/#beginner-articles-and-books,,developers-tutorials-getting-started-with-ethereum-development-using-alchemy-index.pdf
 Design and UX in web3,Ethereum.org,https://ethereum.org/en/developers/docs/design-and-ux/,,developers-docs-design-and-ux-index.pdf
@@ -91,9 +78,7 @@ Block proposal,Ethereum.org,https://ethereum.org/en/developers/docs/consensus-me
 Networks,Ethereum.org,https://ethereum.org/en/developers/docs/networks/,,developers-docs-networks-index.pdf
 Light clients,Ethereum.org,https://ethereum.org/en/developers/docs/nodes-and-clients/light-clients/,,developers-docs-nodes-and-clients-light-clients-index.pdf
 Enterprise on Ethereum Mainnet,Ethereum.org,https://ethereum.org/en/enterprise/#ethereum-for-enterprise,2023-03-16,enterprise-index.pdf
-Adding Layer 2s,Ethereum.org,https://ethereum.org/en/contributing/adding-layer-2s/#adding-layer-2,2023-04-20,contributing-adding-layer-2s-index.pdf
 Testing simple smart contract with Waffle library,Ethereum.org,https://ethereum.org/en/developers/tutorials/waffle-test-simple-smart-contract/,,developers-tutorials-waffle-test-simple-smart-contract-index.pdf
-How can I get involved?,Ethereum.org,https://ethereum.org/en/community/get-involved/#get-involved,2023-10-29,community-get-involved-index.pdf
 Introduction to Ethereum Bootnodes,Ethereum.org,https://ethereum.org/en/developers/docs/nodes-and-clients/bootnodes/,,developers-docs-nodes-and-clients-bootnodes-index.pdf
 Ethereum proof-of-stake attack and defense,Ethereum.org,https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attack-and-defense/,,developers-docs-consensus-mechanisms-pos-attack-and-defense-index.pdf
 How The Merge impacted ETH supply,Ethereum.org,https://ethereum.org/en/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply,2023-11-30,roadmap-merge-issuance-index.pdf
@@ -102,25 +87,19 @@ Transactions,Ethereum.org,https://ethereum.org/en/developers/docs/transactions/,
 Gas and fees,Ethereum.org,https://ethereum.org/en/developers/docs/gas/,,developers-docs-gas-index.pdf
 Smart contract languages,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/languages/,,developers-docs-smart-contracts-languages-index.pdf
 Introduction to the Ethereum stack,Ethereum.org,https://ethereum.org/en/developers/docs/ethereum-stack/,,developers-docs-ethereum-stack-index.pdf
-Online communities,Ethereum.org,https://ethereum.org/en/community/online/#online-communities,2023-12-06,community-online-index.pdf
 Ethereum Foundation,Ethereum.org,https://ethereum.org/en/foundation/#about-the-ethereum-foundation,2023-11-20,foundation-index.pdf
 JSON-RPC API,Ethereum.org,https://ethereum.org/en/developers/docs/apis/json-rpc/,,developers-docs-apis-json-rpc-index.pdf
 """EIP-1271: Signing and Verifying Smart Contract Signatures""",Ethereum.org,https://ethereum.org/en/developers/tutorials/eip-1271-smart-contract-signatures/,,developers-tutorials-eip-1271-smart-contract-signatures-index.pdf
 Proof-of-stake rewards and penalties,Ethereum.org,https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/,,developers-docs-consensus-mechanisms-pos-rewards-and-penalties-index.pdf
-Adding a quiz,Ethereum.org,https://ethereum.org/en/contributing/quizzes/#quizzes,2023-06-02,contributing-quizzes-index.pdf
 Improving user experience,Ethereum.org,https://ethereum.org/en/roadmap/user-experience/,,roadmap-user-experience-index.pdf
-Adding wallets,Ethereum.org,https://ethereum.org/en/contributing/adding-wallets/#adding-wallets,2023-03-14,contributing-adding-wallets-index.pdf
 Merkle proofs for offline data integrity,Ethereum.org,https://ethereum.org/en/developers/tutorials/merkle-proofs-for-offline-data-integrity/,,developers-tutorials-merkle-proofs-for-offline-data-integrity-index.pdf
 Web3 secret storage definition,Ethereum.org,https://ethereum.org/en/developers/docs/data-structures-and-encoding/web3-secret-storage/,,developers-docs-data-structures-and-encoding-web3-secret-storage-index.pdf
 How to implement an ERC-721 market,Ethereum.org,https://ethereum.org/en/contributing/translation-program/content-buckets/#tutorials-4,2023-11-02,developers-tutorials-how-to-implement-an-erc721-market-index.pdf
-Ethereum.org Translatathon,Ethereum.org,https://ethereum.org/en/contributing/translation-program/translatathon/,,contributing-translation-program-translatathon-index.pdf
-Adding DeSci projects,Ethereum.org,https://ethereum.org/en/contributing/adding-desci-projects/#adding-projects,2023-09-26,contributing-adding-desci-projects-index.pdf
 Scaling,Ethereum.org,https://ethereum.org/en/,,developers-docs-scaling-index.pdf
 Attestations,Ethereum.org,https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/attestations/,,developers-docs-consensus-mechanisms-pos-attestations-index.pdf
 Kickstart your dapp frontend development with create-eth-app,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/composability/#related-tutorials,,developers-tutorials-kickstart-your-dapp-frontend-development-with-create-eth-app-index.pdf
 Intro to Ethereum,Ethereum.org,https://ethereum.org/en/developers/docs/intro-to-ethereum/,,developers-docs-intro-to-ethereum-index.pdf
 """ERC-20 Contract Walk-Through""",Ethereum.org,https://ethereum.org/en/developers/tutorials/erc20-annotated-code/,,developers-tutorials-erc20-annotated-code-index.pdf
-Adding Products,Ethereum.org,https://ethereum.org/en/contributing/adding-products/#adding-products,2023-03-14,contributing-adding-products-index.pdf
 Account abstraction,Ethereum.org,https://ethereum.org/en/roadmap/account-abstraction/#account-abstraction,2023-08-27,roadmap-account-abstraction-index.pdf
 Smart contract security guidelines,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/security/#smart-contract-security-guidelines,,developers-tutorials-smart-contract-security-guidelines-index.pdf
 How to turn your Raspberry Pi 4 into a node just by flashing the MicroSD card,Ethereum.org,https://ethereum.org/en/contributing/translation-program/content-buckets/#tutorials-2,2023-11-02,developers-tutorials-run-node-raspberry-pi-index.pdf
@@ -128,10 +107,8 @@ Decentralized science (DeSci),Ethereum.org,https://ethereum.org/en/desci/,,desci
 "Statelessness, state expiry and history expiry",Ethereum.org,https://ethereum.org/en/roadmap/statelessness/#statelessness,2023-09-08,roadmap-statelessness-index.pdf
 History and Forks of Ethereum,Ethereum.org,https://ethereum.org/en/history/#the-history-of-ethereum,2023-10-11,history-index.pdf
 """Downsizing contracts to fight the contract size limit""",Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/anatomy/#related-tutorials,,developers-tutorials-downsizing-contracts-to-fight-the-contract-size-limit-index.pdf
-Content standardization,Ethereum.org,https://ethereum.org/en/contributing/style-guide/content-standardization/#american-english,2023-04-14,contributing-style-guide-content-standardization-index.pdf
 ERC-4626 Tokenized Vault Standard,Ethereum.org,https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/,,developers-docs-standards-tokens-erc-4626-index.pdf
 Private Ethereum for Enterprise,Ethereum.org,https://ethereum.org/en/enterprise/private-ethereum/#private-ethereum-for-enterprise,2023-11-30,enterprise-private-ethereum-index.pdf
-Adding design resources,Ethereum.org,https://ethereum.org/en/contributing/design/adding-design-resources/#Research-studies,2023-06-26,contributing-design-adding-design-resources-index.pdf
 Introduction to smart contracts,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/,,developers-docs-smart-contracts-index.pdf
 Sidechains,Ethereum.org,https://ethereum.org/en/developers/docs/scaling/sidechains/,,developers-docs-scaling-sidechains-index.pdf
 Token Standards,Ethereum.org,https://ethereum.org/en/developers/docs/standards/tokens/erc-777/,,developers-docs-standards-tokens-index.pdf
@@ -157,13 +134,11 @@ Active areas of Ethereum research,Ethereum.org,https://ethereum.org/en/community
 Calling a smart contract from JavaScript,Ethereum.org,https://ethereum.org/en/contributing/translation-program/content-buckets/#tutorials-1,2023-11-02,developers-tutorials-calling-a-smart-contract-from-javascript-index.pdf
 Bridges,Ethereum.org,https://ethereum.org/en/developers/docs/bridges/,,developers-docs-bridges-index.pdf
 Decentralized finance (DeFi),Ethereum.org,https://ethereum.org/en/defi/,,defi-index.pdf
-Adding glossary terms lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/playbook/#workflow,2023-10-29,contributing-adding-glossary-terms-index.pdf
 How to View Your NFT in Your Wallet (Part 3/3 of NFT Tutorial Series),Ethereum.org,https://ethereum.org/en/developers/tutorials/how-to-view-nft-in-metamask/,,developers-tutorials-how-to-view-nft-in-metamask-index.pdf
 Interact with other contracts from Solidity,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/deploying/#related-tutorials,,developers-tutorials-interact-with-other-contracts-from-solidity-index.pdf
 ERC-777 Token Standard,Ethereum.org,https://ethereum.org/en/developers/docs/standards/tokens/erc-777/,,developers-docs-standards-tokens-erc-777-index.pdf
 Deploying smart contracts,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/deploying/,,developers-docs-smart-contracts-deploying-index.pdf
 Ethereum accounts,Ethereum.org,https://ethereum.org/en/developers/docs/accounts/,,developers-docs-accounts-index.pdf
-Adding exchanges,Ethereum.org,https://ethereum.org/en/contributing/adding-exchanges/#adding-ethereum-exchanges,2023-10-30,contributing-adding-exchanges-index.pdf
 Introduction to blockchain bridges,Ethereum.org,https://ethereum.org/en/bridges/#prerequisites,2023-10-29,bridges-index.pdf
 Ethereum development documentation,Ethereum.org,https://ethereum.org/en/developers/docs/,,developers-docs-index.pdf
 """Short ABIs for Calldata Optimization""",Ethereum.org,https://ethereum.org/en/,,developers-tutorials-short-abi-index.pdf
@@ -181,7 +156,6 @@ Node architecture,Ethereum.org,https://ethereum.org/en/developers/docs/nodes-and
 Ethereum roadmap,Ethereum.org,https://ethereum.org/en/roadmap/,,roadmap-index.pdf
 Oracles,Ethereum.org,https://ethereum.org/en/developers/docs/oracles/,,developers-docs-oracles-index.pdf
 How to use Manticore to find bugs in smart contracts,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/testing/#related-tutorials,,developers-tutorials-how-to-use-manticore-to-find-smart-contract-bugs-index.pdf
-Design principles lang: en,Ethereum.org,https://ethereum.org/en/contributing/design-principles/#5-collaborative-improvement,2023-12-06,contributing-design-principles-index.pdf
 Testing ERC-20 tokens with Waffle,Ethereum.org,https://ethereum.org/en/developers/tutorials/testing-erc-20-tokens-with-waffle/,,developers-tutorials-testing-erc-20-tokens-with-waffle-index.pdf
 Recursive-length prefix (RLP) serialization,Ethereum.org,https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp/,,developers-docs-data-structures-and-encoding-rlp-index.pdf
 """Solidity and Truffle continuous integration setup""",Ethereum.org,https://ethereum.org/en/contributing/translation-program/content-buckets/#tutorials-4,2023-11-02,developers-tutorials-solidity-and-truffle-continuous-integration-setup-index.pdf
@@ -191,9 +165,7 @@ Consensus mechanisms,Ethereum.org,https://ethereum.org/en/developers/docs/consen
 Ethereum guides,Ethereum.org,https://ethereum.org/en/guides/,,guides-index.pdf
 Ethereum Improvement Proposals (EIPs),Ethereum.org,https://ethereum.org/en/eips/#introduction-to-ethereum-improvement-proposals,2023-08-04,eips-index.pdf
 Future-proofing Ethereum,Ethereum.org,https://ethereum.org/en/roadmap/future-proofing/,,roadmap-future-proofing-index.pdf
-Adding content resources lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/playbook/#workflow,2023-10-29,contributing-content-resources-index.pdf
 A guide to smart contract security tools,Ethereum.org,https://ethereum.org/en/contributing/translation-program/content-buckets/#tutorials-3,2023-11-02,developers-tutorials-guide-to-smart-contract-security-tools-index.pdf
-Translation program playbook lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/playbook/#workflow,2023-10-29,contributing-translation-program-playbook-index.pdf
 Hello World Smart Contract for Beginners,Ethereum.org,https://ethereum.org/en/developers/tutorials/hello-world-smart-contract/,,developers-tutorials-hello-world-smart-contract-index.pdf
 Smart contract security checklist,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/security/#smart-contract-security-best-practices,,developers-tutorials-secure-development-workflow-index.pdf
 Ethereum Glossary,Ethereum.org,https://ethereum.org/en/glossary/#ethereum-glossary,2023-10-07,glossary-index.pdf
@@ -212,14 +184,11 @@ Integrated Development Environments (IDEs),Ethereum.org,https://ethereum.org/en/
 Staking as a service,Ethereum.org,https://ethereum.org/en/,,staking-saas-index.pdf
 Development Networks,Ethereum.org,https://ethereum.org/en/developers/docs/development-networks/,,developers-docs-development-networks-index.pdf
 """Some tricks used by scam tokens and how to detect them""",Ethereum.org,https://ethereum.org/en/developers/tutorials/scam-token-tricks/,,developers-tutorials-scam-token-tricks-index.pdf
-About Us,Ethereum.org,https://ethereum.org/en/about/#about-ethereumorg,2023-12-06,about-index.pdf
 Distributed validator technology,Ethereum.org,https://ethereum.org/en/staking/dvt/#distributed-validator-technology,2023-06-01,staking-dvt-index.pdf
 State Channels,Ethereum.org,https://ethereum.org/en/developers/docs/scaling/state-channels/,,developers-docs-scaling-state-channels-index.pdf
 How to Set Up Tellor as your Oracle,Ethereum.org,https://ethereum.org/en/developers/tutorials/,,developers-tutorials-how-to-use-tellor-as-your-oracle-index.pdf
-How to translate lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/playbook/#workflow,2023-10-29,contributing-translation-program-how-to-translate-index.pdf
 Upgrading smart contracts,Ethereum.org,https://ethereum.org/en/developers/docs/smart-contracts/upgrading/,,developers-docs-smart-contracts-upgrading-index.pdf
 Decentralized social networks,Ethereum.org,https://ethereum.org/en/social-networks/,,social-networks-index.pdf
-Mission and vision lang: en,Ethereum.org,https://ethereum.org/en/contributing/translation-program/mission-and-vision/#mission-and-vision,2022-10-25,contributing-translation-program-mission-and-vision-index.pdf
 Ethereum for Rust developers,Ethereum.org,https://ethereum.org/en/developers/docs/programming-languages/rust/,,developers-docs-programming-languages-rust-index.pdf
 How to revoke smart contract access to your crypto funds,Ethereum.org,https://ethereum.org/en/guides/how-to-revoke-token-access/#how-to-revoke-smart-contract-access-to-your-crypto-funds,2023-04-24,guides-how-to-revoke-token-access-index.pdf
 Ethereum security and scam prevention,Ethereum.org,https://ethereum.org/en/security/#introduction,2023-08-29,security-index.pdf
@@ -235,15 +204,12 @@ arbitrages,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-share/searche
 Searcher Sponsored TX,Flashbots Docs,https://docs.flashbots.net/flashbots-auction/example-searchers/searcher-sponsored-tx,2023-12-20,flashbots-auction-example-searchers-searcher-sponsored-tx.pdf
 Alchemy Provider,Flashbots Docs,https://docs.flashbots.net/flashbots-auction/libraries/alchemyprovider,2023-12-20,flashbots-auction-libraries-alchemyprovider.pdf
 System Requirements,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-boost/getting-started/system-requirements,2023-12-20,flashbots-mev-boost-getting-started-system-requirements.pdf
-Code of Conduct,Flashbots Docs,https://docs.flashbots.net/code-of-conduct,2023-12-20,code-of-conduct.pdf
 Quick Start,Flashbots Docs,https://docs.flashbots.net/flashbots-protect/quick-start,2024-01-09,flashbots-auction-quick-start.pdf
 For Orderflow Providers,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-share/orderflow-providers,2023-12-20,flashbots-mev-share-orderflow-providers.pdf
-Join Flashbots,Flashbots Docs,https://docs.flashbots.net/joining-flashbots,2023-12-20,joining-flashbots.pdf
 Ethers.js Provider,Flashbots Docs,https://docs.flashbots.net/flashbots-auction/libraries/ethers-js-provider,2023-12-20,flashbots-auction-libraries-ethers-js-provider.pdf
 Introduction,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-share/searchers/tutorials/limit-order/introduction,2023-12-20,flashbots-mev-share-searchers-tutorials-limit-order-introduction.pdf
 Rate limiting,Flashbots Docs,https://docs.flashbots.net/flashbots-protect/additional-documentation/ratelimiting,2023-12-20,flashbots-protect-additional-documentation-ratelimiting.pdf
 A MEV-Share Node is a service that matches user transactions with searcher bundles. Flashbots runs MEV-Share Nodes,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-share/searchers/tutorials/limit-order/using-events#finding-backrun-opportunities-using-event-data,2023-12-20,specs-mev-share-blurbs-_whatsaMEVShareNode.pdf
-Prohibited Use Policy,Flashbots Docs,https://docs.flashbots.net/policies/prohibited-use-policy,2023-12-20,policies-prohibited-use-policy.pdf
 Glossary,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-boost/glossary,2023-12-20,flashbots-mev-boost-glossary.pdf
 Troubleshooting,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-boost/troubleshooting,2023-12-20,flashbots-mev-boost-troubleshooting.pdf
 Understanding Bundles,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-share/searchers/understanding-bundles,2023-12-20,flashbots-auction-advanced-understanding-bundles.pdf
@@ -269,7 +235,6 @@ Exploring,Flashbots Docs,https://docs.flashbots.net/flashbots-data/mev-inspect-p
 Using Events,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-share/searchers/tutorials/limit-order/using-events,2023-12-20,flashbots-mev-share-searchers-tutorials-limit-order-using-events.pdf
 Quick start,Flashbots Docs,https://docs.flashbots.net/flashbots-protect/quick-start,2024-01-09,flashbots-protect-quick-start.pdf
 Event Stream,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-share/searchers/event-stream,2023-12-20,flashbots-mev-share-searchers-event-stream.pdf
-Terms of Service,Flashbots Docs,https://docs.flashbots.net/policies/terms-of-service,2023-12-20,policies-terms-of-service.pdf
 Inspecting,Flashbots Docs,https://docs.flashbots.net/flashbots-data/mev-inspect-py/inspecting,2023-12-20,flashbots-data-mev-inspect-py-inspecting.pdf
 Other Resources,Flashbots Docs,https://docs.flashbots.net/flashbots-auction/other-resources,2023-12-20,flashbots-auction-other-resources.pdf
 classified_traces,Flashbots Docs,https://docs.flashbots.net/flashbots-data/mev-inspect-py/data/classified_traces,2023-12-20,flashbots-data-mev-inspect-py-data-classified_traces.pdf
@@ -282,7 +247,6 @@ bundle cache API,Flashbots Docs,https://docs.flashbots.net/flashbots-protect/add
 Usage,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-boost/getting-started/usage,2023-12-20,flashbots-mev-boost-getting-started-usage.pdf
 "MEV-Share is an open-source protocol for users, wallets, and applications to internalize the MEV that their transactions",Flashbots Docs,https://docs.flashbots.net/flashbots-mev-share/introduction#what-is-mev-share,2023-12-20,specs-mev-share-blurbs-_whatsMevShareAdvanced.pdf
 "By default, when a user specifies which builders their transactions should be sent to (by setting builders), those settings",Flashbots Docs,https://docs.flashbots.net/flashbots-mev-share/searchers/sending-bundles#builder-inheritance,2023-12-20,specs-mev-share-blurbs-_builderInheritance.pdf
-Data Privacy Notice,Flashbots Docs,https://docs.flashbots.net/policies/privacy,2023-12-20,policies-privacy.pdf
 swaps,Flashbots Docs,https://docs.flashbots.net/flashbots-data/mev-inspect-py/data/swaps,2023-12-20,flashbots-data-mev-inspect-py-data-swaps.pdf
 Whitehat Hotline,Flashbots Docs,https://docs.flashbots.net/whitehat,2023-12-20,whitehat.pdf
 Transaction Status API,Flashbots Docs,https://docs.flashbots.net/flashbots-protect/additional-documentation/status-api,2023-12-20,flashbots-protect-additional-documentation-status-api.pdf
@@ -315,9 +279,7 @@ MEV-Boost Risks and Considerations,Flashbots Docs,https://docs.flashbots.net/fla
 Relay Fundamentals,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-boost/relay,2023-12-20,flashbots-mev-boost-relay.pdf
 Getting Started,Flashbots Docs,https://docs.flashbots.net/flashbots-mev-boost/getting-started/system-requirements,2023-12-20,flashbots-mev-share-searchers-getting-started.pdf
 Cancellations,Flashbots Docs,https://docs.flashbots.net/flashbots-protect/cancellations,2023-12-20,flashbots-protect-cancellations.pdf
-Welcome to Flashbots hide_title: true description: The home page of the knowledge base keywords: - flashbots -,Flashbots Docs,https://docs.flashbots.net/contribution-guide#adding-meta-data-to-your-doc,2023-12-20,welcome.pdf
 Vyper ERC-721 Contract Walkthrough,Ethereum.org,https://ethereum.org/en/developers/tutorials/erc-721-vyper-annotated-code/,,developers-tutorials-erc-721-vyper-annotated-code-index.pdf
-The Graph: Fixing Web3 data querying,Ethereum.org,https://ethereum.org/en/contributing/translation-program/content-buckets/#tutorials-2,2023-11-02,developers-tutorials-the-graph-fixing-web3-data-querying-index.pdf
 Waffle say hello world tutorial with hardhat and ethers,Ethereum.org,https://ethereum.org/en/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/,,developers-tutorials-waffle-say-hello-world-with-hardhat-and-ethers-index.pdf
 EIP-1271: Signing and Verifying Smart Contract Signatures,Ethereum.org,https://ethereum.org/en/developers/tutorials/eip-1271-smart-contract-signatures/,,developers-tutorials-eip-1271-smart-contract-signatures-index.pdf
 All you can cache,Ethereum.org,https://ethereum.org/en/developers/tutorials/all-you-can-cache/,,developers-tutorials-all-you-can-cache-index.pdf
@@ -331,3 +293,5 @@ Uniswap-v2 Contract Walk-Through,Ethereum.org,https://ethereum.org/en/developers
 Some tricks used by scam tokens and how to detect them,Ethereum.org,https://ethereum.org/en/developers/tutorials/scam-token-tricks/,,developers-tutorials-scam-token-tricks-index.pdf
 Reverse Engineering a Contract,Ethereum.org,https://ethereum.org/en/developers/tutorials/reverse-engineering-a-contract/,,developers-tutorials-reverse-engineering-a-contract-index.pdf
 Waffle: Dynamic mocking and testing contract calls,Ethereum.org,https://ethereum.org/en/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/,,developers-tutorials-waffle-dynamic-mocking-and-testing-calls-index.pdf
+Code of Conduct,,https://docs.flashbots.net/code-of-conduct,2023-12-20,code-of-conduct.pdf
+js hint: calldata | contract_address | function_selector | logs | hash | undefined,,https://docs.flashbots.net/flashbots-protect/mev-share#hints,2024-01-09,specs-protect-rpc-_hints.pdf
