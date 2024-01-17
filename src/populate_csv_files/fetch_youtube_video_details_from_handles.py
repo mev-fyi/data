@@ -360,7 +360,7 @@ def drop_duplicates_and_write_to_csv(filtered_away_csv_file_path, filtered_away_
         writer.writerows(deduplicated_rows)
 
 
-def filter_and_remove_videos(input_csv_path, keywords, PASSTHROUGH, channel_specific_filters=None):
+def filter_and_remove_videos(input_csv_path, keywords, keywords_to_exclude, PASSTHROUGH, channel_specific_filters=None):
     # Read the CSV file into a DataFrame
     if channel_specific_filters is None:
         channel_specific_filters = {}
@@ -372,6 +372,9 @@ def filter_and_remove_videos(input_csv_path, keywords, PASSTHROUGH, channel_spec
 
     # Apply global keyword filtering only to non-PASSTHROUGH channels
     global_filtered_df = non_passthrough_df[non_passthrough_df['title'].str.lower().str.contains('|'.join(keywords).lower())]
+
+    # Filter out titles from passthrough_df that contain any of the keywords_to_exclude
+    passthrough_df = passthrough_df[~passthrough_df['title'].str.lower().str.contains('|'.join(keywords_to_exclude).lower())]
 
     # Concatenate PASSTHROUGH and non-PASSTHROUGH videos
     global_filtered_df = pd.concat([global_filtered_df, passthrough_df])
@@ -461,7 +464,7 @@ def run():
         asyncio.run(fetch_all_videos(api_key, yt_channels, yt_playlists, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE, PASSTHROUGH, fetch_videos=True))
 
     # Call the filter_and_log_removed_videos method to filter and log removed videos
-    filter_and_remove_videos(YOUTUBE_VIDEOS_CSV_FILE_PATH, KEYWORDS_TO_INCLUDE, PASSTHROUGH, channel_specific_filters)
+    filter_and_remove_videos(YOUTUBE_VIDEOS_CSV_FILE_PATH, KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE, PASSTHROUGH, channel_specific_filters)
 
     # Load CSV into a pandas DataFrame
     df = pd.read_csv(YOUTUBE_VIDEOS_CSV_FILE_PATH, delimiter=',')

@@ -6,13 +6,14 @@ KEYWORDS_TO_INCLUDE = ['order flow', 'orderflow', 'transaction', 'mev', 'orderin
             'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'anoma', 'espresso',
             'suave', 'flashbots', 'celestia', 'gas war', 'hasu', 'dan robinson', 'jon charbonneau', 'robert miller', 'paradigm',
             'altlayer', 'tarun', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
-            'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'rollup', 'roll-up', 'roll-ups', 'uniswap', '1inch',
-            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization',
+            'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'rollup', 'roll-up', 'roll-ups', 'uniswap', '1inch', 'appchain',
+            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives",
             'erc', 'eip', 'auction', 'daian', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'stephane gosselin', 'su zhu', 'pools', 'censorship',
             '1559', 'BFT', 'selfish mining', 'vickrey auctions', 'Alex Nezlobin', 'Jason Milionis', "How They Solved Ethereum's Critical Flaw", 'cryptoeconomics']
 
 # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin', bridge',
-KEYWORDS_TO_EXCLUDE = ['DAO', 'NFTs', 'joke', 'jokes', 'short', 'shorts', '#', 'gensler', 'sec', 'T-Shirt', "New year's breathing exercise",
-                       'From lifespan to healthspan (1)', 'On promoting healthspan and quality of life (2)']
+KEYWORDS_TO_EXCLUDE = ['joke', 'jokes', '#short', '#shorts', 'gensler', 'T-Shirt', "New year's breathing exercise",
+                       'From lifespan to healthspan (1)', 'On promoting healthspan and quality of life (2)',
+                       'Quick Bits', '#eth', 'Oslo Freedom Forum:', 'Why the SEC', 'SEC Commissioner']
 
 YOUTUBE_VIDEOS_CSV_FILE_PATH = f"{root_directory()}/data/links/youtube/youtube_videos.csv"
