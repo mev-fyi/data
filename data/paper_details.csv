@@ -203,3 +203,20 @@ Specular: Towards Trust-minimized Blockchain Execution Scalability with EVM-nati
 Moonshot: Optimizing Chain-Based Rotating Leader BFT via Optimistic Proposals,"Isaac Doidge, Raghavendra Ramesh, Nibesh Shrestha, Joshua Tobkin",http://arxiv.org/pdf/2401.01791v1,"arXiv, cs.DC, cs.NI, C.2.4",2024-01-03,https://twitter.com/unlock_VALue
 Non-Atomic Arbitrage in Decentralized Finance,"Lioba Heimbach, Vabuk Pahari, Eric Schertenleib",http://arxiv.org/pdf/2401.01622v1,"arXiv, cs.CE, q-fin.GN",2024-01-03,https://www.twitter.com/unlock_VALue
 A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain,"Burak Öz, Filip Rezabek, Jonas Gebele, Felix Hoops, Florian Matthes",http://arxiv.org/pdf/2308.06513v2,"arXiv, cs.CR",2023-08-12,https://www.twitter.com/unlock_VALue
+Detecting Depegs: Towards Safer Passive Liquidity Provision on Curve Finance,"Thomas N. Cintra, Maxwell P. Holloway",http://arxiv.org/pdf/2306.10612v1,"arXiv, q-fin.CP",2023-06-18,https://www.twitter.com/unlock_VALue
+An Axiomatic Approach to Block Rewards,"Xi Chen, Christos Papadimitriou, Tim Roughgarden",http://arxiv.org/pdf/1909.10645v1,"arXiv, cs.GT",2019-09-23,https://www.twitter.com/unlock_VALue
+,,https://xenophonlabs.com/papers/dydx_v4_report.pdf,Self-host,,https://www.twitter.com/unlock_VALue
+,,https://xenophonlabs.com/papers/aave_slashing_percentage.pdf,Self-host,,https://www.twitter.com/unlock_VALue
+,,https://timroughgarden.org/papers/eip1559.pdf,Self-host,,https://www.twitter.com/unlock_VALue
+HotStuff: BFT Consensus in the Lens of Blockchain,"Maofan Yin, Dahlia Malkhi, Michael K. Reiter, Guy Golan Gueta, Ittai Abraham",http://arxiv.org/pdf/1803.05069v6,"arXiv, cs.DC",2018-03-13,https://hackmd.io/@EspressoSystems/EspressoSequencer
+SoK: MEV Countermeasures: Theory and Practice,"Sen Yang, Fan Zhang, Ken Huang, Xi Chen, Youwei Yang, Feng Zhu",http://arxiv.org/pdf/2212.05111v2,"arXiv, cs.CR",2022-12-09,https://www.twitter.com/unlock_VALue
+Fraud and Data Availability Proofs: Maximising Light Client Security and Scaling Blockchains with Dishonest Majorities,"Mustafa Al-Bassam, Alberto Sonnino, Vitalik Buterin",http://arxiv.org/pdf/1809.09044v5,"arXiv, cs.CR",2018-09-24,https://www.youtube.com/watch?v=YoWMLoeQGeI
+"Empirical Analysis of EIP-1559: Transaction Fees, Waiting Time, and Consensus Security","Yulin Liu, Yuxuan Lu, Kartik Nayak, Fan Zhang, Luyao Zhang, Yinhong Zhao",http://arxiv.org/pdf/2201.05574v4,"arXiv, econ.GN, cs.CR, cs.DC, cs.GT, q-fin.EC",2022-01-14,https://barnabe.substack.com/p/understanding-rollup-economics-from
+Bicorn: An optimistically efficient distributed randomness beacon,"Kevin Choi, Arasu Arun, Nirvan Tyagi, Joseph Bonneau",https://eprint.iacr.org/2023/221,iacr,2023-02-20,https://hackmd.io/@EspressoSystems/EspressoSequencer
+Verifiable Delay Functions,"Dan Boneh, Joseph Bonneau, Benedikt Bünz, Ben Fisch",https://eprint.iacr.org/2018/601,iacr,2019-06-26,https://hackmd.io/@EspressoSystems/EspressoSequencer
+The Sleepy Model of Consensus,"Rafael Pass, Elaine Shi",https://eprint.iacr.org/2016/918,iacr,2017-05-11,https://hackmd.io/@EspressoSystems/EspressoSequencer
+Experimenting with Collaborative zk-SNARKs: Zero-Knowledge Proofs for Distributed Secrets,"Alex Ozdemir, Dan Boneh",https://eprint.iacr.org/2021/1530,iacr,2022-07-16,https://www.twitter.com/unlock_VALue
+SoK: Validating Bridges as a Scaling Solution for Blockchains,"Patrick McCorry, Chris Buckland, Bennet Yee, Dawn Song",https://eprint.iacr.org/2021/1589,iacr,2021-12-06,https://barnabe.substack.com/p/understanding-rollup-economics-from
+,,https://core.ac.uk/download/pdf/83233824.pdf,Self-host,,https://hackmd.io/@EspressoSystems/EspressoSequencer
+,,https://public.bnbstatic.com/static/files/research/exploring-tokenomics-models-and-developments.pdf,Self-host,,https://www.twitter.com/unlock_VALue
+,,https://research.binance.com/static/pdf/Tokenomics_Deep_Dive_Stefan_Piech_Shivam_Sharma.pdf,Self-host,,https://www.twitter.com/unlock_VALue
