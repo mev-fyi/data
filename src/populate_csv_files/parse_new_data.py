@@ -294,6 +294,8 @@ def run():
         "dydx.forum_article": r"^https://dydx\.forum/t/.+$",
         "forum.arbitrum.foundation_website": r"^https://forum.arbitrum\.foundation/t/?$",
         "forum.arbitrum.foundation_article": r"^https://forum.arbitrum\.foundation/t/.+$",
+        "forum.aztec.network_website": r"^https://forum.aztec\.network/t/?$",
+        "forum.aztec.network_article": r"^https://forum.aztec\.network/t/.+$",
         "substack_website": r"^https://\w+\.substack\.com/p/?$",
         "substack_article": r"^https://\w+\.substack\.com/p/.+$",
     }

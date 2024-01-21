@@ -1119,6 +1119,7 @@ def fetch_content(row, output_dir):
         'research.arbitrum.io': fetch_discourse_content_from_url,
         'dydx.forum': fetch_discourse_content_from_url,
         'forum.arbitrum.foundation': fetch_discourse_content_from_url,
+        'forum.aztec.network': fetch_discourse_content_from_url,
         'frontier.tech': fetch_frontier_tech_content_from_url,
         # 'vitalik.ca': fetch_vitalik_ca_article_content,  # TODO 2023-12-23
         'medium.com': fetch_medium_content_from_url,
