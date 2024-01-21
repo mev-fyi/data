@@ -8,7 +8,7 @@ populate_csv_files.parse_new_data.run()  # parse incoming data
 # pretty_print_articles.run()  # get article titles
 # get_article_content.run(overwrite=True)  # get article content
 
-# create_articles_thumbnails.main()  # get article thumbnails
+# create_articles_thumbnails.main(headless=True)  # get article thumbnails
 
 # get_research_paper_details.main()  # get research article details
 # update_google_sheet.main()
