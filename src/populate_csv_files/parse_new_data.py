@@ -282,6 +282,20 @@ def run():
         "kelvinfichter_article": r"^https://kelvinfichter\.com/pages/thoughts/.+$",
         "a16zcrypto_website": r"^https://a16zcrypto\.com/posts/?$",  # Match the base a16zcrypto.com/posts website
         "a16zcrypto_article": r"^https://a16zcrypto\.com/posts/.+$",  # Match articles under a16zcrypto.com/posts
+        "gov_uniswap_website": r"^https://gov.uniswap\.org/t/?$",  # Match the base gov.uniswap.org/t/ website
+        "gov_uniswap_article": r"^https://gov.uniswap\.org/t/.+$",  # Match articles under gov.uniswap.org/t/
+        "govervance_aave_website": r"^https://governance.aave\.com/t/?$",  # Match the base governance.aave.com/t/ website
+        "govervance_aave_article": r"^https://governance.aave\.com/t/.+$",  # Match articles under governance.aave.com/t/
+        "forum.celestia_website": r"^https://forum.celestia\.org/t/?$",
+        "forum.celestia_article": r"^https://forum.celestia\.org/t/.+$",
+        "research.arbitrum_website": r"^https://research.arbitrum\.io/t/?$",
+        "research.arbitrum_article": r"^https://research.arbitrum\.io/t/.+$",
+        "dydx.forum_website": r"^https://dydx\.forum/t/?$",
+        "dydx.forum_article": r"^https://dydx\.forum/t/.+$",
+        "forum.arbitrum.foundation_website": r"^https://forum.arbitrum\.foundation/t/?$",
+        "forum.arbitrum.foundation_article": r"^https://forum.arbitrum\.foundation/t/.+$",
+        "substack_website": r"^https://\w+\.substack\.com/p/?$",
+        "substack_article": r"^https://\w+\.substack\.com/p/.+$",
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.

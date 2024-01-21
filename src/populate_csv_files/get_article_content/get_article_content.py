@@ -1113,6 +1113,12 @@ def fetch_content(row, output_dir):
         'collective.flashbots.net': fetch_discourse_content_from_url,
         'lido.fi': fetch_discourse_content_from_url,
         'research.anoma': fetch_discourse_content_from_url,
+        'gov.uniswap.org': fetch_discourse_content_from_url,
+        'governance.aave.com': fetch_discourse_content_from_url,
+        'forum.celestia.org': fetch_discourse_content_from_url,
+        'research.arbitrum.io': fetch_discourse_content_from_url,
+        'dydx.forum': fetch_discourse_content_from_url,
+        'forum.arbitrum.foundation': fetch_discourse_content_from_url,
         'frontier.tech': fetch_frontier_tech_content_from_url,
         # 'vitalik.ca': fetch_vitalik_ca_article_content,  # TODO 2023-12-23
         'medium.com': fetch_medium_content_from_url,
@@ -1287,7 +1293,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None, overwr
 
 
 if __name__ == "__main__":
-    url_filters = ['@EspressoSystems']  # ['a16z']  # ['pbs']  # None # ['hackmd']
+    url_filters = ['gov.uniswap.org', 'governance.aave']  # ['a16z']  # ['pbs']  # None # ['hackmd']
     thread_count = 20
     get_flashbots_writings = False
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count, overwrite=True)
