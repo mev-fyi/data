@@ -354,7 +354,6 @@ def return_driver():
     CHROME_BINARY_PATH = f'{root_directory()}/src/chromium/chrome-linux64/chrome'
     CHROMEDRIVER_PATH = f'{root_directory()}/src/chromium/chromedriver-linux64/chromedriver'
 
-    options = webdriver.ChromeOptions()
     options.binary_location = CHROME_BINARY_PATH
 
     driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
