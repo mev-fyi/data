@@ -333,7 +333,7 @@ async def get_channel_id(session, api_key, channel_name, channel_name_to_id):
         return None  # Handle errors or missing data as appropriate for your application
 
 
-def return_driver():
+def return_driver(headless=False):
     # set up Chrome driver options
     options = webdriver.ChromeOptions()
     options.add_argument("--disable-blink-features=AutomationControlled")
@@ -343,6 +343,11 @@ def return_driver():
     options.add_argument("--remote-debugging-port=9222")
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-features=IsolateOrigins,site-per-process")
+
+    # Add headless option if required
+    if headless:
+        options.add_argument("--headless")
+
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
     # NOTE: ChromeDriverManager().install() no longer works

@@ -1,3 +1,4 @@
+import functools
 import os
 import pandas as pd
 import time
@@ -44,8 +45,8 @@ def close_popups(driver, url):
                     logging.warning(f"Popup not found for {url}.")
         time.sleep(2)
 
-def take_screenshot(url, title, output_dir, zoom=140, screenshot_height_percent=0.35, max_height=900, min_height=600):
-    driver = return_driver()
+def take_screenshot(url, title, output_dir, headless=False, zoom=140, screenshot_height_percent=0.35, max_height=900, min_height=600):
+    driver = return_driver(headless)
 
     attempt = 0
     page_loaded = False
@@ -95,18 +96,18 @@ def take_screenshot(url, title, output_dir, zoom=140, screenshot_height_percent=
     driver.quit()
     logging.info(f"Saved screenshot for {url} at {screenshot_path}")
 
-def process_row(row):
+def process_row(row, headless: bool):
     output_dir = f"{root_directory()}/data/article_thumbnails"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     if 'article' in row.keys():
-        take_screenshot(row['article'], row['title'], output_dir)
+        take_screenshot(row['article'], row['title'], output_dir, headless)
     elif 'pdf_link' in row.keys():
-        take_screenshot(row['pdf_link'], row['title'], output_dir)
+        take_screenshot(row['pdf_link'], row['title'], output_dir, headless)
     else:
         logging.error("Could not find link in row")
 
-def main():
+def main(headless: bool):
     logging.basicConfig(level=logging.INFO)
     csv_file_paths = [
         f'{root_directory()}/data/links/articles_updated.csv',
@@ -123,9 +124,10 @@ def main():
         # df = df[df['article'].str.contains('medium.com')]
 
         num_workers = int(os.cpu_count() // 2)
+        process_row_with_headless = functools.partial(process_row, headless=headless)
         with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
-            executor.map(process_row, df.to_dict('records'))
+            executor.map(process_row_with_headless, df.to_dict('records'))
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-    main()
+    main(headless=False)
