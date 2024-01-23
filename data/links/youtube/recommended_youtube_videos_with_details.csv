@@ -1,44 +1,61 @@
-title,channel_name,referrer,Publish date,link
-S4 Premiere: A Journey Into The Dark Forest | Hasu,Bell Curve,https://www.twitter.com/freddmannen,2023-03-28,https://www.youtube.com/watch?v=_8DkRO60fvw
-Inside the Economics of MEV  | Matt Cutler,Bell Curve,https://www.twitter.com/freddmannen,2023-04-11,https://www.youtube.com/watch?v=17n6oHoo7pw
-"MEV in a Modular World | Jon Charbonneau, Robert Miller",Bell Curve,https://www.twitter.com/freddmannen,2023-04-18,https://www.youtube.com/watch?v=b3o2YP6sxpg
-"Shining A Light On MEV  | Tarun Chitra, Justin Drake",Bell Curve,https://www.twitter.com/freddmannen,2023-04-04,https://www.youtube.com/watch?v=fWRboyGk_lc
-"Interview with a Searcher 2.0 | Dean Eigenman, Anish Agnihotri",Bell Curve,https://www.twitter.com/freddmannen,2023-04-25,https://www.youtube.com/watch?v=NqM9PNPQFMs
-"BONUS EP: Stephane Gosselin on MEV, OFAs, and Frontier Research",Bell Curve,https://www.twitter.com/freddmannen,2023-05-31,https://www.youtube.com/watch?v=RjSG38e1Zl0
-"MEV 2.0 - Order Flow Auctions & Privacy | Quintus Kilbourn, Barnabé Monnot",Bell Curve,https://www.twitter.com/freddmannen,2023-05-16,https://www.youtube.com/watch?v=4t7qbv4Wzn4
-"An anatomy of order flow, Tom Schmidt (Dragonfly Capital Partners) | MEV [re]search-athon",Flashbots,https://www.twitter.com/unlock_VALue,2023-03-15,https://www.youtube.com/watch?v=EzQmuc_GhYw
-"Order Flow Auction Treasure Map, Quintus Kilbourn (Flashbots) | MEV [re]search-athon",Flashbots,https://www.twitter.com/unlock_VALue,2023-03-15,https://www.youtube.com/watch?v=9je9VheLZpw
-"From auctions.google.com to auctions.best, Tarun Chitra (Gauntlet) | MEV [re]search-athon",Flashbots,https://www.twitter.com/unlock_VALue,2023-03-15,https://www.youtube.com/watch?v=RZTYZ4qXdz4
-Live walk-through of simple-blind-arbitrage,Flashbots,https://www.twitter.com/unlock_VALue,2023-06-02,https://www.youtube.com/watch?v=Twcr2vZ1tRU
-"MEV-Share, Robert Miller (Flashbots) | MEV [re]search-athon",Flashbots,https://www.twitter.com/unlock_VALue,2023-03-15,https://www.youtube.com/watch?v=MqUvO9oHwYg
-MEV Roast | Why Privacy in MEV - Quintus Kilbourn (Flashbots),Flashbots,https://www.twitter.com/unlock_VALue,2023-01-19,https://www.youtube.com/watch?v=cJ_c-69neUQ
-Vitalik Buterin: Decentralizing the Builder Role - SBC 2022,Flashbots,https://www.twitter.com/unlock_VALue,2022-09-07,https://www.youtube.com/watch?v=fAgrIdyWIqc
-The Edge of MEV Switching Costs and the Slow Game - Christopher Goes,Research Day,https://www.twitter.com/unlock_VALue,2023-05-27,https://www.youtube.com/watch?v=PUBvZRhOTAo
-Season 4 Finale: An MEV Masterclass,Bell Curve,https://www.twitter.com/unlock_VALue,2023-05-23,https://www.youtube.com/watch?v=pMhc3MHip5k
-"Welcome to ""RaaS DAY"": Rollups-as-a-Service Day I AltLayer I 22 June",Altlayer,https://www.twitter.com/unlock_VALue,2023-06-22,https://www.youtube.com/watch?v=ymVd2Ch7wBc&t=13022s
-ETH’s Biggest Upgrade Since EIP1559 | MEV Burn w/ Justin Drake and Dom,Bankless,https://www.twitter.com/unlock_VALue,2023-05-08,https://www.youtube.com/watch?v=nb7x7n8Ga3U
-Xinyuan Sun: PBS and Layer 2s,Flashbots,https://www.twitter.com/unlock_VALue,2022-09-08,https://www.youtube.com/watch?v=JCZDd0iCMsg
-Smart Transactions by Vlad Zamfir | Devcon Bogotá,Ethereum Foundation,https://www.twitter.com/unlock_VALue,2022-10-13,https://www.youtube.com/watch?v=dS3NRPu5L9s
-Trillion Dollar MEV Questions - Robert Miller,Research Day,https://www.twitter.com/unlock_VALue,2023-05-26,https://www.youtube.com/watch?v=haTD69gjOF8
-Economists as Engineers: Game Theory and Market Design,TAUVOD,https://www.twitter.com/unlock_VALue,2016-05-22,https://www.youtube.com/watch?v=SLqYi2FNFwY
-CredibleCommitments.WTF | Barnabé Monnot - Aligning like a Protocol,Flashbots,https://www.twitter.com/unlock_VALue,2023-07-14,https://www.youtube.com/watch?v=GR4g9vu2PwE&list=PLNEU2yZH9vML2gnRxGPwXqVczJA7MFR7W
-CredibleCommitments.WTF | Xinyuan Sun - Mediator Extractable Value,Flashbots,https://www.twitter.com/unlock_VALue,2023-07-14,https://www.youtube.com/watch?v=DnhxjSY-ZDM
-CredibleCommitments.WTF | Lewis Hammond - Cooperative AI in the Real World,Flashbots,https://www.twitter.com/unlock_VALue,2023-07-14,https://www.youtube.com/watch?v=dgbZPMRvb7M
-CredibleCommitments.WTF | Anthony DiGiovanni - Private Information and  Miscoordination,Flashbots,https://www.twitter.com/unlock_VALue,2023-07-14,https://www.youtube.com/watch?v=TOYRSiKfrXk
-CredibleCommitments.WTF | David C. Parkes - Illustrations on Commitment in Decentralized Systems,Flashbots,https://www.twitter.com/unlock_VALue,2023-07-14,https://www.youtube.com/watch?v=DM8mOh9JExM
-This is MEV by sxysun | Devcon Bogotá,Ethereum Foundation,https://www.twitter.com/unlock_VALue,2022-10-13,https://www.youtube.com/watch?v=8qPpiMDz_hw
-SUAVE smart contract programming model: TEE-based smart contracts for block building - Andrew Miller,Flashbots,https://www.twitter.com/unlock_VALue,2023-07-13,https://www.youtube.com/watch?v=DhsDFKnHPa0
-Targeting Zero MEV In The Base Layer,Pmcgoohan - Zeromev,https://www.twitter.com/unlock_VALue,2021-07-05,https://www.youtube.com/watch?v=zf2l3veT9EI&t=9s
-"Deep Learning for Auction Design: Fairness, Robustness, Expressiveness. John Dickerson, U. Maryland",AI for Economics,https://www.twitter.com/unlock_VALue,2021-04-09,https://www.youtube.com/watch?v=bqGUOJkz8L8
-"Automatic Curricula in Deep Multi-Agent Reinforcement Learning, Thore Graepel, DeepMind and UCL",AI for Economics,https://www.twitter.com/unlock_VALue,2021-04-08,https://www.youtube.com/watch?v=HJRIlqTvKFo
-"Game Theory and Machine Learning for Multiagent Comm. and Coordination, Fei Fang, CMU (Feb 2, 2021)",AI for Economics,https://www.twitter.com/unlock_VALue,2021-02-06,https://www.youtube.com/watch?v=B1krrN12vLU
-"Learning Equilibria... and the Ensuing Empirical Design of Mechanisms, Amy Greenwald (Brown Univ)",AI for Economics,https://www.twitter.com/unlock_VALue,2021-04-08,https://www.youtube.com/watch?v=7E9QVO_BhxU
-"Are Intents, SUAVE, Account Abstraction, & Cross-Chain Bridging all the same thing? - Uma Roy",Research Day,https://www.twitter.com/unlock_VALue,2023-05-26,https://www.youtube.com/watch?v=G0nFyq9DDPw
-Modular Summit Day 2 (Galois Stage),Celestia,https://www.twitter.com/unlock_VALue,2023-07-22,https://www.youtube.com/watch?v=WYH7n4M016A&list=PLNEU2yZH9vML2gnRxGPwXqVczJA7MFR7W&index=5&t=19043s
-Modular Summit Day 2 (Galois Stage),Celestia,https://www.twitter.com/unlock_VALue,2023-07-22,https://www.youtube.com/watch?v=WYH7n4M016A&list=PLNEU2yZH9vML2gnRxGPwXqVczJA7MFR7W&index=5&t=20500s
-'Censorship Resistance in On-Chain Auctions',SMG,https://www.twitter.com/unlock_VALue,2023-06-26,https://www.youtube.com/watch?v=p4hA47S4d9A
-💮 Whiteboard: Episode 1 [An Overview of Credible Commitment Devices with Barnabé Monnot],Flashbots,https://www.twitter.com/unlock_VALue,2022-12-15,https://www.youtube.com/watch?v=P-4BK06vhr0
-Thematic Call :: Exploring MEV With Flashbots,Pantera Capital,https://www.twitter.com/unlock_VALue,2023-08-09,https://www.youtube.com/watch?v=qXZ6Mdwi8ng
-The 6th Science of Blockchain Conference (Monday),Stanford Video,https://www.twitter.com/unlock_VALue,2023-08-19,https://www.youtube.com/watch?v=E4YkppHQZgw
-The 6th Science of Blockchain Conference (Tuesday),Stanford Video,https://www.twitter.com/unlock_VALue,2023-08-19,https://www.youtube.com/watch?v=Nx5bgyJ7SJ4
-The 6th Science of Blockchain Conference (Wednesday),Stanford Video,https://www.twitter.com/unlock_VALue,2023-08-19,https://www.youtube.com/watch?v=NFJWy8oyVS0
+title,channel_name,Publish date,link,referrer
+S4 Premiere: A Journey Into The Dark Forest | Hasu,Bell Curve,2023-03-28,https://www.youtube.com/watch?v=_8DkRO60fvw,https://www.twitter.com/freddmannen
+Inside the Economics of MEV  | Matt Cutler,Bell Curve,2023-04-11,https://www.youtube.com/watch?v=17n6oHoo7pw,https://www.twitter.com/freddmannen
+"MEV in a Modular World | Jon Charbonneau, Robert Miller",Bell Curve,2023-04-18,https://www.youtube.com/watch?v=b3o2YP6sxpg,https://www.twitter.com/freddmannen
+"Shining A Light On MEV  | Tarun Chitra, Justin Drake",Bell Curve,2023-04-04,https://www.youtube.com/watch?v=fWRboyGk_lc,https://www.twitter.com/freddmannen
+"Interview with a Searcher 2.0 | Dean Eigenman, Anish Agnihotri",Bell Curve,2023-04-25,https://www.youtube.com/watch?v=NqM9PNPQFMs,https://www.twitter.com/freddmannen
+"BONUS EP: Stephane Gosselin on MEV, OFAs, and Frontier Research",Bell Curve,2023-05-31,https://www.youtube.com/watch?v=RjSG38e1Zl0,https://www.twitter.com/freddmannen
+"MEV 2.0 - Order Flow Auctions & Privacy | Quintus Kilbourn, Barnabé Monnot",Bell Curve,2023-05-16,https://www.youtube.com/watch?v=4t7qbv4Wzn4,https://www.twitter.com/freddmannen
+"An anatomy of order flow, Tom Schmidt (Dragonfly Capital Partners) | MEV [re]search-athon",Flashbots,2023-03-15,https://www.youtube.com/watch?v=EzQmuc_GhYw,https://www.twitter.com/unlock_VALue
+"Order Flow Auction Treasure Map, Quintus Kilbourn (Flashbots) | MEV [re]search-athon",Flashbots,2023-03-15,https://www.youtube.com/watch?v=9je9VheLZpw,https://www.twitter.com/unlock_VALue
+"From auctions.google.com to auctions.best, Tarun Chitra (Gauntlet) | MEV [re]search-athon",Flashbots,2023-03-15,https://www.youtube.com/watch?v=RZTYZ4qXdz4,https://www.twitter.com/unlock_VALue
+Live walk-through of simple-blind-arbitrage,Flashbots,2023-06-02,https://www.youtube.com/watch?v=Twcr2vZ1tRU,https://www.twitter.com/unlock_VALue
+"MEV-Share, Robert Miller (Flashbots) | MEV [re]search-athon",Flashbots,2023-03-15,https://www.youtube.com/watch?v=MqUvO9oHwYg,https://www.twitter.com/unlock_VALue
+MEV Roast | Why Privacy in MEV - Quintus Kilbourn (Flashbots),Flashbots,2023-01-19,https://www.youtube.com/watch?v=cJ_c-69neUQ,https://www.twitter.com/unlock_VALue
+Vitalik Buterin: Decentralizing the Builder Role - SBC 2022,Flashbots,2022-09-07,https://www.youtube.com/watch?v=fAgrIdyWIqc,https://www.twitter.com/unlock_VALue
+The Edge of MEV Switching Costs and the Slow Game - Christopher Goes,Research Day,2023-05-27,https://www.youtube.com/watch?v=PUBvZRhOTAo,https://www.twitter.com/unlock_VALue
+Season 4 Finale: An MEV Masterclass,Bell Curve,2023-05-23,https://www.youtube.com/watch?v=pMhc3MHip5k,https://www.twitter.com/unlock_VALue
+"Welcome to ""RaaS DAY"": Rollups-as-a-Service Day I AltLayer I 22 June",Altlayer,2023-06-22,https://www.youtube.com/watch?v=ymVd2Ch7wBc&t=13022s,https://www.twitter.com/unlock_VALue
+ETH’s Biggest Upgrade Since EIP1559 | MEV Burn w/ Justin Drake and Dom,Bankless,2023-05-08,https://www.youtube.com/watch?v=nb7x7n8Ga3U,https://www.twitter.com/unlock_VALue
+Xinyuan Sun: PBS and Layer 2s,Flashbots,2022-09-08,https://www.youtube.com/watch?v=JCZDd0iCMsg,https://www.twitter.com/unlock_VALue
+Smart Transactions by Vlad Zamfir | Devcon Bogotá,Ethereum Foundation,2022-10-13,https://www.youtube.com/watch?v=dS3NRPu5L9s,https://www.twitter.com/unlock_VALue
+Trillion Dollar MEV Questions - Robert Miller,Research Day,2023-05-26,https://www.youtube.com/watch?v=haTD69gjOF8,https://www.twitter.com/unlock_VALue
+Economists as Engineers: Game Theory and Market Design,TAUVOD,2016-05-22,https://www.youtube.com/watch?v=SLqYi2FNFwY,https://www.twitter.com/unlock_VALue
+CredibleCommitments.WTF | Barnabé Monnot - Aligning like a Protocol,Flashbots,2023-07-14,https://www.youtube.com/watch?v=GR4g9vu2PwE&list=PLNEU2yZH9vML2gnRxGPwXqVczJA7MFR7W,https://www.twitter.com/unlock_VALue
+CredibleCommitments.WTF | Xinyuan Sun - Mediator Extractable Value,Flashbots,2023-07-14,https://www.youtube.com/watch?v=DnhxjSY-ZDM,https://www.twitter.com/unlock_VALue
+CredibleCommitments.WTF | Lewis Hammond - Cooperative AI in the Real World,Flashbots,2023-07-14,https://www.youtube.com/watch?v=dgbZPMRvb7M,https://www.twitter.com/unlock_VALue
+CredibleCommitments.WTF | Anthony DiGiovanni - Private Information and  Miscoordination,Flashbots,2023-07-14,https://www.youtube.com/watch?v=TOYRSiKfrXk,https://www.twitter.com/unlock_VALue
+CredibleCommitments.WTF | David C. Parkes - Illustrations on Commitment in Decentralized Systems,Flashbots,2023-07-14,https://www.youtube.com/watch?v=DM8mOh9JExM,https://www.twitter.com/unlock_VALue
+This is MEV by sxysun | Devcon Bogotá,Ethereum Foundation,2022-10-13,https://www.youtube.com/watch?v=8qPpiMDz_hw,https://www.twitter.com/unlock_VALue
+SUAVE smart contract programming model: TEE-based smart contracts for block building - Andrew Miller,Flashbots,2023-07-13,https://www.youtube.com/watch?v=DhsDFKnHPa0,https://www.twitter.com/unlock_VALue
+Targeting Zero MEV In The Base Layer,Pmcgoohan - Zeromev,2021-07-05,https://www.youtube.com/watch?v=zf2l3veT9EI&t=9s,https://www.twitter.com/unlock_VALue
+"Deep Learning for Auction Design: Fairness, Robustness, Expressiveness. John Dickerson, U. Maryland",AI for Economics,2021-04-09,https://www.youtube.com/watch?v=bqGUOJkz8L8,https://www.twitter.com/unlock_VALue
+"Automatic Curricula in Deep Multi-Agent Reinforcement Learning, Thore Graepel, DeepMind and UCL",AI for Economics,2021-04-08,https://www.youtube.com/watch?v=HJRIlqTvKFo,https://www.twitter.com/unlock_VALue
+"Game Theory and Machine Learning for Multiagent Comm. and Coordination, Fei Fang, CMU (Feb 2, 2021)",AI for Economics,2021-02-06,https://www.youtube.com/watch?v=B1krrN12vLU,https://www.twitter.com/unlock_VALue
+"Learning Equilibria... and the Ensuing Empirical Design of Mechanisms, Amy Greenwald (Brown Univ)",AI for Economics,2021-04-08,https://www.youtube.com/watch?v=7E9QVO_BhxU,https://www.twitter.com/unlock_VALue
+"Are Intents, SUAVE, Account Abstraction, & Cross-Chain Bridging all the same thing? - Uma Roy",Research Day,2023-05-26,https://www.youtube.com/watch?v=G0nFyq9DDPw,https://www.twitter.com/unlock_VALue
+Modular Summit Day 2 (Galois Stage),Celestia,2023-07-22,https://www.youtube.com/watch?v=WYH7n4M016A&list=PLNEU2yZH9vML2gnRxGPwXqVczJA7MFR7W&index=5&t=19043s,https://www.twitter.com/unlock_VALue
+Modular Summit Day 2 (Galois Stage),Celestia,2023-07-22,https://www.youtube.com/watch?v=WYH7n4M016A&list=PLNEU2yZH9vML2gnRxGPwXqVczJA7MFR7W&index=5&t=20500s,https://www.twitter.com/unlock_VALue
+'Censorship Resistance in On-Chain Auctions',SMG,2023-06-26,https://www.youtube.com/watch?v=p4hA47S4d9A,https://www.twitter.com/unlock_VALue
+💮 Whiteboard: Episode 1 [An Overview of Credible Commitment Devices with Barnabé Monnot],Flashbots,2022-12-15,https://www.youtube.com/watch?v=P-4BK06vhr0,https://www.twitter.com/unlock_VALue
+Thematic Call :: Exploring MEV With Flashbots,Pantera Capital,2023-08-09,https://www.youtube.com/watch?v=qXZ6Mdwi8ng,https://www.twitter.com/unlock_VALue
+The 6th Science of Blockchain Conference (Monday),Stanford Video,2023-08-19,https://www.youtube.com/watch?v=E4YkppHQZgw,https://www.twitter.com/unlock_VALue
+The 6th Science of Blockchain Conference (Tuesday),Stanford Video,2023-08-19,https://www.youtube.com/watch?v=Nx5bgyJ7SJ4,https://www.twitter.com/unlock_VALue
+The 6th Science of Blockchain Conference (Wednesday),Stanford Video,2023-08-19,https://www.youtube.com/watch?v=NFJWy8oyVS0,https://www.twitter.com/unlock_VALue
+"Frontrunning in Decentralized Exchanges, Miner Extractable Value, and Consensus Instability",IEEE Symposium on Security and Privacy,2020-05-19,https://www.youtube.com/watch?v=vR1v7AQ8i3k,https://twitter.com/Freddmannen
+"Phil Daian- ""DeFi Composability - Friend or Foe?""",IC3 Initiative for Cryptocurrencies and Contracts,2020-08-06,https://www.youtube.com/watch?v=55o-1On5a2U,https://twitter.com/Freddmannen
+"Wallets and MEV: Decoding Ethereum’s Supply Chain | Matt Cutler, Blocknative",Empire,2023-09-26,https://www.youtube.com/watch?v=xv1Y6TmJwOo,https://twitter.com/Freddmannen
+"""Miner Extractable Value with Phil & Georgios"" - Georgios Konstantopoulos & Phil Daian",ETHGlobal,2020-10-14,https://www.youtube.com/watch?v=tv0CkmcoGkM,https://twitter.com/0x_emperor
+Interview with a Searcher - with MEV Senpai and Hasu,Uncommon Core,2021-07-19,https://www.youtube.com/watch?v=6jfSlDvH77k,https://twitter.com/0x_emperor
+DeFi Lecture 13: DeFi Security,Blockchain-Web3 MOOCs,2021-12-02,https://www.youtube.com/watch?v=GIHa2GQJY1k,https://twitter.com/0x_emperor
+'Block Space Auctions in Ethereum Sharding' - Vitalik Buterin,ETHGlobal,2021-07-20,https://www.youtube.com/watch?v=ZfkzLlcb4kw&list=PLRHMe0bxkuelaa4Crh8sSrWNP1BHfPpqY,https://twitter.com/0x_emperor
+Interchain Conversations II - Options for Achieving Interoperability,Cosmos,2021-01-14,https://www.youtube.com/watch?v=QdnQUIPeIzY,https://twitter.com/0x_emperor
+"Flash Loans, Miner Extractable Value and Efficient Settlement - Joint with Alfred Lehar (Calgary)",Fields Institute,2022-02-04,https://www.youtube.com/watch?v=0fHgAAKR9u8,https://twitter.com/0x_emperor
+"MEV on ETH2: MEV-boost, PBS, Danksharding... How do the pieces fit together? - Vitalik Buterin (EF)",Flashbots,2022-05-22,https://www.youtube.com/watch?v=OD54WfVuDWw,https://twitter.com/0x_emperor
+MEV..wat do next? - Phil Daian (Flashbots),Flashbots,2022-05-20,https://www.youtube.com/watch?v=vhxIjEnhutw&list=PLRHMe0bxkuel3w3C7P_WVvp9ShLi3HKRI,https://twitter.com/0x_emperor
+⚡️ MEVconomics.wtf Summit,ETHGlobal,2023-03-25,https://www.youtube.com/watch?v=t3sL0sCJFzk,https://twitter.com/0x_emperor
+"Alt View Ep #1: Yaoqi Jia speaks to Barnabé Monnot, Ethereum Foundation on the Layer2 ecosystem",Altlayer,2022-10-31,https://www.youtube.com/watch?v=viJqYMi6DMo,https://www.twitter.com/unlock_VALue
+Evaluating the PBS Experiment: Early insights from MEV-Boost and the Builder Market by Jolene Dunne,Ethereum Foundation,2022-10-15,https://www.youtube.com/watch?v=BFVSRSN5E_A,https://www.twitter.com/unlock_VALue
+"zkSummit: Axioms for Zero-Knowledge Proof Pricing- Tarun Chitra (Gauntlet), Georgios Konstantopoulos",Zero Knowledge,2020-05-15,https://www.youtube.com/watch?v=G7UllXTcjm4,https://barnabe.substack.com/p/understanding-rollup-economics-from
+"John Adler : Wait, It's All Resource Pricing?",[EthCC] Livestream 5,2021-07-21,https://www.youtube.com/watch?v=YoWMLoeQGeI,https://barnabe.substack.com/p/understanding-rollup-economics-from
+ZK Whiteboard Sessions - Module One: What is a SNARK? by Dan Boneh,Zero Knowledge,2022-08-02,https://www.youtube.com/watch?v=h-94UhJLeck,https://www.twitter.com/unlock_VALue

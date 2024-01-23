@@ -4,10 +4,13 @@ import os
 import re
 import logging
 from datetime import datetime
-
+from dotenv import load_dotenv
 from googleapiclient.discovery import build
+from functools import partial
+
 from src.utils import root_directory, authenticate_service_account
 
+load_dotenv()
 
 # Function to extract video ID from a YouTube link
 def extract_video_id_from_link(video_link):
@@ -56,7 +59,7 @@ def get_video_details_by_link(credentials, api_key, video_link):
 
 
 # Function to process a single row of the CSV and fetch video details
-def process_csv_row(row):
+def process_csv_row(row, credentials, api_key):
     video_link = row['video']
     referrer_link = row['referrer']
     video_details = get_video_details_by_link(credentials, api_key, video_link)
@@ -66,7 +69,7 @@ def process_csv_row(row):
     return video_details
 
 
-if __name__ == '__main__':
+def run():
     api_key = os.environ.get('YOUTUBE_API_KEY')
     if not api_key:
         raise ValueError("No API key provided. Please provide an API key via command line argument or .env file.")
@@ -80,7 +83,7 @@ if __name__ == '__main__':
     else:
         print("\nNo service account file found. Proceeding with public channels or playlists.")
 
-    csv_file_path = os.path.join(root_directory(), 'data/links/recommended_youtube_videos.csv')
+    csv_file_path = os.path.join(root_directory(), 'data/links/youtube/recommended_youtube_videos.csv')
 
     # Read the CSV file
     video_channels = []
@@ -89,15 +92,17 @@ if __name__ == '__main__':
         for row in csv_reader:
             video_channels.append(row)
 
+    process_csv_row_partial = partial(process_csv_row, credentials=credentials, api_key=api_key)
+
     # Process video channels in parallel
     with concurrent.futures.ThreadPoolExecutor() as executor:
-        video_details_list = list(executor.map(process_csv_row, video_channels))
+        video_details_list = list(executor.map(process_csv_row_partial, video_channels))
 
     # Filter out None values (failed requests)
     video_details_list = [video for video in video_details_list if video]
 
     # Print or save video details as needed
-    output_csv_file_path = os.path.join(root_directory(), 'data/links/recommended_youtube_videos_with_details.csv')
+    output_csv_file_path = os.path.join(root_directory(), 'data/links/youtube/recommended_youtube_videos_with_details.csv')
     headers = ['title', 'channel_name', 'Publish date', 'link', 'referrer']
 
     with open(output_csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
@@ -115,3 +120,7 @@ if __name__ == '__main__':
             })
 
     print(f"Results have been written to {output_csv_file_path}")
+
+
+if __name__ == '__main__':
+    run()
