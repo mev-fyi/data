@@ -10,7 +10,7 @@ KEYWORDS_TO_INCLUDE = ['order flow', 'orderflow', 'transaction', 'mev', 'orderin
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives",
             'erc', 'eip', 'auction', 'daian', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'stephane gosselin', 'su zhu', 'pools', 'censorship',
             '1559', 'BFT', 'selfish mining', 'vickrey auctions', 'Alex Nezlobin', 'Jason Milionis', "How They Solved Ethereum's Critical Flaw", 'cryptoeconomics',
-            'token design', 'token economics', 'crypto economics', 'scroll', 'starkware', 'aztec', 'zksync', "John Adler : Wait, It's All Resource Pricing?"]
+            'token design', 'token economics', 'crypto economics', 'scroll', 'starkware', 'aztec', 'zksync', "John Adler : Wait, It's All Resource Pricing?", 'evm']
 
 # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin', bridge',
 KEYWORDS_TO_EXCLUDE = ['joke', 'jokes', '#short', '#shorts', 'gensler', 'T-Shirt', "New year's breathing exercise",

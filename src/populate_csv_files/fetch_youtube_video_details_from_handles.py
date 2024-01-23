@@ -200,9 +200,9 @@ async def fetch_youtube_videos(api_key, yt_channels, yt_playlists, keywords, key
 
     if service_account_file:
         credentials = authenticate_service_account(service_account_file)
-        logging.info("\nService account file found. Proceeding with public channels, playlists, or private videos if accessible via Google Service Account.")
+        logging.info("Service account file found. Proceeding with public channels, playlists, or private videos if accessible via Google Service Account.")
     else:
-        logging.info("\nNo service account file found. Proceeding with public channels or playlists.")
+        logging.info("No service account file found. Proceeding with public channels or playlists.")
 
     csv_file_exists, csv_file_path, headers = setup_csv()
 

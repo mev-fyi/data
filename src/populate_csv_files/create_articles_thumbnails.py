@@ -45,7 +45,8 @@ def close_popups(driver, url):
                     logging.warning(f"Popup not found for {url}.")
         time.sleep(2)
 
-def take_screenshot(url, title, output_dir, headless=False, zoom=140, screenshot_height_percent=0.35, max_height=900, min_height=600):
+
+def take_screenshot(url, title, output_dir, headless=False, zoom=165, screenshot_height_percent=0.20, max_height=900, min_height=600):
     driver = return_driver(headless)
 
     attempt = 0
@@ -96,6 +97,7 @@ def take_screenshot(url, title, output_dir, headless=False, zoom=140, screenshot
     driver.quit()
     logging.info(f"Saved screenshot for {url} at {screenshot_path}")
 
+
 def process_row(row, headless: bool):
     output_dir = f"{root_directory()}/data/article_thumbnails"
     if not os.path.exists(output_dir):
@@ -106,6 +108,7 @@ def process_row(row, headless: bool):
         take_screenshot(row['pdf_link'], row['title'], output_dir, headless)
     else:
         logging.error("Could not find link in row")
+
 
 def main(headless: bool):
     logging.basicConfig(level=logging.INFO)
@@ -127,6 +130,7 @@ def main(headless: bool):
         process_row_with_headless = functools.partial(process_row, headless=headless)
         with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
             executor.map(process_row_with_headless, df.to_dict('records'))
+
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

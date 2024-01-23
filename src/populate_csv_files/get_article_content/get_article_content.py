@@ -81,7 +81,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
         # Extract the 'href' attribute
         authors = a_tag['href'] if a_tag else None
 
-        logging.info(f"Fetched content for URL {url}")
+        logging.info(f"Fetched content for URL [{url}]")
         return {
             'content': markdown_content,
             'release_date': release_date,
@@ -91,7 +91,7 @@ def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='artic
             'author_firm_url': None
         }
     except Exception as e:
-        logging.error(f"Could not fetch content for URL {url}: {e}")
+        logging.error(f"Could not fetch content for URL [{url}]: {e}")
         return empty_content
 
 
