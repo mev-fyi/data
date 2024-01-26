@@ -56,7 +56,7 @@ Optimistic relays and where to find them,https://frontier.tech/optimistic-relays
 The NFT MEV Landscape,https://frontier.tech/the-nft-mev-landscape,https://www.twitter.com/unlock_VALue,2023-03-29,by Alana Levin at Variant Fund in collaboration with Frontier Research
 The Orderflow Auction Design Space,https://frontier.tech/the-orderflow-auction-design-space,https://www.twitter.com/unlock_VALue,,by Stephane Gosselin & Ankit Chiplunkar for Frontier Research in collaboration with Consensys Research
 Beyond Extraction: The Role of Block Building in the Future of Ethereum,https://frontier.tech/beyond-extraction,https://www.twitter.com/unlock_VALue,,by Drew Van der Werff at Brevan Howard Digital in collaboration with Frontier Research
-Unpacking ERC-4337,https://frontier.tech/unpacking-erc-4337,https://www.twitter.com/unlock_VALue,,by Ankit Chiplunkar for Frontier Research
+Unpacking ERC-4337,https://frontier.tech/unpacking-erc-4337,https://www.twitter.com/unlock_VALue,,
 MEV-Share: programmably private orderflow to share MEV with users - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/mev-share-programmably-private-orderflow-to-share-mev-with-users/1264/1,https://www.twitter.com/unlock_VALue,,
 The dream of redistributing the extracted value - Research - The Flashbots Collective,https://collective.flashbots.net/t/the-dream-of-redistributing-the-extracted-value/642,https://www.twitter.com/unlock_VALue,,
 Bookmarks relevant for redistribution researchers - #35 by chayoterabit - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663/35,https://www.twitter.com/unlock_VALue,,
@@ -109,7 +109,7 @@ Protocol Mechanism (nftperp V2),https://nftperp.notion.site/Protocol-Mechanism-n
 Wintermute DeFi Governance Digest — September 2023 | Week 1 | by Callen | Wintermute | Medium,https://medium.com/wintermute-trading/wintermute-defi-governance-digest-september-2023-week-1-cb4fc6c24db2,https://www.twitter.com/unlock_VALue,2023-09-04,Callen
 Why Exchange Rebate Tiers Are Anti-Competitive,https://www.iex.io/article/why-exchange-rebate-tiers-are-anti-competitive,https://www.twitter.com/unlock_VALue,2023-06-27,John Ramsay - Chief Market Policy Officer
 "The Rising Tide of Broker Costs, and the Shrinking Pool of Competitors",https://www.iex.io/article/the-rising-tide-of-broker-costs-and-the-shrinking-pool-of-competitors,https://www.twitter.com/unlock_VALue,2021-06-08,John Ramsay - Chief Market Policy Officer
-The Comment Letters Are In. Here's What They Actually Say.,https://www.iex.io/article/the-comment-letters-are-in-heres-what-they-actually-say,https://www.twitter.com/unlock_VALue,2023-04-20,John Ramsay - Chief Market Policy Officer
+The Comment Letters Are In. Here's What They Actually Say.,https://www.iex.io/article/the-comment-letters-are-in-heres-what-they-actually-say,https://www.twitter.com/unlock_VALue,,
 The SEC Plan to Light Up Better Prices: Lots Still to Do,https://www.iex.io/article/the-sec-plan-to-light-up-better-prices-lots-still-to-do,https://www.twitter.com/unlock_VALue,2023-03-13,John Ramsay - Chief Market Policy Officer
 IEX Exchange’s Position on the SEC’s Proposed Changes to Regulation NMS,https://www.iex.io/article/iex-exchanges-position-on-the-secs-proposed-changes-to-regulation-nms,https://www.twitter.com/unlock_VALue,2023-03-21,John Ramsay - Chief Market Policy Officer
 Exploring the Impact of Signal V6 on D-Peg and P-Peg Performance,https://www.iex.io/article/exploring-the-impact-of-signal-v6-on-d-peg-and-p-peg-performance,https://www.twitter.com/unlock_VALue,2023-07-18,Sam Stevens - Head of Business Analytics
@@ -363,7 +363,7 @@ Engineering Security Through Coordination Problems,https://vitalik.eth.limo/gene
 A Note On Charity Through Marginal Price Discrimination,https://vitalik.eth.limo/general/2017/03/11/a_note_on_charity.html,https://www.twitter.com/unlock_VALue,2017-03-11,Vitalik Buterin
 The MEV Book: A Comprehensive Guide to Maximal Extractable Value,https://www.monoceros.com/insights/maximal-extractable-value-book,https://www.twitter.com/unlock_VALue,,"BYTuukka Tuomikoski, Carlos Monteiro"
 Zero-Knowledge Proofs: A Technology Primer,https://www.monoceros.com/insights/zero-knowledge-proofs-a-technology-primer,https://www.twitter.com/unlock_VALue,,BYMonoceros Ventures
-Everything You Need To Know About Order Flow Auctions,https://www.monoceros.com/insights/order-flow-auctions,https://www.twitter.com/unlock_VALue,,"BYTuukka Tuomikoski, Carlos Monteiro"
+Everything You Need To Know About Order Flow Auctions,https://www.monoceros.com/insights/order-flow-auctions,https://www.twitter.com/unlock_VALue,,BYMonoceros Ventures
 Simplified Active Validator Cap and Rotation Proposal - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/simplified-active-validator-cap-and-rotation-proposal/9022,https://www.twitter.com/unlock_VALue,2021-03-27,https://ethresear.ch/u/vbuterin
 Protocol and staking pool changes that could improve decentralization and reduce consensus overhead - HackMD,https://notes.ethereum.org/@vbuterin/staking_2023_10,https://www.twitter.com/unlock_VALue,,vbuterin
 Designing the Espresso Sequencer: Combining HotShot Consensus with Tiramisu DA - HackMD,https://hackmd.io/@EspressoSystems/HotShot-and-Tiramisu,https://www.twitter.com/unlock_VALue,2023-07-19,EspressoSystems
@@ -406,7 +406,7 @@ Burning MEV through block proposer auctions - Economics - Ethereum Research,http
 🗳️ Commitment-Satisfaction Committees: An In-Protocol Solution to PEPC - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/commitment-satisfaction-committees-an-in-protocol-solution-to-pepc/17055,https://www.twitter.com/unlock_VALue,2023-10-12,https://ethresear.ch/u/diego
 Committee-driven MEV smoothing - Economics - Ethereum Research,https://ethresear.ch/t/committee-driven-mev-smoothing/10408,https://www.twitter.com/unlock_VALue,2021-08-23,https://ethresear.ch/u/fradamt
 To burn or not? - Research - The Flashbots Collective,https://collective.flashbots.net/t/to-burn-or-not/647,https://www.twitter.com/unlock_VALue,,
-"The Proof Supply Chain. by: Trace | by Figment Capital | Jan, 2024 | Medium",https://figmentcapital.medium.com/the-proof-supply-chain-be6a6a884eff,https://www.twitter.com/unlock_VALue,,
+"The Proof Supply Chain. by: Trace | by Figment Capital | Jan, 2024 | Medium",https://figmentcapital.medium.com/the-proof-supply-chain-be6a6a884eff,https://www.twitter.com/unlock_VALue,2024-01-16,Figment Capital
 Espresso HotShot: Consensus Designed for Rollups | by Espresso Systems | Medium,https://medium.com/@espressosys/espresso-hotshot-consensus-designed-for-rollups-b080ba7362d1,https://hackmd.io/@EspressoSystems/EspressoSequencer,2022-11-28,Espresso Systems
 ,https://outlierventures.io/research/design-phase-of-token-ecosystem-creation/,https://www.twitter.com/unlock_VALue,,
 ,https://outlierventures.io/research/why-crypto-assets-need-effective-token-ecosystems/,https://www.twitter.com/unlock_VALue,,
@@ -432,3 +432,6 @@ Properties of issuance level (part 1) - HackMD,https://notes.ethereum.org/@ander
 Properties of issuance level (part 1) - HackMD,https://notes.ethereum.org/@domothy/roadmap,https://www.twitter.com/unlock_VALue,,anderselowsson
 ,https://forum.aztec.network/t/request-for-proposals-decentralized-sequencer-selection/350,https://www.twitter.com/unlock_VALue,,
 "The Cross-Domain Thesis Part 2: Storage Proofs, Computation, and… — Maven11 Research",https://maven11.mirror.xyz/3NqfzBemyvI9a0fhun7flOc20oq5XlXzOqphvKk5pxs,https://www.twitter.com/unlock_VALue,2023-10-05,Maven11 Research
+Validator consolidation in EIP-7251 - HackMD,https://notes.ethereum.org/@fradamt/maxeb-consolidation,https://www.twitter.com/unlock_VALue,,fradamt
+"Swap Fees Are For Losers: Introducing DeltaSwap, The First Feeless Spot DEX | by DeFi Devin | Jan, 2024 | Medium",https://medium.com/@defidevin/swap-fees-are-for-losers-introducing-deltaswap-the-first-feeless-spot-dex-c88b7b1ed340,https://www.twitter.com/unlock_VALue,,
+2FA zk-rollups using SGX - zk-s[nt]arks - Ethereum Research,https://ethresear.ch/t/2fa-zk-rollups-using-sgx/14462,https://www.twitter.com/unlock_VALue,2022-12-21,https://ethresear.ch/u/JustinDrake
