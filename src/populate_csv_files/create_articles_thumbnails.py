@@ -46,19 +46,18 @@ def close_popups(driver, url):
         time.sleep(2)
 
 
-def take_screenshot(url, title, output_dir, headless=False, zoom=165, screenshot_height_percent=0.20, max_height=900, min_height=600):
+def take_screenshot(url, title, output_dir, headless=False, zoom=145, screenshot_height_percent=0.20, max_height=900, min_height=600):
     driver = return_driver(headless)
 
     attempt = 0
     page_loaded = False
-    while attempt < 3 and not page_loaded:
+    while attempt < 2 and not page_loaded:
         try:
             driver.get(url)
-            # Wait up to 10 seconds for the presence of a specific element, or until the page is loaded
             WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
             page_loaded = True
-        except TimeoutException:
-            logging.error(f"Timeout occurred while loading {url}. Attempt: {attempt+1}")
+        except (TimeoutException, WebDriverException) as e:
+            logging.error(f"Error occurred while loading {url}. Attempt: {attempt+1}, Error: {e}")
             attempt += 1
             time.sleep(5)
         except WebDriverException as e:
@@ -75,7 +74,14 @@ def take_screenshot(url, title, output_dir, headless=False, zoom=165, screenshot
     close_popups(driver, url)
 
     # Apply zoom
-    driver.execute_script(f"document.body.style.zoom='{zoom}%'")
+    # driver.execute_script(f"document.body.style.zoom='{zoom}%'")
+    # Apply zoom and center content
+    driver.execute_script(f"""
+        document.body.style.zoom='{zoom}%';
+        const calculatedWidth = document.body.scrollWidth * ({zoom} / 100);
+        const offsetX = (calculatedWidth - window.innerWidth) / 2;
+        document.body.style.transform = 'translateX(-' + offsetX + 'px)';
+    """)
 
     # Get the total height of the page
     total_height = driver.execute_script("return document.body.parentNode.scrollHeight")
@@ -84,7 +90,7 @@ def take_screenshot(url, title, output_dir, headless=False, zoom=165, screenshot
     desired_height = int(total_height * screenshot_height_percent)
 
     # Take screenshot of the required part of the page
-    time.sleep(0.5)
+    time.sleep(1)
     png = driver.get_screenshot_as_png()
 
     # Open the screenshot and crop the top portion
@@ -126,7 +132,8 @@ def main(headless: bool):
         # Filter for specific domains if necessary
         # df = df[df['article'].str.contains('medium.com')]
 
-        num_workers = int(os.cpu_count() // 2)
+        num_workers = 20  # None # int(os.cpu_count() // 2)
+        os.environ['NUMEXPR_MAX_THREADS'] = f'{num_workers}'  # You can adjust the number as needed
         process_row_with_headless = functools.partial(process_row, headless=headless)
         with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
             executor.map(process_row_with_headless, df.to_dict('records'))
