@@ -111,7 +111,7 @@ Why Exchange Rebate Tiers Are Anti-Competitive,https://www.iex.io/article/why-ex
 "The Rising Tide of Broker Costs, and the Shrinking Pool of Competitors",https://www.iex.io/article/the-rising-tide-of-broker-costs-and-the-shrinking-pool-of-competitors,https://www.twitter.com/unlock_VALue,2021-06-08,John Ramsay - Chief Market Policy Officer
 The Comment Letters Are In. Here's What They Actually Say.,https://www.iex.io/article/the-comment-letters-are-in-heres-what-they-actually-say,https://www.twitter.com/unlock_VALue,2023-04-20,John Ramsay - Chief Market Policy Officer
 The SEC Plan to Light Up Better Prices: Lots Still to Do,https://www.iex.io/article/the-sec-plan-to-light-up-better-prices-lots-still-to-do,https://www.twitter.com/unlock_VALue,2023-03-13,John Ramsay - Chief Market Policy Officer
-IEX Exchange’s Position on the SEC’s Proposed Changes to Regulation NMS,https://www.iex.io/article/iex-exchanges-position-on-the-secs-proposed-changes-to-regulation-nms,https://www.twitter.com/unlock_VALue,2023-03-21,John Ramsay - Chief Market Policy Officer
+IEX Exchange’s Position on the SEC’s Proposed Changes to Regulation NMS,https://www.iex.io/article/iex-exchanges-position-on-the-secs-proposed-changes-to-regulation-nms,https://www.twitter.com/unlock_VALue,,
 Exploring the Impact of Signal V6 on D-Peg and P-Peg Performance,https://www.iex.io/article/exploring-the-impact-of-signal-v6-on-d-peg-and-p-peg-performance,https://www.twitter.com/unlock_VALue,2023-07-18,Sam Stevens - Head of Business Analytics
 Updating the Signal for Today’s Markets,https://www.iex.io/article/updating-the-signal-for-todays-markets,https://www.twitter.com/unlock_VALue,2023-04-12,Luke Kowalczyk - Head of Quantitative Research
 "Flash Boys' exchange IEX ramps up effort to cater to Reddit retail crowd, forms broker commuttee to improve stock-market structure",https://www.iex.io/article/flash-boys-exchange-iex-ramps-up-effort-to-cater-to-reddit-retail-crowd-forms-broker-commuttee-to-improve-stock-market-structure,https://www.twitter.com/unlock_VALue,2021-09-23,MarketWatch - 
@@ -348,14 +348,14 @@ Notes on Blockchain Governance,https://vitalik.eth.limo/general/2017/12/17/votin
 A Quick Gasprice Market Analysis,https://vitalik.eth.limo/general/2017/12/14/gas_analysis.html,https://www.twitter.com/unlock_VALue,2017-12-14,Vitalik Buterin
 "STARKs, Part II: Thank Goodness It's FRI-day",https://vitalik.eth.limo/general/2017/11/22/starks_part_2.html,https://www.twitter.com/unlock_VALue,2017-11-22,Vitalik Buterin
 "STARKs, Part I: Proofs with Polynomials",https://vitalik.eth.limo/general/2017/11/09/starks_part_1.html,https://www.twitter.com/unlock_VALue,2017-11-09,Vitalik Buterin
-On Medium-of-Exchange Token Valuations,https://vitalik.eth.limo/general/2017/10/17/moe.html,https://www.twitter.com/unlock_VALue,,
+On Medium-of-Exchange Token Valuations,https://vitalik.eth.limo/general/2017/10/17/moe.html,https://www.twitter.com/unlock_VALue,2017-10-17,Vitalik Buterin
 A Prehistory of the Ethereum Protocol,https://vitalik.eth.limo/general/2017/09/14/prehistory.html,https://www.twitter.com/unlock_VALue,2017-09-14,Vitalik Buterin
 "A Note on Metcalfe's Law, Externalities and Ecosystem Splits",https://vitalik.eth.limo/general/2017/07/27/metcalfe.html,https://www.twitter.com/unlock_VALue,2017-07-27,Vitalik Buterin
-The Triangle of Harm,https://vitalik.eth.limo/general/2017/07/16/triangle_of_harm.html,https://www.twitter.com/unlock_VALue,,
-On Path Independence,https://vitalik.eth.limo/general/2017/06/22/marketmakers.html,https://www.twitter.com/unlock_VALue,,
-Analyzing Token Sale Models,https://vitalik.eth.limo/general/2017/06/09/sales.html,https://www.twitter.com/unlock_VALue,,
+The Triangle of Harm,https://vitalik.eth.limo/general/2017/07/16/triangle_of_harm.html,https://www.twitter.com/unlock_VALue,2017-07-16,Vitalik Buterin
+On Path Independence,https://vitalik.eth.limo/general/2017/06/22/marketmakers.html,https://www.twitter.com/unlock_VALue,2017-06-22,Vitalik Buterin
+Analyzing Token Sale Models,https://vitalik.eth.limo/general/2017/06/09/sales.html,https://www.twitter.com/unlock_VALue,2017-06-09,Vitalik Buterin
 Engineering Security Through Coordination Problems,https://vitalik.eth.limo/general/2017/05/08/coordination_problems.html,https://www.twitter.com/unlock_VALue,2017-05-08,Vitalik Buterin
-"Hard Forks, Soft Forks, Defaults and Coercion",https://vitalik.eth.limo/general/2017/03/14/forks_and_markets.html,https://www.twitter.com/unlock_VALue,,
+"Hard Forks, Soft Forks, Defaults and Coercion",https://vitalik.eth.limo/general/2017/03/14/forks_and_markets.html,https://www.twitter.com/unlock_VALue,2017-03-14,Vitalik Buterin
 [Mirror] Zk-SNARKs: Under the Hood,https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html,https://www.twitter.com/unlock_VALue,2017-02-01,Vitalik Buterin
 [Mirror] Exploring Elliptic Curve Pairings,https://vitalik.eth.limo/general/2017/01/14/exploring_ecp.html,https://www.twitter.com/unlock_VALue,2017-01-14,Vitalik Buterin
 [Mirror] A Proof of Stake Design Philosophy,https://vitalik.eth.limo/general/2016/12/29/pos_design.html,https://www.twitter.com/unlock_VALue,2016-12-29,Vitalik Buterin
@@ -439,6 +439,42 @@ Validator consolidation in EIP-7251 - HackMD,https://notes.ethereum.org/@fradamt
 Sirrah: Speedrunning a TEE Coprocessor,https://writings.flashbots.net/suave-tee-coprocessor,https://www.twitter.com/unlock_VALue,2024-01-25,https://collective.flashbots.net/u/amiller
 Unconditional inclusion lists - Block proposer - Ethereum Research,https://ethresear.ch/t/unconditional-inclusion-lists/18500,https://twitter.com/mikeneuder/status/1752319880731173272,2024-01-30,https://ethresear.ch/u/mikeneuder
 "STARKPack: Aggregating STARKs for shorter proofs and faster verification | by Jivanyan | Nethermind.eth | Jan, 2024 | Medium",https://medium.com/nethermind-eth/starkpack-aggregating-starks-for-shorter-proofs-and-faster-verification-8c78a5c26291,https://www.twitter.com/unlock_VALue,,
-Protocol Guild Pledge — Tim Beiko,https://tim.mirror.xyz/srVdVopOFhD_ZoRDR50x8n5wmW3aRJIrNEAkpyQ4_ng,https://twitter.com/TimBeiko/status/1752458526407139680,,
+Protocol Guild Pledge — Tim Beiko,https://tim.mirror.xyz/srVdVopOFhD_ZoRDR50x8n5wmW3aRJIrNEAkpyQ4_ng,https://twitter.com/TimBeiko/status/1752458526407139680,2024-01-30,Tim Beiko
 ,https://dba.xyz/modular-money-liquid-staking-for-people-in-a-hurry/,https://twitter.com/jon_charb/status/1753450124200620536,,
-"The Shared Sequencer; An SoK on Shared Sequencing, Aggregation T… — Maven11 Research",https://maven11.mirror.xyz/I12E6Jf9X6HE_DuegZG4gmy8j-4RGAX4AdMZ71MnANY,,,
+"The Shared Sequencer; An SoK on Shared Sequencing, Aggregation T… — Maven11 Research",https://maven11.mirror.xyz/I12E6Jf9X6HE_DuegZG4gmy8j-4RGAX4AdMZ71MnANY,,2023-05-05,Maven11 Research
+State Lock Auctions: Towards Collaborative Block Building - Block proposer - Ethereum Research,https://ethresear.ch/t/state-lock-auctions-towards-collaborative-block-building/18558,https://twitter.com/_danielmarzec/status/1754173137799770532,2024-02-03,https://ethresear.ch/u/dmarz
+On Increasing the Block Gas Limit - Economics - Ethereum Research,https://ethresear.ch/t/on-increasing-the-block-gas-limit/18567?u=nerolation,https://x.com/nero_eth/status/1754441447690944537?s=46&t=LTSoDWXLa08Oi2VCOCK2Yg,2024-02-05,https://ethresear.ch/u/Nerolation
+Intent based bridge between L2s and Ethereum powered by multi-proof storage proofs - Layer 2 - Ethereum Research,https://ethresear.ch/t/intent-based-bridge-between-l2s-and-ethereum-powered-by-multi-proof-storage-proofs/18563,https://twitter.com/fede_intern/status/1754309047241593186,2024-02-05,https://ethresear.ch/u/unbalancedparenthese
+,https://forum.celestia.org/t/defending-against-lst-monopolies/1554,,,
+SUAVE Bridge - #8 by pbj - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/suave-bridge/2696/8,https://www.twitter.com/unlock_VALue,,
+,https://notes.ethereum.org/@mikeneuder/consider-the-epbs,https://twitter.com/mikeneuder/status/1755429454367555645,,
+,https://notes.ethereum.org/@mikeneuder/il-spec-overview,https://twitter.com/mikeneuder/status/1755220985219780646,,
+Solana Fees in Theory and Practice,https://www.helius.dev/blog/solana-fees-in-theory-and-practice,https://x.com/0xmert_/status/1751747905831010785,"January 31, 2024",Ryan Chern
+Consensus on Solana,https://www.helius.dev/blog/consensus-on-solana,https://www.twitter.com/unlock_VALue,"January 27, 2024",Ryan Chern
+"Solana Nodes — A Primer on Solana RPCs, Validators, and RPC providers",https://www.helius.dev/blog/solana-nodes-a-primer-on-solana-rpcs-validators-and-rpc-providers,https://www.twitter.com/unlock_VALue,"January 15, 2024",Mert Mumtaz
+Solana Validator Economics: A Primer,https://www.helius.dev/blog/solana-validator-economics-a-primer,https://www.twitter.com/unlock_VALue,"January 11, 2024",Ryan Chern
+Priority Fees: Understanding Solana's Transaction Fee Mechanics,https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fee-mechanics,https://www.twitter.com/unlock_VALue,"January 15, 2024",0xIchigo
+"The L1 vs L2 Landscape: Understanding the Design Differences, Tradeoffs, and Endgames",https://www.helius.dev/blog/the-l1-vs-l2-landscape,https://www.twitter.com/unlock_VALue,"December 13, 2023",Ryan Chern
+Gaming: How Solana is Changing the Playfield,https://www.helius.dev/blog/gaming-how-solana-is-changing-the-playfield,https://www.twitter.com/unlock_VALue,"January 15, 2024",0xIchigo
+Turbine: Block Propagation on Solana,https://www.helius.dev/blog/turbine-block-propagation-on-solana,https://www.twitter.com/unlock_VALue,"October 26, 2023",Ryan Chern
+The Solana Programming Model: An Introduction to Developing on Solana,https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana,https://www.twitter.com/unlock_VALue,"November 17, 2023",0xIchigo
+What is Firedancer? A Deep Dive into Solana 2.0,https://www.helius.dev/blog/what-is-firedancer,https://www.twitter.com/unlock_VALue,"December 3, 2023",0xIchigo
+Evaluating Solana for Enterprise Use: A Comprehensive Guide,https://www.helius.dev/blog/evaluating-solana-for-enterprise-use-a-comprehensive-guide,https://www.twitter.com/unlock_VALue,"October 24, 2023",0xIchigo
+Cryptographic Tools 101 - Hash Functions and Merkle Trees Explained,https://www.helius.dev/blog/cryptographic-tools-101-hash-functions-and-merkle-trees-explained,https://www.twitter.com/unlock_VALue,"September 25, 2023",0xIchigo
+All You Need to Know About Compression on Solana,https://www.helius.dev/blog/all-you-need-to-know-about-compression-on-solana,https://www.twitter.com/unlock_VALue,"November 30, 2023",0xIchigo
+"Proof of History, Proof of Stake, Proof of Work - Explained",https://www.helius.dev/blog/proof-of-history-proof-of-stake-proof-of-work-explained,https://www.twitter.com/unlock_VALue,"October 9, 2023",0xIchigo
+Privacy on Solana with Elusiv and Light: All You Need to Know About Privacy on SOL,https://www.helius.dev/blog/privacy-on-solana-with-elusiv-and-light,https://www.twitter.com/unlock_VALue,"September 14, 2023",0xIchigo
+All You Need to Know About Solana RPCs (2023),https://www.helius.dev/blog/solana-rpc,https://www.twitter.com/unlock_VALue,"September 12, 2023",Mert Mumtaz
+Solana Dev 101 - File system wallets + How to create a custom wallet,https://www.helius.dev/blog/file-system-wallets-how-to-create-a-custom-wallet,https://www.twitter.com/unlock_VALue,"August 14, 2023",Owen Venter
+Top Solana RPCs — Helius vs. Other Node Providers,https://www.helius.dev/blog/top-solana-rpcs-helius-vs-other-node-providers,https://www.twitter.com/unlock_VALue,"July 27, 2023",Mert Mumtaz
+Solana Dev 101 - Deserializing Account Data on Solana,https://www.helius.dev/blog/solana-dev-101-deserializing-account-data-on-solana,https://www.twitter.com/unlock_VALue,"January 22, 2024",Hunter Davis
+"Understanding Slots, Blocks, and Epochs on Solana",https://www.helius.dev/blog/solana-slots-blocks-and-epochs,https://www.twitter.com/unlock_VALue,"June 19, 2023",Mert Mumtaz
+How Solana RPCs Work,https://www.helius.dev/blog/how-solana-rpcs-work,https://www.twitter.com/unlock_VALue,"July 24, 2023",Mert Mumtaz
+Build a Wallet Tracker on Solana,https://www.helius.dev/blog/build-a-wallet-tracker-on-solana,https://www.twitter.com/unlock_VALue,"June 19, 2023",Mert Mumtaz
+Listening to On-chain Events on Solana,https://www.helius.dev/blog/solana-data-streaming,https://www.twitter.com/unlock_VALue,"January 11, 2024",Mert Mumtaz
+Solana Dev 101 - Mint SPL Tokens on Solana,https://www.helius.dev/blog/working-with-solana-tokens,https://www.twitter.com/unlock_VALue,"June 19, 2023",Hunter Davis
+Solana Dev101- How to get the holders of an NFT collection (Snapshot),https://www.helius.dev/blog/nft-holder-snapshots,https://www.twitter.com/unlock_VALue,"January 10, 2024",Owen Venter
+Solana Dev 101 - How to Create a Solana Transaction,https://www.helius.dev/blog/how-to-create-a-solana-transaction,https://www.twitter.com/unlock_VALue,"June 19, 2023",Owen Venter
+Solana Dev 101 - How to Mint an NFT on Solana,https://www.helius.dev/blog/how-to-mint-an-nft-on-solana,https://www.twitter.com/unlock_VALue,"June 19, 2023",Owen Venter
+All You Need to Know About Solana’s New DAS API,https://www.helius.dev/blog/all-you-need-to-know-about-solanas-new-das-api,https://www.twitter.com/unlock_VALue,"September 18, 2023",Hunter Davis
+Solana Dev 101 - Using DAS API For Fetching all NFTs in a Collection,https://www.helius.dev/blog/solana-dev-101-using-das-to-return-all-collection-assets,https://www.twitter.com/unlock_VALue,"July 28, 2023",Hunter Davis
