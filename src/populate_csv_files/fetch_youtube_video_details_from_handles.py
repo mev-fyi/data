@@ -14,7 +14,7 @@ import csv
 import asyncio
 from aiohttp import ClientSession
 
-from src.populate_csv_files.constants import KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE, YOUTUBE_VIDEOS_CSV_FILE_PATH
+from src.populate_csv_files.constants import KEYWORDS_TO_INCLUDE, KEYWORDS_TO_EXCLUDE, YOUTUBE_VIDEOS_CSV_FILE_PATH, AUTHORS, FIRMS
 from src.utils import root_directory, authenticate_service_account, get_videos_from_playlist, get_channel_id, get_channel_name
 
 # Load environment variables from the .env file
@@ -435,7 +435,7 @@ def run():
                    'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum']  # do not apply any filtering to these channels
     # Define the channel-specific filters which are applied after the first keyword selection
     channel_specific_filters = {
-        "Bankless": ["MEV", "maximal extractable value", "How They Solved Ethereum's Critical Flaw"],
+        "Bankless": ["MEV", "maximal extractable value", "How They Solved Ethereum's Critical Flaw", "zk"] + AUTHORS + FIRMS,
         "Unchained Crypto": ["MEV", "maximal extractable value", 'pool', 'ERC-', 'uniswap v4', 'a16z'],
         "NBER": ["market design"],
     }

@@ -1,16 +1,20 @@
 from src.utils import root_directory
 
 # TODO 2024-02-08: add authors from articles and research papers to authors and firms
-AUTHORS = ['Robert Miller', 'Tarun Chitra', 'Hasu', 'Dan Robinson', 'Jon Charbonneau',
-'Barnabe Monnot', 'Guillermo Angeris', 'Stephane Gosselin', 'Mallesh Pai', 'daian', 'Alex Nezlobin', 'Jason Milionis'
-'Max Resnick', 'Quintus Kilbourn', 'Georgios Konstantopoulos', 'Alex Obadia', 'Su Zhu', 'Vitalik Buterin', 'Justin Drake',]
-FIRMS = ['celestia', 'flashbots', 'paradigm', 'smg', 'rig', 'uniswap', 'altlayer', 'aztec', 'starkware', 'scroll', 'optimism', 'zksync', 'matter labs', '1inch', 'anoma', 'espresso']
+# TODO 2024-02-08: add all alt-L1s C-level: sol, aptos, sei, sui, monad [...]
+# TODO 2024-02-08: add all L2s C-level across ETH and BTC
+AUTHORS = ['Uri Klarman', 'Robert Miller', 'Tarun Chitra', 'Hasu', 'Dan Robinson', 'Jon Charbonneau', 'Tim Roughgarden', 'Scott Kominers', 'Dan Morehead', 'Joey Krug', 'Fenbushi Capital',
+'Barnabe Monnot', 'Guillermo Angeris', 'Stephane Gosselin', 'Mallesh Pai', 'daian', 'Alex Nezlobin', 'Jason Milionis', 'Drew Van der Werff', '0xmaki',
+'Max Resnick', 'Quintus Kilbourn', 'Georgios Konstantopoulos', 'Alex Obadia', 'Su Zhu', 'Vitalik Buterin', 'Justin Drake', 'Mike Neuder']
+
+FIRMS = ['bloxroute', 'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig',
+         'uniswap', 'altlayer', 'aztec', 'starkware', 'scroll', 'optimism', 'zksync', 'matter labs', '1inch', 'anoma', 'espresso']
 
 
 # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
 KEYWORDS_TO_INCLUDE = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage', 'back-running',
             'maximal extractable value', 'trading games', 'timing games', 'arbitrage games', 'timing', 'on-chain games', 'pepc', 'proposer', 'builder',
-            'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'hyperchain',
+            'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'hyperchain', 'erc404', 'erc 404',
             'suave', 'gas war', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'rollup', 'roll-up', 'roll-ups', 'uniswap', 'appchain',
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives",
