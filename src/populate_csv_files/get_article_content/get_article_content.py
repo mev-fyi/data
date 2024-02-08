@@ -29,6 +29,7 @@ empty_content = {
         'author_firm_url': None
     }
 
+
 def get_file_list(GITHUB_API_URL="https://api.github.com/repos/flashbots/flashbots-writings-website/contents/content"):
     response = requests.get(GITHUB_API_URL)
     if response.status_code == 200:
@@ -1103,6 +1104,57 @@ def fetch_monoceros_article_content(url):
         return empty_content
 
 
+def fetch_helius_article_content(url):
+    """
+    Fetch the content of an article from a Helius URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and authors of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('#content h1')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract authors
+        authors_tag = soup.select_one('div.uui-blogpost04_author-content:nth-child(1) > div:nth-child(2)')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract release date
+        release_date_tag = soup.select_one('div.uui-blogpost04_author-content:nth-child(2) > div:nth-child(2)')
+        release_date = release_date_tag.get_text(strip=True) if release_date_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('#content')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                # Assuming html_to_markdown is a function you've defined elsewhere to convert HTML to Markdown
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
@@ -1139,6 +1191,7 @@ def fetch_content(row, output_dir):
         'vitalik.eth.limo': fetch_vitalik_article_content,
         # 'osmosis.zone': fetch_osmosis_article_content,
         'monoceros': fetch_monoceros_article_content,
+        'www.helius.dev': fetch_helius_article_content,
     }
 
     for pattern, fetch_function in url_patterns.items():
@@ -1146,6 +1199,8 @@ def fetch_content(row, output_dir):
             if fetch_function:
                 content_info = fetch_function(url)
                 return content_info
+            else:
+                logging.error(f"[fetch_content]: pattern is in URL but there is no fetch_function!!")
 
     # Default case if no match is found
     return empty_content
@@ -1294,7 +1349,8 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None, overwr
 
 
 if __name__ == "__main__":
-    url_filters = ['gov.uniswap.org', 'governance.aave']  # ['a16z']  # ['pbs']  # None # ['hackmd']
+    url_filters = ['helius']  # ['a16z']  # ['pbs']  # None # ['hackmd']
     thread_count = 20
+    os.environ['NUMEXPR_MAX_THREADS'] = f'{thread_count}'
     get_flashbots_writings = False
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count, overwrite=True)

@@ -298,6 +298,8 @@ def run():
         "forum.aztec.network_article": r"^https://forum.aztec\.network/t/.+$",
         "substack_website": r"^https://\w+\.substack\.com/p/?$",
         "substack_article": r"^https://\w+\.substack\.com/p/.+$",
+        "helius_article": r"^https://www\.helius\.dev/blog/.+$",
+        "helius_website": r"^https://www\.helius\.dev/blog/?$",
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.
