@@ -113,7 +113,7 @@ The Comment Letters Are In. Here's What They Actually Say.,https://www.iex.io/ar
 The SEC Plan to Light Up Better Prices: Lots Still to Do,https://www.iex.io/article/the-sec-plan-to-light-up-better-prices-lots-still-to-do,https://www.twitter.com/unlock_VALue,2023-03-13,John Ramsay - Chief Market Policy Officer
 IEX Exchange’s Position on the SEC’s Proposed Changes to Regulation NMS,https://www.iex.io/article/iex-exchanges-position-on-the-secs-proposed-changes-to-regulation-nms,https://www.twitter.com/unlock_VALue,2023-03-21,John Ramsay - Chief Market Policy Officer
 Exploring the Impact of Signal V6 on D-Peg and P-Peg Performance,https://www.iex.io/article/exploring-the-impact-of-signal-v6-on-d-peg-and-p-peg-performance,https://www.twitter.com/unlock_VALue,2023-07-18,Sam Stevens - Head of Business Analytics
-Updating the Signal for Today’s Markets,https://www.iex.io/article/updating-the-signal-for-todays-markets,https://www.twitter.com/unlock_VALue,,
+Updating the Signal for Today’s Markets,https://www.iex.io/article/updating-the-signal-for-todays-markets,https://www.twitter.com/unlock_VALue,2023-04-12,Luke Kowalczyk - Head of Quantitative Research
 "Flash Boys' exchange IEX ramps up effort to cater to Reddit retail crowd, forms broker commuttee to improve stock-market structure",https://www.iex.io/article/flash-boys-exchange-iex-ramps-up-effort-to-cater-to-reddit-retail-crowd-forms-broker-commuttee-to-improve-stock-market-structure,https://www.twitter.com/unlock_VALue,2021-09-23,MarketWatch - 
 "order flow, auctions and centralisation II - order flow auctions",https://writings.flashbots.net/order-flow-auctions-and-centralisation-II/,https://www.twitter.com/unlock_VALue,2022-09-19,https://collective.flashbots.net/u/quintus
 Ethereum is a Dark Forest,https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest,https://www.twitter.com/unlock_VALue,,
@@ -478,3 +478,8 @@ Solana Dev 101 - How to Create a Solana Transaction,https://www.helius.dev/blog/
 Solana Dev 101 - How to Mint an NFT on Solana,https://www.helius.dev/blog/how-to-mint-an-nft-on-solana,https://www.twitter.com/unlock_VALue,"June 19, 2023",Owen Venter
 All You Need to Know About Solana’s New DAS API,https://www.helius.dev/blog/all-you-need-to-know-about-solanas-new-das-api,https://www.twitter.com/unlock_VALue,"September 18, 2023",Hunter Davis
 Solana Dev 101 - Using DAS API For Fetching all NFTs in a Collection,https://www.helius.dev/blog/solana-dev-101-using-das-to-return-all-collection-assets,https://www.twitter.com/unlock_VALue,"July 28, 2023",Hunter Davis
+FRP-34: Do backrun auctions protect traders? - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-34-do-backrun-auctions-protect-traders/2977,https://twitter.com/awmacp/status/1755165431394935087,,
+Optimizing Interactions Between Ethereum Consensus & Execution Clients,https://terencechain.substack.com/p/optimizing-interactions-between-ethereum,,,
+Validator Timing Game Post EIP4844 - Block proposer - Ethereum Research,https://ethresear.ch/t/validator-timing-game-post-eip4844/18129,,2024-01-03,https://ethresear.ch/u/terence
+Writing an Ethereum Consensus Client: Lessons & Future,https://terencechain.substack.com/p/writing-an-ethereum-consensus-client,,,
+Navigating Ethereum's 2024 Consensus Landscape 🧭,https://terencechain.substack.com/p/navigating-ethereums-2024-consensus,,,
