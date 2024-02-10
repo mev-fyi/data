@@ -300,6 +300,14 @@ def run():
         "substack_article": r"^https://\w+\.substack\.com/p/.+$",
         "helius_article": r"^https://www\.helius\.dev/blog/.+$",
         "helius_website": r"^https://www\.helius\.dev/blog/?$",
+        "chainlink_blog_article": r"^https://blog\.chain\.link/.+/.+$",
+        "chainlink_blog_website": r"^https://blog\.chain\.link/?$",
+        "outlierventures_article": r"^https://outlierventures\.io/article/.+$",
+        "outlierventures_website": r"^https://outlierventures\.io/?$",
+        "gauntlet_xyz_article": r"^https://www\.gauntlet\.xyz/resources/.+$",
+        "gauntlet_xyz_website": r"^https://www\.gauntlet\.xyz/resources/?$",
+        "mev_io_blog_article": r"^https://blog\.mev\.io/posts/.+$",
+        "mev_io_blog_website": r"^https://blog\.mev\.io/posts/?$",
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.

@@ -1155,6 +1155,284 @@ def fetch_helius_article_content(url):
         return {}  # Return an empty dictionary in case of an error
 
 
+def fetch_mevio_article_content(url):
+    """
+    Fetch the content of an article from a Mevio URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and authors of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('h1.astro-vj4tpspi')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('span.italic:nth-child(3) > time:nth-child(1)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%b %d, %Y')
+            release_date = release_date_obj.strftime('%Y-%m-%d')
+        else:
+            release_date = 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('#article')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        # Authors is set directly to "mev.io"
+        authors = "mev.io"
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_outlierventures_article_content(url):
+    """
+    Fetch the content of an article from an Outlier Ventures URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and authors of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('h1.elementor-heading-title')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('.elementor-post-info__item--type-date')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%B %d, %Y')
+            release_date = release_date_obj.strftime('%Y-%m-%d')
+        else:
+            release_date = 'N/A'
+
+        # Extract author
+        author_tag = soup.select_one('.elementor-post-info__item--type-author')
+        authors = author_tag.get_text(strip=True) if author_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.elementor-element-3026168 > div:nth-child(1)')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_gauntlet_article_content(url):
+    """
+    Fetch the content of an article from a Gauntlet URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and authors of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.global_small-hero_heading-sh1')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('div.global_author_item:nth-child(3) > p:nth-child(1)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%B %d, %Y')
+            release_date = release_date_obj.strftime('%Y-%m-%d')
+        else:
+            release_date = 'N/A'
+
+        # Extract authors
+        authors_tag = soup.select_one('div.text-font-sohne-mono')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.global_post_rich-text')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_chainlink_article_content(url):
+    """
+    Fetch the content of an article from a Gauntlet URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and authors of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.global_small-hero_heading-sh1')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('div.global_author_item:nth-child(3) > p:nth-child(1)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%B %d, %Y')
+            release_date = release_date_obj.strftime('%Y-%m-%d')
+        else:
+            release_date = 'N/A'
+
+        # Extract authors
+        authors_tag = soup.select_one('div.text-font-sohne-mono')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.global_post_rich-text')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_chainlink_article_content(url):
+    """
+    Fetch the content of an article from a Chainlink URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and authors of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('#post-title')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('#post-date')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%B %d, %Y')
+            release_date = release_date_obj.strftime('%Y-%m-%d')
+        else:
+            release_date = 'N/A'
+
+        # Extract authors
+        authors_tag = soup.select_one('#post-author > a:nth-child(1)')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.post-editor-content')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
@@ -1192,6 +1470,10 @@ def fetch_content(row, output_dir):
         # 'osmosis.zone': fetch_osmosis_article_content,
         'monoceros': fetch_monoceros_article_content,
         'www.helius.dev': fetch_helius_article_content,
+        'mev.io': fetch_mevio_article_content,
+        'outlierventures.io': fetch_outlierventures_article_content,
+        'gauntlet.xyz': fetch_gauntlet_article_content,
+        'blog.chain.link': fetch_chainlink_article_content,
     }
 
     for pattern, fetch_function in url_patterns.items():
@@ -1349,7 +1631,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None, overwr
 
 
 if __name__ == "__main__":
-    url_filters = ['helius']  # ['a16z']  # ['pbs']  # None # ['hackmd']
+    url_filters = ['eclipsemainnet.eth']  # ['a16z']  # ['pbs']  # None # ['hackmd']
     thread_count = 20
     os.environ['NUMEXPR_MAX_THREADS'] = f'{thread_count}'
     get_flashbots_writings = False
