@@ -25,7 +25,7 @@ Empirical analysis of Builders' Behavioral Profiles (BBPs) - Economics - Ethereu
 The Merge series (part 3): MEV landscape — Rated,https://mirror.xyz/ratedw3b.eth/xltDyY32_xQyDiHHphj230kc0iEQL43Pwb7b6t_fzWQ,https://www.twitter.com/freddmannen,2022-11-21,Rated
 MEV Resilient Ethereum - HackMD,https://notes.ethereum.org/@RMFhKOrSSEWxmqjZMOT1Ag/rJb_cq8Co,https://www.twitter.com/freddmannen,,RMFhKOrSSEWxmqjZMOT1Ag
 PROF: Fair Transaction-Ordering in a Profit-Seeking World | by IC3 | Medium,https://initc3org.medium.com/prof-fair-transaction-ordering-in-a-profit-seeking-world-b6dadd71f086,https://www.twitter.com/freddmannen,2023-04-17,IC3
-Rollups are Real — Rollup Economics 2.0,https://davidecrapis.notion.site/Rollups-are-Real-Rollup-Economics-2-0-2516079f62a745b598133a101ba5a3de,https://www.twitter.com/freddmannen,,
+Rollups are Real — Rollup Economics 2.0,https://davidecrapis.notion.site/Rollups-are-Real-Rollup-Economics-2-0-2516079f62a745b598133a101ba5a3de,https://www.twitter.com/freddmannen,2023/08/13,davidecrapis
 "Block Builder Decentralization is coming, but maybe not so soon",https://succulent-throat-0ce.notion.site/Block-Builder-Decentralization-is-coming-but-maybe-not-so-soon-6e54e7d7e1d34d61af55e5d98a51eb8b,https://www.twitter.com/freddmannen,,succulent-throat-0ce
 "MEV Driven Centralization in Ethereum: Part 2 | by Simon Brown | Dec, 2022 | Medium",https://succulent-throat-0ce.notion.site/MEV-Driven-Centralization-in-Ethereum-Part-2-by-Simon-Brown-Dec-2022-Medium-507efc380b454791b362dddc7e2e066c,https://www.twitter.com/freddmannen,,succulent-throat-0ce
 The MEV Conundrum,https://verilog-solutions.notion.site/The-MEV-Conundrum-6d66001b150148739be14d73a8836903,https://www.twitter.com/freddmannen,,verilog-solutions
@@ -241,7 +241,7 @@ Open sourcing the Flashbots Builder,https://writings.flashbots.net/open-sourcing
 Learn more about PBS Foundation,https://pbsfoundation.notion.site/Learn-more-about-PBS-Foundation-68382efd786e450f937ab550ffaa4a96,https://www.twitter.com/unlock_VALue,,pbsfoundation
 Execution Tickets - Economics - Ethereum Research,https://ethresear.ch/t/execution-tickets/17944,https://www.twitter.com/unlock_VALue,2023-12-23,https://ethresear.ch/u/mikeneuder
 "L1s vs. L2s, Rollups vs. Integrated, General-purpose vs. App-specific",https://dba.xyz/l1s-vs-l2s-rollups-vs-integrated-general-purpose-vs-app-specific/,https://www.twitter.com/unlock_VALue,2023-12-08,Jon Charbonneau
-Do Rollups Inherit Security?,https://dba.xyz/do-rollups-inherit-security/,https://www.twitter.com/unlock_VALue,2023-10-17,Jon Charbonneau
+Do Rollups Inherit Security?,https://dba.xyz/do-rollups-inherit-security/,https://www.twitter.com/unlock_VALue,,
 Endgame: Proof of Governance,https://dba.xyz/endgame-proof-of-governance/,https://www.twitter.com/unlock_VALue,2023-08-07,Jon Charbonneau
 The Rollup Multiverse,https://dba.xyz/the-rollup-multiverse/,https://www.twitter.com/unlock_VALue,2023-05-30,Jon Charbonneau
 Rollups Are L1s (& L2s),https://dba.xyz/rollups-are-l1s-l2s-a-k-a-how-rollups-actually-actually-actually-work/,https://www.twitter.com/unlock_VALue,2023-05-26,Jon Charbonneau
@@ -449,12 +449,12 @@ Intent based bridge between L2s and Ethereum powered by multi-proof storage proo
 SUAVE Bridge - #8 by pbj - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/suave-bridge/2696/8,https://www.twitter.com/unlock_VALue,,
 Consider the ePBS - HackMD,https://notes.ethereum.org/@mikeneuder/consider-the-epbs,https://twitter.com/mikeneuder/status/1755429454367555645,,mikeneuder
 "Inclusion lists: execution, consensus, & engine spec overview - HackMD",https://notes.ethereum.org/@mikeneuder/il-spec-overview,https://twitter.com/mikeneuder/status/1755220985219780646,,mikeneuder
-Solana Fees in Theory and Practice,https://www.helius.dev/blog/solana-fees-in-theory-and-practice,https://x.com/0xmert_/status/1751747905831010785,"January 31, 2024",Ryan Chern
+Solana Fees in Theory and Practice,https://www.helius.dev/blog/solana-fees-in-theory-and-practice,https://x.com/0xmert_/status/1751747905831010785,,
 Consensus on Solana,https://www.helius.dev/blog/consensus-on-solana,https://www.twitter.com/unlock_VALue,"January 27, 2024",Ryan Chern
 "Solana Nodes — A Primer on Solana RPCs, Validators, and RPC providers",https://www.helius.dev/blog/solana-nodes-a-primer-on-solana-rpcs-validators-and-rpc-providers,https://www.twitter.com/unlock_VALue,"January 15, 2024",Mert Mumtaz
 Solana Validator Economics: A Primer,https://www.helius.dev/blog/solana-validator-economics-a-primer,https://www.twitter.com/unlock_VALue,"January 11, 2024",Ryan Chern
 Priority Fees: Understanding Solana's Transaction Fee Mechanics,https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fee-mechanics,https://www.twitter.com/unlock_VALue,"January 15, 2024",0xIchigo
-"The L1 vs L2 Landscape: Understanding the Design Differences, Tradeoffs, and Endgames",https://www.helius.dev/blog/the-l1-vs-l2-landscape,https://www.twitter.com/unlock_VALue,"December 13, 2023",Ryan Chern
+"The L1 vs L2 Landscape: Understanding the Design Differences, Tradeoffs, and Endgames",https://www.helius.dev/blog/the-l1-vs-l2-landscape,https://www.twitter.com/unlock_VALue,,
 Gaming: How Solana is Changing the Playfield,https://www.helius.dev/blog/gaming-how-solana-is-changing-the-playfield,https://www.twitter.com/unlock_VALue,"January 15, 2024",0xIchigo
 Turbine: Block Propagation on Solana,https://www.helius.dev/blog/turbine-block-propagation-on-solana,https://www.twitter.com/unlock_VALue,"October 26, 2023",Ryan Chern
 The Solana Programming Model: An Introduction to Developing on Solana,https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana,https://www.twitter.com/unlock_VALue,"November 17, 2023",0xIchigo
@@ -524,3 +524,7 @@ Solidity Tutorial : all about Assembly | by Jean Cvllr | Medium,https://jeancvll
 ,https://forum.celestia.org/t/sharing-a-sequencer-set-by-separating-execution-from-aggregation/702,,,
 ,https://social-dilemmas.github.io/,,,
 ,https://theblockchainerhub.xyz/,,,
+,https://blog.duality.xyz/introducing-multiplicity/,https://www.twitter.com/unlock_VALue,,
+,https://blog.shutter.network/shutterized-opstack-testnet-announcement-and-roadmap/,https://www.twitter.com/unlock_VALue,,
+Web3 Security: In-Depth — Officer's Blog,https://officercia.mirror.xyz/dgKaZvBsP90fNc7YLtL-ibRIZYcbvTdtVPdmNoB6s_M,https://twitter.com/officer_cia/status/1757114238370226652,,
+The price is right: Realigning proposer-builder incentives with predictive MEV-burn - Economics - Ethereum Research,https://ethresear.ch/t/the-price-is-right-realigning-proposer-builder-incentives-with-predictive-mev-burn/18656,https://twitter.com/soispoke/status/1757078115308786078,2024-02-12,https://ethresear.ch/u/soispoke
