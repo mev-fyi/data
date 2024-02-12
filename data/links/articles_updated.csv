@@ -3,7 +3,7 @@ PEPC-DVT: PEPC with no changes to the consensus protocol - Economics - Ethereum 
 Three dichotomies in ePBS - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/three-dichotomies-in-epbs/16267,https://www.twitter.com/freddmannen,2023-08-03,https://ethresear.ch/u/potuz
 Shared sequencer for MEV protection and profitable marketplace - Layer 2 - Ethereum Research,https://ethresear.ch/t/shared-sequencer-for-mev-protection-and-profitable-marketplace/15313,https://www.twitter.com/freddmannen,2023-04-16,https://ethresear.ch/u/0xTariz
 Burning MEV through block proposer auctions - Economics - Ethereum Research,https://ethresear.ch/t/burning-mev-through-block-proposer-auctions/14029,https://www.twitter.com/freddmannen,2022-10-26,https://ethresear.ch/u/domothy
-Single-slot PBS using attesters as distributed availability oracle - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/single-slot-pbs-using-attesters-as-distributed-availability-oracle/11877,https://www.twitter.com/freddmannen,,
+Single-slot PBS using attesters as distributed availability oracle - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/single-slot-pbs-using-attesters-as-distributed-availability-oracle/11877,https://www.twitter.com/freddmannen,2022-01-27,https://ethresear.ch/u/vbuterin
 Two-slot proposer/builder separation - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/two-slot-proposer-builder-separation/10980,https://www.twitter.com/freddmannen,2021-10-10,https://ethresear.ch/u/vbuterin
 Timing games in Proof-of-Stake - Economics - Ethereum Research,https://ethresear.ch/t/timing-games-in-proof-of-stake/13980,https://www.twitter.com/freddmannen,2022-10-20,https://ethresear.ch/u/barnabe
 Latency arms race concerns in blockspace markets - Economics - Ethereum Research,https://ethresear.ch/t/latency-arms-race-concerns-in-blockspace-markets/14957,https://www.twitter.com/freddmannen,2023-03-03,https://ethresear.ch/u/dcrapis
@@ -25,7 +25,7 @@ Empirical analysis of Builders' Behavioral Profiles (BBPs) - Economics - Ethereu
 The Merge series (part 3): MEV landscape — Rated,https://mirror.xyz/ratedw3b.eth/xltDyY32_xQyDiHHphj230kc0iEQL43Pwb7b6t_fzWQ,https://www.twitter.com/freddmannen,2022-11-21,Rated
 MEV Resilient Ethereum - HackMD,https://notes.ethereum.org/@RMFhKOrSSEWxmqjZMOT1Ag/rJb_cq8Co,https://www.twitter.com/freddmannen,,RMFhKOrSSEWxmqjZMOT1Ag
 PROF: Fair Transaction-Ordering in a Profit-Seeking World | by IC3 | Medium,https://initc3org.medium.com/prof-fair-transaction-ordering-in-a-profit-seeking-world-b6dadd71f086,https://www.twitter.com/freddmannen,2023-04-17,IC3
-Rollups are Real — Rollup Economics 2.0,https://davidecrapis.notion.site/Rollups-are-Real-Rollup-Economics-2-0-2516079f62a745b598133a101ba5a3de,https://www.twitter.com/freddmannen,2023/08/13,davidecrapis
+Rollups are Real — Rollup Economics 2.0,https://davidecrapis.notion.site/Rollups-are-Real-Rollup-Economics-2-0-2516079f62a745b598133a101ba5a3de,https://www.twitter.com/freddmannen,,
 "Block Builder Decentralization is coming, but maybe not so soon",https://succulent-throat-0ce.notion.site/Block-Builder-Decentralization-is-coming-but-maybe-not-so-soon-6e54e7d7e1d34d61af55e5d98a51eb8b,https://www.twitter.com/freddmannen,,succulent-throat-0ce
 "MEV Driven Centralization in Ethereum: Part 2 | by Simon Brown | Dec, 2022 | Medium",https://succulent-throat-0ce.notion.site/MEV-Driven-Centralization-in-Ethereum-Part-2-by-Simon-Brown-Dec-2022-Medium-507efc380b454791b362dddc7e2e066c,https://www.twitter.com/freddmannen,,succulent-throat-0ce
 The MEV Conundrum,https://verilog-solutions.notion.site/The-MEV-Conundrum-6d66001b150148739be14d73a8836903,https://www.twitter.com/freddmannen,,verilog-solutions
@@ -169,7 +169,7 @@ Notes on Proposer-Builder Separation (PBS),https://barnabe.substack.com/p/pbs,ht
 Order Flows: Kingmaker of the Block Builders 👑,https://noxx.substack.com/p/order-flows-kingmaker-of-the-block,https://twitter.com/0xTaker,2022-09-01,noxx
 "DEX Arbitrage, Mathematical Optimisations & Me",https://noxx.substack.com/p/dex-arbitrage-mathematical-optimisations,https://twitter.com/0xTaker,2022-08-22,noxx
 Designing Multi-Dimensional Blockchain Fee Markets — Emperor,https://crypto.mirror.xyz/ztCt3eXw-wCEwqBE6xCRTf-bZleezhyuW3ubxohYbBQ,https://www.twitter.com/unlock_VALue,2023-09-18,Emperor
-Defining the Latencies involved in MEV Strategies — Taker,https://taker.mirror.xyz/uYOelwkLc4K7nlo5XV_zpuqsV6MwIMMp-py4e-u4qnE,https://www.twitter.com/unlock_VALue,,
+Defining the Latencies involved in MEV Strategies — Taker,https://taker.mirror.xyz/uYOelwkLc4K7nlo5XV_zpuqsV6MwIMMp-py4e-u4qnE,https://www.twitter.com/unlock_VALue,2023-03-14,Taker
 Merge Anniversary - A Year In Review - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/merge-anniversary-a-year-in-review/2400,https://www.twitter.com/unlock_VALue,,
 "Ethereum Proposer-Builder Separation: Past, Present, and Future — Chaskin OnChain",https://mirror.xyz/0x218932707a30bE62Ef8559d32d954863933b412f/MhJM9li409wxuOSYaw5EcLjUQoLSx5iYZXZNgMZU4uM,https://www.twitter.com/unlock_VALue,2023-09-18,Chaskin OnChain
 ,https://www.steakhouse.financial/projects/stablecoin-manual,https://www.twitter.com/unlock_VALue,,
@@ -330,7 +330,7 @@ In-person meatspace protocol to prove unconditional possession of a private key,
 Understanding PLONK,https://vitalik.eth.limo/general/2019/09/22/plonk.html,https://www.twitter.com/unlock_VALue,2019-09-22,Vitalik Buterin
 The Dawn of Hybrid Layer 2 Protocols,https://vitalik.eth.limo/general/2019/08/28/hybrid_layer_2.html,https://www.twitter.com/unlock_VALue,2019-08-28,Vitalik Buterin
 Sidechains vs Plasma vs Sharding,https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html,https://www.twitter.com/unlock_VALue,2019-06-12,Vitalik Buterin
-Fast Fourier Transforms,https://vitalik.eth.limo/general/2019/05/12/fft.html,https://www.twitter.com/unlock_VALue,,
+Fast Fourier Transforms,https://vitalik.eth.limo/general/2019/05/12/fft.html,https://www.twitter.com/unlock_VALue,2019-05-12,Vitalik Buterin
 Control as Liability,https://vitalik.eth.limo/general/2019/05/09/control_as_liability.html,https://www.twitter.com/unlock_VALue,2019-05-09,Vitalik Buterin
 On Free Speech,https://vitalik.eth.limo/general/2019/04/16/free_speech.html,https://www.twitter.com/unlock_VALue,2019-04-16,Vitalik Buterin
 On Collusion,https://vitalik.eth.limo/general/2019/04/03/collusion.html,https://www.twitter.com/unlock_VALue,2019-04-03,Vitalik Buterin
@@ -372,7 +372,7 @@ Analyzing BFT & Proposer-Promised Preconfirmations - Layer 2 - Ethereum Research
 Shared Sequencing: Defragmenting the L2 Rollup Ecosystem - HackMD,https://hackmd.io/@EspressoSystems/SharedSequencing,,2023-04-17,EspressoSystems
 Fair Exchange in Proposer-Builder Separation - HackMD,https://hackmd.io/@EspressoSystems/fair-exchange-in-proposer-builder-separation,,2023-10-12,EspressoSystems
 The Derivation Pipeline - HackMD,https://hackmd.io/@EspressoSystems/the-derivation-pipeline,,2023-11-30,EspressoSystems
-Paths toward single-slot finality - HackMD,https://notes.ethereum.org/@vbuterin/single_slot_finality,,,
+Paths toward single-slot finality - HackMD,https://notes.ethereum.org/@vbuterin/single_slot_finality,,,vbuterin
 Based rollups—superpowers from L1 sequencing - Layer 2 - Ethereum Research,https://ethresear.ch/t/based-rollups-superpowers-from-l1-sequencing/15016,,2023-03-10,https://ethresear.ch/u/JustinDrake
 The Espresso Sequencer - HackMD,https://hackmd.io/@EspressoSystems/EspressoSequencer,,2023-03-16,EspressoSystems
 The cost of artificial latency in the PBS context - Economics - Ethereum Research,https://ethresear.ch/t/the-cost-of-artificial-latency-in-the-pbs-context/17847,,2023-12-15,https://ethresear.ch/u/umbnat92
@@ -433,7 +433,7 @@ Properties of issuance level (part 1) - HackMD,https://notes.ethereum.org/@domot
 ,https://forum.aztec.network/t/request-for-proposals-decentralized-sequencer-selection/350,https://www.twitter.com/unlock_VALue,,
 "The Cross-Domain Thesis Part 2: Storage Proofs, Computation, and… — Maven11 Research",https://maven11.mirror.xyz/3NqfzBemyvI9a0fhun7flOc20oq5XlXzOqphvKk5pxs,https://www.twitter.com/unlock_VALue,2023-10-05,Maven11 Research
 Validator consolidation in EIP-7251 - HackMD,https://notes.ethereum.org/@fradamt/maxeb-consolidation,https://www.twitter.com/unlock_VALue,,fradamt
-"Swap Fees Are For Losers: Introducing DeltaSwap, The First Feeless Spot DEX | by DeFi Devin | Jan, 2024 | Medium",https://medium.com/@defidevin/swap-fees-are-for-losers-introducing-deltaswap-the-first-feeless-spot-dex-c88b7b1ed340,https://www.twitter.com/unlock_VALue,2024-01-23,DeFi Devin
+"Swap Fees Are For Losers: Introducing DeltaSwap, The First Feeless Spot DEX | by DeFi Devin | Jan, 2024 | Medium",https://medium.com/@defidevin/swap-fees-are-for-losers-introducing-deltaswap-the-first-feeless-spot-dex-c88b7b1ed340,https://www.twitter.com/unlock_VALue,,
 2FA zk-rollups using SGX - zk-s[nt]arks - Ethereum Research,https://ethresear.ch/t/2fa-zk-rollups-using-sgx/14462,https://www.twitter.com/unlock_VALue,2022-12-21,https://ethresear.ch/u/JustinDrake
 ,https://blog.conduit.xyz/celestia-mainnet-migrations,https://www.twitter.com/unlock_VALue,,
 Sirrah: Speedrunning a TEE Coprocessor,https://writings.flashbots.net/suave-tee-coprocessor,https://www.twitter.com/unlock_VALue,2024-01-25,https://collective.flashbots.net/u/amiller
@@ -459,7 +459,7 @@ Gaming: How Solana is Changing the Playfield,https://www.helius.dev/blog/gaming-
 Turbine: Block Propagation on Solana,https://www.helius.dev/blog/turbine-block-propagation-on-solana,https://www.twitter.com/unlock_VALue,"October 26, 2023",Ryan Chern
 The Solana Programming Model: An Introduction to Developing on Solana,https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana,https://www.twitter.com/unlock_VALue,"November 17, 2023",0xIchigo
 What is Firedancer? A Deep Dive into Solana 2.0,https://www.helius.dev/blog/what-is-firedancer,https://www.twitter.com/unlock_VALue,"December 3, 2023",0xIchigo
-Evaluating Solana for Enterprise Use: A Comprehensive Guide,https://www.helius.dev/blog/evaluating-solana-for-enterprise-use-a-comprehensive-guide,https://www.twitter.com/unlock_VALue,,
+Evaluating Solana for Enterprise Use: A Comprehensive Guide,https://www.helius.dev/blog/evaluating-solana-for-enterprise-use-a-comprehensive-guide,https://www.twitter.com/unlock_VALue,"October 24, 2023",0xIchigo
 Cryptographic Tools 101 - Hash Functions and Merkle Trees Explained,https://www.helius.dev/blog/cryptographic-tools-101-hash-functions-and-merkle-trees-explained,https://www.twitter.com/unlock_VALue,"September 25, 2023",0xIchigo
 All You Need to Know About Compression on Solana,https://www.helius.dev/blog/all-you-need-to-know-about-compression-on-solana,https://www.twitter.com/unlock_VALue,"November 30, 2023",0xIchigo
 "Proof of History, Proof of Stake, Proof of Work - Explained",https://www.helius.dev/blog/proof-of-history-proof-of-stake-proof-of-work-explained,https://www.twitter.com/unlock_VALue,"October 9, 2023",0xIchigo
@@ -486,16 +486,16 @@ Navigating Ethereum's 2024 Consensus Landscape 🧭,https://terencechain.substac
 Solana & Ethereum Transaction Fee Mechanisms: Proposals to Impro… — Eclipse,https://mirror.xyz/eclipsemainnet.eth/GTrrYpmxSY1ubQ0SEV5akF7EZXgA2XFr7FEjM3CUuaE,,2024-02-08,Eclipse
 Composable is extending the Inter-Blockchain Communication (IBC) Protocol to Ethereum | by Composable Foundation | Medium,https://composablefi.medium.com/composable-is-extending-the-inter-blockchain-communication-ibc-protocol-to-ethereum-e5cc765af57e,https://www.twitter.com/unlock_VALue,2023-09-25,Composable Foundation
 Linea: The Secure zkEVM Ecosystem Where Dapps Thrive — Linea,https://linea.mirror.xyz/byKWNxXlxy9YmfMWCEarNr9m-GJJvoceAr__ibQYWKU,https://twitter.com/LineaBuild/status/1755654119274983751,2024-02-08,Linea
-What’s the Utility of your Token?,https://outlierventures.io/article/token-utility-canvas/,https://www.twitter.com/unlock_VALue,,
-Secrets of The Token Sale: What is Token Design?,https://outlierventures.io/article/secrets-of-the-token-sale-what-is-token-design/,https://www.twitter.com/unlock_VALue,,
-Quantitative Token Model: A data-driven approach to stay ahead of the game,https://outlierventures.io/article/quantitative-token-model-a-data-driven-approach-to-stay-ahead-of-the-game/,https://www.twitter.com/unlock_VALue,,
-Does your product need a token?,https://outlierventures.io/article/does-your-product-need-a-token/,https://www.twitter.com/unlock_VALue,,
-NFT or fungible token: which is right for me?,https://outlierventures.io/article/nft-or-fungible-token-which-is-right-for-me/,https://www.twitter.com/unlock_VALue,,
-How can bonding curves help align DAO stakeholders?,https://outlierventures.io/article/bonding-curves-and-a-prelude-to-sptokens/,https://www.twitter.com/unlock_VALue,,
-Uniswap Protocol Fee Report,https://www.gauntlet.xyz/resources/uniswap-protocol-fee-report,https://www.twitter.com/unlock_VALue,,
-mevAuction: a Multiple-Winner Auction System,https://blog.mev.io/posts/mevAuction-system,https://www.twitter.com/unlock_VALue,,
-Revolutionizing Staking Rewards: The MEV Protocol,https://blog.mev.io/posts/Revolutionizing-Staking-Rewards-MEV-Protocol,https://www.twitter.com/unlock_VALue,,
-"Skimming Rewards Withdraws, and Exiting now Enabled",https://blog.mev.io/posts/Skimming-Rewards-dec-07-23,https://www.twitter.com/unlock_VALue,,
+What’s the Utility of your Token?,https://outlierventures.io/article/token-utility-canvas/,https://www.twitter.com/unlock_VALue,2023-03-24,Jan Baeriswyl
+Secrets of The Token Sale: What is Token Design?,https://outlierventures.io/article/secrets-of-the-token-sale-what-is-token-design/,https://www.twitter.com/unlock_VALue,2022-03-02,Matus Steis
+Quantitative Token Model: A data-driven approach to stay ahead of the game,https://outlierventures.io/article/quantitative-token-model-a-data-driven-approach-to-stay-ahead-of-the-game/,https://www.twitter.com/unlock_VALue,2023-02-10,Achim Struve
+Does your product need a token?,https://outlierventures.io/article/does-your-product-need-a-token/,https://www.twitter.com/unlock_VALue,2023-01-25,Jan Baeriswyl
+NFT or fungible token: which is right for me?,https://outlierventures.io/article/nft-or-fungible-token-which-is-right-for-me/,https://www.twitter.com/unlock_VALue,2023-01-31,Jan Baeriswyl
+How can bonding curves help align DAO stakeholders?,https://outlierventures.io/article/bonding-curves-and-a-prelude-to-sptokens/,https://www.twitter.com/unlock_VALue,2023-03-15,Karim Halabi
+Uniswap Protocol Fee Report,https://www.gauntlet.xyz/resources/uniswap-protocol-fee-report,https://www.twitter.com/unlock_VALue,2024-01-15,Gauntlet Team
+mevAuction: a Multiple-Winner Auction System,https://blog.mev.io/posts/mevAuction-system,https://www.twitter.com/unlock_VALue,2024-02-09,mev.io
+Revolutionizing Staking Rewards: The MEV Protocol,https://blog.mev.io/posts/Revolutionizing-Staking-Rewards-MEV-Protocol,https://www.twitter.com/unlock_VALue,2023-10-24,mev.io
+"Skimming Rewards Withdraws, and Exiting now Enabled",https://blog.mev.io/posts/Skimming-Rewards-dec-07-23,https://www.twitter.com/unlock_VALue,2023-12-07,mev.io
 Uniswap V2 — DeFi Protocol explained from its code | Medium,https://medium.com/@bloqarl/uniswap-v2-complete-guide-to-understand-the-defi-protocol-d3a0e766cbdd,,2023-04-11,Bloqarl
 Smart Contract Auditing Roadmap 2023 | Medium,https://medium.com/@bloqarl/how-can-i-learn-about-smart-contract-auditing-from-zero-week-1-learning-roadmap-4347785e6f9b,,2023-05-03,Bloqarl
 Smart Contract Hacking course: Was it worth to pay for it? Did I learn much? | by Bloqarl | Medium,https://medium.com/@bloqarl/smart-contract-hacking-course-was-it-worth-to-pay-for-it-did-i-learn-much-ddd1c775cf26,,2023-04-02,Bloqarl
@@ -510,3 +510,17 @@ How Can I Integrate Lido Tokens into My dApp? | by Bloqarl | Medium,https://medi
 Smart Contract Shadow Audit in CodeHawks - Bloqarl - Medium,https://medium.com/@bloqarl/smart-contract-shadow-audit-in-codehawks-b625d178751e,,2023-10-20,Bloqarl
 Uniswap V2 Router Explained by a Smart Contract Auditor — Add Liquidity | DeFi Protocol | by Bloqarl | Medium,https://medium.com/@bloqarl/uniswap-v2-router-explained-by-a-smart-contract-auditor-add-liquidity-defi-protocol-6e23973ad62e,,2023-10-16,Bloqarl
 "Balancer: The Yield Bearing Asset Thesis | by Beethoven X | Balancer Protocol | Feb, 2024 | Medium",https://medium.com/balancer-protocol/balancer-the-yield-bearing-asset-thesis-f44489ba2deb,,,
+The promise and challenges of crypto + AI applications,https://vitalik.eth.limo/general/2024/01/30/cryptoai.html,,2024-01-30,Vitalik Buterin
+Getting Deep Into EVM: How Ethereum Works Backstage | by vasa | The Startup | Medium,https://medium.com/swlh/getting-deep-into-evm-how-ethereum-works-backstage-ab6ad9c0d0bf,https://www.zaryabs.com/evm-learning-resources/,2019-11-30,vasa
+EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 1,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,2022-02-27,noxx
+EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 2,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-d6b?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,2022-03-05,noxx
+EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 3,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-3ea?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,2022-03-27,noxx
+Diving Into The Ethereum VM Part 2 — How I Learned To Start Worrying And Count The Storage Cost | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-part-2-storage-layout-bc5349cb11b7,https://www.zaryabs.com/evm-learning-resources/,2017-08-14,zh
+Diving Into The Ethereum VM Part 3 — The Hidden Costs of Arrays | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-the-hidden-costs-of-arrays-28e119f04a9b,https://www.zaryabs.com/evm-learning-resources/,2017-08-24,zh
+How To Decipher A Smart Contract Method Call | by zh | Medium,https://medium.com/@hayeah/how-to-decipher-a-smart-contract-method-call-8ee980311603,https://www.zaryabs.com/evm-learning-resources/,2017-09-18,zh
+Diving Into The Ethereum VM Part 5 — The Smart Contract Creation Process | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-part-5-the-smart-contract-creation-process-cb7b6133b855,https://www.zaryabs.com/evm-learning-resources/,2017-10-24,zh
+Solidity Tutorial : all about Assembly | by Jean Cvllr | Medium,https://jeancvllr.medium.com/solidity-tutorial-all-about-assembly-5acdfefde05c,https://www.zaryabs.com/evm-learning-resources/,2019-12-25,Jean Cvllr
+,https://www.rareskills.io/post/ethereum-contract-creation-code?ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,,
+,https://forum.celestia.org/t/sharing-a-sequencer-set-by-separating-execution-from-aggregation/702,,,
+,https://social-dilemmas.github.io/,,,
+,https://theblockchainerhub.xyz/,,,
