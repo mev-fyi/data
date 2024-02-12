@@ -7,12 +7,12 @@ AUTHORS = ['Uri Klarman', 'Robert Miller', 'Tarun Chitra', 'Hasu', 'Dan Robinson
 'Barnabe Monnot', 'Guillermo Angeris', 'Stephane Gosselin', 'Mallesh Pai', 'daian', 'Alex Nezlobin', 'Jason Milionis', 'Drew Van der Werff', '0xmaki',
 'Max Resnick', 'Quintus Kilbourn', 'Georgios Konstantopoulos', 'Alex Obadia', 'Su Zhu', 'Vitalik Buterin', 'Justin Drake', 'Mike Neuder']
 
-FIRMS = ['bloxroute', 'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig',
+FIRMS = ['eigenlayer', 'dymension', 'bloxroute', 'panoptic', 'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig', 'balancer',
          'uniswap', 'altlayer', 'aztec', 'starkware', 'scroll', 'optimism', 'zksync', 'matter labs', '1inch', 'anoma', 'espresso']
 
 
 # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
-KEYWORDS_TO_INCLUDE = ['order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage', 'back-running',
+KEYWORDS_TO_INCLUDE = ['perps', 'derivatives', 'options', 'order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage', 'back-running',
             'maximal extractable value', 'trading games', 'timing games', 'arbitrage games', 'timing', 'on-chain games', 'pepc', 'proposer', 'builder',
             'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'hyperchain', 'erc404', 'erc 404',
             'suave', 'gas war', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
@@ -26,7 +26,7 @@ KEYWORDS_TO_INCLUDE += AUTHORS
 KEYWORDS_TO_INCLUDE += FIRMS
 
 # , 'smart contract', 'eth global',  'evm',  #  'vitalik', 'buterin', bridge',
-KEYWORDS_TO_EXCLUDE = ['joke', 'jokes', '#short', '#shorts', 'gensler', 'T-Shirt', "New year's breathing exercise",
+KEYWORDS_TO_EXCLUDE = ['sanction','howey','lawyer','joke', 'jokes', '#short', '#shorts', 'gensler', 'T-Shirt', "New year's breathing exercise",
                        'From lifespan to healthspan (1)', 'On promoting healthspan and quality of life (2)',
                        'Quick Bits', '#eth', 'Oslo Freedom Forum:', 'Why the SEC', 'SEC Commissioner', 'Oráculos', 'On promoting healthspan and quality of life',
                        'From lifespan to healthspan', 'On the decentralized web', 'Web3 Masterclass for JavaScript Developers',

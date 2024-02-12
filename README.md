@@ -2,12 +2,10 @@
 
 # MEV.FYI is the MEV research content aggregator and search engine
 
-Welcome to `mev.fyi` - an open-source initiative dedicated to gathering and curating research on Maximal Extractable Value (MEV), incentive alignment, mechanism design, and their implications in the blockchain ecosystem, with a specific focus on Ethereum.
+Welcome to `mev.fyi` - the open-source initiative dedicated to gathering and curating research on Maximal Extractable Value (MEV), incentive alignment, mechanism design, and their implications in the blockchain ecosystem, with a specific focus on Ethereum.
 
-`mev.fyi`'s end-game is to become the go-to resource for MEV research and related topics using a chatbot interface to recommend papers, articles, and videos based on user input, something like [nfx.com/chat](https://www.nfx.com/chat).
+`mev.fyi`'s end-game is to become the go-to resource for MEV research and related topics using a chatbot interface to recommend papers, articles, and videos based on user input (based on [nfx.com/chat](https://www.nfx.com/chat)).
 This repository can be the basis to create guides and formal definitions of MEV and the relevant Ethereum research as a whole, for education purposes e.g. to formalise and agree on definitions, onboard new (re)searchers [...].
-
-If you have a grander vision for this project, please do share it!
 
 ## What is MEV?
 
@@ -30,7 +28,7 @@ Maximal Extractable Value (MEV) refers to the total amount that can be extracted
 
 We've curated a selection of YouTube channels focused on MEV and related topics. Each channel's videos come with their respective transcripts to enable easy "Ctrl+F" searches. This repository offers an invaluable tool to parse video content with LLMs, create glossaries, definitions, and more.
 
-Disclaimer: each transcript is fetched from Youtube API and automatically generated. The Google algorithm generating said scripts is imperfect and some words can be misinterpreted. A possible upgrade to the transcript would be to fetch the audio (against Google ToS however) and use an API like AssemblyAI's to analyse the content and correct the transcript.  
+Disclaimer: each transcript is fetched from Youtube API and automatically generated. The Google algorithm generating said scripts is imperfect and some words can be misinterpreted.  
 
 ## Topics of Interest
 Flashbots' topics and definitions list [here](https://github.com/flashbots/mev-research/blob/main/topics.md) enumerates topics of interest to the MEV research community. These topics include:

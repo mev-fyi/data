@@ -1378,9 +1378,9 @@ def fetch_chainlink_article_content(url):
         return {}  # Return an empty dictionary in case of an error
 
 
-def fetch_chainlink_article_content(url):
+def fetch_blocknative_article_content(url):
     """
-    Fetch the content of an article from a Chainlink URL.
+    Fetch the content of an article from a given URL.
 
     Parameters:
     - url (str): The URL of the article.
@@ -1398,28 +1398,29 @@ def fetch_chainlink_article_content(url):
         soup = BeautifulSoup(response.content, 'html.parser')
 
         # Extract title
-        title_tag = soup.select_one('#post-title')
+        title_tag = soup.select_one('#hs_cos_wrapper_name')
         title = title_tag.get_text(strip=True) if title_tag else 'N/A'
 
         # Extract release date and format it
-        release_date_tag = soup.select_one('#post-date')
+        release_date_tag = soup.select_one('.blog-post-info-text > p:nth-child(1)')
         if release_date_tag:
             release_date_str = release_date_tag.get_text(strip=True)
+            # Assuming date format needs parsing to standard format
             release_date_obj = datetime.datetime.strptime(release_date_str, '%B %d, %Y')
-            release_date = release_date_obj.strftime('%Y-%m-%d')
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
         else:
             release_date = 'N/A'
 
         # Extract authors
-        authors_tag = soup.select_one('#post-author > a:nth-child(1)')
+        authors_tag = soup.select_one('.blog_author-name')
         authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
 
         # Extract content
-        content_div = soup.select_one('.post-editor-content')
+        content_div = soup.select_one('#hs_cos_wrapper_post_body')
         content_list = []
         if content_div:
             for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
-                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
 
         content = ''.join(content_list)
 
@@ -1432,6 +1433,121 @@ def fetch_chainlink_article_content(url):
     except Exception as e:
         print(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_shutter_article_content(url):
+    """
+    Fetch the content of an article from a given URL, specifically tailored for articles
+    from Shutter.network with a specific structure for title, release date, and content.
+    Authors are not specified in the article structure, so 'Shutter.network' is used by default.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and a default author.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.single-title')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('span.single-meta-item:nth-child(1) > time:nth-child(1)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%b %d, %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Set author to 'Shutter.network' as there is no author information
+        authors = 'Shutter.network'
+
+        # Extract content
+        content_div = soup.select_one('.single-content')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_duality_article_content(url):
+    """
+    Fetch the content of an article from a given URL, with updated selectors for title,
+    release date, content, and author, specifically tailored for a different article structure.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.gh-article-title')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('.gh-article-meta > time:nth-child(2)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%b %d, %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Extract author
+        authors_tag = soup.select_one('.gh-article-meta > a:nth-child(1)')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.gh-content')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
 
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
@@ -1474,6 +1590,9 @@ def fetch_content(row, output_dir):
         'outlierventures.io': fetch_outlierventures_article_content,
         'gauntlet.xyz': fetch_gauntlet_article_content,
         'blog.chain.link': fetch_chainlink_article_content,
+        'blocknative.com': fetch_blocknative_article_content,
+        'shutter.network': fetch_shutter_article_content,
+        'duality.xyz': fetch_duality_article_content,
     }
 
     for pattern, fetch_function in url_patterns.items():

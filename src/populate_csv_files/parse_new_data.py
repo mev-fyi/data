@@ -308,6 +308,12 @@ def run():
         "gauntlet_xyz_website": r"^https://www\.gauntlet\.xyz/resources/?$",
         "mev_io_blog_article": r"^https://blog\.mev\.io/posts/.+$",
         "mev_io_blog_website": r"^https://blog\.mev\.io/posts/?$",
+        "shutter_network_blog_article": r"^https://blog\.shutter\.network/.+$",
+        "shutter_network_blog_website": r"^https://blog\.shutter\.network/?$",
+        "blocknative_blog_article": r"^https://blocknative\.com/blog/.+$",
+        "blocknative_blog_website": r"^https://blocknative\.com/blog/?$",
+        "duality_blog_article": r"^https://blog\.duality\.xyz/.+$",
+        "duality_blog_website": r"^https://blog\.duality\.xyz/?$",
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.
