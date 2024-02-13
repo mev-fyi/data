@@ -1549,6 +1549,290 @@ def fetch_duality_article_content(url):
         return {}  # Return an empty dictionary in case of an error
 
 
+def fetch_dydx_article_content(url):
+    """
+    Fetch the content of an article from a given URL, with updated selectors for title,
+    release date, content, and author, specifically tailored for articles from the dydx platform.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.CmsPostHeader__Heading-sc-2faegp-0')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('.CmsPostHeader___StyledDiv-sc-2faegp-4 > time:nth-child(1)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True).upper()  # Ensure month is in uppercase for %b format
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%b %d. %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Extract author
+        authors_tag = soup.select_one('.CmsPostHeader__TopAvatar-sc-2faegp-1 > div:nth-child(1) > div:nth-child(2)')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.CmsPostContent__StyledCmsPostContent-sc-tqjifz-0')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+def fetch_merkle_article_content(url):
+    """
+    Fetch the content of an article from a given URL, with updated selectors for title,
+    release date, content, and author, specifically tailored for articles from the dydx platform.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.CmsPostHeader__Heading-sc-2faegp-0')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('.CmsPostHeader___StyledDiv-sc-2faegp-4 > time:nth-child(1)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True).upper()  # Ensure month is in uppercase for %b format
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%b %d. %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Extract author
+        authors_tag = soup.select_one('.CmsPostHeader__TopAvatar-sc-2faegp-1 > div:nth-child(1) > div:nth-child(2)')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.CmsPostContent__StyledCmsPostContent-sc-tqjifz-0')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_merkle_article_content(url):
+    """
+    Fetch the content of an article from a given URL, with updated selectors for title,
+    release date, content, and author, specifically tailored for articles from the Merkle platform.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.text-3xl')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('.text-base > time:nth-child(1)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%A, %B %d, %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Extract author
+        authors_tag = soup.select_one('.whitespace-nowrap > dd:nth-child(4) > a:nth-child(1)')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.prose')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_openzeppelin_article_content(url):
+    """
+    Fetch the content of an article from a given URL, with updated selectors for title,
+    release date, content, and author, specifically tailored for articles from the OpenZeppelin platform.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('#hs_cos_wrapper_name')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('.tags-wrapper > div:nth-child(1) > div:nth-child(1) > span:nth-child(2)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%B %d, %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Extract author
+        authors_tag = soup.select_one('.blog-post__author-name')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('#hs_cos_wrapper_post_body')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_zaryabs_article_content(url):
+    """
+    Fetch the content of an article from a given URL, with updated selectors for title,
+    release date, content, and author, specifically tailored for Zaryab's platform articles.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.article-title')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('.byline-meta-date')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%b %d, %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Extract author
+        authors_tag = soup.select_one('.author-name > a:nth-child(1)')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.gh-content')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        print(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
 def fetch_content(row, output_dir):
     url = getattr(row, 'article')
 
@@ -1593,6 +1877,11 @@ def fetch_content(row, output_dir):
         'blocknative.com': fetch_blocknative_article_content,
         'shutter.network': fetch_shutter_article_content,
         'duality.xyz': fetch_duality_article_content,
+        'dydx.exchange': fetch_dydx_article_content,
+        'merkle.io': fetch_merkle_article_content,
+        'openzeppelin': fetch_openzeppelin_article_content,
+        'blog.qtum': fetch_medium_content_from_url,
+        'zaryabs': fetch_zaryabs_article_content,
     }
 
     for pattern, fetch_function in url_patterns.items():
