@@ -241,3 +241,12 @@ BabySpartan: Lasso-based SNARK for non-uniform computation,"Srinath Setty, Justi
 zk-Bench: A Toolset for Comparative Evaluation and Performance Benchmarking of SNARKs,"Jens Ernstberger, Stefanos Chaliasos, George Kadianakis, Sebastian Steinhorst, Philipp Jovanovic, Arthur Gervais, Benjamin Livshits, Michele Orrù",https://eprint.iacr.org/2023/1503,iacr,2023-10-03,https://twitter.com/zkv_xyz/status/1757525415982174324
 ,,https://angeris.github.io/papers/oco-fees.pdf,Self-host,,https://twitter.com/GuilleAngeris/status/1757463994674425882
 ,,https://apollocrypto.com/wp-content/uploads/2024/02/Modular-Blockchains-EigenLayer.pdf,Self-host,,
+On Liquidity Mining for Uniswap v3,"Jimmy Yin, Mac Ren",http://arxiv.org/pdf/2108.05800v1,"arXiv, cs.AI",2021-08-12,https://risencrypto.github.io/
+Strategic Liquidity Provision in Uniswap v3,"Zhou Fan, Francisco Marmolejo-Cossío, Daniel J. Moroz, Michael Neuder, Rithvik Rao, David C. Parkes",http://arxiv.org/pdf/2106.12033v4,"arXiv, cs.CR, cs.GT",2021-06-22,https://risencrypto.github.io/
+Do not rug on me: Zero-dimensional Scam Detection,"Bruno Mazorra, Victor Adan, Vanesa Daza",http://arxiv.org/pdf/2201.07220v1,"arXiv, cs.CR, cs.LG, q-fin.ST",2022-01-16,https://risencrypto.github.io/
+Trade or Trick? Detecting and Characterizing Scam Tokens on Uniswap Decentralized Exchange,"Pengcheng Xia, Haoyu wang, Bingyu Gao, Weihang Su, Zhou Yu, Xiapu Luo, Chao Zhang, Xusheng Xiao, Guoai Xu",http://arxiv.org/pdf/2109.00229v2,"arXiv, cs.CR",2021-09-01,https://risencrypto.github.io/
+Impermanent Loss in Uniswap v3,"Stefan Loesch, Nate Hindman, Mark B Richardson, Nicholas Welch",http://arxiv.org/pdf/2111.09192v1,"arXiv, q-fin.TR, q-fin.PM",2021-11-17,https://risencrypto.github.io/
+UNISWAP: Impermanent Loss and Risk Profile of a Liquidity Provider,"Andreas A. Aigner, Gurvinder Dhaliwal",http://arxiv.org/pdf/2106.14404v1,"arXiv, q-fin.TR, q-fin.CP, q-fin.GN, q-fin.PM, q-fin.RM, 62P20, 91B99, J.4",2021-06-28,https://risencrypto.github.io/
+,,https://uniswap.org/whitepaper.pdf,Self-host,,https://risencrypto.github.io/
+,,https://uniswap.org/whitepaper-v3.pdf,Self-host,,https://risencrypto.github.io/
+,,https://atiselsts.github.io/pdfs/uniswap-v3-liquidity-math.pdf,Self-host,,https://risencrypto.github.io/

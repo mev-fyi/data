@@ -56,7 +56,7 @@ Optimistic relays and where to find them,https://frontier.tech/optimistic-relays
 The NFT MEV Landscape,https://frontier.tech/the-nft-mev-landscape,https://www.twitter.com/unlock_VALue,2023-03-29,by Alana Levin at Variant Fund in collaboration with Frontier Research
 The Orderflow Auction Design Space,https://frontier.tech/the-orderflow-auction-design-space,https://www.twitter.com/unlock_VALue,,by Stephane Gosselin & Ankit Chiplunkar for Frontier Research in collaboration with Consensys Research
 Beyond Extraction: The Role of Block Building in the Future of Ethereum,https://frontier.tech/beyond-extraction,https://www.twitter.com/unlock_VALue,,by Drew Van der Werff at Brevan Howard Digital in collaboration with Frontier Research
-Unpacking ERC-4337,https://frontier.tech/unpacking-erc-4337,https://www.twitter.com/unlock_VALue,,
+Unpacking ERC-4337,https://frontier.tech/unpacking-erc-4337,https://www.twitter.com/unlock_VALue,,by Ankit Chiplunkar for Frontier Research
 MEV-Share: programmably private orderflow to share MEV with users - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/mev-share-programmably-private-orderflow-to-share-mev-with-users/1264/1,https://www.twitter.com/unlock_VALue,,
 The dream of redistributing the extracted value - Research - The Flashbots Collective,https://collective.flashbots.net/t/the-dream-of-redistributing-the-extracted-value/642,https://www.twitter.com/unlock_VALue,,
 Bookmarks relevant for redistribution researchers - #35 by chayoterabit - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663/35,https://www.twitter.com/unlock_VALue,,
@@ -453,13 +453,13 @@ Solana Fees in Theory and Practice,https://www.helius.dev/blog/solana-fees-in-th
 Consensus on Solana,https://www.helius.dev/blog/consensus-on-solana,https://www.twitter.com/unlock_VALue,"January 27, 2024",Ryan Chern
 "Solana Nodes — A Primer on Solana RPCs, Validators, and RPC providers",https://www.helius.dev/blog/solana-nodes-a-primer-on-solana-rpcs-validators-and-rpc-providers,https://www.twitter.com/unlock_VALue,"January 15, 2024",Mert Mumtaz
 Solana Validator Economics: A Primer,https://www.helius.dev/blog/solana-validator-economics-a-primer,https://www.twitter.com/unlock_VALue,"January 11, 2024",Ryan Chern
-Priority Fees: Understanding Solana's Transaction Fee Mechanics,https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fee-mechanics,https://www.twitter.com/unlock_VALue,"January 15, 2024",0xIchigo
+Priority Fees: Understanding Solana's Transaction Fee Mechanics,https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fee-mechanics,https://www.twitter.com/unlock_VALue,"February 15, 2024",0xIchigo
 "The L1 vs L2 Landscape: Understanding the Design Differences, Tradeoffs, and Endgames",https://www.helius.dev/blog/the-l1-vs-l2-landscape,https://www.twitter.com/unlock_VALue,"December 13, 2023",Ryan Chern
 Gaming: How Solana is Changing the Playfield,https://www.helius.dev/blog/gaming-how-solana-is-changing-the-playfield,https://www.twitter.com/unlock_VALue,"January 15, 2024",0xIchigo
 Turbine: Block Propagation on Solana,https://www.helius.dev/blog/turbine-block-propagation-on-solana,https://www.twitter.com/unlock_VALue,"October 26, 2023",Ryan Chern
 The Solana Programming Model: An Introduction to Developing on Solana,https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana,https://www.twitter.com/unlock_VALue,"November 17, 2023",0xIchigo
 What is Firedancer? A Deep Dive into Solana 2.0,https://www.helius.dev/blog/what-is-firedancer,https://www.twitter.com/unlock_VALue,"December 3, 2023",0xIchigo
-Evaluating Solana for Enterprise Use: A Comprehensive Guide,https://www.helius.dev/blog/evaluating-solana-for-enterprise-use-a-comprehensive-guide,https://www.twitter.com/unlock_VALue,,
+Evaluating Solana for Enterprise Use: A Comprehensive Guide,https://www.helius.dev/blog/evaluating-solana-for-enterprise-use-a-comprehensive-guide,https://www.twitter.com/unlock_VALue,"October 24, 2023",0xIchigo
 Cryptographic Tools 101 - Hash Functions and Merkle Trees Explained,https://www.helius.dev/blog/cryptographic-tools-101-hash-functions-and-merkle-trees-explained,https://www.twitter.com/unlock_VALue,"September 25, 2023",0xIchigo
 All You Need to Know About Compression on Solana,https://www.helius.dev/blog/all-you-need-to-know-about-compression-on-solana,https://www.twitter.com/unlock_VALue,"November 30, 2023",0xIchigo
 "Proof of History, Proof of Stake, Proof of Work - Explained",https://www.helius.dev/blog/proof-of-history-proof-of-stake-proof-of-work-explained,https://www.twitter.com/unlock_VALue,"October 9, 2023",0xIchigo
@@ -467,11 +467,11 @@ Privacy on Solana with Elusiv and Light: All You Need to Know About Privacy on S
 All You Need to Know About Solana RPCs (2023),https://www.helius.dev/blog/solana-rpc,https://www.twitter.com/unlock_VALue,"September 12, 2023",Mert Mumtaz
 Solana Dev 101 - File system wallets + How to create a custom wallet,https://www.helius.dev/blog/file-system-wallets-how-to-create-a-custom-wallet,https://www.twitter.com/unlock_VALue,"August 14, 2023",Owen Venter
 Top Solana RPCs — Helius vs. Other Node Providers,https://www.helius.dev/blog/top-solana-rpcs-helius-vs-other-node-providers,https://www.twitter.com/unlock_VALue,"July 27, 2023",Mert Mumtaz
-Solana Dev 101 - Deserializing Account Data on Solana,https://www.helius.dev/blog/solana-dev-101-deserializing-account-data-on-solana,https://www.twitter.com/unlock_VALue,"January 22, 2024",Hunter Davis
+Solana Dev 101 - Deserializing Account Data on Solana,https://www.helius.dev/blog/solana-dev-101-deserializing-account-data-on-solana,https://www.twitter.com/unlock_VALue,,
 "Understanding Slots, Blocks, and Epochs on Solana",https://www.helius.dev/blog/solana-slots-blocks-and-epochs,https://www.twitter.com/unlock_VALue,"June 19, 2023",Mert Mumtaz
 How Solana RPCs Work,https://www.helius.dev/blog/how-solana-rpcs-work,https://www.twitter.com/unlock_VALue,"July 24, 2023",Mert Mumtaz
-Build a Wallet Tracker on Solana,https://www.helius.dev/blog/build-a-wallet-tracker-on-solana,https://www.twitter.com/unlock_VALue,,
-Listening to On-chain Events on Solana,https://www.helius.dev/blog/solana-data-streaming,https://www.twitter.com/unlock_VALue,,
+Build a Wallet Tracker on Solana,https://www.helius.dev/blog/build-a-wallet-tracker-on-solana,https://www.twitter.com/unlock_VALue,"June 19, 2023",Mert Mumtaz
+Listening to On-chain Events on Solana,https://www.helius.dev/blog/solana-data-streaming,https://www.twitter.com/unlock_VALue,"January 11, 2024",Mert Mumtaz
 Solana Dev 101 - Mint SPL Tokens on Solana,https://www.helius.dev/blog/working-with-solana-tokens,https://www.twitter.com/unlock_VALue,"June 19, 2023",Hunter Davis
 Solana Dev101- How to get the holders of an NFT collection (Snapshot),https://www.helius.dev/blog/nft-holder-snapshots,https://www.twitter.com/unlock_VALue,"January 10, 2024",Owen Venter
 Solana Dev 101 - How to Create a Solana Transaction,https://www.helius.dev/blog/how-to-create-a-solana-transaction,https://www.twitter.com/unlock_VALue,"June 19, 2023",Owen Venter
@@ -550,3 +550,11 @@ Diving Into The Ethereum Virtual Machine | by zh | Qtum,https://blog.qtum.org/di
 ,https://blog.chain.link/chainlink-fair-sequencing-services-enabling-a-provably-fair-defi-ecosystem/,https://www.twitter.com/unlock_VALue,,
 "EIP 4844: What does it mean for L2 users? | by Ed Felten | Offchain Labs | Feb, 2024 | Medium",https://medium.com/offchainlabs/eip-4844-what-does-it-mean-for-l2-users-5e86ebc4c028,https://twitter.com/OffchainLabs/status/1757461008849740153,,
 "Sangria: A PLONK-ish folding scheme | by Crypto Fairy | Feb, 2024 | Medium",https://medium.com/@cryptofairy/sangria-a-plonk-ish-folding-scheme-2271204d2285,,,
+Introducing the CAKE framework,https://frontier.tech/the-cake-framework,,,by Ankit Chiplunkar & Stephane Gosselin for Frontier Research
+"zkSync Insufficient Proof Verification Bugfix Review | by Immunefi Editor | Immunefi | Feb, 2024 | Medium",https://medium.com/immunefi/zksync-insufficient-proof-verification-bugfix-review-dcd57944d0e2,https://twitter.com/chrisdior777/status/1758078448076284015,,
+,https://www.galaxy.com/insights/research/understanding-intersection-crypto-ai/,https://twitter.com/Uptodatenow/status/1758143881261040098,,
+Uniswap v2 Overview,https://blog.uniswap.org/uniswap-v2,https://risencrypto.github.io/,,
+Uniswap v3 liquidity formula explained | by Atis E | Medium,https://atise.medium.com/uniswap-v3-liquidity-formula-explained-de8bd42afc3c,https://risencrypto.github.io/,2022-01-09,Atis E
+,https://gov.uniswap.org/t/a-deep-dive-of-uniswaps-governance/19792,https://risencrypto.github.io/,,
+Liquidity Mining on Uniswap v3,https://www.paradigm.xyz/2021/05/liquidity-mining-on-uniswap-v3,https://risencrypto.github.io/,2021-05-18,Dan Robinson
+,https://drive.google.com/file/d/1dRifSAXxc-6HKCKH8tcygEmHxJTKAlxp/view,https://risencrypto.github.io/,,
