@@ -237,3 +237,7 @@ Front-running Attack in Sharded Blockchains and Fair Cross-shard Consensus,"Jian
 Mediated Multi-Agent Reinforcement Learning,"Dmitry Ivanov, Ilya Zisman, Kirill Chernyshev",http://arxiv.org/pdf/2306.08419v1,"arXiv, cs.MA, cs.GT, cs.LG",2023-06-14,
 Cooperative AI via Decentralized Commitment Devices,"Xinyuan Sun, Davide Crapis, Matt Stephenson, Barnabé Monnot, Thomas Thiery, Jonathan Passerat-Palmbach",http://arxiv.org/pdf/2311.07815v1,"arXiv, cs.AI, cs.CR, cs.GT, cs.MA",2023-11-14,
 ,,https://github.com/FastLane-Labs/atlas_whitepaper/blob/main/Atlas_Whitepaper.pdf,Self-host,,
+BabySpartan: Lasso-based SNARK for non-uniform computation,"Srinath Setty, Justin Thaler",https://eprint.iacr.org/2023/1799,iacr,2023-11-24,https://twitter.com/zkv_xyz/status/1757525415982174324
+zk-Bench: A Toolset for Comparative Evaluation and Performance Benchmarking of SNARKs,"Jens Ernstberger, Stefanos Chaliasos, George Kadianakis, Sebastian Steinhorst, Philipp Jovanovic, Arthur Gervais, Benjamin Livshits, Michele Orrù",https://eprint.iacr.org/2023/1503,iacr,2023-10-03,https://twitter.com/zkv_xyz/status/1757525415982174324
+,,https://angeris.github.io/papers/oco-fees.pdf,Self-host,,https://twitter.com/GuilleAngeris/status/1757463994674425882
+,,https://apollocrypto.com/wp-content/uploads/2024/02/Modular-Blockchains-EigenLayer.pdf,Self-host,,

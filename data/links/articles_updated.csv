@@ -433,7 +433,7 @@ Properties of issuance level (part 1) - HackMD,https://notes.ethereum.org/@domot
 ,https://forum.aztec.network/t/request-for-proposals-decentralized-sequencer-selection/350,https://www.twitter.com/unlock_VALue,,
 "The Cross-Domain Thesis Part 2: Storage Proofs, Computation, and… — Maven11 Research",https://maven11.mirror.xyz/3NqfzBemyvI9a0fhun7flOc20oq5XlXzOqphvKk5pxs,https://www.twitter.com/unlock_VALue,2023-10-05,Maven11 Research
 Validator consolidation in EIP-7251 - HackMD,https://notes.ethereum.org/@fradamt/maxeb-consolidation,https://www.twitter.com/unlock_VALue,,fradamt
-"Swap Fees Are For Losers: Introducing DeltaSwap, The First Feeless Spot DEX | by DeFi Devin | Jan, 2024 | Medium",https://medium.com/@defidevin/swap-fees-are-for-losers-introducing-deltaswap-the-first-feeless-spot-dex-c88b7b1ed340,https://www.twitter.com/unlock_VALue,,
+"Swap Fees Are For Losers: Introducing DeltaSwap, The First Feeless Spot DEX | by DeFi Devin | Jan, 2024 | Medium",https://medium.com/@defidevin/swap-fees-are-for-losers-introducing-deltaswap-the-first-feeless-spot-dex-c88b7b1ed340,https://www.twitter.com/unlock_VALue,2024-01-23,DeFi Devin
 2FA zk-rollups using SGX - zk-s[nt]arks - Ethereum Research,https://ethresear.ch/t/2fa-zk-rollups-using-sgx/14462,https://www.twitter.com/unlock_VALue,2022-12-21,https://ethresear.ch/u/JustinDrake
 ,https://blog.conduit.xyz/celestia-mainnet-migrations,https://www.twitter.com/unlock_VALue,,
 Sirrah: Speedrunning a TEE Coprocessor,https://writings.flashbots.net/suave-tee-coprocessor,https://www.twitter.com/unlock_VALue,2024-01-25,https://collective.flashbots.net/u/amiller
@@ -459,7 +459,7 @@ Gaming: How Solana is Changing the Playfield,https://www.helius.dev/blog/gaming-
 Turbine: Block Propagation on Solana,https://www.helius.dev/blog/turbine-block-propagation-on-solana,https://www.twitter.com/unlock_VALue,"October 26, 2023",Ryan Chern
 The Solana Programming Model: An Introduction to Developing on Solana,https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana,https://www.twitter.com/unlock_VALue,"November 17, 2023",0xIchigo
 What is Firedancer? A Deep Dive into Solana 2.0,https://www.helius.dev/blog/what-is-firedancer,https://www.twitter.com/unlock_VALue,"December 3, 2023",0xIchigo
-Evaluating Solana for Enterprise Use: A Comprehensive Guide,https://www.helius.dev/blog/evaluating-solana-for-enterprise-use-a-comprehensive-guide,https://www.twitter.com/unlock_VALue,"October 24, 2023",0xIchigo
+Evaluating Solana for Enterprise Use: A Comprehensive Guide,https://www.helius.dev/blog/evaluating-solana-for-enterprise-use-a-comprehensive-guide,https://www.twitter.com/unlock_VALue,,
 Cryptographic Tools 101 - Hash Functions and Merkle Trees Explained,https://www.helius.dev/blog/cryptographic-tools-101-hash-functions-and-merkle-trees-explained,https://www.twitter.com/unlock_VALue,"September 25, 2023",0xIchigo
 All You Need to Know About Compression on Solana,https://www.helius.dev/blog/all-you-need-to-know-about-compression-on-solana,https://www.twitter.com/unlock_VALue,"November 30, 2023",0xIchigo
 "Proof of History, Proof of Stake, Proof of Work - Explained",https://www.helius.dev/blog/proof-of-history-proof-of-stake-proof-of-work-explained,https://www.twitter.com/unlock_VALue,"October 9, 2023",0xIchigo
@@ -470,8 +470,8 @@ Top Solana RPCs — Helius vs. Other Node Providers,https://www.helius.dev/blog/
 Solana Dev 101 - Deserializing Account Data on Solana,https://www.helius.dev/blog/solana-dev-101-deserializing-account-data-on-solana,https://www.twitter.com/unlock_VALue,"January 22, 2024",Hunter Davis
 "Understanding Slots, Blocks, and Epochs on Solana",https://www.helius.dev/blog/solana-slots-blocks-and-epochs,https://www.twitter.com/unlock_VALue,"June 19, 2023",Mert Mumtaz
 How Solana RPCs Work,https://www.helius.dev/blog/how-solana-rpcs-work,https://www.twitter.com/unlock_VALue,"July 24, 2023",Mert Mumtaz
-Build a Wallet Tracker on Solana,https://www.helius.dev/blog/build-a-wallet-tracker-on-solana,https://www.twitter.com/unlock_VALue,"June 19, 2023",Mert Mumtaz
-Listening to On-chain Events on Solana,https://www.helius.dev/blog/solana-data-streaming,https://www.twitter.com/unlock_VALue,"January 11, 2024",Mert Mumtaz
+Build a Wallet Tracker on Solana,https://www.helius.dev/blog/build-a-wallet-tracker-on-solana,https://www.twitter.com/unlock_VALue,,
+Listening to On-chain Events on Solana,https://www.helius.dev/blog/solana-data-streaming,https://www.twitter.com/unlock_VALue,,
 Solana Dev 101 - Mint SPL Tokens on Solana,https://www.helius.dev/blog/working-with-solana-tokens,https://www.twitter.com/unlock_VALue,"June 19, 2023",Hunter Davis
 Solana Dev101- How to get the holders of an NFT collection (Snapshot),https://www.helius.dev/blog/nft-holder-snapshots,https://www.twitter.com/unlock_VALue,"January 10, 2024",Owen Venter
 Solana Dev 101 - How to Create a Solana Transaction,https://www.helius.dev/blog/how-to-create-a-solana-transaction,https://www.twitter.com/unlock_VALue,"June 19, 2023",Owen Venter
@@ -548,3 +548,5 @@ Leaderless Auctions,https://www.paradigm.xyz/2024/02/leaderless-auctions,https:/
 Diving Into The Ethereum Virtual Machine | by zh | Qtum,https://blog.qtum.org/diving-into-the-ethereum-vm-6e8d5d2f3c30,https://www.zaryabs.com/evm-learning-resources/,2017-08-06,zh
 ,https://blog.merkle.io/blog/off-chain-bundles,https://twitter.com/merkle_mev/status/1757102503747862724,,
 ,https://blog.chain.link/chainlink-fair-sequencing-services-enabling-a-provably-fair-defi-ecosystem/,https://www.twitter.com/unlock_VALue,,
+"EIP 4844: What does it mean for L2 users? | by Ed Felten | Offchain Labs | Feb, 2024 | Medium",https://medium.com/offchainlabs/eip-4844-what-does-it-mean-for-l2-users-5e86ebc4c028,https://twitter.com/OffchainLabs/status/1757461008849740153,,
+"Sangria: A PLONK-ish folding scheme | by Crypto Fairy | Feb, 2024 | Medium",https://medium.com/@cryptofairy/sangria-a-plonk-ish-folding-scheme-2271204d2285,,,
