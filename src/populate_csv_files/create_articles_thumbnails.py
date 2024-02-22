@@ -48,12 +48,18 @@ def close_popups(driver, url):
 
 def take_screenshot(url, title, output_dir, headless=False, zoom=145, screenshot_height_percent=0.20, max_height=900, min_height=600):
     driver = return_driver(headless)
-
     attempt = 0
     page_loaded = False
     while attempt < 2 and not page_loaded:
         try:
             driver.get(url)
+            # Check for HTTP status code here
+            status_code = driver.execute_script("return document.status;")
+            if status_code == 429:
+                logging.warning(f"HTTP 429 received for {url}. Retrying after delay...")
+                time.sleep(5)  # Wait for 5 seconds before retrying
+                attempt += 1
+                continue
             WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
             page_loaded = True
         except (TimeoutException, WebDriverException) as e:
