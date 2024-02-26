@@ -35,7 +35,7 @@ Relays are a Latency Game. | By Alvaro Blazquez and Sachin Lal | by Metrika | Me
 ,https://www.galaxy.com/insights/research/mev-the-rise-of-the-builders/,https://www.twitter.com/freddmannen,,
 MEV: The First Five Years | James Prestwich | Medium,https://medium.com/@Prestwich/mev-c417d9a5eb3d,https://www.twitter.com/freddmannen,2022-12-26,James Prestwich
 MEV: The Next Five Years. That’s right I just won’t shut up | by James Prestwich | Medium,https://medium.com/@Prestwich/mev-the-next-five-years-63f84fffdf36,https://www.twitter.com/freddmannen,2023-01-10,James Prestwich
-Decentralized crypto needs you: to be a geographical decentralization maxi - Research - The Flashbots Collective,https://collective.flashbots.net/t/decentralized-crypto-needs-you-to-be-a-geographical-decentralization-maxi/1385,,,
+Decentralized crypto needs you: to be a geographical decentralization maxi - Research - The Flashbots Collective,https://collective.flashbots.net/t/decentralized-crypto-needs-you-to-be-a-geographical-decentralization-maxi/1385,,2023-03-07,https://collective.flashbots.net/u/phil
 ,https://vitalik.ca/general/2017/06/22/marketmakers.html,,,
 "order flow, auctions and centralisation I - a warning",https://writings.flashbots.net/order-flow-auctions-and-centralisation,https://www.twitter.com/unlock_VALue,2022-09-12,https://collective.flashbots.net/u/quintus
 ,https://vitalik.ca/general/2021/12/06/endgame.html,https://www.twitter.com/unlock_VALue,,
@@ -45,7 +45,7 @@ The Cost of Resilience,https://writings.flashbots.net/the-cost-of-resilience,htt
 The Future of MEV is SUAVE,https://writings.flashbots.net/the-future-of-mev-is-suave,https://www.twitter.com/unlock_VALue,2022-11-23,https://collective.flashbots.net/u/flashbots
 MEV Driven Centralization in Ethereum: Part 1 | by Simon Brown | Medium,https://simbro.medium.com/mev-driven-centralization-in-ethereum-ec829a214f18,https://www.twitter.com/unlock_VALue,2022-07-28,Simon Brown
 "Running Geth within SGX: Our Experience, Learnings and Code",https://writings.flashbots.net/geth-inside-sgx,https://www.twitter.com/unlock_VALue,2022-12-20,"https://collective.flashbots.net/u/metachris, https://collective.flashbots.net/u/frieder"
-Quantifying Info I: Quantifying The Information Leakage of Computing on Encrypted Transactions - Research - The Flashbots Collective,https://collective.flashbots.net/t/quantifying-info-i-quantifying-the-information-leakage-of-computing-on-encrypted-transactions/1752,https://www.twitter.com/unlock_VALue,,
+Quantifying Info I: Quantifying The Information Leakage of Computing on Encrypted Transactions - Research - The Flashbots Collective,https://collective.flashbots.net/t/quantifying-info-i-quantifying-the-information-leakage-of-computing-on-encrypted-transactions/1752,https://www.twitter.com/unlock_VALue,2023-05-08,https://collective.flashbots.net/u/Quintus
 Can First Come First Served-Based Transaction Ordering Prevent Front-Running?,https://writings.flashbots.net/fcfs-and-front-running,https://www.twitter.com/unlock_VALue,2022-09-08,https://collective.flashbots.net/u/ra
 Opportunities and Considerations of Ethereum’s Blockspace Future,https://frontier.tech/ethereums-blockspace-future,https://www.twitter.com/barnabemonnot,,by Drew Van der Werff and Alex Matthews of BH Digital in collaboration with Frontier.
 A Tale of Two Arbitrages,https://frontier.tech/a-tale-of-two-arbitrages,https://www.twitter.com/unlock_VALue,,"by Eugene Chen of Ellipsis Labs, Alex Toberoff and Suraj Srinivasan of Jump Crypto,  Ankit Chiplunkar of Frontier Research"
@@ -57,18 +57,18 @@ The NFT MEV Landscape,https://frontier.tech/the-nft-mev-landscape,https://www.tw
 The Orderflow Auction Design Space,https://frontier.tech/the-orderflow-auction-design-space,https://www.twitter.com/unlock_VALue,,by Stephane Gosselin & Ankit Chiplunkar for Frontier Research in collaboration with Consensys Research
 Beyond Extraction: The Role of Block Building in the Future of Ethereum,https://frontier.tech/beyond-extraction,https://www.twitter.com/unlock_VALue,,by Drew Van der Werff at Brevan Howard Digital in collaboration with Frontier Research
 Unpacking ERC-4337,https://frontier.tech/unpacking-erc-4337,https://www.twitter.com/unlock_VALue,,by Ankit Chiplunkar for Frontier Research
-MEV-Share: programmably private orderflow to share MEV with users - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/mev-share-programmably-private-orderflow-to-share-mev-with-users/1264/1,https://www.twitter.com/unlock_VALue,,
-The dream of redistributing the extracted value - Research - The Flashbots Collective,https://collective.flashbots.net/t/the-dream-of-redistributing-the-extracted-value/642,https://www.twitter.com/unlock_VALue,,
-Bookmarks relevant for redistribution researchers - #35 by chayoterabit - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663/35,https://www.twitter.com/unlock_VALue,,
-Bookmarks relevant for redistribution researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663,https://www.twitter.com/unlock_VALue,,
+MEV-Share: programmably private orderflow to share MEV with users - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/mev-share-programmably-private-orderflow-to-share-mev-with-users/1264/1,https://www.twitter.com/unlock_VALue,2023-02-15,https://collective.flashbots.net/u/bert
+The dream of redistributing the extracted value - Research - The Flashbots Collective,https://collective.flashbots.net/t/the-dream-of-redistributing-the-extracted-value/642,https://www.twitter.com/unlock_VALue,2022-10-27,https://collective.flashbots.net/u/chayoterabit
+Bookmarks relevant for redistribution researchers - #35 by chayoterabit - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663/35,https://www.twitter.com/unlock_VALue,2023-02-11,https://collective.flashbots.net/u/chayoterabit
+Bookmarks relevant for redistribution researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663,https://www.twitter.com/unlock_VALue,2024-02-16,https://collective.flashbots.net/u/chayoterabit
 Forward inclusion list - HackMD,https://notes.ethereum.org/@fradamt/forward-inclusion-lists,https://www.twitter.com/unlock_VALue,,fradamt
 Unified ERC-4337 mempool - HackMD,https://notes.ethereum.org/@yoav/unified-erc-4337-mempool,https://www.twitter.com/unlock_VALue,,yoav
 Structuring Blockspace Derivatives — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/WKa3GFC03uY34d2MufTyD0c595xVRUEZi9RNG-dHNKs,https://www.twitter.com/unlock_VALue,2022-10-21,Julian Ma
-Bookmarks relevant for Proposer-Builder Separation (PBS) researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-proposer-builder-separation-pbs-researchers/1319,https://www.twitter.com/unlock_VALue,,
+Bookmarks relevant for Proposer-Builder Separation (PBS) researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-proposer-builder-separation-pbs-researchers/1319,https://www.twitter.com/unlock_VALue,2023-02-22,https://collective.flashbots.net/u/alex
 Proposer/Builder Separation material - HackMD,https://notes.ethereum.org/@domothy/pbs_links,https://www.twitter.com/unlock_VALue,,domothy
 A beginner’s guide to buying an ENS domain | by Nick Johnson | Medium,https://weka.medium.com/a-beginners-guide-to-buying-an-ens-domain-3ccac2bdc770,https://www.twitter.com/unlock_VALue,2017-05-10,Nick Johnson
-"Post mortem: April 3rd, 2023 mev-boost relay incident and related timing issue - The Flashbots Ship - The Flashbots Collective",https://collective.flashbots.net/t/post-mortem-april-3rd-2023-mev-boost-relay-incident-and-related-timing-issue/1540,https://www.twitter.com/unlock_VALue,,
-Ideas for Incentivizing Relays - #4 by dmarz - Relays - The Flashbots Collective,https://collective.flashbots.net/t/ideas-for-incentivizing-relays/586/4,https://www.twitter.com/unlock_VALue,,
+"Post mortem: April 3rd, 2023 mev-boost relay incident and related timing issue - The Flashbots Ship - The Flashbots Collective",https://collective.flashbots.net/t/post-mortem-april-3rd-2023-mev-boost-relay-incident-and-related-timing-issue/1540,https://www.twitter.com/unlock_VALue,2023-04-04,https://collective.flashbots.net/u/bert
+Ideas for Incentivizing Relays - #4 by dmarz - Relays - The Flashbots Collective,https://collective.flashbots.net/t/ideas-for-incentivizing-relays/586/4,https://www.twitter.com/unlock_VALue,2022-10-19,https://collective.flashbots.net/u/dmarz
 State of research: increasing censorship resistance of transactions under proposer/builder separation (PBS) - HackMD,https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance,https://www.twitter.com/unlock_VALue,,vbuterin
 Robust Incentives Group (RIG) — Homepage,https://efdn.notion.site/Robust-Incentives-Group-homepage-802339956f2745a5964d8461c5ccef02,https://www.twitter.com/unlock_VALue,,efdn
 FRP Year in Review,https://writings.flashbots.net/frp-year-in-review,https://www.twitter.com/unlock_VALue,2023-07-10,https://collective.flashbots.net/u/sarah
@@ -84,14 +84,14 @@ Modular Searcher Design: A Framework for Building Searchers — Taker,https://mi
 ,https://drive.google.com/file/d/1qxJJf2Jsz3LJ3l__x4GVNBui6TvfJoYh/view,https://www.twitter.com/unlock_VALue,,
 ,https://vitalik.ca/general/2020/09/11/coordination.html,https://www.twitter.com/unlock_VALue,,
 "Ethereum is game-changing technology, literally. | by Virgil Griffith | Medium",https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8,https://www.twitter.com/unlock_VALue,2019-03-29,Virgil Griffith
-"FRP-23: Constant Function Market Making, Social Welfare and Maximal Extractable Value - FRPs - Flashbots Research Proposals - The Flashbots Collective",https://collective.flashbots.net/t/frp-23-constant-function-market-making-social-welfare-and-maximal-extractable-value/752,https://www.twitter.com/unlock_VALue,,
+"FRP-23: Constant Function Market Making, Social Welfare and Maximal Extractable Value - FRPs - Flashbots Research Proposals - The Flashbots Collective",https://collective.flashbots.net/t/frp-23-constant-function-market-making-social-welfare-and-maximal-extractable-value/752,https://www.twitter.com/unlock_VALue,2022-11-21,https://collective.flashbots.net/u/nikete
 Why Cryptoeconomics and X-Risk Researchers Should Listen to Each Other More | by Vitalik Buterin | Medium,https://medium.com/@VitalikButerin/why-cryptoeconomics-and-x-risk-researchers-should-listen-to-each-other-more-a2db72b3e86b,https://www.twitter.com/unlock_VALue,2016-07-05,Vitalik Buterin
-FRP-26: Credible Commitments via Open Games - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-26-credible-commitments-via-open-games/1616,https://www.twitter.com/unlock_VALue,,
-FRP-28: Contingent Fees in Order Flow Auctions - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-28-contingent-fees-in-order-flow-auctions/1594,https://www.twitter.com/unlock_VALue,,
+FRP-26: Credible Commitments via Open Games - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-26-credible-commitments-via-open-games/1616,https://www.twitter.com/unlock_VALue,2022-12-06,https://collective.flashbots.net/u/system
+FRP-28: Contingent Fees in Order Flow Auctions - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-28-contingent-fees-in-order-flow-auctions/1594,https://www.twitter.com/unlock_VALue,2023-04-12,https://collective.flashbots.net/u/MaxR
 "MEV… do this.. MEV is not inevitable, it is a network… | by Pmcgoohan | Medium",https://pmcgoohan.medium.com/mev-do-this-beb2754bca63,https://www.twitter.com/unlock_VALue,2021-04-28,Pmcgoohan
 Presenting: VeeDo. a STARK-based VDF Service | by StarkWare | StarkWare | Medium,https://medium.com/starkware/presenting-veedo-e4bbff77c7ae,https://www.twitter.com/unlock_VALue,2020-06-23,StarkWare
 Introducing the UniswapX Protocol,https://blog.uniswap.org/uniswapx-protocol,https://www.twitter.com/unlock_VALue,2023-07-17,
-Will the real MEV please stand up? - Data - The Flashbots Collective,https://collective.flashbots.net/t/will-the-real-mev-please-stand-up/1686,https://www.twitter.com/unlock_VALue,,
+Will the real MEV please stand up? - Data - The Flashbots Collective,https://collective.flashbots.net/t/will-the-real-mev-please-stand-up/1686,https://www.twitter.com/unlock_VALue,2023-04-25,https://collective.flashbots.net/u/elainehu
 ,https://openreview.net/forum?id=9i7Sf1aRYq,https://www.twitter.com/unlock_VALue,,
 Block vs. Slot Auction PBS — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/CPYI91s98cp9zKFkanKs_qotYzw09kWvouaAa9GXBrQ,https://www.twitter.com/unlock_VALue,2022-12-14,Julian Ma
 Cross-chain Auctions via Bitcoin Double Spends | by James Prestwich | Summa | Medium,https://medium.com/summa-technology/summa-auction-bitcoin-technical-7344096498f2,https://www.twitter.com/unlock_VALue,2018-11-17,James Prestwich
@@ -102,7 +102,7 @@ Discrimination of Toxic Flow in Uniswap V3: Part 1 | by CrocSwap | Medium,https:
 Discrimination of Toxic Flow in Uniswap V3: Part 2 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-2-21d84aaa33f5,https://www.twitter.com/unlock_VALue,2023-02-06,CrocSwap
 Discrimination of Toxic Flow in Uniswap V3: Part 3 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-3-4afb386311c0,https://www.twitter.com/unlock_VALue,2023-02-27,CrocSwap
 Discrimination of Toxic Flow in Uniswap V3: Part 4 | by CrocSwap | Medium,https://crocswap.medium.com/discrimination-of-toxic-flow-in-uniswap-v3-part-4-c09656ec016e,https://www.twitter.com/unlock_VALue,2023-03-10,CrocSwap
-"Flashbots Transparency Report: SUAVE Centauri, MEV-Share CTF, PBS Guild & EthCC - The Flashbots Ship - The Flashbots Collective",https://collective.flashbots.net/t/flashbots-transparency-report-suave-centauri-mev-share-ctf-and-pbs-guild/2264,https://www.twitter.com/unlock_VALue,,
+"Flashbots Transparency Report: SUAVE Centauri, MEV-Share CTF, PBS Guild & EthCC - The Flashbots Ship - The Flashbots Collective",https://collective.flashbots.net/t/flashbots-transparency-report-suave-centauri-mev-share-ctf-and-pbs-guild/2264,https://www.twitter.com/unlock_VALue,2023-08-25,https://collective.flashbots.net/u/Fred
 "Batching, Bidding and Latency",https://flashbots.notion.site/Batching-Bidding-and-Latency-db23db03ca4745df9409289283cd4d1b,https://www.twitter.com/unlock_VALue,,flashbots
 Uniswap v4 TWAMM Hook,https://blog.uniswap.org/v4-twamm-hook,https://www.twitter.com/unlock_VALue,2023-08-24,
 Protocol Mechanism (nftperp V2),https://nftperp.notion.site/Protocol-Mechanism-nftperp-V2-8e4cb30f08b94aa2a576097a5008df24,https://www.twitter.com/unlock_VALue,,nftperp
@@ -152,8 +152,8 @@ Breaking Down the SEC Plan on Exchange Fees,https://www.iex.io/article/breaking-
 On the impossibility of stateless blockchains,https://a16zcrypto.com/posts/article/on-the-impossibility-of-stateless-blockchains/,https://www.twitter.com/unlock_VALue,,
 Strong Builder Identity for Combating Builder Imposter Attacks - Cryptography - Ethereum Research,https://ethresear.ch/t/strong-builder-identity-for-combating-builder-imposter-attacks/16550,https://www.twitter.com/unlock_VALue,2023-09-05,https://ethresear.ch/u/MaxResnick
 ,https://www.iosco.org/library/pubdocs/pdf/IOSCOPD744.pdf,https://www.twitter.com/freddmannen,,
-Borderless Ethereum - Measuring the geographical distribution of validators - Projects - Lido Governance,https://research.lido.fi/t/borderless-ethereum-measuring-the-geographical-distribution-of-validators/4472,https://www.twitter.com/unlock_VALue,,
-Towards an intent-centric topology [draft] - Comparative Architecture - Anoma | Research & Development Forum,https://research.anoma.net/t/towards-an-intent-centric-topology-draft/214,https://www.twitter.com/barnabemonnot,,
+Borderless Ethereum - Measuring the geographical distribution of validators - Projects - Lido Governance,https://research.lido.fi/t/borderless-ethereum-measuring-the-geographical-distribution-of-validators/4472,https://www.twitter.com/unlock_VALue,2023-04-25,https://research.lido.fi/u/orbmis
+Towards an intent-centric topology [draft] - Comparative Architecture - Anoma | Research & Development Forum,https://research.anoma.net/t/towards-an-intent-centric-topology-draft/214,https://www.twitter.com/barnabemonnot,2023-08-25,https://research.anoma.net/u/cwgoes
 Shutterized Beacon Chain - Execution Layer Research - Ethereum Research,https://ethresear.ch/t/shutterized-beacon-chain/12249,https://www.twitter.com/barnabemonnot,2022-03-24,https://ethresear.ch/u/cducrest
 ,https://osmosis.zone/blog/protocol-owned-builders-the-future-of-sovereign-cosmos-mev,https://www.twitter.com/barnabemonnot,,
 MEV Markets Part 1: Proof of Work — 0xShitTrader,https://mirror.xyz/0xshittrader.eth/WiV8DM3I6abNMVsXf-DqioYb2NglnfjmM-zSsw2ruG8,https://twitter.com/0xTaker,2022-08-26,0xShitTrader
@@ -170,7 +170,7 @@ Order Flows: Kingmaker of the Block Builders 👑,https://noxx.substack.com/p/or
 "DEX Arbitrage, Mathematical Optimisations & Me",https://noxx.substack.com/p/dex-arbitrage-mathematical-optimisations,https://twitter.com/0xTaker,2022-08-22,noxx
 Designing Multi-Dimensional Blockchain Fee Markets — Emperor,https://crypto.mirror.xyz/ztCt3eXw-wCEwqBE6xCRTf-bZleezhyuW3ubxohYbBQ,https://www.twitter.com/unlock_VALue,2023-09-18,Emperor
 Defining the Latencies involved in MEV Strategies — Taker,https://taker.mirror.xyz/uYOelwkLc4K7nlo5XV_zpuqsV6MwIMMp-py4e-u4qnE,https://www.twitter.com/unlock_VALue,2023-03-14,Taker
-Merge Anniversary - A Year In Review - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/merge-anniversary-a-year-in-review/2400,https://www.twitter.com/unlock_VALue,,
+Merge Anniversary - A Year In Review - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/merge-anniversary-a-year-in-review/2400,https://www.twitter.com/unlock_VALue,2023-11-14,https://collective.flashbots.net/u/Fred
 "Ethereum Proposer-Builder Separation: Past, Present, and Future — Chaskin OnChain",https://mirror.xyz/0x218932707a30bE62Ef8559d32d954863933b412f/MhJM9li409wxuOSYaw5EcLjUQoLSx5iYZXZNgMZU4uM,https://www.twitter.com/unlock_VALue,2023-09-18,Chaskin OnChain
 ,https://www.steakhouse.financial/projects/stablecoin-manual,https://www.twitter.com/unlock_VALue,,
 ,https://ipfs.io/ipfs/QmdtK6QQqXBkaBh7bNNKr2FTSwGSPxDMDiCnpR88LMc84d,https://www.twitter.com/unlock_VALue,,
@@ -199,7 +199,7 @@ On the Formalization of MEV,https://writings.flashbots.net/formalization-mev,htt
 MEV in eth2 - an early exploration,https://writings.flashbots.net/mev-eth2,https://twitter.com/0x_emperor,2021-06-09,"https://collective.flashbots.net/u/obadiaa, https://collective.flashbots.net/u/fireball"
 MEV and EIP-1559 - HackMD,https://hackmd.io/@flashbots/MEV-1559,https://twitter.com/0x_emperor,2021-07-08,flashbots
 MEV-Boost: Merge ready Flashbots Architecture - The Merge - Ethereum Research,https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177,https://twitter.com/0x_emperor,2021-11-04,https://ethresear.ch/u/thegostep
-Quantifying Total Extracted MEV -- A List of Resources - Research - The Flashbots Collective,https://collective.flashbots.net/t/quantifying-total-extracted-mev-a-list-of-resources/936,https://twitter.com/0x_emperor,,
+Quantifying Total Extracted MEV -- A List of Resources - Research - The Flashbots Collective,https://collective.flashbots.net/t/quantifying-total-extracted-mev-a-list-of-resources/936,https://twitter.com/0x_emperor,2022-12-20,https://collective.flashbots.net/u/alex
 ,https://github.com/flashbots/mev-research,https://twitter.com/0x_emperor,,
 Searching Post-Merge,https://writings.flashbots.net/searching-post-merge,https://twitter.com/unlock_VALue,2022-08-25,https://collective.flashbots.net/u/brock
 Flashbots Protect -- The Merge & Beyond,https://writings.flashbots.net/flashbots-protect-merge-and-beyond,https://twitter.com/unlock_VALue,2022-08-23,https://collective.flashbots.net/u/angela
@@ -261,7 +261,7 @@ PBS censorship-resistance alternatives - HackMD,https://notes.ethereum.org/@frad
 Forward inclusion list - HackMD,https://notes.ethereum.org/@fradamt/H1ZqdtrBF,https://gist.github.com/michaelneuder/,,fradamt
 Fun and games with inclusion lists - Economics - Ethereum Research,https://ethresear.ch/t/fun-and-games-with-inclusion-lists/16557,https://gist.github.com/michaelneuder/,2023-09-06,https://ethresear.ch/u/barnabe
 Timing Games: Implications and Possible Mitigations - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/timing-games-implications-and-possible-mitigations/17612,https://ethresear.ch/u/mikeneuder,2023-12-05,https://ethresear.ch/u/casparschwa
-When To Sell Your Blocks - Research - The Flashbots Collective,https://collective.flashbots.net/t/when-to-sell-your-blocks/2814,https://ethresear.ch/u/mikeneuder,,
+When To Sell Your Blocks - Research - The Flashbots Collective,https://collective.flashbots.net/t/when-to-sell-your-blocks/2814,https://ethresear.ch/u/mikeneuder,2023-12-14,https://collective.flashbots.net/u/Quintus
 The Impact of Uniswap X on the DEX Ecosystem — Orange Finance,https://mirror.xyz/0x6FA2aF9a4d6fFe654361F713780963C10412e7c3/jMBMzyDROC92wPGr8BHI5GAh0OD-hbwqzQ8PYvyoB3E,https://twitter.com/Freddmannen,2023-11-08,Orange Finance
 "An Overview of NFT Financialization | by Fenbushi Capital | 分布式资本 | Dec, 2023 | Medium",https://fenbushicapital.medium.com/an-overview-of-nft-financialization-c7bcc4181f35,https://www.twitter.com/unlock_VALue,2023-12-24,Fenbushi Capital | 分布式资本
 ,https://blog.20squares.xyz/mechanics-intent-search-ii/,https://twitter.com/unlock_VALue,,
@@ -386,7 +386,7 @@ Analyzing Missed Slot Through The Lens of Relays -- A potential path for relay i
 ,https://kelvinfichter.com/pages/thoughts/rrr/,https://www.twitter.com/unlock_VALue,,
 ,https://kelvinfichter.com/pages/thoughts/moloch/,https://www.twitter.com/unlock_VALue,,
 A few of the things we’re excited about in crypto (2024),https://a16zcrypto.com/posts/article/a-few-of-the-things-were-excited-about-in-crypto-2024/,,,
-Web3 business strategy,https://a16zcrypto.com/posts/videos/web3-business-strategy/,,,
+Web3 business strategy,https://a16zcrypto.com/posts/videos/web3-business-strategy/,,2023-07-14,Scott Duke Kominers
 Vampire attacks: A theory (and thread) on 'blood sucking' platform competition,https://a16zcrypto.com/posts/article/vampire-attacks-competition/,,,
 A new NFT launch strategy: The wave mint,https://a16zcrypto.com/posts/article/a-new-nft-launch-strategy-the-wave-mint/,,,
 Progressive decentralization: a high-level framework,https://a16zcrypto.com/posts/article/progressive-decentralization-a-high-level-framework/,,,
@@ -396,7 +396,7 @@ Progressive decentralization: a high-level framework,https://a16zcrypto.com/post
 Using ZK Proofs to Fight Disinformation | by Dan Boneh | Medium,https://medium.com/@boneh/using-zk-proofs-to-fight-disinformation-17e7d57fe52f,https://www.twitter.com/unlock_VALue,2022-09-30,Dan Boneh
 Reversible Transactions on Ethereum: ERC-20R and ERC-721R | by Dan Boneh | Medium,https://medium.com/@boneh/reversible-transactions-on-ethereum-erc-20r-and-erc-721r-9e82de67b696,https://www.twitter.com/unlock_VALue,2022-08-02,Dan Boneh
 How to build a private DAO on Ethereum - Dan Boneh - Medium,https://medium.com/@boneh/how-to-build-a-private-dao-on-ethereum-59e3afdf3abd,https://www.twitter.com/unlock_VALue,2022-05-01,Dan Boneh
-FRP-35: Pair Trading Opportunities as a form of MEV - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-35-pair-trading-opportunities-as-a-form-of-mev/2887,https://www.twitter.com/unlock_VALue,,
+FRP-35: Pair Trading Opportunities as a form of MEV - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-35-pair-trading-opportunities-as-a-form-of-mev/2887,https://www.twitter.com/unlock_VALue,2024-01-12,https://collective.flashbots.net/u/Antero
 Uniswap v3 Returns More Fees for Passive LPs,https://blog.uniswap.org/fee-returns#user-content-fnref-2,https://www.twitter.com/unlock_VALue,2022-06-06,
 ,https://xenophonlabs.com/portfolio.html,https://www.twitter.com/unlock_VALue,,
 Reproducing the $APE Airdrop Flash Loan Arbitrage/Exploit | by Amber Group | Amber Group | Medium,https://medium.com/amber-group/reproducing-the-ape-airdrop-flash-loan-arbitrage-exploit-93f79728fcf5,https://www.twitter.com/unlock_VALue,2022-03-22,Amber Group
@@ -405,7 +405,7 @@ Decentralization of token distributions | by jooooo5as | gyroscope-protocol | Me
 Burning MEV through block proposer auctions - Economics - Ethereum Research,https://ethresear.ch/t/burning-mev-through-block-proposer-auctions/14029?u=barnabe,https://www.twitter.com/unlock_VALue,2022-10-26,https://ethresear.ch/u/domothy
 🗳️ Commitment-Satisfaction Committees: An In-Protocol Solution to PEPC - Proof-of-Stake - Ethereum Research,https://ethresear.ch/t/commitment-satisfaction-committees-an-in-protocol-solution-to-pepc/17055,https://www.twitter.com/unlock_VALue,2023-10-12,https://ethresear.ch/u/diego
 Committee-driven MEV smoothing - Economics - Ethereum Research,https://ethresear.ch/t/committee-driven-mev-smoothing/10408,https://www.twitter.com/unlock_VALue,2021-08-23,https://ethresear.ch/u/fradamt
-To burn or not? - Research - The Flashbots Collective,https://collective.flashbots.net/t/to-burn-or-not/647,https://www.twitter.com/unlock_VALue,,
+To burn or not? - Research - The Flashbots Collective,https://collective.flashbots.net/t/to-burn-or-not/647,https://www.twitter.com/unlock_VALue,2022-10-28,https://collective.flashbots.net/u/Hasu
 "The Proof Supply Chain. by: Trace | by Figment Capital | Jan, 2024 | Medium",https://figmentcapital.medium.com/the-proof-supply-chain-be6a6a884eff,https://www.twitter.com/unlock_VALue,2024-01-16,Figment Capital
 Espresso HotShot: Consensus Designed for Rollups | by Espresso Systems | Medium,https://medium.com/@espressosys/espresso-hotshot-consensus-designed-for-rollups-b080ba7362d1,https://hackmd.io/@EspressoSystems/EspressoSequencer,2022-11-28,Espresso Systems
 ,https://outlierventures.io/research/design-phase-of-token-ecosystem-creation/,https://www.twitter.com/unlock_VALue,,
@@ -446,39 +446,39 @@ State Lock Auctions: Towards Collaborative Block Building - Block proposer - Eth
 On Increasing the Block Gas Limit - Economics - Ethereum Research,https://ethresear.ch/t/on-increasing-the-block-gas-limit/18567?u=nerolation,https://x.com/nero_eth/status/1754441447690944537?s=46&t=LTSoDWXLa08Oi2VCOCK2Yg,2024-02-05,https://ethresear.ch/u/Nerolation
 Intent based bridge between L2s and Ethereum powered by multi-proof storage proofs - Layer 2 - Ethereum Research,https://ethresear.ch/t/intent-based-bridge-between-l2s-and-ethereum-powered-by-multi-proof-storage-proofs/18563,https://twitter.com/fede_intern/status/1754309047241593186,2024-02-05,https://ethresear.ch/u/unbalancedparenthese
 ,https://forum.celestia.org/t/defending-against-lst-monopolies/1554,,,
-SUAVE Bridge - #8 by pbj - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/suave-bridge/2696/8,https://www.twitter.com/unlock_VALue,,
+SUAVE Bridge - #8 by pbj - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/suave-bridge/2696/8,https://www.twitter.com/unlock_VALue,2024-02-05,https://collective.flashbots.net/u/dmarz
 Consider the ePBS - HackMD,https://notes.ethereum.org/@mikeneuder/consider-the-epbs,https://twitter.com/mikeneuder/status/1755429454367555645,,mikeneuder
 "Inclusion lists: execution, consensus, & engine spec overview - HackMD",https://notes.ethereum.org/@mikeneuder/il-spec-overview,https://twitter.com/mikeneuder/status/1755220985219780646,,mikeneuder
-Solana Fees in Theory and Practice,https://www.helius.dev/blog/solana-fees-in-theory-and-practice,https://x.com/0xmert_/status/1751747905831010785,"January 31, 2024",Ryan Chern
-Consensus on Solana,https://www.helius.dev/blog/consensus-on-solana,https://www.twitter.com/unlock_VALue,"January 27, 2024",Ryan Chern
-"Solana Nodes — A Primer on Solana RPCs, Validators, and RPC providers",https://www.helius.dev/blog/solana-nodes-a-primer-on-solana-rpcs-validators-and-rpc-providers,https://www.twitter.com/unlock_VALue,"January 15, 2024",Mert Mumtaz
-Solana Validator Economics: A Primer,https://www.helius.dev/blog/solana-validator-economics-a-primer,https://www.twitter.com/unlock_VALue,"January 11, 2024",Ryan Chern
-Priority Fees: Understanding Solana's Transaction Fee Mechanics,https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fee-mechanics,https://www.twitter.com/unlock_VALue,"February 15, 2024",0xIchigo
-"The L1 vs L2 Landscape: Understanding the Design Differences, Tradeoffs, and Endgames",https://www.helius.dev/blog/the-l1-vs-l2-landscape,https://www.twitter.com/unlock_VALue,"December 13, 2023",Ryan Chern
-Gaming: How Solana is Changing the Playfield,https://www.helius.dev/blog/gaming-how-solana-is-changing-the-playfield,https://www.twitter.com/unlock_VALue,"January 15, 2024",0xIchigo
-Turbine: Block Propagation on Solana,https://www.helius.dev/blog/turbine-block-propagation-on-solana,https://www.twitter.com/unlock_VALue,"October 26, 2023",Ryan Chern
-The Solana Programming Model: An Introduction to Developing on Solana,https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana,https://www.twitter.com/unlock_VALue,"November 17, 2023",0xIchigo
-What is Firedancer? A Deep Dive into Solana 2.0,https://www.helius.dev/blog/what-is-firedancer,https://www.twitter.com/unlock_VALue,"December 3, 2023",0xIchigo
-Evaluating Solana for Enterprise Use: A Comprehensive Guide,https://www.helius.dev/blog/evaluating-solana-for-enterprise-use-a-comprehensive-guide,https://www.twitter.com/unlock_VALue,"October 24, 2023",0xIchigo
-Cryptographic Tools 101 - Hash Functions and Merkle Trees Explained,https://www.helius.dev/blog/cryptographic-tools-101-hash-functions-and-merkle-trees-explained,https://www.twitter.com/unlock_VALue,"September 25, 2023",0xIchigo
-All You Need to Know About Compression on Solana,https://www.helius.dev/blog/all-you-need-to-know-about-compression-on-solana,https://www.twitter.com/unlock_VALue,"November 30, 2023",0xIchigo
-"Proof of History, Proof of Stake, Proof of Work - Explained",https://www.helius.dev/blog/proof-of-history-proof-of-stake-proof-of-work-explained,https://www.twitter.com/unlock_VALue,"October 9, 2023",0xIchigo
-Privacy on Solana with Elusiv and Light: All You Need to Know About Privacy on SOL,https://www.helius.dev/blog/privacy-on-solana-with-elusiv-and-light,https://www.twitter.com/unlock_VALue,"September 14, 2023",0xIchigo
-All You Need to Know About Solana RPCs (2023),https://www.helius.dev/blog/solana-rpc,https://www.twitter.com/unlock_VALue,"September 12, 2023",Mert Mumtaz
-Solana Dev 101 - File system wallets + How to create a custom wallet,https://www.helius.dev/blog/file-system-wallets-how-to-create-a-custom-wallet,https://www.twitter.com/unlock_VALue,"August 14, 2023",Owen Venter
-Top Solana RPCs — Helius vs. Other Node Providers,https://www.helius.dev/blog/top-solana-rpcs-helius-vs-other-node-providers,https://www.twitter.com/unlock_VALue,"July 27, 2023",Mert Mumtaz
-Solana Dev 101 - Deserializing Account Data on Solana,https://www.helius.dev/blog/solana-dev-101-deserializing-account-data-on-solana,https://www.twitter.com/unlock_VALue,,
-"Understanding Slots, Blocks, and Epochs on Solana",https://www.helius.dev/blog/solana-slots-blocks-and-epochs,https://www.twitter.com/unlock_VALue,"June 19, 2023",Mert Mumtaz
-How Solana RPCs Work,https://www.helius.dev/blog/how-solana-rpcs-work,https://www.twitter.com/unlock_VALue,"July 24, 2023",Mert Mumtaz
-Build a Wallet Tracker on Solana,https://www.helius.dev/blog/build-a-wallet-tracker-on-solana,https://www.twitter.com/unlock_VALue,"June 19, 2023",Mert Mumtaz
-Listening to On-chain Events on Solana,https://www.helius.dev/blog/solana-data-streaming,https://www.twitter.com/unlock_VALue,"January 11, 2024",Mert Mumtaz
-Solana Dev 101 - Mint SPL Tokens on Solana,https://www.helius.dev/blog/working-with-solana-tokens,https://www.twitter.com/unlock_VALue,"June 19, 2023",Hunter Davis
-Solana Dev101- How to get the holders of an NFT collection (Snapshot),https://www.helius.dev/blog/nft-holder-snapshots,https://www.twitter.com/unlock_VALue,"January 10, 2024",Owen Venter
-Solana Dev 101 - How to Create a Solana Transaction,https://www.helius.dev/blog/how-to-create-a-solana-transaction,https://www.twitter.com/unlock_VALue,"June 19, 2023",Owen Venter
-Solana Dev 101 - How to Mint an NFT on Solana,https://www.helius.dev/blog/how-to-mint-an-nft-on-solana,https://www.twitter.com/unlock_VALue,"June 19, 2023",Owen Venter
-All You Need to Know About Solana’s New DAS API,https://www.helius.dev/blog/all-you-need-to-know-about-solanas-new-das-api,https://www.twitter.com/unlock_VALue,"September 18, 2023",Hunter Davis
-Solana Dev 101 - Using DAS API For Fetching all NFTs in a Collection,https://www.helius.dev/blog/solana-dev-101-using-das-to-return-all-collection-assets,https://www.twitter.com/unlock_VALue,"July 28, 2023",Hunter Davis
-FRP-34: Do backrun auctions protect traders? - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-34-do-backrun-auctions-protect-traders/2977,https://twitter.com/awmacp/status/1755165431394935087,,
+Solana Fees in Theory and Practice,https://www.helius.dev/blog/solana-fees-in-theory-and-practice,https://x.com/0xmert_/status/1751747905831010785,2024-01-31,Ryan Chern
+Consensus on Solana,https://www.helius.dev/blog/consensus-on-solana,https://www.twitter.com/unlock_VALue,2024-01-27,Ryan Chern
+"Solana Nodes — A Primer on Solana RPCs, Validators, and RPC providers",https://www.helius.dev/blog/solana-nodes-a-primer-on-solana-rpcs-validators-and-rpc-providers,https://www.twitter.com/unlock_VALue,2024-01-15,Mert Mumtaz
+Solana Validator Economics: A Primer,https://www.helius.dev/blog/solana-validator-economics-a-primer,https://www.twitter.com/unlock_VALue,2024-01-11,Ryan Chern
+Priority Fees: Understanding Solana's Transaction Fee Mechanics,https://www.helius.dev/blog/priority-fees-understanding-solanas-transaction-fee-mechanics,https://www.twitter.com/unlock_VALue,2024-02-15,0xIchigo
+"The L1 vs L2 Landscape: Understanding the Design Differences, Tradeoffs, and Endgames",https://www.helius.dev/blog/the-l1-vs-l2-landscape,https://www.twitter.com/unlock_VALue,2023-12-13,Ryan Chern
+Gaming: How Solana is Changing the Playfield,https://www.helius.dev/blog/gaming-how-solana-is-changing-the-playfield,https://www.twitter.com/unlock_VALue,2024-01-15,0xIchigo
+Turbine: Block Propagation on Solana,https://www.helius.dev/blog/turbine-block-propagation-on-solana,https://www.twitter.com/unlock_VALue,2023-10-26,Ryan Chern
+The Solana Programming Model: An Introduction to Developing on Solana,https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana,https://www.twitter.com/unlock_VALue,2023-11-17,0xIchigo
+What is Firedancer? A Deep Dive into Solana 2.0,https://www.helius.dev/blog/what-is-firedancer,https://www.twitter.com/unlock_VALue,2023-12-03,0xIchigo
+Evaluating Solana for Enterprise Use: A Comprehensive Guide,https://www.helius.dev/blog/evaluating-solana-for-enterprise-use-a-comprehensive-guide,https://www.twitter.com/unlock_VALue,2023-10-24,0xIchigo
+Cryptographic Tools 101 - Hash Functions and Merkle Trees Explained,https://www.helius.dev/blog/cryptographic-tools-101-hash-functions-and-merkle-trees-explained,https://www.twitter.com/unlock_VALue,2023-09-25,0xIchigo
+All You Need to Know About Compression on Solana,https://www.helius.dev/blog/all-you-need-to-know-about-compression-on-solana,https://www.twitter.com/unlock_VALue,2023-11-30,0xIchigo
+"Proof of History, Proof of Stake, Proof of Work - Explained",https://www.helius.dev/blog/proof-of-history-proof-of-stake-proof-of-work-explained,https://www.twitter.com/unlock_VALue,2023-10-09,0xIchigo
+Privacy on Solana with Elusiv and Light: All You Need to Know About Privacy on SOL,https://www.helius.dev/blog/privacy-on-solana-with-elusiv-and-light,https://www.twitter.com/unlock_VALue,2023-09-14,0xIchigo
+All You Need to Know About Solana RPCs (2023),https://www.helius.dev/blog/solana-rpc,https://www.twitter.com/unlock_VALue,2023-09-12,Mert Mumtaz
+Solana Dev 101 - File system wallets + How to create a custom wallet,https://www.helius.dev/blog/file-system-wallets-how-to-create-a-custom-wallet,https://www.twitter.com/unlock_VALue,2023-08-14,Owen Venter
+Top Solana RPCs — Helius vs. Other Node Providers,https://www.helius.dev/blog/top-solana-rpcs-helius-vs-other-node-providers,https://www.twitter.com/unlock_VALue,2023-07-27,Mert Mumtaz
+Solana Dev 101 - Deserializing Account Data on Solana,https://www.helius.dev/blog/solana-dev-101-deserializing-account-data-on-solana,https://www.twitter.com/unlock_VALue,2024-01-22,Hunter Davis
+"Understanding Slots, Blocks, and Epochs on Solana",https://www.helius.dev/blog/solana-slots-blocks-and-epochs,https://www.twitter.com/unlock_VALue,2023-06-19,Mert Mumtaz
+How Solana RPCs Work,https://www.helius.dev/blog/how-solana-rpcs-work,https://www.twitter.com/unlock_VALue,2023-07-24,Mert Mumtaz
+Build a Wallet Tracker on Solana,https://www.helius.dev/blog/build-a-wallet-tracker-on-solana,https://www.twitter.com/unlock_VALue,2023-06-19,Mert Mumtaz
+Listening to On-chain Events on Solana,https://www.helius.dev/blog/solana-data-streaming,https://www.twitter.com/unlock_VALue,2024-01-11,Mert Mumtaz
+Solana Dev 101 - Mint SPL Tokens on Solana,https://www.helius.dev/blog/working-with-solana-tokens,https://www.twitter.com/unlock_VALue,2023-06-19,Hunter Davis
+Solana Dev101- How to get the holders of an NFT collection (Snapshot),https://www.helius.dev/blog/nft-holder-snapshots,https://www.twitter.com/unlock_VALue,2024-01-10,Owen Venter
+Solana Dev 101 - How to Create a Solana Transaction,https://www.helius.dev/blog/how-to-create-a-solana-transaction,https://www.twitter.com/unlock_VALue,2023-06-19,Owen Venter
+Solana Dev 101 - How to Mint an NFT on Solana,https://www.helius.dev/blog/how-to-mint-an-nft-on-solana,https://www.twitter.com/unlock_VALue,2023-06-19,Owen Venter
+All You Need to Know About Solana’s New DAS API,https://www.helius.dev/blog/all-you-need-to-know-about-solanas-new-das-api,https://www.twitter.com/unlock_VALue,2023-09-18,Hunter Davis
+Solana Dev 101 - Using DAS API For Fetching all NFTs in a Collection,https://www.helius.dev/blog/solana-dev-101-using-das-to-return-all-collection-assets,https://www.twitter.com/unlock_VALue,2023-07-28,Hunter Davis
+FRP-34: Do backrun auctions protect traders? - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-34-do-backrun-auctions-protect-traders/2977,https://twitter.com/awmacp/status/1755165431394935087,2024-01-25,https://collective.flashbots.net/u/awmacp
 Optimizing Interactions Between Ethereum Consensus & Execution Clients,https://terencechain.substack.com/p/optimizing-interactions-between-ethereum,,2024-01-16,terence
 Validator Timing Game Post EIP4844 - Block proposer - Ethereum Research,https://ethresear.ch/t/validator-timing-game-post-eip4844/18129,,2024-01-03,https://ethresear.ch/u/terence
 Writing an Ethereum Consensus Client: Lessons & Future,https://terencechain.substack.com/p/writing-an-ethereum-consensus-client,,2023-11-27,terence
@@ -509,7 +509,7 @@ Cardano’s Move to Polkadot and Substrate — Revolutionizing Blockchain Intero
 How Can I Integrate Lido Tokens into My dApp? | by Bloqarl | Medium,https://medium.com/@bloqarl/how-can-i-integrate-lido-tokens-into-my-dapp-dd9b1f69fe99,,2023-10-27,Bloqarl
 Smart Contract Shadow Audit in CodeHawks - Bloqarl - Medium,https://medium.com/@bloqarl/smart-contract-shadow-audit-in-codehawks-b625d178751e,,2023-10-20,Bloqarl
 Uniswap V2 Router Explained by a Smart Contract Auditor — Add Liquidity | DeFi Protocol | by Bloqarl | Medium,https://medium.com/@bloqarl/uniswap-v2-router-explained-by-a-smart-contract-auditor-add-liquidity-defi-protocol-6e23973ad62e,,2023-10-16,Bloqarl
-"Balancer: The Yield Bearing Asset Thesis | by Beethoven X | Balancer Protocol | Feb, 2024 | Medium",https://medium.com/balancer-protocol/balancer-the-yield-bearing-asset-thesis-f44489ba2deb,,,
+"Balancer: The Yield Bearing Asset Thesis | by Beethoven X | Balancer Protocol | Feb, 2024 | Medium",https://medium.com/balancer-protocol/balancer-the-yield-bearing-asset-thesis-f44489ba2deb,,2024-02-08,Beethoven X
 The promise and challenges of crypto + AI applications,https://vitalik.eth.limo/general/2024/01/30/cryptoai.html,,2024-01-30,Vitalik Buterin
 Getting Deep Into EVM: How Ethereum Works Backstage | by vasa | The Startup | Medium,https://medium.com/swlh/getting-deep-into-evm-how-ethereum-works-backstage-ab6ad9c0d0bf,https://www.zaryabs.com/evm-learning-resources/,2019-11-30,vasa
 EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 1,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,2022-02-27,noxx
@@ -524,8 +524,8 @@ Solidity Tutorial : all about Assembly | by Jean Cvllr | Medium,https://jeancvll
 ,https://forum.celestia.org/t/sharing-a-sequencer-set-by-separating-execution-from-aggregation/702,,,
 ,https://social-dilemmas.github.io/,,,
 ,https://theblockchainerhub.xyz/,,,
-,https://blog.duality.xyz/introducing-multiplicity/,https://www.twitter.com/unlock_VALue,,
-,https://blog.shutter.network/shutterized-opstack-testnet-announcement-and-roadmap/,https://www.twitter.com/unlock_VALue,,
+Introducing Multiplicity,https://blog.duality.xyz/introducing-multiplicity/,https://www.twitter.com/unlock_VALue,2023-03-04,Duality Labs
+Shutterized OP Stack Testnet Announcement and Roadmap,https://blog.shutter.network/shutterized-opstack-testnet-announcement-and-roadmap/,https://www.twitter.com/unlock_VALue,2024-01-26,Shutter.network
 Web3 Security: In-Depth — Officer's Blog,https://officercia.mirror.xyz/dgKaZvBsP90fNc7YLtL-ibRIZYcbvTdtVPdmNoB6s_M,https://twitter.com/officer_cia/status/1757114238370226652,2024-02-07,Officer's Blog
 The price is right: Realigning proposer-builder incentives with predictive MEV-burn - Economics - Ethereum Research,https://ethresear.ch/t/the-price-is-right-realigning-proposer-builder-incentives-with-predictive-mev-burn/18656,https://twitter.com/soispoke/status/1757078115308786078,2024-02-12,https://ethresear.ch/u/soispoke
 "Validator Penalties, Slashing, and their Impact on Tokemak v2 | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/validator-penalties-slashing-and-their-impact-on-tokemak-v2-f690489e7529,,2023-07-20,Tokemak
@@ -543,18 +543,74 @@ The Conclusion of Cycle Zero: Weekly Cycles and Staked TOKE Migration | by Tokem
 UI Update: Exchange Voting is Live | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/ui-update-exchange-voting-is-live-d221ec44326c,,2022-01-20,Tokemak
 Minimal ePBS - Beacon Chain Changes - Block proposer - Ethereum Research,https://ethresear.ch/t/minimal-epbs-beacon-chain-changes/18653,https://twitter.com/terencechain/status/1757053867265855700,2024-02-12,https://ethresear.ch/u/terence
 Leaderless Auctions,https://www.paradigm.xyz/2024/02/leaderless-auctions,https://twitter.com/_Dave__White_/status/1757471352897122672,,
-,https://www.blocknative.com/blog/eip-4844-blobs-and-blob-gas-what-you-need-to-know,,,
-,https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737?ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,,
+"EIP-4844, Blobs, and Blob Gas: What you need to know",https://www.blocknative.com/blog/eip-4844-blobs-and-blob-gas-what-you-need-to-know,,2024-02-07,Bert Kellerman
+Deconstructing a Solidity Contract —Part I: Introduction,https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737?ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,2018-08-13,OpenZeppelin
 Diving Into The Ethereum Virtual Machine | by zh | Qtum,https://blog.qtum.org/diving-into-the-ethereum-vm-6e8d5d2f3c30,https://www.zaryabs.com/evm-learning-resources/,2017-08-06,zh
 ,https://blog.merkle.io/blog/off-chain-bundles,https://twitter.com/merkle_mev/status/1757102503747862724,,
 ,https://blog.chain.link/chainlink-fair-sequencing-services-enabling-a-provably-fair-defi-ecosystem/,https://www.twitter.com/unlock_VALue,,
-"EIP 4844: What does it mean for L2 users? | by Ed Felten | Offchain Labs | Feb, 2024 | Medium",https://medium.com/offchainlabs/eip-4844-what-does-it-mean-for-l2-users-5e86ebc4c028,https://twitter.com/OffchainLabs/status/1757461008849740153,,
-"Sangria: A PLONK-ish folding scheme | by Crypto Fairy | Feb, 2024 | Medium",https://medium.com/@cryptofairy/sangria-a-plonk-ish-folding-scheme-2271204d2285,,,
+"EIP 4844: What does it mean for L2 users? | by Ed Felten | Offchain Labs | Feb, 2024 | Medium",https://medium.com/offchainlabs/eip-4844-what-does-it-mean-for-l2-users-5e86ebc4c028,https://twitter.com/OffchainLabs/status/1757461008849740153,2024-02-13,Ed Felten
+"Sangria: A PLONK-ish folding scheme | by Crypto Fairy | Feb, 2024 | Medium",https://medium.com/@cryptofairy/sangria-a-plonk-ish-folding-scheme-2271204d2285,,2024-02-13,Crypto Fairy
 Introducing the CAKE framework,https://frontier.tech/the-cake-framework,,,by Ankit Chiplunkar & Stephane Gosselin for Frontier Research
-"zkSync Insufficient Proof Verification Bugfix Review | by Immunefi Editor | Immunefi | Feb, 2024 | Medium",https://medium.com/immunefi/zksync-insufficient-proof-verification-bugfix-review-dcd57944d0e2,https://twitter.com/chrisdior777/status/1758078448076284015,,
+"zkSync Insufficient Proof Verification Bugfix Review | by Immunefi Editor | Immunefi | Feb, 2024 | Medium",https://medium.com/immunefi/zksync-insufficient-proof-verification-bugfix-review-dcd57944d0e2,https://twitter.com/chrisdior777/status/1758078448076284015,2024-02-09,Immunefi Editor
 ,https://www.galaxy.com/insights/research/understanding-intersection-crypto-ai/,https://twitter.com/Uptodatenow/status/1758143881261040098,,
-Uniswap v2 Overview,https://blog.uniswap.org/uniswap-v2,https://risencrypto.github.io/,,
+Uniswap v2 Overview,https://blog.uniswap.org/uniswap-v2,https://risencrypto.github.io/,2020-03-23,
 Uniswap v3 liquidity formula explained | by Atis E | Medium,https://atise.medium.com/uniswap-v3-liquidity-formula-explained-de8bd42afc3c,https://risencrypto.github.io/,2022-01-09,Atis E
 ,https://gov.uniswap.org/t/a-deep-dive-of-uniswaps-governance/19792,https://risencrypto.github.io/,,
 Liquidity Mining on Uniswap v3,https://www.paradigm.xyz/2021/05/liquidity-mining-on-uniswap-v3,https://risencrypto.github.io/,2021-05-18,Dan Robinson
 ,https://drive.google.com/file/d/1dRifSAXxc-6HKCKH8tcygEmHxJTKAlxp/view,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/Sumcheck/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/Plonk/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/PLONKPerm/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/PLONKWHY/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/R1CSQAP/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/Kate/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/WeilMOV/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/CofactorClearing/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/ExtensionFields/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/QuadraticSieve/,https://risencrypto.github.io/,,
+,https://risencrypto.github.io/PohligHellman/,https://risencrypto.github.io/,,
+Fiat-Shamir security of FRI and related SNARKs — Part 1 | by Albert Garreta | Nethermind.eth | Medium,https://medium.com/nethermind-eth/fiat-shamir-security-of-fri-and-related-snarks-part-1-9b913728ddec,,2023-08-14,Albert Garreta
+Under the hood of Cairo 1.0: Exploring Sierra | by Mathieu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/under-the-hood-of-cairo-1-0-exploring-sierra-7f32808421f5,,2023-04-13,Mathieu
+The History and Future of Account Abstraction | by Ismael Darwish | Nethermind.eth | Medium,https://medium.com/nethermind-eth/the-history-and-future-of-account-abstraction-10cb097ebdc8,,2021-12-23,Ismael Darwish
+Under the hood of Cairo 1.0: Exploring Sierra | by Mathieu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/under-the-hood-of-cairo-1-0-exploring-sierra-1220f6dbcf9,,2023-04-13,Mathieu
+"The Liquid Staking Rush. By Joel Kahil, Benn Glorfield, and Eli… | by DeFi Scientist | Nethermind.eth | Medium",https://medium.com/nethermind-eth/the-liquid-staking-rush-1977aef2bad0,,2023-03-24,DeFi Scientist
+Getting started with Nethermind’s Starknet RPC service | by Nethermind | Nethermind.eth | Medium,https://medium.com/nethermind-eth/getting-started-with-netherminds-starknet-rpc-service-f6b49df8b889,,2023-12-12,Nethermind
+Cairo: the Starknet way to writing safe code | by Kalzak | Nethermind.eth | Medium,https://medium.com/nethermind-eth/cairo-the-starknet-way-to-writing-safe-code-8169486c7132,,2023-10-20,Kalzak
+Sunsetting Warp: A Farewell to the Solidity to Cairo transpiler | by Nethermind | Nethermind.eth | Medium,https://medium.com/nethermind-eth/sunsetting-warp-a-farewell-to-the-solidity-to-cairo-transpiler-79e9fdab5f5a,,2023-07-31,Nethermind
+How to monitor Starknet wallets. Learn how to build a Starknet wallet… | by Jelilat Anofiu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/how-to-monitor-starknet-wallets-f500845a1030,,2023-08-18,Jelilat Anofiu
+Juno v.0.4.0: Production-ready. Nethermind’s Starknet client… | by Rian Hughes | Nethermind.eth | Medium,https://medium.com/nethermind-eth/juno-0-4-production-ready-a15078397627,,2023-07-26,Rian Hughes
+Under the hood of Cairo 1.0: Exploring Sierra | by Mathieu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/under-the-hood-of-cairo-1-0-exploring-sierra-9355d618b26f,,2023-04-13,Mathieu
+Verifying a smart contract on Voyager | by Chen Wen Kang | Nethermind.eth | Medium,https://medium.com/nethermind-eth/verifying-a-starknet-smart-contract-on-voyager-3c2f127e84f6,,2023-03-13,Chen Wen Kang
+Introduction to Horus — Part 2. Formal verification of an automated… | by Julian Sutherland | Nethermind.eth | Medium,https://medium.com/nethermind-eth/introduction-to-horus-part-2-3dbc77dcdb4a,,2023-04-07,Julian Sutherland
+Introduction to Horus — Part 1. Horus is an open-source automated… | by Julian Sutherland | Nethermind.eth | Medium,https://medium.com/nethermind-eth/introduction-to-horus-part-1-fbc16af3ba67,,2023-02-23,Julian Sutherland
+"A First Look at Cairo 1.0: A Safer, Stronger & Simpler Provable Programming Language | by Mathieu | Nethermind.eth | Medium",https://medium.com/nethermind-eth/a-first-look-at-cairo-1-0-a-safer-stronger-simpler-provable-programming-language-892ce4c07b38,,2022-12-30,Mathieu
+Cairo fundamentals stacked up against EVM and Solidity | by Mauricio Perdomo | Nethermind.eth | Medium,https://medium.com/nethermind-eth/cairo-fundamentals-stacked-up-against-evm-and-solidity-1d8d4e12b2c3,,2022-12-16,Mauricio Perdomo
+"Introducing UniStark: Uniswap, only Warp’ed to StarkNet | by Jorik Schellekens | Nethermind.eth | Medium",https://medium.com/nethermind-eth/introducing-unistark-uniswap-only-warped-to-starknet-6b62d3a96690,,2022-10-08,Jorik Schellekens
+Reducing the step count of 256-bit operations in Cairo | by Yevgeny Zaytman | Nethermind.eth | Medium,https://medium.com/nethermind-eth/reducing-the-step-count-for-256-bit-operations-in-cairo-61299649dc0c,,2022-10-25,Yevgeny Zaytman
+Aave <> StarkNet Bridge. by Massil Achab | by Massil Achab | Nethermind.eth | Medium,https://medium.com/nethermind-eth/aave-starknet-bridge-9de6797c4ada,,2022-12-06,Massil Achab
+Cairo Coding Guidelines. by Massil Achab and Kalzak. | by Massil Achab | Nethermind.eth | Medium,https://medium.com/nethermind-eth/cairo-coding-guidelines-74eb6f4ee264,,2022-09-23,Massil Achab
+Warp 2.0 — Transpiling Directly From Solidity to Cairo | by Guy McComb | Nethermind.eth | Medium,https://medium.com/nethermind-eth/warp-2-0-transpiling-directly-from-solidity-to-cairo-9bf41a6d26ee,,2022-07-05,Guy McComb
+Introducing Voyager — The window to StarkNet | by Ismael Darwish | Nethermind.eth | Medium,https://medium.com/nethermind-eth/introducing-voyager-the-window-to-starknet-c948f3a07a9b,,2022-03-28,Ismael Darwish
+Algebraic Geometry Codes. Data is usually stored and transferred… | by Ignacio Manzur Tomasini | Nethermind.eth | Medium,https://medium.com/nethermind-eth/algebraic-geometry-codes-8b760f03b5d3,,2023-04-03,Ignacio Manzur Tomasini
+Ethereum Withdrawals and Liquid Staking | by Jorge Arce | Nethermind.eth | Medium,https://medium.com/nethermind-eth/ethereum-withdrawals-and-liquid-staking-68f0d50bbb81,,2023-03-03,Jorge Arce
+Systematization of Knowledge for Decentralized Identities & Verifiable Credentials —Phase 1 of Research for Lido DAO: Complete | by Nethermind | Nethermind.eth | Medium,https://medium.com/nethermind-eth/systematization-of-knowledge-for-decentralized-identities-verifiable-credentials-phase-1-of-e972cf5ec153,,2022-12-21,Nethermind
+How to reach consensus with strangers | by Albert Garreta | Nethermind.eth | Medium,https://medium.com/nethermind-eth/how-to-reach-consensus-with-strangers-9b57264afd65,,2022-09-09,Albert Garreta
+A tour of Verifiable Secret Sharing schemes and Distributed Key Generation protocols. | by Ignacio Manzur Tomasini | Nethermind.eth | Medium,https://medium.com/nethermind-eth/a-tour-of-verifiable-secret-sharing-schemes-and-distributed-key-generation-protocols-3c814e0d47e1,,2022-08-25,Ignacio Manzur Tomasini
+Sorting out Distributed Validator Technology - Nethermind.eth - Medium,https://medium.com/nethermind-eth/sorting-out-distributed-validator-technology-a6f8ca1bbce3,,2022-08-03,Isaac Villalobos
+"Secret Sharing For Sharing Mnemonics, Part II - Nethermind.eth - Medium",https://medium.com/nethermind-eth/secret-sharing-for-sharing-mnemonics-part-ii-d76dc1581681,,2022-04-15,Michal Zajac
+Using Shamir’s secret sharing to share mnemonics - Nethermind.eth - Medium,https://medium.com/nethermind-eth/using-shamirs-secret-sharing-to-share-mnemonics-c40429835117,,2022-03-31,Michal Zajac
+"The zkSync Era Remix Plugin: A How-To Guide | by Bohdan Ohorodnii | Nethermind.eth | Jan, 2024 | Medium",https://medium.com/nethermind-eth/the-zksync-era-remix-plugin-a-how-to-guide-fc54e8d24bd3,,2024-01-15,Bohdan Ohorodnii
+"Nethermind client: 3 Experimental Approaches to State Database Change | by Nethermind | Nethermind.eth | Jan, 2024 | Medium",https://medium.com/nethermind-eth/nethermind-client-3-experimental-approaches-to-state-database-change-8498e3d89771,,2024-01-11,Nethermind
+Unlocking Onboarding to Starknet: An Overview of the Starknet Remix Plugin | by Edgar Barrantes | Nethermind.eth | Medium,https://medium.com/nethermind-eth/unlocking-onboarding-to-starknet-an-overview-of-the-starknet-remix-plugin-6b0658e73521,,2023-09-04,Edgar Barrantes
+,https://anoma.net/blog/abstract-intent-machines,,,
+Endgame Staking Economics: A Case for Targeting - Economics - Ethereum Research,https://ethresear.ch/t/endgame-staking-economics-a-case-for-targeting/18751,https://x.com/superphiz/status/1760742225364046322?s=46&t=LTSoDWXLa08Oi2VCOCK2Yg,2024-02-22,https://ethresear.ch/u/casparschwa
+,https://governance.aave.com/t/gauntlet-is-leaving-aave/16700?u=hazbobo,,,
+mev-boost improvement proposal #0 - HackMD,https://notes.ethereum.org/@ralexstokes/mbip-0,https://twitter.com/ralexstokes/status/1759729243070587030,,ralexstokes
+Block scoring for mev-boost relays - #26 by vitaliy - Relays - The Flashbots Collective,https://collective.flashbots.net/t/block-scoring-for-mev-boost-relays/202/26?u=ralexstokes,,2023-12-06,https://collective.flashbots.net/u/metachris
+Shutter Economics,https://blog.shutter.network/shutter-economics/,,2024-02-19,Shutter.network
+"0Kage Diaries Chapter 2 — Affine. Disclaimer: The opinions expressed here… | by 0Kage | Feb, 2024 | Medium",https://medium.com/@0kage/hack-series-deep-dive-chapter-2-affine-da2d7b0bbefd,https://twitter.com/0kage_eth/status/1761594595652366839,,
+0Kage Diaries Chapter 1 — Enzyme Finance | by 0Kage | Medium,https://medium.com/@0kage/hack-series-deep-dive-chapter-1-enzyme-finance-90f4d85c067e,https://twitter.com/shealtielanz/status/1761693985788035493,2023-09-07,0Kage
+,https://www.rareskills.io/post/gas-optimization,,,
+,https://www.rareskills.io/zk-book,,,
+,https://www.rareskills.io/compound-v3-book,,,
+,https://www.rareskills.io/uniswap-v2-book,,,
