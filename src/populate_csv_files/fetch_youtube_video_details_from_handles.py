@@ -371,10 +371,10 @@ def filter_and_remove_videos(input_csv_path, keywords, keywords_to_exclude, PASS
     non_passthrough_df = df[~df['channel_name'].str.lower().isin([channel.lower() for channel in PASSTHROUGH])]
 
     # Apply global keyword filtering only to non-PASSTHROUGH channels
-    global_filtered_df = non_passthrough_df[non_passthrough_df['title'].str.lower().str.contains('|'.join(keywords).lower())]
+    global_filtered_df = non_passthrough_df[non_passthrough_df['title'].str.lower().str.contains('|'.join(keywords).lower(), na=False)]
 
     # Filter out titles from passthrough_df that contain any of the keywords_to_exclude
-    passthrough_df = passthrough_df[~passthrough_df['title'].str.lower().str.contains('|'.join(keywords_to_exclude).lower())]
+    passthrough_df = passthrough_df[~passthrough_df['title'].str.lower().str.contains('|'.join(keywords_to_exclude).lower(), na=False)]
 
     # Concatenate PASSTHROUGH and non-PASSTHROUGH videos
     global_filtered_df = pd.concat([global_filtered_df, passthrough_df])
@@ -392,7 +392,7 @@ def filter_and_remove_videos(input_csv_path, keywords, keywords_to_exclude, PASS
     for channel in channels_with_specific_filters:
         channel_keywords = channel_specific_filters[channel]
         channel_df = global_filtered_df[global_filtered_df['channel_name'].str.lower() == channel]
-        channel_filtered_df = channel_df[channel_df['title'].str.lower().str.contains('|'.join(channel_keywords).lower())]
+        channel_filtered_df = channel_df[channel_df['title'].str.lower().str.contains('|'.join(channel_keywords).lower(), na=False)]
         final_filtered_df = pd.concat([final_filtered_df, channel_filtered_df])
 
     # Concatenate videos from channels that did not have channel-specific filters
@@ -432,7 +432,7 @@ def run():
     fetch_videos = True
 
     PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots', 'Finematics',
-                   'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum']  # do not apply any filtering to these channels
+                   'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum', 'Celestia']  # do not apply any filtering to these channels
     # Define the channel-specific filters which are applied after the first keyword selection
     channel_specific_filters = {
         "Bankless": ["MEV", "maximal extractable value", "How They Solved Ethereum's Critical Flaw", "zk"] + AUTHORS + FIRMS,
