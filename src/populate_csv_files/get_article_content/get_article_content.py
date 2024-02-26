@@ -1,5 +1,6 @@
 import datetime
 import time
+from functools import partial
 from urllib.parse import urlparse
 
 import pandas as pd
@@ -39,61 +40,62 @@ def get_file_list(GITHUB_API_URL="https://api.github.com/repos/flashbots/flashbo
         return []
 
 
-def fetch_discourse_content_from_url(url, css_selector="div.post[itemprop='articleBody']"):
+def fetch_discourse_content_from_url(url, css_selectors=["div.post[itemprop='text']", "div.post[itemprop='articleBody']", "cooked"]):
     """
-    Fetch and neatly parse the content of an article from a URL using the specified CSS selector.
+    Fetch and neatly parse the content of an article from a URL using one of the specified CSS selectors or CSS paths.
     The content is returned in Markdown format.
 
     Parameters:
     - url (str): The URL of the article.
-    - css_selector (str): The CSS selector to locate the content container in the HTML.
+    - css_selectors (list): A list of CSS selectors or paths to locate the content container in the HTML.
 
     Returns:
-    - str: The neatly parsed content of the article in Markdown format, or None if the content could not be fetched.
+    - dict: A dictionary containing the neatly parsed content of the article in Markdown format,
+            release date, authors, and other metadata, or None if the content could not be fetched.
     """
     try:
         response = safe_request(url)  # Use the safe_request function to handle potential 429 errors.
         if response is None:
-            return empty_content
+            return None
 
         response.encoding = 'utf-8'  # Force UTF-8 encoding
         content = response.text
 
         soup = BeautifulSoup(content, 'html.parser')
-        content_container = soup.select_one(css_selector)
+        content_container = None
+
+        for selector in css_selectors:
+            content_container = soup.select_one(selector) if selector != "cooked" else soup.find(class_=selector)
+            if content_container:
+                break
 
         if not content_container:
-            logging.warning(f"No content found for URL {url} with selector {css_selector}")
-            return empty_content
+            logging.warning(f"No content found for URL [{url}] using selectors {css_selectors}")
+            return None
 
-        markdown_content = ''.join(html_to_markdown(element) for element in content_container if element.name is not None)
+        markdown_content = ''.join(html_to_markdown(element) for element in content_container.contents if element.name is not None)
         markdown_content = sanitize_mojibake(markdown_content)  # Clean up the content after parsing
 
         # Extracting release date
         meta_tag = soup.find('meta', {'property': 'article:published_time'})
-        if meta_tag and 'content' in meta_tag.attrs:
-            release_date = meta_tag['content'].split('T')[0]
-        else:
-            release_date = None
+        release_date = meta_tag['content'].split('T')[0] if meta_tag and 'content' in meta_tag.attrs else None
 
-        # Find the 'a' tag within the 'span' with class 'creator'
+        # Extract author information
         a_tag = soup.select_one('.creator a')
-
-        # Extract the 'href' attribute
         authors = a_tag['href'] if a_tag else None
 
-        logging.info(f"Fetched content for URL [{url}]")
         return {
             'content': markdown_content,
             'release_date': release_date,
             'authors': authors,
+            # Additional metadata placeholders
             'author_urls': None,
             'author_firm_name': None,
             'author_firm_url': None
         }
     except Exception as e:
         logging.error(f"Could not fetch content for URL [{url}]: {e}")
-        return empty_content
+        return None
 
 
 def fetch_medium_content_from_url(url):
@@ -425,7 +427,7 @@ def fetch_notion_content_from_url(url):
             content = extract_notion_content(page_source)
 
             author_details = extract_author_details(url)
-            print(f"Fetched title [{title}] for URL {url}")
+            # logging.info(f"Fetched title [{title}] for URL {url}")
 
             return {
                 'title': title,
@@ -536,9 +538,9 @@ def fetch_vitalik_ca_article_content(url):
         title_element = soup.find('link', {'rel': 'alternate', 'type': 'application/rss+xml'})
         if title_element and 'title' in title_element.attrs:
             title = title_element['title'].strip()
-            print(f"Fetched title [{title}] for URL {url}")
+            # logging.info(f"Fetched title [{title}] for URL {url}")
     except Exception as e:
-        print(f"Could not fetch title for URL {url} using the rel='alternate' method: {e}")
+        logging.warning(f"Could not fetch title for URL {url} using the rel='alternate' method: {e}")
     return title
 
 
@@ -594,7 +596,7 @@ def fetch_paradigm_article_content(url):
             'author_firm_url': None  # No information provided for this
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
 
@@ -646,7 +648,7 @@ def fetch_propellerheads_article_content(url):
             'author_firm_url': None
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
 
@@ -694,7 +696,7 @@ def fetch_jump_article_content(url):
             'author_firm_url': None
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
 
@@ -731,7 +733,7 @@ def fetch_a16z_article_content(url):
                 release_date = 'N/A'
 
         # Extract the content
-        content_div = soup.select_one('.wysiwyg')
+        content_div = soup.select_one('div.post-block:nth-child(1) > div:nth-child(1)')
         content_list = []
         if content_div:
             # Loop through all content elements within the container
@@ -752,7 +754,7 @@ def fetch_a16z_article_content(url):
             'author_firm_url': None
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
 
@@ -831,7 +833,7 @@ def fetch_dba_article_content(url):
             'author_firm_url': None  # No information provided for this
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
 def fetch_iex_article_content(url):
@@ -891,7 +893,7 @@ def fetch_iex_article_content(url):
             'author_firm_url': ''  # Not provided
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
 
@@ -946,7 +948,7 @@ def fetch_uniswap_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
 
@@ -1002,7 +1004,7 @@ def fetch_substack_article_content(url):
             'authors': author_name
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {
             'title': '',
             'content': '',
@@ -1054,7 +1056,7 @@ def fetch_vitalik_article_content(url):
             'authors': author_name
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
 def fetch_monoceros_article_content(url):
@@ -1100,7 +1102,7 @@ def fetch_monoceros_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return empty_content
 
 
@@ -1131,9 +1133,13 @@ def fetch_helius_article_content(url):
         authors_tag = soup.select_one('div.uui-blogpost04_author-content:nth-child(1) > div:nth-child(2)')
         authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
 
-        # Extract release date
+        # Extract release date and format it
         release_date_tag = soup.select_one('div.uui-blogpost04_author-content:nth-child(2) > div:nth-child(2)')
-        release_date = release_date_tag.get_text(strip=True) if release_date_tag else 'N/A'
+        if release_date_tag:
+            release_date_text = release_date_tag.get_text(strip=True)
+            release_date = datetime.datetime.strptime(release_date_text, '%B %d, %Y').strftime('%Y-%m-%d')
+        else:
+            release_date = 'N/A'
 
         # Extract content
         content_div = soup.select_one('#content')
@@ -1151,7 +1157,7 @@ def fetch_helius_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1206,7 +1212,7 @@ def fetch_mevio_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1262,7 +1268,7 @@ def fetch_outlierventures_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1318,7 +1324,7 @@ def fetch_gauntlet_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1374,7 +1380,7 @@ def fetch_chainlink_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1419,11 +1425,12 @@ def fetch_blocknative_article_content(url):
         content_div = soup.select_one('#hs_cos_wrapper_post_body')
         content_list = []
         if content_div:
-            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
-                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+            for elem in content_div.find_all(True):  # Fixed to iterate over all elements
+                if elem.name:  # Ensure the element has a name attribute
+                    content_list.append(html_to_markdown(elem))  # Convert HTML element to Markdown
 
         content = ''.join(content_list)
-
+        
         return {
             'title': title,
             'content': content,
@@ -1431,7 +1438,7 @@ def fetch_blocknative_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1476,8 +1483,9 @@ def fetch_shutter_article_content(url):
         content_div = soup.select_one('.single-content')
         content_list = []
         if content_div:
-            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
-                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+            for elem in content_div.find_all(True):  # Fixed to iterate over all elements
+                if elem.name:  # Ensure the element has a name attribute
+                    content_list.append(html_to_markdown(elem))  # Convert HTML element to Markdown
 
         content = ''.join(content_list)
 
@@ -1488,7 +1496,7 @@ def fetch_shutter_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1520,7 +1528,7 @@ def fetch_duality_article_content(url):
         release_date_tag = soup.select_one('.gh-article-meta > time:nth-child(2)')
         if release_date_tag:
             release_date_str = release_date_tag.get_text(strip=True)
-            release_date_obj = datetime.datetime.strptime(release_date_str, '%b %d, %Y')  # Parse date with the given format
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%b %d, %Y')  # Corrected datetime module reference
             release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
         else:
             release_date = 'N/A'
@@ -1533,8 +1541,9 @@ def fetch_duality_article_content(url):
         content_div = soup.select_one('.gh-content')
         content_list = []
         if content_div:
-            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
-                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+            for elem in content_div.find_all(True):  # Fixed to iterate over all elements
+                if elem.name:  # Ensure the element has a name attribute
+                    content_list.append(html_to_markdown(elem))  # Convert HTML element to Markdown
 
         content = ''.join(content_list)
 
@@ -1545,7 +1554,7 @@ def fetch_duality_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1602,7 +1611,7 @@ def fetch_dydx_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 def fetch_merkle_article_content(url):
@@ -1646,8 +1655,9 @@ def fetch_merkle_article_content(url):
         content_div = soup.select_one('.CmsPostContent__StyledCmsPostContent-sc-tqjifz-0')
         content_list = []
         if content_div:
-            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
-                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+            for elem in content_div.find_all(True):  # Fixed to iterate over all elements
+                if elem.name:  # Ensure the element has a name attribute
+                    content_list.append(html_to_markdown(elem))  # Convert HTML element to Markdown
 
         content = ''.join(content_list)
 
@@ -1658,7 +1668,7 @@ def fetch_merkle_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1715,7 +1725,7 @@ def fetch_merkle_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1760,8 +1770,9 @@ def fetch_openzeppelin_article_content(url):
         content_div = soup.select_one('#hs_cos_wrapper_post_body')
         content_list = []
         if content_div:
-            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
-                content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
+            for elem in content_div.find_all(True):  # Fixed to iterate over all elements
+                if elem.name:  # Ensure the element has a name attribute
+                    content_list.append(html_to_markdown(elem))  # Convert HTML element to Markdown
 
         content = ''.join(content_list)
 
@@ -1772,7 +1783,7 @@ def fetch_openzeppelin_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1829,7 +1840,7 @@ def fetch_zaryabs_article_content(url):
             'authors': authors
         }
     except Exception as e:
-        print(f"Error fetching content from URL {url}: {e}")
+        logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
 
 
@@ -1842,11 +1853,12 @@ def fetch_content(row, output_dir):
         'ethresear.ch': fetch_discourse_content_from_url,
         'collective.flashbots.net': fetch_discourse_content_from_url,
         'lido.fi': fetch_discourse_content_from_url,
+        'research.lido.fi': fetch_discourse_content_from_url,
         'research.anoma': fetch_discourse_content_from_url,
+        'research.arbitrum.io': fetch_discourse_content_from_url,
         'gov.uniswap.org': fetch_discourse_content_from_url,
         'governance.aave.com': fetch_discourse_content_from_url,
         'forum.celestia.org': fetch_discourse_content_from_url,
-        'research.arbitrum.io': fetch_discourse_content_from_url,
         'dydx.forum': fetch_discourse_content_from_url,
         'forum.arbitrum.foundation': fetch_discourse_content_from_url,
         'forum.aztec.network': fetch_discourse_content_from_url,
@@ -1982,7 +1994,7 @@ def fetch_article_contents_and_save_as_pdf(csv_filepath, output_dir, num_article
                         pdf_filename = os.path.join(output_dir, article_title.replace("/", "<slash>") + '.pdf')
 
                 pdfkit.from_string(markdown_to_html(content_info['content']), pdf_filename, options=options)
-                logging.info(f"Saved PDF [{article_title}] for {article_url}")
+                # logging.info(f"Saved PDF [{article_title}] for {article_url}")
 
             else:
                 # logging.warning(f"No content fetched for {article_url}")
@@ -2039,8 +2051,8 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None, overwr
 
 
 if __name__ == "__main__":
-    url_filters = ['eclipsemainnet.eth']  # ['a16z']  # ['pbs']  # None # ['hackmd']
-    thread_count = 20
+    url_filters = ['a16z']  # ['a16z']  # ['pbs']  # None # ['hackmd']
+    thread_count = 1
     os.environ['NUMEXPR_MAX_THREADS'] = f'{thread_count}'
     get_flashbots_writings = False
     run(url_filters=url_filters, get_flashbots_writings=get_flashbots_writings, thread_count=thread_count, overwrite=True)
