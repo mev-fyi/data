@@ -289,11 +289,54 @@ def extract_unique_domains_from_dataframe(dataframe, link_field='pdf_link'):
 
     return set(domains)
 
+from selenium.webdriver.common.by import By
+
+
+def get_all_website_links(url):
+    """
+    Use Selenium to navigate the website and retrieve all unique URLs.
+    Clicks on the button with the class 'a.ml-auto' to navigate the site.
+    """
+    # Set up Chrome options
+    driver = return_driver()
+
+    urls = set()  # Set to keep track of URLs
+
+    try:
+        # Open the webpage
+        driver.get(url)
+
+        # Wait for the page to load, if necessary
+        driver.implicitly_wait(5)
+
+        # Find the button with class 'a.ml-auto' and click it
+        next_page_button = driver.find_element(By.CSS_SELECTOR, 'a.ml-auto')
+        next_page_button.click()
+
+        # Wait for the page to load after click
+        driver.implicitly_wait(5)
+
+        # Add the URL of the new page to the set
+        urls.add(driver.current_url)
+
+        # Here you can add more navigation steps, find more links, etc.
+        # For example, to keep on clicking on the next page and collect URLs.
+
+    finally:
+        # Close the browser session
+        driver.quit()
+
+    return urls
+
 
 if __name__ == '__main__':
     # Assuming the root_directory() function is defined elsewhere and returns the correct path.
     # For demonstration, let's assume the root directory is the current working directory.
-    root_dir = root_directory()
+    # root_dir = root_directory()
+
+    # Example usage:
+    all_urls = get_all_website_links("https://docs.blast.io/")
+    print(all_urls)
 
     # Paths are constructed based on the assumed root directory function.
     # papers_directory = Path(f'{root_dir}/data/papers_pdf_downloads')
@@ -306,14 +349,14 @@ if __name__ == '__main__':
     # print(unique_domains)
 
     # Paths are constructed based on the assumed root directory function.
-    articles_directory = Path(f'{root_dir}/data/articles_pdf_download')
-    article_details_csv = Path(f'{root_dir}/data/links/articles_updated.csv')
+    # articles_directory = Path(f'{root_dir}/data/articles_pdf_download')
+    # article_details_csv = Path(f'{root_dir}/data/links/articles_updated.csv')
 
     # Call the function and print the result.
     # Note: This will only work if the actual data exists in the specified paths.
-    unmatched_pdfs_articles_df = get_unmatched_pdfs(articles_directory, article_details_csv)
-    unique_domains = extract_unique_domains_from_dataframe(unmatched_pdfs_articles_df, link_field='article')
-    print(unique_domains)
+    # unmatched_pdfs_articles_df = get_unmatched_pdfs(articles_directory, article_details_csv)
+    # unique_domains = extract_unique_domains_from_dataframe(unmatched_pdfs_articles_df, link_field='article')
+    # print(unique_domains)
 
     # Since we cannot execute with actual file paths in this environment, the above lines are commented out.
     # They are provided for reference to show how the function should be called in a real scenario.
