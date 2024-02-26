@@ -1,5 +1,6 @@
 import time
 import random
+import logging
 
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -25,10 +26,10 @@ def fetch_title_from_url(url, css_selector):
         response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
         title = soup.select_one(css_selector).text.strip()
-        print(f"Fetched title [{title}] for URL {url}")
+        logging.info(f"Fetched title [{title}] for URL {url}")
         return title
     except Exception as e:
-        print(f"Could not fetch title for URL {url}: {e}")
+        logging.info(f"Could not fetch title for URL {url}: {e}")
         return None
 
 
@@ -101,10 +102,10 @@ def fetch_notion_titles(url):
 
         # Get the page title
         title = driver.title
-        print(f"Fetched title [{title}] for URL {url}")
+        logging.info(f"Fetched title [{title}] for URL {url}")
         return title
     except Exception as e:
-        print(f"Could not fetch title for URL {url}: {e}")
+        logging.info(f"Could not fetch title for URL {url}: {e}")
         return None
     finally:
         # Always close the browser to clean up
@@ -129,11 +130,11 @@ def fetch_hackmd_titles(url):
         title_element = soup.find('title')
         if title_element:
             title = title_element.get_text()
-            print(f"Fetched title [{title}] for URL {url}")
+            logging.info(f"Fetched title [{title}] for URL {url}")
         else:
-            print(f"Title not found for URL {url}")
+            logging.info(f"Title not found for URL {url}")
     except Exception as e:
-        print(f"Could not fetch title for URL {url}: {e}")
+        logging.info(f"Could not fetch title for URL {url}: {e}")
         return None
     return title
 
@@ -147,11 +148,11 @@ def fetch_medium_titles(url):
         title_element = soup.find('title', {'data-rh': "true"})
         if title_element:
             title = title_element.get_text()
-            print(f"The title is: [{title}]")
+            logging.info(f"The title is: [{title}]")
         else:
-            print(f"Title not found for URL {url}")
+            logging.info(f"Title not found for URL {url}")
     except Exception as e:
-        print(f"Could not fetch title for URL {url}: {e}")
+        logging.info(f"Could not fetch title for URL {url}: {e}")
         return None
     return title
 
@@ -165,9 +166,9 @@ def fetch_vitalik_ca_titles(url):
         title_element = soup.find('link', {'rel': 'alternate', 'type': 'application/rss+xml'})
         if title_element and 'title' in title_element.attrs:
             title = title_element['title'].strip()
-            print(f"Fetched title [{title}] for URL {url}")
+            logging.info(f"Fetched title [{title}] for URL {url}")
     except Exception as e:
-        print(f"Could not fetch title for URL {url} using the rel='alternate' method: {e}")
+        logging.info(f"Could not fetch title for URL {url} using the rel='alternate' method: {e}")
     return title
 
 
