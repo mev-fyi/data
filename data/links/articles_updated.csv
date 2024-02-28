@@ -162,12 +162,12 @@ MEV Markets Part 3: Payment for Order Flow — 0xShitTrader,https://mirror.xyz/0
 ,https://docs.google.com/presentation/d/1F0v0cnLIxJ5ZbBTmUHjoeyw23U9zDYlo/edit,https://www.twitter.com/unlock_VALue,,
 ,https://insights.deribit.com/market-research/analysis-of-eip-2593-escalator/,https://www.twitter.com/unlock_VALue,,
 ,https://eips.ethereum.org/EIPS/eip-2938,https://www.twitter.com/unlock_VALue,,
-Notes on Proposer-Builder Separation (PBS),https://barnabe.substack.com/p/pbs,https://www.twitter.com/unlock_VALue,2022-11-08,Barnabé Monnot
+Notes on Proposer-Builder Separation (PBS),https://barnabe.substack.com/p/pbs,https://www.twitter.com/unlock_VALue,,
 ,https://www.ddmckinnon.com/2022/11/27/all-is-fair-in-arb-and-mev-on-avalanche-c-chain/,https://www.twitter.com/unlock_VALue,,
 ,https://hackingdistributed.com/2017/08/13/cost-of-decent/,https://twitter.com/0xTaker,,
 ,https://bertcmiller.com/2021/09/05/mev-synthetix.html,https://twitter.com/0xTaker,,
-Order Flows: Kingmaker of the Block Builders 👑,https://noxx.substack.com/p/order-flows-kingmaker-of-the-block,https://twitter.com/0xTaker,2022-09-01,noxx
-"DEX Arbitrage, Mathematical Optimisations & Me",https://noxx.substack.com/p/dex-arbitrage-mathematical-optimisations,https://twitter.com/0xTaker,2022-08-22,noxx
+Order Flows: Kingmaker of the Block Builders 👑,https://noxx.substack.com/p/order-flows-kingmaker-of-the-block,https://twitter.com/0xTaker,,
+"DEX Arbitrage, Mathematical Optimisations & Me",https://noxx.substack.com/p/dex-arbitrage-mathematical-optimisations,https://twitter.com/0xTaker,,
 Designing Multi-Dimensional Blockchain Fee Markets — Emperor,https://crypto.mirror.xyz/ztCt3eXw-wCEwqBE6xCRTf-bZleezhyuW3ubxohYbBQ,https://www.twitter.com/unlock_VALue,2023-09-18,Emperor
 Defining the Latencies involved in MEV Strategies — Taker,https://taker.mirror.xyz/uYOelwkLc4K7nlo5XV_zpuqsV6MwIMMp-py4e-u4qnE,https://www.twitter.com/unlock_VALue,2023-03-14,Taker
 Merge Anniversary - A Year In Review - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/merge-anniversary-a-year-in-review/2400,https://www.twitter.com/unlock_VALue,2023-11-14,https://collective.flashbots.net/u/Fred
@@ -419,10 +419,10 @@ Retroactive Public Goods Funding. Note: The Optimism team has long been… | by 
 ,https://gov.uniswap.org/t/uniswap-liquidity-mining-analysis/21416,https://www.twitter.com/unlock_VALue,,
 ,https://dydx.forum/t/dydx-v4-with-great-decentralization-comes-great-responsibility/1344,https://www.twitter.com/unlock_VALue,,
 ,https://governance.aave.com/t/temp-check-raising-the-safety-module-s-slashing-percentage/14167,https://www.twitter.com/unlock_VALue,,
-CurveMetrics,https://xenophonlabs.substack.com/p/curvemetrics?r=1ekt4m,https://www.twitter.com/unlock_VALue,2023-06-21,Xenophon Labs
-Congestion control and eip1559,https://barnabe.substack.com/p/congestion-control-and-eip1559,https://www.twitter.com/unlock_VALue,2021-02-17,Barnabé Monnot
-Understanding rollup economics from first principles,https://barnabe.substack.com/p/understanding-rollup-economics-from,https://www.twitter.com/unlock_VALue,2022-02-24,Barnabé Monnot
-The road to Ethereum,https://barnabe.substack.com/p/eth2,https://barnabe.substack.com/p/understanding-rollup-economics-from,2021-04-20,Barnabé Monnot
+CurveMetrics,https://xenophonlabs.substack.com/p/curvemetrics?r=1ekt4m,https://www.twitter.com/unlock_VALue,,
+Congestion control and eip1559,https://barnabe.substack.com/p/congestion-control-and-eip1559,https://www.twitter.com/unlock_VALue,,
+Understanding rollup economics from first principles,https://barnabe.substack.com/p/understanding-rollup-economics-from,https://www.twitter.com/unlock_VALue,,
+The road to Ethereum,https://barnabe.substack.com/p/eth2,https://barnabe.substack.com/p/understanding-rollup-economics-from,,
 ,https://gov.uniswap.org/t/gauntlet-s-uniswap-protocol-fee-report-tldr-version/22607,,,
 Trading in the Dark: Measuring Reordering Slippage in MEV,https://frontier.tech/measuring-reordering-slippage-in-mev,https://www.twitter.com/unlock_VALue,,by Evan Kim and Murat Akdeniz of Primev in collaboration with Frontier
 ,https://forum.arbitrum.foundation/t/request-for-discussion-arbitrum-foundation-transparency-standards/14272,,,
@@ -479,10 +479,10 @@ Solana Dev 101 - How to Mint an NFT on Solana,https://www.helius.dev/blog/how-to
 All You Need to Know About Solana’s New DAS API,https://www.helius.dev/blog/all-you-need-to-know-about-solanas-new-das-api,https://www.twitter.com/unlock_VALue,2023-09-18,Hunter Davis
 Solana Dev 101 - Using DAS API For Fetching all NFTs in a Collection,https://www.helius.dev/blog/solana-dev-101-using-das-to-return-all-collection-assets,https://www.twitter.com/unlock_VALue,2023-07-28,Hunter Davis
 FRP-34: Do backrun auctions protect traders? - FRPs - Flashbots Research Proposals - The Flashbots Collective,https://collective.flashbots.net/t/frp-34-do-backrun-auctions-protect-traders/2977,https://twitter.com/awmacp/status/1755165431394935087,2024-01-25,https://collective.flashbots.net/u/awmacp
-Optimizing Interactions Between Ethereum Consensus & Execution Clients,https://terencechain.substack.com/p/optimizing-interactions-between-ethereum,,2024-01-16,terence
+Optimizing Interactions Between Ethereum Consensus & Execution Clients,https://terencechain.substack.com/p/optimizing-interactions-between-ethereum,,,
 Validator Timing Game Post EIP4844 - Block proposer - Ethereum Research,https://ethresear.ch/t/validator-timing-game-post-eip4844/18129,,2024-01-03,https://ethresear.ch/u/terence
-Writing an Ethereum Consensus Client: Lessons & Future,https://terencechain.substack.com/p/writing-an-ethereum-consensus-client,,2023-11-27,terence
-Navigating Ethereum's 2024 Consensus Landscape 🧭,https://terencechain.substack.com/p/navigating-ethereums-2024-consensus,,2023-09-20,terence
+Writing an Ethereum Consensus Client: Lessons & Future,https://terencechain.substack.com/p/writing-an-ethereum-consensus-client,,,
+Navigating Ethereum's 2024 Consensus Landscape 🧭,https://terencechain.substack.com/p/navigating-ethereums-2024-consensus,,,
 Solana & Ethereum Transaction Fee Mechanisms: Proposals to Impro… — Eclipse,https://mirror.xyz/eclipsemainnet.eth/GTrrYpmxSY1ubQ0SEV5akF7EZXgA2XFr7FEjM3CUuaE,,2024-02-08,Eclipse
 Composable is extending the Inter-Blockchain Communication (IBC) Protocol to Ethereum | by Composable Foundation | Medium,https://composablefi.medium.com/composable-is-extending-the-inter-blockchain-communication-ibc-protocol-to-ethereum-e5cc765af57e,https://www.twitter.com/unlock_VALue,2023-09-25,Composable Foundation
 Linea: The Secure zkEVM Ecosystem Where Dapps Thrive — Linea,https://linea.mirror.xyz/byKWNxXlxy9YmfMWCEarNr9m-GJJvoceAr__ibQYWKU,https://twitter.com/LineaBuild/status/1755654119274983751,2024-02-08,Linea
@@ -512,9 +512,9 @@ Uniswap V2 Router Explained by a Smart Contract Auditor — Add Liquidity | DeFi
 "Balancer: The Yield Bearing Asset Thesis | by Beethoven X | Balancer Protocol | Feb, 2024 | Medium",https://medium.com/balancer-protocol/balancer-the-yield-bearing-asset-thesis-f44489ba2deb,,2024-02-08,Beethoven X
 The promise and challenges of crypto + AI applications,https://vitalik.eth.limo/general/2024/01/30/cryptoai.html,,2024-01-30,Vitalik Buterin
 Getting Deep Into EVM: How Ethereum Works Backstage | by vasa | The Startup | Medium,https://medium.com/swlh/getting-deep-into-evm-how-ethereum-works-backstage-ab6ad9c0d0bf,https://www.zaryabs.com/evm-learning-resources/,2019-11-30,vasa
-EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 1,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,2022-02-27,noxx
-EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 2,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-d6b?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,2022-03-05,noxx
-EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 3,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-3ea?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,2022-03-27,noxx
+EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 1,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,,
+EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 2,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-d6b?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,,
+EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 3,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-3ea?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,,
 Diving Into The Ethereum VM Part 2 — How I Learned To Start Worrying And Count The Storage Cost | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-part-2-storage-layout-bc5349cb11b7,https://www.zaryabs.com/evm-learning-resources/,2017-08-14,zh
 Diving Into The Ethereum VM Part 3 — The Hidden Costs of Arrays | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-the-hidden-costs-of-arrays-28e119f04a9b,https://www.zaryabs.com/evm-learning-resources/,2017-08-24,zh
 How To Decipher A Smart Contract Method Call | by zh | Medium,https://medium.com/@hayeah/how-to-decipher-a-smart-contract-method-call-8ee980311603,https://www.zaryabs.com/evm-learning-resources/,2017-09-18,zh
@@ -614,3 +614,16 @@ Shutter Economics,https://blog.shutter.network/shutter-economics/,,2024-02-19,Sh
 ,https://www.rareskills.io/zk-book,,,
 ,https://www.rareskills.io/compound-v3-book,,,
 ,https://www.rareskills.io/uniswap-v2-book,,,
+"Running Bittensor. By: Ronan Broadhead x Derek Edwards | by Ronan | Collab+Currency | Feb, 2024 | Medium",https://medium.com/collab-currency/running-bittensor-9d0e810d2483,https://x.com/ronangmi/status/1762132322718298197?s=46&t=LTSoDWXLa08Oi2VCOCK2Yg,,
+Hacking the Blockchain: Ethereum. “Two roads diverged in a wood and I — I… | by Sleepy | Immunefi | Medium,https://medium.com/immunefi/hacking-the-blockchain-an-ultimate-guide-4f34b33c6e8b,,2021-12-28,Sleepy
+CAKE Working Group,https://frontier.tech/cake-working-group,https://twitter.com/FrontierDotTech/status/1760815850242613646,,"To join the CAKE Working Group, apply here."
+Demonstration of SUAVE oracle - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/demonstration-of-suave-oracle/3112,,2024-02-27,https://collective.flashbots.net/u/halo3mic
+Liquidity Bootstrapping Pool by Shutter DAO 0x36 Has Closed - The Numbers,https://blog.shutter.network/liquidity-bootstrapping-pool-by-shutter-dao-0x36-has-closed-the-numbers/,,,
+Integrating SUAVE with Astria Rollups - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/integrating-suave-with-astria-rollups/3118,,2024-02-28,https://collective.flashbots.net/u/itamarreif
+,https://www.eip4844.com/,,,
+Frequent Batch Auction on SUAVE - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/frequent-batch-auction-on-suave/3104,,2024-02-26,https://collective.flashbots.net/u/Alphaist
+Composable block building - Mev-Compose - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/composable-block-building-mev-compose/3091,,2024-02-23,https://collective.flashbots.net/u/jinsuk
+Announcing Suave-std - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/announcing-suave-std/3043/1,,2024-02-12,https://collective.flashbots.net/u/ferranbt
+Protecc’ed Execution on Orderflow - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/protecc-ed-execution-on-orderflow/3113,,2024-02-27,https://collective.flashbots.net/u/dmarz
+SUAVE Bridge - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/suave-bridge/2696,,2023-11-23,https://collective.flashbots.net/u/dmarz
+,https://docs.clusters.xyz/,,,
