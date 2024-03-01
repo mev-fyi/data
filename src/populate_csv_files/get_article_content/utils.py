@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 from src.utils import root_directory, return_driver
 
 
-def safe_request(url, max_retries=5, backoff_factor=0.3):
+def safe_request(url, max_retries=10, backoff_factor=1):
     """
     Safe request handling with retries and exponential backoff.
 
