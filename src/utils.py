@@ -366,6 +366,39 @@ def return_driver(headless=False):
     return driver
 
 
+def return_driver_get_discourse(headless=False):
+    # set up Chrome driver options
+    options = webdriver.ChromeOptions()
+    # options.add_argument("--disable-blink-features=AutomationControlled")
+    # options.add_argument("--start-maximized")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    # options.add_argument("--remote-debugging-port=9222")
+    # options.add_argument("--disable-gpu")
+    # options.add_argument("--disable-features=IsolateOrigins,site-per-process")
+    options.add_experimental_option('useAutomationExtension', False)
+
+    # # Add headless option if required
+    if headless:
+        options.add_argument("--headless")
+
+    # options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
+    # NOTE: ChromeDriverManager().install() no longer works
+    # needed to manually go here https://googlechromelabs.github.io/chrome-for-testing/#stable
+    # and provide direct paths to script for both binary and driver
+    # First run the script get_correct_chromedriver.sh
+    # Paths for the Chrome binary and ChromeDriver
+    # TODO 2023-09-18: add GIT LFS unroll of chromium folder when hitting this script
+    CHROME_BINARY_PATH = f'{root_directory()}/src/chromium/chrome-linux64/chrome'
+    CHROMEDRIVER_PATH = f'{root_directory()}/src/chromium/chromedriver-linux64/chromedriver'
+
+    # options = webdriver.ChromeOptions()
+    options.binary_location = CHROME_BINARY_PATH
+
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
+    return driver
+
 def create_directory(directory):
     os.makedirs(directory, exist_ok=True)
 
@@ -502,3 +535,4 @@ def validate_pdfs(directory_path: Union[str, Path]):
         except Exception as e:
             logging.info(f"Invalid PDF {pdf_file}, deleting... Reason: {e}")
             os.remove(pdf_file)
+
