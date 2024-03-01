@@ -30,7 +30,7 @@ def get_file_list(GITHUB_API_URL="https://api.github.com/repos/flashbots/flashbo
         return []
 
 
-def fetch_discourse_content_from_url(url, css_selectors=["div.post[itemprop='text']", "div.post[itemprop='articleBody']", "cooked"]):
+def fetch_discourse_content_from_url(url, css_selectors=["div.post[itemprop='text']", "#post_1 > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)", "div.post[itemprop='articleBody']", "cooked"]):
     """
     Fetch and neatly parse the content of an article from a URL using one of the specified CSS selectors or CSS paths.
     The content is returned in Markdown format.
@@ -55,7 +55,10 @@ def fetch_discourse_content_from_url(url, css_selectors=["div.post[itemprop='tex
         content_container = None
 
         for selector in css_selectors:
-            content_container = soup.select_one(selector) if selector != "cooked" else soup.find(class_=selector)
+            if 'ethresear.ch' in url:
+                content_container = soup.select_one("div.post[itemprop='articleBody']")
+            else:
+                content_container = soup.select_one(selector) if selector != "cooked" else soup.find(class_=selector)
             if content_container:
                 break
 
