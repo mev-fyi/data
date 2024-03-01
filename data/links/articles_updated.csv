@@ -433,7 +433,7 @@ Properties of issuance level (part 1) - HackMD,https://notes.ethereum.org/@domot
 ,https://forum.aztec.network/t/request-for-proposals-decentralized-sequencer-selection/350,https://www.twitter.com/unlock_VALue,,
 "The Cross-Domain Thesis Part 2: Storage Proofs, Computation, and… — Maven11 Research",https://maven11.mirror.xyz/3NqfzBemyvI9a0fhun7flOc20oq5XlXzOqphvKk5pxs,https://www.twitter.com/unlock_VALue,2023-10-05,Maven11 Research
 Validator consolidation in EIP-7251 - HackMD,https://notes.ethereum.org/@fradamt/maxeb-consolidation,https://www.twitter.com/unlock_VALue,,fradamt
-"Swap Fees Are For Losers: Introducing DeltaSwap, The First Feeless Spot DEX | by DeFi Devin | Jan, 2024 | Medium",https://medium.com/@defidevin/swap-fees-are-for-losers-introducing-deltaswap-the-first-feeless-spot-dex-c88b7b1ed340,https://www.twitter.com/unlock_VALue,,
+"Swap Fees Are For Losers: Introducing DeltaSwap, The First Feeless Spot DEX | by DeFi Devin | Jan, 2024 | Medium",https://medium.com/@defidevin/swap-fees-are-for-losers-introducing-deltaswap-the-first-feeless-spot-dex-c88b7b1ed340,https://www.twitter.com/unlock_VALue,2024-01-23,DeFi Devin
 2FA zk-rollups using SGX - zk-s[nt]arks - Ethereum Research,https://ethresear.ch/t/2fa-zk-rollups-using-sgx/14462,https://www.twitter.com/unlock_VALue,2022-12-21,https://ethresear.ch/u/JustinDrake
 ,https://blog.conduit.xyz/celestia-mainnet-migrations,https://www.twitter.com/unlock_VALue,,
 Sirrah: Speedrunning a TEE Coprocessor,https://writings.flashbots.net/suave-tee-coprocessor,https://www.twitter.com/unlock_VALue,2024-01-25,https://collective.flashbots.net/u/amiller
@@ -511,15 +511,15 @@ Smart Contract Shadow Audit in CodeHawks - Bloqarl - Medium,https://medium.com/@
 Uniswap V2 Router Explained by a Smart Contract Auditor — Add Liquidity | DeFi Protocol | by Bloqarl | Medium,https://medium.com/@bloqarl/uniswap-v2-router-explained-by-a-smart-contract-auditor-add-liquidity-defi-protocol-6e23973ad62e,,2023-10-16,Bloqarl
 "Balancer: The Yield Bearing Asset Thesis | by Beethoven X | Balancer Protocol | Feb, 2024 | Medium",https://medium.com/balancer-protocol/balancer-the-yield-bearing-asset-thesis-f44489ba2deb,,2024-02-08,Beethoven X
 The promise and challenges of crypto + AI applications,https://vitalik.eth.limo/general/2024/01/30/cryptoai.html,,2024-01-30,Vitalik Buterin
-Getting Deep Into EVM: How Ethereum Works Backstage | by vasa | The Startup | Medium,https://medium.com/swlh/getting-deep-into-evm-how-ethereum-works-backstage-ab6ad9c0d0bf,https://www.zaryabs.com/evm-learning-resources/,,
+Getting Deep Into EVM: How Ethereum Works Backstage | by vasa | The Startup | Medium,https://medium.com/swlh/getting-deep-into-evm-how-ethereum-works-backstage-ab6ad9c0d0bf,https://www.zaryabs.com/evm-learning-resources/,2019-11-30,vasa
 EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 1,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,,
 EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 2,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-d6b?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,,
 EVM Deep Dives: The Path to Shadowy Super Coder 🥷 💻 - Part 3,https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-3ea?s=r&ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,,
 Diving Into The Ethereum VM Part 2 — How I Learned To Start Worrying And Count The Storage Cost | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-part-2-storage-layout-bc5349cb11b7,https://www.zaryabs.com/evm-learning-resources/,2017-08-14,zh
-Diving Into The Ethereum VM Part 3 — The Hidden Costs of Arrays | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-the-hidden-costs-of-arrays-28e119f04a9b,https://www.zaryabs.com/evm-learning-resources/,,
-How To Decipher A Smart Contract Method Call | by zh | Medium,https://medium.com/@hayeah/how-to-decipher-a-smart-contract-method-call-8ee980311603,https://www.zaryabs.com/evm-learning-resources/,,
-Diving Into The Ethereum VM Part 5 — The Smart Contract Creation Process | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-part-5-the-smart-contract-creation-process-cb7b6133b855,https://www.zaryabs.com/evm-learning-resources/,,
-Solidity Tutorial : all about Assembly | by Jean Cvllr | Medium,https://jeancvllr.medium.com/solidity-tutorial-all-about-assembly-5acdfefde05c,https://www.zaryabs.com/evm-learning-resources/,,
+Diving Into The Ethereum VM Part 3 — The Hidden Costs of Arrays | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-the-hidden-costs-of-arrays-28e119f04a9b,https://www.zaryabs.com/evm-learning-resources/,2017-08-24,zh
+How To Decipher A Smart Contract Method Call | by zh | Medium,https://medium.com/@hayeah/how-to-decipher-a-smart-contract-method-call-8ee980311603,https://www.zaryabs.com/evm-learning-resources/,2017-09-18,zh
+Diving Into The Ethereum VM Part 5 — The Smart Contract Creation Process | by zh | Medium,https://medium.com/@hayeah/diving-into-the-ethereum-vm-part-5-the-smart-contract-creation-process-cb7b6133b855,https://www.zaryabs.com/evm-learning-resources/,2017-10-24,zh
+Solidity Tutorial : all about Assembly | by Jean Cvllr | Medium,https://jeancvllr.medium.com/solidity-tutorial-all-about-assembly-5acdfefde05c,https://www.zaryabs.com/evm-learning-resources/,2019-12-25,Jean Cvllr
 ,https://www.rareskills.io/post/ethereum-contract-creation-code?ref=zaryabs.com,https://www.zaryabs.com/evm-learning-resources/,,
 ,https://forum.celestia.org/t/sharing-a-sequencer-set-by-separating-execution-from-aggregation/702,,,
 ,https://social-dilemmas.github.io/,,,
@@ -530,17 +530,17 @@ Web3 Security: In-Depth — Officer's Blog,https://officercia.mirror.xyz/dgKaZvB
 The price is right: Realigning proposer-builder incentives with predictive MEV-burn - Economics - Ethereum Research,https://ethresear.ch/t/the-price-is-right-realigning-proposer-builder-incentives-with-predictive-mev-burn/18656,https://twitter.com/soispoke/status/1757078115308786078,2024-02-12,https://ethresear.ch/u/soispoke
 "Validator Penalties, Slashing, and their Impact on Tokemak v2 | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/validator-penalties-slashing-and-their-impact-on-tokemak-v2-f690489e7529,,2023-07-20,Tokemak
 Tokemak x Zealy Campaign & Upcoming Awareness Initiatives | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/tokemak-x-zealy-campaign-upcoming-awareness-initiatives-d11365383a0e,,2023-05-23,Tokemak
-"Tokemak (v2): Introducing LMPs, Autopilot, and the DAO Liquidity Marketplace | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/tokemak-v2-introducing-lmps-autopilot-and-the-dao-liquidity-marketplace-86b8ec0656a,,,
-All Systems Go for accTOKE and Rewards Logic Update | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/all-systems-go-for-acctoke-and-rewards-logic-update-d5f0ecf34629,,,
-TOKE/ETH Curve v2 LP (Boost with Convex) | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/toke-eth-curve-v2-lp-boost-with-convex-455c3b284249,,,
-┻┳ The ACCretion. The next phase of Tokemak is all about… | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/the-accretion-3e348c1be5ca,,,
+"Tokemak (v2): Introducing LMPs, Autopilot, and the DAO Liquidity Marketplace | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/tokemak-v2-introducing-lmps-autopilot-and-the-dao-liquidity-marketplace-86b8ec0656a,,2023-05-17,Tokemak
+All Systems Go for accTOKE and Rewards Logic Update | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/all-systems-go-for-acctoke-and-rewards-logic-update-d5f0ecf34629,,2022-11-30,Tokemak
+TOKE/ETH Curve v2 LP (Boost with Convex) | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/toke-eth-curve-v2-lp-boost-with-convex-455c3b284249,,2022-08-04,Tokemak
+┻┳ The ACCretion. The next phase of Tokemak is all about… | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/the-accretion-3e348c1be5ca,,2022-05-25,Tokemak
 ┻┳ A Few Upcoming Milestones for 2022 | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/a-few-upcoming-milestones-for-2022-90e3415f5119,,2022-05-06,Tokemak
-"C.o.R.E.3 Voting Begins This Monday, May 2nd | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/c-o-r-e-3-voting-begins-this-monday-may-2nd-1687ff492199,,,
-"TOKE Emissions Update April 2022. Phase 1 Effective April 13th, 2022 | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/toke-emissions-update-april-2022-675240fbfad0,,,
+"C.o.R.E.3 Voting Begins This Monday, May 2nd | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/c-o-r-e-3-voting-begins-this-monday-may-2nd-1687ff492199,,2022-04-28,Tokemak
+"TOKE Emissions Update April 2022. Phase 1 Effective April 13th, 2022 | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/toke-emissions-update-april-2022-675240fbfad0,,2022-04-07,Tokemak
 Tokemak Update March 2022. March of the Tokemechs | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/tokemak-update-march-2022-eb8a4f7bc525,,2022-03-08,Tokemak
-The Conclusion of Cycle Zero: Weekly Cycles and Staked TOKE Migration | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/the-conclusion-of-cycle-zero-weekly-cycles-and-staked-toke-migration-33a1811969e5,,,
-"Brace Yourselves, Pilots: Tokemak Liquidity Deployment Begins | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/brace-yourselves-pilots-tokemak-liquidity-deployment-begins-b1526c9bb0e4,,,
-UI Update: Exchange Voting is Live | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/ui-update-exchange-voting-is-live-d221ec44326c,,,
+The Conclusion of Cycle Zero: Weekly Cycles and Staked TOKE Migration | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/the-conclusion-of-cycle-zero-weekly-cycles-and-staked-toke-migration-33a1811969e5,,2022-02-23,Tokemak
+"Brace Yourselves, Pilots: Tokemak Liquidity Deployment Begins | by Tokemak | Tokemak | Medium",https://medium.com/tokemak/brace-yourselves-pilots-tokemak-liquidity-deployment-begins-b1526c9bb0e4,,2022-02-04,Tokemak
+UI Update: Exchange Voting is Live | by Tokemak | Tokemak | Medium,https://medium.com/tokemak/ui-update-exchange-voting-is-live-d221ec44326c,,2022-01-20,Tokemak
 Minimal ePBS - Beacon Chain Changes - Block proposer - Ethereum Research,https://ethresear.ch/t/minimal-epbs-beacon-chain-changes/18653,https://twitter.com/terencechain/status/1757053867265855700,2024-02-12,https://ethresear.ch/u/terence
 Leaderless Auctions,https://www.paradigm.xyz/2024/02/leaderless-auctions,https://twitter.com/_Dave__White_/status/1757471352897122672,,
 "EIP-4844, Blobs, and Blob Gas: What you need to know",https://www.blocknative.com/blog/eip-4844-blobs-and-blob-gas-what-you-need-to-know,,2024-02-07,Bert Kellerman
@@ -548,13 +548,13 @@ Deconstructing a Solidity Contract —Part I: Introduction,https://blog.openzepp
 Diving Into The Ethereum Virtual Machine | by zh | Qtum,https://blog.qtum.org/diving-into-the-ethereum-vm-6e8d5d2f3c30,https://www.zaryabs.com/evm-learning-resources/,2017-08-06,zh
 ,https://blog.merkle.io/blog/off-chain-bundles,https://twitter.com/merkle_mev/status/1757102503747862724,,
 ,https://blog.chain.link/chainlink-fair-sequencing-services-enabling-a-provably-fair-defi-ecosystem/,https://www.twitter.com/unlock_VALue,,
-"EIP 4844: What does it mean for L2 users? | by Ed Felten | Offchain Labs | Feb, 2024 | Medium",https://medium.com/offchainlabs/eip-4844-what-does-it-mean-for-l2-users-5e86ebc4c028,https://twitter.com/OffchainLabs/status/1757461008849740153,,
+"EIP 4844: What does it mean for L2 users? | by Ed Felten | Offchain Labs | Feb, 2024 | Medium",https://medium.com/offchainlabs/eip-4844-what-does-it-mean-for-l2-users-5e86ebc4c028,https://twitter.com/OffchainLabs/status/1757461008849740153,2024-02-13,Ed Felten
 "Sangria: A PLONK-ish folding scheme | by Crypto Fairy | Feb, 2024 | Medium",https://medium.com/@cryptofairy/sangria-a-plonk-ish-folding-scheme-2271204d2285,,2024-02-13,Crypto Fairy
 Introducing the CAKE framework,https://frontier.tech/the-cake-framework,,,by Ankit Chiplunkar & Stephane Gosselin for Frontier Research
 "zkSync Insufficient Proof Verification Bugfix Review | by Immunefi Editor | Immunefi | Feb, 2024 | Medium",https://medium.com/immunefi/zksync-insufficient-proof-verification-bugfix-review-dcd57944d0e2,https://twitter.com/chrisdior777/status/1758078448076284015,2024-02-09,Immunefi Editor
 ,https://www.galaxy.com/insights/research/understanding-intersection-crypto-ai/,https://twitter.com/Uptodatenow/status/1758143881261040098,,
 Uniswap v2 Overview,https://blog.uniswap.org/uniswap-v2,https://risencrypto.github.io/,2020-03-23,
-Uniswap v3 liquidity formula explained | by Atis E | Medium,https://atise.medium.com/uniswap-v3-liquidity-formula-explained-de8bd42afc3c,https://risencrypto.github.io/,,
+Uniswap v3 liquidity formula explained | by Atis E | Medium,https://atise.medium.com/uniswap-v3-liquidity-formula-explained-de8bd42afc3c,https://risencrypto.github.io/,2022-01-09,Atis E
 ,https://gov.uniswap.org/t/a-deep-dive-of-uniswaps-governance/19792,https://risencrypto.github.io/,,
 Liquidity Mining on Uniswap v3,https://www.paradigm.xyz/2021/05/liquidity-mining-on-uniswap-v3,https://risencrypto.github.io/,2021-05-18,Dan Robinson
 ,https://drive.google.com/file/d/1dRifSAXxc-6HKCKH8tcygEmHxJTKAlxp/view,https://risencrypto.github.io/,,
@@ -570,38 +570,38 @@ Liquidity Mining on Uniswap v3,https://www.paradigm.xyz/2021/05/liquidity-mining
 ,https://risencrypto.github.io/QuadraticSieve/,https://risencrypto.github.io/,,
 ,https://risencrypto.github.io/PohligHellman/,https://risencrypto.github.io/,,
 Fiat-Shamir security of FRI and related SNARKs — Part 1 | by Albert Garreta | Nethermind.eth | Medium,https://medium.com/nethermind-eth/fiat-shamir-security-of-fri-and-related-snarks-part-1-9b913728ddec,,2023-08-14,Albert Garreta
-Under the hood of Cairo 1.0: Exploring Sierra | by Mathieu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/under-the-hood-of-cairo-1-0-exploring-sierra-7f32808421f5,,,
+Under the hood of Cairo 1.0: Exploring Sierra | by Mathieu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/under-the-hood-of-cairo-1-0-exploring-sierra-7f32808421f5,,2023-04-13,Mathieu
 The History and Future of Account Abstraction | by Ismael Darwish | Nethermind.eth | Medium,https://medium.com/nethermind-eth/the-history-and-future-of-account-abstraction-10cb097ebdc8,,2021-12-23,Ismael Darwish
-Under the hood of Cairo 1.0: Exploring Sierra | by Mathieu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/under-the-hood-of-cairo-1-0-exploring-sierra-1220f6dbcf9,,,
+Under the hood of Cairo 1.0: Exploring Sierra | by Mathieu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/under-the-hood-of-cairo-1-0-exploring-sierra-1220f6dbcf9,,2023-04-13,Mathieu
 "The Liquid Staking Rush. By Joel Kahil, Benn Glorfield, and Eli… | by DeFi Scientist | Nethermind.eth | Medium",https://medium.com/nethermind-eth/the-liquid-staking-rush-1977aef2bad0,,2023-03-24,DeFi Scientist
-Getting started with Nethermind’s Starknet RPC service | by Nethermind | Nethermind.eth | Medium,https://medium.com/nethermind-eth/getting-started-with-netherminds-starknet-rpc-service-f6b49df8b889,,,
-Cairo: the Starknet way to writing safe code | by Kalzak | Nethermind.eth | Medium,https://medium.com/nethermind-eth/cairo-the-starknet-way-to-writing-safe-code-8169486c7132,,,
-Sunsetting Warp: A Farewell to the Solidity to Cairo transpiler | by Nethermind | Nethermind.eth | Medium,https://medium.com/nethermind-eth/sunsetting-warp-a-farewell-to-the-solidity-to-cairo-transpiler-79e9fdab5f5a,,,
+Getting started with Nethermind’s Starknet RPC service | by Nethermind | Nethermind.eth | Medium,https://medium.com/nethermind-eth/getting-started-with-netherminds-starknet-rpc-service-f6b49df8b889,,2023-12-12,Nethermind
+Cairo: the Starknet way to writing safe code | by Kalzak | Nethermind.eth | Medium,https://medium.com/nethermind-eth/cairo-the-starknet-way-to-writing-safe-code-8169486c7132,,2023-10-20,Kalzak
+Sunsetting Warp: A Farewell to the Solidity to Cairo transpiler | by Nethermind | Nethermind.eth | Medium,https://medium.com/nethermind-eth/sunsetting-warp-a-farewell-to-the-solidity-to-cairo-transpiler-79e9fdab5f5a,,2023-07-31,Nethermind
 How to monitor Starknet wallets. Learn how to build a Starknet wallet… | by Jelilat Anofiu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/how-to-monitor-starknet-wallets-f500845a1030,,2023-08-18,Jelilat Anofiu
-Juno v.0.4.0: Production-ready. Nethermind’s Starknet client… | by Rian Hughes | Nethermind.eth | Medium,https://medium.com/nethermind-eth/juno-0-4-production-ready-a15078397627,,,
-Under the hood of Cairo 1.0: Exploring Sierra | by Mathieu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/under-the-hood-of-cairo-1-0-exploring-sierra-9355d618b26f,,,
-Verifying a smart contract on Voyager | by Chen Wen Kang | Nethermind.eth | Medium,https://medium.com/nethermind-eth/verifying-a-starknet-smart-contract-on-voyager-3c2f127e84f6,,,
+Juno v.0.4.0: Production-ready. Nethermind’s Starknet client… | by Rian Hughes | Nethermind.eth | Medium,https://medium.com/nethermind-eth/juno-0-4-production-ready-a15078397627,,2023-07-26,Rian Hughes
+Under the hood of Cairo 1.0: Exploring Sierra | by Mathieu | Nethermind.eth | Medium,https://medium.com/nethermind-eth/under-the-hood-of-cairo-1-0-exploring-sierra-9355d618b26f,,2023-04-13,Mathieu
+Verifying a smart contract on Voyager | by Chen Wen Kang | Nethermind.eth | Medium,https://medium.com/nethermind-eth/verifying-a-starknet-smart-contract-on-voyager-3c2f127e84f6,,2023-03-13,Chen Wen Kang
 Introduction to Horus — Part 2. Formal verification of an automated… | by Julian Sutherland | Nethermind.eth | Medium,https://medium.com/nethermind-eth/introduction-to-horus-part-2-3dbc77dcdb4a,,2023-04-07,Julian Sutherland
-Introduction to Horus — Part 1. Horus is an open-source automated… | by Julian Sutherland | Nethermind.eth | Medium,https://medium.com/nethermind-eth/introduction-to-horus-part-1-fbc16af3ba67,,,
-"A First Look at Cairo 1.0: A Safer, Stronger & Simpler Provable Programming Language | by Mathieu | Nethermind.eth | Medium",https://medium.com/nethermind-eth/a-first-look-at-cairo-1-0-a-safer-stronger-simpler-provable-programming-language-892ce4c07b38,,,
-Cairo fundamentals stacked up against EVM and Solidity | by Mauricio Perdomo | Nethermind.eth | Medium,https://medium.com/nethermind-eth/cairo-fundamentals-stacked-up-against-evm-and-solidity-1d8d4e12b2c3,,,
+Introduction to Horus — Part 1. Horus is an open-source automated… | by Julian Sutherland | Nethermind.eth | Medium,https://medium.com/nethermind-eth/introduction-to-horus-part-1-fbc16af3ba67,,2023-02-23,Julian Sutherland
+"A First Look at Cairo 1.0: A Safer, Stronger & Simpler Provable Programming Language | by Mathieu | Nethermind.eth | Medium",https://medium.com/nethermind-eth/a-first-look-at-cairo-1-0-a-safer-stronger-simpler-provable-programming-language-892ce4c07b38,,2022-12-30,Mathieu
+Cairo fundamentals stacked up against EVM and Solidity | by Mauricio Perdomo | Nethermind.eth | Medium,https://medium.com/nethermind-eth/cairo-fundamentals-stacked-up-against-evm-and-solidity-1d8d4e12b2c3,,2022-12-16,Mauricio Perdomo
 "Introducing UniStark: Uniswap, only Warp’ed to StarkNet | by Jorik Schellekens | Nethermind.eth | Medium",https://medium.com/nethermind-eth/introducing-unistark-uniswap-only-warped-to-starknet-6b62d3a96690,,2022-10-08,Jorik Schellekens
-Reducing the step count of 256-bit operations in Cairo | by Yevgeny Zaytman | Nethermind.eth | Medium,https://medium.com/nethermind-eth/reducing-the-step-count-for-256-bit-operations-in-cairo-61299649dc0c,,,
-Aave <> StarkNet Bridge. by Massil Achab | by Massil Achab | Nethermind.eth | Medium,https://medium.com/nethermind-eth/aave-starknet-bridge-9de6797c4ada,,,
-Cairo Coding Guidelines. by Massil Achab and Kalzak. | by Massil Achab | Nethermind.eth | Medium,https://medium.com/nethermind-eth/cairo-coding-guidelines-74eb6f4ee264,,,
+Reducing the step count of 256-bit operations in Cairo | by Yevgeny Zaytman | Nethermind.eth | Medium,https://medium.com/nethermind-eth/reducing-the-step-count-for-256-bit-operations-in-cairo-61299649dc0c,,2022-10-25,Yevgeny Zaytman
+Aave <> StarkNet Bridge. by Massil Achab | by Massil Achab | Nethermind.eth | Medium,https://medium.com/nethermind-eth/aave-starknet-bridge-9de6797c4ada,,2022-12-06,Massil Achab
+Cairo Coding Guidelines. by Massil Achab and Kalzak. | by Massil Achab | Nethermind.eth | Medium,https://medium.com/nethermind-eth/cairo-coding-guidelines-74eb6f4ee264,,2022-09-23,Massil Achab
 Warp 2.0 — Transpiling Directly From Solidity to Cairo | by Guy McComb | Nethermind.eth | Medium,https://medium.com/nethermind-eth/warp-2-0-transpiling-directly-from-solidity-to-cairo-9bf41a6d26ee,,2022-07-05,Guy McComb
-Introducing Voyager — The window to StarkNet | by Ismael Darwish | Nethermind.eth | Medium,https://medium.com/nethermind-eth/introducing-voyager-the-window-to-starknet-c948f3a07a9b,,,
-Algebraic Geometry Codes. Data is usually stored and transferred… | by Ignacio Manzur Tomasini | Nethermind.eth | Medium,https://medium.com/nethermind-eth/algebraic-geometry-codes-8b760f03b5d3,,,
-Ethereum Withdrawals and Liquid Staking | by Jorge Arce | Nethermind.eth | Medium,https://medium.com/nethermind-eth/ethereum-withdrawals-and-liquid-staking-68f0d50bbb81,,,
+Introducing Voyager — The window to StarkNet | by Ismael Darwish | Nethermind.eth | Medium,https://medium.com/nethermind-eth/introducing-voyager-the-window-to-starknet-c948f3a07a9b,,2022-03-28,Ismael Darwish
+Algebraic Geometry Codes. Data is usually stored and transferred… | by Ignacio Manzur Tomasini | Nethermind.eth | Medium,https://medium.com/nethermind-eth/algebraic-geometry-codes-8b760f03b5d3,,2023-04-03,Ignacio Manzur Tomasini
+Ethereum Withdrawals and Liquid Staking | by Jorge Arce | Nethermind.eth | Medium,https://medium.com/nethermind-eth/ethereum-withdrawals-and-liquid-staking-68f0d50bbb81,,2023-03-03,Jorge Arce
 Systematization of Knowledge for Decentralized Identities & Verifiable Credentials —Phase 1 of Research for Lido DAO: Complete | by Nethermind | Nethermind.eth | Medium,https://medium.com/nethermind-eth/systematization-of-knowledge-for-decentralized-identities-verifiable-credentials-phase-1-of-e972cf5ec153,,2022-12-21,Nethermind
-How to reach consensus with strangers | by Albert Garreta | Nethermind.eth | Medium,https://medium.com/nethermind-eth/how-to-reach-consensus-with-strangers-9b57264afd65,,,
-A tour of Verifiable Secret Sharing schemes and Distributed Key Generation protocols. | by Ignacio Manzur Tomasini | Nethermind.eth | Medium,https://medium.com/nethermind-eth/a-tour-of-verifiable-secret-sharing-schemes-and-distributed-key-generation-protocols-3c814e0d47e1,,,
-Sorting out Distributed Validator Technology - Nethermind.eth - Medium,https://medium.com/nethermind-eth/sorting-out-distributed-validator-technology-a6f8ca1bbce3,,,
-"Secret Sharing For Sharing Mnemonics, Part II - Nethermind.eth - Medium",https://medium.com/nethermind-eth/secret-sharing-for-sharing-mnemonics-part-ii-d76dc1581681,,,
-Using Shamir’s secret sharing to share mnemonics - Nethermind.eth - Medium,https://medium.com/nethermind-eth/using-shamirs-secret-sharing-to-share-mnemonics-c40429835117,,,
+How to reach consensus with strangers | by Albert Garreta | Nethermind.eth | Medium,https://medium.com/nethermind-eth/how-to-reach-consensus-with-strangers-9b57264afd65,,2022-09-09,Albert Garreta
+A tour of Verifiable Secret Sharing schemes and Distributed Key Generation protocols. | by Ignacio Manzur Tomasini | Nethermind.eth | Medium,https://medium.com/nethermind-eth/a-tour-of-verifiable-secret-sharing-schemes-and-distributed-key-generation-protocols-3c814e0d47e1,,2022-08-25,Ignacio Manzur Tomasini
+Sorting out Distributed Validator Technology - Nethermind.eth - Medium,https://medium.com/nethermind-eth/sorting-out-distributed-validator-technology-a6f8ca1bbce3,,2022-08-03,Isaac Villalobos
+"Secret Sharing For Sharing Mnemonics, Part II - Nethermind.eth - Medium",https://medium.com/nethermind-eth/secret-sharing-for-sharing-mnemonics-part-ii-d76dc1581681,,2022-04-15,Michal Zajac
+Using Shamir’s secret sharing to share mnemonics - Nethermind.eth - Medium,https://medium.com/nethermind-eth/using-shamirs-secret-sharing-to-share-mnemonics-c40429835117,,2022-03-31,Michal Zajac
 "The zkSync Era Remix Plugin: A How-To Guide | by Bohdan Ohorodnii | Nethermind.eth | Jan, 2024 | Medium",https://medium.com/nethermind-eth/the-zksync-era-remix-plugin-a-how-to-guide-fc54e8d24bd3,,2024-01-15,Bohdan Ohorodnii
-"Nethermind client: 3 Experimental Approaches to State Database Change | by Nethermind | Nethermind.eth | Jan, 2024 | Medium",https://medium.com/nethermind-eth/nethermind-client-3-experimental-approaches-to-state-database-change-8498e3d89771,,,
-Unlocking Onboarding to Starknet: An Overview of the Starknet Remix Plugin | by Edgar Barrantes | Nethermind.eth | Medium,https://medium.com/nethermind-eth/unlocking-onboarding-to-starknet-an-overview-of-the-starknet-remix-plugin-6b0658e73521,,,
+"Nethermind client: 3 Experimental Approaches to State Database Change | by Nethermind | Nethermind.eth | Jan, 2024 | Medium",https://medium.com/nethermind-eth/nethermind-client-3-experimental-approaches-to-state-database-change-8498e3d89771,,2024-01-11,Nethermind
+Unlocking Onboarding to Starknet: An Overview of the Starknet Remix Plugin | by Edgar Barrantes | Nethermind.eth | Medium,https://medium.com/nethermind-eth/unlocking-onboarding-to-starknet-an-overview-of-the-starknet-remix-plugin-6b0658e73521,,2023-09-04,Edgar Barrantes
 ,https://anoma.net/blog/abstract-intent-machines,,,
 Endgame Staking Economics: A Case for Targeting - Economics - Ethereum Research,https://ethresear.ch/t/endgame-staking-economics-a-case-for-targeting/18751,https://x.com/superphiz/status/1760742225364046322?s=46&t=LTSoDWXLa08Oi2VCOCK2Yg,2024-02-22,https://ethresear.ch/u/casparschwa
 ,https://governance.aave.com/t/gauntlet-is-leaving-aave/16700?u=hazbobo,,,
@@ -609,7 +609,7 @@ mev-boost improvement proposal #0 - HackMD,https://notes.ethereum.org/@ralexstok
 Block scoring for mev-boost relays - #26 by vitaliy - Relays - The Flashbots Collective,https://collective.flashbots.net/t/block-scoring-for-mev-boost-relays/202/26?u=ralexstokes,,2023-12-06,https://collective.flashbots.net/u/metachris
 Shutter Economics,https://blog.shutter.network/shutter-economics/,,2024-02-19,Shutter.network
 "0Kage Diaries Chapter 2 — Affine. Disclaimer: The opinions expressed here… | by 0Kage | Feb, 2024 | Medium",https://medium.com/@0kage/hack-series-deep-dive-chapter-2-affine-da2d7b0bbefd,https://twitter.com/0kage_eth/status/1761594595652366839,,
-0Kage Diaries Chapter 1 — Enzyme Finance | by 0Kage | Medium,https://medium.com/@0kage/hack-series-deep-dive-chapter-1-enzyme-finance-90f4d85c067e,https://twitter.com/shealtielanz/status/1761693985788035493,,
+0Kage Diaries Chapter 1 — Enzyme Finance | by 0Kage | Medium,https://medium.com/@0kage/hack-series-deep-dive-chapter-1-enzyme-finance-90f4d85c067e,https://twitter.com/shealtielanz/status/1761693985788035493,2023-09-07,0Kage
 ,https://www.rareskills.io/post/gas-optimization,,,
 ,https://www.rareskills.io/zk-book,,,
 ,https://www.rareskills.io/compound-v3-book,,,
