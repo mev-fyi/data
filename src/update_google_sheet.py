@@ -473,6 +473,7 @@ def main():
         {"csv_file": f"{repo_dir}/data/links/youtube/recommended_youtube_videos_with_details.csv", "tab_name": "Recommended Youtube Videos", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/links/youtube/youtube_videos.csv", "tab_name": "Youtube Videos (from channel list)", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/docs_details.csv", "tab_name": "Docs", "num_cols": 2},
+        {"csv_file": f"{repo_dir}/data/links/merged_articles.csv", "tab_name": "All Discourse articles", "num_cols": 2},
     ]
 
     # Using ThreadPoolExecutor to parallelize the updates
