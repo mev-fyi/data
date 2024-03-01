@@ -10,8 +10,9 @@ from concurrent.futures import ThreadPoolExecutor
 # Setup basic logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+
 def load_existing_links(csv_name):
-    csv_path = f'{root_directory()}/data/links/{csv_name}.csv'
+    csv_path = f'{root_directory()}/data/links/articles/{csv_name}.csv'
     try:
         with open(csv_path, 'r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
@@ -19,6 +20,7 @@ def load_existing_links(csv_name):
     except FileNotFoundError:
         logging.info(f"No existing CSV found for {csv_name}. Starting fresh.")
         return []
+
 
 def convert_date(date_str):
     try:
@@ -46,6 +48,7 @@ def convert_date(date_str):
                 # Log an error if none of the formats match
                 print(f"Error parsing date: {date_str}")
                 return None
+
 
 def scrape_forum_links(base_url, csv_name):
     logging.info(f"Starting to scrape {base_url} for links...")
@@ -101,6 +104,7 @@ def scrape_forum_links(base_url, csv_name):
         except Exception as e:
             logging.error(f"[{csv_name}] Error processing topic {idx}: {e}")
 
+    # Updated CSV writing part with newline parameter
     csv_path = f'{root_directory()}/data/links/articles/{csv_name}.csv'
     with open(csv_path, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
@@ -171,8 +175,18 @@ if __name__ == "__main__":
         ("https://forum.eigenlayer.xyz/c/eigenda/9", "eigenlayer_eigenda"),
         ("https://forum.eigenlayer.xyz/c/middleware/8", "eigenlayer_middleware"),
         ("https://forum.eigenlayer.xyz/c/general/4", "eigenlayer_general"),
+        ("https://forum.makerdao.com/c/sakura-subdao/88", "makerdao_sakura_subdao"),
+        ("https://forum.makerdao.com/c/spark-subdao/84", "makerdao_spark_subdao"),
+        ("https://forum.makerdao.com/c/quantitative-subdao/90", "makerdao_quantitative_subdao"),
+        ("https://forum.makerdao.com/c/qualitative-subdao/86", "makerdao_qualitative_subdao"),
+        ("https://forum.makerdao.com/c/maker-core/92", "makerdao_maker_core"),
+        ("https://forum.makerdao.com/c/proposal-ideas/94", "makerdao_proposal_ideas"),
+        ("https://forum.makerdao.com/c/developers-corner/93", "makerdao_developers_corner"),
+        ("https://forum.makerdao.com/c/avcs/98", "makerdao_avcs"),
+        ("https://forum.makerdao.com/c/alignment-conserver/78", "makerdao_alignment_conserver"),
+        ("https://forum.makerdao.com/c/legacy/74", "makerdao_legacy"),
     ]
-
+    # TODO 2024-03-01: automatically extract all subforums from the parent forum page
     with ThreadPoolExecutor() as executor:
         futures = [executor.submit(scrape_forum_links, forum[0], forum[1]) for forum in forums]
         for future in futures:
