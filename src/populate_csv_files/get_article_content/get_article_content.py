@@ -3,23 +3,13 @@ import pdfkit
 import logging
 import os
 
-from src.populate_csv_files.get_article_content.scrap_website import fetch_discourse_content_from_url, fetch_medium_content_from_url, fetch_mirror_content_from_url, fetch_frontier_tech_content_from_url, fetch_notion_content_from_url, fetch_hackmd_article_content, fetch_paradigm_article_content, fetch_propellerheads_article_content, fetch_jump_article_content, fetch_a16z_article_content, fetch_dba_article_content, fetch_iex_article_content, fetch_uniswap_article_content, fetch_substack_article_content, fetch_vitalik_article_content, fetch_monoceros_article_content, fetch_helius_article_content, fetch_mevio_article_content, fetch_outlierventures_article_content, fetch_gauntlet_article_content, fetch_chainlink_article_content, fetch_blocknative_article_content, fetch_shutter_article_content, fetch_duality_article_content, fetch_dydx_article_content, fetch_merkle_article_content, fetch_openzeppelin_article_content, fetch_zaryabs_article_content
+from src.populate_csv_files.get_article_content.scrap_website import fetch_discourse_content_from_url, fetch_medium_content_from_url, fetch_mirror_content_from_url, fetch_frontier_tech_content_from_url, fetch_notion_content_from_url, fetch_hackmd_article_content, fetch_paradigm_article_content, fetch_propellerheads_article_content, fetch_jump_article_content, fetch_a16z_article_content, fetch_dba_article_content, fetch_iex_article_content, fetch_uniswap_article_content, fetch_substack_article_content, fetch_vitalik_article_content, fetch_monoceros_article_content, fetch_helius_article_content, fetch_mevio_article_content, fetch_outlierventures_article_content, fetch_gauntlet_article_content, fetch_chainlink_article_content, fetch_blocknative_article_content, fetch_shutter_article_content, fetch_duality_article_content, fetch_dydx_article_content, fetch_merkle_article_content, fetch_openzeppelin_article_content, fetch_zaryabs_article_content, empty_content
 from src.populate_csv_files.get_article_content.utils import markdown_to_html
 from src.populate_csv_files.get_article_content.get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
 from src.utils import root_directory
 from concurrent.futures import ThreadPoolExecutor
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-
-empty_content = {
-        'content': None,
-        'release_date': None,
-        'authors': None,
-        'author_urls': None,
-        'author_firm_name': None,
-        'author_firm_url': None
-    }
 
 
 def fetch_content(row, output_dir):

@@ -8,9 +8,17 @@ from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
 
-from src.populate_csv_files.get_article_content.get_article_content import empty_content
 from src.populate_csv_files.get_article_content.utils import safe_request, html_to_markdown, sanitize_mojibake, convert_date_format, convert_mirror_date_format, convert_frontier_tech_date_format, html_to_markdown_a16z
 from src.utils import return_driver
+
+empty_content = {
+        'content': None,
+        'release_date': None,
+        'authors': None,
+        'author_urls': None,
+        'author_firm_name': None,
+        'author_firm_url': None
+    }
 
 
 def get_file_list(GITHUB_API_URL="https://api.github.com/repos/flashbots/flashbots-writings-website/contents/content"):
