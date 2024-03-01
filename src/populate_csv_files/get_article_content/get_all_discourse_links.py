@@ -70,7 +70,7 @@ def scrape_forum_links(base_url, csv_name):
             if new_height == last_height:
                 break
             last_height = new_height
-            logging.info("Scrolled to current bottom of the page.")
+            # logging.info("Scrolled to current bottom of the page.")
 
     scroll_to_bottom()
 
@@ -118,7 +118,7 @@ def scrape_forum_links(base_url, csv_name):
     driver.quit()
 
 
-if __name__ == "__main__":
+def run():
     forums = [
         ("https://collective.flashbots.net/c/research/20", "flashbots_research"),
         ("https://collective.flashbots.net/c/ship/18", "flashbots_ship"),
@@ -185,9 +185,21 @@ if __name__ == "__main__":
         ("https://forum.makerdao.com/c/avcs/98", "makerdao_avcs"),
         ("https://forum.makerdao.com/c/alignment-conserver/78", "makerdao_alignment_conserver"),
         ("https://forum.makerdao.com/c/legacy/74", "makerdao_legacy"),
+        ("https://forum.scrt.network/c/general-faq/9", "scrt_network_general_faq"),
+        ("https://forum.scrt.network/c/secret-network/46", "scrt_network_secret_network"),
+        ("https://forum.scrt.network/c/secret-contracts/50", "scrt_network_secret_contracts"),
+        ("https://forum.scrt.network/c/governance/47", "scrt_network_governance"),
+        ("https://forum.scrt.network/c/secret-nodes/8", "scrt_network_secret_nodes"),
+        ("https://forum.scrt.network/c/developer-help/10", "scrt_network_developer_help"),
+        ("https://forum.scrt.network/c/private-computation/6", "scrt_network_private_computation"),
+        ("https://forum.scrt.network/c/uncategorized/1", "scrt_network_uncategorized"),
     ]
     # TODO 2024-03-01: automatically extract all subforums from the parent forum page
     with ThreadPoolExecutor() as executor:
         futures = [executor.submit(scrape_forum_links, forum[0], forum[1]) for forum in forums]
         for future in futures:
             future.result()  # Wait for each task to complete
+
+
+if __name__ == "__main__":
+    run()

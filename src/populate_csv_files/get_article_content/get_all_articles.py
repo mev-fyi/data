@@ -64,6 +64,15 @@ def process_csv_files_in_parallel(csv_dir_or_file, output_dir, thread_count, ove
             process_single_csv(csv_file, final_output_dir, overwrite, thread_count)
 
 
+def run():
+    csv_path_or_directory = f"{root_directory()}/data/links/articles"  # Can be a directory or a single CSV file
+    output_directory = f"{root_directory()}/data/articles_pdf_download"
+    thread_count = 20  # Adjust based on your system capabilities
+
+    os.environ['NUMEXPR_MAX_THREADS'] = str(thread_count)
+    process_csv_files_in_parallel(csv_path_or_directory, output_directory, thread_count, overwrite=True)
+
+
 if __name__ == "__main__":
     # csv_path_or_directory = f"{root_directory()}/data/links/articles"  # Can be a directory or a single CSV file
     csv_path_or_directory = f"{root_directory()}/data/links/articles/ethresearch.csv"  # Adjust as needed
