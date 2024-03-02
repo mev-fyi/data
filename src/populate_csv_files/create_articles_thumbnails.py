@@ -1,5 +1,7 @@
 import functools
 import os
+import random
+
 import pandas as pd
 import time
 from PIL import Image
@@ -52,6 +54,8 @@ def take_screenshot(url, title, output_dir, headless=False, zoom=145, screenshot
     page_loaded = False
     while attempt < 2 and not page_loaded:
         try:
+            # do a random time sleep between 1 and 5 seconds
+            time.sleep(random.randint(1, 5))
             driver.get(url)
             # Check for HTTP status code here
             status_code = driver.execute_script("return document.status;")
@@ -112,39 +116,39 @@ def take_screenshot(url, title, output_dir, headless=False, zoom=145, screenshot
 
 def process_row(row, headless: bool):
     output_dir = f"{root_directory()}/data/article_thumbnails"
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    if 'article' in row.keys():
-        take_screenshot(row['article'], row['title'], output_dir, headless)
-    elif 'pdf_link' in row.keys():
-        take_screenshot(row['pdf_link'], row['title'], output_dir, headless)
-    else:
-        logging.error("Could not find link in row")
+    os.makedirs(output_dir, exist_ok=True)
+    link_key = 'article' if 'article' in row else 'Link'  # Adjust based on your CSV header
+    take_screenshot(row[link_key], row['title'], output_dir, headless)
 
 
-def main(headless: bool):
-    logging.basicConfig(level=logging.INFO)
-    csv_file_paths = [
-        f'{root_directory()}/data/links/articles_updated.csv',
-        f'{root_directory()}/data/docs_details.csv'
-    ]
+def prepare_df(csv_file_path):
+    df = pd.read_csv(csv_file_path)
+    if 'Link' in df.columns:
+        df.rename(columns={'Link': 'article', 'Title': 'title', 'Author': 'authors', 'Release Date': 'release_date'}, inplace=True)
+    return df
+
+
+def main(csv_file_paths, headless: bool):
     for csv_file_path in csv_file_paths:
         try:
-            df = pd.read_csv(csv_file_path)
+            df = prepare_df(csv_file_path)
+            # Shuffle the DataFrame rows to randomize URL access order
+            df = df.sample(frac=1).reset_index(drop=True)
         except FileNotFoundError:
             logging.error(f"File not found: {csv_file_path}")
             continue
 
-        # Filter for specific domains if necessary
-        # df = df[df['article'].str.contains('medium.com')]
-
-        num_workers = 20  # None # int(os.cpu_count() // 2)
-        os.environ['NUMEXPR_MAX_THREADS'] = f'{num_workers}'  # You can adjust the number as needed
+        num_workers = 20  # Adjust based on your system capabilities
+        os.environ['NUMEXPR_MAX_THREADS'] = str(num_workers)
         process_row_with_headless = functools.partial(process_row, headless=headless)
         with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
             executor.map(process_row_with_headless, df.to_dict('records'))
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-    main(headless=False)
+    csv_file_paths = [
+        # f'{root_directory()}/data/links/articles_updated.csv',
+        f'{root_directory()}/data/docs_details.csv',
+        f'{root_directory()}/data/links/merged_articles.csv'
+    ]
+    main(csv_file_paths, headless=False)
