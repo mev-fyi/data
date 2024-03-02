@@ -14,12 +14,12 @@ FIRMS = ['eigenlayer', 'dymension', 'bloxroute', 'panoptic', 'aave', 'compound',
 # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
 KEYWORDS_TO_INCLUDE = ['perps', 'derivatives', 'options', 'order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage', 'back-running',
             'maximal extractable value', 'trading games', 'timing games', 'arbitrage games', 'timing', 'on-chain games', 'pepc', 'proposer', 'builder',
-            'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'hyperchain', 'erc404', 'erc 404',
-            'suave', 'gas war', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge',
+            'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'hyperchain', 'erc404', 'erc 404', 'solidity & foundry', 'course', 'invariant test',
+            'suave', 'gas war', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge', 'code audit', 'audit code', 'upgradable smart contract',
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'rollup', 'roll-up', 'roll-ups', 'uniswap', 'appchain',
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives",
             'erc', 'eip', 'auction', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'pools', 'censorship',
-            '1559', 'BFT', 'selfish mining', 'vickrey auctions', "How They Solved Ethereum's Critical Flaw", 'cryptoeconomics',
+            '1559', 'BFT', 'selfish mining', 'vickrey auctions', "How They Solved Ethereum's Critical Flaw", 'cryptoeconomics','fuzzing',',formal verification',
             'token design', 'token economics', 'crypto economics', "John Adler : Wait, It's All Resource Pricing?", 'evm', 'whiteboard series']
 
 KEYWORDS_TO_INCLUDE += AUTHORS
