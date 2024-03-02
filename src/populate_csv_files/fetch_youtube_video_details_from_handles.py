@@ -291,6 +291,9 @@ def get_channel_names(api_key, yt_channels):
     for channel_handle in missing_handles:
         channel_name = get_channel_name(api_key, channel_handle)
         if channel_name:
+            # Check if the channel name starts with "=" and wrap it in triple quotes if so
+            if channel_name.startswith("="):
+                channel_name = f'"""{channel_name}"""'
             channel_handle_to_name[channel_handle] = channel_name
             logging.info(f"[{channel_handle}] added channel name: {channel_name}")
 
@@ -432,7 +435,7 @@ def run():
     fetch_videos = True
 
     PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots', 'Finematics',
-                   'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum', 'Celestia', 'Ava Labs']  # do not apply any filtering to these channels
+                   'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum', 'Celestia', 'Ava Labs', '=nil; Foundation', 'RISC Zero']  # do not apply any filtering to these channels
     # Define the channel-specific filters which are applied after the first keyword selection
     channel_specific_filters = {
         "Bankless": ["MEV", "maximal extractable value", "How They Solved Ethereum's Critical Flaw", "zk"] + AUTHORS + FIRMS,
