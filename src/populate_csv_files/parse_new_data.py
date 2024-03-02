@@ -308,6 +308,8 @@ def run():
         "gauntlet_xyz_website": r"^https://www\.gauntlet\.xyz/resources/?$",
         "dydx_exchange_article": r"^https://www\.dydx\.exchange/blog/.+$",
         "dydx_exchange_website": r"^https://www\.dydx\.exchange/blog/?$",
+        "cyfrin_io_article": r"^https://www\.cyfrin\.io/blog/.+$",
+        "cyfrin_io_website": r"^https://www\.cyfrin\.io/blog/?$",
         "mev_io_blog_article": r"^https://blog\.mev\.io/posts/.+$",
         "mev_io_blog_website": r"^https://blog\.mev\.io/posts/?$",
         "shutter_network_blog_article": r"^https://blog\.shutter\.network/.+$",
@@ -322,6 +324,14 @@ def run():
         "qtum_blog_website": r"^https://blog\.qtum\.org/?$",
         "openzeppelin_blog_article": r"^https://blog\.openzeppelin\.com/.+$",
         "openzeppelin_blog_website": r"^https://blog\.openzeppelin\.com/?$",
+        "nil_foundation_article": r"^https://www\.nil\.foundation/blog/.+$",
+        "nil_foundation_website": r"^https://www\.nil\.foundation/blog/?$",
+        "nil_foundation_research_website": r"^https://www\.nil\.foundation/research/?$",
+        "quillaudits_article": r"^https://blog\.quillaudits\.com/.+$",
+        "quillaudits_website": r"^https://blog\.quillaudits\.com/?$",
+        "quillaudits_trending_article": r"^https://blog\.quillaudits\.com/trending/.+$",
+        "quillaudits_trending_website": r"^https://blog\.quillaudits\.com/trending/?$",
+
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.

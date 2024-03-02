@@ -6,7 +6,7 @@ import time
 from urllib.parse import urlparse
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString, Tag
 
 from src.populate_csv_files.get_article_content.utils import safe_request, html_to_markdown, sanitize_mojibake, convert_date_format, convert_mirror_date_format, convert_frontier_tech_date_format, html_to_markdown_a16z
 from src.utils import return_driver
@@ -1770,6 +1770,162 @@ def fetch_zaryabs_article_content(url):
                 content_list.append(html_to_markdown(str(elem)))  # Convert HTML to Markdown
 
         content = ''.join(content_list)
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        logging.warning(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+def fetch_cyfrin_article_content(url):
+    """
+    Fetch the content of an article from a given URL.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.main-blog-container h1')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('.published-date .text-md-medium')
+        release_date = 'N/A'
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%B %d, %Y')
+            release_date = str(release_date_obj.strftime('%Y-%m-%d'))
+
+        # Extract author
+        authors_tag = soup.select_one('.author .text-md-medium')
+        authors = str(authors_tag.get_text(strip=True)) if authors_tag else 'N/A'
+
+
+        content_div = soup.select_one('.rich-text-block')
+        content_list = []
+        if content_div:
+            for elem in content_div.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol']):
+                content_list.append(html_to_markdown(elem))  # Convert HTML to Markdown
+
+        content = ''.join(content_list)
+
+        return {
+            'title': str(title),
+            'content': content.strip(),  # Remove any extra whitespace
+            'release_date': str(release_date),
+            'authors': str(authors)
+        }
+    except Exception as e:
+        logging.warning(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+
+def fetch_nil_foundation_article_content(url):
+    """
+    Fetch the content of an article from a given URL, with updated selectors for title,
+    release date, content, and author, specifically tailored for Nil Foundation's platform articles.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.PostPage_title___8UFz')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('p.PostPage_paragraph__KPeRn:nth-child(2)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str, '%d %b %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.PostPage_main__9KMkg')
+        content = html_to_markdown(str(content_div)) if content_div else 'N/A'  # Convert HTML to Markdown
+
+        # Author is statically set to "nil foundation"
+        authors = "nil foundation"
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        logging.warning(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_quillaudits_article_content(url):
+    """
+    Fetch the content of an article from a given URL, tailored for Quill Audits' platform articles.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title
+        title_tag = soup.select_one('.elementor-element-78fc641 > div:nth-child(1) > h2:nth-child(1)')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date and format it
+        release_date_tag = soup.select_one('.elementor-post-info__item--type-date')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str.strip(), '%B %d, %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Extract author
+        authors_tag = soup.select_one('.elementor-post-info__item--type-author')
+        authors = authors_tag.get_text(strip=True) if authors_tag else 'N/A'
+
+        # Extract content
+        content_div = soup.select_one('.elementor-element-f3a74ae > div:nth-child(1)')
+        content = html_to_markdown(str(content_div)) if content_div else 'N/A'  # Convert HTML to Markdown
 
         return {
             'title': title,
