@@ -7,8 +7,8 @@ AUTHORS = ['Uri Klarman', 'Robert Miller', 'Tarun Chitra', 'Hasu', 'Dan Robinson
 'Barnabe Monnot', 'Guillermo Angeris', 'Stephane Gosselin', 'Mallesh Pai', 'daian', 'Alex Nezlobin', 'Jason Milionis', 'Drew Van der Werff', '0xmaki',
 'Max Resnick', 'Quintus Kilbourn', 'Georgios Konstantopoulos', 'Alex Obadia', 'Su Zhu', 'Vitalik Buterin', 'Justin Drake', 'Mike Neuder']
 
-FIRMS = ['eigenlayer', 'dymension', 'bloxroute', 'panoptic', 'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig', 'balancer',
-         'uniswap', 'altlayer', 'aztec', 'starkware', 'scroll', 'optimism', 'zksync', 'matter labs', '1inch', 'anoma', 'espresso', 'blast', 'blast l2']
+FIRMS = ['eigenlayer', 'dymension', 'bloxroute', 'panoptic', 'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig', 'balancer', 'sushiswap',
+         'uniswap', 'altlayer', 'aztec', 'starkware', 'scroll', 'optimism', 'zksync', 'matter labs', '1inch', 'anoma', 'espresso', 'blast', 'blast l2', 'ambient', 'ambient finance']
 
 
 # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
@@ -18,7 +18,7 @@ KEYWORDS_TO_INCLUDE = ['perps', 'derivatives', 'options', 'order flow', 'orderfl
             'suave', 'gas war', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge', 'code audit', 'audit code', 'upgradable smart contract',
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'rollup', 'roll-up', 'roll-ups', 'uniswap', 'appchain',
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives",
-            'erc', 'eip', 'auction', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'pools', 'censorship',
+            'erc', 'eip', 'auction', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'pools', 'censorship', 'starknet',
             '1559', 'BFT', 'selfish mining', 'vickrey auctions', "How They Solved Ethereum's Critical Flaw", 'cryptoeconomics','fuzzing',',formal verification',
             'token design', 'token economics', 'crypto economics', "John Adler : Wait, It's All Resource Pricing?", 'evm', 'whiteboard series']
 
