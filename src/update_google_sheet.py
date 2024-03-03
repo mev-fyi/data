@@ -233,7 +233,7 @@ class GoogleSheetUpdater:
 
         resize_requests = []
         for i, col_name in enumerate(df_columns):
-            if col_name.lower() in ['title', 'release date']:
+            if col_name.lower() in ['title', 'release date', 'website', 'channel_name', 'channel name', 'twitter thread', 'youtube channel handle', 'release_date']:
                 # AutoResize only "Title" and "Release Date" columns
                 resize_requests.append({
                     "autoResizeDimensions": {
@@ -489,7 +489,7 @@ def update_youtube_data(repo_dir):
         'YouTube Channel Handle': open(youtube_txt_file, 'r').read().split(','),
         'Link': [f'https://www.youtube.com/{handle.strip()}' for handle in open(youtube_txt_file, 'r').read().split(',')]
     }
-    updater.update_google_sheet(data=youtube_data, tab_name="Podcasts & Youtube handles", num_rows=1000, num_cols=2)
+    updater.update_google_sheet(data=youtube_data, tab_name="YT channel handles", num_rows=1000, num_cols=2)
 
 
 def main():
@@ -502,19 +502,19 @@ def main():
     # Define the sheet update configurations
     sheets_to_update = [
         {"csv_file": f"{repo_dir}/data/paper_details.csv", "tab_name": "Papers", "num_cols": None},
-        {"csv_file": f"{repo_dir}/data/links/websites.csv", "tab_name": "Website Links", "num_cols": None},
+        {"csv_file": f"{repo_dir}/data/links/websites.csv", "tab_name": "Websites", "num_cols": None},
         {"csv_file": f"{repo_dir}/data/links/articles_updated.csv", "tab_name": "Articles", "num_cols": 2},
-        {"csv_file": f"{repo_dir}/data/links/twitter_threads.csv", "tab_name": "Twitter Threads", "num_cols": 2},
-        {"csv_file": f"{repo_dir}/data/links/youtube/recommended_youtube_videos_with_details.csv", "tab_name": "Recommended Youtube Videos", "num_cols": 2},
-        {"csv_file": f"{repo_dir}/data/links/youtube/youtube_videos.csv", "tab_name": "Youtube Videos (from channel list)", "num_cols": 2},
+        {"csv_file": f"{repo_dir}/data/links/twitter_threads.csv", "tab_name": "Threads", "num_cols": 2},
+        {"csv_file": f"{repo_dir}/data/links/youtube/recommended_youtube_videos_with_details.csv", "tab_name": "YT videos (recommended)", "num_cols": 2},
+        {"csv_file": f"{repo_dir}/data/links/youtube/youtube_videos.csv", "tab_name": "YT videos (channel list)", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/docs_details.csv", "tab_name": "Docs", "num_cols": 2},
-        {"csv_file": f"{repo_dir}/data/links/merged_articles.csv", "tab_name": "All Discourse articles", "num_cols": 2},
+        # {"csv_file": f"{repo_dir}/data/links/merged_articles.csv", "tab_name": "All Discourse articles", "num_cols": 2},
 
         {"csv_file": f"{rag_path_to_db}research_papers.csv", "tab_name": "Research papers in DB", "num_cols": 2},
         {"csv_file": f"{rag_path_to_db}articles.csv", "tab_name": "Articles in DB", "num_cols": 2},
         {"csv_file": f"{rag_path_to_db}docs.csv", "tab_name": "Docs in DB", "num_cols": 2},
         {"csv_file": f"{rag_path_to_db}youtube_videos.csv", "tab_name": "Videos in DB", "num_cols": 2},
-        {"csv_file": f"{rag_path_to_db}all_discourse_articles.csv", "tab_name": "Discourse Articles in DB", "num_cols": 2},
+        # {"csv_file": f"{rag_path_to_db}all_discourse_articles.csv", "tab_name": "Discourse Articles in DB", "num_cols": 2},
     ]
 
     # Using ThreadPoolExecutor to parallelize the updates
