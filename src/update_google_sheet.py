@@ -93,11 +93,24 @@ class GoogleSheetUpdater:
             # Reorder columns as per column_mapping
             df = df[list(column_mapping.values())]
 
+        if 'Release date' in df.columns:
             # Sort DataFrame in descending order by 'Release date' if the tab is 'Articles'
             df['Release date'] = pd.to_datetime(df['Release date'], errors='coerce')
             df.sort_values('Release date', ascending=False, inplace=True, na_position='last')
             # Convert 'Release date' back to string in 'yyyy-mm-dd' format
             df['Release date'] = df['Release date'].dt.strftime('%Y-%m-%d')
+
+        # Check if 'in DB' is part of the tab name to perform specific operations
+        if 'in DB' in tab_name:
+            # Replace underscores with spaces in column names
+            df.columns = df.columns.str.replace('_', ' ')
+            # Check for a 'Release Date' column and sort if exists
+            date_col_name = next((col for col in df.columns if 'release date' in col.lower()), None)
+            if date_col_name:
+                # Convert 'Release Date' to datetime, sort, and then back to string if necessary
+                df[date_col_name] = pd.to_datetime(df[date_col_name], errors='coerce')
+                df.sort_values(by=date_col_name, ascending=False, inplace=True)
+                df[date_col_name] = df[date_col_name].dt.strftime('%Y-%m-%d')
 
         # Pascal case all columns names
         df.columns = [col[0].upper() + col[1:] for col in df.columns]
@@ -158,21 +171,15 @@ class GoogleSheetUpdater:
 
         # Function to find the publish date column index
         def find_publish_or_release_date_column(df):
-            # Define a regular expression pattern to match column names
-            pattern = re.compile(r'publish(ed)?[_\s]?date', re.IGNORECASE)
+            # Combine patterns for "publish(ed) date" and "releas(ed) date" into one
+            pattern = re.compile(r'(publish(ed)?|releas(ed)?)[_\s]?date', re.IGNORECASE)
 
-            # Iterate through the column names
-            for col_name in df.columns:
-                if pattern.search(col_name):
-                    return df.columns.get_loc(col_name)
-            # Define a regular expression pattern to match column names
-            pattern = re.compile(r'releas(ed)?[_\s]?date', re.IGNORECASE)
-
-            # Iterate through the column names
+            # Iterate through the column names to find a match
             for col_name in df.columns:
                 if pattern.search(col_name):
                     return df.columns.get_loc(col_name)
             return None
+
         # Usage
         publish_date_column_index = find_publish_or_release_date_column(df)
         if publish_date_column_index is not None:
@@ -218,25 +225,50 @@ class GoogleSheetUpdater:
         service.spreadsheets().batchUpdate(spreadsheetId=self.sheet_id, body=body).execute()
 
         num_columns = df.shape[1]
-        resize_requests = []
+        # Identify columns that should not be auto-resized fully
+        # For example, excluding "Pdf link" and "Authors"
+        excluded_columns = ['Pdf link', 'Authors']
+        # Convert DataFrame column names to the format used in the sheet
+        df_columns = [col[0].upper() + col[1:] for col in df.columns]
 
-        for col in range(num_columns):
-            if df.columns[col].lower() != 'authors':
+        resize_requests = []
+        for i, col_name in enumerate(df_columns):
+            if col_name.lower() in ['title', 'release date']:
+                # AutoResize only "Title" and "Release Date" columns
                 resize_requests.append({
                     "autoResizeDimensions": {
                         "dimensions": {
                             "sheetId": sheet.id,
                             "dimension": "COLUMNS",
-                            "startIndex": col,
-                            "endIndex": col + 1
+                            "startIndex": i,
+                            "endIndex": i + 1
                         }
                     }
                 })
+            elif col_name not in excluded_columns:
+                # For other columns, optionally set a default width instead of auto-resizing
+                # This section is optional and can be adjusted or removed based on your requirements
+                resize_requests.append({
+                    "updateDimensionProperties": {
+                        "range": {
+                            "sheetId": sheet.id,
+                            "dimension": "COLUMNS",
+                            "startIndex": i,
+                            "endIndex": i + 1
+                        },
+                        "properties": {
+                            "pixelSize": 100  # Set your desired default width here
+                        },
+                        "fields": "pixelSize"
+                    }
+                })
 
-        body = {
-            'requests': resize_requests
-        }
+        # Now, add these resize requests to your list of requests
+        # Assuming `requests` is your list of other formatting requests
+        requests += resize_requests
 
+        # Execute all requests in a batchUpdate call
+        body = {"requests": requests}
         service.spreadsheets().batchUpdate(spreadsheetId=self.sheet_id, body=body).execute()
         logging.info(f"Saved data to new tab '{tab_name}' in Google Sheet and added filters.")
 
@@ -464,6 +496,9 @@ def main():
     load_dotenv()
     repo_dir = root_directory()
 
+    latest_rag_db = "2024-03-02-22-02_text-embedding-ada-002_750_10"
+    rag_path_to_db = f"{repo_dir}/../rag/.storage/research_pdf/{latest_rag_db}/"
+
     # Define the sheet update configurations
     sheets_to_update = [
         {"csv_file": f"{repo_dir}/data/paper_details.csv", "tab_name": "Papers", "num_cols": None},
@@ -474,6 +509,12 @@ def main():
         {"csv_file": f"{repo_dir}/data/links/youtube/youtube_videos.csv", "tab_name": "Youtube Videos (from channel list)", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/docs_details.csv", "tab_name": "Docs", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/links/merged_articles.csv", "tab_name": "All Discourse articles", "num_cols": 2},
+
+        {"csv_file": f"{rag_path_to_db}research_papers.csv", "tab_name": "Research papers in DB", "num_cols": 2},
+        {"csv_file": f"{rag_path_to_db}articles.csv", "tab_name": "Articles in DB", "num_cols": 2},
+        {"csv_file": f"{rag_path_to_db}docs.csv", "tab_name": "Docs in DB", "num_cols": 2},
+        {"csv_file": f"{rag_path_to_db}youtube_videos.csv", "tab_name": "Videos in DB", "num_cols": 2},
+        {"csv_file": f"{rag_path_to_db}all_discourse_articles.csv", "tab_name": "Discourse Articles in DB", "num_cols": 2},
     ]
 
     # Using ThreadPoolExecutor to parallelize the updates
