@@ -608,7 +608,7 @@ Endgame Staking Economics: A Case for Targeting - Economics - Ethereum Research,
 mev-boost improvement proposal #0 - HackMD,https://notes.ethereum.org/@ralexstokes/mbip-0,https://twitter.com/ralexstokes/status/1759729243070587030,,ralexstokes
 Block scoring for mev-boost relays - #26 by vitaliy - Relays - The Flashbots Collective,https://collective.flashbots.net/t/block-scoring-for-mev-boost-relays/202/26?u=ralexstokes,,2023-12-06,https://collective.flashbots.net/u/metachris
 Shutter Economics,https://blog.shutter.network/shutter-economics/,,2024-02-19,Shutter.network
-"0Kage Diaries Chapter 2 — Affine. Disclaimer: The opinions expressed here… | by 0Kage | Feb, 2024 | Medium",https://medium.com/@0kage/hack-series-deep-dive-chapter-2-affine-da2d7b0bbefd,https://twitter.com/0kage_eth/status/1761594595652366839,,
+"0Kage Diaries Chapter 2 — Affine. Disclaimer: The opinions expressed here… | by 0Kage | Feb, 2024 | Medium",https://medium.com/@0kage/hack-series-deep-dive-chapter-2-affine-da2d7b0bbefd,https://twitter.com/0kage_eth/status/1761594595652366839,2024-02-25,0Kage
 0Kage Diaries Chapter 1 — Enzyme Finance | by 0Kage | Medium,https://medium.com/@0kage/hack-series-deep-dive-chapter-1-enzyme-finance-90f4d85c067e,https://twitter.com/shealtielanz/status/1761693985788035493,2023-09-07,0Kage
 ,https://www.rareskills.io/post/gas-optimization,,,
 ,https://www.rareskills.io/zk-book,,,
@@ -639,31 +639,31 @@ Easy proof of equivalence between multiple polynomial commitment schemes to the 
 Collusion-Resistant Impartial Selection Protocol (CRISP) - Applications - Ethereum Research,https://ethresear.ch/t/collusion-resistant-impartial-selection-protocol-crisp/18804,,2024-02-27,https://ethresear.ch/u/auryn
 Concurrent Block Proposers in Ethereum - Block proposer - Ethereum Research,https://ethresear.ch/t/concurrent-block-proposers-in-ethereum/18777,,2024-02-23,https://ethresear.ch/u/mikeneuder
 "Launching mev.fyi, the MEV research chatbot - Meta-innovation - Ethereum Research",https://ethresear.ch/t/launching-mev-fyi-the-mev-research-chatbot/18796,,2024-02-26,https://ethresear.ch/u/Val
-What is a Blockchain Replay Attack? Full Guide on the 5 Most Common Types,https://www.cyfrin.io/blog/replay-attack-in-ethereum,,,
-11 Advanced Solidity Gas Optimization Tips,https://www.cyfrin.io/blog/solidity-gas-optimization-tips,,,
-5 Steps to Become a Blockchain Developer - The Full Roadmap,https://www.cyfrin.io/blog/how-to-become-a-blockchain-solidity-developer,,,
-Price Oracle Manipulation Attacks - The Full Guide,https://www.cyfrin.io/blog/price-oracle-manipulation-attacks-with-examples,,,
-What is a Smart Contract Security Audit?,https://www.cyfrin.io/blog/what-is-a-smart-contract-audit,,,
-Upgradable Smart Contracts | What is a Smart Contract Proxy Pattern?,https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern,,,
-8 Industry-leading Smart Contract Auditing Tools,https://www.cyfrin.io/blog/industry-leading-smart-contract-auditing-and-security-tools,,,
-Understanding Sybil Attacks in Blockchain and Smart Contracts,https://www.cyfrin.io/blog/understanding-sybil-attacks-in-blockchain-and-smart-contracts,,,
-Learn Web3 Development For Free | Top 9 Courses,https://www.cyfrin.io/blog/learn-web3-development-roadmap,,,
-How to become a Smart Contract Auditor | Full Roadmap,https://www.cyfrin.io/blog/how-to-become-a-smart-contract-auditor-courses-and-resources,,,
-What is fuzzing (fuzz tests) - Cybersecurity and Smart Contracts,https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry,,,
+What is a Blockchain Replay Attack? Full Guide on the 5 Most Common Types,https://www.cyfrin.io/blog/replay-attack-in-ethereum,,2024-03-03,Ciara Nightingale
+11 Advanced Solidity Gas Optimization Tips,https://www.cyfrin.io/blog/solidity-gas-optimization-tips,,2024-03-03,Vasiliy Gualoto
+5 Steps to Become a Blockchain Developer - The Full Roadmap,https://www.cyfrin.io/blog/how-to-become-a-blockchain-solidity-developer,,2024-03-03,Vitto Rivabella
+Price Oracle Manipulation Attacks - The Full Guide,https://www.cyfrin.io/blog/price-oracle-manipulation-attacks-with-examples,,2024-02-29,Juliette Chevalier
+What is a Smart Contract Security Audit?,https://www.cyfrin.io/blog/what-is-a-smart-contract-audit,,2024-03-03,Patrick Collins
+Upgradable Smart Contracts | What is a Smart Contract Proxy Pattern?,https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern,,2024-03-03,Ciara Nightingale
+8 Industry-leading Smart Contract Auditing Tools,https://www.cyfrin.io/blog/industry-leading-smart-contract-auditing-and-security-tools,,2024-03-03,Vasiliy Gualoto
+Understanding Sybil Attacks in Blockchain and Smart Contracts,https://www.cyfrin.io/blog/understanding-sybil-attacks-in-blockchain-and-smart-contracts,,2024-03-03,Ciara Nightingale
+Learn Web3 Development For Free | Top 9 Courses,https://www.cyfrin.io/blog/learn-web3-development-roadmap,,2024-03-03,Patrick Collins
+How to become a Smart Contract Auditor | Full Roadmap,https://www.cyfrin.io/blog/how-to-become-a-smart-contract-auditor-courses-and-resources,,2024-02-26,Patrick Collins
+What is fuzzing (fuzz tests) - Cybersecurity and Smart Contracts,https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry,,2024-03-03,Vasiliy Gualoto
 ,https://www.cyfrin.io/blog/smart-contract-auditor-salary,,,
-How did the Euler Finance hack happen? | Hack Analysis and Proof of Concept,https://www.cyfrin.io/blog/how-did-the-euler-finance-hack-happen-hack-analysis,,,
-Solodit Joins the Cyfrin Ecosystem,https://www.cyfrin.io/blog/solodit-joins-cyfrin-ecosystem,,,
-"Top 5 Web3 Developer Tools |  Languages, frameworks, and security",https://www.cyfrin.io/blog/top-web3-tools-for-developers,,,
-How to white hat a smart contract,https://www.cyfrin.io/blog/how-to-white-hat-a-smart-contract,,,
-AI Code Debugger | How to debug anything with AI,https://www.cyfrin.io/blog/ai-code-debugger-debug-code-with-ai,,,
-Best Web3 Wallets | Safest ways to store your crypto,https://www.cyfrin.io/blog/best-web3-wallets-safest-way-to-store-crypto,,,
-Smart Contract Formal Verification and Symbolic Execution Testing,https://www.cyfrin.io/blog/solidity-smart-contract-formal-verification-symbolic-execution,,,
-Fuzz and Invariant Tests,https://www.cyfrin.io/blog/fuzz-invariant-tests,,,
-Smart Contract Fuzz Tests Using Foundry | Full guide (updated),https://www.cyfrin.io/blog/smart-contract-fuzz-testing-using-foundry,,,
-What is are Blockchain Bridges | Crypto Crosschain in 5 Steps,https://www.cyfrin.io/blog/blockchain-bridges,,,
-Competitive vs Private Audits - Pros and Cons | The full comparison,https://www.cyfrin.io/blog/competitive-vs-private-audits-comparison,,,
-Top 10 smart contract auditing companies and services,https://www.cyfrin.io/blog/top-10-smart-contract-auditing-companies,,,
-How to Get All the Transactions From a Contract Address,https://www.cyfrin.io/blog/how-to-get-all-the-transactions-from-a-contract-address,,,
+How did the Euler Finance hack happen? | Hack Analysis and Proof of Concept,https://www.cyfrin.io/blog/how-did-the-euler-finance-hack-happen-hack-analysis,,2024-02-23,Ciara Nightingale
+Solodit Joins the Cyfrin Ecosystem,https://www.cyfrin.io/blog/solodit-joins-cyfrin-ecosystem,,2024-03-03,Cyfrin
+"Top 5 Web3 Developer Tools |  Languages, frameworks, and security",https://www.cyfrin.io/blog/top-web3-tools-for-developers,,2024-03-03,Patrick Collins
+How to white hat a smart contract,https://www.cyfrin.io/blog/how-to-white-hat-a-smart-contract,,2024-02-17,Patrick Collins
+AI Code Debugger | How to debug anything with AI,https://www.cyfrin.io/blog/ai-code-debugger-debug-code-with-ai,,2024-03-03,Cyfrin
+Best Web3 Wallets | Safest ways to store your crypto,https://www.cyfrin.io/blog/best-web3-wallets-safest-way-to-store-crypto,,2024-03-03,Patrick Collins
+Smart Contract Formal Verification and Symbolic Execution Testing,https://www.cyfrin.io/blog/solidity-smart-contract-formal-verification-symbolic-execution,,2024-03-03,Patrick Collins
+Fuzz and Invariant Tests,https://www.cyfrin.io/blog/fuzz-invariant-tests,,2024-03-03,Patrick Collins
+Smart Contract Fuzz Tests Using Foundry | Full guide (updated),https://www.cyfrin.io/blog/smart-contract-fuzz-testing-using-foundry,,2024-03-03,Vasiliy Gualoto
+What is are Blockchain Bridges | Crypto Crosschain in 5 Steps,https://www.cyfrin.io/blog/blockchain-bridges,,2024-03-03,Vasiliy Gualoto
+Competitive vs Private Audits - Pros and Cons | The full comparison,https://www.cyfrin.io/blog/competitive-vs-private-audits-comparison,,2024-03-03,Vasiliy Gualoto
+Top 10 smart contract auditing companies and services,https://www.cyfrin.io/blog/top-10-smart-contract-auditing-companies,,2024-03-03,Pari Tomar
+How to Get All the Transactions From a Contract Address,https://www.cyfrin.io/blog/how-to-get-all-the-transactions-from-a-contract-address,,2024-03-03,Patrick Collins
 ,https://blog.quillaudits.com/trending/guidelines-for-auditing-staking-protocols/,,,
 ,https://blog.quillaudits.com/trending/,,,
 ,https://blog.quillaudits.com/blockchain-security/dns-attacks-cascading-effects-and-mitigation-strategies/,,,
@@ -676,3 +676,5 @@ How to Get All the Transactions From a Contract Address,https://www.cyfrin.io/bl
 ,https://blog.quillaudits.com/trending/navigating-smart-contract-risks-and-best-practices/,,,
 ,https://blog.quillaudits.com/trending/what-is-nakamoto-consensus-the-mechanism-that-powers-bitcoin/,,,
 ,https://blog.quillaudits.com/nft/nft-security-101-common-vulnerabilities-and-analysis-of-major-nft-hacks-january-2024/,,,
+"Dymension Mainnet is Live. Dymension was conceptualized two years… | by Dymension | Feb, 2024 | Medium",https://medium.com/@dymension/dymension-mainnet-is-live-d0bdebd5650f,https://twitter.com/dymension/status/1764660148486722038,2024-02-06,Dymension
+"How to Raise the Gas Limit, Part 1: State Growth",https://www.paradigm.xyz/2024/03/how-to-raise-the-gas-limit-1,https://twitter.com/notnotstorm/status/1764700326282879115,2024-03-04,"['Storm Slivkoff', 'Georgios Konstantopoulos']"

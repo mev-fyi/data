@@ -254,3 +254,10 @@ Circle STARKs,"Ulrich Haböck, David Levit, Shahar Papini",https://eprint.iacr.o
 Extractable Witness Encryption for KZG Commitments and Efficient Laconic OT,"Nils Fleischhacker, Mathias Hall-Andersen, Mark Simkin",https://eprint.iacr.org/2024/264,iacr,2024-02-19,https://twitter.com/Simk1n/status/1759503212858450286
 ,,https://timroughgarden.org/papers/eobp3.pdf,Self-host,,
 ,,https://anthonyleezhang.github.io/slides/ethereum.pdf,Self-host,,
+SoK: Cross-Chain Bridging Architectural Design Flaws and Mitigations,"Jakob Svennevik Notland, Jinguye Li, Mariusz Nowostawski, Peter Halland Haro",http://arxiv.org/pdf/2403.00405v1,"arXiv, cs.CR",2024-03-01,
+On the Redistribution of Maximal Extractable Value: A Dynamic Mechanism,"Pedro Braga, Georgios Chionas, Stefanos Leonardos, Piotr Krysta, Georgios Piliouras, Carmine Ventre",http://arxiv.org/pdf/2402.15849v1,"arXiv, cs.GT, econ.TH, math.DS, 37, 65P20, 91, 93A14, 93A16, C.2.4; F.2; I.2.11; J.2; J.4",2024-02-24,https://twitter.com/chionas_/status/1764619565013581830
+,,https://cms.nil.foundation/uploads/zk_EVM_1_7d6f8caa16.pdf,Self-host,,
+,,https://cms.nil.foundation/uploads/zk_Sharding_Manifesto_8286652990.pdf,Self-host,,
+,,https://cms.nil.foundation/uploads/placeholder_reasearch_2023_c5cd673c14.pdf,Self-host,,
+,,https://cms.nil.foundation/uploads/zkllvm_a27f4af786.pdf,Self-host,,
+,,https://cms.nil.foundation/uploads/dbms_563e48c151.pdf,Self-host,,
