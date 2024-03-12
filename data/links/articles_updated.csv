@@ -60,7 +60,7 @@ Unpacking ERC-4337,https://frontier.tech/unpacking-erc-4337,https://www.twitter.
 MEV-Share: programmably private orderflow to share MEV with users - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/mev-share-programmably-private-orderflow-to-share-mev-with-users/1264/1,https://www.twitter.com/unlock_VALue,2023-02-15,https://collective.flashbots.net/u/bert
 The dream of redistributing the extracted value - Research - The Flashbots Collective,https://collective.flashbots.net/t/the-dream-of-redistributing-the-extracted-value/642,https://www.twitter.com/unlock_VALue,2022-10-27,https://collective.flashbots.net/u/chayoterabit
 Bookmarks relevant for redistribution researchers - #35 by chayoterabit - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663/35,https://www.twitter.com/unlock_VALue,2023-02-11,https://collective.flashbots.net/u/chayoterabit
-Bookmarks relevant for redistribution researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663,https://www.twitter.com/unlock_VALue,2024-02-16,https://collective.flashbots.net/u/chayoterabit
+Bookmarks relevant for redistribution researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663,https://www.twitter.com/unlock_VALue,2024-03-05,https://collective.flashbots.net/u/chayoterabit
 Forward inclusion list - HackMD,https://notes.ethereum.org/@fradamt/forward-inclusion-lists,https://www.twitter.com/unlock_VALue,,fradamt
 Unified ERC-4337 mempool - HackMD,https://notes.ethereum.org/@yoav/unified-erc-4337-mempool,https://www.twitter.com/unlock_VALue,,yoav
 Structuring Blockspace Derivatives — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/WKa3GFC03uY34d2MufTyD0c595xVRUEZi9RNG-dHNKs,https://www.twitter.com/unlock_VALue,2022-10-21,Julian Ma
@@ -614,7 +614,7 @@ Shutter Economics,https://blog.shutter.network/shutter-economics/,,2024-02-19,Sh
 ,https://www.rareskills.io/zk-book,,,
 ,https://www.rareskills.io/compound-v3-book,,,
 ,https://www.rareskills.io/uniswap-v2-book,,,
-"Running Bittensor. By: Ronan Broadhead x Derek Edwards | by Ronan | Collab+Currency | Feb, 2024 | Medium",https://medium.com/collab-currency/running-bittensor-9d0e810d2483,https://x.com/ronangmi/status/1762132322718298197?s=46&t=LTSoDWXLa08Oi2VCOCK2Yg,,
+"Running Bittensor. By: Ronan Broadhead x Derek Edwards | by Ronan | Collab+Currency | Feb, 2024 | Medium",https://medium.com/collab-currency/running-bittensor-9d0e810d2483,https://x.com/ronangmi/status/1762132322718298197?s=46&t=LTSoDWXLa08Oi2VCOCK2Yg,2024-02-26,Ronan
 Hacking the Blockchain: Ethereum. “Two roads diverged in a wood and I — I… | by Sleepy | Immunefi | Medium,https://medium.com/immunefi/hacking-the-blockchain-an-ultimate-guide-4f34b33c6e8b,,2021-12-28,Sleepy
 CAKE Working Group,https://frontier.tech/cake-working-group,https://twitter.com/FrontierDotTech/status/1760815850242613646,,"To join the CAKE Working Group, apply here."
 Demonstration of SUAVE oracle - SUAVE - The Flashbots Collective,https://collective.flashbots.net/t/demonstration-of-suave-oracle/3112,,2024-02-27,https://collective.flashbots.net/u/halo3mic
@@ -643,11 +643,11 @@ What is a Blockchain Replay Attack? Full Guide on the 5 Most Common Types,https:
 11 Advanced Solidity Gas Optimization Tips,https://www.cyfrin.io/blog/solidity-gas-optimization-tips,,2024-03-03,Vasiliy Gualoto
 5 Steps to Become a Blockchain Developer - The Full Roadmap,https://www.cyfrin.io/blog/how-to-become-a-blockchain-solidity-developer,,2024-03-03,Vitto Rivabella
 Price Oracle Manipulation Attacks - The Full Guide,https://www.cyfrin.io/blog/price-oracle-manipulation-attacks-with-examples,,2024-02-29,Juliette Chevalier
-What is a Smart Contract Security Audit?,https://www.cyfrin.io/blog/what-is-a-smart-contract-audit,,2024-03-03,Patrick Collins
+What is a Smart Contract Security Audit?,https://www.cyfrin.io/blog/what-is-a-smart-contract-audit,,2024-03-06,Patrick Collins and Vitto Rivabella
 Upgradable Smart Contracts | What is a Smart Contract Proxy Pattern?,https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern,,2024-03-03,Ciara Nightingale
-8 Industry-leading Smart Contract Auditing Tools,https://www.cyfrin.io/blog/industry-leading-smart-contract-auditing-and-security-tools,,2024-03-03,Vasiliy Gualoto
+8 Industry-leading Smart Contract Auditing Tools,https://www.cyfrin.io/blog/industry-leading-smart-contract-auditing-and-security-tools,,2024-03-05,Vasiliy Gualoto
 Understanding Sybil Attacks in Blockchain and Smart Contracts,https://www.cyfrin.io/blog/understanding-sybil-attacks-in-blockchain-and-smart-contracts,,2024-03-03,Ciara Nightingale
-Learn Web3 Development For Free | Top 9 Courses,https://www.cyfrin.io/blog/learn-web3-development-roadmap,,2024-03-03,Patrick Collins
+Learn Web3 Development For Free | Top 9 Courses,https://www.cyfrin.io/blog/learn-web3-development-roadmap,,2024-03-06,Patrick Collins
 How to become a Smart Contract Auditor | Full Roadmap,https://www.cyfrin.io/blog/how-to-become-a-smart-contract-auditor-courses-and-resources,,2024-02-26,Patrick Collins
 What is fuzzing (fuzz tests) - Cybersecurity and Smart Contracts,https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry,,2024-03-03,Vasiliy Gualoto
 ,https://www.cyfrin.io/blog/smart-contract-auditor-salary,,,
@@ -678,3 +678,51 @@ How to Get All the Transactions From a Contract Address,https://www.cyfrin.io/bl
 ,https://blog.quillaudits.com/nft/nft-security-101-common-vulnerabilities-and-analysis-of-major-nft-hacks-january-2024/,,,
 "Dymension Mainnet is Live. Dymension was conceptualized two years… | by Dymension | Feb, 2024 | Medium",https://medium.com/@dymension/dymension-mainnet-is-live-d0bdebd5650f,https://twitter.com/dymension/status/1764660148486722038,2024-02-06,Dymension
 "How to Raise the Gas Limit, Part 1: State Growth",https://www.paradigm.xyz/2024/03/how-to-raise-the-gas-limit-1,https://twitter.com/notnotstorm/status/1764700326282879115,2024-03-04,"['Storm Slivkoff', 'Georgios Konstantopoulos']"
+,https://nil.foundation/blog/post/nil_zkSharding,,,
+,https://nil.foundation/blog/post/makel2sscaleagain,,,
+,https://nil.foundation/blog/post/zkevm_via_zkllvm,,,
+,https://nil.foundation/blog/post/zkHackIstanbul,,,
+,https://nil.foundation/blog/post/rust-zkllvm-compiler,,,
+,https://nil.foundation/blog/post/zkml_pipeline,,,
+,https://nil.foundation/blog/post/placeholder-proofsystem,,,
+State of Wallets Part 2: Smart Accounts,https://paragraph.xyz/@cbventures/state-of-wallets-part-2,,,
+State of Wallets Part 1: Wallet Technologies,https://paragraph.xyz/@cbventures/state-of-wallets-part-1,,,
+,https://paragraph.xyz/@cbventures,,,
+State of Bridging,https://paragraph.xyz/@cbventures/state-of-bridging,,,
+Understanding the Zero-Knowledge Landscape,https://paragraph.xyz/@cbventures/understanding-the-zero-knowledge-landscape,,,
+A developer’s guide to the web3 security stack,https://paragraph.xyz/@cbventures/a-developers-guide-to-the-web3-security-stack,,,
+Decentralizing social media: a guide to the web3 social stack,https://paragraph.xyz/@cbventures/decentralizing-social-media-a-guide-to-the-web3-social-stack,,,
+A simple guide to the web3 developer stack,https://paragraph.xyz/@cbventures/a-simple-guide-to-the-web3-developer-stack,,,
+Coinbase Ventures Q3 recap and market outlook,https://paragraph.xyz/@cbventures/coinbase-ventures-q3-recap-and-market-outlook,,,
+Is the Bitcoin Lightning Network for real?,"https://paragraph.xyz/@cbventures/tldr-coinbase-ventures-deal-activity-reflected-the-overall-pace-of-the-venture-landscape,-down-34percent-qoq-activity-remained-up-68percent-yoy,-reflecting-the-steady-growth-of-our-venture-practice-over-the-past-year-among-the-key-trends-observed,-we-belie",,,
+Coinbase Ventures Q2 recap and market outlook,https://paragraph.xyz/@cbventures/coinbase-ventures-q2-recap-and-market-outlook,,,
+The crypto market downturn explained,https://paragraph.xyz/@cbventures/the-crypto-market-downturn-explained,,,
+Coinbase Ventures Q1 recap and market outlook,https://paragraph.xyz/@cbventures/coinbase-ventures-q1-recap-and-market-outlook,,,
+Crypto’s emergence as a geopolitical force,https://paragraph.xyz/@cbventures/cryptos-emergence-as-a-geopolitical-force,,,
+Ventures’ Takeaways from ETH Denver,https://paragraph.xyz/@cbventures/ventures-takeaways-from-eth-denver,,,
+Vampire attack! LooksRare vs. OpenSea,https://paragraph.xyz/@cbventures/vampire-attack-looksrare-vs-opensea,,,
+Crypto’s 69 most interesting charts from 2021,https://paragraph.xyz/@cbventures/cryptos-69-most-interesting-charts-from-2021,,,
+A simple guide to the Web3 stack,https://paragraph.xyz/@cbventures/a-simple-guide-to-the-web3-stack,,,
+Reflecting on Coinbase Ventures’ record year in 2021,https://paragraph.xyz/@cbventures/reflecting-on-coinbase-ventures-record-year-in-2021,,,
+DAOs: Social networks that can rewire the world,https://paragraph.xyz/@cbventures/daos-social-networks-that-can-rewire-the-world,,,
+Scaling Ethereum & crypto for a billion users,https://paragraph.xyz/@cbventures/scaling-ethereum-and-crypto-for-a-billion-users,,,
+Coinbase Ventures 2021-Q3 activity and takeaways,https://paragraph.xyz/@cbventures/coinbase-ventures-2021-q3-activity-and-takeaways,,,
+The Coinbase Ventures Guide to NFTs,https://paragraph.xyz/@cbventures/the-coinbase-ventures-guide-to-nfts,,,
+Loot Project: the first community owned NFT gaming platform,https://paragraph.xyz/@cbventures/loot-project-the-first-community-owned-nft-gaming-platform,,,
+"Axie Infinity, Yield Guild Games & the play-to-earn economy","https://paragraph.xyz/@cbventures/axie-infinity,-yield-guild-games-and-the-play-to-earn-economy",,,
+"Around the Block #15: CryptoPunks, the NFT boom, and EIP-1559","https://paragraph.xyz/@cbventures/around-the-block-15-cryptopunks,-the-nft-boom,-and-eip-1559",,,
+Around the Block #12: NFT mania,https://paragraph.xyz/@cbventures/around-the-block-12-nft-mania,,,
+Around the Block #13: On the value and risks of governance tokens,https://paragraph.xyz/@cbventures/around-the-block-13-on-the-value-and-risks-of-governance-tokens,,,
+Around the Block #11: A snapshot of DeFi and two sides of the crypto regulatory spectrum,https://paragraph.xyz/@cbventures/around-the-block-11-a-snapshot-of-defi-and-two-sides-of-the-crypto-regulatory-spectrum,,,
+Around the Block #10: “ETH killers” and new chains,https://paragraph.xyz/@cbventures/around-the-block-10-eth-killers-and-new-chains,,,
+Around the Block #9: Dawn of the DeFi Protocol Wars,https://paragraph.xyz/@cbventures/around-the-block-9-dawn-of-the-defi-protocol-wars,,,
+Around the Block #8: The promise and potential of synthetic assets,https://paragraph.xyz/@cbventures/around-the-block-8-the-promise-and-potential-of-synthetic-assets,,,
+Around the Block #7: Understanding yield farming and the latest developments in DeFi,https://paragraph.xyz/@cbventures/around-the-block-7-understanding-yield-farming-and-the-latest-developments-in-defi,,,
+"Around the Block #6: Bitcoin’s dominance alongside Coinbase customer behavior, the coming DEX revolution, and other recent crypto news","https://paragraph.xyz/@cbventures/around-the-block-6-bitcoins-dominance-alongside-coinbase-customer-behavior,-the-coming-dex-revolution,-and-other-recent-crypto-news",,,
+"Around the Block #5: downstream impacts of the recent market crash on lending, stablecoins, and DeFi","https://paragraph.xyz/@cbventures/around-the-block-5-downstream-impacts-of-the-recent-market-crash-on-lending,-stablecoins,-and-defi",,,
+Around the Block #4: on the recent market crash and Bitcoin’s value proposition,https://paragraph.xyz/@cbventures/around-the-block-4-on-the-recent-market-crash-and-bitcoins-value-proposition,,,
+"Around the Block #3: analysis on the bZx attack, DeFi vulnerabilities, the state of debit cards in crypto, and other crypto news","https://paragraph.xyz/@cbventures/around-the-block-3-analysis-on-the-bzx-attack,-defi-vulnerabilities,-the-state-of-debit-cards-in-crypto,-and-other-crypto-news",,,
+Around the Block #2: things you need to know about the Bitcoin halving and Ethereum’s competitors nearing launch,https://paragraph.xyz/@cbventures/around-the-block-2-things-you-need-to-know-about-the-bitcoin-halving-and-ethereums-competitors-nearing-launch,,,
+"Based Espresso: ad-hoc shared sequencing for all L2s, from based rollups to validiums - HackMD",https://hackmd.io/@EspressoSystems/rJCMloO6p,,2024-03-08,EspressoSystems
+Crypto-Powered Information Games — Archetype,https://archetype.mirror.xyz/LNgRLem1I27s3Aj0kOChnwG-4bFBdywkJNFtJ7zcX8w,,,
+Censorship on L1 and Inclusion List - HackMD,https://hackmd.io/@ttsao/ByO9D-Uaa,,2024-03-06,ttsao
