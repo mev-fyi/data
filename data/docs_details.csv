@@ -293,5 +293,27 @@ Uniswap-v2 Contract Walk-Through,Ethereum.org,https://ethereum.org/en/developers
 Some tricks used by scam tokens and how to detect them,Ethereum.org,https://ethereum.org/en/developers/tutorials/scam-token-tricks/,,developers-tutorials-scam-token-tricks-index.pdf
 Reverse Engineering a Contract,Ethereum.org,https://ethereum.org/en/developers/tutorials/reverse-engineering-a-contract/,,developers-tutorials-reverse-engineering-a-contract-index.pdf
 Waffle: Dynamic mocking and testing contract calls,Ethereum.org,https://ethereum.org/en/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/,,developers-tutorials-waffle-dynamic-mocking-and-testing-calls-index.pdf
-Code of Conduct,,https://docs.flashbots.net/code-of-conduct,2023-12-20,code-of-conduct.pdf
-js hint: calldata | contract_address | function_selector | logs | hash | undefined,,https://docs.flashbots.net/flashbots-protect/mev-share#hints,2024-01-09,specs-protect-rpc-_hints.pdf
+SUAVE Contribution Guide,,https://suave-alpha.flashbots.net/,2024-03-13,join-contribution-guide.pdf
+Join SUAVE,,https://suave-alpha.flashbots.net/,2024-03-13,join-joining-suave.pdf
+How SUAVE Extends Solidity description: Understand more about SUAVE keywords: - explanations - suave - concepts,,https://suave-alpha.flashbots.net/,2024-03-13,concepts-index.pdf
+Explanations description: Understand more about SUAVE keywords: - explanations - suave - concepts,,https://suave-alpha.flashbots.net/,2024-03-13,resources-index.pdf
+Introduction description: Get started by learning how to build cool stuff with SUAVE keywords: - tutorials - suave -,,https://suave-alpha.flashbots.net/,2024-03-13,tutorials-index.pdf
+Welcome to SUAVE hide_title: true description: SUAVE is a decentralized platform for fast and private off-chain,,https://suave-alpha.flashbots.net/,2024-03-13,index.pdf
+Run SUAVE Locally description: Start running SUAVE and participating in the chain itself keywords: - build - suave -,,https://suave-alpha.flashbots.net/,2024-03-13,tutorials-run-suave.pdf
+Golang SDK description: An overview of the Golang SDK,,https://suave-alpha.flashbots.net/,2024-03-13,resources-golang-sdk.pdf
+Build a SUAPP Webapp description: Build a webapp to interact with SUAPPs. keywords: - application - build - suave -,,https://suave-alpha.flashbots.net/,2024-03-13,tutorials-build-suapp-webapp.pdf
+What is SUAVE? hide_title: true description: SUAVE is a decentralized platform for fast and private off-chain,,https://suave-alpha.flashbots.net/,2024-03-13,what-is-suave.pdf
+Code of Conduct,,https://suave-alpha.flashbots.net/,2024-03-13,join-code-of-conduct.pdf
+What to Build description: Ideas for interesting things to build on SUAVE. keywords: - key - concepts - suave - build -,,https://suave-alpha.flashbots.net/,2024-03-13,what-to-build.pdf
+Forge description: Use Forge to help develop and test contracts with new precompiles on SUAVE,,https://suave-alpha.flashbots.net/,2024-03-13,resources-forge.pdf
+MEV Supply Chain Interface description: How SUAVE enables you to interact with virtually any component that has,,https://suave-alpha.flashbots.net/,2024-03-13,concepts-mev-supplychain-interface.pdf
+Confidential Computation description: How to understand confidential computation on SUAVE and use it to yur,,https://suave-alpha.flashbots.net/,2024-03-13,concepts-confidential-computation.pdf
+Confidential Data Storage description: How to leverage confidential data to your advantage when building on SUAVE,,https://suave-alpha.flashbots.net/,2024-03-13,concepts-confidential-data-storage.pdf
+Send Transactions description: Step-by-step walkthrough of how to send transactions on SUAVE keywords: - practical - suave -,,https://suave-alpha.flashbots.net/,2024-03-13,tutorials-send-transactions.pdf
+Create Precompiles description: How to create a precompile so that it is accessible in any builder solidity contract on,,https://suave-alpha.flashbots.net/,2024-03-13,tutorials-create-precompiles.pdf
+SUAVE Standard Library description: A collection of contracts and libraries to empower SUAPP developers and make,,https://suave-alpha.flashbots.net/,2024-03-13,tutorials-suave-standard-library.pdf
+Confidential Compute Requests description: How to understand and make confidential compute requests on SUAVE,,https://suave-alpha.flashbots.net/,2024-03-13,tutorials-confidential-compute-requests.pdf
+Deploy Contracts description: Deploy your first contract on SUAVE keywords: - contract - deploy - suave - solidity,,https://suave-alpha.flashbots.net/,2024-03-13,tutorials-deploy-contracts.pdf
+Block Building description: How you can use SUAVE to build blocks on other chains,,https://suave-alpha.flashbots.net/,2024-03-13,concepts-block-building.pdf
+Rigil Testnet description: All the relevant information you need to interact with Rigil,,https://suave-alpha.flashbots.net/,2024-03-13,resources-rigil.pdf
+TypeScript SDK description: An overview of the TypeScript SDK (suave-viem),,https://suave-alpha.flashbots.net/,2024-03-13,resources-typescript-sdk.pdf
