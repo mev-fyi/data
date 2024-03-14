@@ -13,7 +13,7 @@ from weasyprint import HTML
 # Load environment variables
 dotenv.load_dotenv()
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
-
+assert GITHUB_TOKEN is not None, "GITHUB_TOKEN environment variable is not set"
 # Configure logging
 
 
@@ -30,6 +30,7 @@ def get_content_list(github_api_url, headers, retry_count=3, delay=5):
                 return get_content_list(github_api_url, headers, retry_count-1, delay*2)
         logging.error(f"Error fetching content from {github_api_url}: {e}")
         return []
+
 
 def process_directory(output_dir, api_url, headers, overwrite=True, exclude_dirs=None, executor=None):
     # Check if the current directory is in the exclude list
@@ -76,6 +77,9 @@ def process_directory(output_dir, api_url, headers, overwrite=True, exclude_dirs
                 os.makedirs(new_output_dir, exist_ok=True)
                 future = executor.submit(process_directory, new_output_dir, new_api_url, headers, overwrite, exclude_dirs, executor)
                 dir_futures.append(future)
+            elif content['type'] == 'file' and content['name'].endswith(('.md', '.mdx')):
+                file_future = process_file(output_dir, content, headers, overwrite)  # Process files serially
+                file_futures.append(file_future)
 
     # Wait for all file futures to complete
     for future in file_futures:
@@ -90,10 +94,12 @@ def process_directory(output_dir, api_url, headers, overwrite=True, exclude_dirs
 
 def process_file(output_dir, file_info, headers, overwrite):
     file_name = file_info['name']
-    output_pdf_path = os.path.join(output_dir, file_name.replace('.md', '.pdf').replace('.mdx', '.pdf'))
+    file_name = file_name.replace('.md', '.pdf')
+    file_name = file_name.replace('.mdx', '.pdf')
+    output_pdf_path = os.path.join(output_dir, file_name)
 
     if not overwrite and os.path.exists(output_pdf_path):
-        # logging.info(f"File already exists: {output_pdf_path}. Skipping download and conversion.")
+        logging.info(f"File already exists: {output_pdf_path}. Skipping download and conversion.")
         return
 
     try:
@@ -171,7 +177,8 @@ def remove_images(html_content):
 
 def fetch_and_save_as_pdf(output_dir, repo_api_url, headers, exclude_dirs, overwrite=True):
     # No need to pass executor as an argument here
-    process_directory(output_dir, repo_api_url, headers, overwrite, exclude_dirs)
+    process_directory(output_dir=output_dir, api_url=repo_api_url, headers=headers, overwrite=overwrite, exclude_dirs=exclude_dirs, executor=None)
+
 
 def process_repositories(overwrite=True):
     headers = {'Authorization': f'token {GITHUB_TOKEN}'} if GITHUB_TOKEN else {}
@@ -180,17 +187,22 @@ def process_repositories(overwrite=True):
     # Flashbots Docs
     flashbots_output_dir = f'{root_directory()}/data/flashbots_docs_pdf/'
     flashbots_repo_api_url = "https://api.github.com/repos/flashbots/flashbots-docs/contents/docs"
-    fetch_and_save_as_pdf(flashbots_output_dir, flashbots_repo_api_url, headers, overwrite)
+    fetch_and_save_as_pdf(output_dir=flashbots_output_dir, repo_api_url=flashbots_repo_api_url, headers=headers, exclude_dirs=[], overwrite=overwrite)
+
+    # SUAVE Docs
+    suave_output_dir = f'{root_directory()}/data/suave_docs_pdf/'
+    suave_repo_api_url = "https://api.github.com/repos/flashbots/suave-docs/contents/docs"
+    fetch_and_save_as_pdf(output_dir=suave_output_dir, repo_api_url=suave_repo_api_url, headers=headers, exclude_dirs=[], overwrite=overwrite)
 
     # Ethereum Org Website
     ethereum_output_dir = f'{root_directory()}/data/ethereum_org_website_content/'
     ethereum_repo_api_url = "https://api.github.com/repos/ethereum/ethereum-org-website/contents/src/content"
+    fetch_and_save_as_pdf(output_dir=ethereum_output_dir, repo_api_url=ethereum_repo_api_url, headers=headers, exclude_dirs=exclude_dirs, overwrite=overwrite)
 
-    fetch_and_save_as_pdf(ethereum_output_dir, ethereum_repo_api_url, headers, overwrite, exclude_dirs)
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     try:
-        process_repositories(overwrite=False)
+        process_repositories(overwrite=True)
     except Exception as e:
         logging.error(f"Error processing repositories: {e}")
