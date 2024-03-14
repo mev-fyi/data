@@ -92,9 +92,9 @@ def process_file_info(output_dir, file_info):
         return title, release_date, authors
 
 
-def fetch_flashbots_writing_contents_and_save_as_pdf(output_dir):
+def fetch_flashbots_writing_contents_and_save_as_pdf(output_dir, GITHUB_API_URL="https://api.github.com/repos/flashbots/flashbots-writings-website/contents/content"):
     os.makedirs(output_dir, exist_ok=True)
-    flashbots_writings_file_list = get_file_list()
+    flashbots_writings_file_list = get_file_list(GITHUB_API_URL=GITHUB_API_URL)
 
     # Initialize a list to store data before converting to DataFrame
     articles_data = []

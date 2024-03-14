@@ -224,7 +224,7 @@ def run(url_filters=None, get_flashbots_writings=True, thread_count=None, overwr
 
 
 if __name__ == "__main__":
-    url_filters = ['cyfrin']  # ['a16z']  # ['pbs']  # None # ['hackmd']
+    url_filters = ['nil.foundation']  # ['a16z']  # ['pbs']  # None # ['hackmd']
     thread_count = 1
     os.environ['NUMEXPR_MAX_THREADS'] = f'{thread_count}'
     get_flashbots_writings = False

@@ -1871,7 +1871,7 @@ def fetch_nil_foundation_article_content(url):
 
         # Extract content
         content_div = soup.select_one('.PostPage_main__9KMkg')
-        content = html_to_markdown(str(content_div)) if content_div else 'N/A'  # Convert HTML to Markdown
+        content = html_to_markdown((content_div)) if content_div else 'N/A'  # Convert HTML to Markdown
 
         # Author is statically set to "nil foundation"
         authors = "nil foundation"

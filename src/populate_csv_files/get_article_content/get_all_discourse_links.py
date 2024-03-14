@@ -193,6 +193,8 @@ def run():
         ("https://forum.scrt.network/c/developer-help/10", "scrt_network_developer_help"),
         ("https://forum.scrt.network/c/private-computation/6", "scrt_network_private_computation"),
         ("https://forum.scrt.network/c/uncategorized/1", "scrt_network_uncategorized"),
+        ("https://community.taiko.xyz/", "taiko_community"),
+        ("forum.numer.ai", "numerai_forum"),
     ]
     # TODO 2024-03-01: automatically extract all subforums from the parent forum page
     with ThreadPoolExecutor() as executor:

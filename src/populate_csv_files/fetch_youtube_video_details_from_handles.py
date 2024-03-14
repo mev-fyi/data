@@ -434,8 +434,8 @@ def run():
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
     fetch_videos = True
 
-    PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots', 'Finematics', 'Sentient', 'NFTfi',
-                   'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum', 'Celestia', 'Ava Labs', '=nil; Foundation', 'RISC Zero']  # do not apply any filtering to these channels
+    PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots', 'Finematics', 'Sentient', 'NFTfi', 'SevenX Ventures', 'Numerai',
+                   'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum', 'Celestia', 'Ava Labs', '=nil; Foundation', 'RISC Zero', 'Nethermind']  # do not apply any filtering to these channels
     # Define the channel-specific filters which are applied after the first keyword selection
     channel_specific_filters = {
         "Bankless": ["MEV", "maximal extractable value", "How They Solved Ethereum's Critical Flaw", "zk"] + AUTHORS + FIRMS,
