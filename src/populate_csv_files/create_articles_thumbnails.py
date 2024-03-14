@@ -1,6 +1,7 @@
 import functools
 import os
 import random
+from typing import Tuple
 
 import pandas as pd
 import time
@@ -114,24 +115,23 @@ def take_screenshot(url, title, output_dir, headless=False, zoom=145, screenshot
     logging.info(f"Saved screenshot for {url} at {screenshot_path}")
 
 
-def process_row(row, headless: bool):
+def process_row(row, headless: bool, link_key: str):
     output_dir = f"{root_directory()}/data/article_thumbnails"
     os.makedirs(output_dir, exist_ok=True)
-    link_key = 'article' if 'article' in row else 'Link'  # Adjust based on your CSV header
     take_screenshot(row[link_key], row['title'], output_dir, headless)
 
 
-def prepare_df(csv_file_path):
+def prepare_df(csv_file_path, link_key):
     df = pd.read_csv(csv_file_path)
-    if 'Link' in df.columns:
-        df.rename(columns={'Link': 'article', 'Title': 'title', 'Author': 'authors', 'Release Date': 'release_date'}, inplace=True)
+    if link_key not in df.columns:
+        df.rename(columns={link_key: 'article', 'Title': 'title', 'Author': 'authors', 'Release Date': 'release_date'}, inplace=True)
     return df
 
 
-def main(csv_file_paths, headless: bool):
-    for csv_file_path in csv_file_paths:
+def main(csv_file_path_link_key_tuples: Tuple[str, str] = [(f'{root_directory()}/data/links/articles_updated.csv', 'article'), (f'{root_directory()}/data/docs_details.csv', 'pdf_link'), (f'{root_directory()}/data/links/merged_articles.csv', 'Link')], headless: bool=False):
+    for csv_file_path, link_key in csv_file_path_link_key_tuples:
         try:
-            df = prepare_df(csv_file_path)
+            df = prepare_df(csv_file_path, link_key)
             # Shuffle the DataFrame rows to randomize URL access order
             df = df.sample(frac=1).reset_index(drop=True)
         except FileNotFoundError:
@@ -140,15 +140,15 @@ def main(csv_file_paths, headless: bool):
 
         num_workers = 20  # Adjust based on your system capabilities
         os.environ['NUMEXPR_MAX_THREADS'] = str(num_workers)
-        process_row_with_headless = functools.partial(process_row, headless=headless)
+        process_row_with_headless_and_link_key = functools.partial(process_row, headless=headless, link_key=link_key)
         with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
-            executor.map(process_row_with_headless, df.to_dict('records'))
+            executor.map(process_row_with_headless_and_link_key, df.to_dict('records'))
 
 
 if __name__ == "__main__":
-    csv_file_paths = [
-        # f'{root_directory()}/data/links/articles_updated.csv',
-        f'{root_directory()}/data/docs_details.csv',
-        f'{root_directory()}/data/links/merged_articles.csv'
+    csv_file_path_link_key_tuples = [
+        (f'{root_directory()}/data/links/articles_updated.csv', 'article'),
+        # (f'{root_directory()}/data/docs_details.csv', 'pdf_link'),
+        (f'{root_directory()}/data/links/merged_articles.csv', 'Link')
     ]
-    main(csv_file_paths, headless=False)
+    main(csv_file_path_link_key_tuples, headless=False)
