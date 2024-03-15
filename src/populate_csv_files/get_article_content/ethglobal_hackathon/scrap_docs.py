@@ -32,7 +32,7 @@ def generic_crawl(config, overwrite):
         if content:
             soup = BeautifulSoup(content, 'html.parser')
             parsed_data = parser(soup, config)
-            save_page_as_pdf(parsed_data, current_url, overwrite, config['base_name'])
+            save_page_as_pdf(parsed_data, current_url, overwrite, config.get('base_name', ''))
 
             # Logic for handling pagination (next button)
             next_button = soup.select_one(config.get('next_button_selector', '.pagination-nav__link--next'))
@@ -56,8 +56,8 @@ def generic_parser(soup, config):
 
 
 def main(overwrite=False):
-    single_doc = 'galadriel'
-    configs = {single_doc: site_configs[single_doc]}
+    docs = ['pimlico_permissionless','pimlico_bundler', 'pimlico_paymaster']
+    configs = {doc: site_configs[doc] for doc in docs}
     for docs in configs.keys():
         logging.info(f"Starting crawl for docs: [{docs}]")
         crawl_site(docs, overwrite)
@@ -67,4 +67,5 @@ if __name__ == '__main__':
     # Use a command line argument or environment variable to set overwrite if needed.
     # For example, using an environment variable:
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
+    overwrite = True
     main(overwrite)

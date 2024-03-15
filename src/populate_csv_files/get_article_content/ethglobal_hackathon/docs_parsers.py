@@ -1,6 +1,7 @@
 import base64
 import logging
 import os
+from functools import partial
 from urllib.parse import urljoin, urlparse
 
 import pdfkit
@@ -38,7 +39,7 @@ def crawl_chainlink(config, overwrite):
                 logging.error(f"Failed to fetch content for {url}")
 
 
-def fetch_sidebar_urls(soup, base_url, sidebar_selector="div.lg\:text-sm"):
+def fetch_sidebar_urls(soup, base_url, sidebar_selector):
     """
     Fetch all URLs from the sidebar, regardless of their nesting level.
 
@@ -63,13 +64,13 @@ def fetch_sidebar_urls(soup, base_url, sidebar_selector="div.lg\:text-sm"):
     return sidebar_links
 
 
-def crawl_galadriel(config, overwrite):
+def crawl_sidebar(config, overwrite, sidebar_selector):
     content = fetch_page(config['base_url'])
     if content:
         soup = BeautifulSoup(content, 'html.parser')
 
         # Get all hrefs from these links, ensuring they start with '/'
-        urls_to_crawl = fetch_sidebar_urls(soup, config['base_url'])
+        urls_to_crawl = fetch_sidebar_urls(soup, config['base_url'], sidebar_selector)
         # if base_url in urls_to_crawl, remove it
         if config['base_url'] in urls_to_crawl:
             urls_to_crawl.remove(config['base_url'])
@@ -81,7 +82,7 @@ def crawl_galadriel(config, overwrite):
                 page_soup = BeautifulSoup(page_content, 'html.parser')
                 parsed_data = {
                     'url': url,
-                    'content': parse_content(page_soup, config['content_selector'], url, config['img_selector'], html_to_markdown_docs_chainlink),
+                    'content': parse_content(page_soup, config['content_selector'], url, config['img_selector'], config.get('html_parser', html_to_markdown_docs)),
                     'author': "",  # Add author extraction if needed
                     'date': ""  # Add date extraction if needed
                 }
@@ -149,6 +150,8 @@ def save_page_as_pdf(parsed_data, url, overwrite, base_name=""):
     domain = urlparse(url).netloc
     path = urlparse(url).path.strip('/')
     filename = '-'.join(filter(None, path.split('/'))) + '.pdf'
+    if filename == '.pdf':
+        filename = 'index.pdf'
     save_path = os.path.join(save_dir(), domain + base_name, filename)
 
     if not overwrite and os.path.exists(save_path):
@@ -175,7 +178,7 @@ site_configs = {
         'base_url': 'https://docs.galadriel.com/overview',
         'content_selector': '#content-area',
         'img_selector': "div[class*='prose'] img",
-        'crawl_func': crawl_galadriel,  # Directly reference the specific crawl function
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='div.lg\:text-sm'),  # Directly reference the specific crawl function
     },
     'chainlink': {
         'base_url': 'https://docs.chain.link/ccip#overview',
@@ -224,5 +227,39 @@ site_configs = {
         'html_parser': html_to_markdown_docs_chainlink,
         'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
         'base_name': '-vrf',
+    },
+    'nethermind': {
+        'base_url': 'https://docs.nethermind.io',
+        'content_selector': '.docItemCol_VOVn',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'blockscout': {
+        'base_url': 'https://docs.blockscout.com',
+        'content_selector': 'main.flex-1',
+        'img_selector': 'picture.relative',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),  # Directly reference the specific crawl function
+    },
+    'pimlico_permissionless': {
+        'base_url': 'https://docs.pimlico.io/permissionless',
+        'content_selector': '.vocs_Content',
+        'img_selector': 'picture.relative',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.vocs_Sidebar_group'),
+        'base_name': '-permissionless',
+    },
+    'pimlico_bundler': {
+        'base_url': 'https://docs.pimlico.io/bundler',
+        'content_selector': '.vocs_Content',
+        'img_selector': 'picture.relative',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.vocs_Sidebar_group'),
+        'base_name': '-bundler',
+    },
+    'pimlico_paymaster': {
+        'base_url': 'https://docs.pimlico.io/paymaster',
+        'content_selector': '.vocs_Content',
+        'img_selector': 'picture.relative',
+        'base_name': '-paymaster',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.vocs_Sidebar_group'),
+
     },
 }

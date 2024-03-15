@@ -151,31 +151,78 @@ def html_to_markdown_docs(element, base_url):
     """
     Convert an HTML element to its Markdown representation, ensuring link texts do not contain unnecessary
     line breaks or excessive spaces, and appending the base URL to relative links.
+    This version ensures proper separation between code blocks and subsequent content.
     """
     tag_name = element.name
+    classes = element.get('class', []) if not isinstance(element, NavigableString) else ''  # Gets the class list of the current element
 
+    # Handle NavigableString without additional processing
     if isinstance(element, NavigableString):
         return str(element).strip()
 
+    # Check if the current element is a code block by its class name and process it
+    if 'vocs_CodeBlock' in classes or any(cls.startswith('group/codeblock') for cls in classes):
+        return process_code_block(element, base_url) + '\n'  # Ensure there is a newline after a code block
+
+    # Recursively process child elements
     children_text = ''.join(html_to_markdown_docs(child, base_url) for child in element.contents).strip()
 
+    # Process different elements according to their tags
+    return process_tag_based_content(tag_name, children_text, base_url, element) + '\n'  # Ensure there is a newline after each processed tag
+
+
+def process_code_block(element, base_url):
+    """
+    Handles processing of code block elements, ensuring proper Markdown formatting with triple backticks.
+    Identifies individual lines of code within <span> elements and handles them correctly.
+    This version ensures proper formatting and separation of code blocks.
+    """
+    code_lines = []
+
+    def process_code_line(child):
+        # If the child is a span, it might represent a single line of code.
+        if child.name == 'span':
+            line = ''.join(str(string).strip() for string in child.stripped_strings)
+            code_lines.append(line)
+        elif isinstance(child, NavigableString):
+            stripped_line = str(child).strip()
+            if stripped_line:  # Avoid adding empty lines
+                code_lines.append(stripped_line)
+        else:
+            # For other elements within the code block, recursively process its children
+            for inner_child in child.children:
+                process_code_line(inner_child)
+
+    for child in element.children:
+        process_code_line(child)
+
+    code_text = '\n'.join(code_lines)
+    return f"```python\n{code_text}\n```\n"  # Add a newline for separation
+
+def process_tag_based_content(tag_name, children_text, base_url, element):
+    """
+    Processes HTML tags to their Markdown equivalent, handling links, headers, lists, and more.
+    This version ensures proper separation and formatting of subsequent content.
+    """
     if tag_name == 'p':
         return children_text + '\n\n'
     elif tag_name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
         header_level = int(tag_name[1])
-        return '#' * header_level + ' ' + children_text + '\n\n'
+        # Ensure there is a newline before headers if they follow a code block or another header
+        return f"\n{'#' * header_level} {children_text}\n\n"
     elif tag_name == 'ul':
-        return '\n'.join(f"* {html_to_markdown_docs(li, base_url)}" for li in element.find_all('li', recursive=False)).strip() + '\n\n'
+        items = [item for item in children_text.split('\n') if item.strip()]
+        return '\n'.join(f"* {item}" for item in items).strip() + '\n\n'
     elif tag_name == 'ol':
-        return '\n'.join(f"1. {html_to_markdown_docs(li, base_url)}" for li in element.find_all('li', recursive=False)).strip() + '\n\n'
-    # Handle <li> directly if nested lists are involved
+        items = [item for item in children_text.split('\n') if item.strip()]
+        return '\n'.join(f"{index + 1}. {item}" for index, item in enumerate(items)).strip() + '\n\n'
     elif tag_name == 'li':
-        return ''.join(html_to_markdown_docs(child, base_url) for child in element.contents).strip()
+        return children_text.strip() + '\n'
     elif tag_name == 'a':
         href = element.get('href', '').strip()
         url = urljoin(base_url, href) if not href.startswith('http') else href
         text = children_text.replace('\n', ' ').replace('  ', ' ')
-        return f" [{text}]({url}) "
+        return f"[{text}]({url})"
     else:
         return children_text
 
