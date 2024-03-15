@@ -5,7 +5,7 @@ from io import BytesIO
 from src.utils import root_directory
 
 
-def generate_pdf_thumbnails(pdf_directory, output_directory, page_fraction=0.5, min_px=400, max_px=1500, zoom_factor=2.3):
+def generate_pdf_thumbnails(pdf_directory, output_directory, page_fraction=0.5, min_px=400, max_px=1500, zoom_factor=2.9):
     """
     Generate thumbnails for the top portion of the first page of all PDFs in the pdf_directory, then apply zooming.
     Thumbnails will have a size between min_px and max_px on the longest side after zooming.
