@@ -5,9 +5,10 @@ import time
 import markdown
 import requests
 from datetime import datetime
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 
 from src.utils import root_directory, return_driver
+from bs4 import NavigableString
 
 
 def safe_request(url, max_retries=10, backoff_factor=1):
@@ -144,6 +145,40 @@ def html_to_markdown(element):
         return element.string
     else:
         return ''.join(html_to_markdown(child) for child in element.contents).strip() + '\n\n'
+
+
+def html_to_markdown_docs(element, base_url):
+    """
+    Convert an HTML element to its Markdown representation, ensuring link texts do not contain unnecessary
+    line breaks or excessive spaces, and appending the base URL to relative links.
+    """
+    tag_name = element.name
+
+    if isinstance(element, NavigableString):
+        return str(element).strip()
+
+    children_text = ''.join(html_to_markdown_docs(child, base_url) for child in element.contents).strip()
+
+    if tag_name == 'p':
+        return children_text + '\n\n'
+    elif tag_name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
+        header_level = int(tag_name[1])
+        return '#' * header_level + ' ' + children_text + '\n\n'
+    elif tag_name == 'ul':
+        return '\n'.join(f"* {html_to_markdown_docs(li, base_url)}" for li in element.find_all('li', recursive=False)).strip() + '\n\n'
+    elif tag_name == 'ol':
+        return '\n'.join(f"1. {html_to_markdown_docs(li, base_url)}" for li in element.find_all('li', recursive=False)).strip() + '\n\n'
+    # Handle <li> directly if nested lists are involved
+    elif tag_name == 'li':
+        return ''.join(html_to_markdown_docs(child, base_url) for child in element.contents).strip()
+    elif tag_name == 'a':
+        href = element.get('href', '').strip()
+        url = urljoin(base_url, href) if not href.startswith('http') else href
+        text = children_text.replace('\n', ' ').replace('  ', ' ')
+        return f" [{text}]({url}) "
+    else:
+        return children_text
+
 
 
 def html_to_markdown_a16z(element):
