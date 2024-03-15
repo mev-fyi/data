@@ -32,7 +32,7 @@ def generic_crawl(config, overwrite):
         if content:
             soup = BeautifulSoup(content, 'html.parser')
             parsed_data = parser(soup, config)
-            save_page_as_pdf(parsed_data, current_url, overwrite)
+            save_page_as_pdf(parsed_data, current_url, overwrite, config['base_name'])
 
             # Logic for handling pagination (next button)
             next_button = soup.select_one(config.get('next_button_selector', '.pagination-nav__link--next'))
@@ -56,9 +56,11 @@ def generic_parser(soup, config):
 
 
 def main(overwrite=False):
-    for site_key in site_configs.keys():
-        logging.info(f"Starting crawl for site key: {site_key}")
-        crawl_site(site_key, overwrite)
+    single_doc = 'galadriel'
+    configs = {single_doc: site_configs[single_doc]}
+    for docs in configs.keys():
+        logging.info(f"Starting crawl for docs: [{docs}]")
+        crawl_site(docs, overwrite)
 
 
 if __name__ == '__main__':

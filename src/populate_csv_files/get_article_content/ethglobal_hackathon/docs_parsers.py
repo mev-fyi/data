@@ -33,7 +33,59 @@ def crawl_chainlink(config, overwrite):
                     'author': "",  # Add author extraction if needed
                     'date': ""  # Add date extraction if needed
                 }
-                save_page_as_pdf(parsed_data, url, overwrite)
+                save_page_as_pdf(parsed_data, url, overwrite, base_name=config['base_name'])
+            else:
+                logging.error(f"Failed to fetch content for {url}")
+
+
+def fetch_sidebar_urls(soup, base_url, sidebar_selector="div.lg\:text-sm"):
+    """
+    Fetch all URLs from the sidebar, regardless of their nesting level.
+
+    :param soup: BeautifulSoup object of the webpage.
+    :param base_url: The base URL of the website to ensure absolute URLs.
+    :return: List of URLs to crawl.
+    """
+    sidebar_links = []
+    # Target the sidebar directly, if possible, to reduce search scope
+    sidebar_container = soup.select_one(sidebar_selector)
+
+    if sidebar_container:
+        # Recursively fetch all 'a' tags regardless of their nesting level within the sidebar
+        all_links = sidebar_container.find_all("a")
+        for link in all_links:
+            href = link.get('href', '')
+            # Ensure the link is not empty and starts with '/' (or adjust according to your needs)
+            if href.startswith('/'):
+                full_url = urljoin(base_url, href)
+                sidebar_links.append(full_url)
+
+    return sidebar_links
+
+
+def crawl_galadriel(config, overwrite):
+    content = fetch_page(config['base_url'])
+    if content:
+        soup = BeautifulSoup(content, 'html.parser')
+
+        # Get all hrefs from these links, ensuring they start with '/'
+        urls_to_crawl = fetch_sidebar_urls(soup, config['base_url'])
+        # if base_url in urls_to_crawl, remove it
+        if config['base_url'] in urls_to_crawl:
+            urls_to_crawl.remove(config['base_url'])
+
+        # Crawl each URL found in the sidebar
+        for url in urls_to_crawl:
+            page_content = fetch_page(url)
+            if page_content:
+                page_soup = BeautifulSoup(page_content, 'html.parser')
+                parsed_data = {
+                    'url': url,
+                    'content': parse_content(page_soup, config['content_selector'], url, config['img_selector'], html_to_markdown_docs_chainlink),
+                    'author': "",  # Add author extraction if needed
+                    'date': ""  # Add date extraction if needed
+                }
+                save_page_as_pdf(parsed_data, url, overwrite, base_name=config.get('base_name', ''))
             else:
                 logging.error(f"Failed to fetch content for {url}")
 
@@ -93,11 +145,11 @@ def parse_content(soup, content_selector, base_url, img_selector, html_parser=ht
     return ""
 
 
-def save_page_as_pdf(parsed_data, url, overwrite):
+def save_page_as_pdf(parsed_data, url, overwrite, base_name=""):
     domain = urlparse(url).netloc
     path = urlparse(url).path.strip('/')
     filename = '-'.join(filter(None, path.split('/'))) + '.pdf'
-    save_path = os.path.join(save_dir(), domain, filename)
+    save_path = os.path.join(save_dir(), domain + base_name, filename)
 
     if not overwrite and os.path.exists(save_path):
         logging.info(f"PDF already exists and overwrite is False: {save_path}")
@@ -113,24 +165,64 @@ def save_dir():
 
 
 site_configs = {
-    # 'eigenlayer': {
-    #     'base_url': 'https://docs.eigenlayer.xyz/eigenlayer/overview',
-    #     'content_selector': '.docItemCol_VOVn',
-    #     'img_selector': '.img_ev3q',
-    #     'next_button_selector': '.pagination-nav__link--next',
-    # },
-    # 'galadriel': {
-    #     'base_url': 'https://docs.galadriel.com/overview',
-    #     'content_selector': '#content-area',
-    #     'img_selector': "div[class*='prose'] img",
-    #     'next_button_selector': "a.ml-auto",
-    # },
+    'eigenlayer': {
+        'base_url': 'https://docs.eigenlayer.xyz/eigenlayer/overview',
+        'content_selector': '.docItemCol_VOVn',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'galadriel': {
+        'base_url': 'https://docs.galadriel.com/overview',
+        'content_selector': '#content-area',
+        'img_selector': "div[class*='prose'] img",
+        'crawl_func': crawl_galadriel,  # Directly reference the specific crawl function
+    },
     'chainlink': {
         'base_url': 'https://docs.chain.link/ccip#overview',
         'content_selector': '#article',
         'img_selector': "img",
         'html_parser': html_to_markdown_docs_chainlink,
         'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
+        'base_name': '-ccip',
     },
-    # Add more configurations for other sites as needed
+    'chainlink_data_feeds': {
+        'base_url': 'https://docs.chain.link/data-feeds',
+        'content_selector': '#article',
+        'img_selector': "img",
+        'html_parser': html_to_markdown_docs_chainlink,
+        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
+        'base_name': '-data_feeds',
+    },
+    'chainlink_data_streams': {
+        'base_url': 'https://docs.chain.link/data-streams',
+        'content_selector': '#article',
+        'img_selector': "img",
+        'html_parser': html_to_markdown_docs_chainlink,
+        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
+        'base_name': '-data_streams',
+    },
+    'chainlink_functions': {
+        'base_url': 'https://docs.chain.link/chainlink-functions',
+        'content_selector': '#article',
+        'img_selector': "img",
+        'html_parser': html_to_markdown_docs_chainlink,
+        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
+        'base_name': '-functions',
+    },
+    'chainlink_automation': {
+        'base_url': 'https://docs.chain.link/chainlink-automation',
+        'content_selector': '#article',
+        'img_selector': "img",
+        'html_parser': html_to_markdown_docs_chainlink,
+        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
+        'base_name': '-automation',
+    },
+    'chainlink_vrf': {
+        'base_url': 'https://docs.chain.link/vrf',
+        'content_selector': '#article',
+        'img_selector': "img",
+        'html_parser': html_to_markdown_docs_chainlink,
+        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
+        'base_name': '-vrf',
+    },
 }
