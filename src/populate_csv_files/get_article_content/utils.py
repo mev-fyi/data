@@ -180,6 +180,47 @@ def html_to_markdown_docs(element, base_url):
         return children_text
 
 
+def html_to_markdown_docs_chainlink(element, base_url):
+    """
+    Convert an HTML element to its Markdown representation, ensuring link texts do not contain unnecessary
+    line breaks or excessive spaces, and appending the base URL to relative links. Ignores non-text HTML tags like 'style', 'script', and 'comment'.
+    """
+    tag_name = element.name
+    from bs4 import NavigableString, Comment
+    if isinstance(element, Comment):
+        # Ignore HTML comments
+        return ''
+
+    if tag_name in ['style', 'script']:
+        # Skip style and script tags
+        return ''
+
+    if isinstance(element, NavigableString):
+        return str(element).strip()
+
+    children_text = ''.join(html_to_markdown_docs_chainlink(child, base_url) for child in element.contents).strip()
+
+    # Handling different tags according to Markdown syntax
+    if tag_name == 'p':
+        return children_text + '\n\n'
+    elif tag_name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
+        header_level = int(tag_name[1])
+        return '#' * header_level + ' ' + children_text + '\n\n'
+    elif tag_name == 'ul':
+        return '\n'.join(f"* {html_to_markdown_docs_chainlink(li, base_url)}" for li in element.find_all('li', recursive=False)).strip() + '\n\n'
+    elif tag_name == 'ol':
+        return '\n'.join(f"{index + 1}. {html_to_markdown_docs_chainlink(li, base_url)}" for index, li in enumerate(element.find_all('li', recursive=False))).strip() + '\n\n'
+    elif tag_name == 'li':
+        return ''.join(html_to_markdown_docs_chainlink(child, base_url) for child in element.contents).strip()
+    elif tag_name == 'a':
+        href = element.get('href', '').strip()
+        url = urljoin(base_url, href) if not href.startswith('http') else href
+        text = children_text.replace('\n', ' ').replace('  ', ' ')
+        return f"[{text}]({url}) "
+    # Add additional HTML tag handling as needed
+
+    return children_text
+
 
 def html_to_markdown_a16z(element):
     """
