@@ -11,16 +11,35 @@ from src.utils import root_directory
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+import base64
 
-def eigenlayer_parser(soup, url):
+def embed_images_as_data_urls(soup, base_url, img_selector):
+    for img in soup.select(img_selector):
+        src = img.get('src')
+        if src:
+            img_url = urljoin(base_url, src)
+            try:
+                response = requests.get(img_url, timeout=10)
+                if response.status_code == 200:
+                    img_type = response.headers['Content-Type'].split('/')[-1]  # More accurate MIME type
+                    img_data = base64.b64encode(response.content).decode('utf-8')
+                    img['src'] = f"data:image/{img_type};base64,{img_data}"
+            except Exception as e:
+                logging.error(f"Failed to process image {img_url}: {e}")
+
+
+def eigenlayer_parser(soup, url, img_selector):
     content_selector = '.docItemCol_VOVn'  # Adjust as needed
-    markdown_content = parse_content(soup, content_selector, url)
+    markdown_content = parse_content(soup, content_selector, url, img_selector)
     return {'url': url, 'content': markdown_content, 'author': "", 'date': ""}
 
-
-parsers = {
-    'https://docs.eigenlayer.xyz/eigenlayer/overview': eigenlayer_parser,
-    # Add more sites and their parsers here as needed
+site_configs = {
+    'eigenlayer': {
+        'base_url': 'https://docs.eigenlayer.xyz/eigenlayer/overview',
+        'parser': eigenlayer_parser,
+        'img_selector': '.img_ev3q'
+    }
+    # Add more configurations for other sites as needed
 }
 
 
@@ -48,18 +67,22 @@ def save_as_pdf(html_content, output_path):
         logging.error(f"Error saving PDF {output_path}: {e}")
 
 
-def crawl_site(base_url):
-    parser = parsers.get(base_url)
-    if not parser:
-        logging.error(f"No parser found for {base_url}")
+def crawl_site(site_key):
+    config = site_configs.get(site_key)
+    if not config:
+        logging.error(f"No configuration found for site key: {site_key}")
         return
+
+    base_url = config['base_url']
+    parser = config['parser']
+    img_selector = config['img_selector']
 
     current_url = base_url
     while current_url:
         content = fetch_page(current_url)
         if content:
             soup = BeautifulSoup(content, 'html.parser')
-            parsed_data = parser(soup, current_url)
+            parsed_data = parser(soup, current_url, img_selector)
             save_page_as_pdf(parsed_data, current_url)
 
             next_button = soup.select_one('.pagination-nav__link--next')
@@ -90,10 +113,11 @@ def update_img_src_with_absolute_urls(soup, base_url):
             img['src'] = urljoin(base_url, img['src'])
 
 
-def parse_content(soup, content_selector, base_url):
+def parse_content(soup, content_selector, base_url, img_selector):
     content_div = soup.select_one(content_selector)
     if content_div:
-        update_img_src_with_absolute_urls(content_div, base_url)  # Ensure images have absolute URLs
+        embed_images_as_data_urls(content_div, base_url, img_selector)
+
         full_markdown_content = '\n'.join(html_to_markdown_docs(elem, base_url) for elem in content_div.find_all(True, recursive=False))
 
         # Find the first occurrence of "#" which denotes the start of the main content
@@ -108,9 +132,9 @@ def parse_content(soup, content_selector, base_url):
 
 
 def main():
-    for base_url in parsers.keys():
-        logging.info(f"Starting crawl for: {base_url}")
-        crawl_site(base_url)
+    for site_key in site_configs.keys():
+        logging.info(f"Starting crawl for site key: {site_key}")
+        crawl_site(site_key)
 
 
 if __name__ == '__main__':
