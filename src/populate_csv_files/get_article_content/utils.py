@@ -197,7 +197,7 @@ def process_code_block(element, base_url):
         process_code_line(child)
 
     code_text = '\n'.join(code_lines)
-    return f"```python\n{code_text}\n```\n"  # Add a newline for separation
+    return f"```\n\n{code_text}\n\n```\n"  # Add a newline for separation
 
 def process_tag_based_content(tag_name, children_text, base_url, element):
     """

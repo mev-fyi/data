@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import os
 from urllib.parse import urljoin
 import logging
+import concurrent.futures
 
 from src.populate_csv_files.get_article_content.ethglobal_hackathon.docs_parsers import site_configs, fetch_page, parse_content, save_page_as_pdf
 # Assuming these are implemented elsewhere correctly
@@ -56,16 +57,33 @@ def generic_parser(soup, config):
 
 
 def main(overwrite=False):
-    docs = ['pimlico_permissionless','pimlico_bundler', 'pimlico_paymaster']
-    configs = {doc: site_configs[doc] for doc in docs}
-    for docs in configs.keys():
-        logging.info(f"Starting crawl for docs: [{docs}]")
-        crawl_site(docs, overwrite)
+    docs = ['pimlico_permissionless', 'pimlico_bundler', 'pimlico_paymaster']
+    # docs = None
+    configs = {doc: site_configs[doc] for doc in docs} if docs is not None else site_configs
+
+    # Define how many threads you want to use
+    # Adjust this number based on your system and network capabilities
+    max_workers = 18
+
+    # Using ThreadPoolExecutor to run the crawling in parallel
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submitting all crawling jobs to the executor
+        future_to_doc = {executor.submit(crawl_site, doc, overwrite): doc for doc in configs}
+
+        # As each crawling job completes, log its completion
+        for future in concurrent.futures.as_completed(future_to_doc):
+            doc = future_to_doc[future]
+            try:
+                # The result of a future will be None since crawl_site does not return anything,
+                # but this block can catch and log any exceptions raised during the crawl
+                future.result()
+                logging.info(f"Completed crawling for docs: [{doc}]")
+            except Exception as exc:
+                logging.error(f"{doc} generated an exception: {exc}")
 
 
 if __name__ == '__main__':
     # Use a command line argument or environment variable to set overwrite if needed.
-    # For example, using an environment variable:
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
-    overwrite = True
+    overwrite = True  # Forcing overwrite to True for this example, adjust as necessary
     main(overwrite)
