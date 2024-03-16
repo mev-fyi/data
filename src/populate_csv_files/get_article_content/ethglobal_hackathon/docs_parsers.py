@@ -2,6 +2,7 @@ import base64
 import logging
 import os
 import re
+import time
 from functools import partial
 from urllib.parse import urljoin, urlparse
 import csv
@@ -11,8 +12,19 @@ import requests
 from bs4 import BeautifulSoup
 
 from src.populate_csv_files.get_article_content.utils import html_to_markdown_docs_chainlink, html_to_markdown_docs, markdown_to_html
-from src.utils import root_directory
+from src.utils import root_directory, return_driver
 
+
+def fetch_page_with_selenium(url):
+    driver = return_driver()  # Initialize the Selenium WebDriver
+    driver.get(url)
+
+    # Optional: wait for JavaScript to load. Adjust the sleep time as necessary.
+    time.sleep(1)
+
+    content = driver.page_source
+    driver.quit()
+    return content
 
 def extract_first_header(markdown_content):
     """
@@ -102,35 +114,39 @@ def fetch_sidebar_urls(soup, base_url, sidebar_selector):
     return sidebar_links
 
 
-def crawl_sidebar(config, overwrite, sidebar_selector):
-    content = fetch_page(config['base_url'])
+def crawl_sidebar(config, overwrite, sidebar_selector, selenium=False):
+    # Use Selenium to fetch the initial page content
+    content = fetch_page_with_selenium(config['base_url'])
     if content:
         soup = BeautifulSoup(content, 'html.parser')
 
-        # Get all hrefs from these links, ensuring they start with '/'
+        # Your existing logic to process the sidebar and subsequent pages
         urls_to_crawl = fetch_sidebar_urls(soup, config['base_url'], sidebar_selector)
-        # if base_url in urls_to_crawl, remove it
         if config['base_url'] in urls_to_crawl:
             urls_to_crawl.remove(config['base_url'])
 
-        # Crawl each URL found in the sidebar
         for url in urls_to_crawl:
-            page_content = fetch_page(url)
+            # Use Selenium again for each page in the sidebar
+            if selenium:
+                page_content = fetch_page_with_selenium(url)
+            else:
+                page_content = fetch_page(url)
             if page_content:
                 page_soup = BeautifulSoup(page_content, 'html.parser')
                 parsed_data = {
                     'url': url,
                     'content': parse_content(page_soup, config['content_selector'], url, config['img_selector'], config.get('html_parser', html_to_markdown_docs)),
-                    'author': "",  # Add author extraction if needed
-                    'date': ""  # Add date extraction if needed
+                    'author': "",  # Optionally extract author information
+                    'date': ""  # Optionally extract date information
                 }
                 pdf_path = save_page_as_pdf(parsed_data, url, overwrite, config.get('base_name', ''))
                 if pdf_path:
+                    # Your existing logic to extract header and append to CSV
                     title = extract_first_header(parsed_data['content'])
                     document_name = os.path.basename(pdf_path)
                     row_data = {
                         'title': title if title is not None else document_name,
-                        'authors': '',  # Update this if you have author information
+                        'authors': '',
                         'pdf_link': url,
                         'release_date': '',
                         'document_name': document_name
@@ -344,5 +360,144 @@ site_configs = {
         'img_selector': 'picture.relative',
         'base_name': '',
         'crawl_func': partial(crawl_sidebar, sidebar_selector='aside.relative'),
+    },
+    'Obol': {
+        'base_url': 'https://docs.obol.tech/docs/int/Overview',
+        'content_selector': '.docItemCol_VOVn',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'lido': {
+        'base_url': 'https://docs.lido.fi/',
+        'content_selector': '.docItemCol_VOVn',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'giza_datasets': {
+        'base_url': 'https://datasets.gizatech.xyz/',
+        'content_selector': 'main.flex-1',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
+    },
+    'giza_orion': {
+        'base_url': 'https://orion.gizatech.xyz/',
+        'content_selector': 'main.flex-1',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
+    },
+    'giza_cli': {
+        'base_url': 'https://cli.gizatech.xyz/',
+        'content_selector': 'main.flex-1',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
+    },
+    'giza_actions': {
+        'base_url': 'https://actions.gizatech.xyz/',
+        'content_selector': 'main.flex-1',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
+    },
+    'cairo': {
+        'base_url': 'https://docs.cairo-lang.org/',
+        'content_selector': '.doc',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.next > a:nth-child(1)',
+    },
+    'circle_stablecoins': {
+        'base_url': 'https://developers.circle.com/stablecoins/',
+        'content_selector': '.rm-Article',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.Sidebar1t2G1ZJq-vU1'),
+    },
+    'circle_w3s': {
+            'base_url': 'https://developers.circle.com/w3s/docs/circle-programmable-wallets-an-overview',
+            'content_selector': '.rm-Article',
+            'img_selector': '.img_ev3q',
+            'crawl_func': partial(crawl_sidebar, sidebar_selector='.Sidebar1t2G1ZJq-vU1'),
+    },
+    'circle_mint': {
+            'base_url': 'https://developers.circle.com/circle-mint/docs/introducing-circle-mint',
+            'content_selector': '.rm-Article',
+            'img_selector': '.img_ev3q',
+            'crawl_func': partial(crawl_sidebar, sidebar_selector='.Sidebar1t2G1ZJq-vU1'),
+    },
+    'circle_verite': {
+        'base_url': 'https://developers.circle.com/verite/docs/verite-protocol-introduction',
+        'content_selector': '.rm-Article',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.Sidebar1t2G1ZJq-vU1'),
+    },
+    'hyperlane': {
+        'base_url': 'https://docs.hyperlane.xyz/docs/intro',
+        'content_selector': '.docItemCol_VOVn',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'safe_home': {
+        'base_url': 'https://docs.safe.global/home/what-is-safe',
+        'content_selector': 'main.nx-w-full',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nextra-menu-desktop'),
+    },
+    'safe_sdk': {
+        'base_url': 'https://docs.safe.global/sdk/overview',
+        'content_selector': 'main.nx-w-full',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nextra-menu-desktop'),
+    },
+    'safe_advanced': {
+        'base_url': 'https://docs.safe.global/advanced/api-service-architecture',
+        'content_selector': 'main.nx-w-full',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nextra-menu-desktop'),
+    },
+    'farcaster': {
+        'base_url': 'https://docs.farcaster.xyz/',
+        'content_selector': '.main',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
+    },
+    'near_concepts': {
+        'base_url': 'https://docs.near.org/concepts/welcome',
+        'content_selector': '.docItemContainer_Djhp',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'near_web3_apps': {
+        'base_url': 'https://docs.near.org/develop/web3-apps/whatareweb3apps',
+        'content_selector': '.docItemContainer_Djhp',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'near_tools': {
+        'base_url': 'https://docs.near.org/tools/welcome',
+        'content_selector': '.docItemContainer_Djhp',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'near_contracts': {
+        'base_url': 'https://docs.near.org/develop/contracts/whatisacontract',
+        'content_selector': '.docItemContainer_Djhp',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'near_tutorials': {
+        'base_url': 'https://docs.near.org/tutorials/welcome',
+        'content_selector': '.docItemContainer_Djhp',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'celo': {
+        'base_url': 'https://docs.celo.org/developer',
+        'content_selector': '.docItemCol_VOVn',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'base': {
+        'base_url': 'https://docs.base.org/',
+        'content_selector': '.docItemContainer_Rv5Z',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu', selenium=True),
+        # 'next_button_selector': '.pagination-nav__link--next',
     },
 }

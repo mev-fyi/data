@@ -71,8 +71,8 @@ def generic_parser(soup, config):
 
 
 def main(overwrite=False):
-    # docs = ['argent']
-    docs = None
+    docs = ['base']
+    # docs = None
     configs = {doc: site_configs[doc] for doc in docs} if docs is not None else site_configs
 
     # Define how many threads you want to use
