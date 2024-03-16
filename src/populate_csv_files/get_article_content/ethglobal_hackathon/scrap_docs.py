@@ -4,28 +4,32 @@ from urllib.parse import urljoin
 import logging
 import concurrent.futures
 
-from src.populate_csv_files.get_article_content.ethglobal_hackathon.docs_parsers import site_configs, fetch_page, parse_content, save_page_as_pdf, extract_first_header, append_to_csv
+from src.populate_csv_files.get_article_content.ethglobal_hackathon.docs_parsers import fetch_page, parse_content, save_page_as_pdf, extract_first_header, append_to_csv, update_or_append_csv
+from src.populate_csv_files.get_article_content.ethglobal_hackathon.site_configs import site_configs
 from src.utils import root_directory
 
 # Assuming these are implemented elsewhere correctly
+from threading import Lock
+
+# Initialize a lock for CSV file operations
+csv_file_lock = Lock()
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def crawl_site(site_key, overwrite=False):
+def crawl_site(site_key, csv_lock, overwrite=False):
     config = site_configs.get(site_key)
     if not config:
         logging.error(f"No configuration found for site key: {site_key}")
         return
 
-    # Retrieve the crawl function from the site config, falling back to the generic crawl function if not specified
-    crawl_func = config.get('crawl_func', lambda config, overwrite=False: generic_crawl(config, overwrite))
+    crawl_func = config.get('crawl_func', lambda config, overwrite=False, lock=csv_lock: generic_crawl(config, overwrite, lock))
 
-    # Execute the crawl function
-    crawl_func(config, overwrite)
+    # Now pass the lock to the crawl function
+    crawl_func(config, overwrite, lock=csv_lock)
 
 
-def generic_crawl(config, overwrite):
+def generic_crawl(config, overwrite, lock):
     base_url = config['base_url']
     parser = config.get('parser', generic_parser)  # Get the parser from config, default to generic_parser
 
@@ -37,17 +41,8 @@ def generic_crawl(config, overwrite):
             parsed_data = parser(soup, config)
             pdf_path = save_page_as_pdf(parsed_data, current_url, overwrite, config.get('base_name', ''))
             if pdf_path:
-                title = extract_first_header(parsed_data['content'])
-                document_name = os.path.basename(pdf_path)
-                row_data = {
-                    'title': title,
-                    'authors': '',  # Update this if you have author information
-                    'pdf_link': current_url,
-                    'release_date': '',
-                    'document_name': document_name
-                }
                 csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
-                append_to_csv(csv_path, row_data)
+                update_or_append_csv(pdf_path, current_url, parsed_data['content'], csv_path, overwrite, lock)  # Pass the lock here
 
             # Logic for handling pagination (next button)
             next_button = soup.select_one(config.get('next_button_selector', '.pagination-nav__link--next'))
@@ -57,6 +52,7 @@ def generic_crawl(config, overwrite):
                     current_url = next_url
                     continue
         break
+
 
 
 def update_img_src_with_absolute_urls(soup, base_url):
@@ -81,7 +77,7 @@ def main(docs=None, overwrite=False):
     # Using ThreadPoolExecutor to run the crawling in parallel
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         # Submitting all crawling jobs to the executor
-        future_to_doc = {executor.submit(crawl_site, doc, overwrite): doc for doc in configs}
+        future_to_doc = {executor.submit(crawl_site, doc, csv_file_lock, overwrite): doc for doc in configs}
 
         # As each crawling job completes, log its completion
         for future in concurrent.futures.as_completed(future_to_doc):
@@ -100,5 +96,5 @@ if __name__ == '__main__':
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
     overwrite = True  # Forcing overwrite to True for this example, adjust as necessary
 
-    docs = ['circom']
+    docs = ['suave']
     main(docs=docs, overwrite=overwrite)

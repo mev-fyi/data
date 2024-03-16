@@ -1,9 +1,7 @@
 import base64
 import logging
 import os
-import re
 import time
-from functools import partial
 from urllib.parse import urljoin, urlparse
 import csv
 
@@ -13,6 +11,51 @@ from bs4 import BeautifulSoup
 
 from src.populate_csv_files.get_article_content.utils import html_to_markdown_docs_chainlink, html_to_markdown_docs, markdown_to_html
 from src.utils import root_directory, return_driver
+
+import pandas as pd
+from pathlib import Path
+
+
+def update_or_append_csv(pdf_path, current_url, parsed_content, csv_path, overwrite_title, lock):
+    """
+    Updates or appends a row to a CSV file in a thread-safe manner using a lock.
+
+    :param pdf_path: The file path of the PDF.
+    :param current_url: The URL from which the PDF was generated.
+    :param parsed_content: The parsed HTML content.
+    :param csv_path: The file path of the CSV to update.
+    :param overwrite_title: Boolean indicating whether to overwrite the title.
+    :param lock: A threading.Lock object used to synchronize access to the CSV file.
+    """
+    title = extract_first_header(parsed_content)
+    document_name = os.path.basename(pdf_path)
+
+    row_data = pd.DataFrame([{
+        'title': title,
+        'authors': '',
+        'pdf_link': current_url,
+        'release_date': '',
+        'document_name': document_name
+    }])
+
+    with lock:
+        if Path(csv_path).is_file():
+            df = pd.read_csv(csv_path)
+            # Check if title needs to be overwritten or if a new row should be added
+            if overwrite_title and any(df['title'] == title):
+                # If overwriting, find the index of the existing row and update it
+                idx = df.index[df['title'] == title].tolist()
+                if idx:
+                    df.loc[idx[0]] = row_data.iloc[0]
+                    logging.info(f"Overwriting existing row for [{title}]")
+            else:
+                # Append the new row
+                logging.info(f"Appending new row for [{title}]")
+                df = pd.concat([df, row_data], ignore_index=True, sort=False)
+        else:
+            df = row_data
+
+        df.to_csv(csv_path, index=False)
 
 
 def fetch_page_with_selenium(url):
@@ -28,7 +71,6 @@ def fetch_page_with_selenium(url):
 
 
 def fetch_page_with_selenium_robust(url, shadow_host_selector='body > rapi-doc', max_attempts=3, attempt_delay=2):
-    from selenium import webdriver
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
     from selenium.webdriver.common.by import By
@@ -85,13 +127,12 @@ def extract_first_header(markdown_content):
                 return title_before_link
             else:
                 # If no "[]" is found, return the entire title line
-                return None
+                return title_line
     return None
 
 
 
-
-def crawl_chainlink(config, overwrite):
+def crawl_chainlink(config, lock, overwrite):
     content = fetch_page(config['base_url'])
     if content:
         soup = BeautifulSoup(content, 'html.parser')
@@ -115,17 +156,8 @@ def crawl_chainlink(config, overwrite):
                 }
                 pdf_path = save_page_as_pdf(parsed_data, url, overwrite, config.get('base_name', ''))
                 if pdf_path:
-                    title = extract_first_header(parsed_data['content'])
-                    document_name = os.path.basename(pdf_path)
-                    row_data = {
-                        'title': title if title is not None else document_name,
-                        'authors': '',  # Update this if you have author information
-                        'pdf_link': url,
-                        'release_date': '',
-                        'document_name': document_name
-                    }
                     csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
-                    append_to_csv(csv_path, row_data)
+                    update_or_append_csv(pdf_path, url, parsed_data['content'], csv_path, overwrite, lock)
             else:
                 logging.error(f"Failed to fetch content for {url}")
 
@@ -181,7 +213,7 @@ def fetch_sidebar_urls_wihtout_href(soup, base_url, sidebar_selector):
     return sidebar_links
 
 
-def crawl_sidebar(config, overwrite, sidebar_selector, selenium=False, robust=False):
+def crawl_sidebar(config, overwrite, sidebar_selector, lock, selenium=False, robust=False):
     # Use Selenium to fetch the initial page content
     content = fetch_page_with_selenium(config['base_url']) if not robust else fetch_page_with_selenium_robust(config['base_url'])
     if content:
@@ -210,18 +242,8 @@ def crawl_sidebar(config, overwrite, sidebar_selector, selenium=False, robust=Fa
                 }
                 pdf_path = save_page_as_pdf(parsed_data, url, overwrite, config.get('base_name', ''))
                 if pdf_path:
-                    # Your existing logic to extract header and append to CSV
-                    title = extract_first_header(parsed_data['content'])
-                    document_name = os.path.basename(pdf_path)
-                    row_data = {
-                        'title': title if title is not None else document_name,
-                        'authors': '',
-                        'pdf_link': url,
-                        'release_date': '',
-                        'document_name': document_name
-                    }
                     csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
-                    append_to_csv(csv_path, row_data)
+                    update_or_append_csv(pdf_path, url, parsed_data['content'], csv_path, overwrite, lock)
             else:
                 logging.error(f"Failed to fetch content for {url}")
 
@@ -299,7 +321,7 @@ def save_page_as_pdf(parsed_data, url, overwrite, base_name=""):
     return save_path
 
 
-def append_to_csv(csv_path, row_data):
+def append_to_csv(csv_path, row_data, overwrite=False):
     """
     Appends a row to the CSV file, ensuring no duplicates.
     """
@@ -309,7 +331,7 @@ def append_to_csv(csv_path, row_data):
             existing_rows = [row for row in reader]
 
             # Check if the row_data matches any existing row to avoid duplicates
-            if any(row['pdf_link'] == row_data['pdf_link'] for row in existing_rows):
+            if not overwrite and any(row['pdf_link'] == row_data['pdf_link'] for row in existing_rows):
                 logging.info(f"Skipping duplicate entry for {row_data['pdf_link']}")
                 return
 
@@ -328,437 +350,3 @@ def save_dir():
     return f"{root_directory()}/data/ethglobal_hackathon/"
 
 
-site_configs = {
-    'eigenlayer': {
-        'base_url': 'https://docs.eigenlayer.xyz/eigenlayer/overview',
-        'content_selector': '.docItemCol_VOVn',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'galadriel': {
-        'base_url': 'https://docs.galadriel.com/overview',
-        'content_selector': '#content-area',
-        'img_selector': "div[class*='prose'] img",
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='div.lg\:text-sm'),  # Directly reference the specific crawl function
-    },
-    'chainlink': {
-        'base_url': 'https://docs.chain.link/ccip#overview',
-        'content_selector': '#article',
-        'img_selector': "img",
-        'html_parser': html_to_markdown_docs_chainlink,
-        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
-        'base_name': '-ccip',
-    },
-    'chainlink_data_feeds': {
-        'base_url': 'https://docs.chain.link/data-feeds',
-        'content_selector': '#article',
-        'img_selector': "img",
-        'html_parser': html_to_markdown_docs_chainlink,
-        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
-        'base_name': '-data_feeds',
-    },
-    'chainlink_data_streams': {
-        'base_url': 'https://docs.chain.link/data-streams',
-        'content_selector': '#article',
-        'img_selector': "img",
-        'html_parser': html_to_markdown_docs_chainlink,
-        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
-        'base_name': '-data_streams',
-    },
-    'chainlink_functions': {
-        'base_url': 'https://docs.chain.link/chainlink-functions',
-        'content_selector': '#article',
-        'img_selector': "img",
-        'html_parser': html_to_markdown_docs_chainlink,
-        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
-        'base_name': '-functions',
-    },
-    'chainlink_automation': {
-        'base_url': 'https://docs.chain.link/chainlink-automation',
-        'content_selector': '#article',
-        'img_selector': "img",
-        'html_parser': html_to_markdown_docs_chainlink,
-        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
-        'base_name': '-automation',
-    },
-    'chainlink_vrf': {
-        'base_url': 'https://docs.chain.link/vrf',
-        'content_selector': '#article',
-        'img_selector': "img",
-        'html_parser': html_to_markdown_docs_chainlink,
-        'crawl_func': crawl_chainlink,  # Directly reference the specific crawl function
-        'base_name': '-vrf',
-    },
-    'nethermind': {
-        'base_url': 'https://docs.nethermind.io',
-        'content_selector': '.docItemCol_VOVn',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'blockscout': {
-        'base_url': 'https://docs.blockscout.com',
-        'content_selector': 'main.flex-1',
-        'img_selector': 'picture.relative',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),  # Directly reference the specific crawl function
-    },
-    'pimlico_permissionless': {
-        'base_url': 'https://docs.pimlico.io/permissionless',
-        'content_selector': '.vocs_Content',
-        'img_selector': 'picture.relative',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.vocs_Sidebar_group'),
-        'base_name': '-permissionless',
-    },
-    'pimlico_bundler': {
-        'base_url': 'https://docs.pimlico.io/bundler',
-        'content_selector': '.vocs_Content',
-        'img_selector': 'picture.relative',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.vocs_Sidebar_group'),
-        'base_name': '-bundler',
-    },
-    'pimlico_paymaster': {
-        'base_url': 'https://docs.pimlico.io/paymaster',
-        'content_selector': '.vocs_Content',
-        'img_selector': 'picture.relative',
-        'base_name': '-paymaster',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.vocs_Sidebar_group'),
-
-    },
-    'argent': {
-        'base_url': 'https://docs.argent.xyz/',
-        'content_selector': 'main.flex-1',
-        'img_selector': 'picture.relative',
-        'base_name': '',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='aside.relative'),
-    },
-    'Obol': {
-        'base_url': 'https://docs.obol.tech/docs/int/Overview',
-        'content_selector': '.docItemCol_VOVn',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'lido': {
-        'base_url': 'https://docs.lido.fi/',
-        'content_selector': '.docItemCol_VOVn',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'giza_datasets': {
-        'base_url': 'https://datasets.gizatech.xyz/',
-        'content_selector': 'main.flex-1',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
-    },
-    'giza_orion': {
-        'base_url': 'https://orion.gizatech.xyz/',
-        'content_selector': 'main.flex-1',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
-    },
-    'giza_cli': {
-        'base_url': 'https://cli.gizatech.xyz/',
-        'content_selector': 'main.flex-1',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
-    },
-    'giza_actions': {
-        'base_url': 'https://actions.gizatech.xyz/',
-        'content_selector': 'main.flex-1',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
-    },
-    'cairo': {
-        'base_url': 'https://docs.cairo-lang.org/',
-        'content_selector': '.doc',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.next > a:nth-child(1)',
-    },
-    'circle_stablecoins': {
-        'base_url': 'https://developers.circle.com/stablecoins/',
-        'content_selector': '.rm-Article',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.Sidebar1t2G1ZJq-vU1'),
-    },
-    'circle_w3s': {
-            'base_url': 'https://developers.circle.com/w3s/docs/circle-programmable-wallets-an-overview',
-            'content_selector': '.rm-Article',
-            'img_selector': '.img_ev3q',
-            'crawl_func': partial(crawl_sidebar, sidebar_selector='.Sidebar1t2G1ZJq-vU1'),
-    },
-    'circle_mint': {
-            'base_url': 'https://developers.circle.com/circle-mint/docs/introducing-circle-mint',
-            'content_selector': '.rm-Article',
-            'img_selector': '.img_ev3q',
-            'crawl_func': partial(crawl_sidebar, sidebar_selector='.Sidebar1t2G1ZJq-vU1'),
-    },
-    'circle_verite': {
-        'base_url': 'https://developers.circle.com/verite/docs/verite-protocol-introduction',
-        'content_selector': '.rm-Article',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.Sidebar1t2G1ZJq-vU1'),
-    },
-    'hyperlane': {
-        'base_url': 'https://docs.hyperlane.xyz/docs/intro',
-        'content_selector': '.docItemCol_VOVn',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'safe_home': {
-        'base_url': 'https://docs.safe.global/home/what-is-safe',
-        'content_selector': 'main.nx-w-full',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nextra-menu-desktop'),
-    },
-    'safe_sdk': {
-        'base_url': 'https://docs.safe.global/sdk/overview',
-        'content_selector': 'main.nx-w-full',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nextra-menu-desktop'),
-    },
-    'safe_advanced': {
-        'base_url': 'https://docs.safe.global/advanced/api-service-architecture',
-        'content_selector': 'main.nx-w-full',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nextra-menu-desktop'),
-    },
-    'farcaster': {
-        'base_url': 'https://docs.farcaster.xyz/',
-        'content_selector': '.main',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
-    },
-    'near_concepts': {
-        'base_url': 'https://docs.near.org/concepts/welcome',
-        'content_selector': '.docItemContainer_Djhp',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'near_web3_apps': {
-        'base_url': 'https://docs.near.org/develop/web3-apps/whatareweb3apps',
-        'content_selector': '.docItemContainer_Djhp',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'near_tools': {
-        'base_url': 'https://docs.near.org/tools/welcome',
-        'content_selector': '.docItemContainer_Djhp',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'near_contracts': {
-        'base_url': 'https://docs.near.org/develop/contracts/whatisacontract',
-        'content_selector': '.docItemContainer_Djhp',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'near_tutorials': {
-        'base_url': 'https://docs.near.org/tutorials/welcome',
-        'content_selector': '.docItemContainer_Djhp',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'celo': {
-        'base_url': 'https://docs.celo.org/developer',
-        'content_selector': '.docItemCol_VOVn',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'base': {
-        'base_url': 'https://docs.base.org/',
-        'content_selector': '.docItemContainer_Rv5Z',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu', selenium=True),
-    },
-    'dynamic': {
-        'base_url': 'https://docs.dynamic.xyz/introduction/welcome',
-        'content_selector': '#content-area',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='div.lg\:text-sm > ul:nth-child(2)'),
-    },
-    'aztec': {
-        'base_url': 'https://docs.aztec.network/',
-        'content_selector': '.docItemContainer_Djhp',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
-    },
-    'layerzero': {
-        'base_url': 'https://docs.layerzero.network/',
-        'content_selector': '.docItemContainer_Djhp',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'fhenix': {
-        'base_url': 'https://docs.fhenix.zone/docs/devdocs/intro',
-        'content_selector': '.docItemContainer_Djhp',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-        'base_name': '-devdocs',
-    },
-    'fhenix_tutorial': {
-        'base_url': 'https://docs.fhenix.zone/docs/tutorial/intro',
-        'content_selector': '.docItemContainer_Djhp',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-        'base_name': '-tutorial',
-    },
-    'morpho': {
-        'base_url': 'https://docs.morpho.org/concepts/overview/',
-        'content_selector': '.docItemContainer_pt6k',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
-        'base_name': '-concepts',
-    },
-    'morpho_sdks': {
-        'base_url': 'https://docs.morpho.org/sdks/overview/',
-        'content_selector': '.docItemContainer_pt6k',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
-        'base_name': '-sdks',
-    },
-    'morpho_contracts': {
-        'base_url': 'https://docs.morpho.org/contracts/morpho-blue/',
-        'content_selector': '.docItemContainer_pt6k',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
-        'base_name': '-contracts',
-    },
-    'voyager': {
-        'base_url': 'https://docs.voyager.online/#get-/classes',
-        'content_selector': '#the-main-body > main',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nav-scroll', selenium=True, robust=True),
-    },
-    'worldcoin': {
-        'base_url': 'https://docs.worldcoin.org/',
-        'content_selector': '.prose',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.lg\:block > ul:nth-child(1)'),
-    },
-    'chilliz': {
-        'base_url': 'https://docs.chiliz.com/',
-        'content_selector': '.lg\:flex-row > div:nth-child(2) > div:nth-child(2)',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
-    },
-    'filecoin': {
-        'base_url': 'https://docs.filecoin.io/',
-        'content_selector': 'main.flex-1',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
-    },
-    'ipc': {
-        'base_url': 'https://docs.ipc.space/',
-        'content_selector': '.lg\:flex-row > div:nth-child(2)',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
-    },
-    'celestia_learn': {
-        'base_url': 'https://docs.celestia.org/learn/how-celestia-works/overview',
-        'content_selector': '.VPDoc',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
-        'base_name': '-learn',
-    },
-    'celestia_nodes': {
-        'base_url': 'https://docs.celestia.org/nodes/overview',
-        'content_selector': '.VPDoc',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
-        'base_name': '-nodes',
-    },
-    'celestia_developers': {
-        'base_url': 'https://docs.celestia.org/developers/build-modular',
-        'content_selector': '.VPDoc',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
-        'base_name': '-developers',
-    },
-    'celestia_community': {
-        'base_url': 'https://docs.celestia.org/community/overview',
-        'content_selector': '.VPDoc',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
-        'base_name': '-community',
-    },
-    'availproject': {
-        'base_url': 'https://docs.availproject.org/docs/introduction-to-avail',
-        'content_selector': 'article.nx-w-full',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nextra-sidebar-container'),
-    },
-    'web3auth': {
-        'base_url': 'https://web3auth.io/docs/sdk/pnp/web/',
-        'content_selector': '.docItemCol_VOVn',
-        'img_selector': '.img_ev3q',
-        'next_button_selector': '.pagination-nav__link--next',
-    },
-    'ens_learn': {
-        'base_url': 'https://docs.ens.domains/learn/protocol',
-        'content_selector': '.article.prose',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
-        'base_name': '-learn',
-    },
-    'ens_web': {
-        'base_url': 'https://docs.ens.domains/web/resolution',
-        'content_selector': '.article.prose',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
-        'base_name': '-web',
-    },
-    'ens_registry': {
-        'base_url': 'https://docs.ens.domains/registry/ens',
-        'content_selector': '.article.prose',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
-        'base_name': '-registry',
-    },
-    'ens_resolver': {
-        'base_url': 'https://docs.ens.domains/resolvers/public',
-        'content_selector': '.article.prose',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
-        'base_name': '-resolver',
-    },
-    'ens_dao': {
-        'base_url': 'https://docs.ens.domains/dao',
-        'content_selector': '.article.prose',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
-        'base_name': '-dao',
-    },
-    'ens_ensip': {
-        'base_url': 'https://docs.ens.domains/ensip/',
-        'content_selector': '.article.prose',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
-        'base_name': '-ensip',
-    },
-    'gnark_howto': {
-        'base_url': 'https://docs.gnark.consensys.io/category/how-to',
-        'content_selector': '.docPage__5DB',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
-        'base_name': '-howto',
-    },
-    'gnark_reference': {
-        'base_url': 'https://docs.gnark.consensys.io/Reference/api',
-        'content_selector': '.docPage__5DB',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
-        'base_name': '-reference',
-    },
-    'gnark_concepts': {
-        'base_url': 'https://docs.gnark.consensys.io/category/concepts',
-        'content_selector': '.docPage__5DB',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
-        'base_name': '-concepts',
-    },
-    'circom': {
-        'base_url': 'https://docs.circom.io/getting-started/installation/',
-        'content_selector': '.md-content',
-        'img_selector': '.img_ev3q',
-        'crawl_func': partial(crawl_sidebar, sidebar_selector='.md-nav__item--section > nav:nth-child(3) > ul:nth-child(2)', selenium=True),
-        'fetch_sidebar_func': fetch_sidebar_urls_wihtout_href
-    },
-}

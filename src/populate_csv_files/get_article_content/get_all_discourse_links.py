@@ -194,7 +194,7 @@ def run():
         ("https://forum.scrt.network/c/private-computation/6", "scrt_network_private_computation"),
         ("https://forum.scrt.network/c/uncategorized/1", "scrt_network_uncategorized"),
         ("https://community.taiko.xyz/", "taiko_community"),
-        ("forum.numer.ai", "numerai_forum"),
+        ("https://forum.numer.ai", "numerai_forum"),
         ("https://forum.apecoin.com/c/announcements/17", "apecoin_announcements"),
         ("https://forum.apecoin.com/c/general/14", "apecoin_general"),
         ("https://forum.apecoin.com/c/aip-execution-and-transparency/62", "apecoin_aip_execution_and_transparency"),
