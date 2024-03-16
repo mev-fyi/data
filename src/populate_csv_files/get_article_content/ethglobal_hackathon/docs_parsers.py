@@ -112,22 +112,25 @@ def fetch_page_with_selenium_robust(url, shadow_host_selector='body > rapi-doc',
 def extract_first_header(markdown_content):
     """
     Extracts the first header from the markdown content as the title.
-    If the first header contains a link, tries to extract only the text part before the link.
+    Cleans up the title by removing markdown-style links, keeping only the link text.
     """
+    # Regex to match markdown links and capture the link text
+    import re
+    markdown_link_pattern = re.compile(r'\[(.*?)\]\(https?://[^\s]+\)')
+
     for line in markdown_content.splitlines():
         if line.startswith('# '):
-            # Remove Markdown formatting for headers
+            # Remove Markdown '#' formatting for headers
             title_line = line.strip('# ').strip()
-            # Check if title contains "[]"
-            if "[]" in title_line:
-                # Split on "[]" and take everything before it
-                title_before_link = title_line.split("[]")[0].strip()
-                if title_before_link == '⭐':
-                    return None
-                return title_before_link
-            else:
-                # If no "[]" is found, return the entire title line
-                return title_line
+
+            # Remove markdown links, keeping only the link text
+            cleaned_title = markdown_link_pattern.sub(r'\1', title_line)
+
+            # Further cleanup for any specific cases, like '⭐'
+            if cleaned_title.startswith('⭐'):
+                return None
+
+            return cleaned_title
     return None
 
 
@@ -350,3 +353,20 @@ def save_dir():
     return f"{root_directory()}/data/ethglobal_hackathon/"
 
 
+def clean_csv_titles(csv_path=f'{root_directory()}/data/docs_details.csv'):
+    import pandas as pd
+    import re
+
+    # Load the CSV file into a DataFrame
+    df = pd.read_csv(csv_path)
+
+    # Define a pattern to match "empty links" in titles
+    # This pattern matches [text](link) and aims to remove it
+    pattern = re.compile(r'\[.*?\]\(https?://[^\s]+\)')
+
+    # Clean the title column by removing "empty links"
+    # Ensure all inputs to the lambda are strings
+    df['title'] = df['title'].apply(lambda x: pattern.sub('', str(x)).strip() if pd.notnull(x) else x)
+
+    # Save the cleaned DataFrame back to the CSV file
+    df.to_csv(csv_path, index=False)

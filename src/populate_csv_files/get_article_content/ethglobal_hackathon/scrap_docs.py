@@ -4,7 +4,7 @@ from urllib.parse import urljoin
 import logging
 import concurrent.futures
 
-from src.populate_csv_files.get_article_content.ethglobal_hackathon.docs_parsers import fetch_page, parse_content, save_page_as_pdf, extract_first_header, append_to_csv, update_or_append_csv
+from src.populate_csv_files.get_article_content.ethglobal_hackathon.docs_parsers import fetch_page, parse_content, save_page_as_pdf, update_or_append_csv, clean_csv_titles
 from src.populate_csv_files.get_article_content.ethglobal_hackathon.site_configs import site_configs
 from src.utils import root_directory
 
@@ -92,9 +92,12 @@ def main(docs=None, overwrite=False):
 
 
 if __name__ == '__main__':
-    # Use a command line argument or environment variable to set overwrite if needed.
+    clean_csv_titles()
+    # Use a command line argum
+    # ent or environment variable to set overwrite if needed.
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
     overwrite = True  # Forcing overwrite to True for this example, adjust as necessary
 
-    docs = ['suave']
+    # docs = ['suave']
+    docs = None
     main(docs=docs, overwrite=overwrite)
