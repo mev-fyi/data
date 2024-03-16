@@ -60,7 +60,7 @@ Unpacking ERC-4337,https://frontier.tech/unpacking-erc-4337,https://www.twitter.
 MEV-Share: programmably private orderflow to share MEV with users - The Flashbots Ship - The Flashbots Collective,https://collective.flashbots.net/t/mev-share-programmably-private-orderflow-to-share-mev-with-users/1264/1,https://www.twitter.com/unlock_VALue,2023-02-15,https://collective.flashbots.net/u/bert
 The dream of redistributing the extracted value - Research - The Flashbots Collective,https://collective.flashbots.net/t/the-dream-of-redistributing-the-extracted-value/642,https://www.twitter.com/unlock_VALue,2022-10-27,https://collective.flashbots.net/u/chayoterabit
 Bookmarks relevant for redistribution researchers - #35 by chayoterabit - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663/35,https://www.twitter.com/unlock_VALue,2023-02-11,https://collective.flashbots.net/u/chayoterabit
-Bookmarks relevant for redistribution researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663,https://www.twitter.com/unlock_VALue,2024-03-13,https://collective.flashbots.net/u/chayoterabit
+Bookmarks relevant for redistribution researchers - Research - The Flashbots Collective,https://collective.flashbots.net/t/bookmarks-relevant-for-redistribution-researchers/663,https://www.twitter.com/unlock_VALue,2024-03-15,https://collective.flashbots.net/u/chayoterabit
 Forward inclusion list - HackMD,https://notes.ethereum.org/@fradamt/forward-inclusion-lists,https://www.twitter.com/unlock_VALue,,fradamt
 Unified ERC-4337 mempool - HackMD,https://notes.ethereum.org/@yoav/unified-erc-4337-mempool,https://www.twitter.com/unlock_VALue,,yoav
 Structuring Blockspace Derivatives — Julian Ma,https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/WKa3GFC03uY34d2MufTyD0c595xVRUEZi9RNG-dHNKs,https://www.twitter.com/unlock_VALue,2022-10-21,Julian Ma
@@ -735,22 +735,42 @@ Uniswap v4 | Medium,https://medium.com/@auralshin/harnessing-the-power-of-uniswa
 Uniswap V4: What you need to know | by Kyrian Alex | Coinmonks | Medium,https://medium.com/coinmonks/uniswap-v4-what-you-need-to-know-f6c9d54d59eb,,2023-06-16,Kyrian Alex
 Uniswap V4 Hooks Guide (I): RBAC Hook | by Umbrella Research | Medium,https://medium.com/@umbrellaresearch/uniswap-v4-hooks-a-deep-dive-with-captain-hook-i-6be5d1677539,,2023-11-22,Umbrella Research
 Our Vision for Uniswap v4,https://blog.uniswap.org/uniswap-v4,,2023-06-13,
-How Ethereum can solve L2 liquidity fragmentation,https://paragraph.xyz/@blueyard/how-ethereum-can-solve-l2-liquidity-fragmentation,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,,
+How Ethereum can solve L2 liquidity fragmentation,https://paragraph.xyz/@blueyard/how-ethereum-can-solve-l2-liquidity-fragmentation,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2024-02-05,", , , , "
 "Based Espresso: ad-hoc shared sequencing for all L2s, from based rollups to validiums - HackMD",https://hackmd.io/@EspressoSystems/BasedEspresso,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2024-03-08,EspressoSystems
 Based Rollups can reward Proposers First Come First Serve - Layer 2 - Ethereum Research,https://ethresear.ch/t/based-rollups-can-reward-proposers-first-come-first-serve/18317,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2024-01-14,https://ethresear.ch/u/mteam88
 Transaction Submission on Based Rollups - Layer 2 - Ethereum Research,https://ethresear.ch/t/transaction-submission-on-based-rollups/18631,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2024-02-09,https://ethresear.ch/u/mteam88
-Based Rollup FAQ — Taiko Labs,https://taiko.mirror.xyz/7dfMydX1FqEx9_sOvhRt3V8hJksKSIWjzhCVu7FyMZU,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,,
-"Based Contestable Rollup (BCR): A configurable, multi-proof roll… — Taiko Labs",https://taiko.mirror.xyz/Z4I5ZhreGkyfdaL5I9P0Rj0DNX4zaWFmcws-0CVMJ2A,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,,
-Based Booster Rollup (BBR): A new major milestone in Taiko’s roa… — Taiko Labs,https://taiko.mirror.xyz/anPjF35Mrc_xzYgOTbUmfjr_MlhE3L8ZBZIxqmz9GZ8,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,,
-L2 MEV wat — Taiko Labs,https://taiko.mirror.xyz/VjNjFws6OOVez5YCDMwjy4BUiDqZBHYDvcW4-JZGDkc,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,,
+Based Rollup FAQ — Taiko Labs,https://taiko.mirror.xyz/7dfMydX1FqEx9_sOvhRt3V8hJksKSIWjzhCVu7FyMZU,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2023-10-05,Taiko Labs
+"Based Contestable Rollup (BCR): A configurable, multi-proof roll… — Taiko Labs",https://taiko.mirror.xyz/Z4I5ZhreGkyfdaL5I9P0Rj0DNX4zaWFmcws-0CVMJ2A,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2023-12-06,Taiko Labs
+Based Booster Rollup (BBR): A new major milestone in Taiko’s roa… — Taiko Labs,https://taiko.mirror.xyz/anPjF35Mrc_xzYgOTbUmfjr_MlhE3L8ZBZIxqmz9GZ8,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2023-11-14,Taiko Labs
+L2 MEV wat — Taiko Labs,https://taiko.mirror.xyz/VjNjFws6OOVez5YCDMwjy4BUiDqZBHYDvcW4-JZGDkc,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2023-06-13,Taiko Labs
 Unified Endgame Rollup Requirements - Layer 2 - Ethereum Research,https://ethresear.ch/t/unified-endgame-rollup-requirements/18733,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2024-02-20,https://ethresear.ch/u/Perseverance
-Solana MEV: An Introduction,https://www.helius.dev/blog/solana-mev-an-introduction,,,
+Solana MEV: An Introduction,https://www.helius.dev/blog/solana-mev-an-introduction,,2024-03-14,Ryan Chern
 ,https://www.v4-by-example.org/,,,
 ,https://docs.uniswapfoundation.org/,,,
-Aggregated Blockchains — Brendan Farmer,https://mirror.xyz/0xfa892B19c72c2D2C6B10dFce8Ff8E7a955b58A61/TXMyZhhRFa-bjr7YHwmJpKBwt2-_ysirbh_VpNy3qZY,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,,
-"TEE coprocessors or ""Confidential Compute"" — tumilet",https://mirror.xyz/tumilet.eth/309o294dI38nETEUhF6Yjk8zH6smoa1rqaqv5jFbCjg,,,
-Points: A Mechanism Design Guide — very early Ventures,https://mirror.xyz/veryearly.eth/n7i4f62CnvlPW7icpWkBwwAAlRjK213xgXuYNGGcM_I,,,
-Mapping Web3 Social — very early Ventures,https://mirror.xyz/veryearly.eth/3aqUPww4ZRymFk1ubFE0R8ihq8eU843Cm0tVUMnPKmI,,,
-On the utility of LST native tokens — very early Ventures,https://mirror.xyz/veryearly.eth/7XbydWKgBfZc2HHbRNHae5DRIokExrK-7FoN6V3P4jI,,,
-Introducing very early Ventures — very early Ventures,https://mirror.xyz/veryearly.eth/D5U7GE7NpJcVr4G8MUcYNRaj47xFms2zbv04JXHyTsI,,,
-,https://www.v4-by-example.org/,,,
+Aggregated Blockchains — Brendan Farmer,https://mirror.xyz/0xfa892B19c72c2D2C6B10dFce8Ff8E7a955b58A61/TXMyZhhRFa-bjr7YHwmJpKBwt2-_ysirbh_VpNy3qZY,https://mteam.space/eth-sequencing-preconfs-resources/based_rollups.html,2024-02-05,Brendan Farmer
+"TEE coprocessors or ""Confidential Compute"" — tumilet",https://mirror.xyz/tumilet.eth/309o294dI38nETEUhF6Yjk8zH6smoa1rqaqv5jFbCjg,,2024-03-12,tumilet
+Points: A Mechanism Design Guide — very early Ventures,https://mirror.xyz/veryearly.eth/n7i4f62CnvlPW7icpWkBwwAAlRjK213xgXuYNGGcM_I,,2024-02-08,very early Ventures
+Mapping Web3 Social — very early Ventures,https://mirror.xyz/veryearly.eth/3aqUPww4ZRymFk1ubFE0R8ihq8eU843Cm0tVUMnPKmI,,2023-12-01,very early Ventures
+On the utility of LST native tokens — very early Ventures,https://mirror.xyz/veryearly.eth/7XbydWKgBfZc2HHbRNHae5DRIokExrK-7FoN6V3P4jI,,2023-08-11,very early Ventures
+Introducing very early Ventures — very early Ventures,https://mirror.xyz/veryearly.eth/D5U7GE7NpJcVr4G8MUcYNRaj47xFms2zbv04JXHyTsI,,2023-06-06,very early Ventures
+Alien Stock Market Intelligence — Numerai’s True Contribution | by Richard Craib | Numerai | Medium,https://medium.com/numerai/alien-stock-market-intelligence-numerais-true-contribution-6bc7652bd6ac,,2022-03-22,Richard Craib
+"Numerai Outperforms Market Neutral Hedge Funds by 26%, Raises Up To $150m | by Richard Craib | Numerai | Medium",https://medium.com/numerai/numerai-outperforms-market-neutral-hedge-funds-by-29-raises-up-to-150m-9df9a0ce642,,2021-10-06,Richard Craib
+Numerai’s Super Massive Data Release | by Anson Chu | Numerai | Medium,https://medium.com/numerai/numerais-super-massive-data-release-d3ca4a7a5feb,,2021-09-08,Anson Chu
+Building The Last Hedge Fund — Introducing Numerai Signals | by Richard Craib | Numerai | Medium,https://medium.com/numerai/building-the-last-hedge-fund-introducing-numerai-signals-12de26dfa69c,,2020-10-12,Richard Craib
+Building the Numerai Network. Engineering the Reliability of Numerai… | by Noah Harasz | Numerai | Medium,https://medium.com/numerai/building-the-numerai-network-af733c29d56f,,2021-04-01,Noah Harasz
+A New Data Science Competition Where Being Different Pays | by Michael Phillips | Numerai | Medium,https://medium.com/numerai/a-new-data-science-competition-where-being-different-pays-251c2aecc40a,,2020-07-06,Michael Phillips
+Achieving Meta Model Supremacy At Numerai | by Richard Craib | Numerai | Medium,https://medium.com/numerai/achieving-meta-model-supremacy-at-numerai-9ca3abeef98a,,2019-10-24,Richard Craib
+Super Intelligence for The Stock Market | by Richard Craib | Numerai | Medium,https://medium.com/numerai/invisible-super-intelligence-for-the-stock-market-3c64b57b244c,,2016-08-30,Richard Craib
+Introducing Numerai Grandmasters. Today Numerai is introducing a prestige… | by chanes | Numerai | Medium,https://medium.com/numerai/introducing-numerai-grandmasters-d02ec45df312,,2023-11-28,chanes
+Analyzing EIP-7623: Increase Calldata Cost - Execution Layer Research - Ethereum Research,https://ethresear.ch/t/eip-7623-increase-calldata-cost/19002,,2024-03-14,https://ethresear.ch/u/Nerolation
+Uniswap V3 LP Tokens as Non-Expiring Put and Call Options | by Guillaume Lambert | Medium,https://lambert-guillaume.medium.com/uniswap-v3-lp-tokens-as-perpetual-put-and-call-options-5b66219db827,,2021-06-23,Guillaume Lambert
+Designing a constant volatility AMM | Medium,https://lambert-guillaume.medium.com/designing-a-constant-volatility-amm-e167278b5d61,,2022-04-04,Guillaume Lambert
+Gamma transforms: How to hedge squeeth using Uni V3 | by Guillaume Lambert | Medium,https://lambert-guillaume.medium.com/gamma-transforms-how-to-hedge-squeeth-using-uni-v3-da785cb8b378,,2022-02-23,Guillaume Lambert
+How to deploy delta-neutral liquidity in Uniswap —  or why Euler Finance is a game changer for Liquidity Providers | Medium,https://lambert-guillaume.medium.com/how-to-deploy-delta-neutral-liquidity-in-uniswap-or-why-euler-finance-is-a-game-changer-for-lps-1d91efe1e8ac,,2022-01-12,Guillaume Lambert
+On-chain Volatility and Uniswap v3 | Medium,https://lambert-guillaume.medium.com/on-chain-volatility-and-uniswap-v3-d031b98143d1,,2021-11-21,Guillaume Lambert
+Pricing Uniswap v3 LP Positions: Towards a New Options Paradigm? | by Guillaume Lambert  | Medium,https://lambert-guillaume.medium.com/pricing-uniswap-v3-lp-positions-towards-a-new-options-paradigm-dce3e3b50125,,2021-10-17,Guillaume Lambert
+Calculating the Expected Value of the Impermanent Loss in Uniswap | by Guillaume Lambert | Medium,https://lambert-guillaume.medium.com/an-analysis-of-the-expected-value-of-the-impermanent-loss-in-uniswap-bfbfebbefed2,,2021-10-01,Guillaume Lambert
+"A Guide for Choosing Optimal Uniswap V3 LP Positions, Part 2 | by Guillaume Lambert | Medium",https://lambert-guillaume.medium.com/a-guide-for-choosing-optimal-uniswap-v3-lp-positions-part-2-4a94b0a12886,,2021-09-15,Guillaume Lambert
+How to Create Perpetual Options in Uniswap v3 | Medium,https://lambert-guillaume.medium.com/how-to-create-a-perpetual-options-in-uniswap-v3-3c40007ccf1,,2021-08-24,Guillaume Lambert
+"A Guide for Choosing Optimal Uniswap V3 LP Positions, Part 1 | by Guillaume Lambert  | Medium",https://lambert-guillaume.medium.com/a-guide-for-choosing-optimal-uniswap-v3-lp-positions-part-1-842b470d2261,,2021-08-04,Guillaume Lambert
+Understanding the Value of Uniswap v3 Liquidity Positions | by Guillaume Lambert | Medium,https://lambert-guillaume.medium.com/understanding-the-value-of-uniswap-v3-liquidity-positions-cdaaee127fe7,,2021-07-14,Guillaume Lambert
