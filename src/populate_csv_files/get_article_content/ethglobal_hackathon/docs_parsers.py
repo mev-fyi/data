@@ -20,11 +20,52 @@ def fetch_page_with_selenium(url):
     driver.get(url)
 
     # Optional: wait for JavaScript to load. Adjust the sleep time as necessary.
-    time.sleep(1)
+    time.sleep(4)
 
     content = driver.page_source
     driver.quit()
     return content
+
+
+def fetch_page_with_selenium_robust(url, shadow_host_selector='body > rapi-doc', max_attempts=3, attempt_delay=2):
+    from selenium import webdriver
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.common.by import By
+    from selenium.common.exceptions import TimeoutException, NoSuchElementException
+    import logging
+
+    driver = return_driver()  # Initialize the Selenium WebDriver
+    content = ""
+    attempts = 0
+
+    while attempts < max_attempts:
+        try:
+            driver.get(url)
+            # Use WebDriverWait to wait for the shadow host element to be present.
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, shadow_host_selector))
+            )
+            # Directly retrieve the inner HTML of the shadow DOM content using JavaScript.
+            content = driver.execute_script("""
+                let shadowHost = document.querySelector(arguments[0]);
+                return shadowHost.shadowRoot.innerHTML;
+            """, shadow_host_selector)
+            break  # Exit loop if shadow DOM content is successfully retrieved
+        except TimeoutException:
+            logging.info(f"Timeout waiting for element. Attempt {attempts + 1} of {max_attempts}.")
+            time.sleep(attempt_delay)  # Wait before retrying
+        except (NoSuchElementException, Exception) as e:
+            logging.info(f"An error occurred: {e}. Attempt {attempts + 1} of {max_attempts}.")
+            time.sleep(attempt_delay)  # Wait before retrying
+        finally:
+            attempts += 1
+
+    driver.quit()
+    if not content:
+        logging.info("Failed to load shadow DOM content after maximum attempts.")
+    return content
+
 
 def extract_first_header(markdown_content):
     """
@@ -114,9 +155,9 @@ def fetch_sidebar_urls(soup, base_url, sidebar_selector):
     return sidebar_links
 
 
-def crawl_sidebar(config, overwrite, sidebar_selector, selenium=False):
+def crawl_sidebar(config, overwrite, sidebar_selector, selenium=False, robust=False):
     # Use Selenium to fetch the initial page content
-    content = fetch_page_with_selenium(config['base_url'])
+    content = fetch_page_with_selenium(config['base_url']) if not robust else fetch_page_with_selenium_robust(config['base_url'])
     if content:
         soup = BeautifulSoup(content, 'html.parser')
 
@@ -551,5 +592,11 @@ site_configs = {
         'img_selector': '.img_ev3q',
         'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
         'base_name': '-contracts',
+    },
+    'voyager': {
+        'base_url': 'https://docs.voyager.online/#get-/classes',
+        'content_selector': '#the-main-body > main',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nav-scroll', selenium=True, robust=True),
     },
 }
