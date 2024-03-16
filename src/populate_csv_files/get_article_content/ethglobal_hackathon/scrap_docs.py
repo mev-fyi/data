@@ -4,7 +4,9 @@ from urllib.parse import urljoin
 import logging
 import concurrent.futures
 
-from src.populate_csv_files.get_article_content.ethglobal_hackathon.docs_parsers import site_configs, fetch_page, parse_content, save_page_as_pdf
+from src.populate_csv_files.get_article_content.ethglobal_hackathon.docs_parsers import site_configs, fetch_page, parse_content, save_page_as_pdf, extract_first_header, append_to_csv
+from src.utils import root_directory
+
 # Assuming these are implemented elsewhere correctly
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -33,7 +35,19 @@ def generic_crawl(config, overwrite):
         if content:
             soup = BeautifulSoup(content, 'html.parser')
             parsed_data = parser(soup, config)
-            save_page_as_pdf(parsed_data, current_url, overwrite, config.get('base_name', ''))
+            pdf_path = save_page_as_pdf(parsed_data, current_url, overwrite, config.get('base_name', ''))
+            if pdf_path:
+                title = extract_first_header(parsed_data['content'])
+                document_name = os.path.basename(pdf_path)
+                row_data = {
+                    'title': title,
+                    'authors': '',  # Update this if you have author information
+                    'pdf_link': current_url,
+                    'release_date': '',
+                    'document_name': document_name
+                }
+                csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
+                append_to_csv(csv_path, row_data)
 
             # Logic for handling pagination (next button)
             next_button = soup.select_one(config.get('next_button_selector', '.pagination-nav__link--next'))
@@ -57,8 +71,8 @@ def generic_parser(soup, config):
 
 
 def main(overwrite=False):
-    docs = ['pimlico_permissionless', 'pimlico_bundler', 'pimlico_paymaster']
-    # docs = None
+    # docs = ['argent']
+    docs = None
     configs = {doc: site_configs[doc] for doc in docs} if docs is not None else site_configs
 
     # Define how many threads you want to use

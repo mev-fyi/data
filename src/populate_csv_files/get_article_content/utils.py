@@ -221,10 +221,10 @@ def process_tag_based_content(tag_name, children_text, base_url, element):
     elif tag_name == 'a':
         href = element.get('href', '').strip()
         url = urljoin(base_url, href) if not href.startswith('http') else href
-        text = children_text.replace('\n', ' ').replace('  ', ' ')
+        text = children_text.replace('\n', ' ').replace('  ', ' ').replace('/$', '').replace('$$', '').replace('$', '')
         return f"[{text}]({url})"
     else:
-        return children_text
+        return children_text.replace('/$', '').replace('$$', '').replace('$', '')
 
 
 def html_to_markdown_docs_chainlink(element, base_url):

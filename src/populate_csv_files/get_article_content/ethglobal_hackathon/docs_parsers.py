@@ -1,8 +1,10 @@
 import base64
 import logging
 import os
+import re
 from functools import partial
 from urllib.parse import urljoin, urlparse
+import csv
 
 import pdfkit
 import requests
@@ -10,6 +12,30 @@ from bs4 import BeautifulSoup
 
 from src.populate_csv_files.get_article_content.utils import html_to_markdown_docs_chainlink, html_to_markdown_docs, markdown_to_html
 from src.utils import root_directory
+
+
+def extract_first_header(markdown_content):
+    """
+    Extracts the first header from the markdown content as the title.
+    If the first header contains a link, tries to extract only the text part before the link.
+    """
+    for line in markdown_content.splitlines():
+        if line.startswith('# '):
+            # Remove Markdown formatting for headers
+            title_line = line.strip('# ').strip()
+            # Check if title contains "[]"
+            if "[]" in title_line:
+                # Split on "[]" and take everything before it
+                title_before_link = title_line.split("[]")[0].strip()
+                if title_before_link == '⭐':
+                    return None
+                return title_before_link
+            else:
+                # If no "[]" is found, return the entire title line
+                return None
+    return None
+
+
 
 
 def crawl_chainlink(config, overwrite):
@@ -34,7 +60,19 @@ def crawl_chainlink(config, overwrite):
                     'author': "",  # Add author extraction if needed
                     'date': ""  # Add date extraction if needed
                 }
-                save_page_as_pdf(parsed_data, url, overwrite, base_name=config['base_name'])
+                pdf_path = save_page_as_pdf(parsed_data, url, overwrite, config.get('base_name', ''))
+                if pdf_path:
+                    title = extract_first_header(parsed_data['content'])
+                    document_name = os.path.basename(pdf_path)
+                    row_data = {
+                        'title': title if title is not None else document_name,
+                        'authors': '',  # Update this if you have author information
+                        'pdf_link': url,
+                        'release_date': '',
+                        'document_name': document_name
+                    }
+                    csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
+                    append_to_csv(csv_path, row_data)
             else:
                 logging.error(f"Failed to fetch content for {url}")
 
@@ -86,7 +124,19 @@ def crawl_sidebar(config, overwrite, sidebar_selector):
                     'author': "",  # Add author extraction if needed
                     'date': ""  # Add date extraction if needed
                 }
-                save_page_as_pdf(parsed_data, url, overwrite, base_name=config.get('base_name', ''))
+                pdf_path = save_page_as_pdf(parsed_data, url, overwrite, config.get('base_name', ''))
+                if pdf_path:
+                    title = extract_first_header(parsed_data['content'])
+                    document_name = os.path.basename(pdf_path)
+                    row_data = {
+                        'title': title if title is not None else document_name,
+                        'authors': '',  # Update this if you have author information
+                        'pdf_link': url,
+                        'release_date': '',
+                        'document_name': document_name
+                    }
+                    csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
+                    append_to_csv(csv_path, row_data)
             else:
                 logging.error(f"Failed to fetch content for {url}")
 
@@ -161,6 +211,32 @@ def save_page_as_pdf(parsed_data, url, overwrite, base_name=""):
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
     html_content = markdown_to_html(parsed_data['content'])
     save_as_pdf(html_content, save_path)
+    return save_path
+
+
+def append_to_csv(csv_path, row_data):
+    """
+    Appends a row to the CSV file, ensuring no duplicates.
+    """
+    try:
+        with open(csv_path, 'r+', newline='', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            existing_rows = [row for row in reader]
+
+            # Check if the row_data matches any existing row to avoid duplicates
+            if any(row['pdf_link'] == row_data['pdf_link'] for row in existing_rows):
+                logging.info(f"Skipping duplicate entry for {row_data['pdf_link']}")
+                return
+
+            writer = csv.DictWriter(csvfile, fieldnames=reader.fieldnames)
+            writer.writerow(row_data)
+    except FileNotFoundError:
+        # File doesn't exist, create it and write the header and first row
+        with open(csv_path, 'w', newline='', encoding='utf-8') as csvfile:
+            fieldnames = ['title', 'authors', 'pdf_link', 'release_date', 'document_name']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerow(row_data)
 
 
 def save_dir():
@@ -261,5 +337,12 @@ site_configs = {
         'base_name': '-paymaster',
         'crawl_func': partial(crawl_sidebar, sidebar_selector='.vocs_Sidebar_group'),
 
+    },
+    'argent': {
+        'base_url': 'https://docs.argent.xyz/',
+        'content_selector': 'main.flex-1',
+        'img_selector': 'picture.relative',
+        'base_name': '',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='aside.relative'),
     },
 }
