@@ -1463,3 +1463,180 @@ tokens-list.pdf,,https://docs.base.org/tokens/list,,tokens-list.pdf
 terms-of-service.pdf,,https://docs.base.org/terms-of-service,,terms-of-service.pdf
 privacy-policy.pdf,,https://docs.base.org/privacy-policy,,privacy-policy.pdf
 cookie-policy.pdf,,https://docs.base.org/cookie-policy,,cookie-policy.pdf
+changelog-v1-1.pdf,,https://docs.dynamic.xyz/changelog/v1-1,,changelog-v1-1.pdf
+quickstart.pdf,,https://docs.dynamic.xyz/quickstart,,quickstart.pdf
+,,https://docs.aztec.network/,,index.pdf
+,,https://docs.aztec.network/learn/about_aztec/what_is_aztec,,learn-about_aztec-what_is_aztec.pdf
+,,https://docs.aztec.network/learn/about_aztec/vision,,learn-about_aztec-vision.pdf
+,,https://docs.aztec.network/learn/about_aztec/technical_overview,,learn-about_aztec-technical_overview.pdf
+,,https://docs.aztec.network/learn/concepts/main,,learn-concepts-main.pdf
+,,https://docs.aztec.network/learn/concepts/hybrid_state/main,,learn-concepts-hybrid_state-main.pdf
+,,https://docs.aztec.network/learn/concepts/hybrid_state/public_vm,,learn-concepts-hybrid_state-public_vm.pdf
+,,https://docs.aztec.network/learn/concepts/storage/trees/main,,learn-concepts-storage-trees-main.pdf
+,,https://docs.aztec.network/learn/concepts/storage/trees/indexed_merkle_tree,,learn-concepts-storage-trees-indexed_merkle_tree.pdf
+,,https://docs.aztec.network/learn/concepts/storage/storage_slots,,learn-concepts-storage-storage_slots.pdf
+,,https://docs.aztec.network/learn/concepts/accounts/main,,learn-concepts-accounts-main.pdf
+,,https://docs.aztec.network/learn/concepts/accounts/keys,,learn-concepts-accounts-keys.pdf
+,,https://docs.aztec.network/learn/concepts/accounts/authwit,,learn-concepts-accounts-authwit.pdf
+,,https://docs.aztec.network/learn/concepts/transactions,,learn-concepts-transactions.pdf
+,,https://docs.aztec.network/learn/concepts/smart_contracts/main,,learn-concepts-smart_contracts-main.pdf
+,,https://docs.aztec.network/learn/concepts/smart_contracts/contract_creation,,learn-concepts-smart_contracts-contract_creation.pdf
+,,https://docs.aztec.network/learn/concepts/communication/public_private_calls/main,,learn-concepts-communication-public_private_calls-main.pdf
+,,https://docs.aztec.network/learn/concepts/communication/public_private_calls/slow_updates_tree,,learn-concepts-communication-public_private_calls-slow_updates_tree.pdf
+,,https://docs.aztec.network/learn/concepts/communication/cross_chain_calls,,learn-concepts-communication-cross_chain_calls.pdf
+,,https://docs.aztec.network/learn/concepts/pxe/main,,learn-concepts-pxe-main.pdf
+,,https://docs.aztec.network/learn/concepts/pxe/acir_simulator,,learn-concepts-pxe-acir_simulator.pdf
+,,https://docs.aztec.network/learn/concepts/circuits/main,,learn-concepts-circuits-main.pdf
+,,https://docs.aztec.network/learn/concepts/circuits/kernels/private_kernel,,learn-concepts-circuits-kernels-private_kernel.pdf
+,,https://docs.aztec.network/learn/concepts/circuits/kernels/public_kernel,,learn-concepts-circuits-kernels-public_kernel.pdf
+,,https://docs.aztec.network/learn/concepts/circuits/rollup_circuits/main,,learn-concepts-circuits-rollup_circuits-main.pdf
+,,https://docs.aztec.network/learn/concepts/nodes_clients/sequencer/main,,learn-concepts-nodes_clients-sequencer-main.pdf
+,,https://docs.aztec.network/learn/concepts/nodes_clients/sequencer/sequencer_selection,,learn-concepts-nodes_clients-sequencer-sequencer_selection.pdf
+,,https://docs.aztec.network/developers/getting_started/main,,developers-getting_started-main.pdf
+,,https://docs.aztec.network/developers/getting_started/quickstart,,developers-getting_started-quickstart.pdf
+,,https://docs.aztec.network/developers/getting_started/aztecnr-getting-started,,developers-getting_started-aztecnr-getting-started.pdf
+,,https://docs.aztec.network/developers/getting_started/aztecjs-getting-started,,developers-getting_started-aztecjs-getting-started.pdf
+,,https://docs.aztec.network/developers/tutorials/main,,developers-tutorials-main.pdf
+,,https://docs.aztec.network/developers/tutorials/writing_token_contract,,developers-tutorials-writing_token_contract.pdf
+,,https://docs.aztec.network/developers/tutorials/writing_private_voting_contract,,developers-tutorials-writing_private_voting_contract.pdf
+,,https://docs.aztec.network/developers/tutorials/writing_dapp/main,,developers-tutorials-writing_dapp-main.pdf
+,,https://docs.aztec.network/developers/tutorials/writing_dapp/project_setup,,developers-tutorials-writing_dapp-project_setup.pdf
+,,https://docs.aztec.network/developers/tutorials/writing_dapp/pxe_service,,developers-tutorials-writing_dapp-pxe_service.pdf
+,,https://docs.aztec.network/developers/tutorials/writing_dapp/contract_deployment,,developers-tutorials-writing_dapp-contract_deployment.pdf
+,,https://docs.aztec.network/developers/tutorials/writing_dapp/contract_interaction,,developers-tutorials-writing_dapp-contract_interaction.pdf
+,,https://docs.aztec.network/developers/tutorials/writing_dapp/testing,,developers-tutorials-writing_dapp-testing.pdf
+,,https://docs.aztec.network/developers/tutorials/token_portal/main,,developers-tutorials-token_portal-main.pdf
+,,https://docs.aztec.network/developers/tutorials/token_portal/setup,,developers-tutorials-token_portal-setup.pdf
+,,https://docs.aztec.network/developers/tutorials/token_portal/depositing_to_aztec,,developers-tutorials-token_portal-depositing_to_aztec.pdf
+,,https://docs.aztec.network/developers/tutorials/token_portal/minting_on_aztec,,developers-tutorials-token_portal-minting_on_aztec.pdf
+,,https://docs.aztec.network/developers/tutorials/token_portal/cancelling_deposits,,developers-tutorials-token_portal-cancelling_deposits.pdf
+,,https://docs.aztec.network/developers/tutorials/token_portal/withdrawing_to_l1,,developers-tutorials-token_portal-withdrawing_to_l1.pdf
+,,https://docs.aztec.network/developers/tutorials/token_portal/typescript_glue_code,,developers-tutorials-token_portal-typescript_glue_code.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/main,,developers-tutorials-uniswap-main.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/setup,,developers-tutorials-uniswap-setup.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/l1_portal,,developers-tutorials-uniswap-l1_portal.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/l2_contract_setup,,developers-tutorials-uniswap-l2_contract_setup.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/swap_publicly,,developers-tutorials-uniswap-swap_publicly.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/execute_public_swap_on_l1,,developers-tutorials-uniswap-execute_public_swap_on_l1.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/swap_privately,,developers-tutorials-uniswap-swap_privately.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/execute_private_swap_on_l1,,developers-tutorials-uniswap-execute_private_swap_on_l1.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/redeeming_swapped_assets_on_l2,,developers-tutorials-uniswap-redeeming_swapped_assets_on_l2.pdf
+,,https://docs.aztec.network/developers/tutorials/uniswap/typescript_glue_code,,developers-tutorials-uniswap-typescript_glue_code.pdf
+,,https://docs.aztec.network/developers/tutorials/testing,,developers-tutorials-testing.pdf
+,,https://docs.aztec.network/developers/sandbox/main,,developers-sandbox-main.pdf
+,,https://docs.aztec.network/developers/sandbox/guides/run_more_than_one_pxe_sandbox,,developers-sandbox-guides-run_more_than_one_pxe_sandbox.pdf
+,,https://docs.aztec.network/developers/wallets/creating_schnorr_accounts,,developers-wallets-creating_schnorr_accounts.pdf
+,,https://docs.aztec.network/developers/sandbox/references/cli-commands,,developers-sandbox-references-cli-commands.pdf
+,,https://docs.aztec.network/developers/sandbox/references/sandbox-reference,,developers-sandbox-references-sandbox-reference.pdf
+,,https://docs.aztec.network/developers/sandbox/references/cheat_codes,,developers-sandbox-references-cheat_codes.pdf
+,,https://docs.aztec.network/apis/pxe/interfaces/PXE,,apis-pxe-interfaces-PXE.pdf
+,,https://docs.aztec.network/developers/contracts/main,,developers-contracts-main.pdf
+,,https://docs.aztec.network/developers/contracts/setup,,developers-contracts-setup.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/layout,,developers-contracts-writing_contracts-layout.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/example_contract,,developers-contracts-writing_contracts-example_contract.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/functions/main,,developers-contracts-writing_contracts-functions-main.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/functions/context,,developers-contracts-writing_contracts-functions-context.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/functions/public_private_unconstrained,,developers-contracts-writing_contracts-functions-public_private_unconstrained.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/functions/visibility,,developers-contracts-writing_contracts-functions-visibility.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/functions/call_functions,,developers-contracts-writing_contracts-functions-call_functions.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/functions/initializers,,developers-contracts-writing_contracts-functions-initializers.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/functions/compute_note_hash_and_nullifier,,developers-contracts-writing_contracts-functions-compute_note_hash_and_nullifier.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/functions/inner_workings,,developers-contracts-writing_contracts-functions-inner_workings.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/storage/main,,developers-contracts-writing_contracts-storage-main.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/storage/define_storage,,developers-contracts-writing_contracts-storage-define_storage.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/storage/notes,,developers-contracts-writing_contracts-storage-notes.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/storage/storage_slots,,developers-contracts-writing_contracts-storage-storage_slots.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/accounts/write_accounts_contract,,developers-contracts-writing_contracts-accounts-write_accounts_contract.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/events/emit_event,,developers-contracts-writing_contracts-events-emit_event.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/oracles/main,,developers-contracts-writing_contracts-oracles-main.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/oracles/inbuilt_oracles,,developers-contracts-writing_contracts-oracles-inbuilt_oracles.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/oracles/pop_capsule,,developers-contracts-writing_contracts-oracles-pop_capsule.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/portals,,developers-contracts-writing_contracts-portals.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/portals/deploy_with_portal,,developers-contracts-writing_contracts-portals-deploy_with_portal.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/portals/communicate_with_portal,,developers-contracts-writing_contracts-portals-communicate_with_portal.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/historical_data/slow_updates_tree/main,,developers-contracts-writing_contracts-historical_data-slow_updates_tree-main.pdf
+,,https://docs.aztec.network/developers/contracts/writing_contracts/historical_data/archive_tree/how_to_prove_history,,developers-contracts-writing_contracts-historical_data-archive_tree-how_to_prove_history.pdf
+,,https://docs.layerzero.network/,,index.pdf
+,,https://docs.fhenix.zone/docs/devdocs/intro,,docs-devdocs-intro.pdf
+,,https://docs.layerzero.network/explore/layerzero-v2,,explore-layerzero-v2.pdf
+,,https://docs.fhenix.zone/docs/category/fhenix-frontier,,docs-category-fhenix-frontier.pdf
+,,https://docs.layerzero.network/explore/migration,,explore-migration.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Fhenix Frontier/Fhenix-T-FHE,,docs-devdocs-Fhenix Frontier-Fhenix-T-FHE.pdf
+,,https://docs.layerzero.network/explore/why-layerzero,,explore-why-layerzero.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Fhenix Frontier/Connecting-To,,docs-devdocs-Fhenix Frontier-Connecting-To.pdf
+concepts-overview.pdf,,https://docs.morpho.org/concepts/overview,,concepts-overview.pdf
+,,https://docs.layerzero.network/contracts/layerzero-messages,,contracts-layerzero-messages.pdf
+concepts-morpho-blue.pdf,,https://docs.morpho.org/concepts/morpho-blue/,,concepts-morpho-blue.pdf
+,,https://docs.fhenix.zone/docs/category/details,,docs-category-details.pdf
+concepts-metamorpho.pdf,,https://docs.morpho.org/concepts/metamorpho/,,concepts-metamorpho.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Fhenix Frontier/Details/Limitations,,docs-devdocs-Fhenix Frontier-Details-Limitations.pdf
+concepts-morpho-optimizers.pdf,,https://docs.morpho.org/concepts/morpho-optimizers/,,concepts-morpho-optimizers.pdf
+,,https://docs.layerzero.network/contracts/endpoint-addresses,,contracts-endpoint-addresses.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Fhenix Frontier/Details/Differences-From-Fhevm,,docs-devdocs-Fhenix Frontier-Details-Differences-From-Fhevm.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Fhenix Frontier/Details/Encryption-Schema,,docs-devdocs-Fhenix Frontier-Details-Encryption-Schema.pdf
+,,https://docs.layerzero.network/contracts/messagelib-addresses,,contracts-messagelib-addresses.pdf
+,,https://docs.fhenix.zone/docs/category/fhe-contracts,,docs-category-fhe-contracts.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Writing Smart Contracts/FHE-sol,,docs-devdocs-Writing Smart Contracts-FHE-sol.pdf
+developers-aztecjs-main.pdf,,https://docs.aztec.network/developers/aztecjs/main,,developers-aztecjs-main.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Writing Smart Contracts/User-Inputs,,docs-devdocs-Writing Smart Contracts-User-Inputs.pdf
+,,https://docs.layerzero.network/contracts/dvn-addresses,,contracts-dvn-addresses.pdf
+developers-debugging-main.pdf,,https://docs.aztec.network/developers/debugging/main,,developers-debugging-main.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Writing Smart Contracts/Returning-Data,,docs-devdocs-Writing Smart Contracts-Returning-Data.pdf
+,,https://docs.layerzero.network/contracts/executor-addresses,,contracts-executor-addresses.pdf
+developers-versions-updating.pdf,,https://docs.aztec.network/developers/versions-updating,,developers-versions-updating.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Writing Smart Contracts/Select,,docs-devdocs-Writing Smart Contracts-Select.pdf
+,,https://docs.layerzero.network/contracts/options,,contracts-options.pdf
+main,,developers-wallets-main.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Writing Smart Contracts/Requires,,docs-devdocs-Writing Smart Contracts-Requires.pdf
+developers-privacy-main.pdf,,https://docs.aztec.network/developers/privacy/main,,developers-privacy-main.pdf
+,,https://docs.layerzero.network/contracts/estimating-gas-fees,,contracts-estimating-gas-fees.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Writing Smart Contracts/Permissions,,docs-devdocs-Writing Smart Contracts-Permissions.pdf
+,,https://docs.layerzero.network/contracts/transaction-pricing,,contracts-transaction-pricing.pdf
+developers-limitations-main.pdf,,https://docs.aztec.network/developers/limitations/main,,developers-limitations-main.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Writing Smart Contracts/Converting-between-Types,,docs-devdocs-Writing Smart Contracts-Converting-between-Types.pdf
+,,https://docs.layerzero.network/contracts/oapp-configuration,,contracts-oapp-configuration.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Writing Smart Contracts/Types-and-Operators,,docs-devdocs-Writing Smart Contracts-Types-and-Operators.pdf
+,,https://docs.layerzero.network/contracts/configure-dvns,,contracts-configure-dvns.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Writing Smart Contracts/Useful-Tips,,docs-devdocs-Writing Smart Contracts-Useful-Tips.pdf
+misc-migration_notes.pdf,,https://docs.aztec.network/misc/migration_notes,,misc-migration_notes.pdf
+,,https://docs.layerzero.network/contracts/executor-configuration,,contracts-executor-configuration.pdf
+Smart Contracts-Gas-and-Benchmarks.pdf
+misc-glossary.pdf,,https://docs.aztec.network/misc/glossary,,misc-glossary.pdf
+,,https://docs.layerzero.network/contracts/deploy-same-addresses,,contracts-deploy-same-addresses.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Setting Up Your Environment/intro,,docs-devdocs-Setting Up Your Environment-intro.pdf
+misc-roadmap-main.pdf,,https://docs.aztec.network/misc/roadmap/main,,misc-roadmap-main.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Setting Up Your Environment/Gitpod,,docs-devdocs-Setting Up Your Environment-Gitpod.pdf
+misc-how_to_contribute.pdf,,https://docs.aztec.network/misc/how_to_contribute,,misc-how_to_contribute.pdf
+,,https://docs.layerzero.network/contracts/troubleshooting/test-helper,,contracts-troubleshooting-test-helper.pdf
+misc-aztec_connect_sunset.pdf,,https://docs.aztec.network/misc/aztec_connect_sunset,,misc-aztec_connect_sunset.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Setting Up Your Environment/Hardhat,,docs-devdocs-Setting Up Your Environment-Hardhat.pdf
+,,https://docs.layerzero.network/contracts/layerzero-scan,,contracts-layerzero-scan.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Setting Up Your Environment/Remix,,docs-devdocs-Setting Up Your Environment-Remix.pdf
+,,https://docs.fhenix.zone/docs/category/fhenixjs,,docs-category-fhenixjs.pdf
+,,https://docs.layerzero.network/contracts/debugging-messages,,contracts-debugging-messages.pdf
+,,https://docs.fhenix.zone/docs/devdocs/FhenixJS/Fhenix-JS,,docs-devdocs-FhenixJS-Fhenix-JS.pdf
+,,https://docs.layerzero.network/contracts/error-messages,,contracts-error-messages.pdf
+,,https://docs.layerzero.network/contracts/integration-checklist,,contracts-integration-checklist.pdf
+,,https://docs.fhenix.zone/docs/devdocs/FhenixJS/Encryption,,docs-devdocs-FhenixJS-Encryption.pdf
+,,https://docs.layerzero.network/contracts/develop-dvn,,contracts-develop-dvn.pdf
+,,https://docs.fhenix.zone/docs/devdocs/FhenixJS/Decryption,,docs-devdocs-FhenixJS-Decryption.pdf
+,,https://docs.layerzero.network/contracts/develop-executor,,contracts-develop-executor.pdf
+,,https://docs.fhenix.zone/docs/devdocs/FhenixJS/Permits,,docs-devdocs-FhenixJS-Permits.pdf
+,,https://docs.layerzero.network/support,,support.pdf
+,,https://docs.fhenix.zone/docs/devdocs/FhenixJS/Sending-a-Transaction,,docs-devdocs-FhenixJS-Sending-a-Transaction.pdf
+,,https://docs.layerzero.network/contribute,,contribute.pdf
+,,https://docs.fhenix.zone/docs/devdocs/FhenixJS/Network Keys,,docs-devdocs-FhenixJS-Network Keys.pdf
+,,https://docs.layerzero.network/hackathon-success,,hackathon-success.pdf
+,,https://docs.fhenix.zone/docs/devdocs/FhenixJS/Catching Errors,,docs-devdocs-FhenixJS-Catching Errors.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Examples and References/Templates,,docs-devdocs-Examples and References-Templates.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Examples and References/Examples-fheDapps,,docs-devdocs-Examples and References-Examples-fheDapps.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Encryption and Privacy/Permits-Access-Control,,docs-devdocs-Encryption and Privacy-Permits-Access-Control.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Encryption and Privacy/Privacy-Web3,,docs-devdocs-Encryption and Privacy-Privacy-Web3.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Solidity API/Experimental/FHERC20,,docs-devdocs-Solidity API-Experimental-FHERC20.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Solidity API/Experimental/IFHERC20,,docs-devdocs-Solidity API-Experimental-IFHERC20.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Solidity API/Experimental/eAddress,,docs-devdocs-Solidity API-Experimental-eAddress.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Solidity API/FHE,,docs-devdocs-Solidity API-FHE.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Solidity API/Permissioned,,docs-devdocs-Solidity API-Permissioned.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Tools and Utilities/Fhenix-Encryption-UI,,docs-devdocs-Tools and Utilities-Fhenix-Encryption-UI.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Tools and Utilities/Fhenix-Hardhat-Plugin,,docs-devdocs-Tools and Utilities-Fhenix-Hardhat-Plugin.pdf
+,,https://docs.fhenix.zone/docs/devdocs/Tools and Utilities/Fhenix-Remix-Plugin,,docs-devdocs-Tools and Utilities-Fhenix-Remix-Plugin.pdf

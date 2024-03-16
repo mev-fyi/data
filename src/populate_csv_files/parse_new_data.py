@@ -333,7 +333,8 @@ def run():
         "quillaudits_website": r"^https://blog\.quillaudits\.com/?$",
         "quillaudits_trending_article": r"^https://blog\.quillaudits\.com/trending/.+$",
         "quillaudits_trending_website": r"^https://blog\.quillaudits\.com/trending/?$",
-
+        "medium_article_3": r"^https://\w+\.medium\.com/.+",
+        "medium_website_3": r"^https://\w+\.medium\.com/?$"
     }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.

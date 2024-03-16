@@ -70,8 +70,7 @@ def generic_parser(soup, config):
     return {'url': config['base_url'], 'content': markdown_content, 'author': "", 'date': ""}
 
 
-def main(overwrite=False):
-    docs = ['base']
+def main(docs=None, overwrite=False):
     # docs = None
     configs = {doc: site_configs[doc] for doc in docs} if docs is not None else site_configs
 
@@ -100,4 +99,6 @@ if __name__ == '__main__':
     # Use a command line argument or environment variable to set overwrite if needed.
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
     overwrite = True  # Forcing overwrite to True for this example, adjust as necessary
-    main(overwrite)
+
+    docs = ['aztec', 'layerzero', 'fhenix', 'morpho']
+    main(docs=docs, overwrite=overwrite)
