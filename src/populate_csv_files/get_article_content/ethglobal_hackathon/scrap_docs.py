@@ -100,5 +100,5 @@ if __name__ == '__main__':
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
     overwrite = True  # Forcing overwrite to True for this example, adjust as necessary
 
-    docs = ['voyager']
+    docs = ['circom']
     main(docs=docs, overwrite=overwrite)

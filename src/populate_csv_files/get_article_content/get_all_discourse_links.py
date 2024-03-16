@@ -195,6 +195,16 @@ def run():
         ("https://forum.scrt.network/c/uncategorized/1", "scrt_network_uncategorized"),
         ("https://community.taiko.xyz/", "taiko_community"),
         ("forum.numer.ai", "numerai_forum"),
+        ("https://forum.apecoin.com/c/announcements/17", "apecoin_announcements"),
+        ("https://forum.apecoin.com/c/general/14", "apecoin_general"),
+        ("https://forum.apecoin.com/c/aip-execution-and-transparency/62", "apecoin_aip_execution_and_transparency"),
+        ("https://forum.apecoin.com/c/aip-ideas/20", "apecoin_aip_ideas"),
+        ("https://forum.apecoin.com/c/aip-drafts/21", "apecoin_aip_drafts"),
+        ("https://forum.apecoin.com/c/administrative-review/36", "apecoin_administrative_review"),
+        ("https://forum.apecoin.com/c/live-aip/13", "apecoin_live_aip"),
+        ("https://forum.apecoin.com/c/final-aips/22", "apecoin_final_aips"),
+        ("https://forum.apecoin.com/c/help-resources/26", "apecoin_help_resources"),
+        ("https://forum.apecoin.com/c/withdrawn/18", "apecoin_withdrawn"),
     ]
     # TODO 2024-03-01: automatically extract all subforums from the parent forum page
     with ThreadPoolExecutor() as executor:

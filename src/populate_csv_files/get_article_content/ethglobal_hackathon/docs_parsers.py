@@ -155,6 +155,32 @@ def fetch_sidebar_urls(soup, base_url, sidebar_selector):
     return sidebar_links
 
 
+def fetch_sidebar_urls_wihtout_href(soup, base_url, sidebar_selector):
+    """
+    Fetch all URLs from the sidebar, regardless of their nesting level.
+
+    :param soup: BeautifulSoup object of the webpage.
+    :param base_url: The base URL of the website to ensure absolute URLs.
+    :param sidebar_selector: The CSS selector for the sidebar.
+    :return: List of URLs to crawl.
+    """
+    sidebar_links = []
+    # Target the sidebar directly, if possible, to reduce search scope
+    sidebar_container = soup.select_one(sidebar_selector)
+
+    if sidebar_container:
+        # Recursively fetch all 'a' tags regardless of their nesting level within the sidebar
+        all_links = sidebar_container.find_all("a")
+        for link in all_links:
+            href = link.get('href', '')
+            # Ensure the link is not empty
+            if href and not href.startswith('#'):
+                full_url = urljoin(base_url, href)
+                sidebar_links.append(full_url)
+
+    return sidebar_links
+
+
 def crawl_sidebar(config, overwrite, sidebar_selector, selenium=False, robust=False):
     # Use Selenium to fetch the initial page content
     content = fetch_page_with_selenium(config['base_url']) if not robust else fetch_page_with_selenium_robust(config['base_url'])
@@ -162,7 +188,9 @@ def crawl_sidebar(config, overwrite, sidebar_selector, selenium=False, robust=Fa
         soup = BeautifulSoup(content, 'html.parser')
 
         # Your existing logic to process the sidebar and subsequent pages
-        urls_to_crawl = fetch_sidebar_urls(soup, config['base_url'], sidebar_selector)
+        fetch_sidebar_func = config.get('fetch_sidebar_func', fetch_sidebar_urls)
+        urls_to_crawl = fetch_sidebar_func(soup, config['base_url'], sidebar_selector)
+
         if config['base_url'] in urls_to_crawl:
             urls_to_crawl.remove(config['base_url'])
 
@@ -598,5 +626,139 @@ site_configs = {
         'content_selector': '#the-main-body > main',
         'img_selector': '.img_ev3q',
         'crawl_func': partial(crawl_sidebar, sidebar_selector='.nav-scroll', selenium=True, robust=True),
+    },
+    'worldcoin': {
+        'base_url': 'https://docs.worldcoin.org/',
+        'content_selector': '.prose',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.lg\:block > ul:nth-child(1)'),
+    },
+    'chilliz': {
+        'base_url': 'https://docs.chiliz.com/',
+        'content_selector': '.lg\:flex-row > div:nth-child(2) > div:nth-child(2)',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
+    },
+    'filecoin': {
+        'base_url': 'https://docs.filecoin.io/',
+        'content_selector': 'main.flex-1',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
+    },
+    'ipc': {
+        'base_url': 'https://docs.ipc.space/',
+        'content_selector': '.lg\:flex-row > div:nth-child(2)',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.pt-4 > ul:nth-child(1)'),
+    },
+    'celestia_learn': {
+        'base_url': 'https://docs.celestia.org/learn/how-celestia-works/overview',
+        'content_selector': '.VPDoc',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
+        'base_name': '-learn',
+    },
+    'celestia_nodes': {
+        'base_url': 'https://docs.celestia.org/nodes/overview',
+        'content_selector': '.VPDoc',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
+        'base_name': '-nodes',
+    },
+    'celestia_developers': {
+        'base_url': 'https://docs.celestia.org/developers/build-modular',
+        'content_selector': '.VPDoc',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
+        'base_name': '-developers',
+    },
+    'celestia_community': {
+        'base_url': 'https://docs.celestia.org/community/overview',
+        'content_selector': '.VPDoc',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='#VPSidebarNav'),
+        'base_name': '-community',
+    },
+    'availproject': {
+        'base_url': 'https://docs.availproject.org/docs/introduction-to-avail',
+        'content_selector': 'article.nx-w-full',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.nextra-sidebar-container'),
+    },
+    'web3auth': {
+        'base_url': 'https://web3auth.io/docs/sdk/pnp/web/',
+        'content_selector': '.docItemCol_VOVn',
+        'img_selector': '.img_ev3q',
+        'next_button_selector': '.pagination-nav__link--next',
+    },
+    'ens_learn': {
+        'base_url': 'https://docs.ens.domains/learn/protocol',
+        'content_selector': '.article.prose',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
+        'base_name': '-learn',
+    },
+    'ens_web': {
+        'base_url': 'https://docs.ens.domains/web/resolution',
+        'content_selector': '.article.prose',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
+        'base_name': '-web',
+    },
+    'ens_registry': {
+        'base_url': 'https://docs.ens.domains/registry/ens',
+        'content_selector': '.article.prose',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
+        'base_name': '-registry',
+    },
+    'ens_resolver': {
+        'base_url': 'https://docs.ens.domains/resolvers/public',
+        'content_selector': '.article.prose',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
+        'base_name': '-resolver',
+    },
+    'ens_dao': {
+        'base_url': 'https://docs.ens.domains/dao',
+        'content_selector': '.article.prose',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
+        'base_name': '-dao',
+    },
+    'ens_ensip': {
+        'base_url': 'https://docs.ens.domains/ensip/',
+        'content_selector': '.article.prose',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='nav.flex'),
+        'base_name': '-ensip',
+    },
+    'gnark_howto': {
+        'base_url': 'https://docs.gnark.consensys.io/category/how-to',
+        'content_selector': '.docPage__5DB',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
+        'base_name': '-howto',
+    },
+    'gnark_reference': {
+        'base_url': 'https://docs.gnark.consensys.io/Reference/api',
+        'content_selector': '.docPage__5DB',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
+        'base_name': '-reference',
+    },
+    'gnark_concepts': {
+        'base_url': 'https://docs.gnark.consensys.io/category/concepts',
+        'content_selector': '.docPage__5DB',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.theme-doc-sidebar-menu'),
+        'base_name': '-concepts',
+    },
+    'circom': {
+        'base_url': 'https://docs.circom.io/getting-started/installation/',
+        'content_selector': '.md-content',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='.md-nav__item--section > nav:nth-child(3) > ul:nth-child(2)', selenium=True),
+        'fetch_sidebar_func': fetch_sidebar_urls_wihtout_href
     },
 }
