@@ -42,9 +42,9 @@ def update_or_append_csv(pdf_path, current_url, parsed_content, csv_path, overwr
         if Path(csv_path).is_file():
             df = pd.read_csv(csv_path)
             # Check if title needs to be overwritten or if a new row should be added
-            if overwrite_title and any(df['title'] == title):
+            if overwrite_title and any(df['pdf_link'] == current_url):
                 # If overwriting, find the index of the existing row and update it
-                idx = df.index[df['title'] == title].tolist()
+                idx = df.index[df['pdf_link'] == current_url].tolist()
                 if idx:
                     df.loc[idx[0]] = row_data.iloc[0]
                     logging.info(f"Overwriting existing row for [{title}]")
@@ -58,8 +58,8 @@ def update_or_append_csv(pdf_path, current_url, parsed_content, csv_path, overwr
         df.to_csv(csv_path, index=False)
 
 
-def fetch_page_with_selenium(url):
-    driver = return_driver()  # Initialize the Selenium WebDriver
+def fetch_page_with_selenium(url, headless=True):
+    driver = return_driver(headless)  # Initialize the Selenium WebDriver
     driver.get(url)
 
     # Optional: wait for JavaScript to load. Adjust the sleep time as necessary.
@@ -70,14 +70,14 @@ def fetch_page_with_selenium(url):
     return content
 
 
-def fetch_page_with_selenium_robust(url, shadow_host_selector='body > rapi-doc', max_attempts=3, attempt_delay=2):
+def fetch_page_with_selenium_robust(url, shadow_host_selector='body > rapi-doc', max_attempts=3, attempt_delay=2, headless=True):
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
     from selenium.webdriver.common.by import By
     from selenium.common.exceptions import TimeoutException, NoSuchElementException
     import logging
 
-    driver = return_driver()  # Initialize the Selenium WebDriver
+    driver = return_driver(headless)  # Initialize the Selenium WebDriver
     content = ""
     attempts = 0
 

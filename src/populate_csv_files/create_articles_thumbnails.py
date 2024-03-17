@@ -1,6 +1,7 @@
 import functools
 import os
 import random
+from pathlib import Path
 from typing import Tuple
 
 import pandas as pd
@@ -16,9 +17,14 @@ import logging
 from src.utils import return_driver, root_directory
 
 
+def extract_domain(url):
+    from urllib.parse import urlparse
+    parsed_url = urlparse(url)
+    return parsed_url.netloc
+
 def sanitize_title(title):
     # Replace '/' with '<slash>'
-    title_with_slash_replaced = title.replace('/', '<slash>')
+    title_with_slash_replaced = str(title).replace('/', '<slash>')
 
     # Keep all non-alphanumeric characters (except replacing '/' with '<slash>')
     # sanitized_title = re.sub(r'[^a-zA-Z0-9\-#]', ' ', title_with_slash_replaced)
@@ -49,7 +55,15 @@ def close_popups(driver, url):
         time.sleep(2)
 
 
-def take_screenshot(url, title, output_dir, headless=False, zoom=145, screenshot_height_percent=0.20, max_height=900, min_height=600):
+def take_screenshot(url, document_name, output_dir, overwrite, headless, zoom=145, screenshot_height_percent=0.20, max_height=900, min_height=600):
+    # Check for the screenshot file existence considering the new output_dir structure
+    formatted_name = str(sanitize_title(document_name)).replace('.pdf', '')
+    screenshot_path = os.path.join(output_dir, f"{formatted_name}.png")
+
+    if not overwrite and Path(screenshot_path).exists():
+        logging.info(f"Screenshot for {document_name} already exists. Skipping.")
+        return
+
     driver = return_driver(headless)
     attempt = 0
     page_loaded = False
@@ -108,17 +122,27 @@ def take_screenshot(url, title, output_dir, headless=False, zoom=145, screenshot
     image = Image.open(BytesIO(png))
     cropped_image = image.crop((0, 0, image.width, max(min(max_height, desired_height), min_height)))
 
-    formatted_title = sanitize_title(title)
-    screenshot_path = os.path.join(output_dir, f"{formatted_title}.png")
     cropped_image.save(screenshot_path)
     driver.quit()
     logging.info(f"Saved screenshot for {url} at {screenshot_path}")
 
 
-def process_row(row, headless: bool, link_key: str):
-    output_dir = f"{root_directory()}/data/article_thumbnails"
+def process_row(row, headless: bool, link_key: str, overwrite: bool):
+    output_base_dir = f"{root_directory()}/data/article_thumbnails"
+    domain = extract_domain(row[link_key])
+    output_dir = os.path.join(output_base_dir, domain)
     os.makedirs(output_dir, exist_ok=True)
-    take_screenshot(row[link_key], row['title'], output_dir, headless)
+
+    # Assume 'document_name' is a column in your DataFrame that uniquely identifies the document
+    if 'document_name' in row:
+        document_name = row['document_name']
+    elif 'title' in row:
+        document_name = row['title']
+    try:
+        take_screenshot(row[link_key], document_name, output_dir, overwrite, headless)
+    except Exception as e:
+        logging.error(f"Error occurred while processing {row[link_key]}: {e}")
+
 
 
 def prepare_df(csv_file_path, link_key):
@@ -128,7 +152,8 @@ def prepare_df(csv_file_path, link_key):
     return df
 
 
-def main(csv_file_path_link_key_tuples: Tuple[str, str] = [(f'{root_directory()}/data/links/articles_updated.csv', 'article'), (f'{root_directory()}/data/docs_details.csv', 'pdf_link'), (f'{root_directory()}/data/links/merged_articles.csv', 'Link')], headless: bool=False):
+def main(csv_file_path_link_key_tuples: Tuple[str, str] = [(f'{root_directory()}/data/links/articles_updated.csv', 'article'), (f'{root_directory()}/data/docs_details.csv', 'pdf_link'), (f'{root_directory()}/data/links/merged_articles.csv', 'Link')],
+         headless: bool=True, overwrite: bool=False, num_workers=18):
     for csv_file_path, link_key in csv_file_path_link_key_tuples:
         try:
             df = prepare_df(csv_file_path, link_key)
@@ -138,9 +163,8 @@ def main(csv_file_path_link_key_tuples: Tuple[str, str] = [(f'{root_directory()}
             logging.error(f"File not found: {csv_file_path}")
             continue
 
-        num_workers = 20  # Adjust based on your system capabilities
         os.environ['NUMEXPR_MAX_THREADS'] = str(num_workers)
-        process_row_with_headless_and_link_key = functools.partial(process_row, headless=headless, link_key=link_key)
+        process_row_with_headless_and_link_key = functools.partial(process_row, link_key=link_key, overwrite=overwrite, headless=headless)
         with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
             executor.map(process_row_with_headless_and_link_key, df.to_dict('records'))
 
@@ -149,6 +173,6 @@ if __name__ == "__main__":
     csv_file_path_link_key_tuples = [
         (f'{root_directory()}/data/links/articles_updated.csv', 'article'),
         # (f'{root_directory()}/data/docs_details.csv', 'pdf_link'),
-        (f'{root_directory()}/data/links/merged_articles.csv', 'Link')
+        # (f'{root_directory()}/data/links/merged_articles.csv', 'Link')
     ]
-    main(csv_file_path_link_key_tuples, headless=False)
+    main(csv_file_path_link_key_tuples, headless=True, overwrite=False, num_workers=15)

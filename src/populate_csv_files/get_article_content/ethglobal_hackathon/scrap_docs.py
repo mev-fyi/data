@@ -17,13 +17,13 @@ csv_file_lock = Lock()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def crawl_site(site_key, csv_lock, overwrite=False):
+def crawl_site(site_key, csv_lock, overwrite_docs=False, headless_browser=True):
     config = site_configs.get(site_key)
     if not config:
         logging.error(f"No configuration found for site key: {site_key}")
         return
 
-    crawl_func = config.get('crawl_func', lambda config, overwrite=False, lock=csv_lock: generic_crawl(config, overwrite, lock))
+    crawl_func = config.get('crawl_func', lambda config, overwrite=overwrite_docs, lock=csv_lock, headless=headless_browser: generic_crawl(config, overwrite_docs, lock))
 
     # Now pass the lock to the crawl function
     crawl_func(config, overwrite, lock=csv_lock)
@@ -54,7 +54,6 @@ def generic_crawl(config, overwrite, lock):
         break
 
 
-
 def update_img_src_with_absolute_urls(soup, base_url):
     for img in soup.find_all('img'):
         if img.has_attr('src'):
@@ -66,18 +65,17 @@ def generic_parser(soup, config):
     return {'url': config['base_url'], 'content': markdown_content, 'author': "", 'date': ""}
 
 
-def main(docs=None, overwrite=False):
+def main(docs=None, overwrite=False, max_workers=18, headless=True):
     # docs = None
     configs = {doc: site_configs[doc] for doc in docs} if docs is not None else site_configs
 
     # Define how many threads you want to use
     # Adjust this number based on your system and network capabilities
-    max_workers = 18
 
     # Using ThreadPoolExecutor to run the crawling in parallel
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         # Submitting all crawling jobs to the executor
-        future_to_doc = {executor.submit(crawl_site, doc, csv_file_lock, overwrite): doc for doc in configs}
+        future_to_doc = {executor.submit(crawl_site, doc, csv_file_lock, overwrite, headless): doc for doc in configs}
 
         # As each crawling job completes, log its completion
         for future in concurrent.futures.as_completed(future_to_doc):
@@ -93,11 +91,8 @@ def main(docs=None, overwrite=False):
 
 if __name__ == '__main__':
     clean_csv_titles()
-    # Use a command line argum
-    # ent or environment variable to set overwrite if needed.
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
-    overwrite = True  # Forcing overwrite to True for this example, adjust as necessary
 
-    # docs = ['suave']
-    docs = None
-    main(docs=docs, overwrite=overwrite)
+    docs = ['uma', 'across', 'bloxroute', 'primev']
+    # docs = None
+    main(docs=docs, overwrite=False, headless=True, max_workers=15)
