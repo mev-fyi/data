@@ -93,6 +93,9 @@ if __name__ == '__main__':
     clean_csv_titles()
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
 
-    docs = ['uma', 'across', 'bloxroute', 'primev']
+    docs = [
+        'aave','aave_developer', 'gho_developer','gho_concepts',
+
+            ]
     # docs = None
     main(docs=docs, overwrite=False, headless=True, max_workers=15)
