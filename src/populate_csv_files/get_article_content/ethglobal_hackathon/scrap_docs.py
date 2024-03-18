@@ -23,10 +23,17 @@ def crawl_site(site_key, csv_lock, overwrite_docs=False, headless_browser=True):
         logging.error(f"No configuration found for site key: {site_key}")
         return
 
-    crawl_func = config.get('crawl_func', lambda config, overwrite=overwrite_docs, lock=csv_lock, headless=headless_browser: generic_crawl(config, overwrite_docs, lock))
+    # Define a wrapper function that correctly passes the lock argument without duplication
+    def crawl_func_wrapper(config, overwrite_docs=overwrite_docs, headless_browser=headless_browser):
+        if 'crawl_func' in config:
+            # Call the specific crawl function from the config
+            config['crawl_func'](config, overwrite=overwrite_docs, lock=csv_lock, headless=headless_browser)
+        else:
+            # Fallback to a generic crawl function if none is specified
+            generic_crawl(config, overwrite_docs, lock=csv_lock, headless=headless_browser)
 
-    # Now pass the lock to the crawl function
-    crawl_func(config, overwrite, lock=csv_lock)
+    # Now call the wrapper function, which handles passing the lock correctly
+    crawl_func_wrapper(config)
 
 
 def generic_crawl(config, overwrite, lock):
@@ -93,9 +100,6 @@ if __name__ == '__main__':
     clean_csv_titles()
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
 
-    docs = [
-        'aave','aave_developer', 'gho_developer','gho_concepts',
-
-            ]
+    docs = ['zksync_infra', 'zksync_zkstack', 'zksync_build']
     # docs = None
-    main(docs=docs, overwrite=False, headless=True, max_workers=15)
+    main(docs=docs, overwrite=True, headless=True, max_workers=13)

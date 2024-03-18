@@ -138,6 +138,8 @@ def process_row(row, headless: bool, link_key: str, overwrite: bool):
         document_name = row['document_name']
     elif 'title' in row:
         document_name = row['title']
+    elif 'Title' in row:
+        document_name = row['Title']
     try:
         take_screenshot(row[link_key], document_name, output_dir, overwrite, headless)
     except Exception as e:
@@ -171,8 +173,8 @@ def main(csv_file_path_link_key_tuples: Tuple[str, str] = [(f'{root_directory()}
 
 if __name__ == "__main__":
     csv_file_path_link_key_tuples = [
-        (f'{root_directory()}/data/links/articles_updated.csv', 'article'),
-        # (f'{root_directory()}/data/docs_details.csv', 'pdf_link'),
+        # (f'{root_directory()}/data/links/articles_updated.csv', 'article'),
+        (f'{root_directory()}/data/docs_details.csv', 'pdf_link'),
         # (f'{root_directory()}/data/links/merged_articles.csv', 'Link')
     ]
-    main(csv_file_path_link_key_tuples, headless=True, overwrite=False, num_workers=15)
+    main(csv_file_path_link_key_tuples, headless=False, overwrite=False, num_workers=18)

@@ -64,6 +64,37 @@ def process_csv_files_in_parallel(csv_dir_or_file, output_dir, thread_count, ove
             process_single_csv(csv_file, final_output_dir, overwrite, thread_count)
 
 
+def merge_csv_files_remove_duplicates_and_save(csv_directory=f"{root_directory()}/data/links/articles", output_csv_path=f"{root_directory()}/data/links/merged_articles.csv"):
+    """
+    Concatenates all CSV files in the given directory, removes duplicates based on the 'Link' column,
+    and saves the resulting DataFrame to the specified output path.
+
+    Args:
+        csv_directory (str): Directory containing CSV files to merge.
+        output_csv_path (str): Path to save the merged and deduplicated CSV file.
+    """
+    # List all CSV files in the directory
+    csv_files = [os.path.join(csv_directory, f) for f in os.listdir(csv_directory) if f.endswith('.csv')]
+    df_list = []
+
+    # Load and concatenate all CSV files
+    for csv_file in csv_files:
+        df = pd.read_csv(csv_file)
+        df_list.append(df)
+
+    if df_list:
+        merged_df = pd.concat(df_list, ignore_index=True)
+
+        # Remove duplicates based on 'Link' column
+        deduplicated_df = merged_df.drop_duplicates(subset=['Link'])
+
+        # Save the resulting DataFrame to CSV
+        deduplicated_df.to_csv(output_csv_path, index=False)
+        logging.info(f"Merged and deduplicated CSV saved to: {output_csv_path}")
+    else:
+        logging.warning("No CSV files found in the provided directory.")
+
+
 def run(overwrite=False):
     csv_path_or_directory = f"{root_directory()}/data/links/articles"  # Can be a directory or a single CSV file
     output_directory = f"{root_directory()}/data/articles_pdf_download"
@@ -80,4 +111,6 @@ if __name__ == "__main__":
     thread_count = 20  # Adjust based on your system capabilities
 
     os.environ['NUMEXPR_MAX_THREADS'] = str(thread_count)
+
     process_csv_files_in_parallel(csv_path_or_directory, output_directory, thread_count, overwrite=True)
+

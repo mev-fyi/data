@@ -7,7 +7,7 @@ from src.populate_csv_files.get_article_content.get_docs import process_reposito
 
 # populate_csv_files.parse_new_data.run()  # parse incoming data
 
-fetch_youtube_video_details_from_handles.run()
+# fetch_youtube_video_details_from_handles.run()
 # extract_recommended_youtube_video_name_from_link.run()
 
 # pretty_print_articles.run()  # get article titles

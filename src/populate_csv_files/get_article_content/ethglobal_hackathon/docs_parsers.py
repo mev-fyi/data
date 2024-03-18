@@ -135,7 +135,7 @@ def extract_first_header(markdown_content):
 
 
 
-def crawl_chainlink(config, lock, overwrite):
+def crawl_chainlink(config, lock, overwrite, headless=False):
     content = fetch_page(config['base_url'])
     if content:
         soup = BeautifulSoup(content, 'html.parser')
@@ -216,7 +216,7 @@ def fetch_sidebar_urls_wihtout_href(soup, base_url, sidebar_selector):
     return sidebar_links
 
 
-def crawl_sidebar(config, overwrite, sidebar_selector, lock, selenium=False, robust=False):
+def crawl_sidebar(config, overwrite, sidebar_selector, lock, selenium=False, robust=False, headless=False):
     # Use Selenium to fetch the initial page content
     content = fetch_page_with_selenium(config['base_url']) if not robust else fetch_page_with_selenium_robust(config['base_url'])
     if content:
