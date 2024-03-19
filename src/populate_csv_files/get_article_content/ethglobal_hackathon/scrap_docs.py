@@ -36,29 +36,32 @@ def crawl_site(site_key, csv_lock, overwrite_docs=False, headless_browser=True):
     crawl_func_wrapper(config)
 
 
-def generic_crawl(config, overwrite, lock):
-    base_url = config['base_url']
-    parser = config.get('parser', generic_parser)  # Get the parser from config, default to generic_parser
+def generic_crawl(config, overwrite, lock, headless=False):
+    try:
+        base_url = config['base_url']
+        parser = config.get('parser', generic_parser)  # Get the parser from config, default to generic_parser
 
-    current_url = base_url
-    while current_url:
-        content = fetch_page(current_url)
-        if content:
-            soup = BeautifulSoup(content, 'html.parser')
-            parsed_data = parser(soup, config)
-            pdf_path = save_page_as_pdf(parsed_data, current_url, overwrite, config.get('base_name', ''))
-            if pdf_path:
-                csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
-                update_or_append_csv(pdf_path, current_url, parsed_data['content'], csv_path, overwrite, lock)  # Pass the lock here
+        current_url = base_url
+        while current_url:
+            content = fetch_page(current_url)
+            if content:
+                soup = BeautifulSoup(content, 'html.parser')
+                parsed_data = parser(soup, config)
+                pdf_path = save_page_as_pdf(parsed_data, current_url, overwrite, config.get('base_name', ''))
+                if pdf_path:
+                    csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
+                    update_or_append_csv(pdf_path, current_url, parsed_data['content'], csv_path, overwrite, lock)  # Pass the lock here
 
-            # Logic for handling pagination (next button)
-            next_button = soup.select_one(config.get('next_button_selector', '.pagination-nav__link--next'))
-            if next_button and next_button.has_attr('href'):
-                next_url = urljoin(current_url, next_button['href'])
-                if next_url != current_url:
-                    current_url = next_url
-                    continue
-        break
+                # Logic for handling pagination (next button)
+                next_button = soup.select_one(config.get('next_button_selector', '.pagination-nav__link--next'))
+                if next_button and next_button.has_attr('href'):
+                    next_url = urljoin(current_url, next_button['href'])
+                    if next_url != current_url:
+                        current_url = next_url
+                        continue
+            break
+    except Exception as e:
+        logging.error(f"Error while crawling {config['base_url']}: {e}")
 
 
 def update_img_src_with_absolute_urls(soup, base_url):
@@ -100,6 +103,6 @@ if __name__ == '__main__':
     clean_csv_titles()
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
 
-    docs = ['zksync_infra', 'zksync_zkstack', 'zksync_build']
+    docs = ['reth', 'solidity']
     # docs = None
-    main(docs=docs, overwrite=True, headless=True, max_workers=13)
+    main(docs=docs, overwrite=False, headless=False, max_workers=18)

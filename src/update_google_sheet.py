@@ -496,7 +496,6 @@ def main():
     load_dotenv()
     repo_dir = root_directory()
 
-    latest_rag_db = "2024-03-02-22-02_text-embedding-ada-002_750_10"
     rag_path_to_db = f"{repo_dir}/../rag/pipeline_storage/"
 
     # Define the sheet update configurations
