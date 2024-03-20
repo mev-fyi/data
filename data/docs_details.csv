@@ -4415,3 +4415,476 @@ Contributing to Chainlink,,https://docs.chain.link/resources/contributing-to-cha
 ,,https://doc.rust-lang.org/ch00-00-introduction.html,,ch00-00-introduction.html.pdf
 ,,https://doc.rust-lang.org/getting-started/first-steps.html,,getting-started-first-steps.html.pdf
 ,,https://doc.rust-lang.org/ch01-00-getting-started.html,,ch01-00-getting-started.html.pdf
+Our Philosophy,,https://docs.velocore.xyz/our-philosophy,,our-philosophy.pdf
+Vision,,https://docs.velocore.xyz/our-philosophy/vision,,our-philosophy-vision.pdf
+Gas Optimization,,https://docs.velocore.xyz/our-philosophy/gas-optimization,,our-philosophy-gas-optimization.pdf
+General Bedrock for All Kinds of AMM,,https://docs.velocore.xyz/our-philosophy/general-bedrock-for-all-kinds-of-amm,,our-philosophy-general-bedrock-for-all-kinds-of-amm.pdf
+Epoch-less Predictability,,https://docs.velocore.xyz/our-philosophy/epoch-less-predictability,,our-philosophy-epoch-less-predictability.pdf
+Free Flowing Easy Vote System,,https://docs.velocore.xyz/our-philosophy/free-flowing-easy-vote-system,,our-philosophy-free-flowing-easy-vote-system.pdf
+DEX Innovation,,https://docs.velocore.xyz/dex-innovation,,dex-innovation.pdf
+Token Vault,,https://docs.velocore.xyz/dex-innovation/token-vault,,dex-innovation-token-vault.pdf
+Flashloan,,https://docs.velocore.xyz/dex-innovation/token-vault/flashloan,,dex-innovation-token-vault-flashloan.pdf
+👛,,https://docs.mav.xyz/getting-started/connect-a-wallet,,getting-started-connect-a-wallet.pdf
+🌎,,https://docs.zkswap.finance/official-links,,official-links.pdf
+💰,,https://docs.zkswap.finance/key-products/zkswap,,key-products-zkswap.pdf
+Our Mission,,https://syncswap.gitbook.io/syncswap/our-mission,,syncswap-our-mission.pdf
+🌿,,https://docs.zkswap.finance/key-products/zkaggregator,,key-products-zkaggregator.pdf
+Overview,,https://wiki.mute.io/mute/koi-overview/master#about,,mute-koi-overview-master.pdf
+Exchange,,https://syncswap.gitbook.io/syncswap/overview/exchange,,syncswap-overview-exchange.pdf
+🚃,,https://docs.zkswap.finance/key-products/zkbridge,,key-products-zkbridge.pdf
+Liquidity Pools,,https://syncswap.gitbook.io/syncswap/overview/liquidity-pools,,syncswap-overview-liquidity-pools.pdf
+💎,,https://docs.zkswap.finance/key-products/zkheatmap,,key-products-zkheatmap.pdf
+🎇,,https://docs.zkswap.finance/key-products/zf-paymaster,,key-products-zf-paymaster.pdf
+📖,,https://docs.zkswap.finance/key-products/zkflow,,key-products-zkflow.pdf
+Decentralised Lending,,https://docs.zerolend.xyz/overview/decentralised-lending,,overview-decentralised-lending.pdf
+Introducing zkSync Era,,https://docs.reactorfusion.xyz/getting-ready/introducing-zksync-era,,getting-ready-introducing-zksync-era.pdf
+⛓️,,https://docs.mav.xyz/getting-started/choose-a-network,,getting-started-choose-a-network.pdf
+🪙,,https://docs.mav.xyz/getting-started/approving-tokens,,getting-started-approving-tokens.pdf
+Get tokens on zkSync,,https://docs.zerolend.xyz/overview/decentralised-lending/get-tokens-on-zksync,,overview-decentralised-lending-get-tokens-on-zksync.pdf
+Overview,,https://wiki.mute.io/mute/koi-overview/master#the-team,,mute-koi-overview-master.pdf
+Overview,,https://wiki.mute.io/mute/koi-overview/master#resources,,mute-koi-overview-master.pdf
+Lending,,https://docs.zerolend.xyz/overview/decentralised-lending/lending,,overview-decentralised-lending-lending.pdf
+🤝,,https://docs.mav.xyz/guides/traders,,guides-traders.pdf
+Borrowing,,https://docs.zerolend.xyz/overview/decentralised-lending/borrowing,,overview-decentralised-lending-borrowing.pdf
+Introduction,,https://wiki.mute.io/mute/mute-switch/introduction,,mute-mute-switch-introduction.pdf
+Bridging,,https://docs.reactorfusion.xyz/getting-ready/bridging,,getting-ready-bridging.pdf
+protocol-reactorfusion-loyalty-program-rlp.pdf,,https://docs.reactorfusion.xyz/protocol/reactorfusion-loyalty-program-rlp,,protocol-reactorfusion-loyalty-program-rlp.pdf
+Liquidity Pools,,https://wiki.mute.io/mute/mute-switch/lp,,mute-mute-switch-lp.pdf
+Improvements and Innovations,,https://docs.reactorfusion.xyz/protocol/improvements-and-innovations,,protocol-improvements-and-innovations.pdf
+Koi Farming Pools,,https://wiki.mute.io/mute/mute-switch/amplifier,,mute-mute-switch-amplifier.pdf
+How to Make a Swap,,https://docs.mav.xyz/guides/traders/how-to-make-a-swap,,guides-traders-how-to-make-a-swap.pdf
+Liquidations,,https://docs.zerolend.xyz/overview/decentralised-lending/liquidations,,overview-decentralised-lending-liquidations.pdf
+Collateral and Reserve Factor,,https://docs.reactorfusion.xyz/protocol/collateral-and-reserve-factor,,protocol-collateral-and-reserve-factor.pdf
+Koi Bonds,,https://wiki.mute.io/mute/mute-switch/bonds,,mute-mute-switch-bonds.pdf
+💰,,https://docs.mav.xyz/guides/liquidity-providers,,guides-liquidity-providers.pdf
+Account Abstraction (AA),,https://docs.zerolend.xyz/overview/account-abstraction-aa,,overview-account-abstraction-aa.pdf
+Liquidation Event,,https://docs.reactorfusion.xyz/protocol/liquidation-event,,protocol-liquidation-event.pdf
+Interest Rate Model,,https://docs.reactorfusion.xyz/protocol/interest-rate-model,,protocol-interest-rate-model.pdf
+Limit Orders,,https://wiki.mute.io/mute/mute-switch/limit-orders,,mute-mute-switch-limit-orders.pdf
+☀️,,https://docs.zkswap.finance/key-products/future-products,,key-products-future-products.pdf
+Understanding Liquidity Provision,,https://docs.mav.xyz/guides/liquidity-providers/understanding-liquidity-provision,,guides-liquidity-providers-understanding-liquidity-provision.pdf
+🗺️,,https://docs.zkswap.finance/key-products/roadmap,,key-products-roadmap.pdf
+Understanding Modes,,https://docs.mav.xyz/guides/liquidity-providers/understanding-modes,,guides-liquidity-providers-understanding-modes.pdf
+Paymasters,,https://docs.zerolend.xyz/overview/account-abstraction-aa/paymasters,,overview-account-abstraction-aa-paymasters.pdf
+💡,,https://docs.zkswap.finance/highlights/swap2earn,,highlights-swap2earn.pdf
+Swap Widget,,https://wiki.mute.io/mute/mute-switch/swap-widget,,mute-mute-switch-swap-widget.pdf
+protocol-contracts.pdf,,https://docs.reactorfusion.xyz/protocol/contracts,,protocol-contracts.pdf
+Dynamic Fees,,https://syncswap.gitbook.io/syncswap/overview/dynamic-fees,,syncswap-overview-dynamic-fees.pdf
+Secure-enclave and social logins,,https://docs.zerolend.xyz/overview/account-abstraction-aa/secure-enclave-and-social-logins,,overview-account-abstraction-aa-secure-enclave-and-social-logins.pdf
+How to Add Liquidity,,https://docs.mav.xyz/guides/liquidity-providers/how-to-add-liquidity,,guides-liquidity-providers-how-to-add-liquidity.pdf
+🪙,,https://docs.zkswap.finance/highlights/farm2earn,,highlights-farm2earn.pdf
+protocol-oracles.pdf,,https://docs.reactorfusion.xyz/protocol/oracles,,protocol-oracles.pdf
+VWAP Oracles,,https://wiki.mute.io/mute/mute-switch/vwap-oracles,,mute-mute-switch-vwap-oracles.pdf
+Gas Saving Matters : Benchmark,,https://docs.velocore.xyz/dex-innovation/gas-saving-matters-benchmark,,dex-innovation-gas-saving-matters-benchmark.pdf
+AMM Flexibility,,https://docs.velocore.xyz/dex-innovation/amm-flexibility,,dex-innovation-amm-flexibility.pdf
+Koi Paymaster Service,,https://wiki.mute.io/mute/mute-switch/koi-paymaster-service,,mute-mute-switch-koi-paymaster-service.pdf
+Public Presale,,https://docs.reactorfusion.xyz/launch-details/public-presale,,launch-details-public-presale.pdf
+Pre-mining Event,,https://docs.reactorfusion.xyz/launch-details/pre-mining-event,,launch-details-pre-mining-event.pdf
+veKOI,,https://wiki.mute.io/mute/mute-dao/introduction,,mute-mute-dao-introduction.pdf
+Governor,,https://wiki.mute.io/mute/mute-dao/introduction-1,,mute-mute-dao-introduction-1.pdf
+Multi In/Out Swap,,https://docs.velocore.xyz/dex-innovation/multi-in-out-swap,,dex-innovation-multi-in-out-swap.pdf
+Batch Swap,,https://docs.velocore.xyz/dex-innovation/batch-swap,,dex-innovation-batch-swap.pdf
+Adjustable Trading Fee Mechanics,,https://docs.velocore.xyz/dex-innovation/adjustable-trading-fee-mechanics,,dex-innovation-adjustable-trading-fee-mechanics.pdf
+Distribution,,https://docs.reactorfusion.xyz/tokenomics/distribution,,tokenomics-distribution.pdf
+Contracts,,https://wiki.mute.io/mute/mute-switch-api/contracts,,mute-mute-switch-api-contracts.pdf
+Accumulating Swap Fees in LP Tokens,,https://docs.velocore.xyz/dex-innovation/accumulating-swap-fees-in-lp-tokens,,dex-innovation-accumulating-swap-fees-in-lp-tokens.pdf
+Reward Emissions and Emission Schedule,,https://docs.reactorfusion.xyz/tokenomics/reward-emissions-and-emission-schedule,,tokenomics-reward-emissions-and-emission-schedule.pdf
+ABIs,,https://wiki.mute.io/mute/mute-switch-api/abis,,mute-mute-switch-api-abis.pdf
+"ve(3,3) Innovation",,https://docs.velocore.xyz/ve-3-3-innovation,,ve-3-3-innovation.pdf
+sRF Staking,,https://docs.reactorfusion.xyz/tokenomics/srf-staking,,tokenomics-srf-staking.pdf
+Removing 'Epoch' Systems,,https://docs.velocore.xyz/ve-3-3-innovation/removing-epoch-systems,,ve-3-3-innovation-removing-epoch-systems.pdf
+Bribe Optimization,,https://docs.velocore.xyz/ve-3-3-innovation/removing-epoch-systems/bribe-optimization,,ve-3-3-innovation-removing-epoch-systems-bribe-optimization.pdf
+Fungible Votes (veVC),,https://docs.velocore.xyz/ve-3-3-innovation/fungible-votes-usdvevc,,ve-3-3-innovation-fungible-votes-usdvevc.pdf
+Router,,https://wiki.mute.io/mute/mute-switch-api/router,,mute-mute-switch-api-router.pdf
+No Decay & Easy Liquidation,,https://docs.velocore.xyz/ve-3-3-innovation/fungible-votes-usdvevc/no-decay-and-easy-liquidation,,ve-3-3-innovation-fungible-votes-usdvevc-no-decay-and-easy-liquidation.pdf
+Brand Assets,,https://docs.reactorfusion.xyz/other-information/brand-assets,,other-information-brand-assets.pdf
+Audits,,https://wiki.mute.io/mute/mute-switch-api/audits,,mute-mute-switch-api-audits.pdf
+Swift Problem-Solving Guide,,https://docs.reactorfusion.xyz/other-information/swift-problem-solving-guide,,other-information-swift-problem-solving-guide.pdf
+Decentralized Gauge Deployment,,https://docs.velocore.xyz/ve-3-3-innovation/decentralized-gauge-deployment,,ve-3-3-innovation-decentralized-gauge-deployment.pdf
+https:-koi.finance.pdf,,https://wiki.mute.io/https://koi.finance,,https:-koi.finance.pdf
+Legal Disclaimer,,https://docs.reactorfusion.xyz/other-information/legal-disclaimer,,other-information-legal-disclaimer.pdf
+Rebase Elimination,,https://docs.velocore.xyz/ve-3-3-innovation/rebase-elimination,,ve-3-3-innovation-rebase-elimination.pdf
+Roadmap,,https://wiki.mute.io/mute/info/roadmap,,mute-info-roadmap.pdf
+Official Links,,https://docs.reactorfusion.xyz/other-information/official-links,,other-information-official-links.pdf
+Security & Contract Address,,https://docs.velocore.xyz/security-and-contract-address,,security-and-contract-address.pdf
+Tokenomics and Contracts,,https://wiki.mute.io/mute/info/tokenomics,,mute-info-tokenomics.pdf
+zkSyncEra Contracts,,https://docs.velocore.xyz/security-and-contract-address/zksyncera-contracts,,security-and-contract-address-zksyncera-contracts.pdf
+KOI Tokenomics and Contracts,,https://wiki.mute.io/mute/info/tokenomics-1,,mute-info-tokenomics-1.pdf
+Linea Contracts,,https://docs.velocore.xyz/security-and-contract-address/linea-contracts,,security-and-contract-address-linea-contracts.pdf
+Telos Contracts,,https://docs.velocore.xyz/security-and-contract-address/telos-contracts,,security-and-contract-address-telos-contracts.pdf
+Social Media,,https://wiki.mute.io/mute/info/social-media-outlets,,mute-info-social-media-outlets.pdf
+V1 zkSyncEra (deprecated),,https://docs.velocore.xyz/security-and-contract-address/v1-zksyncera-deprecated,,security-and-contract-address-v1-zksyncera-deprecated.pdf
+Three Rounds of Audits,,https://docs.velocore.xyz/security-and-contract-address/three-rounds-of-audits,,security-and-contract-address-three-rounds-of-audits.pdf
+Layer 1 Support,,https://wiki.mute.io/mute/info/l1-support,,mute-info-l1-support.pdf
+Technical Docs,,https://docs.velocore.xyz/technical-docs,,technical-docs.pdf
+Branding and Logos,,https://wiki.mute.io/mute/info/branding-and-logos,,mute-info-branding-and-logos.pdf
+Known Bugs,,https://wiki.mute.io/mute/info/known-bugs,,mute-info-known-bugs.pdf
+Concepts,,https://docs.velocore.xyz/technical-docs/concepts,,technical-docs-concepts.pdf
+Beta Testing,,https://wiki.mute.io/mute/info/beta-testing,,mute-info-beta-testing.pdf
+Architecture Overview,,https://docs.velocore.xyz/technical-docs/architecture-overview,,technical-docs-architecture-overview.pdf
+https:-www.gitbook.com.pdf,,https://wiki.mute.io/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=-MUBuC2EpkP_bM-OuRgz,,https:-www.gitbook.com.pdf
+Source Files Overview,,https://docs.velocore.xyz/technical-docs/architecture-overview/source-files-overview,,technical-docs-architecture-overview-source-files-overview.pdf
+How to interact with VELOCORE,,https://docs.velocore.xyz/technical-docs/how-to-interact-with-velocore,,technical-docs-how-to-interact-with-velocore.pdf
+Uniswap compatible interface,,https://docs.velocore.xyz/technical-docs/how-to-interact-with-velocore/uniswap-compatible-interface,,technical-docs-how-to-interact-with-velocore-uniswap-compatible-interface.pdf
+How to Read Data,,https://docs.velocore.xyz/technical-docs/how-to-read-data,,technical-docs-how-to-read-data.pdf
+Example Codes,,https://docs.velocore.xyz/technical-docs/example-codes,,technical-docs-example-codes.pdf
+Swap,,https://docs.velocore.xyz/technical-docs/example-codes/swap,,technical-docs-example-codes-swap.pdf
+Add liquidity,,https://docs.velocore.xyz/technical-docs/example-codes/add-liquidity,,technical-docs-example-codes-add-liquidity.pdf
+Stake,,https://docs.velocore.xyz/technical-docs/example-codes/stake,,technical-docs-example-codes-stake.pdf
+Voting,,https://docs.velocore.xyz/technical-docs/example-codes/voting,,technical-docs-example-codes-voting.pdf
+Multicall operations,,https://docs.velocore.xyz/technical-docs/example-codes/multicall-operations,,technical-docs-example-codes-multicall-operations.pdf
+cf) wrapper functions,,https://docs.velocore.xyz/technical-docs/example-codes/cf-wrapper-functions,,technical-docs-example-codes-cf-wrapper-functions.pdf
+Typescript Examples for Integration,,https://docs.velocore.xyz/technical-docs/typescript-examples-for-integration,,technical-docs-typescript-examples-for-integration.pdf
+Pool Specifics,,https://docs.velocore.xyz/technical-docs/pool-specifics,,technical-docs-pool-specifics.pdf
+Generalized CPMM,,https://docs.velocore.xyz/technical-docs/pool-specifics/generalized-cpmm,,technical-docs-pool-specifics-generalized-cpmm.pdf
+Wombat Stableswap,,https://docs.velocore.xyz/technical-docs/pool-specifics/wombat-stableswap,,technical-docs-pool-specifics-wombat-stableswap.pdf
+Events & Chart Integration,,https://docs.velocore.xyz/technical-docs/events-and-chart-integration,,technical-docs-events-and-chart-integration.pdf
+Getting a pair list,,https://docs.velocore.xyz/technical-docs/events-and-chart-integration/getting-a-pair-list,,technical-docs-events-and-chart-integration-getting-a-pair-list.pdf
+Interpreting Swap / LP events,,https://docs.velocore.xyz/technical-docs/events-and-chart-integration/interpreting-swap-lp-events,,technical-docs-events-and-chart-integration-interpreting-swap-lp-events.pdf
+Flashloan,,https://docs.velocore.xyz/technical-docs/flashloan,,technical-docs-flashloan.pdf
+Migration Plan,,https://docs.velocore.xyz/zksync-era/migration-plan,,zksync-era-migration-plan.pdf
+VC 1:1 Exchange,,https://docs.velocore.xyz/zksync-era/migration-plan/usdvc-1-1-exchange,,zksync-era-migration-plan-usdvc-1-1-exchange.pdf
+veNFT -> veVC,,https://docs.velocore.xyz/zksync-era/migration-plan/venft-greater-than-usdvevc,,zksync-era-migration-plan-venft-greater-than-usdvevc.pdf
+One-Step LP Migration,,https://docs.velocore.xyz/zksync-era/migration-plan/one-step-lp-migration,,zksync-era-migration-plan-one-step-lp-migration.pdf
+Migration Schedule,,https://docs.velocore.xyz/zksync-era/migration-plan/migration-schedule,,zksync-era-migration-plan-migration-schedule.pdf
+Emission Migration,,https://docs.velocore.xyz/zksync-era/migration-plan/emission-migration,,zksync-era-migration-plan-emission-migration.pdf
+V2 Tokenomics,,https://docs.velocore.xyz/zksync-era/v2-tokenomics,,zksync-era-v2-tokenomics.pdf
+VC Gauge,,https://docs.velocore.xyz/zksync-era/v2-tokenomics/usdvc-gauge,,zksync-era-v2-tokenomics-usdvc-gauge.pdf
+Bribe Mechanics,,https://docs.velocore.xyz/zksync-era/v2-tokenomics/bribe-mechanics,,zksync-era-v2-tokenomics-bribe-mechanics.pdf
+veVC VOTING,,https://docs.velocore.xyz/zksync-era/v2-tokenomics/usdvevc-voting,,zksync-era-v2-tokenomics-usdvevc-voting.pdf
+Paymaster as a Service,,https://docs.velocore.xyz/zksync-era/paymaster-as-a-service,,zksync-era-paymaster-as-a-service.pdf
+Launch Details,,https://docs.velocore.xyz/linea/launch-details,,linea-launch-details.pdf
+Getting Ready,,https://docs.velocore.xyz/linea/launch-details/getting-ready,,linea-launch-details-getting-ready.pdf
+Bridging,,https://docs.velocore.xyz/linea/launch-details/bridging,,linea-launch-details-bridging.pdf
+V2 Launch Event,,https://docs.velocore.xyz/linea/launch-details/v2-launch-event,,linea-launch-details-v2-launch-event.pdf
+LVC Presale,,https://docs.velocore.xyz/linea/launch-details/usdlvc-presale,,linea-launch-details-usdlvc-presale.pdf
+LVC Tokenomics,,https://docs.velocore.xyz/linea/usdlvc-tokenomics,,linea-usdlvc-tokenomics.pdf
+LVC Gauge,,https://docs.velocore.xyz/linea/usdlvc-tokenomics/usdlvc-gauge,,linea-usdlvc-tokenomics-usdlvc-gauge.pdf
+Bribe Mechanics,,https://docs.velocore.xyz/linea/usdlvc-tokenomics/bribe-mechanics,,linea-usdlvc-tokenomics-bribe-mechanics.pdf
+veLVC VOTING,,https://docs.velocore.xyz/linea/usdlvc-tokenomics/usdvelvc-voting,,linea-usdlvc-tokenomics-usdvelvc-voting.pdf
+Launch Details,,https://docs.velocore.xyz/telos/launch-details,,telos-launch-details.pdf
+Getting Ready,,https://docs.velocore.xyz/telos/launch-details/getting-ready,,telos-launch-details-getting-ready.pdf
+Bridging,,https://docs.velocore.xyz/telos/launch-details/bridging,,telos-launch-details-bridging.pdf
+Launch Event,,https://docs.velocore.xyz/telos/launch-details/launch-event,,telos-launch-details-launch-event.pdf
+TVC Tokenomics,,https://docs.velocore.xyz/telos/usdtvc-tokenomics,,telos-usdtvc-tokenomics.pdf
+TVC Gauge,,https://docs.velocore.xyz/telos/usdtvc-tokenomics/usdtvc-gauge,,telos-usdtvc-tokenomics-usdtvc-gauge.pdf
+Bribe Mechanics,,https://docs.velocore.xyz/telos/usdtvc-tokenomics/bribe-mechanics,,telos-usdtvc-tokenomics-bribe-mechanics.pdf
+veTVC VOTING,,https://docs.velocore.xyz/telos/usdtvc-tokenomics/usdvetvc-voting,,telos-usdtvc-tokenomics-usdvetvc-voting.pdf
+Free Loot Box for Future Airdrops,,https://docs.velocore.xyz/free-loot-box-for-future-airdrops,,free-loot-box-for-future-airdrops.pdf
+PASSPORT - F'air drops,,https://docs.velocore.xyz/passport-fair-drops,,passport-fair-drops.pdf
+Legal Disclaimer,,https://docs.velocore.xyz/legal-disclaimer,,legal-disclaimer.pdf
+Velocore Brand Assets,,https://docs.velocore.xyz/velocore-brand-assets,,velocore-brand-assets.pdf
+https:-www.gitbook.com.pdf,,https://docs.velocore.xyz/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=0kL6ejnL2ITo0s58Onf0,,https:-www.gitbook.com.pdf
+Overview,,https://docs.galadriel.com/https://github.com/galadriel-ai,,https:-github.com-galadriel-ai.pdf
+Overview,,https://docs.galadriel.com/https://twitter.com/Galadriel_AI,,https:-twitter.com-Galadriel_AI.pdf
+Overview,,https://docs.galadriel.com/https://discord.com/invite/bHnFgSTKrP,,https:-discord.com-invite-bHnFgSTKrP.pdf
+Introduction,,https://docs.eigenlayer.xyz/eigenlayer/operator-guides/key-management/intro,,eigenlayer-operator-guides-key-management-intro.pdf
+Key Management Best Practices for Node Operators,,https://docs.eigenlayer.xyz/eigenlayer/operator-guides/key-management/node-operators,,eigenlayer-operator-guides-key-management-node-operators.pdf
+Key Management Best Practices for Solo Stakers,,https://docs.eigenlayer.xyz/eigenlayer/operator-guides/key-management/solo-stakers,,eigenlayer-operator-guides-key-management-solo-stakers.pdf
+Traditional ML Models for ZKML,,https://actions.gizatech.xyz/tutorials/traditional-ml-models-for-zkml,,tutorials-traditional-ml-models-for-zkml.pdf
+Farcaster,,https://datasets.gizatech.xyz/hub/farcaster,,hub-farcaster.pdf
+Linear Regression,,https://actions.gizatech.xyz/tutorials/traditional-ml-models-for-zkml/linear-regression,,tutorials-traditional-ml-models-for-zkml-linear-regression.pdf
+Individual Casts,,https://datasets.gizatech.xyz/hub/farcaster/individual-casts,,hub-farcaster-individual-casts.pdf
+Individual Links,,https://datasets.gizatech.xyz/hub/farcaster/individual-links,,hub-farcaster-individual-links.pdf
+How to Build an AVS,,https://docs.eigenlayer.xyz/eigenlayer/avs-guides/how-to-build-an-avs,,eigenlayer-avs-guides-how-to-build-an-avs.pdf
+Introduction,,https://docs.eigenlayer.xyz/eigenlayer/avs-guides/spec/intro,,eigenlayer-avs-guides-spec-intro.pdf
+AVS Node API,,https://docs.eigenlayer.xyz/eigenlayer/avs-guides/spec/api/,,eigenlayer-avs-guides-spec-api.pdf
+Implementation reference,,https://docs.eigenlayer.xyz/eigenlayer/avs-guides/spec/api/api-examples,,eigenlayer-avs-guides-spec-api-api-examples.pdf
+Prometheus Metrics Specification,,https://docs.eigenlayer.xyz/eigenlayer/avs-guides/spec/metrics/metrics-prom-spec,,eigenlayer-avs-guides-spec-metrics-metrics-prom-spec.pdf
+Implementation reference,,https://docs.eigenlayer.xyz/eigenlayer/avs-guides/spec/metrics/metrics-examples,,eigenlayer-avs-guides-spec-metrics-metrics-examples.pdf
+Key Security Considerations for Developers,,https://docs.eigenlayer.xyz/eigenlayer/avs-guides/key-management/middleware-developers,,eigenlayer-avs-guides-key-management-middleware-developers.pdf
+Welcome,,https://docs.dynamic.xyz/https://www.dynamic.xyz/changelog,,https:-www.dynamic.xyz-changelog.pdf
+About IPFS,,https://docs.lido.fi/ipfs/about,,ipfs-about.pdf
+Welcome,,https://docs.dynamic.xyz/https://status.dynamic.xyz/,,https:-status.dynamic.xyz.pdf
+Release Flow,,https://docs.lido.fi/ipfs/release-flow,,ipfs-release-flow.pdf
+Security,,https://docs.lido.fi/ipfs/security,,ipfs-security.pdf
+Hash verification,,https://docs.lido.fi/ipfs/hash-verification,,ipfs-hash-verification.pdf
+Lido IPFS applications,,https://docs.lido.fi/ipfs/apps-list,,ipfs-apps-list.pdf
+Introduction,,https://spl.solana.com/,,index.pdf
+Welcome to Jupiter!Â¶,,https://jupiter.readthedocs.io/,,index.pdf
+👋,,https://docs.bloxroute.com/#get-started-for-free-today,,index.pdf
+https:-portal.bloxroute.com-registration.pdf,,https://docs.bloxroute.com/https://portal.bloxroute.com/registration,,https:-portal.bloxroute.com-registration.pdf
+The Uniswap Protocol,,https://docs.uniswap.org/concepts/uniswap-protocol,,concepts-uniswap-protocol.pdf
+Welcome to our V4 Developer Documents,,https://docs.uniswapfoundation.org/#overview,,index.pdf
+Background,,https://docs.uniswap.org/sdk/v3/guides/background,,sdk-v3-guides-background.pdf
+Research,,https://docs.uniswap.org/concepts/research,,concepts-research.pdf
+Local Development,,https://docs.uniswap.org/sdk/v3/guides/local-development,,sdk-v3-guides-local-development.pdf
+Resources,,https://docs.uniswap.org/concepts/resources,,concepts-resources.pdf
+Web3 Development Basics,,https://docs.uniswap.org/sdk/v3/guides/web3-development-basics,,sdk-v3-guides-web3-development-basics.pdf
+Glossary,,https://docs.uniswap.org/concepts/glossary,,concepts-glossary.pdf
+Uniswap V4 - Hooks,,https://docs.uniswap.org/contracts/v4/overview,,contracts-v4-overview.pdf
+Introduction to Uniswap V4,,https://docs.uniswap.org/contracts/v4/concepts/intro-to-v4,,contracts-v4-concepts-intro-to-v4.pdf
+https:-orca-so.gitbook.io-orca-docs-zh.pdf,,https://docs.orca.so/https://orca-so.gitbook.io/orca-docs-zh/,,https:-orca-so.gitbook.io-orca-docs-zh.pdf
+Architecture,,https://docs.uniswap.org/contracts/v4/concepts/v4-architecture-overview,,contracts-v4-concepts-v4-architecture-overview.pdf
+Transfer From,,https://docs.enso.finance/bundler-api/actions/transferFrom,,bundler-api-actions-transferFrom.pdf
+https:-orca-so.gitbook.io-orca-docs-ja.pdf,,https://docs.orca.so/https://orca-so.gitbook.io/orca-docs-ja/,,https:-orca-so.gitbook.io-orca-docs-ja.pdf
+PoolManager,,https://docs.uniswap.org/contracts/v4/concepts/pool-manager-and-pool-initialization,,contracts-v4-concepts-pool-manager-and-pool-initialization.pdf
+https:-orca-so.gitbook.io-orca_korea.pdf,,https://docs.orca.so/https://orca-so.gitbook.io/orca_korea,,https:-orca-so.gitbook.io-orca_korea.pdf
+Position,,https://docs.uniswap.org/contracts/v4/concepts/managing-positions,,contracts-v4-concepts-managing-positions.pdf
+https:-orca-so.gitbook.io-orca-in-vietnamese.pdf,,https://docs.orca.so/https://orca-so.gitbook.io/orca-in-vietnamese/,,https:-orca-so.gitbook.io-orca-in-vietnamese.pdf
+Swap - Step by Step,,https://docs.uniswap.org/contracts/v4/concepts/swap-tokens,,contracts-v4-concepts-swap-tokens.pdf
+https:-www.gitbook.com.pdf,,https://docs.orca.so/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=-MPvyETgLWLe-8rEIO01,,https:-www.gitbook.com.pdf
+Intro to Locking,,https://docs.uniswap.org/contracts/v4/concepts/lock-mechanism,,contracts-v4-concepts-lock-mechanism.pdf
+Why GHO?,,https://docs.gho.xyz/concepts/why-gho,,concepts-why-gho.pdf
+Hook Deployment,,https://docs.uniswap.org/contracts/v4/concepts/hook-deployment,,contracts-v4-concepts-hook-deployment.pdf
+How GHO Works,,https://docs.gho.xyz/concepts/how-gho-works/,,concepts-how-gho-works.pdf
+https:-github.com-aave-aave-v3-core-blob-master-techpaper-Aave_V3_Technical_Paper.pdf.pdf,,https://docs.aave.com/https://github.com/aave/aave-v3-core/blob/master/techpaper/Aave_V3_Technical_Paper.pdf,,https:-github.com-aave-aave-v3-core-blob-master-techpaper-Aave_V3_Technical_Paper.pdf.pdf
+Build your own hook,,https://docs.uniswap.org/contracts/v4/first-hook/building-your-own-hook,,contracts-v4-first-hook-building-your-own-hook.pdf
+GHO FAQ,,https://docs.gho.xyz/concepts/faq,,concepts-faq.pdf
+Testing Hooks,,https://docs.uniswap.org/contracts/v4/first-hook/testing-hooks,,contracts-v4-first-hook-testing-hooks.pdf
+Deployment,,https://docs.uniswap.org/contracts/v4/first-hook/hook-deployment,,contracts-v4-first-hook-hook-deployment.pdf
+Set Up Your Local Environment,,https://docs.uniswap.org/contracts/v3/guides/local-environment,,contracts-v3-guides-local-environment.pdf
+https:-docs.aave.com-aavenomics.pdf,,https://docs.aave.com/https://docs.aave.com/aavenomics/,,https:-docs.aave.com-aavenomics.pdf
+https:-www.gitbook.com.pdf,,https://docs.uma.xyz/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=KdaoNjf9AzgWFNHyPo5b,,https:-www.gitbook.com.pdf
+https:-www.gitbook.com.pdf,,https://docs.ambient.finance/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=goE7yYSVNNTbvsL9nuX9,,https:-www.gitbook.com.pdf
+https:-www.gitbook.com.pdf,,https://collateral.makerdao.com/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=-MJ7n8FkqAPhwd62iWQC,,https:-www.gitbook.com.pdf
+https:-www.gitbook.com.pdf,,https://docs.clusters.xyz/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=OlyBmjWRNMw3jAapqxrM,,https:-www.gitbook.com.pdf
+Chain Architecture,,https://docs.optimism.io/builders/chain-operators/architecture,,builders-chain-operators-architecture.pdf
+Legacy SDK,,https://docs.wormhole.com/wormhole/reference/sdk-docs/legacy-sdk,,wormhole-reference-sdk-docs-legacy-sdk.pdf
+Efficient Tradings,,https://syncswap.gitbook.io/syncswap/overview/efficient-tradings,,syncswap-overview-efficient-tradings.pdf
+Stablecoin,,https://syncswap.gitbook.io/syncswap/overview/efficient-tradings/stablecoin,,syncswap-overview-efficient-tradings-stablecoin.pdf
+Smart Router,,https://syncswap.gitbook.io/syncswap/overview/smart-router,,syncswap-overview-smart-router.pdf
+Delegated transaction,,https://docs.zerolend.xyz/overview/account-abstraction-aa/delegated-transaction,,overview-account-abstraction-aa-delegated-transaction.pdf
+https:-www.gitbook.com.pdf,,https://docs.ata.network/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=tYKuUrKWPlgYjy0suCeT,,https:-www.gitbook.com.pdf
+Loyalty Program,,https://syncswap.gitbook.io/syncswap/incentives/loyalty-program,,syncswap-incentives-loyalty-program.pdf
+https:-docs.aave.com-faq.pdf,,https://docs.aave.com/https://docs.aave.com/faq/,,https:-docs.aave.com-faq.pdf
+Introduction,,https://doc.rust-lang.org/reference/index.html,,reference-index.html.pdf
+RWA Lending,,https://docs.zerolend.xyz/overview/rwa-lending,,overview-rwa-lending.pdf
+https:-jobs.eu.lever.co-avara.pdf,,https://docs.aave.com/https://jobs.eu.lever.co/avara,,https:-jobs.eu.lever.co-avara.pdf
+Genesis Epoch,,https://syncswap.gitbook.io/syncswap/incentives/loyalty-program/genesis-epoch,,syncswap-incentives-loyalty-program-genesis-epoch.pdf
+https:-github.com-aave-bug-bounty.pdf,,https://docs.aave.com/https://github.com/aave/bug-bounty,,https:-github.com-aave-bug-bounty.pdf
+HyperChains and Privacy Layer,,https://docs.zerolend.xyz/overview/hyperchains-and-privacy-layer,,overview-hyperchains-and-privacy-layer.pdf
+https:-www.gitbook.com.pdf,,https://docs.aave.com/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=yDw3RAf1nkR3haH9P6Zl,,https:-www.gitbook.com.pdf
+SYNC Token,,https://syncswap.gitbook.io/syncswap/tokenomics/sync-token,,syncswap-tokenomics-sync-token.pdf
+High Efficiency Mode (E-Mode),,https://docs.zerolend.xyz/capital-efficiency/high-efficiency-mode-e-mode,,capital-efficiency-high-efficiency-mode-e-mode.pdf
+Vortex Tokenomics,,https://syncswap.gitbook.io/syncswap/tokenomics/vortex-tokenomics,,syncswap-tokenomics-vortex-tokenomics.pdf
+Isolation Mode,,https://docs.zerolend.xyz/capital-efficiency/isolation-mode,,capital-efficiency-isolation-mode.pdf
+Overview,,https://syncswap.gitbook.io/syncswap/features/overview,,syncswap-features-overview.pdf
+Providers - Web3Auth,,https://web3auth.io/docs/sdk/providers/,,docs-sdk-providers.pdf
+Credit Delegation,,https://docs.zerolend.xyz/capital-efficiency/credit-delegation,,capital-efficiency-credit-delegation.pdf
+Future Proof,,https://syncswap.gitbook.io/syncswap/features/overview/future-proof,,syncswap-features-overview-future-proof.pdf
+EIP1193 (EVM) Provider,,https://web3auth.io/docs/sdk/providers/evm,,docs-sdk-providers-evm.pdf
+Supply/Borrow Caps,,https://docs.zerolend.xyz/capital-efficiency/supply-borrow-caps,,capital-efficiency-supply-borrow-caps.pdf
+Trading,,https://syncswap.gitbook.io/syncswap/features/trading,,syncswap-features-trading.pdf
+Solana Provider,,https://web3auth.io/docs/sdk/providers/solana,,docs-sdk-providers-solana.pdf
+Asset Listing Criteria,,https://docs.zerolend.xyz/assets-overview/asset-listing-criteria,,assets-overview-asset-listing-criteria.pdf
+Deposit Liquidity,,https://syncswap.gitbook.io/syncswap/features/deposit-liquidity,,syncswap-features-deposit-liquidity.pdf
+XRPL Provider,,https://web3auth.io/docs/sdk/providers/xrpl,,docs-sdk-providers-xrpl.pdf
+Supported Assets,,https://docs.zerolend.xyz/assets-overview/supported-assets,,assets-overview-supported-assets.pdf
+Overview,,https://syncswap.gitbook.io/syncswap/smart-contracts/overview,,syncswap-smart-contracts-overview.pdf
+Common Provider,,https://web3auth.io/docs/sdk/providers/common,,docs-sdk-providers-common.pdf
+How to Leverage Exposure on Your Assets?,,https://docs.zerolend.xyz/assets-overview/how-to-leverage-yield-farm,,assets-overview-how-to-leverage-yield-farm.pdf
+Smart Contracts,,https://syncswap.gitbook.io/syncswap/smart-contracts/smart-contracts,,syncswap-smart-contracts-smart-contracts.pdf
+Overview,,https://docs.zerolend.xyz/zeronomics/token-overview,,zeronomics-token-overview.pdf
+Developers,,https://syncswap.gitbook.io/syncswap/smart-contracts/developers,,syncswap-smart-contracts-developers.pdf
+Token Distribution,,https://docs.zerolend.xyz/zeronomics/token-distribution,,zeronomics-token-distribution.pdf
+Security,,https://syncswap.gitbook.io/syncswap/smart-contracts/security,,syncswap-smart-contracts-security.pdf
+https:-www.gitbook.com.pdf,,https://docs.makerdao.com/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=-LtJ1VeNJVW-jiKH0xoL,,https:-www.gitbook.com.pdf
+Ve-Tokenomics,,https://docs.zerolend.xyz/zeronomics/ve-tokenomics,,zeronomics-ve-tokenomics.pdf
+SwapBox,,https://syncswap.gitbook.io/syncswap/integration/swapbox,,syncswap-integration-swapbox.pdf
+Single Stake ZERO,,https://docs.zerolend.xyz/zeronomics/ve-tokenomics/single-stake-usdzero,,zeronomics-ve-tokenomics-single-stake-usdzero.pdf
+Links,,https://syncswap.gitbook.io/syncswap/resources/links,,syncswap-resources-links.pdf
+Brand Kit,,https://syncswap.gitbook.io/syncswap/resources/brand-kit,,syncswap-resources-brand-kit.pdf
+dLP ZERO,,https://docs.zerolend.xyz/zeronomics/ve-tokenomics/dlp-usdzero,,zeronomics-ve-tokenomics-dlp-usdzero.pdf
+Deploying a New Pool,,https://docs.mav.xyz/guides/liquidity-providers/deploying-a-new-pool,,guides-liquidity-providers-deploying-a-new-pool.pdf
+👥,,https://docs.zkswap.finance/highlights/affiliate-or-referral-program,,highlights-affiliate-or-referral-program.pdf
+Partnership,,https://syncswap.gitbook.io/syncswap/resources/partnership,,syncswap-resources-partnership.pdf
+Airdrop Incentives,,https://docs.zerolend.xyz/zeronomics/airdrop-incentives,,zeronomics-airdrop-incentives.pdf
+How to Check Position Balances,,https://docs.mav.xyz/guides/liquidity-providers/how-to-check-position-balances,,guides-liquidity-providers-how-to-check-position-balances.pdf
+🍄,,https://docs.zkswap.finance/highlights/boost,,highlights-boost.pdf
+Legal Disclaimer,,https://syncswap.gitbook.io/syncswap/resources/legal-disclaimer,,syncswap-resources-legal-disclaimer.pdf
+Engagement for Potential Incentives,,https://docs.zerolend.xyz/zeronomics/airdrop-incentives/engagement-for-potential-incentives,,zeronomics-airdrop-incentives-engagement-for-potential-incentives.pdf
+Miscellaneous,,https://syncswap.gitbook.io/syncswap/resources/miscellaneous,,syncswap-resources-miscellaneous.pdf
+Zero Gravity Points Reward System,,https://docs.zerolend.xyz/zeronomics/airdrop-incentives/zero-gravity-points-reward-system,,zeronomics-airdrop-incentives-zero-gravity-points-reward-system.pdf
+How to Manage Liquidity in a Pool,,https://docs.mav.xyz/guides/liquidity-providers/how-to-manage-liquidity-in-a-pool,,guides-liquidity-providers-how-to-manage-liquidity-in-a-pool.pdf
+⚡,,https://docs.zkswap.finance/highlights/zap,,highlights-zap.pdf
+ZeroLend Emission Strategy,,https://docs.zerolend.xyz/zeronomics/zerolend-emission-strategy,,zeronomics-zerolend-emission-strategy.pdf
+https:-www.gitbook.com.pdf,,https://syncswap.gitbook.io/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=a1srPi3SG0RLa68aU4tX,,https:-www.gitbook.com.pdf
+Liquidity Strategies,,https://docs.mav.xyz/guides/liquidity-providers/liquidity-strategies,,guides-liquidity-providers-liquidity-strategies.pdf
+🍣,,https://docs.zkswap.finance/highlights/fee,,highlights-fee.pdf
+Protocol Power/Weight,,https://docs.zerolend.xyz/zeronomics/zerolend-emission-strategy/protocol-power-weight,,zeronomics-zerolend-emission-strategy-protocol-power-weight.pdf
+Understanding Permanent Loss,,https://docs.mav.xyz/guides/liquidity-providers/understanding-permanent-loss,,guides-liquidity-providers-understanding-permanent-loss.pdf
+Deconstructing the Weighted Percentage (T_p) Calculation,,https://docs.zerolend.xyz/zeronomics/zerolend-emission-strategy/deconstructing-the-weighted-percentage-t_p-calculation,,zeronomics-zerolend-emission-strategy-deconstructing-the-weighted-percentage-t_p-calculation.pdf
+♾️,,https://docs.zkswap.finance/dao-and-tokenomics/tokenomics,,dao-and-tokenomics-tokenomics.pdf
+Construction of dLP & ZERO Power,,https://docs.zerolend.xyz/zeronomics/zerolend-emission-strategy/construction-of-dlp-and-usdzero-power,,zeronomics-zerolend-emission-strategy-construction-of-dlp-and-usdzero-power.pdf
+⚡,,https://docs.mav.xyz/guides/incentives,,guides-incentives.pdf
+Audits,,https://docs.zerolend.xyz/security/audits,,security-audits.pdf
+🔆,,https://docs.zkswap.finance/dao-and-tokenomics/token-utilities,,dao-and-tokenomics-token-utilities.pdf
+Understanding Boosted Positions,,https://docs.mav.xyz/guides/incentives/understanding-boosted-positions,,guides-incentives-understanding-boosted-positions.pdf
+Oracles,,https://docs.zerolend.xyz/security/oracles,,security-oracles.pdf
+🤝,,https://docs.zkswap.finance/dao-and-tokenomics/governance-via-yzf,,dao-and-tokenomics-governance-via-yzf.pdf
+Using PYTH Oracles,,https://docs.zerolend.xyz/security/oracles/using-pyth-oracles,,security-oracles-using-pyth-oracles.pdf
+Understanding Incentives,,https://docs.mav.xyz/guides/incentives/understanding-incentives,,guides-incentives-understanding-incentives.pdf
+Using Redstone Oracles,,https://docs.zerolend.xyz/security/oracles/using-redstone-oracles,,security-oracles-using-redstone-oracles.pdf
+🗒️,,https://docs.zkswap.finance/dao-and-tokenomics/dao-proposal-guidelines,,dao-and-tokenomics-dao-proposal-guidelines.pdf
+https:-www.gitbook.com.pdf,,https://docs.gelato.network/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=I3QE2938ymAyHi1owWJG,,https:-www.gitbook.com.pdf
+How to Join a Boosted Position,,https://docs.mav.xyz/guides/incentives/how-to-join-a-boosted-position,,guides-incentives-how-to-join-a-boosted-position.pdf
+Deployed Addresses,,https://docs.zerolend.xyz/security/deployed-addresses,,security-deployed-addresses.pdf
+🔎,,https://docs.zkswap.finance/contracts-and-audits/smart-contracts,,contracts-and-audits-smart-contracts.pdf
+Timelocked Multisig Admin,,https://docs.zerolend.xyz/security/timelocked-multisig-admin,,security-timelocked-multisig-admin.pdf
+How to Create a Boosted Position,,https://docs.mav.xyz/guides/incentives/how-to-create-a-boosted-position,,guides-incentives-how-to-create-a-boosted-position.pdf
+Insurance Fund,,https://docs.zerolend.xyz/security/insurance-fund,,security-insurance-fund.pdf
+🔐,,https://docs.zkswap.finance/contracts-and-audits/multisig-wallets,,contracts-and-audits-multisig-wallets.pdf
+ONEZ Stablecoin,,https://docs.zerolend.xyz/onez,,onez.pdf
+How to Manage a Boosted Position,,https://docs.mav.xyz/guides/incentives/how-to-manage-a-boosted-position,,guides-incentives-how-to-manage-a-boosted-position.pdf
+Roadmap,,https://docs.zerolend.xyz/roadmap,,roadmap.pdf
+🛡️,,https://docs.zkswap.finance/contracts-and-audits/audits-and-security,,contracts-and-audits-audits-and-security.pdf
+Phase 1 Launch,,https://docs.zerolend.xyz/roadmap/phase-1-launch,,roadmap-phase-1-launch.pdf
+How to Add Incentives,,https://docs.mav.xyz/guides/incentives/how-to-add-incentives,,guides-incentives-how-to-add-incentives.pdf
+🔰,,https://docs.zkswap.finance/tutorials-faqs/get-started,,tutorials-faqs-get-started.pdf
+https:-twitter.com-zerolendxyz.pdf,,https://docs.zerolend.xyz/https://twitter.com/zerolendxyz,,https:-twitter.com-zerolendxyz.pdf
+👩‍🏫,,https://docs.mav.xyz/guides/advanced-tutorials,,guides-advanced-tutorials.pdf
+https:-discord.gg-zerolend.pdf,,https://docs.zerolend.xyz/https://discord.gg/zerolend,,https:-discord.gg-zerolend.pdf
+Create a Wallet,,https://docs.zkswap.finance/tutorials-faqs/get-started/create-a-wallet,,tutorials-faqs-get-started-create-a-wallet.pdf
+https:-github.com-zerolend.pdf,,https://docs.zerolend.xyz/https://github.com/zerolend,,https:-github.com-zerolend.pdf
+Single-Sided Incentives,,https://docs.mav.xyz/guides/advanced-tutorials/single-sided-incentives,,guides-advanced-tutorials-single-sided-incentives.pdf
+https:-t.me-zerolendxyz.pdf,,https://docs.zerolend.xyz/https://t.me/zerolendxyz,,https:-t.me-zerolendxyz.pdf
+Set up Wallet,,https://docs.zkswap.finance/tutorials-faqs/get-started/set-up-wallet,,tutorials-faqs-get-started-set-up-wallet.pdf
+Integrations,,https://docs.zerolend.xyz/integrations,,integrations.pdf
+Withdrawing Unclaimed Rewards,,https://docs.mav.xyz/guides/advanced-tutorials/withdrawing-unclaimed-rewards,,guides-advanced-tutorials-withdrawing-unclaimed-rewards.pdf
+https:-www.gitbook.com.pdf,,https://docs.zerolend.xyz/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=i9DDwWcSwiiTEJZZlm8R,,https:-www.gitbook.com.pdf
+Add Official zkSync Era RPC,,https://docs.zkswap.finance/tutorials-faqs/get-started/add-official-zksync-era-rpc,,tutorials-faqs-get-started-add-official-zksync-era-rpc.pdf
+📓,,https://docs.mav.xyz/guides/technical-reference,,guides-technical-reference.pdf
+Get Gas Token (ETH),,https://docs.zkswap.finance/tutorials-faqs/get-started/get-gas-token-usdeth,,tutorials-faqs-get-started-get-gas-token-usdeth.pdf
+Development FAQ,,https://docs.mav.xyz/guides/technical-reference/development-faq,,guides-technical-reference-development-faq.pdf
+🚀,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance,,tutorials-faqs-onboarding-zkswap-finance.pdf
+Router,,https://docs.mav.xyz/guides/technical-reference/router,,guides-technical-reference-router.pdf
+How to Buy ZF,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance/how-to-buy-usdzf,,tutorials-faqs-onboarding-zkswap-finance-how-to-buy-usdzf.pdf
+Pool,,https://docs.mav.xyz/guides/technical-reference/pool,,guides-technical-reference-pool.pdf
+How to Swap,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance/how-to-swap,,tutorials-faqs-onboarding-zkswap-finance-how-to-swap.pdf
+Factory,,https://docs.mav.xyz/guides/technical-reference/factory,,guides-technical-reference-factory.pdf
+How to Join SwapBoard & Swap2Earn,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance/how-to-join-swapboard-and-swap2earn,,tutorials-faqs-onboarding-zkswap-finance-how-to-join-swapboard-and-swap2earn.pdf
+SlimRouter,,https://docs.mav.xyz/guides/technical-reference/slimrouter,,guides-technical-reference-slimrouter.pdf
+How to Add/Remove Liquidity,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance/how-to-add-remove-liquidity,,tutorials-faqs-onboarding-zkswap-finance-how-to-add-remove-liquidity.pdf
+MAV Token & Tokenomics,,https://docs.mav.xyz/mav-token/mav-token-and-tokenomics,,mav-token-mav-token-and-tokenomics.pdf
+How to Farm & Stake,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance/how-to-farm-and-stake,,tutorials-faqs-onboarding-zkswap-finance-how-to-farm-and-stake.pdf
+veMAV & MAV Staking,,https://docs.mav.xyz/mav-token/vemav-and-mav-staking,,mav-token-vemav-and-mav-staking.pdf
+How to use Paymaster,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance/how-to-use-paymaster,,tutorials-faqs-onboarding-zkswap-finance-how-to-use-paymaster.pdf
+How to Stake MAV,,https://docs.mav.xyz/mav-token/how-to-stake-mav,,mav-token-how-to-stake-mav.pdf
+How to Invite-to-Earn,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance/how-to-invite-to-earn,,tutorials-faqs-onboarding-zkswap-finance-how-to-invite-to-earn.pdf
+Maverick Ecosystem Rewards Pre-Season Airdrop,,https://docs.mav.xyz/mav-token/maverick-ecosystem-rewards-pre-season-airdrop,,mav-token-maverick-ecosystem-rewards-pre-season-airdrop.pdf
+How to Use zkBridge,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance/how-to-use-zkbridge,,tutorials-faqs-onboarding-zkswap-finance-how-to-use-zkbridge.pdf
+Ecosystem Leaderboard,,https://docs.mav.xyz/mav-token/ecosystem-leaderboard,,mav-token-ecosystem-leaderboard.pdf
+How to Use zkFlow,,https://docs.zkswap.finance/tutorials-faqs/onboarding-zkswap-finance/how-to-use-zkflow,,tutorials-faqs-onboarding-zkswap-finance-how-to-use-zkflow.pdf
+Frequently Asked Questions,,https://docs.mav.xyz/further-information/frequently-asked-questions,,further-information-frequently-asked-questions.pdf
+🗳️,,https://docs.zkswap.finance/tutorials-faqs/how-to-vote-and-create-proposal,,tutorials-faqs-how-to-vote-and-create-proposal.pdf
+Glossary,,https://docs.mav.xyz/further-information/glossary,,further-information-glossary.pdf
+🍮,,https://docs.zkswap.finance/tutorials-faqs/syrup-pools-faqs,,tutorials-faqs-syrup-pools-faqs.pdf
+Security,,https://docs.mav.xyz/further-information/security,,further-information-security.pdf
+💪,,https://docs.zkswap.finance/resources/community-resources,,resources-community-resources.pdf
+Contract Addresses,,https://docs.mav.xyz/further-information/contract-addresses,,further-information-contract-addresses.pdf
+📰,,https://docs.zkswap.finance/resources/news-digest,,resources-news-digest.pdf
+Incentives Wallets,,https://docs.mav.xyz/further-information/incentives-wallets,,further-information-incentives-wallets.pdf
+👬,,https://docs.zkswap.finance/resources/about-us,,resources-about-us.pdf
+Dune Analytics,,https://docs.mav.xyz/further-information/dune-analytics,,further-information-dune-analytics.pdf
+📗,,https://docs.zkswap.finance/resources/terms-and-disclaimers,,resources-terms-and-disclaimers.pdf
+Rebasing Tokens,,https://docs.mav.xyz/further-information/rebasing-tokens,,further-information-rebasing-tokens.pdf
+🎉,,https://docs.zkswap.finance/resources/ad-booking-info,,resources-ad-booking-info.pdf
+Restricted Territories,,https://docs.mav.xyz/further-information/restricted-territories,,further-information-restricted-territories.pdf
+https:-forms.gle-ShkMMrjGYDDjZHPa6.pdf,,https://docs.zkswap.finance/https://forms.gle/ShkMMrjGYDDjZHPa6,,https:-forms.gle-ShkMMrjGYDDjZHPa6.pdf
+Roadmap,,https://docs.mav.xyz/further-information/roadmap,,further-information-roadmap.pdf
+https:-forms.gle-G3e8E7tcCwJnvhvk7.pdf,,https://docs.zkswap.finance/https://forms.gle/G3e8E7tcCwJnvhvk7,,https:-forms.gle-G3e8E7tcCwJnvhvk7.pdf
+https:-files.gitbook.com-v0-b-gitbook-x-prod.appspot.com-o-spaces%2FaD2baZPIivxeaMVPT33w%2Fuploads%2F1zoNyAv0LePkAegpa5nU%2FMaverick_Directional_AMM_v1_0.pdf.pdf,,https://docs.mav.xyz/https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FaD2baZPIivxeaMVPT33w%2Fuploads%2F1zoNyAv0LePkAegpa5nU%2FMaverick_Directional_AMM_v1_0.pdf?alt=media&token=3f590c8b-24e0-4df6-ad74-acbf93e3518c,,https:-files.gitbook.com-v0-b-gitbook-x-prod.appspot.com-o-spaces%2FaD2baZPIivxeaMVPT33w%2Fuploads%2F1zoNyAv0LePkAegpa5nU%2FMaverick_Directional_AMM_v1_0.pdf.pdf
+https:-forms.gle-3NtE8Wv4ruQ3aR1h6.pdf,,https://docs.zkswap.finance/https://forms.gle/3NtE8Wv4ruQ3aR1h6,,https:-forms.gle-3NtE8Wv4ruQ3aR1h6.pdf
+https:-www.gitbook.com.pdf,,https://docs.zkswap.finance/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=8zLMvv1j0EUlJNi2O9e2,,https:-www.gitbook.com.pdf
+https:-files.gitbook.com-v0-b-gitbook-x-prod.appspot.com-o-spaces%2F1irpxOULWWoYXAKrwP4H%2Fuploads%2FzMdripJa1wTARjDa0TYN%2FMaverick%20Takes%20Aim%20at%20the%20DEX%20Landscape%20-%20Delphi%20Digital-merged.pdf.pdf,,https://docs.mav.xyz/https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1irpxOULWWoYXAKrwP4H%2Fuploads%2FzMdripJa1wTARjDa0TYN%2FMaverick%20Takes%20Aim%20at%20the%20DEX%20Landscape%20-%20Delphi%20Digital-merged.pdf?alt=media&token=bc3604ec-2d71-4525-9b48-a30012c50874,,https:-files.gitbook.com-v0-b-gitbook-x-prod.appspot.com-o-spaces%2F1irpxOULWWoYXAKrwP4H%2Fuploads%2FzMdripJa1wTARjDa0TYN%2FMaverick%20Takes%20Aim%20at%20the%20DEX%20Landscape%20-%20Delphi%20Digital-merged.pdf.pdf
+https:-www.gitbook.com.pdf,,https://docs.mav.xyz/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=1irpxOULWWoYXAKrwP4H,,https:-www.gitbook.com.pdf
+Legal Disclaimer,,https://docs.mev.io/disclaimer,,disclaimer.pdf
+What is mevETH,,https://docs.mev.io/mevETH,,mevETH.pdf
+What is MEV Auction,,https://docs.mev.io/mevAuction,,mevAuction.pdf
+Increasing the rewards,,https://docs.mev.io/3rd,,3rd.pdf
+MEV Protocol Contracts,,https://docs.mev.io/contracts,,contracts.pdf
+pressKit.pdf,,https://docs.mev.io/pressKit,,pressKit.pdf
+Security,,https://docs.mev.io/security,,security.pdf
+devdocs-authManager.pdf,,https://docs.mev.io/devdocs/authManager,,devdocs-authManager.pdf
+mevETH Contract,,https://docs.mev.io/devdocs/mevETH,,devdocs-mevETH.pdf
+mevETH Rate Provider Contract,,https://docs.mev.io/devdocs/mevETHRateProvider,,devdocs-mevETHRateProvider.pdf
+devdocs-shareVault.pdf,,https://docs.mev.io/devdocs/shareVault,,devdocs-shareVault.pdf
+Waygu Staker Contract,,https://docs.mev.io/devdocs/wayguStaker,,devdocs-wayguStaker.pdf
+Introduction,,https://docs.mev.io/,,index.pdf
+Atlas,,https://manual.makerdao.com/governance-elements/atlas,,governance-elements-atlas.pdf
+Scopes and Artifacts,,https://manual.makerdao.com/governance-elements/scopes-and-artifacts,,governance-elements-scopes-and-artifacts.pdf
+Scope Advisory Councils,,https://manual.makerdao.com/governance-elements/scope-advisory-councils,,governance-elements-scope-advisory-councils.pdf
+Status and Dashboards,,https://manual.makerdao.com/resources/protocol-and-dao-status,,resources-protocol-and-dao-status.pdf
+Common Abbreviations and Acronyms,,https://manual.makerdao.com/resources/acronyms,,resources-acronyms.pdf
+Discord Servers,,https://manual.makerdao.com/resources/discords,,resources-discords.pdf
+MakerDAO Calls Calendar,,https://manual.makerdao.com/resources/calls-calendar,,resources-calls-calendar.pdf
+MakerDAO Governance Calendar,,https://manual.makerdao.com/resources/governance-calendar,,resources-governance-calendar.pdf
+Easy Governance Frontend,,https://manual.makerdao.com/resources/easy-governance-frontend,,resources-easy-governance-frontend.pdf
+Governance Cycle,,https://manual.makerdao.com/governance-processes/governance-cycle,,governance-processes-governance-cycle.pdf
+Monthly Governance Cycle,,https://manual.makerdao.com/governance-processes/governance-cycle/monthly-governance-cycle,,governance-processes-governance-cycle-monthly-governance-cycle.pdf
+Weekly Governance Cycle,,https://manual.makerdao.com/governance-processes/governance-cycle/weekly-governance-cycle,,governance-processes-governance-cycle-weekly-governance-cycle.pdf
+Voting,,https://manual.makerdao.com/governance-processes/voting-in-makerdao,,governance-processes-voting-in-makerdao.pdf
+Practical Guide to Voting,,https://manual.makerdao.com/governance-processes/voting-in-makerdao/practical-guide-voting,,governance-processes-voting-in-makerdao-practical-guide-voting.pdf
+Gasless Poll Voting,,https://manual.makerdao.com/governance-processes/voting-in-makerdao/gasless-poll-voting,,governance-processes-voting-in-makerdao-gasless-poll-voting.pdf
+On-Chain Governance,,https://manual.makerdao.com/governance-processes/voting-in-makerdao/on-chain-governance,,governance-processes-voting-in-makerdao-on-chain-governance.pdf
+Approval Voting Guide,,https://manual.makerdao.com/governance-processes/voting-in-makerdao/approval-voting-guide,,governance-processes-voting-in-makerdao-approval-voting-guide.pdf
+Video Guide To Voting In The Maker Protocol,,https://manual.makerdao.com/governance-processes/voting-in-makerdao/how-to-vote,,governance-processes-voting-in-makerdao-how-to-vote.pdf
+Executive Vote Considerations,,https://manual.makerdao.com/governance-processes/executive-vote-considerations,,governance-processes-executive-vote-considerations.pdf
+Executive Audit,,https://manual.makerdao.com/governance-processes/executive-vote-considerations/executive-audit,,governance-processes-executive-vote-considerations-executive-audit.pdf
+Executive Transactions,,https://manual.makerdao.com/governance-processes/executive-vote-considerations/executive-transaction-verification,,governance-processes-executive-vote-considerations-executive-transaction-verification.pdf
+GSM Exceptions,,https://manual.makerdao.com/governance-processes/executive-vote-considerations/gsm-exceptions,,governance-processes-executive-vote-considerations-gsm-exceptions.pdf
+Off-Chain,,https://manual.makerdao.com/governance-processes/off-chain,,governance-processes-off-chain.pdf
+Off-Chain Governance,,https://manual.makerdao.com/governance-processes/off-chain/off-chain-governance,,governance-processes-off-chain-off-chain-governance.pdf
+Impact Estimations,,https://manual.makerdao.com/governance-processes/off-chain/impact-estimations,,governance-processes-off-chain-impact-estimations.pdf
+Emergency Shutdown,,https://manual.makerdao.com/governance-processes/emergency-shutdown,,governance-processes-emergency-shutdown.pdf
+Overview,,https://manual.makerdao.com/delegation/overview,,delegation-overview.pdf
+What is delegation,,https://manual.makerdao.com/delegation/overview/what-is-delegation,,delegation-overview-what-is-delegation.pdf
+Entities,,https://manual.makerdao.com/delegation/entities,,delegation-entities.pdf
+Alignment Conservers,,https://manual.makerdao.com/delegation/entities/alignment-conservers,,delegation-entities-alignment-conservers.pdf
+Aligned Voter Committees,,https://manual.makerdao.com/delegation/entities/avc,,delegation-entities-avc.pdf
+Aligned Delegates,,https://manual.makerdao.com/delegation/entities/aligned-delegates,,delegation-entities-aligned-delegates.pdf
+For MKR Holders,,https://manual.makerdao.com/delegation/for-mkr-holders,,delegation-for-mkr-holders.pdf
+MKR Holders Guide to Delegation,,https://manual.makerdao.com/delegation/for-mkr-holders/mkr-holder-guide,,delegation-for-mkr-holders-mkr-holder-guide.pdf
+Delegate Metric Tracking,,https://manual.makerdao.com/delegation/for-mkr-holders/delegate-metric-tracking,,delegation-for-mkr-holders-delegate-metric-tracking.pdf
+Delegate Contract Migration,,https://manual.makerdao.com/delegation/delegate-expiration,,delegation-delegate-expiration.pdf
+Core,,https://manual.makerdao.com/parameter-index/core,,parameter-index-core.pdf
+Governance Pause Delay,,https://manual.makerdao.com/parameter-index/core/param-gsm-pause-delay,,parameter-index-core-param-gsm-pause-delay.pdf
+Maximum System Surplus,,https://manual.makerdao.com/parameter-index/core/param-system-surplus-buffer,,parameter-index-core-param-system-surplus-buffer.pdf
+Dai Savings Rate,,https://manual.makerdao.com/parameter-index/core/param-dai-savings-rate,,parameter-index-core-param-dai-savings-rate.pdf
+Global Liquidation Limit,,https://manual.makerdao.com/parameter-index/core/param-global-liquidation-limit,,parameter-index-core-param-global-liquidation-limit.pdf
+Global Debt Ceiling,,https://manual.makerdao.com/parameter-index/core/param-global-debt-ceiling,,parameter-index-core-param-global-debt-ceiling.pdf
+Vault Risk,,https://manual.makerdao.com/parameter-index/vault-risk,,parameter-index-vault-risk.pdf
+Stability Fee,,https://manual.makerdao.com/parameter-index/vault-risk/param-stability-fee,,parameter-index-vault-risk-param-stability-fee.pdf
+Debt Ceiling,,https://manual.makerdao.com/parameter-index/vault-risk/param-debt-ceiling,,parameter-index-vault-risk-param-debt-ceiling.pdf
+Liquidation Ratio,,https://manual.makerdao.com/parameter-index/vault-risk/param-liquidation-ratio,,parameter-index-vault-risk-param-liquidation-ratio.pdf
+Liquidation Penalty,,https://manual.makerdao.com/parameter-index/vault-risk/param-liquidation-penalty,,parameter-index-vault-risk-param-liquidation-penalty.pdf
+Debt Floor,,https://manual.makerdao.com/parameter-index/vault-risk/param-debt-floor,,parameter-index-vault-risk-param-debt-floor.pdf
+RWA Agreement,,https://manual.makerdao.com/parameter-index/vault-risk/param-rwa-agreement,,parameter-index-vault-risk-param-rwa-agreement.pdf
+Smart Burn Engine,,https://manual.makerdao.com/parameter-index/smart-burn-engine,,parameter-index-smart-burn-engine.pdf
+Smart Burn Engine Lot Size,,https://manual.makerdao.com/parameter-index/smart-burn-engine/param-surplus-lot-size,,parameter-index-smart-burn-engine-param-surplus-lot-size.pdf
+Smart Burn Engine Cooldown,,https://manual.makerdao.com/parameter-index/smart-burn-engine/param-surplus-cooldown,,parameter-index-smart-burn-engine-param-surplus-cooldown.pdf
+Smart Burn Engine Slippage Tolerance,,https://manual.makerdao.com/parameter-index/smart-burn-engine/param-surplus-slippage-tolerance,,parameter-index-smart-burn-engine-param-surplus-slippage-tolerance.pdf
+Collateral Auction,,https://manual.makerdao.com/parameter-index/collateral-auction,,parameter-index-collateral-auction.pdf
+Auction Price Function,,https://manual.makerdao.com/parameter-index/collateral-auction/param-auction-price-function,,parameter-index-collateral-auction-param-auction-price-function.pdf
+Auction Price Multiplier,,https://manual.makerdao.com/parameter-index/collateral-auction/param-auction-price-multiplier,,parameter-index-collateral-auction-param-auction-price-multiplier.pdf
+Local Liquidation Limit,,https://manual.makerdao.com/parameter-index/collateral-auction/param-local-liquidation-limit,,parameter-index-collateral-auction-param-local-liquidation-limit.pdf
+Max Auction Drawdown,,https://manual.makerdao.com/parameter-index/collateral-auction/param-max-auction-drawdown,,parameter-index-collateral-auction-param-max-auction-drawdown.pdf
+Max Auction Duration,,https://manual.makerdao.com/parameter-index/collateral-auction/param-max-auction-duration,,parameter-index-collateral-auction-param-max-auction-duration.pdf
+Breaker Price Tolerance,,https://manual.makerdao.com/parameter-index/collateral-auction/param-breaker-price-tolerance,,parameter-index-collateral-auction-param-breaker-price-tolerance.pdf
+Proportional Kick Incentive,,https://manual.makerdao.com/parameter-index/collateral-auction/param-proportional-kick-incentive,,parameter-index-collateral-auction-param-proportional-kick-incentive.pdf
+Flat Kick Incentive,,https://manual.makerdao.com/parameter-index/collateral-auction/param-flat-kick-incentive,,parameter-index-collateral-auction-param-flat-kick-incentive.pdf
+Debt Auction,,https://manual.makerdao.com/parameter-index/debt-auction,,parameter-index-debt-auction.pdf
+Debt Auction Minimum Bid Decrease,,https://manual.makerdao.com/parameter-index/debt-auction/param-min-bid-decrease-flop,,parameter-index-debt-auction-param-min-bid-decrease-flop.pdf
+Debt Auction Duration,,https://manual.makerdao.com/parameter-index/debt-auction/param-auction-duration-flop,,parameter-index-debt-auction-param-auction-duration-flop.pdf
+Debt Auction Bid Duration,,https://manual.makerdao.com/parameter-index/debt-auction/param-bid-duration-flop,,parameter-index-debt-auction-param-bid-duration-flop.pdf
+Debt Auction Delay,,https://manual.makerdao.com/parameter-index/debt-auction/param-debt-auction-delay,,parameter-index-debt-auction-param-debt-auction-delay.pdf
+Debt Auction Bid Size,,https://manual.makerdao.com/parameter-index/debt-auction/param-bid-size,,parameter-index-debt-auction-param-bid-size.pdf
+Debt Auction Initial Lot Size,,https://manual.makerdao.com/parameter-index/debt-auction/param-initial-lot-size,,parameter-index-debt-auction-param-initial-lot-size.pdf
+Debt Auction Lot Size Increase,,https://manual.makerdao.com/parameter-index/debt-auction/param-lot-size-increase,,parameter-index-debt-auction-param-lot-size-increase.pdf
+Peg Stability,,https://manual.makerdao.com/module-index/module-psm,,module-index-module-psm.pdf
+Debt Ceiling Instant Access,,https://manual.makerdao.com/module-index/module-dciam,,module-index-module-dciam.pdf
+Token Streaming,,https://manual.makerdao.com/module-index/module-token-streaming,,module-index-module-token-streaming.pdf
+DAI Direct Deposit,,https://manual.makerdao.com/module-index/module-dai-direct-deposit,,module-index-module-dai-direct-deposit.pdf
+Flash Mint,,https://manual.makerdao.com/module-index/module-flash-mint-module,,module-index-module-flash-mint-module.pdf
+Linear Interpolation,,https://manual.makerdao.com/module-index/module-lerp,,module-index-module-lerp.pdf
+Emergency Shutdown,,https://manual.makerdao.com/module-index/module-emergency-shutdown,,module-index-module-emergency-shutdown.pdf
+https:-www.gitbook.com.pdf,,https://manual.makerdao.com/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=1H5WOQe0EwkbgnI9bkOd,,https:-www.gitbook.com.pdf
+CCIP Offchain tutorials,,https://docs.chain.link/ccip/tutorials/offchain,,ccip-tutorials-offchain.pdf
+Checking CCIP Message Status,,https://docs.chain.link/ccip/tutorials/get-status-offchain,,ccip-tutorials-get-status-offchain.pdf
+Solana Programs,,https://developers.circle.com/stablecoins/docs/solana-programs,,stablecoins-docs-solana-programs.pdf
+Transfer USDC on devnet between Solana and other chains,,https://developers.circle.com/stablecoins/docs/transfer-testnet-usdc-between-solana-devnet,,stablecoins-docs-transfer-testnet-usdc-between-solana-devnet.pdf
+Quickstart: Build a decentralized app (Solidity),,https://docs.arbitrum.io/build-decentralized-apps/quickstart-solidity-hardhat,,build-decentralized-apps-quickstart-solidity-hardhat.pdf
+How to estimate gas in Arbitrum,,https://docs.arbitrum.io/build-decentralized-apps/how-to-estimate-gas,,build-decentralized-apps-how-to-estimate-gas.pdf
+Arbitrum chains overview,,https://docs.arbitrum.io/build-decentralized-apps/public-chains,,build-decentralized-apps-public-chains.pdf
+Cross-chain messaging overview,,https://docs.arbitrum.io/build-decentralized-apps/cross-chain-messaging,,build-decentralized-apps-cross-chain-messaging.pdf
