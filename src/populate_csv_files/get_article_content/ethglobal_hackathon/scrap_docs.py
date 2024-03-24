@@ -103,6 +103,8 @@ if __name__ == '__main__':
     clean_csv_titles()
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
 
-    docs = ['reth', 'solidity']
+    docs = ['irisnet', 'secret', 'band', 'neutron', 'stride', 'dydx', 'fetch', 'canto', 'assetmantle',
+            'akash', 'osmosis_educate', 'osmosis_core', 'osmosis_outpost', 'cosmwasm', 'lavanetwork',
+            'stargate', 'quasar']
     # docs = None
-    main(docs=docs, overwrite=False, headless=False, max_workers=18)
+    main(docs=docs, overwrite=False, headless=False, max_workers=15)

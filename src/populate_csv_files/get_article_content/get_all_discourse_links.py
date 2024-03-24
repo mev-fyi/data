@@ -56,10 +56,11 @@ def scrape_forum_links(base_url, csv_name):
 
     try:
         driver = return_driver_get_discourse()
+        driver.get(base_url)
     except Exception as e:
         logging.error(f"Error getting driver for {base_url}: {e}")
         return
-    driver.get(base_url)
+
 
     def scroll_to_bottom():
         last_height = driver.execute_script("return document.body.scrollHeight")
@@ -205,6 +206,20 @@ def run():
         ("https://forum.apecoin.com/c/final-aips/22", "apecoin_final_aips"),
         ("https://forum.apecoin.com/c/help-resources/26", "apecoin_help_resources"),
         ("https://forum.apecoin.com/c/withdrawn/18", "apecoin_withdrawn"),
+        ("https://jupresear.ch", "jupiter_exchange_research"),
+        ("https://forums.mev.io/c/announcements/5", "mev_announcements"),
+        ("https://forums.mev.io/c/general/4", "mev_general"),
+        ("https://forums.manifoldfinance.com/c/changelog/8", "manifold_finance_changelog"),
+        ("https://forums.manifoldfinance.com/c/docs/43", "manifold_finance_docs"),
+        ("https://forums.manifoldfinance.com/c/research/5", "manifold_finance_research"),
+        ("https://forums.manifoldfinance.com/c/thepit/9", "manifold_finance_thepit"),
+        ("https://forums.manifoldfinance.com/c/development/6", "manifold_finance_development"),
+        ("https://forums.manifoldfinance.com/c/governance/7", "manifold_finance_governance"),
+        ("https://forum.dymension.xyz/c/multidimensional-governance-forum/9", "dymension_multidimensional_governance_forum"),
+        ("https://forum.dymension.xyz/c/research-development/6", "dymension_research_development"),
+        ("https://forum.dymension.xyz/c/community/7", "dymension_community"),
+        ("https://forum.dymension.xyz/c/rollapps/8", "dymension_rollapps"),
+
     ]
     # TODO 2024-03-01: automatically extract all subforums from the parent forum page
     with ThreadPoolExecutor() as executor:

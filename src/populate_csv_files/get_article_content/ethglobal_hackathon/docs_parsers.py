@@ -27,8 +27,13 @@ def update_or_append_csv(pdf_path, current_url, parsed_content, csv_path, overwr
     :param overwrite_title: Boolean indicating whether to overwrite the title.
     :param lock: A threading.Lock object used to synchronize access to the CSV file.
     """
-    title = extract_first_header(parsed_content)
     document_name = os.path.basename(pdf_path)
+    if parsed_content == '':
+        logging.info(f"Skipping empty content for document [{document_name}] for [{current_url}]")
+        return
+    title = extract_first_header(parsed_content)
+    if title is None:
+        title = document_name
 
     row_data = pd.DataFrame([{
         'title': title,
@@ -58,12 +63,12 @@ def update_or_append_csv(pdf_path, current_url, parsed_content, csv_path, overwr
         df.to_csv(csv_path, index=False)
 
 
-def fetch_page_with_selenium(url, headless=True):
+def fetch_page_with_selenium(url, headless=False):
     driver = return_driver(headless)  # Initialize the Selenium WebDriver
     driver.get(url)
 
     # Optional: wait for JavaScript to load. Adjust the sleep time as necessary.
-    time.sleep(4)
+    time.sleep(3)
 
     content = driver.page_source
     driver.quit()
@@ -117,6 +122,8 @@ def extract_first_header(markdown_content):
     # Regex to match markdown links and capture the link text
     import re
     markdown_link_pattern = re.compile(r'\[(.*?)\]\(https?://[^\s]+\)')
+    if markdown_link_pattern == '':
+        return None
 
     for line in markdown_content.splitlines():
         if line.startswith('# '):
@@ -127,7 +134,7 @@ def extract_first_header(markdown_content):
             cleaned_title = markdown_link_pattern.sub(r'\1', title_line)
 
             # Further cleanup for any specific cases, like '⭐'
-            if cleaned_title.startswith('⭐'):
+            if cleaned_title == '⭐':
                 return None
 
             return cleaned_title
@@ -186,6 +193,10 @@ def fetch_sidebar_urls(soup, base_url, sidebar_selector):
             if href.startswith('/'):
                 full_url = urljoin(base_url, href)
                 sidebar_links.append(full_url)
+            else:  # add '/'
+                full_url = urljoin(base_url, '/' + href)
+                sidebar_links.append(full_url)
+
 
     return sidebar_links
 
@@ -218,38 +229,40 @@ def fetch_sidebar_urls_wihtout_href(soup, base_url, sidebar_selector):
 
 def crawl_sidebar(config, overwrite, sidebar_selector, lock, selenium=False, robust=False, headless=False):
     # Use Selenium to fetch the initial page content
-    content = fetch_page_with_selenium(config['base_url']) if not robust else fetch_page_with_selenium_robust(config['base_url'])
-    if content:
-        soup = BeautifulSoup(content, 'html.parser')
+    try:
+        content = fetch_page_with_selenium(config['base_url']) if not robust else fetch_page_with_selenium_robust(config['base_url'])
+        if content:
+            soup = BeautifulSoup(content, 'html.parser')
 
-        # Your existing logic to process the sidebar and subsequent pages
-        fetch_sidebar_func = config.get('fetch_sidebar_func', fetch_sidebar_urls)
-        urls_to_crawl = fetch_sidebar_func(soup, config['base_url'], sidebar_selector)
+            # Your existing logic to process the sidebar and subsequent pages
+            fetch_sidebar_func = config.get('fetch_sidebar_func', fetch_sidebar_urls)
+            urls_to_crawl = fetch_sidebar_func(soup, config['base_url'], sidebar_selector)
 
-        if config['base_url'] in urls_to_crawl:
-            urls_to_crawl.remove(config['base_url'])
+            if config['base_url'] in urls_to_crawl:
+                urls_to_crawl.remove(config['base_url'])
 
-        for url in urls_to_crawl:
-            # Use Selenium again for each page in the sidebar
-            if selenium:
-                page_content = fetch_page_with_selenium(url)
-            else:
-                page_content = fetch_page(url)
-            if page_content:
-                page_soup = BeautifulSoup(page_content, 'html.parser')
-                parsed_data = {
-                    'url': url,
-                    'content': parse_content(page_soup, config['content_selector'], url, config['img_selector'], config.get('html_parser', html_to_markdown_docs)),
-                    'author': "",  # Optionally extract author information
-                    'date': ""  # Optionally extract date information
-                }
-                pdf_path = save_page_as_pdf(parsed_data, url, overwrite, config.get('base_name', ''))
-                if pdf_path:
-                    csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
-                    update_or_append_csv(pdf_path, url, parsed_data['content'], csv_path, overwrite, lock)
-            else:
-                logging.error(f"Failed to fetch content for {url}")
-
+            for url in urls_to_crawl:
+                # Use Selenium again for each page in the sidebar
+                if selenium:
+                    page_content = fetch_page_with_selenium(url, headless)
+                else:
+                    page_content = fetch_page(url)
+                if page_content:
+                    page_soup = BeautifulSoup(page_content, 'html.parser')
+                    parsed_data = {
+                        'url': url,
+                        'content': parse_content(page_soup, config['content_selector'], url, config['img_selector'], config.get('html_parser', html_to_markdown_docs)),
+                        'author': "",  # Optionally extract author information
+                        'date': ""  # Optionally extract date information
+                    }
+                    pdf_path = save_page_as_pdf(parsed_data, url, overwrite, config.get('base_name', ''))
+                    if pdf_path:
+                        csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
+                        update_or_append_csv(pdf_path, url, parsed_data['content'], csv_path, overwrite, lock)
+                else:
+                    logging.error(f"Failed to fetch content for {url}")
+    except Exception as e:
+        logging.error(f"Error while crawling {config['base_url']}: {e}")
 
 def embed_images_as_data_urls(soup, base_url, img_selector):
     for img in soup.select(img_selector):

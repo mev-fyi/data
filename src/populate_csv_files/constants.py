@@ -8,6 +8,7 @@ AUTHORS = ['Uri Klarman', 'Robert Miller', 'Tarun Chitra', 'Hasu', 'Dan Robinson
 'Max Resnick', 'Quintus Kilbourn', 'Georgios Konstantopoulos', 'Alex Obadia', 'Su Zhu', 'Vitalik Buterin', 'Justin Drake', 'Mike Neuder']
 
 FIRMS = ['eigenlayer', 'dymension', 'bloxroute', 'aptos', 'monad', 'sui', 'sei', 'panoptic', 'sol', 'solana', 'circle', 'chainlink', 'pyth', 'raydium', 'jito', 'orca', 'jupiter',
+         'cosmos', 'stargate', 'layerzero', "injective",
          'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig', 'balancer', 'sushiswap', 'uma', 'across', 'primev', 'magic eden',
          'uniswap', 'altlayer', 'aztec', 'starkware', 'scroll', 'optimism', 'zksync', 'matter labs', '1inch', 'anoma', 'espresso', 'blast', 'blast l2', 'ambient', 'ambient finance']
 
@@ -20,7 +21,7 @@ KEYWORDS_TO_INCLUDE = ['perps', 'derivatives', 'options', 'order flow', 'orderfl
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'rollup', 'roll-up', 'roll-ups', 'uniswap', 'appchain',
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives",
             'erc', 'eip', 'auction', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'pools', 'censorship', 'starknet', 'nftfi', 'dencun', 'the chopping block',
-            '1559', 'BFT', 'selfish mining', 'vickrey auctions', "How They Solved Ethereum's Critical Flaw", 'cryptoeconomics','fuzzing',',formal verification', 'First-Price Auctions',
+            '1559', 'BFT', 'selfish mining', 'vickrey auctions', "How They Solved Ethereum's Critical Flaw", 'cryptoeconomics', 'fuzzing', 'formal verification', 'First-Price Auctions',
             'token design', 'token economics', 'crypto economics', "John Adler : Wait, It's All Resource Pricing?", 'evm', 'whiteboard series']
 
 KEYWORDS_TO_INCLUDE += AUTHORS
@@ -31,6 +32,9 @@ KEYWORDS_TO_EXCLUDE = ['sanction','howey','lawyer','joke', 'jokes', '#short', '#
                        'From lifespan to healthspan (1)', 'On promoting healthspan and quality of life (2)',
                        'Quick Bits', '#eth', 'Oslo Freedom Forum:', 'Why the SEC', 'SEC Commissioner', 'Oráculos', 'On promoting healthspan and quality of life',
                        'From lifespan to healthspan', 'On the decentralized web', 'Web3 Masterclass for JavaScript Developers',
+                        'Preprofessional Course in Civil Engineering', 'Professional Courses in APAM',
+                        'Professional Courses in Biomedical Engineering', 'Professional Courses in Chemical Engineering',
+                        'Pre-Professional Course in Earth and Environmental Engineering', 'Tristan Naumann - Computer Science',
                        'The SEC favors cash over in-kind transactions when it comes to approving a spot Bitcoin ETF', 'Art and Awe in the Age of Machine Intelligence',
                        "The Builder-Hero's Journey", 'OgleCrypto tells the fascinating story of how he tracked down a group of DeFi hackers from Hong Kong',
                        "How DeFi Hack Negotiators Get the Job Done: The Chopping Block", "🧐 The proposed IRS reporting rules could adversely impact DeFi.",
