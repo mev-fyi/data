@@ -1,9 +1,8 @@
 import os
-import fitz
+import fitz  # PyMuPDF
 from PIL import Image
 from io import BytesIO
 from src.utils import root_directory
-
 
 def generate_pdf_thumbnails(pdf_directory, output_directory, page_fraction=0.5, min_px=400, max_px=1500, zoom_factor=2.9):
     """
@@ -24,6 +23,11 @@ def generate_pdf_thumbnails(pdf_directory, output_directory, page_fraction=0.5, 
         if filename.lower().endswith('.pdf'):
             pdf_path = os.path.join(pdf_directory, filename)
             thumbnail_path = os.path.join(output_directory, os.path.splitext(filename)[0] + '.png')
+
+            # Skip generating thumbnail if it already exists
+            if os.path.exists(thumbnail_path):
+                print(f"Thumbnail for {filename} already exists. Skipping.")
+                continue
 
             with fitz.open(pdf_path) as doc:
                 page = doc[0]  # First page
@@ -57,8 +61,8 @@ def generate_pdf_thumbnails(pdf_directory, output_directory, page_fraction=0.5, 
 
 def run():
     pdf_dir = f"{root_directory()}/data/papers_pdf_downloads"
-    generate_pdf_thumbnails(pdf_directory=pdf_dir, output_directory=f'{root_directory()}/data/research_papers_pdf_thumbnails')
-
+    thumbnails_dir = f'{root_directory()}/data/research_papers_pdf_thumbnails'
+    generate_pdf_thumbnails(pdf_directory=pdf_dir, output_directory=thumbnails_dir)
 
 if __name__ == '__main__':
     run()

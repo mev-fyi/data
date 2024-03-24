@@ -146,7 +146,6 @@ def process_row(row, headless: bool, link_key: str, overwrite: bool):
         logging.error(f"Error occurred while processing {row[link_key]}: {e}")
 
 
-
 def prepare_df(csv_file_path, link_key):
     df = pd.read_csv(csv_file_path)
     if link_key not in df.columns:
@@ -154,27 +153,51 @@ def prepare_df(csv_file_path, link_key):
     return df
 
 
+def check_existing_screenshots(document_name: str, output_base_dir: str) -> bool:
+    """
+    Check if a screenshot for the given document name already exists.
+    """
+    formatted_name = sanitize_title(document_name).replace('.pdf', '') + '.png'
+    screenshot_path = os.path.join(output_base_dir, formatted_name)
+    return Path(screenshot_path).exists()
+
+
+def filter_df_for_new_thumbnails(df, output_base_dir: str, link_key: str) -> pd.DataFrame:
+    """
+    Filter the DataFrame to include only rows for which thumbnails need to be generated.
+    """
+    # Apply a mask to filter out existing screenshots
+    needs_screenshot = df.apply(lambda row: not check_existing_screenshots(row.get('document_name', row.get('title', row.get('Title', ''))), os.path.join(output_base_dir, extract_domain(row[link_key]))), axis=1)
+    logging.info(f"Generating thumbnails for [{needs_screenshot.sum()}] new documents.")
+    return df[needs_screenshot]
+
+
 def main(csv_file_path_link_key_tuples: Tuple[str, str] = [(f'{root_directory()}/data/links/articles_updated.csv', 'article'), (f'{root_directory()}/data/docs_details.csv', 'pdf_link'), (f'{root_directory()}/data/links/merged_articles.csv', 'Link')],
-         headless: bool=True, overwrite: bool=False, num_workers=18):
+         headless: bool=True, overwrite: bool=False, num_workers: int=18):
+    output_base_dir = f"{root_directory()}/data/article_thumbnails"
+
     for csv_file_path, link_key in csv_file_path_link_key_tuples:
         try:
             df = prepare_df(csv_file_path, link_key)
             # Shuffle the DataFrame rows to randomize URL access order
             df = df.sample(frac=1).reset_index(drop=True)
+            # Filter out documents that already have a generated thumbnail
+            if not overwrite:
+                df = filter_df_for_new_thumbnails(df, output_base_dir, link_key)
         except FileNotFoundError:
             logging.error(f"File not found: {csv_file_path}")
             continue
 
         os.environ['NUMEXPR_MAX_THREADS'] = str(num_workers)
-        process_row_with_headless_and_link_key = functools.partial(process_row, link_key=link_key, overwrite=overwrite, headless=headless)
+        process_row_with_headless_and_link_key = functools.partial(process_row, headless=headless, link_key=link_key, overwrite=overwrite)
         with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
             executor.map(process_row_with_headless_and_link_key, df.to_dict('records'))
 
 
 if __name__ == "__main__":
     csv_file_path_link_key_tuples = [
-        # (f'{root_directory()}/data/links/articles_updated.csv', 'article'),
+        (f'{root_directory()}/data/links/articles_updated.csv', 'article'),
         (f'{root_directory()}/data/docs_details.csv', 'pdf_link'),
-        # (f'{root_directory()}/data/links/merged_articles.csv', 'Link')
+        (f'{root_directory()}/data/links/merged_articles.csv', 'Link')
     ]
     main(csv_file_path_link_key_tuples, headless=False, overwrite=False, num_workers=18)
