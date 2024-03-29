@@ -220,122 +220,153 @@ def parse_and_categorize_links(input_filepath: str, domains_filepath: str, resea
     df.to_csv(input_filepath, index=False)
 
 
+url_patterns = {
+    "medium_article": r"^https://\w+\.medium\.com/.+",
+    "blog_metrika_article": r"^https://blog\.metrika\.co/.+",
+    "mirror_xyz_article_1": r"^https://\w+\.mirror\.xyz/.+",
+    "mirror_xyz_website": r"^https://mirror\.xyz/.+",
+    "drive_google_article": r"^https://drive\.google\.com/file/d/.+",
+    "galaxy_insights_article_1": r"^https://www\.galaxy\.com/insights/.+/.+",
+    "galaxy_insights_website": r"^https://www\.galaxy\.com/insights/.+",
+    "ethereum_notes_website": r"^https://notes\.ethereum\.org/@[^/]+/$",
+    "ethereum_notes_article": r"^https://notes\.ethereum\.org/@[^/]+/[^/]+$",
+    "medium_article_2": r"^https://medium\.com/.+/.+",
+    "medium_website": r"^https://medium\.com/.+",
+    "twitter_website": r"^https://twitter\.com/[^/]+/$",
+    "flashbots_article": r"^https://collective\.flashbots\.net/t/.+/\d+$",
+    "url_vitalik_article": r"^https://vitalik\.ca/.+/.+/.+\.html$",
+    "vitalik_website": r"^https://vitalik\.ca/$",
+    "url_qje_article": r"^https://academic\.oup\.com/qje/article/.+",
+    "hackmd_blog_post_article": r"^https://hackmd\.io/@[^/]+/[^/]+/$",  # Pattern for hackmd.io blog posts
+    "hackmd_website": r"^https://hackmd\.io/?$",  # Pattern for hackmd.io website
+    "flashbots_article_2": r"^https://collective\.flashbots\.net/t/.+/\d+$",  # New pattern for flashbots.net URLs
+    "scrt_network_website": r"^https://scrt\.network/$",  # Match https://scrt.network/
+    "scrt_network_blog_website": r"^https://scrt\.network/blog$",  # Match https://scrt.network/blog
+    "scrt_network_article": r"^https://scrt\.network/blog/.+$",  # Match https://scrt.network/blog/<something>
+    "github_website": r"^https://github\.com/[^/]+/$",  # Match https://github.com/<something>/
+    "github_article": r"^https://github\.com/20squares/[^/]+$",  # Match https://github.com/20squares/<something>
+    "medium_article2": r"^https://medium\.com/[^/]+/[^/]+$",  # Match https://medium.com/<something>/<something>
+    "medium_website2": r"^https://medium\.com/[^/]+$",  # Match https://medium.com/<something>
+    "flashbots_article_writing": r"^https://writings\.flashbots\.net/.+$",  # Match https://writings.flashbots.net/<something>
+    "flashbots_website": r"^https://writings\.flashbots\.net/$",  # Match https://writings.flashbots.net/
+    "iex_article": r"^https://www\.iex\.io/article/.+$",  # Match https://www.iex.io/article/<something>
+    "iex_website": r"^https://www\.iex\.io/article/$",  # Match https://www.iex.io/article/
+    "iexexchange_website": r"^https://www\.iexexchange\.io/technology$",  # Match https://www.iexexchange.io/technology
+    "paradigm_article": r"^https://www\.paradigm\.xyz/.+$",  # Match https://www.paradigm.xyz/<something>
+    "paradigm_website": r"^https://www\.paradigm\.xyz/$",  # Match https://www.paradigm.xyz/
+    "flashbots_docs_article": r"^https://docs\.flashbots\.net/.+$",  # New pattern for Flashbots docs
+    "flashbots_docs_website": r"^https://docs\.flashbots\.net/$",  # New pattern for Flashbots docs website
+    "mirror_xyz_article_2": r"^https://mirror\.xyz/[^/]+/[^/]+$",  # Pattern for articles under mirror.xyz
+    "mirror_xyz_website_2": r"^https://mirror\.xyz/[^/]+/$",  # Pattern for the base mirror.xyz website
+    "dba_xyz_website": r"^https://dba\.xyz/$",  # Match the base dba.xyz website
+    "dba_xyz_article": r"^https://dba\.xyz/.+$",  # Match articles under dba.xyz
+    "pbsfoundation_notion_website": r"^https://pbsfoundation\.notion\.site/$",  # Match the base pbsfoundation.notion.site website
+    "pbsfoundation_notion_article": r"^https://pbsfoundation\.notion\.site/[^/]+$",  # Match articles under pbsfoundation.notion.site
+    "multicoin_capital_website": r"^https://multicoin\.capital/writing/$",  # Match the Multicoin Capital writings homepage
+    "multicoin_capital_article": r"^https://multicoin\.capital/writing/.+$",  # Match articles under Multicoin Capital writings
+    "anoma_blog_website": r"^https://anoma\.net/blog/?$",  # Match the Anoma blog homepage
+    "anoma_blog_article": r"^https://anoma\.net/blog/.+$",  # Match articles under Anoma blog
+    "bcc_research_article": r"^https://bcc-research\.github\.io/CFMMRouter\.jl/dev/.*$",  # Match BCC Research article
+    "princeton_press_book": r"^https://press\.princeton\.edu/books/hardcover/\d+/[^/]+$",  # Match Princeton Press book
+    "sec_gov_article": r"^https://sec\.gov/comments/.+$",  # Match articles under SEC comments
+    'blog.20squares.xyz_website': r"^https://blog.20squares.xyz/?$",  # Match the base blog.20squares.xyz website
+    'blog.20squares.xyz_article': r"^https://blog.20squares.xyz/.*$",  # Match the base blog.20squares.xyz articles
+    "vitalik_eth_limo_website": r"^https://vitalik\.eth\.limo/?$",  # Match the base vitalik.eth.limo website
+    "vitalik_eth_limo_article": r"^https://vitalik\.eth\.limo/.+/.+$",  # Match articles under vitalik.eth.limo
+    "monoceros_insights_website": r"^https://www\.monoceros\.com/insights/?$",
+    "monoceros_insights_article": r"^https://www\.monoceros\.com/insights/.+$",
+    "kelvinfichter_website": r"^https://kelvinfichter\.com/pages/thoughts/?$",
+    "kelvinfichter_article": r"^https://kelvinfichter\.com/pages/thoughts/.+$",
+    "a16zcrypto_website": r"^https://a16zcrypto\.com/posts/?$",  # Match the base a16zcrypto.com/posts website
+    "a16zcrypto_article": r"^https://a16zcrypto\.com/posts/.+$",  # Match articles under a16zcrypto.com/posts
+    "gov_uniswap_website": r"^https://gov.uniswap\.org/t/?$",  # Match the base gov.uniswap.org/t/ website
+    "gov_uniswap_article": r"^https://gov.uniswap\.org/t/.+$",  # Match articles under gov.uniswap.org/t/
+    "govervance_aave_website": r"^https://governance.aave\.com/t/?$",  # Match the base governance.aave.com/t/ website
+    "govervance_aave_article": r"^https://governance.aave\.com/t/.+$",  # Match articles under governance.aave.com/t/
+    "forum.celestia_website": r"^https://forum.celestia\.org/t/?$",
+    "forum.celestia_article": r"^https://forum.celestia\.org/t/.+$",
+    "research.arbitrum_website": r"^https://research.arbitrum\.io/t/?$",
+    "research.arbitrum_article": r"^https://research.arbitrum\.io/t/.+$",
+    "dydx.forum_website": r"^https://dydx\.forum/t/?$",
+    "dydx.forum_article": r"^https://dydx\.forum/t/.+$",
+    "forum.arbitrum.foundation_website": r"^https://forum.arbitrum\.foundation/t/?$",
+    "forum.arbitrum.foundation_article": r"^https://forum.arbitrum\.foundation/t/.+$",
+    "forum.aztec.network_website": r"^https://forum.aztec\.network/t/?$",
+    "forum.aztec.network_article": r"^https://forum.aztec\.network/t/.+$",
+    "substack_website": r"^https://\w+\.substack\.com/p/?$",
+    "substack_article": r"^https://\w+\.substack\.com/p/.+$",
+    "helius_article": r"^https://www\.helius\.dev/blog/.+$",
+    "helius_website": r"^https://www\.helius\.dev/blog/?$",
+    "chainlink_blog_article": r"^https://blog\.chain\.link/[^/]+/?$",
+    "chainlink_blog_website": r"^https://blog\.chain\.link/?$",
+    "outlierventures_article": r"^https://outlierventures\.io/article/.+$",
+    "outlierventures_website": r"^https://outlierventures\.io/?$",
+    "gauntlet_xyz_article": r"^https://www\.gauntlet\.xyz/resources/.+$",
+    "gauntlet_xyz_website": r"^https://www\.gauntlet\.xyz/resources/?$",
+    "dydx_exchange_article": r"^https://www\.dydx\.exchange/blog/.+$",
+    "dydx_exchange_website": r"^https://www\.dydx\.exchange/blog/?$",
+    "cyfrin_io_article": r"^https://www\.cyfrin\.io/blog/.+$",
+    "cyfrin_io_website": r"^https://www\.cyfrin\.io/blog/?$",
+    "mev_io_blog_article": r"^https://blog\.mev\.io/posts/.+$",
+    "mev_io_blog_website": r"^https://blog\.mev\.io/posts/?$",
+    "shutter_network_blog_article": r"^https://blog\.shutter\.network/.+$",
+    "shutter_network_blog_website": r"^https://blog\.shutter\.network/?$",
+    "blocknative_blog_article": r"^https?://(?:www\.)?blocknative\.com/blog/.+$",
+    "blocknative_blog_website": r"^https?://(?:www\.)?blocknative\.com/blog/?$",
+    "duality_blog_article": r"^https://blog\.duality\.xyz/.+$",
+    "duality_blog_website": r"^https://blog\.duality\.xyz/?$",
+    "merkle_blog_article": r"^https://blog\.merkle\.io/.+$",
+    "merkle_blog_website": r"^https://blog\.merkle\.io/?$",
+    "qtum_blog_article": r"^https://blog\.qtum\.org/.+$",
+    "qtum_blog_website": r"^https://blog\.qtum\.org/?$",
+    "openzeppelin_blog_article": r"^https://blog\.openzeppelin\.com/.+$",
+    "openzeppelin_blog_website": r"^https://blog\.openzeppelin\.com/?$",
+    "nil_foundation_article": r"^https://nil\.foundation/blog/post/.+$",
+    "nil_foundation_blog_website": r"^https://nil\.foundation/blog/?$",
+    "nil_foundation_research_website": r"^https://nil\.foundation/research/?$",
+    "paragraph_xyz_article": r"^https://paragraph\.xyz/.+?$",
+    "paragraph_xyz_website": r"^https://paragraph\.xyz/?$",
+    "quillaudits_article": r"^https://blog\.quillaudits\.com/.+$",
+    "quillaudits_website": r"^https://blog\.quillaudits\.com/?$",
+    "quillaudits_trending_article": r"^https://blog\.quillaudits\.com/trending/.+$",
+    "quillaudits_trending_website": r"^https://blog\.quillaudits\.com/trending/?$",
+    "medium_article_3": r"^https://\w+\.medium\.com/.+",
+    "medium_website_3": r"^https://\w+\.medium\.com/?$",
+    "ethresearch_article": r"^https://ethresear\.ch/t/.+/\d+$",
+    "ethresearch_website": r"^https://ethresear\.ch/t/?$",
+    "hackmd_user_article": r"^https://hackmd\.io/@[^/]+/.+$",
+    "hackmd_user_website": r"^https://hackmd\.io/@[^/]+/?$",
+    "jumpcrypto_writing_article": r"^https://jumpcrypto\.com/writing/.+$",
+    "jumpcrypto_writing_website": r"^https://jumpcrypto\.com/writing/?$",
+    "propellerheads_blog_article": r"^https://www\.propellerheads\.xyz/blog/.+$",
+    "propellerheads_blog_website": r"^https://www\.propellerheads\.xyz/blog/?$",
+    "osmosis_blog_article": r"^https://osmosis\.zone/blog/.+$",
+    "osmosis_blog_website": r"^https://osmosis\.zone/blog/?$",
+    "deribit_insights_article": r"^https://insights\.deribit\.com/market-research/.+$",
+    "deribit_insights_website": r"^https://insights\.deribit\.com/market-research/?$",
+    "eips_ethereum_article": r"^https://eips\.ethereum\.org/EIPS/eip-\d+$",
+    "eips_ethereum_website": r"^https://eips\.ethereum\.org/EIPS/?$",
+    "umbraresearch_writings_article": r"^https://www\.umbraresearch\.xyz/writings/.+$",
+    "umbraresearch_writings_website": r"^https://www\.umbraresearch\.xyz/writings/?$",
+    "outlierventures_research_article": r"^https://outlierventures\.io/research/.+$",
+    "outlierventures_research_website": r"^https://outlierventures\.io/research/?$",
+    "cumberland_insights_article": r"^https://cumberland\.io/insights/research/.+$",
+    "cumberland_insights_website": r"^https://cumberland\.io/insights/research/?$",
+    "website_mechanism_org": r"^https://www\.mechanism\.org/?$",  # Website
+    "website_iosco_org_library": r"^https://www\.iosco\.org/library/pubdocs/?$",  # Website Section
+    "website_lido_research": r"^https://research\.lido\.fi/t/?$",  # Website Section
+    "website_anoma_research": r"^https://research\.anoma\.net/t/?$",  # Website Section
+    "article_docs_google": r"^https://docs\.google\.com/[^/]+/d/.+$",  # Article
+    "article_blog_post": r"^https://([^/]+)\.([^/]+)/blog/.+$",  # Article
+    "article_coinmarketcap": r"^https://coinmarketcap\.com/alexandria/article/.+$",  # Article
+    "article_binance_research": r"^https://www\.binance\.com/en/research/analysis/.+$",  # Article
+    "website_section_projects": r"^https://(?:www\.)?([^/]+)\.([^/]+)/projects/?$",  # Website Section
+    "article_risencrypto": r"^https://risencrypto\.github\.io/[^/]+/$",  # Article
+    "website_risencrypto": r"^https://risencrypto\.github\.io/?$"  # Website
+}
+
 def run():
     repo_dir = root_directory()
-    url_patterns = {
-        "notion_site": r"^https://[^/]+/[^/]+$",
-        "medium_article": r"^https://\w+\.medium\.com/.+",
-        "blog_metrika_article": r"^https://blog\.metrika\.co/.+",
-        "mirror_xyz_article_1": r"^https://\w+\.mirror\.xyz/.+",
-        "mirror_xyz_website": r"^https://mirror\.xyz/.+",
-        "drive_google_article": r"^https://drive\.google\.com/file/d/.+",
-        "galaxy_insights_article_1": r"^https://www\.galaxy\.com/insights/.+/.+",
-        "galaxy_insights_website": r"^https://www\.galaxy\.com/insights/.+",
-        "ethereum_notes_website": r"^https://notes\.ethereum\.org/@[^/]+/$",
-        "ethereum_notes_article": r"^https://notes\.ethereum\.org/@[^/]+/[^/]+$",
-        "medium_article_2": r"^https://medium\.com/.+/.+",
-        "medium_website": r"^https://medium\.com/.+",
-        "twitter_website": r"^https://twitter\.com/[^/]+/$",
-        "flashbots_article": r"^https://collective\.flashbots\.net/t/.+/\d+$",
-        "url_vitalik_article": r"^https://vitalik\.ca/.+/.+/.+\.html$",
-        "vitalik_website": r"^https://vitalik\.ca/$",
-        "url_qje_article": r"^https://academic\.oup\.com/qje/article/.+",
-        "hackmd_blog_post_article": r"^https://hackmd\.io/@[^/]+/[^/]+/$",  # Pattern for hackmd.io blog posts
-        "hackmd_website": r"^https://hackmd\.io/?$",  # Pattern for hackmd.io website
-        "flashbots_article_2": r"^https://collective\.flashbots\.net/t/.+/\d+$",  # New pattern for flashbots.net URLs
-        "scrt_network_website": r"^https://scrt\.network/$",  # Match https://scrt.network/
-        "scrt_network_blog_website": r"^https://scrt\.network/blog$",  # Match https://scrt.network/blog
-        "scrt_network_article": r"^https://scrt\.network/blog/.+$",  # Match https://scrt.network/blog/<something>
-        "github_website": r"^https://github\.com/[^/]+/$",  # Match https://github.com/<something>/
-        "github_article": r"^https://github\.com/20squares/[^/]+$",  # Match https://github.com/20squares/<something>
-        "medium_article2": r"^https://medium\.com/[^/]+/[^/]+$",  # Match https://medium.com/<something>/<something>
-        "medium_website2": r"^https://medium\.com/[^/]+$",  # Match https://medium.com/<something>
-        "flashbots_article_writing": r"^https://writings\.flashbots\.net/.+$",  # Match https://writings.flashbots.net/<something>
-        "flashbots_website": r"^https://writings\.flashbots\.net/$",  # Match https://writings.flashbots.net/
-        "iex_article": r"^https://www\.iex\.io/article/.+$",  # Match https://www.iex.io/article/<something>
-        "iex_website": r"^https://www\.iex\.io/article/$",  # Match https://www.iex.io/article/
-        "iexexchange_website": r"^https://www\.iexexchange\.io/technology$",  # Match https://www.iexexchange.io/technology
-        "paradigm_article": r"^https://www\.paradigm\.xyz/.+$",  # Match https://www.paradigm.xyz/<something>
-        "paradigm_website": r"^https://www\.paradigm\.xyz/$",  # Match https://www.paradigm.xyz/
-        "flashbots_docs_article": r"^https://docs\.flashbots\.net/.+$",  # New pattern for Flashbots docs
-        "flashbots_docs_website": r"^https://docs\.flashbots\.net/$",  # New pattern for Flashbots docs website
-        "mirror_xyz_article_2": r"^https://mirror\.xyz/[^/]+/[^/]+$",  # Pattern for articles under mirror.xyz
-        "mirror_xyz_website_2": r"^https://mirror\.xyz/[^/]+/$",  # Pattern for the base mirror.xyz website
-        "dba_xyz_website": r"^https://dba\.xyz/$",  # Match the base dba.xyz website
-        "dba_xyz_article": r"^https://dba\.xyz/.+$",  # Match articles under dba.xyz
-        "pbsfoundation_notion_website": r"^https://pbsfoundation\.notion\.site/$",  # Match the base pbsfoundation.notion.site website
-        "pbsfoundation_notion_article": r"^https://pbsfoundation\.notion\.site/[^/]+$",  # Match articles under pbsfoundation.notion.site
-        "multicoin_capital_website": r"^https://multicoin\.capital/writing/$",  # Match the Multicoin Capital writings homepage
-        "multicoin_capital_article": r"^https://multicoin\.capital/writing/.+$",  # Match articles under Multicoin Capital writings
-        "anoma_blog_website": r"^https://anoma\.net/blog/?$",  # Match the Anoma blog homepage
-        "anoma_blog_article": r"^https://anoma\.net/blog/.+$",  # Match articles under Anoma blog
-        "bcc_research_article": r"^https://bcc-research\.github\.io/CFMMRouter\.jl/dev/.*$",  # Match BCC Research article
-        "princeton_press_book": r"^https://press\.princeton\.edu/books/hardcover/\d+/[^/]+$",  # Match Princeton Press book
-        "sec_gov_article": r"^https://sec\.gov/comments/.+$",  # Match articles under SEC comments
-        'blog.20squares.xyz_website': r"^https://blog.20squares.xyz/?$",  # Match the base blog.20squares.xyz website
-        'blog.20squares.xyz_article': r"^https://blog.20squares.xyz/.*$",  # Match the base blog.20squares.xyz articles
-        "vitalik_eth_limo_website": r"^https://vitalik\.eth\.limo/?$",  # Match the base vitalik.eth.limo website
-        "vitalik_eth_limo_article": r"^https://vitalik\.eth\.limo/.+/.+$",  # Match articles under vitalik.eth.limo
-        "monoceros_insights_website": r"^https://www\.monoceros\.com/insights/?$",
-        "monoceros_insights_article": r"^https://www\.monoceros\.com/insights/.+$",
-        "kelvinfichter_website": r"^https://kelvinfichter\.com/pages/thoughts/?$",
-        "kelvinfichter_article": r"^https://kelvinfichter\.com/pages/thoughts/.+$",
-        "a16zcrypto_website": r"^https://a16zcrypto\.com/posts/?$",  # Match the base a16zcrypto.com/posts website
-        "a16zcrypto_article": r"^https://a16zcrypto\.com/posts/.+$",  # Match articles under a16zcrypto.com/posts
-        "gov_uniswap_website": r"^https://gov.uniswap\.org/t/?$",  # Match the base gov.uniswap.org/t/ website
-        "gov_uniswap_article": r"^https://gov.uniswap\.org/t/.+$",  # Match articles under gov.uniswap.org/t/
-        "govervance_aave_website": r"^https://governance.aave\.com/t/?$",  # Match the base governance.aave.com/t/ website
-        "govervance_aave_article": r"^https://governance.aave\.com/t/.+$",  # Match articles under governance.aave.com/t/
-        "forum.celestia_website": r"^https://forum.celestia\.org/t/?$",
-        "forum.celestia_article": r"^https://forum.celestia\.org/t/.+$",
-        "research.arbitrum_website": r"^https://research.arbitrum\.io/t/?$",
-        "research.arbitrum_article": r"^https://research.arbitrum\.io/t/.+$",
-        "dydx.forum_website": r"^https://dydx\.forum/t/?$",
-        "dydx.forum_article": r"^https://dydx\.forum/t/.+$",
-        "forum.arbitrum.foundation_website": r"^https://forum.arbitrum\.foundation/t/?$",
-        "forum.arbitrum.foundation_article": r"^https://forum.arbitrum\.foundation/t/.+$",
-        "forum.aztec.network_website": r"^https://forum.aztec\.network/t/?$",
-        "forum.aztec.network_article": r"^https://forum.aztec\.network/t/.+$",
-        "substack_website": r"^https://\w+\.substack\.com/p/?$",
-        "substack_article": r"^https://\w+\.substack\.com/p/.+$",
-        "helius_article": r"^https://www\.helius\.dev/blog/.+$",
-        "helius_website": r"^https://www\.helius\.dev/blog/?$",
-        "chainlink_blog_article": r"^https://blog\.chain\.link/[^/]+/?$",
-        "chainlink_blog_website": r"^https://blog\.chain\.link/?$",
-        "outlierventures_article": r"^https://outlierventures\.io/article/.+$",
-        "outlierventures_website": r"^https://outlierventures\.io/?$",
-        "gauntlet_xyz_article": r"^https://www\.gauntlet\.xyz/resources/.+$",
-        "gauntlet_xyz_website": r"^https://www\.gauntlet\.xyz/resources/?$",
-        "dydx_exchange_article": r"^https://www\.dydx\.exchange/blog/.+$",
-        "dydx_exchange_website": r"^https://www\.dydx\.exchange/blog/?$",
-        "cyfrin_io_article": r"^https://www\.cyfrin\.io/blog/.+$",
-        "cyfrin_io_website": r"^https://www\.cyfrin\.io/blog/?$",
-        "mev_io_blog_article": r"^https://blog\.mev\.io/posts/.+$",
-        "mev_io_blog_website": r"^https://blog\.mev\.io/posts/?$",
-        "shutter_network_blog_article": r"^https://blog\.shutter\.network/.+$",
-        "shutter_network_blog_website": r"^https://blog\.shutter\.network/?$",
-        "blocknative_blog_article": r"^https?://(?:www\.)?blocknative\.com/blog/.+$",
-        "blocknative_blog_website": r"^https?://(?:www\.)?blocknative\.com/blog/?$",
-        "duality_blog_article": r"^https://blog\.duality\.xyz/.+$",
-        "duality_blog_website": r"^https://blog\.duality\.xyz/?$",
-        "merkle_blog_article": r"^https://blog\.merkle\.io/.+$",
-        "merkle_blog_website": r"^https://blog\.merkle\.io/?$",
-        "qtum_blog_article": r"^https://blog\.qtum\.org/.+$",
-        "qtum_blog_website": r"^https://blog\.qtum\.org/?$",
-        "openzeppelin_blog_article": r"^https://blog\.openzeppelin\.com/.+$",
-        "openzeppelin_blog_website": r"^https://blog\.openzeppelin\.com/?$",
-        "nil_foundation_article": r"^https://nil\.foundation/blog/post/.+$",
-        "nil_foundation_blog_website": r"^https://nil\.foundation/blog/?$",
-        "nil_foundation_research_website": r"^https://nil\.foundation/research/?$",
-        "paragraph_xyz_article": r"^https://paragraph\.xyz/.+?$",
-        "paragraph_xyz_website": r"^https://paragraph\.xyz/?$",
-        "quillaudits_article": r"^https://blog\.quillaudits\.com/.+$",
-        "quillaudits_website": r"^https://blog\.quillaudits\.com/?$",
-        "quillaudits_trending_article": r"^https://blog\.quillaudits\.com/trending/.+$",
-        "quillaudits_trending_website": r"^https://blog\.quillaudits\.com/trending/?$",
-        "medium_article_3": r"^https://\w+\.medium\.com/.+",
-        "medium_website_3": r"^https://\w+\.medium\.com/?$"
-    }
 
     # TODO 2023-09-08: fix the website writing to .csv logic.
     parse_and_categorize_links(

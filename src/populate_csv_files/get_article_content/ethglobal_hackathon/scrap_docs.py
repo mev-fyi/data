@@ -36,13 +36,20 @@ def crawl_site(site_key, csv_lock, overwrite_docs=False, headless_browser=True):
     crawl_func_wrapper(config)
 
 
+visited_urls = set()  # Add this at the beginning of the script to track visited URLs globally
+
 def generic_crawl(config, overwrite, lock, headless=False):
+    global visited_urls
     try:
         base_url = config['base_url']
-        parser = config.get('parser', generic_parser)  # Get the parser from config, default to generic_parser
+        parser = config.get('parser', generic_parser)
 
         current_url = base_url
         while current_url:
+            if current_url in visited_urls:
+                break  # Skip this URL if it has already been visited
+            visited_urls.add(current_url)  # Mark this URL as visited
+
             content = fetch_page(current_url)
             if content:
                 soup = BeautifulSoup(content, 'html.parser')
@@ -50,9 +57,8 @@ def generic_crawl(config, overwrite, lock, headless=False):
                 pdf_path = save_page_as_pdf(parsed_data, current_url, overwrite, config.get('base_name', ''))
                 if pdf_path:
                     csv_path = os.path.join(root_directory(), "data", "docs_details.csv")
-                    update_or_append_csv(pdf_path, current_url, parsed_data['content'], csv_path, overwrite, lock)  # Pass the lock here
+                    update_or_append_csv(pdf_path, current_url, parsed_data['content'], csv_path, overwrite, lock)
 
-                # Logic for handling pagination (next button)
                 next_button = soup.select_one(config.get('next_button_selector', '.pagination-nav__link--next'))
                 if next_button and next_button.has_attr('href'):
                     next_url = urljoin(current_url, next_button['href'])

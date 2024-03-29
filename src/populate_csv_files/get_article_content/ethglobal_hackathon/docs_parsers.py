@@ -228,21 +228,19 @@ def fetch_sidebar_urls_wihtout_href(soup, base_url, sidebar_selector):
 
 
 def crawl_sidebar(config, overwrite, sidebar_selector, lock, selenium=False, robust=False, headless=False):
-    # Use Selenium to fetch the initial page content
+    global visited_urls
     try:
         content = fetch_page_with_selenium(config['base_url']) if not robust else fetch_page_with_selenium_robust(config['base_url'])
         if content:
             soup = BeautifulSoup(content, 'html.parser')
-
-            # Your existing logic to process the sidebar and subsequent pages
             fetch_sidebar_func = config.get('fetch_sidebar_func', fetch_sidebar_urls)
             urls_to_crawl = fetch_sidebar_func(soup, config['base_url'], sidebar_selector)
 
-            if config['base_url'] in urls_to_crawl:
-                urls_to_crawl.remove(config['base_url'])
-
             for url in urls_to_crawl:
-                # Use Selenium again for each page in the sidebar
+                if url in visited_urls:
+                    continue  # Skip this URL if it has already been visited
+                visited_urls.add(url)
+
                 if selenium:
                     page_content = fetch_page_with_selenium(url, headless)
                 else:
@@ -263,6 +261,7 @@ def crawl_sidebar(config, overwrite, sidebar_selector, lock, selenium=False, rob
                     logging.error(f"Failed to fetch content for {url}")
     except Exception as e:
         logging.error(f"Error while crawling {config['base_url']}: {e}")
+
 
 def embed_images_as_data_urls(soup, base_url, img_selector):
     for img in soup.select(img_selector):

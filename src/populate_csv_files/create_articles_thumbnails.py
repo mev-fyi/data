@@ -200,4 +200,4 @@ if __name__ == "__main__":
         (f'{root_directory()}/data/docs_details.csv', 'pdf_link'),
         (f'{root_directory()}/data/links/merged_articles.csv', 'Link')
     ]
-    main(csv_file_path_link_key_tuples, headless=False, overwrite=False, num_workers=18)
+    main(csv_file_path_link_key_tuples, headless=False, overwrite=True, num_workers=18)

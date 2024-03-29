@@ -8,15 +8,15 @@ AUTHORS = ['Uri Klarman', 'Robert Miller', 'Tarun Chitra', 'Hasu', 'Dan Robinson
 'Max Resnick', 'Quintus Kilbourn', 'Georgios Konstantopoulos', 'Alex Obadia', 'Su Zhu', 'Vitalik Buterin', 'Justin Drake', 'Mike Neuder']
 
 FIRMS = ['eigenlayer', 'dymension', 'bloxroute', 'aptos', 'monad', 'sui', 'sei', 'panoptic', 'sol', 'solana', 'circle', 'chainlink', 'pyth', 'raydium', 'jito', 'orca', 'jupiter',
-         'cosmos', 'stargate', 'layerzero', "injective",
+         'cosmos', 'stargate', 'layerzero', "injective", 'cowswap',
          'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig', 'balancer', 'sushiswap', 'uma', 'across', 'primev', 'magic eden',
          'uniswap', 'altlayer', 'aztec', 'starkware', 'scroll', 'optimism', 'zksync', 'matter labs', '1inch', 'anoma', 'espresso', 'blast', 'blast l2', 'ambient', 'ambient finance']
 
 
 # Note, the use of keywords List is an attempt at filtering YouTube videos by name content to reduce noise
 KEYWORDS_TO_INCLUDE = ['perps', 'derivatives', 'options', 'order flow', 'orderflow', 'transaction', 'mev', 'ordering', 'sgx', 'intent', 'dex', 'front-running', 'arbitrage', 'back-running',
-            'maximal extractable value', 'trading games', 'timing games', 'arbitrage games', 'timing', 'on-chain games', 'pepc', 'proposer', 'builder',
-            'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'hyperchain', 'erc404', 'erc 404', 'solidity & foundry', 'course', 'invariant test',
+            'maximal extractable value', 'trading games', 'timing games', 'arbitrage games', 'timing', 'on-chain games', 'pepc', 'proposer', 'builder', 'mevblocker', 'zeromev', 'libmev',
+            'mevboost.pics', 'mev-aware', 'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'hyperchain', 'erc404', 'erc 404', 'solidity & foundry', 'course', 'invariant test',
             'suave', 'gas war', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge', 'code audit', 'audit code', 'upgradable smart contract',
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'rollup', 'roll-up', 'roll-ups', 'uniswap', 'appchain',
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives",
