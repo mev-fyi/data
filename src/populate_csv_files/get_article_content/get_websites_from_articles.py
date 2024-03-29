@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 from re import Pattern
-from typing import Dict, List
+from typing import Dict, List, Tuple
 from abc import ABC, abstractmethod
 
 
@@ -46,11 +46,36 @@ def match_website_base(article_url, url_patterns):
                 return f"Error: {e}"
     return ", ".join(base_urls)  # Join unique base URLs with comma separator
 
-
 class Url:
 
     def __init__(self, value: str):
         self.value = value
+
+    def __str__(self) -> str:
+        return f"Url: {self.value}"
+    
+    def __contains__(self, match: str) -> bool:
+        return match in self.value
+
+class AuthorLink(Url):
+
+    isAvailable = False
+
+    def __init__(self, value: str = None):
+        super().__init__(value)
+
+    def is_available(self):
+        return bool(self.value)
+
+    def get_url(self):
+        if not self.value:
+            raise Exception("Author link not available")
+        return self.value
+    
+    def __str__(self) -> str:
+        if not self.value:
+            return "Author Unknown"
+        return super.__str__(self)
 
 class ArticleMatcher(ABC):
 
@@ -59,68 +84,171 @@ class ArticleMatcher(ABC):
         pass
 
     @abstractmethod
-    def get_author_link(self, url: Url) -> Url:
+    def get_author_link(self, url: Url) -> AuthorLink:
         pass
 
 class MatchNotFoundException(Exception):
-    pass
+    
+    def __init__(self, url: Url):
+        super().__init__(f"Match not found for {url}.")
 
 class AuthorUrlExtractor:
     article_matchers: List[ArticleMatcher]
 
-    def __init__(self, website_matchers):
-        self.article_matchers: List[ArticleMatcher] = website_matchers
+    def __init__(self, article_matchers=[]):
+        self.article_matchers: List[ArticleMatcher] = article_matchers
 
     def extract_url(self, url: Url) -> Url:
         match_count = sum(matcher.matches(url) for matcher in self.article_matchers)
         if match_count > 1:
-            raise Exception(f"More than one matcher: ({match_count}) matched for url: {url}")
+            raise Exception(f"More than one matcher: ({match_count}) matched for {url}.")
         if match_count == 0:
-            raise MatchNotFoundException()
+            raise MatchNotFoundException(url)
         for matcher in self.article_matchers:
             if matcher.matches(url):
                 return matcher.get_author_link(url)
+
         
+class DeadEndsMatcher(ArticleMatcher):
+    DEAD_ENDS = [
+        "https://drive.google.com",
+        "https://ethresear.ch",
+        "www.iosco.org",
+        "docs.google.com",
+        "coinmarketcap.com",
+        "rareskills.io",
+        ]
+
+    def matches(self, url: Url) -> bool:
+        return sum( x in url for x in self.DEAD_ENDS) > 0
+    
+    def get_author_link(self, url: Url) -> AuthorLink:
+        return AuthorLink()
+
+class SlashCountKey:
+    pattern: Pattern
+    number: int
+    def __init__(self, pattern, number):
+        self.pattern = pattern
+        self.number = number
+    
+    def matches(self, url: Url):
+        return bool(re.search(self.pattern, url.value)) 
+
+class SlashCountMatcher(ArticleMatcher):
+
+    keys: List[SlashCountKey] = [
+        SlashCountKey(r"galaxy.com/insights/research", 3),
+        ] + [SlashCountKey(x, 1) for x in [
+            r"notion.site",
+            r"blog.metrika.co",
+            r".medium.com",
+            r".flashbots.net",
+            r"vitalik.ca",
+            r"frontier.tech",
+            r"thedefiant.io",
+            r"www.iexexchange.io",
+            r"blog.uniswap.org",
+            r"openreview.net",
+            r"iex.io",
+            r"paradigm.xyz",
+            r"scrt.network",
+            r"jumpcrypto.com",
+            r"propellerheads.xyz",
+            r"mechanism.org",
+            r"a16zcrypto.com",
+            r"research.lido.fi",
+            r"research.anoma.net",
+            r"osmosis.zone",
+            r"insights.deribit.com",
+            r"eips.ethereum.org",
+            r".substack.com",
+            r"ddmckinnon.com",
+            r"hackingdistributed.com",
+            r"bertcmiller.com",
+            r"steakhouse.financial",
+            r"ipfs.io",
+            r"academic.oup.com",
+            r"signalsandthreads.com",
+            r"binance.com",
+            r"umbraresearch.xyz",
+            r"mangata.finance",
+            r"dba.xyz",
+            r".github.io",
+            r"20squares.xyz",
+            r"vitalik.eth.limo",
+            r"monoceros.com",
+            r"kelvinfichter.com",
+            r"xenophonlabs.com",
+            r"outlierventures.io",
+            r"forum.celestia.org",
+            r"research.arbitrum.io",
+            r"gov.uniswap.org",
+            r"dydx.forum",
+            r"aave.com",
+            r"arbitrum.foundation",
+            r"aztec.network",
+            r"conduit.xyz",
+            r"helius.dev",
+            r"gauntlet.xyz",
+            r"mev.io",
+            r"theblockchainerhub.xyz",
+            r"duality.xyz",
+            r"shutter.network",
+            r"blocknative.com",
+            r"openzeppelin.com",
+            r"blog.qtum.org",
+            r"merkle.io",
+            r"chain.link",
+            r"anoma.net",
+            r"eip4844.com",
+            r"clusters.xyz",
+            r"cyfrin.io",
+            r"quillaudits.com",
+            r"nil.foundation",
+            r"v4-by-example.org",
+            r"cumberland.io",
+            r"smlxl.io"
+        ]] + [SlashCountKey(x, 2) for x in [
+            r"hackmd.io",
+            r"//mirror.xyz",
+            r"notes.ethereum.org",
+            r".mirror.xyz",
+            r"/medium.com",
+            r"github.com",
+            r"paragraph.xyz",
+            r"uniswapfoundation.org"
+        ]]
+    
+    def matches(self, url: Url) -> bool:
+        return sum(k.matches(url) for k in self.keys) > 0
+
+    def get_author_link(self, url: Url) -> AuthorLink:
+        k = next(k for k in self.keys if k.matches(url))
+        backslash_suffix = '/'.join(("[^/]*" for _ in range(k.number)))
+        return re.search(rf".*?//{backslash_suffix}", url.value).group()
+
 
 class UrlPatternsMatcher(ArticleMatcher):
 
-    def __init__(self, url_patterns: Dict[str, str]):
-        self.url_patterns = url_patterns
-        self.matchers: Dict[Pattern[str]] = dict()
+    MATCHERS = [
+        ["test.test", r".*//mirror.xyz/[^/]*"]
+    ]
 
     def matches(self, url: Url) -> bool:
-        return   
+        return sum(m[0] in url for m in self.MATCHERS) > 0
 
+    def get_author_link(self, url: Url) -> AuthorLink:
+        regex = next(m for m in self.MATCHERS if m[0] in url)[1]
+        return re.search(regex, url.value).group()
 
 def main():
     input_filepath = f"{root_directory()}/data/links/articles_updated.csv"
     articles = pd.read_csv(input_filepath)
-    for url in articles.article:
-        print(url)
+    url_extractor = AuthorUrlExtractor([UrlPatternsMatcher(), DeadEndsMatcher(), SlashCountMatcher()])
+    for i, url in enumerate(articles.article):
+        print(url_extractor.extract_url(Url(url)))
     return 
-    # Iterate through each article URL, find its website match, and get the equivalent URL
-    for _, row in articles_df.iterrows():
-        try:
-            matched_website, matched_url, article_url, matched_pattern = find_longest_website_match_and_url(row['article'], url_patterns)
-            website_equivalent = find_website_equivalent(matched_pattern, url_patterns)
-            website_base = match_website_base(article_url, url_patterns)
-            # print('')
-            print_statement = f"Article URL: {article_url}\nMatched Website: {matched_website}\nMatched Website URL: {matched_url}\nMatched Regexp: {matched_pattern}\nWebsite Equivalent: {website_equivalent}\nWebsite Base: {website_base}\n{article_url[:article_url.rfind('/')+1]}"
-            if matched_website == "Website not found" or website_base == "Website base not found" or "Error" in website_base:
-                print(f"Article URL: {article_url}")
-                if matched_website == "Website not found":
-                    print(f"Matched Website: {matched_website}")
-                    print(print_statement)
-                if website_base == "Website base not found":
-                    print(f"Website Base: {website_base}")
-                    print(print_statement)
-                if "Error" in website_base:
-                    print(f"Error: {website_base.split(': ')[1]}")
-            else:
-                # print(f"Article URL: {article_url}\nMatched Website: {matched_website}\nMatched Website URL: {matched_url}\nMatched Regexp: {matched_pattern}\nWebsite Equivalent: {website_equivalent}\nWebsite Base: {website_base}\n{article_url[:article_url.rfind('/')+1]}")
-                pass
-        except re.error as e:
-            print(f"Error in regex pattern matching: {e}")
 
 if __name__ == "__main__":
     main()
