@@ -67,6 +67,15 @@ There is maintained work item list [here](task_backlog.md) that you can pick up 
 
 Love what we're doing? Star the repository and spread the word! Your support helps in keeping this initiative active and growing.
 
+# How to setup the environment ?
+
+```
+./setup.sh
+source venv/bin/activate
+export PYTHONPATH=$(pwd)
+python src/populate_csv_files/get_article_content/get_websites_from_articles.py
+```
+
 ---
 
 © 2023 mev.fyi | Open-sourced under the [MIT License](LICENSE).
