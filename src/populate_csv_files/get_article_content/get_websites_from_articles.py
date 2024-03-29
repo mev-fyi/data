@@ -1,6 +1,9 @@
 import pandas as pd
-import os
 import re
+from re import Pattern
+from typing import Dict, List
+from abc import ABC, abstractmethod
+
 
 from src.populate_csv_files.parse_new_data import url_patterns
 from src.utils import root_directory
@@ -43,10 +46,58 @@ def match_website_base(article_url, url_patterns):
                 return f"Error: {e}"
     return ", ".join(base_urls)  # Join unique base URLs with comma separator
 
+
+class Url:
+
+    def __init__(self, value: str):
+        self.value = value
+
+class ArticleMatcher(ABC):
+
+    @abstractmethod
+    def matches(self, url: Url) -> bool:
+        pass
+
+    @abstractmethod
+    def get_author_link(self, url: Url) -> Url:
+        pass
+
+class MatchNotFoundException(Exception):
+    pass
+
+class AuthorUrlExtractor:
+    article_matchers: List[ArticleMatcher]
+
+    def __init__(self, website_matchers):
+        self.article_matchers: List[ArticleMatcher] = website_matchers
+
+    def extract_url(self, url: Url) -> Url:
+        match_count = sum(matcher.matches(url) for matcher in self.article_matchers)
+        if match_count > 1:
+            raise Exception(f"More than one matcher: ({match_count}) matched for url: {url}")
+        if match_count == 0:
+            raise MatchNotFoundException()
+        for matcher in self.article_matchers:
+            if matcher.matches(url):
+                return matcher.get_author_link(url)
+        
+
+class UrlPatternsMatcher(ArticleMatcher):
+
+    def __init__(self, url_patterns: Dict[str, str]):
+        self.url_patterns = url_patterns
+        self.matchers: Dict[Pattern[str]] = dict()
+
+    def matches(self, url: Url) -> bool:
+        return   
+
+
 def main():
     input_filepath = f"{root_directory()}/data/links/articles_updated.csv"
-    articles_df = pd.read_csv(input_filepath)
-
+    articles = pd.read_csv(input_filepath)
+    for url in articles.article:
+        print(url)
+    return 
     # Iterate through each article URL, find its website match, and get the equivalent URL
     for _, row in articles_df.iterrows():
         try:
