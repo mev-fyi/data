@@ -230,8 +230,6 @@ url_patterns = {
     "galaxy_insights_website": r"^https://www\.galaxy\.com/insights/.+",
     "ethereum_notes_website": r"^https://notes\.ethereum\.org/@[^/]+/$",
     "ethereum_notes_article": r"^https://notes\.ethereum\.org/@[^/]+/[^/]+$",
-    "medium_article_2": r"^https://medium\.com/.+/.+",
-    "medium_website": r"^https://medium\.com/.+",
     "twitter_website": r"^https://twitter\.com/[^/]+/$",
     "flashbots_article": r"^https://collective\.flashbots\.net/t/.+/\d+$",
     "url_vitalik_article": r"^https://vitalik\.ca/.+/.+/.+\.html$",
@@ -250,7 +248,9 @@ url_patterns = {
     "flashbots_article_writing": r"^https://writings\.flashbots\.net/.+$",  # Match https://writings.flashbots.net/<something>
     "flashbots_website": r"^https://writings\.flashbots\.net/$",  # Match https://writings.flashbots.net/
     "iex_article": r"^https://www\.iex\.io/article/.+$",  # Match https://www.iex.io/article/<something>
-    "iex_website": r"^https://www\.iex\.io/article/$",  # Match https://www.iex.io/article/
+    "iex_website_perspectives": r"^https://www.iex.io/resources-types/perspectives",  # Match https://www.iex.io/resources-types/perspectives
+    "iex_website_research": r"^https://www.iex.io/resources-types/research",  # Match https://www.iex.io/resources-types/research
+    "iex_website_news": r"^https://www.iex.io/resources-types/news",  # Match https://www.iex.io/resources-types/news
     "iexexchange_website": r"^https://www\.iexexchange\.io/technology$",  # Match https://www.iexexchange.io/technology
     "paradigm_article": r"^https://www\.paradigm\.xyz/.+$",  # Match https://www.paradigm.xyz/<something>
     "paradigm_website": r"^https://www\.paradigm\.xyz/$",  # Match https://www.paradigm.xyz/
@@ -330,8 +330,6 @@ url_patterns = {
     "quillaudits_website": r"^https://blog\.quillaudits\.com/?$",
     "quillaudits_trending_article": r"^https://blog\.quillaudits\.com/trending/.+$",
     "quillaudits_trending_website": r"^https://blog\.quillaudits\.com/trending/?$",
-    "medium_article_3": r"^https://\w+\.medium\.com/.+",
-    "medium_website_3": r"^https://\w+\.medium\.com/?$",
     "ethresearch_article": r"^https://ethresear\.ch/t/.+/\d+$",
     "ethresearch_website": r"^https://ethresear\.ch/t/?$",
     "hackmd_user_article": r"^https://hackmd\.io/@[^/]+/.+$",

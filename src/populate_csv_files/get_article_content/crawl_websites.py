@@ -1,6 +1,7 @@
 import csv
 import logging
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 import requests
 from bs4 import BeautifulSoup
@@ -16,49 +17,64 @@ global_exclude_links = ["signin?", "/followers?", "/about?"]
 exclude_pattern = re.compile(r'https://medium\.com/(swlh|hackernoon|coinmonks|tag)[^ ]*?\?source=user_profile')
 
 
-def parse_links_from_config(output_csv_path):
+def parse_site(site_name, site):
     unique_urls = set()
+    output_rows = []
 
+    logging.info(f"Fetching {site_name} content from {site['table_page_url']}")
+
+    if site.get("use_selenium", False):
+        driver = return_driver()
+        driver.get(site["table_page_url"])
+        time.sleep(5)  # Increased time for dynamic content loading
+        content = driver.page_source
+        driver.quit()  # Ensures the driver closes properly
+    else:
+        response = requests.get(site["table_page_url"])
+        if response.status_code != 200:
+            logging.error(f"Failed to fetch {site_name}: HTTP {response.status_code}")
+            return
+        content = response.text
+
+    soup = BeautifulSoup(content, 'html.parser')
+    container = soup.select_one(site["table_wrapper_selector"])
+
+    if container:
+        row_selectors = site.get("row_selectors", ["a"])  # Defaults to ["a"] if row_selectors is not specified
+        for selector in row_selectors:
+            links = container.select(selector)
+            for link in links:
+                href = link.get('href', '')
+                if href and not any(exclude in href for exclude in global_exclude_links + site.get("exclude_links", [])) and not exclude_pattern.search(href):
+                    full_url = href if href.startswith('http') else f"{site['base_url'].rstrip('/')}/{href.lstrip('/')}"
+                    if full_url not in unique_urls:
+                        unique_urls.add(full_url)
+                        output_rows.append([site['base_url'], full_url])
+                        logging.info(f"Scrapped URL: {full_url}")
+    else:
+        logging.warning(f"No content block found for {site_name} using selector {site['table_wrapper_selector']}")
+
+    return output_rows
+
+
+def parse_links_from_config_parallel(output_csv_path, workers=5):
     with open(output_csv_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(['Base URL', 'Article URL'])
 
-        for site_name, site in sites_config.items():
-            logging.info(f"Fetching {site_name} content from {site['table_page_url']}")
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            futures = [executor.submit(parse_site, site_name, site) for site_name, site in sites_config.items()]
+            for future in futures:
+                result = future.result()
+                if result:
+                    for row in result:
+                        csvwriter.writerow(row)
 
-            if site.get("use_selenium", False):
-                driver = return_driver()
-                driver.get(site["table_page_url"])
-                time.sleep(2)  # Allow time for content to load
-                content = driver.page_source
-                driver.close()
-            else:
-                response = requests.get(site["table_page_url"])
-                if response.status_code != 200:
-                    logging.error(f"Failed to fetch {site_name}: HTTP {response.status_code}")
-                    continue
-                content = response.text
 
-            soup = BeautifulSoup(content, 'html.parser')
-            container = soup.select_one(site["table_wrapper_selector"])
+if __name__ == '__main__':
+    output_csv_path = f"{root_directory()}/data/crawled_articles.csv"
 
-            if container:
-                process_links(container, site, unique_urls, csvwriter)
-            else:
-                logging.warning(f"No content block found for {site_name} using selector {site['table_wrapper_selector']}")
-
-def process_links(container, site, unique_urls, csvwriter):
-    links = container.select(site.get("row_selector_template", "a"))
-    for link in links:
-        href = link.get('href', '')
-        # Check against global_exclude_links and the regex pattern
-        if href and not any(exclude in href for exclude in global_exclude_links + site.get("exclude_links", [])) and not exclude_pattern.search(href):
-            # Proceed with processing the link
-            full_url = href if href.startswith('http') else f"{site['base_url'].rstrip('/')}/{href.lstrip('/')}"
-            if full_url not in unique_urls:
-                unique_urls.add(full_url)
-                csvwriter.writerow([site['base_url'], full_url])
-                logging.info(f"Scrapped URL: {full_url}")
-
-output_csv_path = f"{root_directory()}/data/crawled_articles.csv"
-parse_links_from_config(output_csv_path)
+    site_names =None#['MediumPublication_wintermute']
+    if site_names is not None:
+        sites_config = {site_name: sites_config[site_name] for site_name in site_names if site_name in sites_config}
+    parse_links_from_config_parallel(output_csv_path, workers=16)  # Example with 4 workers
