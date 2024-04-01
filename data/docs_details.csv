@@ -1042,7 +1042,7 @@ Wallet Functionality,,https://docs.celo.org/wallet/celo-wallet/functionality,,wa
 signUserOperationHashWithECDSA,,https://docs.pimlico.io/permissionless/reference/utils/signUserOperationHashWithECDSA,,permissionless-reference-utils-signUserOperationHashWithECDSA.pdf
 State & Data Structures,,https://docs.near.org/develop/contracts/storage,,develop-contracts-storage.pdf
 VC-JWT Functions,,https://developers.circle.com/verite/docs/vc-jwt-functions,,verite-docs-vc-jwt-functions.pdf
-Deployed Contracts,,https://docs.eigenlayer.xyz/eigenlayer/deployed-contracts/,,eigenlayer-deployed-contracts.pdf
+Contract Addresses and Docs,,https://docs.eigenlayer.xyz/eigenlayer/deployed-contracts/,,eigenlayer-deployed-contracts.pdf
 CSV Exports,,https://docs.blockscout.com/for-users/export-to-csv,,for-users-export-to-csv.pdf
 Struct expressions,,https://docs.cairo-lang.org/language_constructs/struct-expressions.html,,language_constructs-struct-expressions.html.pdf
 Coin Flip,,https://docs.near.org/tutorials/examples/coin-flip,,tutorials-examples-coin-flip.pdf
@@ -3317,7 +3317,7 @@ Contract,,https://docs.near.org/tools/near-api-js/contract,,tools-near-api-js-co
 Transactions,,https://docs.near.org/concepts/basics/transactions/overview,,concepts-basics-transactions-overview.pdf
 Wallets,,https://docs.lido.fi/integrations/wallets,,integrations-wallets.pdf
 Gas,,https://docs.near.org/concepts/basics/transactions/gas,,concepts-basics-transactions-gas.pdf
-SDKs,,https://docs.lido.fi/integrations/sdk,,integrations-sdk.pdf
+SDKs and UI libraries,,https://docs.lido.fi/integrations/sdk,,integrations-sdk.pdf
 Validators,,https://docs.nethermind.io/validators/,,validators.pdf
 Getting Started,,https://docs.near.org/sdk/rust/get-started,,sdk-rust-get-started.pdf
 Collections,,https://docs.near.org/sdk/rust/contract-structure/collections,,sdk-rust-contract-structure-collections.pdf
@@ -3768,7 +3768,7 @@ CDP Manager - Detailed Documentation,,https://docs.makerdao.com/smart-contract-m
 Nitrogen (Orbit Celestia) Testnet,,https://docs.altlayer.io/altlayer-documentation/public-testnets/nitrogen-orbit-celestia-testnet,,altlayer-documentation-public-testnets-nitrogen-orbit-celestia-testnet.pdf
 Transferring assets over IBC,,https://docs.namada.net/users/ibc,,users-ibc.pdf
 📙,,https://docs.gelato.network/web3-services/web3-functions/understanding-web3-functions,,web3-services-web3-functions-understanding-web3-functions.pdf
-How to add your testnet Orbit chain to Arbitrum's bridge,,https://docs.arbitrum.io/launch-orbit-chain/how-tos/add-orbit-chain-to-bridge-ui,,launch-orbit-chain-how-tos-add-orbit-chain-to-bridge-ui.pdf
+How to add your Orbit chain to Arbitrum's bridge,,https://docs.arbitrum.io/launch-orbit-chain/how-tos/add-orbit-chain-to-bridge-ui,,launch-orbit-chain-how-tos-add-orbit-chain-to-bridge-ui.pdf
 Get Traits,,https://docs.opensea.io/reference/get_traits,,reference-get_traits.pdf
 WebAuthn Attestation,,https://docs.ata.network/attestation-module/webauthn-attestation,,attestation-module-webauthn-attestation.pdf
 Blocknative Bundler,,https://docs.blocknative.com/4337-tools/blocknative-bundler,,4337-tools-blocknative-bundler.pdf
@@ -5150,8 +5150,8 @@ Get started with token bridging,,https://docs.arbitrum.io/build-decentralized-ap
 Bridge tokens via Arbitrum's standard ERC20 gateway,,https://docs.arbitrum.io/build-decentralized-apps/token-bridging/how-to-bridge-tokens-standard,,build-decentralized-apps-token-bridging-how-to-bridge-tokens-standard.pdf
 Bridge tokens via Arbitrum’s generic-custom gateway,,https://docs.arbitrum.io/build-decentralized-apps/token-bridging/how-to-bridge-tokens-generic-custom,,build-decentralized-apps-token-bridging-how-to-bridge-tokens-generic-custom.pdf
 How to bridge tokens via a custom gateway,,https://docs.arbitrum.io/build-decentralized-apps/token-bridging/how-to-bridge-tokens-custom-gateway,,build-decentralized-apps-token-bridging-how-to-bridge-tokens-custom-gateway.pdf
-Bridging ether,,https://docs.arbitrum.io/build-decentralized-apps/token-bridging/token-bridge-ether,,build-decentralized-apps-token-bridging-token-bridge-ether.pdf
-Bridging ERC-20 tokens,,https://docs.arbitrum.io/build-decentralized-apps/token-bridging/token-bridge-erc20,,build-decentralized-apps-token-bridging-token-bridge-erc20.pdf
+ETH bridging,,https://docs.arbitrum.io/build-decentralized-apps/token-bridging/token-bridge-ether,,build-decentralized-apps-token-bridging-token-bridge-ether.pdf
+ERC-20 token bridging,,https://docs.arbitrum.io/build-decentralized-apps/token-bridging/token-bridge-erc20,,build-decentralized-apps-token-bridging-token-bridge-erc20.pdf
 RPC endpoints and providers,,https://docs.arbitrum.io/build-decentralized-apps/reference/node-providers,,build-decentralized-apps-reference-node-providers.pdf
 Introduction,,https://docs.gelato.network/rollup-public-testnet/introduction,,rollup-public-testnet-introduction.pdf
 Smart contract addresses,,https://docs.arbitrum.io/build-decentralized-apps/reference/useful-addresses,,build-decentralized-apps-reference-useful-addresses.pdf
@@ -6180,3 +6180,62 @@ Integrating EVM Networks With Chainlink Services,,https://docs.chain.link/resour
 Integrating EVM Networks With Chainlink Services,,https://docs.chain.link/resources/network-integration?parent=chainlinkFunctions,,resources-network-integration.pdf
 Integrating EVM Networks With Chainlink Services,,https://docs.chain.link/resources/network-integration?parent=ccip,,resources-network-integration.pdf
 Quickstart - Covalent Indexing and Querying API,,https://docs.arbitrum.io/for-devs/third-party-docs/Covalent/,,for-devs-third-party-docs-Covalent.pdf
+Chainlink CCIP,,https://docs.chain.link/ccip,,ccip.pdf
+Getting Started,,https://docs.chain.link/ccip/getting-started,,ccip-getting-started.pdf
+CCIP Supported Networks,,https://docs.chain.link/ccip/supported-networks,,ccip-supported-networks.pdf
+CCIP Supported Networks Mainnet - v1.2.0,,https://docs.chain.link/ccip/supported-networks/v1_2_0/mainnet,,ccip-supported-networks-v1_2_0-mainnet.pdf
+CCIP Supported Networks Mainnet - v1.0.0,,https://docs.chain.link/ccip/supported-networks/v1_0_0/mainnet,,ccip-supported-networks-v1_0_0-mainnet.pdf
+CCIP Supported Networks Testnet - v1.2.0,,https://docs.chain.link/ccip/supported-networks/v1_2_0/testnet,,ccip-supported-networks-v1_2_0-testnet.pdf
+CCIP Service Limits,,https://docs.chain.link/ccip/service-limits,,ccip-service-limits.pdf
+Chainlink CCIP Service Responsibility,,https://docs.chain.link/ccip/service-responsibility,,ccip-service-responsibility.pdf
+CCIP Billing,,https://docs.chain.link/ccip/billing,,ccip-billing.pdf
+Chainlink CCIP Release Notes,,https://docs.chain.link/ccip/release-notes,,ccip-release-notes.pdf
+Transfer Tokens,,https://docs.chain.link/ccip/tutorials/cross-chain-tokens,,ccip-tutorials-cross-chain-tokens.pdf
+Transfer Tokens with Data,,https://docs.chain.link/ccip/tutorials/programmable-token-transfers,,ccip-tutorials-programmable-token-transfers.pdf
+Transfer Tokens with Data - Defensive Example,,https://docs.chain.link/ccip/tutorials/programmable-token-transfers-defensive,,ccip-tutorials-programmable-token-transfers-defensive.pdf
+Transfer Tokens between EOAs,,https://docs.chain.link/ccip/tutorials/cross-chain-tokens-from-eoa,,ccip-tutorials-cross-chain-tokens-from-eoa.pdf
+Transfer USDC with Data,,https://docs.chain.link/ccip/tutorials/usdc,,ccip-tutorials-usdc.pdf
+Send Arbitrary Data,,https://docs.chain.link/ccip/tutorials/send-arbitrary-data,,ccip-tutorials-send-arbitrary-data.pdf
+Send Arbitrary Data with Acknowledgment of Receipt,,https://docs.chain.link/ccip/tutorials/send-arbitrary-data-receipt-acknowledgment,,ccip-tutorials-send-arbitrary-data-receipt-acknowledgment.pdf
+Manual Execution,,https://docs.chain.link/ccip/tutorials/manual-execution,,ccip-tutorials-manual-execution.pdf
+Acquire Test Tokens,,https://docs.chain.link/ccip/test-tokens,,ccip-test-tokens.pdf
+CCIP Conceptual Overview,,https://docs.chain.link/ccip/concepts,,ccip-concepts.pdf
+CCIP Architecture,,https://docs.chain.link/ccip/architecture,,ccip-architecture.pdf
+CCIP Manual Execution,,https://docs.chain.link/ccip/concepts/manual-execution,,ccip-concepts-manual-execution.pdf
+CCIP Best Practices,,https://docs.chain.link/ccip/best-practices,,ccip-best-practices.pdf
+IRouterClient API Reference,,https://docs.chain.link/ccip/api-reference/i-router-client,,ccip-api-reference-i-router-client.pdf
+CCIPReceiver API Reference,,https://docs.chain.link/ccip/api-reference/ccip-receiver,,ccip-api-reference-ccip-receiver.pdf
+Client Library API Reference,,https://docs.chain.link/ccip/api-reference/client,,ccip-api-reference-client.pdf
+Errors API Reference,,https://docs.chain.link/ccip/api-reference/errors,,ccip-api-reference-errors.pdf
+Example Cross-chain dApps and Tools,,https://docs.chain.link/ccip/examples,,ccip-examples.pdf
+Learning Resources,,https://docs.chain.link/getting-started/other-tutorials?parent=ccip,,getting-started-other-tutorials.pdf
+Smart Contract Overview,,https://docs.chain.link/getting-started/conceptual-overview?parent=ccip,,getting-started-conceptual-overview.pdf
+LINK Token Contracts,,https://docs.chain.link/resources/link-token-contracts?parent=ccip,,resources-link-token-contracts.pdf
+Acquire testnet LINK,,https://docs.chain.link/resources/acquire-link?parent=ccip,,resources-acquire-link.pdf
+Fund Your Contracts,,https://docs.chain.link/resources/fund-your-contract?parent=ccip,,resources-fund-your-contract.pdf
+Install Frameworks,,https://docs.chain.link/resources/create-a-chainlinked-project?parent=ccip,,resources-create-a-chainlinked-project.pdf
+Cross-chain bridges and associated risks,,https://docs.chain.link/resources/bridge-risks?parent=ccip,,resources-bridge-risks.pdf
+Data Feeds Architecture,,https://docs.chain.link/architecture-overview/architecture-overview?parent=ccip,,architecture-overview-architecture-overview.pdf
+Basic Request Model,,https://docs.chain.link/architecture-overview/architecture-request-model?parent=ccip,,architecture-overview-architecture-request-model.pdf
+Decentralized Data Model,,https://docs.chain.link/architecture-overview/architecture-decentralized-model?parent=ccip,,architecture-overview-architecture-decentralized-model.pdf
+Offchain Reporting,,https://docs.chain.link/architecture-overview/off-chain-reporting?parent=ccip,,architecture-overview-off-chain-reporting.pdf
+Developer Communications,,https://docs.chain.link/resources/developer-communications?parent=ccip,,resources-developer-communications.pdf
+Getting Help,,https://docs.chain.link/resources/getting-help?parent=ccip,,resources-getting-help.pdf
+Hackathon Resources,,https://docs.chain.link/resources/hackathon-resources?parent=ccip,,resources-hackathon-resources.pdf
+Contributing to Chainlink,,https://docs.chain.link/resources/contributing-to-chainlink?parent=ccip,,resources-contributing-to-chainlink.pdf
+Introduction,,https://docs.astaria.xyz/,,index.pdf
+Borrowing,,https://docs.astaria.xyz/user-guides/borrowing,,user-guides-borrowing.pdf
+Intent feed,,https://docs.astaria.xyz/user-guides/intent-feed,,user-guides-intent-feed.pdf
+Lending offers,,https://docs.astaria.xyz/user-guides/lending-offers,,user-guides-lending-offers.pdf
+Loan recall and liquidation,,https://docs.astaria.xyz/user-guides/loan-recall-and-liquidation,,user-guides-loan-recall-and-liquidation.pdf
+Astrological units,,https://docs.astaria.xyz/user-guides/astrological-units,,user-guides-astrological-units.pdf
+Starport,,https://docs.astaria.xyz/concepts/starport,,concepts-starport.pdf
+Glossary,,https://docs.astaria.xyz/concepts/glossary,,concepts-glossary.pdf
+Responsible disclosure,,https://docs.astaria.xyz/security/responsible-disclosure,,security-responsible-disclosure.pdf
+Audits,,https://docs.astaria.xyz/security/audits,,security-audits.pdf
+API documentation,,https://docs.astaria.xyz/security/api-documentation,,security-api-documentation.pdf
+Deployments,,https://docs.astaria.xyz/links/deployments,,links-deployments.pdf
+Resources,,https://docs.astaria.xyz/links/resources,,links-resources.pdf
+https:-twitter.com-AstariaXYZ.pdf,,https://docs.astaria.xyz/https://twitter.com/AstariaXYZ,,https:-twitter.com-AstariaXYZ.pdf
+https:-astaria.xyz.pdf,,https://docs.astaria.xyz/https://astaria.xyz/,,https:-astaria.xyz.pdf
+https:-www.gitbook.com.pdf,,https://docs.astaria.xyz/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=Pdc645JXZaWGtkc4GInF,,https:-www.gitbook.com.pdf
