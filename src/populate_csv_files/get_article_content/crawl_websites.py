@@ -1,11 +1,10 @@
 import csv
 import logging
 import time
+import re
 from concurrent.futures import ThreadPoolExecutor
-
 import requests
 from bs4 import BeautifulSoup
-import re
 
 from data.links.website_to_crawl_configs import sites_config
 from src.utils import root_directory, return_driver
@@ -26,7 +25,7 @@ def parse_site(site_name, site):
     if site.get("use_selenium", False):
         driver = return_driver()
         driver.get(site["table_page_url"])
-        time.sleep(5)  # Increased time for dynamic content loading
+        time.sleep(3)  # Increased time for dynamic content loading
         content = driver.page_source
         driver.quit()  # Ensures the driver closes properly
     else:
@@ -46,6 +45,8 @@ def parse_site(site_name, site):
             for link in links:
                 href = link.get('href', '')
                 if href and not any(exclude in href for exclude in global_exclude_links + site.get("exclude_links", [])) and not exclude_pattern.search(href):
+                    # Removing pattern like ?source=user_profile---------2---------------------------- from href
+                    href = re.sub(r'\?source=user_profile-\-{1,}\d+\-{1,}', '', href)
                     full_url = href if href.startswith('http') else f"{site['base_url'].rstrip('/')}/{href.lstrip('/')}"
                     if full_url not in unique_urls:
                         unique_urls.add(full_url)
@@ -60,7 +61,7 @@ def parse_site(site_name, site):
 def parse_links_from_config_parallel(output_csv_path, workers=5):
     with open(output_csv_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(['Base URL', 'Article URL'])
+        csvwriter.writerow(['Base URL', 'article'])
 
         with ThreadPoolExecutor(max_workers=workers) as executor:
             futures = [executor.submit(parse_site, site_name, site) for site_name, site in sites_config.items()]
@@ -77,4 +78,4 @@ if __name__ == '__main__':
     site_names =None#['MediumPublication_wintermute']
     if site_names is not None:
         sites_config = {site_name: sites_config[site_name] for site_name in site_names if site_name in sites_config}
-    parse_links_from_config_parallel(output_csv_path, workers=16)  # Example with 4 workers
+    parse_links_from_config_parallel(output_csv_path, workers=20)  # Example with 4 workers
