@@ -1,75 +1,64 @@
 import csv
 import logging
+import time
+
 import requests
 from bs4 import BeautifulSoup
-import re  # Import the regex module
+import re
 
 from data.links.website_to_crawl_configs import sites_config
-from src.utils import root_directory
+from src.utils import root_directory, return_driver
 
-# Set up logging
 logging.basicConfig(level=logging.INFO, filename='scraping_log.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Global exclusion keywords
-global_exclude_links = [
-    "signin?",
-    "/followers?",
-    "/about?",
-]
+global_exclude_links = ["signin?", "/followers?", "/about?"]
+exclude_pattern = re.compile(r'https://medium\.com/(swlh|hackernoon|coinmonks|tag)[^ ]*?\?source=user_profile')
 
-# Compile a regex pattern for URLs to be excluded
-exclude_pattern = re.compile(r'https://medium\.com/(swlh|coinmonks|tag)[^ ]*?\?source=user_profile')
 
 def parse_links_from_config(output_csv_path):
-    unique_urls = set()  # Maintain a set of unique URLs
+    unique_urls = set()
 
     with open(output_csv_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(['Base URL', 'Article URL'])
 
         for site_name, site in sites_config.items():
-            base_url = site["base_url"]
-            page_url = site.get("table_page_url", base_url)
-            content_selector = site["table_wrapper_selector"]
-            exclude_links = site.get("exclude_links", [])
+            logging.info(f"Fetching {site_name} content from {site['table_page_url']}")
 
-            logging.info(f"Starting to fetch and parse links for {site_name}")
+            if site.get("use_selenium", False):
+                driver = return_driver()
+                driver.get(site["table_page_url"])
+                time.sleep(2)  # Allow time for content to load
+                content = driver.page_source
+                driver.close()
+            else:
+                response = requests.get(site["table_page_url"])
+                if response.status_code != 200:
+                    logging.error(f"Failed to fetch {site_name}: HTTP {response.status_code}")
+                    continue
+                content = response.text
 
-            try:
-                response = requests.get(page_url)
-                response.raise_for_status()
-                soup = BeautifulSoup(response.text, 'html.parser')
-                container = soup.select_one(content_selector)
+            soup = BeautifulSoup(content, 'html.parser')
+            container = soup.select_one(site["table_wrapper_selector"])
 
-                if container:
-                    all_rows = container.find_all(True, recursive=False)
-                    for row in all_rows:
-                        links = row.select("a")
-                        for link in links:
-                            if link.has_attr('href'):
-                                href = link['href']
+            if container:
+                process_links(container, site, unique_urls, csvwriter)
+            else:
+                logging.warning(f"No content block found for {site_name} using selector {site['table_wrapper_selector']}")
 
-                                # Check if href matches any global exclusion patterns or URLs
-                                if any(exclude in href for exclude in global_exclude_links) or exclude_pattern.search(href):
-                                    # logging.info(f"Excluded URL for {site_name}: {href}")
-                                    continue
+def process_links(container, site, unique_urls, csvwriter):
+    links = container.select(site.get("row_selector_template", "a"))
+    for link in links:
+        href = link.get('href', '')
+        # Check against global_exclude_links and the regex pattern
+        if href and not any(exclude in href for exclude in global_exclude_links + site.get("exclude_links", [])) and not exclude_pattern.search(href):
+            # Proceed with processing the link
+            full_url = href if href.startswith('http') else f"{site['base_url'].rstrip('/')}/{href.lstrip('/')}"
+            if full_url not in unique_urls:
+                unique_urls.add(full_url)
+                csvwriter.writerow([site['base_url'], full_url])
+                logging.info(f"Scrapped URL: {full_url}")
 
-                                # Compose the full URL
-                                full_url = href if href.startswith('http') else f"{base_url.rstrip('/')}/{href.lstrip('/')}"
-
-                                # Check if the URL is already added
-                                if full_url not in unique_urls:
-                                    unique_urls.add(full_url)  # Mark this URL as added
-                                    logging.info(f"Scrapped URL for {site_name}: {full_url}")
-                                    csvwriter.writerow([base_url, full_url])
-                else:
-                    logging.warning(f"Content block not found for {site_name}")
-            except requests.RequestException as e:
-                logging.error(f"Failed to fetch data for {site_name}: {e}")
-
-# Define the output CSV file path
 output_csv_path = f"{root_directory()}/data/crawled_articles.csv"
-
-# Execute the function with the path to the output file
 parse_links_from_config(output_csv_path)

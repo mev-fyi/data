@@ -19,8 +19,9 @@ sites_config = {
     "MediumPublication_Alcueca": {
         "base_url": "https://alcueca.medium.com/",
         "table_page_url": "https://alcueca.medium.com/",
-        "table_wrapper_selector": "main",  # Assuming 'main' tag wraps the articles
-        "row_selector_template": "article a",  # Assuming each article link is within an 'article' tag
-        "exclude_links": ['https://medium.com/tag/blockchain?source=user_profile--------------------blockchain-----------------']  # Add any links you want to exclude
+        "table_wrapper_selector": "div.ae:nth-child(2)",
+        "row_selector_template": "article a",
+        "exclude_links": ['https://medium.com/tag/blockchain?source=user_profile--------------------blockchain-----------------'],
+        "use_selenium": True,
     }
 }
