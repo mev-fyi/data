@@ -227,8 +227,7 @@ def fetch_sidebar_urls_wihtout_href(soup, base_url, sidebar_selector):
     return sidebar_links
 
 
-def crawl_sidebar(config, overwrite, sidebar_selector, lock, selenium=False, robust=False, headless=False):
-    global visited_urls
+def crawl_sidebar(config, overwrite, sidebar_selector, lock, visited_urls, selenium=False, robust=False, headless=False):
     try:
         content = fetch_page_with_selenium(config['base_url']) if not robust else fetch_page_with_selenium_robust(config['base_url'])
         if content:
@@ -261,6 +260,7 @@ def crawl_sidebar(config, overwrite, sidebar_selector, lock, selenium=False, rob
                     logging.error(f"Failed to fetch content for {url}")
     except Exception as e:
         logging.error(f"Error while crawling {config['base_url']}: {e}")
+
 
 
 def embed_images_as_data_urls(soup, base_url, img_selector):

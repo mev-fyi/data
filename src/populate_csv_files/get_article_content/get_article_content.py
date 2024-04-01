@@ -4,7 +4,7 @@ import logging
 import os
 
 from src.populate_csv_files.get_article_content.scrap_website import fetch_discourse_content_from_url, fetch_medium_content_from_url, fetch_mirror_content_from_url, fetch_frontier_tech_content_from_url, fetch_notion_content_from_url, fetch_hackmd_article_content, fetch_paradigm_article_content, fetch_propellerheads_article_content, fetch_jump_article_content, fetch_a16z_article_content, fetch_dba_article_content, fetch_iex_article_content, fetch_uniswap_article_content, fetch_substack_article_content, fetch_vitalik_article_content, fetch_monoceros_article_content, fetch_helius_article_content, fetch_mevio_article_content, fetch_outlierventures_article_content, fetch_gauntlet_article_content, fetch_chainlink_article_content, fetch_blocknative_article_content, fetch_shutter_article_content, fetch_duality_article_content, fetch_dydx_article_content, fetch_merkle_article_content, fetch_openzeppelin_article_content, fetch_zaryabs_article_content, empty_content, \
-    fetch_cyfrin_article_content, fetch_nil_foundation_article_content, fetch_quillaudits_article_content, fetch_paragraph_xyz_article_content
+    fetch_cyfrin_article_content, fetch_nil_foundation_article_content, fetch_quillaudits_article_content, fetch_paragraph_xyz_article_content, fetch_brink_article_content
 from src.populate_csv_files.get_article_content.utils import markdown_to_html
 from src.populate_csv_files.get_article_content.get_flashbots_writings import fetch_flashbots_writing_contents_and_save_as_pdf
 from src.utils import root_directory
@@ -67,6 +67,7 @@ def fetch_content(row, output_dir):
         'nil.foundation': fetch_nil_foundation_article_content,
         'quillaudits': fetch_quillaudits_article_content,
         'paragraph.xyz': fetch_paragraph_xyz_article_content,
+        'brink': fetch_brink_article_content,
     }
 
     for pattern, fetch_function in url_patterns.items():

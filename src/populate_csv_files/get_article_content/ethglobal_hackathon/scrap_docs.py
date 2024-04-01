@@ -16,6 +16,7 @@ csv_file_lock = Lock()
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+visited_urls = set()  # Add this at the beginning of the script to track visited URLs globally
 
 def crawl_site(site_key, csv_lock, overwrite_docs=False, headless_browser=True):
     config = site_configs.get(site_key)
@@ -27,7 +28,7 @@ def crawl_site(site_key, csv_lock, overwrite_docs=False, headless_browser=True):
     def crawl_func_wrapper(config, overwrite_docs=overwrite_docs, headless_browser=headless_browser):
         if 'crawl_func' in config:
             # Call the specific crawl function from the config
-            config['crawl_func'](config, overwrite=overwrite_docs, lock=csv_lock, headless=headless_browser)
+            config['crawl_func'](config, overwrite=overwrite_docs, lock=csv_lock, headless=headless_browser, visited_urls=visited_urls)
         else:
             # Fallback to a generic crawl function if none is specified
             generic_crawl(config, overwrite_docs, lock=csv_lock, headless=headless_browser)
@@ -36,7 +37,6 @@ def crawl_site(site_key, csv_lock, overwrite_docs=False, headless_browser=True):
     crawl_func_wrapper(config)
 
 
-visited_urls = set()  # Add this at the beginning of the script to track visited URLs globally
 
 def generic_crawl(config, overwrite, lock, headless=False):
     global visited_urls
@@ -109,8 +109,6 @@ if __name__ == '__main__':
     clean_csv_titles()
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
 
-    docs = ['irisnet', 'secret', 'band', 'neutron', 'stride', 'dydx', 'fetch', 'canto', 'assetmantle',
-            'akash', 'osmosis_educate', 'osmosis_core', 'osmosis_outpost', 'cosmwasm', 'lavanetwork',
-            'stargate', 'quasar']
+    docs = ['brink']
     # docs = None
     main(docs=docs, overwrite=False, headless=False, max_workers=15)

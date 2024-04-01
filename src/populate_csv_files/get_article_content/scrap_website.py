@@ -1986,3 +1986,53 @@ def fetch_paragraph_xyz_article_content(url):
     except Exception as e:
         logging.warning(f"Error fetching content from URL {url}: {e}")
         return {}  # Return an empty dictionary in case of an error
+
+
+def fetch_brink_article_content(url):
+    """
+    Fetch the content of an article from a given URL, tailored for the updated article structure.
+
+    Parameters:
+    - url (str): The URL of the article.
+
+    Returns:
+    - dict: A dictionary with title, content, release date, and author of the article.
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract title using updated selector
+        title_tag = soup.select_one('.blog-post-title')
+        title = title_tag.get_text(strip=True) if title_tag else 'N/A'
+
+        # Extract release date using updated selector and format it
+        release_date_tag = soup.select_one('.featured-article-bottom-left > div:nth-child(3)')
+        if release_date_tag:
+            release_date_str = release_date_tag.get_text(strip=True)
+            release_date_obj = datetime.datetime.strptime(release_date_str.strip(), '%B %d, %Y')  # Parse date with the given format
+            release_date = release_date_obj.strftime('%Y-%m-%d')  # Format date as yyyy-mm-dd
+        else:
+            release_date = 'N/A'
+
+        # Set authors as an empty string
+        authors = ''
+
+        # Extract content
+        content_div = soup.select_one('#paragraph-tiptap-editor')
+        content = html_to_markdown(str(content_div)) if content_div else 'N/A'  # Convert HTML to Markdown
+
+        return {
+            'title': title,
+            'content': content,
+            'release_date': release_date,
+            'authors': authors
+        }
+    except Exception as e:
+        logging.warning(f"Error fetching content from URL {url}: {e}")
+        return {}  # Return an empty dictionary in case of an error

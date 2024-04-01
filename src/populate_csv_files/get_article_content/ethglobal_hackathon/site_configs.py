@@ -1000,4 +1000,16 @@ site_configs = {
         'img_selector': '.img_ev3q',
         'crawl_func': partial(crawl_sidebar, sidebar_selector='.sidebar', selenium=True),
     },
+    'astaria': {
+        'base_url': 'https://docs.astaria.xyz/',
+        'content_selector': '.lg\:flex-row > div:nth-child(2)',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='aside.relative', selenium=True),
+    },
+    'brink': {
+        'base_url': 'https://docs.brink.trade/docs/introduction',
+        'content_selector': '.rm-Article',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='#hub-sidebar', selenium=True),
+    },
 }
