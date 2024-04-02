@@ -218,20 +218,25 @@ def fetch_title(row, url_to_title):
     return None  # Default case if no match is found
 
 
-def fetch_article_titles(csv_filepath, output_filepath):
+def fetch_article_titles(csv_filepaths, output_filepath):
     """
-    Fetch the titles of articles from ethresear.ch present in the input CSV file and save them in a new CSV file.
+    Fetch the titles of articles from ethresear.ch present in the input CSV files and save them in a new CSV file.
 
     Parameters:
-    - csv_filepath (str): The file path of the input CSV file containing article URLs and referrers.
-                          The CSV file should have two columns with headers 'article' and 'referrer'.
+    - csv_filepaths (list): List of file paths of the input CSV files containing article URLs and referrers.
+                            Each CSV file should have two columns with headers 'article' and 'referrer'.
     - output_filepath (str): The file path where the output CSV file with the fetched titles should be saved.
 
     Returns:
     - None
     """
-    # Step 1: Read the CSV file with specified column names
-    df = pd.read_csv(csv_filepath)
+    # Step 1: Read the CSV files with specified column names
+    dfs = []
+    for csv_filepath in csv_filepaths:
+        df = pd.read_csv(csv_filepath)
+        dfs.append(df)
+
+    combined_df = pd.concat(dfs, ignore_index=True)
 
     # Step 1.5: Try to read the existing output file to get already fetched titles
     try:
@@ -241,22 +246,29 @@ def fetch_article_titles(csv_filepath, output_filepath):
 
     url_to_title = dict(zip(output_df['article'], output_df['title']))
 
-    # Step 2: Loop through the rows and fetch titles for specified URLs
+    # Step 2: Remove duplicates from the combined DataFrame
+    combined_df.drop_duplicates(subset=['article'], inplace=True)
+
+    # Step 3: Loop through the rows and fetch titles for specified URLs
     titles = []
 
     # Use ThreadPoolExecutor to fetch titles in parallel
     with ThreadPoolExecutor() as executor:
-        titles = list(executor.map(fetch_title, df.itertuples(), [url_to_title]*len(df)))
+        titles = list(executor.map(fetch_title, combined_df.itertuples(), [url_to_title]*len(combined_df)))
 
-    # Step 3: Save titles in a new column
-    df['title'] = titles
+    # Step 4: Save titles in a new column
+    combined_df['title'] = titles
 
-    # Step 4: Save the updated DataFrame to a new CSV file
-    df = df[['title', 'article', 'referrer']]
-    df.to_csv(output_filepath, index=False)
+    # Step 5: Save the updated DataFrame to a new CSV file
+    combined_df = combined_df[['title', 'article', 'referrer']]
+    combined_df.to_csv(output_filepath, index=False)
 
 
 # Usage example:
 def run():
-    # todo 2023-09-19: only do so if the file is not already present in articles_updated.csv
-    fetch_article_titles(f'{root_directory()}/data/links/articles.csv', f'{root_directory()}/data/links/articles_updated.csv')
+    csv_filepaths = [f'{root_directory()}/data/links/articles.csv', f'{root_directory()}/data/crawled_articles.csv']
+    output_filepath = f'{root_directory()}/data/links/articles_updated.csv'
+    fetch_article_titles(csv_filepaths, output_filepath)
+
+if __name__ == '__main__':
+    run()

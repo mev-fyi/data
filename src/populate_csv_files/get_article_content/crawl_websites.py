@@ -13,7 +13,13 @@ logging.basicConfig(level=logging.INFO, filename='scraping_log.log', filemode='a
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 global_exclude_links = ["signin?", "/followers?", "/about?"]
-exclude_pattern = re.compile(r'https://medium\.com/(swlh|hackernoon|coinmonks|tag)[^ ]*?\?source=user_profile')
+exclude_pattern = re.compile(
+    r'https://medium\.com/(swlh|hackernoon|coinmonks)[^ ]*?\?source=user_profile|'
+    r'/tag/[^ ]*?\?source=user_profile|'
+    r'/@[^/]+/tag/[^/]+[^ ]*?-+'
+)
+
+
 
 
 def parse_site(site_name, site):
@@ -44,14 +50,26 @@ def parse_site(site_name, site):
             links = container.select(selector)
             for link in links:
                 href = link.get('href', '')
-                if href and not any(exclude in href for exclude in global_exclude_links + site.get("exclude_links", [])) and not exclude_pattern.search(href):
-                    # Removing pattern like ?source=user_profile---------2---------------------------- from href
-                    href = re.sub(r'\?source=user_profile-\-{1,}\d+\-{1,}', '', href)
-                    full_url = href if href.startswith('http') else f"{site['base_url'].rstrip('/')}/{href.lstrip('/')}"
-                    if full_url not in unique_urls:
-                        unique_urls.add(full_url)
-                        output_rows.append([site['base_url'], full_url])
-                        logging.info(f"Scrapped URL: {full_url}")
+                if href:
+                    # Strip the query parameters starting with ?source=user_profile from the URL
+                    href = re.sub(r'\?source=user_profile[-_0-9]*', '', href)
+                    href = re.sub(r'\?source=collection_home[-_0-9]*', '', href)
+                    href = re.sub(r'/@[^/]+/tag/[^/]+[^ ]*?-+', '', href)  # Remove repeated tag parts
+
+                    # Handle Medium's URL format, check for a proper URL before adding it
+                    if href.startswith('http'):
+                        full_url = href
+                    else:
+                        # Remove any redundant parts of the URL path (like '@username/')
+                        path = re.sub(r'(@[^/]+)/.*', r'\1', href)
+                        full_url = f"{site['base_url'].rstrip('/')}/{path.lstrip('/')}"
+
+                    # Continue with exclusion checks and adding the URL
+                    if not any(exclude in full_url for exclude in global_exclude_links + site.get("exclude_links", [])) and not exclude_pattern.search(full_url):
+                        if full_url not in unique_urls:
+                            unique_urls.add(full_url)
+                            output_rows.append([site['base_url'], full_url])
+                            logging.info(f"Scraped URL: {full_url}")
     else:
         logging.warning(f"No content block found for {site_name} using selector {site['table_wrapper_selector']}")
 
