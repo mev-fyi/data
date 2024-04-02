@@ -51,12 +51,14 @@ def parse_site(site_name, site):
             for link in links:
                 href = link.get('href', '')
                 if href:
-                    # Strip the query parameters starting with ?source=user_profile from the URL
+                    # Strip unwanted parts from the URL
                     href = re.sub(r'\?source=user_profile[-_0-9]*', '', href)
                     href = re.sub(r'\?source=collection_home[-_0-9]*', '', href)
                     href = re.sub(r'/@[^/]+/tag/[^/]+[^ ]*?-+', '', href)  # Remove repeated tag parts
+                    href = re.sub(r'^https://medium.com/@[^/]+/?$', '', href)  # Remove URLs with only author name
+                    href = re.sub(r'^(https://medium.com/@[^/]+)/\1$', r'\1', href)  # Remove duplicated author names
 
-                    # Handle Medium's URL format, check for a proper URL before adding it
+                    # Check if the href is already a full URL
                     if href.startswith('http'):
                         full_url = href
                     else:
@@ -64,12 +66,13 @@ def parse_site(site_name, site):
                         path = re.sub(r'(@[^/]+)/.*', r'\1', href)
                         full_url = f"{site['base_url'].rstrip('/')}/{path.lstrip('/')}"
 
-                    # Continue with exclusion checks and adding the URL
-                    if not any(exclude in full_url for exclude in global_exclude_links + site.get("exclude_links", [])) and not exclude_pattern.search(full_url):
+                    # Check for global excludes and custom exclude patterns
+                    if not any(exclude in full_url for exclude in global_exclude_links) and not exclude_pattern.search(full_url):
                         if full_url not in unique_urls:
                             unique_urls.add(full_url)
                             output_rows.append([site['base_url'], full_url])
                             logging.info(f"Scraped URL: {full_url}")
+
     else:
         logging.warning(f"No content block found for {site_name} using selector {site['table_wrapper_selector']}")
 
