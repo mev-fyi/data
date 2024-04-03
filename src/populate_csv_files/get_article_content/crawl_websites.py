@@ -16,7 +16,8 @@ global_exclude_links = ["signin?", "/followers?", "/about?"]
 exclude_pattern = re.compile(
     r'https://medium\.com/(swlh|hackernoon|coinmonks)[^ ]*?\?source=user_profile|'
     r'/tag/[^ ]*?\?source=user_profile|'
-    r'/@[^/]+/tag/[^/]+[^ ]*?-+'
+    r'/@[^/]+/tag/[^/]+[^ ]*?-+|'
+    r'/@([^/]+)/@\1[^ ]*?-+'  # Exclude repeated author URLs
 )
 
 

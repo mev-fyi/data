@@ -109,6 +109,6 @@ if __name__ == '__main__':
     clean_csv_titles()
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
 
-    docs = ['brink']
+    docs = ['relay']
     # docs = None
     main(docs=docs, overwrite=False, headless=False, max_workers=15)

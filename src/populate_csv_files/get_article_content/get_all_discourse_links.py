@@ -219,7 +219,12 @@ def run():
         ("https://forum.dymension.xyz/c/research-development/6", "dymension_research_development"),
         ("https://forum.dymension.xyz/c/community/7", "dymension_community"),
         ("https://forum.dymension.xyz/c/rollapps/8", "dymension_rollapps"),
-
+        ("https://forum.cow.fi/c/general/5", "cow_fi_general"),
+        ("https://forum.cow.fi/c/cow-improvement-proposals-cip/6/none", "cow_fi_cip"),
+        ("https://forum.cow.fi/c/tech-spells/2", "cow_fi_tech_spells"),
+        ("https://forum.cow.fi/c/cow-grants-program/10/none", "cow_fi_grants_program"),
+        ("https://forum.cow.fi/c/knowledge-base/8", "cow_fi_knowledge_base"),
+        ("https://forum.cow.fi/c/treasury-overview-of-cow-dao/21", "cow_fi_treasury_overview"),
     ]
     # TODO 2024-03-01: automatically extract all subforums from the parent forum page
     with ThreadPoolExecutor() as executor:
