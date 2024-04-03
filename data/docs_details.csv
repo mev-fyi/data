@@ -6250,3 +6250,573 @@ Theme Customization,,https://docs.brink.trade/docs/widgetstheme-customization,,d
 Configuration types,,https://docs.brink.trade/docs/widgetsconfiguration-types,,docs-widgetsconfiguration-types.pdf
 Provider customization,,https://docs.brink.trade/docs/widgetsprovider-customization,,docs-widgetsprovider-customization.pdf
 Widget Debugging,,https://docs.brink.trade/docs/widgetsdebugging,,docs-widgetsdebugging.pdf
+🏡,,https://docs.li.fi/,,index.pdf
+🌟,,https://docs.li.fi/overview/why-li.fi,,overview-why-li.fi.pdf
+❓,,https://docs.li.fi/overview/faq,,overview-faq.pdf
+💡,,https://docs.li.fi/overview/use-cases,,overview-use-cases.pdf
+🏹,,https://docs.li.fi/overview/li.fi-vs.-other-aggregators,,overview-li.fi-vs.-other-aggregators.pdf
+🌐,,https://docs.li.fi/overview/powered-by-li.fi,,overview-powered-by-li.fi.pdf
+✅,,https://docs.li.fi/list-chains-bridges-dexs-solvers,,list-chains-bridges-dexs-solvers.pdf
+🔐,,https://docs.li.fi/security-first,,security-first.pdf
+💲,,https://docs.li.fi/monetization-take-fees,,monetization-take-fees.pdf
+🤝,,https://docs.li.fi/partnership,,partnership.pdf
+https:-lifihelp.zendesk.com-hc-en-us.pdf,,https://docs.li.fi/https://lifihelp.zendesk.com/hc/en-us,,https:-lifihelp.zendesk.com-hc-en-us.pdf
+🔏,,https://docs.li.fi/rate-limits-and-api-key,,rate-limits-and-api-key.pdf
+⚙️,,https://docs.li.fi/li.fi-api/li.fi-api,,li.fi-api-li.fi-api.pdf
+Transferring Tokens (Example),,https://docs.li.fi/li.fi-api/li.fi-api/transferring-tokens-example,,li.fi-api-li.fi-api-transferring-tokens-example.pdf
+Requesting supported Chains,,https://docs.li.fi/li.fi-api/li.fi-api/requesting-supported-chains,,li.fi-api-li.fi-api-requesting-supported-chains.pdf
+Requesting all supported Tools,,https://docs.li.fi/li.fi-api/li.fi-api/requesting-all-supported-tools,,li.fi-api-li.fi-api-requesting-all-supported-tools.pdf
+Requesting all known Tokens,,https://docs.li.fi/li.fi-api/li.fi-api/requesting-all-known-tokens,,li.fi-api-li.fi-api-requesting-all-known-tokens.pdf
+Getting Token Information,,https://docs.li.fi/li.fi-api/li.fi-api/getting-token-information,,li.fi-api-li.fi-api-getting-token-information.pdf
+Getting all possible Connections,,https://docs.li.fi/li.fi-api/li.fi-api/getting-all-possible-connections,,li.fi-api-li.fi-api-getting-all-possible-connections.pdf
+Requesting a Quote,,https://docs.li.fi/li.fi-api/li.fi-api/requesting-a-quote,,li.fi-api-li.fi-api-requesting-a-quote.pdf
+Token Transfer,,https://docs.li.fi/li.fi-api/li.fi-api/requesting-a-quote/token-transfer,,li.fi-api-li.fi-api-requesting-a-quote-token-transfer.pdf
+Cross-Chain Contract Calls,,https://docs.li.fi/li.fi-api/li.fi-api/requesting-a-quote/cross-chain-contract-calls,,li.fi-api-li.fi-api-requesting-a-quote-cross-chain-contract-calls.pdf
+Possible Tool Errors,,https://docs.li.fi/li.fi-api/li.fi-api/requesting-a-quote/possible-tool-errors,,li.fi-api-li.fi-api-requesting-a-quote-possible-tool-errors.pdf
+Checking the Status of a Transaction,,https://docs.li.fi/li.fi-api/li.fi-api/checking-the-status-of-a-transaction,,li.fi-api-li.fi-api-checking-the-status-of-a-transaction.pdf
+⚔️,,https://docs.li.fi/li.fi-api/xchain-zaps,,li.fi-api-xchain-zaps.pdf
+🏄,,https://docs.li.fi/li.fi-api/solana,,li.fi-api-solana.pdf
+Request examples,,https://docs.li.fi/li.fi-api/solana/request-examples,,li.fi-api-solana-request-examples.pdf
+🔰,,https://docs.li.fi/li.fi-api/bridge-insurance,,li.fi-api-bridge-insurance.pdf
+⛽,,https://docs.li.fi/li.fi-api/li.fuel,,li.fi-api-li.fuel.pdf
+1️⃣,,https://docs.li.fi/integrate-li.fi-js-sdk/install-li.fi-sdk,,integrate-li.fi-js-sdk-install-li.fi-sdk.pdf
+2️⃣,,https://docs.li.fi/integrate-li.fi-js-sdk/set-up-the-sdk,,integrate-li.fi-js-sdk-set-up-the-sdk.pdf
+3️⃣,,https://docs.li.fi/integrate-li.fi-js-sdk/request-a-route,,integrate-li.fi-js-sdk-request-a-route.pdf
+Set Route Options,,https://docs.li.fi/integrate-li.fi-js-sdk/request-a-route/set-route-options,,integrate-li.fi-js-sdk-request-a-route-set-route-options.pdf
+Get Available Route Options,,https://docs.li.fi/integrate-li.fi-js-sdk/request-a-route/get-available-route-options,,integrate-li.fi-js-sdk-request-a-route-get-available-route-options.pdf
+4️⃣,,https://docs.li.fi/integrate-li.fi-js-sdk/execute-a-route-transfer,,integrate-li.fi-js-sdk-execute-a-route-transfer.pdf
+🏗️,,https://docs.li.fi/integrate-li.fi-js-sdk/advanced-features,,integrate-li.fi-js-sdk-advanced-features.pdf
+Handling Chain Switches,,https://docs.li.fi/integrate-li.fi-js-sdk/advanced-features/handling-chain-switches,,integrate-li.fi-js-sdk-advanced-features-handling-chain-switches.pdf
+Load Wallet Balances,,https://docs.li.fi/integrate-li.fi-js-sdk/advanced-features/load-wallet-balances,,integrate-li.fi-js-sdk-advanced-features-load-wallet-balances.pdf
+🕵️,,https://docs.li.fi/integrate-li.fi-js-sdk/testing-your-integration,,integrate-li.fi-js-sdk-testing-your-integration.pdf
+Supported Testnets and Tokens,,https://docs.li.fi/integrate-li.fi-js-sdk/testing-your-integration/supported-testnets-and-tokens,,integrate-li.fi-js-sdk-testing-your-integration-supported-testnets-and-tokens.pdf
+🪄,,https://docs.li.fi/integrate-li.fi-js-sdk/migrating-to-li.fi-sdk-v2,,integrate-li.fi-js-sdk-migrating-to-li.fi-sdk-v2.pdf
+⚙️,,https://docs.li.fi/integrate-li.fi-js-sdk/li.fi-sdk-v2-interface,,integrate-li.fi-js-sdk-li.fi-sdk-v2-interface.pdf
+🏯,,https://docs.li.fi/integrate-li.fi-widget/li.fi-widget-overview,,integrate-li.fi-widget-li.fi-widget-overview.pdf
+1️⃣,,https://docs.li.fi/integrate-li.fi-widget/install-widget,,integrate-li.fi-widget-install-widget.pdf
+2️⃣,,https://docs.li.fi/integrate-li.fi-widget/select-widget-variants,,integrate-li.fi-widget-select-widget-variants.pdf
+3️⃣,,https://docs.li.fi/integrate-li.fi-widget/configure-widget,,integrate-li.fi-widget-configure-widget.pdf
+4️⃣,,https://docs.li.fi/integrate-li.fi-widget/customize-widget,,integrate-li.fi-widget-customize-widget.pdf
+⚡,,https://docs.li.fi/integrate-li.fi-widget/widget-events,,integrate-li.fi-widget-widget-events.pdf
+👛,,https://docs.li.fi/integrate-li.fi-widget/wallet-management,,integrate-li.fi-widget-wallet-management.pdf
+🌍,,https://docs.li.fi/integrate-li.fi-widget/internationalization,,integrate-li.fi-widget-internationalization.pdf
+⚛️,,https://docs.li.fi/integrate-li.fi-widget/next.js-compatibility,,integrate-li.fi-widget-next.js-compatibility.pdf
+🛣️,,https://docs.li.fi/integrate-li.fi-widget/react-router-compatibility,,integrate-li.fi-widget-react-router-compatibility.pdf
+📗,,https://docs.li.fi/integrate-li.fi-widget/widget-api-reference,,integrate-li.fi-widget-widget-api-reference.pdf
+🔁,,https://docs.li.fi/more-integration-options/li.fi-link-parameterization,,more-integration-options-li.fi-link-parameterization.pdf
+💠,,https://docs.li.fi/more-integration-options/li.fi-subgraphs,,more-integration-options-li.fi-subgraphs.pdf
+DEX & DEX aggregators,,https://docs.li.fi/special-integrations/dex-and-dex-aggregators,,special-integrations-dex-and-dex-aggregators.pdf
+Mobile/Gaming Wallets,,https://docs.li.fi/special-integrations/mobile-gaming-wallets,,special-integrations-mobile-gaming-wallets.pdf
+Overview,,https://docs.li.fi/smart-contracts/overview,,smart-contracts-overview.pdf
+Contracts,,https://docs.li.fi/smart-contracts/contracts,,smart-contracts-contracts.pdf
+Deployments,,https://docs.li.fi/smart-contracts/deployments,,smart-contracts-deployments.pdf
+Audits,,https://docs.li.fi/smart-contracts/audits,,smart-contracts-audits.pdf
+https:-status.li.fi.pdf,,https://docs.li.fi/https://status.li.fi/,,https:-status.li.fi.pdf
+https:-help.li.fi-hc-en-us-requests-new.pdf,,https://docs.li.fi/https://help.li.fi/hc/en-us/requests/new,,https:-help.li.fi-hc-en-us-requests-new.pdf
+https:-discord.gg-lifi.pdf,,https://docs.li.fi/https://discord.gg/lifi,,https:-discord.gg-lifi.pdf
+https:-t.me-lifidevs.pdf,,https://docs.li.fi/https://t.me/lifidevs,,https:-t.me-lifidevs.pdf
+https:-twitter.com-lifiprotocol.pdf,,https://docs.li.fi/https://twitter.com/lifiprotocol,,https:-twitter.com-lifiprotocol.pdf
+https:-github.com-lifinance.pdf,,https://docs.li.fi/https://github.com/lifinance,,https:-github.com-lifinance.pdf
+https:-www.gitbook.com.pdf,,https://docs.li.fi/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=f8wrmfL9sMgx2g3g358V,,https:-www.gitbook.com.pdf
+CoW DAO,,https://docs.cow.fi/,,index.pdf
+CoW Protocol,,https://docs.cow.fi/cow-protocol,,cow-protocol.pdf
+Intents,,https://docs.cow.fi/cow-protocol/concepts/introduction/intents,,cow-protocol-concepts-introduction-intents.pdf
+Solvers,,https://docs.cow.fi/cow-protocol/concepts/introduction/solvers,,cow-protocol-concepts-introduction-solvers.pdf
+Batch auctions,,https://docs.cow.fi/cow-protocol/concepts/introduction/batch-auctions,,cow-protocol-concepts-introduction-batch-auctions.pdf
+Flow of an order,,https://docs.cow.fi/cow-protocol/concepts/how-it-works/flow-of-an-order,,cow-protocol-concepts-how-it-works-flow-of-an-order.pdf
+Coincidence of Wants,,https://docs.cow.fi/cow-protocol/concepts/how-it-works/coincidence-of-wants,,cow-protocol-concepts-how-it-works-coincidence-of-wants.pdf
+CoW Protocol vs. CoW Swap,,https://docs.cow.fi/cow-protocol/concepts/how-it-works/protocol-vs-swap,,cow-protocol-concepts-how-it-works-protocol-vs-swap.pdf
+Market orders,,https://docs.cow.fi/cow-protocol/concepts/order-types/market-orders,,cow-protocol-concepts-order-types-market-orders.pdf
+Limit orders,,https://docs.cow.fi/cow-protocol/concepts/order-types/limit-orders,,cow-protocol-concepts-order-types-limit-orders.pdf
+TWAP orders,,https://docs.cow.fi/cow-protocol/concepts/order-types/twap-orders,,cow-protocol-concepts-order-types-twap-orders.pdf
+Programmatic orders,,https://docs.cow.fi/cow-protocol/concepts/order-types/programmatic-orders,,cow-protocol-concepts-order-types-programmatic-orders.pdf
+Milkman orders,,https://docs.cow.fi/cow-protocol/concepts/order-types/milkman-orders,,cow-protocol-concepts-order-types-milkman-orders.pdf
+CoW Hooks,,https://docs.cow.fi/cow-protocol/concepts/order-types/cow-hooks,,cow-protocol-concepts-order-types-cow-hooks.pdf
+Trade any intent,,https://docs.cow.fi/cow-protocol/concepts/benefits/trade-any-intent,,cow-protocol-concepts-benefits-trade-any-intent.pdf
+MEV protection,,https://docs.cow.fi/cow-protocol/concepts/benefits/mev-protection,,cow-protocol-concepts-benefits-mev-protection.pdf
+Price improvement,,https://docs.cow.fi/cow-protocol/concepts/benefits/price-improvement,,cow-protocol-concepts-benefits-price-improvement.pdf
+Additional benefits,,https://docs.cow.fi/cow-protocol/concepts/benefits/additional-benefits,,cow-protocol-concepts-benefits-additional-benefits.pdf
+CoW Swap,,https://docs.cow.fi/cow-protocol/tutorials/cow-swap,,cow-protocol-tutorials-cow-swap.pdf
+Market orders (swap),,https://docs.cow.fi/cow-protocol/tutorials/cow-swap/swap,,cow-protocol-tutorials-cow-swap-swap.pdf
+Limit orders,,https://docs.cow.fi/cow-protocol/tutorials/cow-swap/limit,,cow-protocol-tutorials-cow-swap-limit.pdf
+TWAP orders,,https://docs.cow.fi/cow-protocol/tutorials/cow-swap/twap,,cow-protocol-tutorials-cow-swap-twap.pdf
+Native tokens,,https://docs.cow.fi/cow-protocol/tutorials/cow-swap/native,,cow-protocol-tutorials-cow-swap-native.pdf
+Custom Links,,https://docs.cow.fi/cow-protocol/tutorials/cow-swap/custom-links,,cow-protocol-tutorials-cow-swap-custom-links.pdf
+Viewing orders,,https://docs.cow.fi/cow-protocol/tutorials/cow-explorer,,cow-protocol-tutorials-cow-explorer.pdf
+By order,,https://docs.cow.fi/cow-protocol/tutorials/cow-explorer/order,,cow-protocol-tutorials-cow-explorer-order.pdf
+By user address,,https://docs.cow.fi/cow-protocol/tutorials/cow-explorer/address,,cow-protocol-tutorials-cow-explorer-address.pdf
+By batch auction,,https://docs.cow.fi/cow-protocol/tutorials/cow-explorer/batch-auction,,cow-protocol-tutorials-cow-explorer-batch-auction.pdf
+Solving auctions,,https://docs.cow.fi/cow-protocol/tutorials/solvers,,cow-protocol-tutorials-solvers.pdf
+Locally testing a solver with the CoW Protocol orderflow,,https://docs.cow.fi/cow-protocol/tutorials/solvers/local_test,,cow-protocol-tutorials-solvers-local_test.pdf
+Integrating your solver,,https://docs.cow.fi/cow-protocol/tutorials/solvers/from_shadow_to_prod,,cow-protocol-tutorials-solvers-from_shadow_to_prod.pdf
+CoW AMM Liquidity,,https://docs.cow.fi/cow-protocol/tutorials/solvers/cow-amm,,cow-protocol-tutorials-solvers-cow-amm.pdf
+CoW Swap Widget,,https://docs.cow.fi/cow-protocol/tutorials/widget,,cow-protocol-tutorials-widget.pdf
+Building on CoW Protocol,,https://docs.cow.fi/cow-protocol/tutorials/building,,cow-protocol-tutorials-building.pdf
+Arbitrating auctions,,https://docs.cow.fi/cow-protocol/tutorials/arbitrate,,cow-protocol-tutorials-arbitrate.pdf
+Order book,,https://docs.cow.fi/cow-protocol/tutorials/arbitrate/orderbook,,cow-protocol-tutorials-arbitrate-orderbook.pdf
+Autopilot,,https://docs.cow.fi/cow-protocol/tutorials/arbitrate/autopilot,,cow-protocol-tutorials-arbitrate-autopilot.pdf
+Driver,,https://docs.cow.fi/cow-protocol/tutorials/arbitrate/solver/driver,,cow-protocol-tutorials-arbitrate-solver-driver.pdf
+Solver Engine,,https://docs.cow.fi/cow-protocol/tutorials/arbitrate/solver/solver-engine,,cow-protocol-tutorials-arbitrate-solver-solver-engine.pdf
+CoW AMM Deployer,,https://docs.cow.fi/cow-protocol/tutorials/cow-amm-deployer,,cow-protocol-tutorials-cow-amm-deployer.pdf
+Definitions,,https://docs.cow.fi/cow-protocol/reference/core/definitions,,cow-protocol-reference-core-definitions.pdf
+Batch Auction mechanism,,https://docs.cow.fi/cow-protocol/reference/core/auctions,,cow-protocol-reference-core-auctions.pdf
+The Optimization problem,,https://docs.cow.fi/cow-protocol/reference/core/auctions/the-problem,,cow-protocol-reference-core-auctions-the-problem.pdf
+Solver competition rules,,https://docs.cow.fi/cow-protocol/reference/core/auctions/competition-rules,,cow-protocol-reference-core-auctions-competition-rules.pdf
+Solver rewards,,https://docs.cow.fi/cow-protocol/reference/core/auctions/rewards,,cow-protocol-reference-core-auctions-rewards.pdf
+Slippage accounting,,https://docs.cow.fi/cow-protocol/reference/core/auctions/slippage,,cow-protocol-reference-core-auctions-slippage.pdf
+Schemas,,https://docs.cow.fi/cow-protocol/reference/core/auctions/schema,,cow-protocol-reference-core-auctions-schema.pdf
+Intents,,https://docs.cow.fi/cow-protocol/reference/core/intents,,cow-protocol-reference-core-intents.pdf
+Application specific data,,https://docs.cow.fi/cow-protocol/reference/core/intents/app-data,,cow-protocol-reference-core-intents-app-data.pdf
+Hooks,,https://docs.cow.fi/cow-protocol/reference/core/intents/hooks,,cow-protocol-reference-core-intents-hooks.pdf
+Signing schemes,,https://docs.cow.fi/cow-protocol/reference/core/signing-schemes,,cow-protocol-reference-core-signing-schemes.pdf
+Supported tokens,,https://docs.cow.fi/cow-protocol/reference/core/tokens,,cow-protocol-reference-core-tokens.pdf
+CoW SDK,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk,,cow-protocol-reference-sdks-cow-sdk.pdf
+@cowprotocol/cow-sdk,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/modules,,cow-protocol-reference-sdks-cow-sdk-modules.pdf
+Namespace: OnchainOrderData,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/namespaces/OnchainOrderData,,cow-protocol-reference-sdks-cow-sdk-namespaces-OnchainOrderData.pdf
+Namespace: OrderCancellationError,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/namespaces/OrderCancellationError,,cow-protocol-reference-sdks-cow-sdk-namespaces-OrderCancellationError.pdf
+Namespace: OrderPostError,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/namespaces/OrderPostError,,cow-protocol-reference-sdks-cow-sdk-namespaces-OrderPostError.pdf
+Namespace: PriceEstimationError,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/namespaces/PriceEstimationError,,cow-protocol-reference-sdks-cow-sdk-namespaces-PriceEstimationError.pdf
+Enumeration: BuyTokenDestination,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/BuyTokenDestination,,cow-protocol-reference-sdks-cow-sdk-enums-BuyTokenDestination.pdf
+Enumeration: DurationType,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/DurationType,,cow-protocol-reference-sdks-cow-sdk-enums-DurationType.pdf
+Enumeration: EcdsaSigningScheme,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/EcdsaSigningScheme,,cow-protocol-reference-sdks-cow-sdk-enums-EcdsaSigningScheme.pdf
+Enumeration: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/OrderClass,,cow-protocol-reference-sdks-cow-sdk-enums-OrderClass.pdf
+Enumeration: OrderKind,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/OrderKind,,cow-protocol-reference-sdks-cow-sdk-enums-OrderKind.pdf
+Enumeration: OrderQuoteSideKindBuy,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/OrderQuoteSideKindBuy,,cow-protocol-reference-sdks-cow-sdk-enums-OrderQuoteSideKindBuy.pdf
+Enumeration: OrderQuoteSideKindSell,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/OrderQuoteSideKindSell,,cow-protocol-reference-sdks-cow-sdk-enums-OrderQuoteSideKindSell.pdf
+Enumeration: OrderStatus,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/OrderStatus,,cow-protocol-reference-sdks-cow-sdk-enums-OrderStatus.pdf
+Enumeration: PollResultCode,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/PollResultCode,,cow-protocol-reference-sdks-cow-sdk-enums-PollResultCode.pdf
+Enumeration: PriceQuality,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/PriceQuality,,cow-protocol-reference-sdks-cow-sdk-enums-PriceQuality.pdf
+Enumeration: ProofLocation,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/ProofLocation,,cow-protocol-reference-sdks-cow-sdk-enums-ProofLocation.pdf
+Enumeration: SellTokenSource,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/SellTokenSource,,cow-protocol-reference-sdks-cow-sdk-enums-SellTokenSource.pdf
+Enumeration: SigningScheme,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/SigningScheme,,cow-protocol-reference-sdks-cow-sdk-enums-SigningScheme.pdf
+Enumeration: StartTimeValue,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/StartTimeValue,,cow-protocol-reference-sdks-cow-sdk-enums-StartTimeValue.pdf
+Enumeration: SupportedChainId,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/SupportedChainId,,cow-protocol-reference-sdks-cow-sdk-enums-SupportedChainId.pdf
+Enumeration: placementError,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/OnchainOrderData.placementError,,cow-protocol-reference-sdks-cow-sdk-enums-OnchainOrderData.placementError.pdf
+Enumeration: errorType,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/OrderCancellationError.errorType,,cow-protocol-reference-sdks-cow-sdk-enums-OrderCancellationError.errorType.pdf
+Enumeration: errorType,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/OrderPostError.errorType,,cow-protocol-reference-sdks-cow-sdk-enums-OrderPostError.errorType.pdf
+Enumeration: errorType,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/enums/PriceEstimationError.errorType,,cow-protocol-reference-sdks-cow-sdk-enums-PriceEstimationError.errorType.pdf
+"Class: ConditionalOrder<D, S>",,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/classes/ConditionalOrder,,cow-protocol-reference-sdks-cow-sdk-classes-ConditionalOrder.pdf
+Class: ConditionalOrderFactory,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/classes/ConditionalOrderFactory,,cow-protocol-reference-sdks-cow-sdk-classes-ConditionalOrderFactory.pdf
+Class: CowError,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/classes/CowError,,cow-protocol-reference-sdks-cow-sdk-classes-CowError.pdf
+Class: Multiplexer,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/classes/Multiplexer,,cow-protocol-reference-sdks-cow-sdk-classes-Multiplexer.pdf
+Class: OrderBookApi,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/classes/OrderBookApi,,cow-protocol-reference-sdks-cow-sdk-classes-OrderBookApi.pdf
+Class: OrderBookApiError<T>,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/classes/OrderBookApiError,,cow-protocol-reference-sdks-cow-sdk-classes-OrderBookApiError.pdf
+Class: OrderSigningUtils,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/classes/OrderSigningUtils,,cow-protocol-reference-sdks-cow-sdk-classes-OrderSigningUtils.pdf
+Class: SubgraphApi,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/classes/SubgraphApi,,cow-protocol-reference-sdks-cow-sdk-classes-SubgraphApi.pdf
+Class: Twap,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/classes/Twap,,cow-protocol-reference-sdks-cow-sdk-classes-Twap.pdf
+Interface: ApiContext,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/ApiContext,,cow-protocol-reference-sdks-cow-sdk-interfaces-ApiContext.pdf
+Interface: ConditionalOrderArguments<T>,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/ConditionalOrderArguments,,cow-protocol-reference-sdks-cow-sdk-interfaces-ConditionalOrderArguments.pdf
+Interface: EnrichedOrder,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/EnrichedOrder,,cow-protocol-reference-sdks-cow-sdk-interfaces-EnrichedOrder.pdf
+Interface: FetchParams,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/FetchParams,,cow-protocol-reference-sdks-cow-sdk-interfaces-FetchParams.pdf
+Interface: IpfsConfig,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/IpfsConfig,,cow-protocol-reference-sdks-cow-sdk-interfaces-IpfsConfig.pdf
+Interface: IsNotValid,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/IsNotValid,,cow-protocol-reference-sdks-cow-sdk-interfaces-IsNotValid.pdf
+Interface: IsValid,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/IsValid,,cow-protocol-reference-sdks-cow-sdk-interfaces-IsValid.pdf
+Interface: PollResultDontTryAgain,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/PollResultDontTryAgain,,cow-protocol-reference-sdks-cow-sdk-interfaces-PollResultDontTryAgain.pdf
+Interface: PollResultSuccess,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/PollResultSuccess,,cow-protocol-reference-sdks-cow-sdk-interfaces-PollResultSuccess.pdf
+Interface: PollResultTryAtEpoch,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/PollResultTryAtEpoch,,cow-protocol-reference-sdks-cow-sdk-interfaces-PollResultTryAtEpoch.pdf
+Interface: PollResultTryNextBlock,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/PollResultTryNextBlock,,cow-protocol-reference-sdks-cow-sdk-interfaces-PollResultTryNextBlock.pdf
+Interface: PollResultTryOnBlock,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/PollResultTryOnBlock,,cow-protocol-reference-sdks-cow-sdk-interfaces-PollResultTryOnBlock.pdf
+Interface: PollResultUnexpectedError,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/PollResultUnexpectedError,,cow-protocol-reference-sdks-cow-sdk-interfaces-PollResultUnexpectedError.pdf
+Interface: RequestOptions,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/RequestOptions,,cow-protocol-reference-sdks-cow-sdk-interfaces-RequestOptions.pdf
+Interface: SignOrderCancellationParams,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/SignOrderCancellationParams,,cow-protocol-reference-sdks-cow-sdk-interfaces-SignOrderCancellationParams.pdf
+Interface: SignOrderCancellationsParams,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/SignOrderCancellationsParams,,cow-protocol-reference-sdks-cow-sdk-interfaces-SignOrderCancellationsParams.pdf
+Interface: SignOrderParams,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/SignOrderParams,,cow-protocol-reference-sdks-cow-sdk-interfaces-SignOrderParams.pdf
+Interface: TwapData,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/TwapData,,cow-protocol-reference-sdks-cow-sdk-interfaces-TwapData.pdf
+Interface: TwapStruct,,https://docs.cow.fi/cow-protocol/reference/sdks/cow-sdk/interfaces/TwapStruct,,cow-protocol-reference-sdks-cow-sdk-interfaces-TwapStruct.pdf
+@cowprotocol/app-data,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data,,cow-protocol-reference-sdks-app-data.pdf
+@cowprotocol/app-data,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/modules,,cow-protocol-reference-sdks-app-data-modules.pdf
+Namespace: latest,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/latest,,cow-protocol-reference-sdks-app-data-namespaces-latest.pdf
+Namespace: v0_10_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_10_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_10_0.pdf
+Namespace: v0_11_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_11_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_11_0.pdf
+Namespace: v0_1_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_1_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_1_0.pdf
+Namespace: v0_2_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_2_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_2_0.pdf
+Namespace: v0_3_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_3_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_3_0.pdf
+Namespace: v0_4_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_4_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_4_0.pdf
+Namespace: v0_5_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_5_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_5_0.pdf
+Namespace: v0_6_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_6_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_6_0.pdf
+Namespace: v0_7_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_7_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_7_0.pdf
+Namespace: v0_8_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_8_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_8_0.pdf
+Namespace: v0_9_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v0_9_0,,cow-protocol-reference-sdks-app-data-namespaces-v0_9_0.pdf
+Namespace: v1_0_0,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/namespaces/v1_0_0,,cow-protocol-reference-sdks-app-data-namespaces-v1_0_0.pdf
+Class: MetadataApi,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/classes/MetadataApi,,cow-protocol-reference-sdks-app-data-classes-MetadataApi.pdf
+Interface: Ipfs,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/Ipfs,,cow-protocol-reference-sdks-app-data-interfaces-Ipfs.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-latest.AppDataRootSchema.pdf
+Interface: CoWHook,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.CoWHook,,cow-protocol-reference-sdks-app-data-interfaces-latest.CoWHook.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-latest.Metadata.pdf
+Interface: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.OrderClass,,cow-protocol-reference-sdks-app-data-interfaces-latest.OrderClass.pdf
+Interface: OrderInteractionHooks,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.OrderInteractionHooks,,cow-protocol-reference-sdks-app-data-interfaces-latest.OrderInteractionHooks.pdf
+Interface: PartnerFee,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.PartnerFee,,cow-protocol-reference-sdks-app-data-interfaces-latest.PartnerFee.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.Quote,,cow-protocol-reference-sdks-app-data-interfaces-latest.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-latest.Referrer.pdf
+Interface: ReplacedOrder,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.ReplacedOrder,,cow-protocol-reference-sdks-app-data-interfaces-latest.ReplacedOrder.pdf
+Interface: UTMCodes,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.UTMCodes,,cow-protocol-reference-sdks-app-data-interfaces-latest.UTMCodes.pdf
+Interface: Widget,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/latest.Widget,,cow-protocol-reference-sdks-app-data-interfaces-latest.Widget.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_10_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_10_0.AppDataRootSchema.pdf
+Interface: CoWHook,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_10_0.CoWHook,,cow-protocol-reference-sdks-app-data-interfaces-v0_10_0.CoWHook.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_10_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_10_0.Metadata.pdf
+Interface: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_10_0.OrderClass,,cow-protocol-reference-sdks-app-data-interfaces-v0_10_0.OrderClass.pdf
+Interface: OrderInteractionHooks,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_10_0.OrderInteractionHooks,,cow-protocol-reference-sdks-app-data-interfaces-v0_10_0.OrderInteractionHooks.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_10_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_10_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_10_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_10_0.Referrer.pdf
+Interface: UTMCodes,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_10_0.UTMCodes,,cow-protocol-reference-sdks-app-data-interfaces-v0_10_0.UTMCodes.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_11_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_11_0.AppDataRootSchema.pdf
+Interface: CoWHook,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_11_0.CoWHook,,cow-protocol-reference-sdks-app-data-interfaces-v0_11_0.CoWHook.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_11_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_11_0.Metadata.pdf
+Interface: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_11_0.OrderClass,,cow-protocol-reference-sdks-app-data-interfaces-v0_11_0.OrderClass.pdf
+Interface: OrderInteractionHooks,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_11_0.OrderInteractionHooks,,cow-protocol-reference-sdks-app-data-interfaces-v0_11_0.OrderInteractionHooks.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_11_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_11_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_11_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_11_0.Referrer.pdf
+Interface: UTMCodes,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_11_0.UTMCodes,,cow-protocol-reference-sdks-app-data-interfaces-v0_11_0.UTMCodes.pdf
+Interface: Widget,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_11_0.Widget,,cow-protocol-reference-sdks-app-data-interfaces-v0_11_0.Widget.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_1_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_1_0.AppDataRootSchema.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_1_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_1_0.Metadata.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_1_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_1_0.Referrer.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_2_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_2_0.AppDataRootSchema.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_2_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_2_0.Metadata.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_2_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_2_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_2_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_2_0.Referrer.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_3_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_3_0.AppDataRootSchema.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_3_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_3_0.Metadata.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_3_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_3_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_3_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_3_0.Referrer.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_4_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_4_0.AppDataRootSchema.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_4_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_4_0.Metadata.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_4_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_4_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_4_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_4_0.Referrer.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_5_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_5_0.AppDataRootSchema.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_5_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_5_0.Metadata.pdf
+Interface: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_5_0.OrderClass,,cow-protocol-reference-sdks-app-data-interfaces-v0_5_0.OrderClass.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_5_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_5_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_5_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_5_0.Referrer.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_6_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_6_0.AppDataRootSchema.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_6_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_6_0.Metadata.pdf
+Interface: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_6_0.OrderClass,,cow-protocol-reference-sdks-app-data-interfaces-v0_6_0.OrderClass.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_6_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_6_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_6_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_6_0.Referrer.pdf
+Interface: UTMCodes,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_6_0.UTMCodes,,cow-protocol-reference-sdks-app-data-interfaces-v0_6_0.UTMCodes.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_7_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_7_0.AppDataRootSchema.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_7_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_7_0.Metadata.pdf
+Interface: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_7_0.OrderClass,,cow-protocol-reference-sdks-app-data-interfaces-v0_7_0.OrderClass.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_7_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_7_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_7_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_7_0.Referrer.pdf
+Interface: UTMCodes,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_7_0.UTMCodes,,cow-protocol-reference-sdks-app-data-interfaces-v0_7_0.UTMCodes.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_8_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_8_0.AppDataRootSchema.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_8_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_8_0.Metadata.pdf
+Interface: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_8_0.OrderClass,,cow-protocol-reference-sdks-app-data-interfaces-v0_8_0.OrderClass.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_8_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_8_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_8_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_8_0.Referrer.pdf
+Interface: UTMCodes,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_8_0.UTMCodes,,cow-protocol-reference-sdks-app-data-interfaces-v0_8_0.UTMCodes.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_9_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v0_9_0.AppDataRootSchema.pdf
+Interface: CoWHook,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_9_0.CoWHook,,cow-protocol-reference-sdks-app-data-interfaces-v0_9_0.CoWHook.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_9_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v0_9_0.Metadata.pdf
+Interface: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_9_0.OrderClass,,cow-protocol-reference-sdks-app-data-interfaces-v0_9_0.OrderClass.pdf
+Interface: OrderInteractionHooks,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_9_0.OrderInteractionHooks,,cow-protocol-reference-sdks-app-data-interfaces-v0_9_0.OrderInteractionHooks.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_9_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v0_9_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_9_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v0_9_0.Referrer.pdf
+Interface: UTMCodes,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v0_9_0.UTMCodes,,cow-protocol-reference-sdks-app-data-interfaces-v0_9_0.UTMCodes.pdf
+Interface: AppDataRootSchema,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.AppDataRootSchema,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.AppDataRootSchema.pdf
+Interface: CoWHook,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.CoWHook,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.CoWHook.pdf
+Interface: Metadata,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.Metadata,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.Metadata.pdf
+Interface: OrderClass,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.OrderClass,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.OrderClass.pdf
+Interface: OrderInteractionHooks,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.OrderInteractionHooks,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.OrderInteractionHooks.pdf
+Interface: PartnerFee,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.PartnerFee,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.PartnerFee.pdf
+Interface: Quote,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.Quote,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.Quote.pdf
+Interface: Referrer,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.Referrer,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.Referrer.pdf
+Interface: UTMCodes,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.UTMCodes,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.UTMCodes.pdf
+Interface: Widget,,https://docs.cow.fi/cow-protocol/reference/sdks/app-data/interfaces/v1_0_0.Widget,,cow-protocol-reference-sdks-app-data-interfaces-v1_0_0.Widget.pdf
+Order book API,,https://docs.cow.fi/cow-protocol/reference/apis/orderbook,,cow-protocol-reference-apis-orderbook.pdf
+Driver API,,https://docs.cow.fi/cow-protocol/reference/apis/driver,,cow-protocol-reference-apis-driver.pdf
+Solver API,,https://docs.cow.fi/cow-protocol/reference/apis/solver,,cow-protocol-reference-apis-solver.pdf
+Core,,https://docs.cow.fi/cow-protocol/reference/contracts/core,,cow-protocol-reference-contracts-core.pdf
+GPv2Settlement,,https://docs.cow.fi/cow-protocol/reference/contracts/core/settlement,,cow-protocol-reference-contracts-core-settlement.pdf
+GPv2VaultRelayer,,https://docs.cow.fi/cow-protocol/reference/contracts/core/vault-relayer,,cow-protocol-reference-contracts-core-vault-relayer.pdf
+GPv2AllowlistAuthentication,,https://docs.cow.fi/cow-protocol/reference/contracts/core/allowlist,,cow-protocol-reference-contracts-core-allowlist.pdf
+Periphery,,https://docs.cow.fi/cow-protocol/reference/contracts/periphery,,cow-protocol-reference-contracts-periphery.pdf
+Eth-flow,,https://docs.cow.fi/cow-protocol/reference/contracts/periphery/eth-flow,,cow-protocol-reference-contracts-periphery-eth-flow.pdf
+HooksTrampoline,,https://docs.cow.fi/cow-protocol/reference/contracts/periphery/hooks-trampoline,,cow-protocol-reference-contracts-periphery-hooks-trampoline.pdf
+ComposableCoW,,https://docs.cow.fi/cow-protocol/reference/contracts/periphery/composable-cow,,cow-protocol-reference-contracts-periphery-composable-cow.pdf
+CoW AMM,,https://docs.cow.fi/cow-protocol/reference/contracts/programmatic/cow-amm,,cow-protocol-reference-contracts-programmatic-cow-amm.pdf
+TWAP,,https://docs.cow.fi/cow-protocol/reference/contracts/programmatic/twap,,cow-protocol-reference-contracts-programmatic-twap.pdf
+Governance,,https://docs.cow.fi/governance,,governance.pdf
+Mission statement,,https://docs.cow.fi/governance/mission,,governance-mission.pdf
+Token,,https://docs.cow.fi/governance/token,,governance-token.pdf
+Fees,,https://docs.cow.fi/governance/fees,,governance-fees.pdf
+Partner fee,,https://docs.cow.fi/governance/fees/partner-fee,,governance-fees-partner-fee.pdf
+CoW Grants Program,,https://docs.cow.fi/governance/grants/grants-program,,governance-grants-grants-program.pdf
+Applying to the Grants Program,,https://docs.cow.fi/governance/grants/application-process,,governance-grants-application-process.pdf
+Grant Application Template,,https://docs.cow.fi/governance/grants/application-template,,governance-grants-application-template.pdf
+Governance Process,,https://docs.cow.fi/governance/process,,governance-process.pdf
+CIP Template,,https://docs.cow.fi/governance/process/template,,governance-process-template.pdf
+Multisigs,,https://docs.cow.fi/governance/multisigs,,governance-multisigs.pdf
+Snapshot (Voting),,https://docs.cow.fi/governance/snapshot,,governance-snapshot.pdf
+Introducing Carbon DeFi,,https://docs.carbondefi.xyz/,,index.pdf
+What Makes Carbon DeFi Unique?,,https://docs.carbondefi.xyz/carbon-defi/introducing-carbon-defi/what-makes-carbon-defi-unique,,carbon-defi-introducing-carbon-defi-what-makes-carbon-defi-unique.pdf
+Fees & Payments,,https://docs.carbondefi.xyz/carbon-defi/introducing-carbon-defi/fees-and-payments,,carbon-defi-introducing-carbon-defi-fees-and-payments.pdf
+Resources,,https://docs.carbondefi.xyz/carbon-defi/introducing-carbon-defi/resources,,carbon-defi-introducing-carbon-defi-resources.pdf
+Security & Audits,,https://docs.carbondefi.xyz/carbon-defi/security-and-audits,,carbon-defi-security-and-audits.pdf
+Contracts,,https://docs.carbondefi.xyz/contracts-and-functions/contracts,,contracts-and-functions-contracts.pdf
+Read & Write Functions,,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions,,contracts-and-functions-read-and-write-functions.pdf
+Write Functions,,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions,,contracts-and-functions-read-and-write-functions-write-functions.pdf
+Transaction Prerequisites,,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/transaction-prerequisites,,contracts-and-functions-read-and-write-functions-write-functions-transaction-prerequisites.pdf
+approve() / allowance(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/transaction-prerequisites/approve-allowance,,contracts-and-functions-read-and-write-functions-write-functions-transaction-prerequisites-approve-allowance.pdf
+Trade,,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/trade,,contracts-and-functions-read-and-write-functions-write-functions-trade.pdf
+tradeBySourceAmount(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/trade/tradebysourceamount,,contracts-and-functions-read-and-write-functions-write-functions-trade-tradebysourceamount.pdf
+tradeByTargetAmount(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/trade/tradebytargetamount,,contracts-and-functions-read-and-write-functions-write-functions-trade-tradebytargetamount.pdf
+Strategy Management,,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/strategy-management,,contracts-and-functions-read-and-write-functions-write-functions-strategy-management.pdf
+createStrategy(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/strategy-management/createstrategy,,contracts-and-functions-read-and-write-functions-write-functions-strategy-management-createstrategy.pdf
+updateStrategy,,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/strategy-management/updatestrategy,,contracts-and-functions-read-and-write-functions-write-functions-strategy-management-updatestrategy.pdf
+deleteStrategy(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/strategy-management/deletestrategy,,contracts-and-functions-read-and-write-functions-write-functions-strategy-management-deletestrategy.pdf
+Carbon DeFi POL,,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/carbon-defi-pol,,contracts-and-functions-read-and-write-functions-write-functions-carbon-defi-pol.pdf
+trade(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/write-functions/carbon-defi-pol/trade,,contracts-and-functions-read-and-write-functions-write-functions-carbon-defi-pol-trade.pdf
+Read Functions,,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions,,contracts-and-functions-read-and-write-functions-read-functions.pdf
+controllerType(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/controllertype,,contracts-and-functions-read-and-write-functions-read-functions-controllertype.pdf
+tradingFeePPM(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/tradingfeeppm,,contracts-and-functions-read-and-write-functions-read-functions-tradingfeeppm.pdf
+pairTradingFeePPM(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/pairtradingfeeppm,,contracts-and-functions-read-and-write-functions-read-functions-pairtradingfeeppm.pdf
+pair(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/pair,,contracts-and-functions-read-and-write-functions-read-functions-pair.pdf
+pairs(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/pairs,,contracts-and-functions-read-and-write-functions-read-functions-pairs.pdf
+strategy(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/strategy,,contracts-and-functions-read-and-write-functions-read-functions-strategy.pdf
+strategiesByPair(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/strategiesbypair,,contracts-and-functions-read-and-write-functions-read-functions-strategiesbypair.pdf
+strategiesByPairCount(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/strategiesbypaircount,,contracts-and-functions-read-and-write-functions-read-functions-strategiesbypaircount.pdf
+calculateTradeSourceAmount(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/calculatetradesourceamount,,contracts-and-functions-read-and-write-functions-read-functions-calculatetradesourceamount.pdf
+calculateTradeTargetAmount(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/calculatetradetargetamount,,contracts-and-functions-read-and-write-functions-read-functions-calculatetradetargetamount.pdf
+Carbon DeFi POL,,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol.pdf
+tradingEnabled(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol/tradingenabled,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol-tradingenabled.pdf
+amountAvailableForTrading(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol/amountavailablefortrading,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol-amountavailablefortrading.pdf
+tokenPrice(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol/tokenprice,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol-tokenprice.pdf
+expectedTradeReturn(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol/expectedtradereturn,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol-expectedtradereturn.pdf
+expectedTradeInput(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol/expectedtradeinput,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol-expectedtradeinput.pdf
+marketPriceMultiply(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol/marketpricemultiply,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol-marketpricemultiply.pdf
+priceDecayHalfLife(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol/pricedecayhalflife,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol-pricedecayhalflife.pdf
+ethSaleAmount(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol/ethsaleamount,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol-ethsaleamount.pdf
+minEthSaleAmount(),,https://docs.carbondefi.xyz/contracts-and-functions/read-and-write-functions/read-functions/carbon-defi-pol/minethsaleamount,,contracts-and-functions-read-and-write-functions-read-functions-carbon-defi-pol-minethsaleamount.pdf
+Data & Events,,https://docs.carbondefi.xyz/contracts-and-functions/data-and-events,,contracts-and-functions-data-and-events.pdf
+TradingFeePPMUpdated(),,https://docs.carbondefi.xyz/contracts-and-functions/data-and-events/tradingfeeppmupdated,,contracts-and-functions-data-and-events-tradingfeeppmupdated.pdf
+PairCreated(),,https://docs.carbondefi.xyz/contracts-and-functions/data-and-events/paircreated,,contracts-and-functions-data-and-events-paircreated.pdf
+StrategyCreated(),,https://docs.carbondefi.xyz/contracts-and-functions/data-and-events/strategycreated,,contracts-and-functions-data-and-events-strategycreated.pdf
+StrategyDeleted(),,https://docs.carbondefi.xyz/contracts-and-functions/data-and-events/strategydeleted,,contracts-and-functions-data-and-events-strategydeleted.pdf
+StrategyUpdated(),,https://docs.carbondefi.xyz/contracts-and-functions/data-and-events/strategyupdated,,contracts-and-functions-data-and-events-strategyupdated.pdf
+TokensTraded(),,https://docs.carbondefi.xyz/contracts-and-functions/data-and-events/tokenstraded,,contracts-and-functions-data-and-events-tokenstraded.pdf
+FeesWithdrawn(),,https://docs.carbondefi.xyz/contracts-and-functions/data-and-events/feeswithdrawn,,contracts-and-functions-data-and-events-feeswithdrawn.pdf
+Carbon DeFi SDK,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk,,developer-guides-carbon-defi-sdk.pdf
+Getting started,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/getting-started,,developer-guides-carbon-defi-sdk-getting-started.pdf
+Interacting with the SDK,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/interacting-with-the-sdk,,developer-guides-carbon-defi-sdk-interacting-with-the-sdk.pdf
+Managing Strategies,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/interacting-with-the-sdk/managing-strategies,,developer-guides-carbon-defi-sdk-interacting-with-the-sdk-managing-strategies.pdf
+Performing Trades,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/interacting-with-the-sdk/performing-trades,,developer-guides-carbon-defi-sdk-interacting-with-the-sdk-performing-trades.pdf
+Getting User and Pair Data,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/interacting-with-the-sdk/getting-user-and-pair-data,,developer-guides-carbon-defi-sdk-interacting-with-the-sdk-getting-user-and-pair-data.pdf
+Collecting Liquidity Data,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/interacting-with-the-sdk/collecting-liquidity-data,,developer-guides-carbon-defi-sdk-interacting-with-the-sdk-collecting-liquidity-data.pdf
+SDK Functions,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions,,developer-guides-carbon-defi-sdk-sdk-functions.pdf
+constructor,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/constructor,,developer-guides-carbon-defi-sdk-sdk-functions-constructor.pdf
+startDataSync,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/startdatasync,,developer-guides-carbon-defi-sdk-sdk-functions-startdatasync.pdf
+getCachedPairs,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/getcachedpairs,,developer-guides-carbon-defi-sdk-sdk-functions-getcachedpairs.pdf
+hasLiquidityByPair,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/hasliquiditybypair,,developer-guides-carbon-defi-sdk-sdk-functions-hasliquiditybypair.pdf
+getLiquidityByPair,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/getliquiditybypair,,developer-guides-carbon-defi-sdk-sdk-functions-getliquiditybypair.pdf
+getUserStrategies,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/getuserstrategies,,developer-guides-carbon-defi-sdk-sdk-functions-getuserstrategies.pdf
+getTradeData,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/gettradedata,,developer-guides-carbon-defi-sdk-sdk-functions-gettradedata.pdf
+composeTradeByTargetTransaction,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/composetradebytargettransaction,,developer-guides-carbon-defi-sdk-sdk-functions-composetradebytargettransaction.pdf
+composeTradeBySourceTransaction,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/composetradebysourcetransaction,,developer-guides-carbon-defi-sdk-sdk-functions-composetradebysourcetransaction.pdf
+createBuySellStrategy,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/createbuysellstrategy,,developer-guides-carbon-defi-sdk-sdk-functions-createbuysellstrategy.pdf
+updateStrategy,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/updatestrategy,,developer-guides-carbon-defi-sdk-sdk-functions-updatestrategy.pdf
+deleteStrategy,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/deletestrategy,,developer-guides-carbon-defi-sdk-sdk-functions-deletestrategy.pdf
+getMinRateByPair,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/getminratebypair,,developer-guides-carbon-defi-sdk-sdk-functions-getminratebypair.pdf
+getMaxRateByPair,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/getmaxratebypair,,developer-guides-carbon-defi-sdk-sdk-functions-getmaxratebypair.pdf
+getRateLiquidityDepthByPair,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-sdk/sdk-functions/getrateliquiditydepthbypair,,developer-guides-carbon-defi-sdk-sdk-functions-getrateliquiditydepthbypair.pdf
+CarbonVortex,,https://docs.carbondefi.xyz/developer-guides/carbonvortex,,developer-guides-carbonvortex.pdf
+availableTokens(),,https://docs.carbondefi.xyz/developer-guides/carbonvortex/availabletokens,,developer-guides-carbonvortex-availabletokens.pdf
+rewardsPPM(),,https://docs.carbondefi.xyz/developer-guides/carbonvortex/rewardsppm,,developer-guides-carbonvortex-rewardsppm.pdf
+execute(),,https://docs.carbondefi.xyz/developer-guides/carbonvortex/execute,,developer-guides-carbonvortex-execute.pdf
+Carbon DeFi Subgraph,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-subgraph,,developer-guides-carbon-defi-subgraph.pdf
+Accessing the Subgraph,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-subgraph/accessing-the-subgraph,,developer-guides-carbon-defi-subgraph-accessing-the-subgraph.pdf
+Creating Subgraph Queries,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-subgraph/creating-subgraph-queries,,developer-guides-carbon-defi-subgraph-creating-subgraph-queries.pdf
+Subgraph Query in Python,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-subgraph/subgraph-query-in-python,,developer-guides-carbon-defi-subgraph-subgraph-query-in-python.pdf
+Sample Subgraph Queries,,https://docs.carbondefi.xyz/developer-guides/carbon-defi-subgraph/sample-subgraph-queries,,developer-guides-carbon-defi-subgraph-sample-subgraph-queries.pdf
+https:-www.gitbook.com.pdf,,https://docs.carbondefi.xyz/https://www.gitbook.com/?utm_source=content&utm_medium=trademark&utm_campaign=s76ZPTyf99g2TmZJrMzB,,https:-www.gitbook.com.pdf
+Overview,,https://docs.flood.bid/,,index.pdf
+What is Flood Plain?,,https://docs.flood.bid/protocol,,protocol.pdf
+Everything about Zones,,https://docs.flood.bid/protocol/zone,,protocol-zone.pdf
+Introduction to Hooks,,https://docs.flood.bid/protocol/hooks,,protocol-hooks.pdf
+Offchain Infrastructure,,https://docs.flood.bid/protocol/offchain-infra,,protocol-offchain-infra.pdf
+Flood for Developers,,https://docs.flood.bid/owners,,owners.pdf
+Writing a Zone,,https://docs.flood.bid/owners/write,,owners-write.pdf
+The Optimal Fulfiller,,https://docs.flood.bid/owners/optimal-fulfiller,,owners-optimal-fulfiller.pdf
+Flood for Traders,,https://docs.flood.bid/users,,users.pdf
+Request quotes,,https://docs.flood.bid/reference/quote,,reference-quote.pdf
+Get supported tokens,,https://docs.flood.bid/reference/tokens,,reference-tokens.pdf
+Create and submit Orders,,https://docs.flood.bid/reference/order-new,,reference-order-new.pdf
+Querying orders,,https://docs.flood.bid/reference/order-query,,reference-order-query.pdf
+Choose the right order parameters,,https://docs.flood.bid/reference/order-params,,reference-order-params.pdf
+Cancel orders,,https://docs.flood.bid/reference/cancel,,reference-cancel.pdf
+Flood for Fulfillers,,https://docs.flood.bid/fulfillers,,fulfillers.pdf
+What is Relay?,,https://docs.relay.link/what-is-relay,,what-is-relay.pdf
+Instant Bridging,,https://docs.relay.link/use-cases/instant-bridging,,use-cases-instant-bridging.pdf
+Cross-Chain Execution,,https://docs.relay.link/use-cases/cross-chain-execution,,use-cases-cross-chain-execution.pdf
+Contract Compatibility,,https://docs.relay.link/guides/contract-compatibility,,guides-contract-compatibility.pdf
+UX Best Practices,,https://docs.relay.link/guides/ux-best-practices,,guides-ux-best-practices.pdf
+Just-In-Time Gas,,https://docs.relay.link/guides/just-in-time-gas,,guides-just-in-time-gas.pdf
+Deep Linking,,https://docs.relay.link/guides/deep-linking,,guides-deep-linking.pdf
+Relay Protocol,,https://docs.relay.link/how-it-works/relay-protocol,,how-it-works-relay-protocol.pdf
+The Reservoir Relayer,,https://docs.relay.link/how-it-works/the-reservoir-relayer,,how-it-works-the-reservoir-relayer.pdf
+Supported Chains,,https://docs.relay.link/resources/supported-chains,,resources-supported-chains.pdf
+Brand Assets,,https://docs.relay.link/resources/brand-assets,,resources-brand-assets.pdf
+Pimlico Paymasters,,https://docs.pimlico.io/paymaster,,paymaster.pdf
+Alto Bundler,,https://docs.pimlico.io/bundler,,bundler.pdf
+Giza Actions SDK,,https://actions.gizatech.xyz/,,index.pdf
+Giza CLI,,https://cli.gizatech.xyz/,,index.pdf
+Giza Datasets,,https://datasets.gizatech.xyz/,,index.pdf
+Overview,,https://developers.circle.com/circle-mint/docs/introducing-circle-mint,,circle-mint-docs-introducing-circle-mint.pdf
+Orion,,https://orion.gizatech.xyz/,,index.pdf
+Overview,,https://developers.circle.com/w3s/docs/circle-programmable-wallets-an-overview,,w3s-docs-circle-programmable-wallets-an-overview.pdf
+Introduction,,https://developers.circle.com/verite/docs/verite-protocol-introduction,,verite-docs-verite-protocol-introduction.pdf
+Safe{Core} Account Abstraction SDK,,https://docs.safe.global/sdk/overview,,sdk-overview.pdf
+Curve,,https://datasets.gizatech.xyz/hub/curve,,hub-curve.pdf
+Daily Trade Volume & Fees,,https://datasets.gizatech.xyz/hub/curve/daily-trade-volume-and-fees,,hub-curve-daily-trade-volume-and-fees.pdf
+PancakeSwap,,https://datasets.gizatech.xyz/hub/pancakeswap,,hub-pancakeswap.pdf
+Service architecture,,https://docs.safe.global/advanced/api-service-architecture,,advanced-api-service-architecture.pdf
+Daily Trade Volume,,https://datasets.gizatech.xyz/hub/pancakeswap/daily-trade-volume,,hub-pancakeswap-daily-trade-volume.pdf
+Safe CLI,,https://docs.safe.global/advanced/cli-overview,,advanced-cli-overview.pdf
+DApp Integration,,https://docs.blockscout.com/for-users/blockscout-apps/dapp-integration,,for-users-blockscout-apps-dapp-integration.pdf
+Get the Safe CLI,,https://docs.safe.global/advanced/cli-installation,,advanced-cli-installation.pdf
+Demos,,https://docs.safe.global/advanced/cli-demos,,advanced-cli-demos.pdf
+Deploy a Recovery Safe,,https://docs.safe.global/advanced/cli-guides/recovery-safe-deployment,,advanced-cli-guides-recovery-safe-deployment.pdf
+Reference,,https://docs.safe.global/advanced/cli-reference,,advanced-cli-reference.pdf
+Common commands for both modes,,https://docs.safe.global/advanced/cli-reference/common-commands,,advanced-cli-reference-common-commands.pdf
+Commands specific to thetx-service,,https://docs.safe.global/advanced/cli-reference/tx-service-commands,,advanced-cli-reference-tx-service-commands.pdf
+index.pdf,,https://docs.chiliz.com/,,index.pdf
+Welcome to Filecoin Docs,,https://docs.filecoin.io/,,index.pdf
+Introduction,,https://docs.ipc.space/,,index.pdf
+Introduction​,,https://docs.celestia.org/learn/how-celestia-works/overview,,learn-how-celestia-works-overview.pdf
+Testnet Faucets,,https://developers.circle.com/w3s/docs/developer-console-faucet,,w3s-docs-developer-console-faucet.pdf
+Programmable Wallet API Rate Limits,,https://developers.circle.com/w3s/docs/programmable-wallet-api-rate-limits,,w3s-docs-programmable-wallet-api-rate-limits.pdf
+Setting up a Celestia validator node​,,https://docs.celestia.org/nodes/validator-node,,nodes-validator-node.pdf
+Setting up a Celestia full consensus node​,,https://docs.celestia.org/nodes/full-consensus-node,,nodes-full-consensus-node.pdf
+Avail: The Unification Layer for Web3,,https://docs.availproject.org/docs/introduction-to-avail,,docs-introduction-to-avail.pdf
+Running a full node and/or validator​,,https://docs.celestia.org/developers/arbitrum-full-node,,developers-arbitrum-full-node.pdf
+Bridging in and out of your Orbit rollup​,,https://docs.celestia.org/developers/arbitrum-bridge,,developers-arbitrum-bridge.pdf
+Installing the circom ecosystem,,https://docs.circom.io/getting-started/installation/,,getting-started-installation.pdf
+Solana Documentation,,https://solana.com/docs,,docs.pdf
+The Light Client Lift-off challenge,,https://docs.availproject.org/docs/operate-a-node/run-a-light-client/light-client-challenge,,docs-operate-a-node-run-a-light-client-light-client-challenge.pdf
+Introduction,,https://jito-foundation.gitbook.io/mev,,mev.pdf
+Introduction,,https://docs.orca.so/,,index.pdf
+Introduction,,https://docs.wormhole.com/wormhole,,wormhole.pdf
+Wallet Introduction,,https://docs.magiceden.io/docs/wallet-introduction,,docs-wallet-introduction.pdf
+UMA Protocol,,https://docs.uma.xyz/,,index.pdf
+Uniswap Overview,,https://docs.uniswap.org/concepts/overview,,concepts-overview.pdf
+The Uniswap V3 SDK,,https://docs.uniswap.org/sdk/v3/overview,,sdk-v3-overview.pdf
+Aave Document Hub,,https://docs.aave.com/hub,,hub.pdf
+V3 Overview,,https://docs.aave.com/developers,,developers.pdf
+Developer Docs,,https://docs.gho.xyz/developer-docs/overview,,developer-docs-overview.pdf
+What Is GHO?,,https://docs.gho.xyz/concepts/overview,,concepts-overview.pdf
+The Uniswap V3 Smart Contracts,,https://docs.uniswap.org/contracts/v3/overview,,contracts-v3-overview.pdf
+Introduction,,https://docs.monad.xyz/,,index.pdf
+Introduction to Ambient,,https://docs.ambient.finance/,,index.pdf
+Overview,,https://docs.blocknative.com/,,index.pdf
+Introduction to MakerDAO Collateral Onboarding,,https://collateral.makerdao.com/,,index.pdf
+Maker Operational Manual,,https://manual.makerdao.com/,,index.pdf
+MakerDAO Technical Docs,,https://docs.makerdao.com/,,index.pdf
+index.pdf,,https://docs.ata.network/,,index.pdf
+Clusters Overview,,https://docs.clusters.xyz/,,index.pdf
+Introduction,,https://docs.gelato.network/developer-services/introduction,,developer-services-introduction.pdf
+Overview,,https://docs.opensea.io/reference/api-overview,,reference-api-overview.pdf
+How to Start a Self-Hosted Chain,,https://docs.optimism.io/builders/chain-operators/self-hosted,,builders-chain-operators-self-hosted.pdf
+Get started with the Arbitrum Orbit SDK,,https://docs.arbitrum.io/launch-orbit-chain/orbit-sdk-introduction,,launch-orbit-chain-orbit-sdk-introduction.pdf
+How to Deploy a Rollup chain using the Orbit SDK,,https://docs.arbitrum.io/launch-orbit-chain/how-tos/orbit-sdk-deploying-rollup-chain,,launch-orbit-chain-how-tos-orbit-sdk-deploying-rollup-chain.pdf
+How to Deploy an AnyTrust chain using the Orbit SDK,,https://docs.arbitrum.io/launch-orbit-chain/how-tos/orbit-sdk-deploying-anytrust-chain,,launch-orbit-chain-how-tos-orbit-sdk-deploying-anytrust-chain.pdf
+How to deploy a custom gas token chain using the Orbit SDK,,https://docs.arbitrum.io/launch-orbit-chain/how-tos/orbit-sdk-deploying-custom-gas-token-chain,,launch-orbit-chain-how-tos-orbit-sdk-deploying-custom-gas-token-chain.pdf
+How to configure your Orbit chain's node using the Orbit SDK,,https://docs.arbitrum.io/launch-orbit-chain/how-tos/orbit-sdk-preparing-node-config,,launch-orbit-chain-how-tos-orbit-sdk-preparing-node-config.pdf
+Deploy a token bridge using the Orbit SDK,,https://docs.arbitrum.io/launch-orbit-chain/how-tos/orbit-sdk-deploying-token-bridge,,launch-orbit-chain-how-tos-orbit-sdk-deploying-token-bridge.pdf
+How to configure your Orbit chain using the Orbit SDK,,https://docs.arbitrum.io/launch-orbit-chain/how-tos/orbit-sdk-configuring-orbit-chain,,launch-orbit-chain-how-tos-orbit-sdk-configuring-orbit-chain.pdf
+Illuvium Staking v2,,https://docs.illuvium.io/staking-v2,,staking-v2.pdf
+IBC-Go Documentation,,https://ibc.cosmos.network/main,,main.pdf
+Introduction,,https://docs.cosmostation.io/apis,,apis.pdf
+Introducing Sei,,https://www.docs.sei.io/,,index.pdf
+Stargate,,https://stargateprotocol.gitbook.io/stargate,,stargate.pdf
+What Is Quasar?,,https://docs.quasar.fi/overview/intro,,overview-intro.pdf
+Introduction,,https://docs.cosmwasm.com/docs/,,docs.pdf
+Introduction,,https://docs.osmosis.zone/osmosis-core,,osmosis-core.pdf
+Introduction,,https://docs.osmosis.zone/overview/educate,,overview-educate.pdf
+What Is Canto?,,https://docs.canto.io/,,index.pdf
+Intro to dYdX Chain Architecture,,https://docs.dydx.exchange/architecture/architectural_overview,,architecture-architectural_overview.pdf
+Indexer Deep Dive,,https://docs.dydx.exchange/architecture/indexer,,architecture-indexer.pdf
+Stride: Liquid staking for Cosmos blockchains,,https://docs.stride.zone/docs/getting-started,,docs-getting-started.pdf
+getting_started-Getting_started.pdf,,https://docs.dydx.exchange/getting_started/Getting_started,,getting_started-Getting_started.pdf
+🏠,,https://docs.scrt.network/secret-network-documentation,,secret-network-documentation.pdf
+trading-Rewards_and_Parameters.pdf,,https://docs.dydx.exchange/trading/Rewards_and_Parameters,,trading-Rewards_and_Parameters.pdf
+🤝,,https://docs.li.fi/overview/partnership,,overview-partnership.pdf
+Withdrawal rate limits and gating,,https://docs.dydx.exchange/deposits_and_withdrawals/rate_limits_and_gating,,deposits_and_withdrawals-rate_limits_and_gating.pdf
+🔎,,https://docs.li.fi/transaction-explorer,,transaction-explorer.pdf
+Integration tests for chain,,https://docs.neutron.org/tutorials/integration-tests/chain,,tutorials-integration-tests-chain.pdf
+Integration tests for smart contracts,,https://docs.neutron.org/tutorials/integration-tests/smart_contracts,,tutorials-integration-tests-smart_contracts.pdf
+Slashing a validator,,https://docs.dydx.exchange/governance/slashing_a_validator,,governance-slashing_a_validator.pdf
+Status of a Transaction,,https://docs.li.fi/li.fi-api/li.fi-api/status-of-a-transaction,,li.fi-api-li.fi-api-status-of-a-transaction.pdf
+guides-how_to_interpret_block_data_for_trades.pdf,,https://docs.dydx.exchange/guides/how_to_interpret_block_data_for_trades,,guides-how_to_interpret_block_data_for_trades.pdf
+Orderbook Stream,,https://docs.dydx.exchange/guides/orderbook_stream,,guides-orderbook_stream.pdf
+"Secret Contract - Reference, Guides, Examples",,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts,,secret-network-documentation-development-development-concepts-example-contracts.pdf
+FAQ Documentation,,https://docs.dydx.exchange/FAQ,,FAQ.pdf
+Starter guide - Millionaire's Problem,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/millionaires-problem,,secret-network-documentation-development-development-concepts-example-contracts-millionaires-problem.pdf
+Guides/Tutorials,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/guides-tutorials,,secret-network-documentation-development-development-concepts-example-contracts-guides-tutorials.pdf
+Reference Contracts,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/community-tutorials,,secret-network-documentation-development-development-concepts-example-contracts-community-tutorials.pdf
+Open source dApps,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/open-source-dapps,,secret-network-documentation-development-development-concepts-example-contracts-open-source-dapps.pdf
+Secret contract - Design Space/Features,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals.pdf
+Secret Contracts introduction,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contracts-introduction,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contracts-introduction.pdf
+Gas/Fee usage,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/gas-fee-usage,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-gas-fee-usage.pdf
+TPS and scalability,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/tps-and-scalability,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-tps-and-scalability.pdf
+Privacy Essentials,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/privacy-essentials,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-privacy-essentials.pdf
+Access Control,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/access-control,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-access-control.pdf
+Viewing Keys,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/access-control/viewing-keys,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-access-control-viewing-keys.pdf
+Permits,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/access-control/permits,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-access-control-permits.pdf
+Trusted and untrusted data,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contracts,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contracts.pdf
+Secret-VRF - on-chain Randomness,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-vrf-on-chain-randomness,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-vrf-on-chain-randomness.pdf
+Privacy as a Service (PaaS),,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/privacy-as-a-service-paas,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-privacy-as-a-service-paas.pdf
+Fiat/Crypto Onboarding,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/fiat-crypto-onboarding,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-fiat-crypto-onboarding.pdf
+Account abstraction,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/account-abstraction,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-account-abstraction.pdf
+Fee abstraction,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/fee-abstraction,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-fee-abstraction.pdf
+Wallet support,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/wallet-support,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-wallet-support.pdf
+Bridge (messaging/tokens),,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/bridge-messaging-tokens,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-bridge-messaging-tokens.pdf
+"IBC (Hooks, PFM, Wasm)",,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/ibc-hooks-pfm-wasm,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-ibc-hooks-pfm-wasm.pdf
+Price Oracles,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/price-oracles,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-price-oracles.pdf
+Auto Restaking,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/auto-restaking,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-auto-restaking.pdf
+Secret Contract (CosmWasm) - framework,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework.pdf
+Framework overview,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/framework-overview,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-framework-overview.pdf
+Environment setup and Tools,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/environment-setup-and-tools,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-environment-setup-and-tools.pdf
+CosmWasm vs Secret CosmWasm,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/differences-from-vanilla-cw,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-differences-from-vanilla-cw.pdf
+Secret Contract Components,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components.pdf
+Instantiation Message,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components/init,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components-init.pdf
+Execution Message,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components/handles,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components-handles.pdf
+Query Message,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components/queries,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components-queries.pdf
+Deps/DepsMut,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components/deps-depsmut,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components-deps-depsmut.pdf
+Storage,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components/storage,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components-storage.pdf
+Prefixed Storage,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components/storage/prefixed-storage,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components-storage-prefixed-storage.pdf
+Keymap,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components/storage/keymap,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components-storage-keymap.pdf
+Append Store,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components/storage/append-store,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components-storage-append-store.pdf
+Best practices,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/secret-contract-fundamentals/secret-contract-cosmwasm-framework/contract-components/storage/contract-optimization,,secret-network-documentation-development-development-concepts-example-contracts-secret-contract-fundamentals-secret-contract-cosmwasm-framework-contract-components-storage-contract-optimization.pdf
+Tools & Libraries,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries.pdf
+Network interaction SDKs,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks.pdf
+Secret.js (JavaScript),,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret.js-javascript,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret.js-javascript.pdf
+SecretPy (Python),,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secretpy,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secretpy.pdf
+SecretK (Kotlin),,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secretk-kotlin,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secretk-kotlin.pdf
+Secret.NET,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret-net,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret-net.pdf
+Snippets,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret-net/snippets,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret-net-snippets.pdf
+Deploying a Contract,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret-net/snippets/deploying-a-contract,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret-net-snippets-deploying-a-contract.pdf
+Send Native Coin,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret-net/snippets/send-native-coin,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret-net-snippets-send-native-coin.pdf
+Query a Contract,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret-net/snippets/query-a-contract,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret-net-snippets-query-a-contract.pdf
+Create a new Wallet,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret-net/snippets/create-a-new-wallet,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret-net-snippets-create-a-new-wallet.pdf
+Permits,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret-net/snippets/permits,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret-net-snippets-permits.pdf
+SNIP20,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret-net/snippets/snip20,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret-net-snippets-snip20.pdf
+SNIP721,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/secret-net/snippets/snip721,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-secret-net-snippets-snip721.pdf
+Shade.Js,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/network-interaction-sdks/shade.js,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-network-interaction-sdks-shade.js.pdf
+LocalSecret - Devnet docker,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/local-secret,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-local-secret.pdf
+Smart contract - Tools/Utils,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/smart-contract-tools-utils,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-smart-contract-tools-utils.pdf
+Secret Toolkit,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/smart-contract-tools-utils/secret-toolkit,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-smart-contract-tools-utils-secret-toolkit.pdf
+CW-Plus,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/smart-contract-tools-utils/cw-plus,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-smart-contract-tools-utils-cw-plus.pdf
+Fadroma - SC framework,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/smart-contract-tools-utils/fadroma,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-smart-contract-tools-utils-fadroma.pdf
+Hidden Gems,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/smart-contract-tools-utils/hidden-gems,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-smart-contract-tools-utils-hidden-gems.pdf
+Other,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/smart-contract-tools-utils/contract-development,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-smart-contract-tools-utils-contract-development.pdf
+Secret IDE,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/smart-contract-tools-utils/contract-development/secret-ide,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-smart-contract-tools-utils-contract-development-secret-ide.pdf
+Polar,,https://docs.scrt.network/secret-network-documentation/development/development-concepts/example-contracts/tools-and-libraries/smart-contract-tools-utils/contract-development/polar,,secret-network-documentation-development-development-concepts-example-contracts-tools-and-libraries-smart-contract-tools-utils-contract-development-polar.pdf
+Supported Networks,,https://docs.scrt.network/secret-network-documentation/development/ethereum-evm-developer-toolkit/supported-networks,,secret-network-documentation-development-ethereum-evm-developer-toolkit-supported-networks.pdf
+EVM Mainnet,,https://docs.scrt.network/secret-network-documentation/development/ethereum-evm-developer-toolkit/supported-networks/evm-mainnet,,secret-network-documentation-development-ethereum-evm-developer-toolkit-supported-networks-evm-mainnet.pdf
+EVM Mainnet Gateway contracts,,https://docs.scrt.network/secret-network-documentation/development/ethereum-evm-developer-toolkit/supported-networks/evm-mainnet/evm-mainnet-gateway-contracts,,secret-network-documentation-development-ethereum-evm-developer-toolkit-supported-networks-evm-mainnet-evm-mainnet-gateway-contracts.pdf
+SecretPath mainnet (secret-4) contracts,,https://docs.scrt.network/secret-network-documentation/development/ethereum-evm-developer-toolkit/supported-networks/evm-mainnet/secretpath-mainnet-secret-4-contracts,,secret-network-documentation-development-ethereum-evm-developer-toolkit-supported-networks-evm-mainnet-secretpath-mainnet-secret-4-contracts.pdf
+EVM Testnet,,https://docs.scrt.network/secret-network-documentation/development/ethereum-evm-developer-toolkit/supported-networks/evm-testnet,,secret-network-documentation-development-ethereum-evm-developer-toolkit-supported-networks-evm-testnet.pdf
+EVM Testnet Gateway contracts,,https://docs.scrt.network/secret-network-documentation/development/ethereum-evm-developer-toolkit/supported-networks/evm-testnet/evm-testnet-gateway-contracts,,secret-network-documentation-development-ethereum-evm-developer-toolkit-supported-networks-evm-testnet-evm-testnet-gateway-contracts.pdf
+SecretPath testnet (pulsar-3) contracts,,https://docs.scrt.network/secret-network-documentation/development/ethereum-evm-developer-toolkit/supported-networks/evm-testnet/secretpath-testnet-pulsar-3-contracts,,secret-network-documentation-development-ethereum-evm-developer-toolkit-supported-networks-evm-testnet-secretpath-testnet-pulsar-3-contracts.pdf
+☝️,,https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/readme,,secret-network-documentation-overview-ecosystem-and-technology-readme.pdf
