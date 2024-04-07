@@ -1,0 +1,1082 @@
+{
+    "https://github.com/flashbots/mev-research": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.mechanism.org/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://collective.flashbots.net/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://writings.flashbots.net/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://ethresear.ch/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://frontier.tech/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/gauntlet-networks/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://alcueca.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.tldresear.ch/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://blog.openblocklabs.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.paradigm.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://jumpcrypto.com/writing/": {
+        "container": ".css-1vkbxot",
+        "subcontainer": "div.css-u7nxut",
+        "href_selector": "a",
+        "next_page_selector": "#gatsby-focus-wrapper > main > nav > div:nth-child(3) > a"
+    },
+    "https://a16zcrypto.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://variant.fund/writing/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://zeeprime.capital/blog": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.maven11.com/publications": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://chaoslabs.xyz/research": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.longhash.vc/insights/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://cumberland.io/insights/research": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://adjacentresearch.xyz/list.html": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://panteracapital.com/blockchain-letter/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://blog.uniswap.org/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://crocswap.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "http://www.aiforeconomics.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://vitalik.ca/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://hackmd.io/@sxysun": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://niraj.io/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://alexobadia.com": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.propellerheads.xyz/blog": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://eth2book.info/capella/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://pintail.xyz/posts/post-merge-mev/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/@aestus_relay": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/@dsl_uiuc": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/@nashqueue": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/@toni_w": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0x00000a2A02540A0D92e209F9f5F7e104745e06Ba": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0x592Dd47b24e4CDA75491c6CB023193423964cCcb": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0xshittrader.eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/antidiego.eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/apriori.eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/evandekim.eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/ohotties.eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/sajz.sismo.eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://dba.mirror.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://crypto.mirror.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://substack.com/@barnabe": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://substack.com/@bittokoin": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://substack.com/@eigenphi": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://substack.com/@joncharbonneau": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://substack.com/@noxx": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://substack.com/@prestwich": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://substack.com/@robustincentives": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://hackmd.io/@dmarz": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://hackmd.io/@EspressoSystems": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://hackmd.io/@ttsao": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://notes.ethereum.org/@mikeneuder": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://domothy.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/wintermute-trading": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://ethresear.ch/u/fradamt/activity/topics": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://notes.ethereum.org/@vbuterin": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://twitter.com/PropellerSwap": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://scrt.network/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.rook.fi/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.mevwatch.info/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.relayscan.io/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.givedirectly.org/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.eip4844.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.cs.cmu.edu/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mevblocker.io/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.iexexchange.io/technology": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.cooperativeai.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://docs.renegade.fi/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://renegade.fi/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://redirect.cs.umbc.edu/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://swap.cow.fi/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.propellerheads.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.rwa.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.purestream.tech/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.mit.edu/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://transitivitymaximalists.github.io/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www3.nd.edu/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.medium.com/dragonfly-research": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.taker.mirror.xyz": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://jumpcrypto.com/writing/research/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://docs.flashbots.net/new-to-mev/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://research.anoma.net/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://xenophonlabs.com/portfolio.html": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://outlierventures.io/research/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://anishagnihotri.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/sevenxventures.eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://davidecrapis.notion.site/f5f51d16f7b64bd3a7453b9a4f52313a?v=e28a25632c9f4ff3b4a9205bf5e12dd5": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://dragonfly.xyz/#research": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://blocknative.com/blog": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/@alexandreobadia": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/@skip_protocol": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://threesigma.xyz/blog": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.egirlcapital.com/writings/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://research.dat.animoca.space/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://volt.capital/writing": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://blog.codex.storage/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://initc3org.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0xE21b1e6f471EDeF18264e9BBe51b7fA7643EE6B5": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0x916563f8476b988855af0b8b8A3D56072E1917FA/ZhTQJ6qiurBTHBNuF08GudWBQ8x9p3P-12vo-C9czKE": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://blog.20squares.xyz": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0xshittrader.eth/WiV8DM3I6abNMVsXf-DqioYb2NglnfjmM-zSsw2ruG8": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0xshittrader.eth/c6J_PCK87K3joTWmLEtG6qVN6BFXLBZxQniReYSEjLI": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0xshittrader.eth/f2VSuoZ91vAbCv82MtWM-Gosyf_DeUXfPlDx3EYV3RM": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://explore.flashbots.net/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mevboost.pics/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://ex.rs/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://taiko.mirror.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://multicoin.capital/writing/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://anoma.net/blog": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://vitalik.eth.limo/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.monoceros.com/insights": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://kelvinfichter.com/pages/thoughts/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/@boneh": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/xenophonlabs.eth/EmgwRVmCc8Utvu6DmacS7dVGSl8ufkCss644z31z87I": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/arrakis-finance": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/galois-capital": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/dydxderivatives": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0x03c29504CEcCa30B93FF5774183a1358D41fbeB1/WKa3GFC03uY34d2MufTyD0c595xVRUEZi9RNG-dHNKs": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.oiler.network/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/evandekim.eth/kowg_VFD7lp5p12C4wcytc2rooVXgKnUwBd-KUKtndQ": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://docs.oval.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://blog.smlxl.io/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://blog.conduit.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.rareskills.io/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0x8958D0c419BCDFB8A86b8c0089552bE015fbe364/IzmGOJM8y_02JofILk7n4yAbCnVx4D7Zt3TAxKl04_U": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/jasperthefriendlyghost.eth/Xv7lLt8SVTfCaFnVie50IvvFrI4-TkQTgZcxb_omEnA": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/preconf.eth/sgcuSbd1jgaRXj9odSJW-_OlWIg6jcDREw1hUJnXtgI": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://www.helius.dev/blog/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://terencecha.in/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://blog.mev.io/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/@bloqarl": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://theblockchainerhub.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/balancer-protocol/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://social-dilemmas.github.io/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/horsefacts.eth/Jex2YVaO65dda6zEyfM_-DXlXhOWCAoSpOx5PLocYgw": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/tokemak": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/stackrlabs.eth/PCLh7XSEkx4d2cZURXREKxQlvd4u3N2RzNJFhIE_SWs": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://risencrypto.github.io/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://uniswapv3book.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/nethermind-eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/0x265a3ef357c6E81594230bE2EEe3cD4Bc0ac4b49/13YHWFgUmRF6TFlxVW51zOxhAGV8dTx2G_TZZnUirSI": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/millietez.eth/ixD3xe-Q7JQowYcIFmGKxkPae_C5tCN9kWn9jXUhnKk": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://docs.clusters.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://nil.foundation/blog": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://nil.foundation/research": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/veryearly.eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://docs.uniswapfoundation.org/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/numerai/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://docs.numerbay.ai/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://docs.numer.ai/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://lambert-guillaume.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://litepaper.dymension.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://medium.com/@dymension/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://litepaper.lavanet.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth/a23yikWKFUYgrEZDi8Mjd-ORxpQeWV5AqxRTMX4gWBg": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth/0I44XbH_nWZrpfNVVBU9MuY7VwMHVMIqWrzRC7Z59_g": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth/qHt2DIkx4c5JUIqPtBUVBUB9SwxWG6TyqUyJFQivVhg": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth/6af253ngMWqo0emTYUSHMzSopld9nkPuDenAdad7SNM": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth/RlM7BhGVlGG_Wypm0cvxKVSZE-bhYR0acYxMSaY5RRQ": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth/ws-k-GH0_aw7COEbfnN1BuBW3eLM3S6ZckZHTkkSv3M": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth/vOELBrOx4Vzp0bmj8_bJifLgyavRy9nl1BFneZhs8pU": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth/cvG6rmsrSU2f1nN1pPB7x9mEAaFnwExTb0joNW6qNVU": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://mirror.xyz/novaresearch.eth/55Am6vj5yFuX-XhK4pUf9P4fbiWp4-gmnXuSBlD-nLM": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://brokkrfinance.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://paraswap.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://figmentcapital.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://fenbushicapital.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://composablefi.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://simbro.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://atise.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://pmcgoohan.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://jeancvllr.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://weka.medium.com/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    },
+    "https://optimism.mirror.xyz/": {
+        "container": "",
+        "subcontainer": "",
+        "href_selector": "",
+        "next_page_selector": ""
+    }
+}
