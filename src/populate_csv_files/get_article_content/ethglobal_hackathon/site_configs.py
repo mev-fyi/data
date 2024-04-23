@@ -1166,4 +1166,11 @@ site_configs = {
         'crawl_func': partial(crawl_sidebar, sidebar_selector='aside.relative', selenium=True),
         'base_name': '-snaps',
     },
+    'aperture': {
+        'base_url': 'https://docs.aperture.finance/docs',
+        'content_selector': 'body > div.scroll-nojump > div > div',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='body > div.scroll-nojump > div > aside', selenium=True),
+        'base_name': '-snaps',
+    },
 }

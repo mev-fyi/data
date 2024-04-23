@@ -1,6 +1,7 @@
 import base64
 import logging
 import os
+import re
 import time
 from urllib.parse import urljoin, urlparse
 import csv
@@ -118,14 +119,15 @@ def extract_first_header(markdown_content):
     """
     Extracts the first header from the markdown content as the title.
     Cleans up the title by removing markdown-style links, keeping only the link text.
+    Handles cases where the header is split across two lines (e.g., #<emoji>\n<title>).
     """
     # Regex to match markdown links and capture the link text
-    import re
     markdown_link_pattern = re.compile(r'\[(.*?)\]\(https?://[^\s]+\)')
-    if markdown_link_pattern == '':
-        return None
 
-    for line in markdown_content.splitlines():
+    # Preprocess markdown_content to merge split headers
+    processed_content = re.sub(r'(#+\s*[^#\n]*?)\n([^#\n]+)', r'\1 \2', markdown_content)
+
+    for line in processed_content.splitlines():
         if line.startswith('# '):
             # Remove Markdown '#' formatting for headers
             title_line = line.strip('# ').strip()

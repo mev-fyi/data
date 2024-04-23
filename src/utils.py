@@ -4,6 +4,7 @@ import csv
 import json
 import logging
 import os
+import subprocess
 import time
 from pathlib import Path
 from random import choice
@@ -31,19 +32,56 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 def root_directory() -> str:
     """
-    Determine the root directory of the project based on the presence of '.git' directory.
+    Determine the root directory of the project. It checks if it's running in a Docker container and adjusts accordingly.
 
     Returns:
     - str: The path to the root directory of the project.
     """
-    current_dir = os.getcwd()
 
-    while True:
-        if '.git' in os.listdir(current_dir):
-            return current_dir
-        else:
-            # Go up one level
+    # Check if running in a Docker container
+    if os.path.exists('/.dockerenv'):
+        # If inside a Docker container, use '/app' as the root directory
+        return '/app'
+
+    # If not in a Docker container, try to use the git command to find the root directory
+    try:
+        git_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], stderr=subprocess.STDOUT)
+        return git_root.strip().decode('utf-8')
+    except subprocess.CalledProcessError:
+        # Git command failed, which might mean we're not in a Git repository
+        # Fall back to manual traversal
+        pass
+    except Exception as e:
+        # Some other error occurred while trying to execute git command
+        print(f"An error occurred while trying to find the Git repository root: {e}")
+
+    # Manual traversal if git command fails
+    current_dir = os.getcwd()
+    root = os.path.abspath(os.sep)
+    traversal_count = 0  # Track the number of levels traversed
+
+    while current_dir != root:
+        try:
+            if 'src' in os.listdir(current_dir):
+                print(f"Found root directory: {current_dir}")
+                return current_dir
             current_dir = os.path.dirname(current_dir)
+            traversal_count += 1
+            print(f"Traversal count # {traversal_count}")
+            if traversal_count > 10:
+                raise Exception("Exceeded maximum traversal depth (more than 10 levels).")
+        except PermissionError as e:
+            # Could not access a directory due to permission issues
+            raise Exception(f"Permission denied when accessing directory: {current_dir}") from e
+        except FileNotFoundError as e:
+            # The directory was not found, which should not happen unless the filesystem is changing
+            raise Exception(f"The directory was not found: {current_dir}") from e
+        except OSError as e:
+            # Handle any other OS-related errors
+            raise Exception("An OS error occurred while searching for the Git repository root.") from e
+
+    # If we've reached this point, it means we've hit the root of the file system without finding a .git directory
+    raise Exception("Could not find the root directory of the project. Please make sure you are running this script from within a Git repository.")
 
 
 def ensure_newline_in_csv(csv_file: str) -> None:
@@ -301,7 +339,6 @@ def get_channel_name(api_key, channel_handle):
         return response['items'][0]['snippet']['channelTitle']
     else:
         return None
-
 
 
 def load_channel_ids(filepath):

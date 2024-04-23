@@ -112,8 +112,11 @@ async def get_video_info(session, credentials: ServiceAccountCredentials, api_ke
         fields="items/contentDetails/relatedPlaylists/uploads"
     )
     channel_response = channel_request.execute()
-    uploads_playlist_id = channel_response["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
-
+    try:
+        uploads_playlist_id = channel_response["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+    except Exception as e:
+        logging.error(f"Error occurred while fetching the uploads playlist ID. Error: {e}")
+        return []
     # Fetch videos from the "Uploads" playlist
     video_info = []
     next_page_token = None
@@ -434,8 +437,10 @@ def run():
     # TODO 2023-09-11: add functionality to fetch all videos which are unlisted
     fetch_videos = True
 
-    PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots', 'Finematics', 'Sentient', 'NFTfi', 'SevenX Ventures', 'Numerai',
-                   'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum', 'Celestia', 'LayerZero', 'Fluence Labs', 'Stargate Finance',
+    PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots', 'Finematics', 'Sentient', 'NFTfi', 'SevenX Ventures', 'Numerai', 'Unlayered Podcast',
+                   'Good Game Podcast', 'The Daily Gwei', 'blocmates', '1000x Podcast', 'Steady Lads Podcast', 'Empire', 'Galaxy', 'Epicenter Podcast', 'The Blockcrunch Podcast with Jason Choi',
+                   'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum', 'Celestia', 'LayerZero', 'Fluence Labs', 'Stargate Finance', 'Delphi Digital', 'Solana', 'Remint Reality',
+                   "Adrian Pocobelli's Artist Journal", 'Duct Tape',
                    'Ava Labs', '=nil; Foundation', 'RISC Zero', 'Nethermind', 'Beyond the Block']  # do not apply any filtering to these channels
     # Define the channel-specific filters which are applied after the first keyword selection
     channel_specific_filters = {

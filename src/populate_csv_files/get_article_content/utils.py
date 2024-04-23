@@ -151,7 +151,8 @@ def html_to_markdown_docs(element, base_url):
     """
     Convert an HTML element to its Markdown representation, ensuring link texts do not contain unnecessary
     line breaks or excessive spaces, and appending the base URL to relative links.
-    This version ensures proper separation between code blocks and subsequent content.
+    This version ensures proper separation between code blocks and subsequent content,
+    and handles specific cases of Markdown headings followed by a newline.
     """
     tag_name = element.name
     classes = element.get('class', []) if not isinstance(element, NavigableString) else ''  # Gets the class list of the current element
@@ -168,7 +169,12 @@ def html_to_markdown_docs(element, base_url):
     children_text = ''.join(html_to_markdown_docs(child, base_url) for child in element.contents).strip()
 
     # Process different elements according to their tags
-    return process_tag_based_content(tag_name, children_text, base_url, element) + '\n'  # Ensure there is a newline after each processed tag
+    processed_content = process_tag_based_content(tag_name, children_text, base_url, element) + '\n'  # Ensure there is a newline after each processed tag
+
+    # Specific handling for headings with a newline
+    processed_content = processed_content.replace('# \n', '# ')
+
+    return processed_content
 
 
 def process_code_block(element, base_url):
