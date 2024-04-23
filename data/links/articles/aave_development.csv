@@ -1,13 +1,14 @@
 Link,Author,Release Date,Title
-https://governance.aave.com/t/about-the-development-category/8117,https://governance.aave.com/u/marczeller,2022-05-01,About the Development category
-https://governance.aave.com/t/bgd-technical-maintenance-proposals/15274,https://governance.aave.com/u/bgdlabs,2024-04-05,BGD. Technical maintenance proposals
-https://governance.aave.com/t/bgd-retroactive-bug-bounties-proposal-pre-immunefi/15989,https://governance.aave.com/u/bgdlabs,2024-03-28,BGD. Retroactive bug bounties proposal (pre-Immunefi)
-https://governance.aave.com/t/aave-bored-ghosts-developing-phase-3/16893,https://governance.aave.com/u/bgdlabs,2024-03-27,Aave <> Bored Ghosts Developing. Phase 3
+https://governance.aave.com/t/about-the-development-category/8117,https://governance.aave.com/u/marczeller,2024-04-10,About the Development category
+https://governance.aave.com/t/bgd-technical-maintenance-proposals/15274,https://governance.aave.com/u/bgdlabs,2024-04-19,BGD. Technical maintenance proposals
+https://governance.aave.com/t/temp-check-bgd-further-aave-v1-deprecation-strategy/15893,https://governance.aave.com/u/bgdlabs,2024-04-17,[TEMP CHECK] BGD. Further Aave v1 deprecation strategy
+https://governance.aave.com/t/bgd-aave-v3-1-and-aave-origin/17305,https://governance.aave.com/u/bgdlabs,2024-04-10,BGD. Aave v3.1 and Aave Origin
+https://governance.aave.com/t/bgd-retroactive-bug-bounties-proposal-pre-immunefi/15989,https://governance.aave.com/u/bgdlabs,2024-03-27,BGD. Retroactive bug bounties proposal (pre-Immunefi)
+https://governance.aave.com/t/aave-bored-ghosts-developing-phase-3/16893,https://governance.aave.com/u/bgdlabs,2024-03-26,Aave <> Bored Ghosts Developing. Phase 3
 https://governance.aave.com/t/bgd-technical-analysis-aave-cancun-deneb-ethereum-upgrade/16917,https://governance.aave.com/u/bgdlabs,2024-03-14,BGD. Technical analysis Aave <> Cancun/Deneb Ethereum upgrade
 https://governance.aave.com/t/olympix-aave-security-integration/16967,https://governance.aave.com/u/olympix,2024-03-14,Olympix <> Aave Security Integration
 https://governance.aave.com/t/bgd-correlated-asset-price-oracle/16133,https://governance.aave.com/u/bgdlabs,2024-03-12,BGD. Correlated-asset price oracle
 https://governance.aave.com/t/bgd-aave-bored-ghosts-phase-2-recap/16791,https://governance.aave.com/u/bgdlabs,2024-03-01,BGD. Aave <> Bored Ghosts Phase 2 Recap
-https://governance.aave.com/t/temp-check-bgd-further-aave-v1-deprecation-strategy/15893,https://governance.aave.com/u/bgdlabs,2024-02-27,[TEMP CHECK] BGD. Further Aave v1 deprecation strategy
 https://governance.aave.com/t/bgd-full-deprecation-of-stable-rate/16473,https://governance.aave.com/u/bgdlabs,2024-02-26,BGD. Full deprecation of stable rate
 https://governance.aave.com/t/bgd-rescue-mission-phase-2-3/14309,https://governance.aave.com/u/bgdlabs,2024-02-25,BGD. Rescue Mission Phase 2&3
 https://governance.aave.com/t/bgd-aave-celo-infrastructure-technical-evaluation/16588,https://governance.aave.com/u/bgdlabs,2024-02-11,BGD. Aave <> Celo. Infrastructure/technical evaluation
@@ -29,3 +30,32 @@ https://governance.aave.com/t/bgd-statatoken-v3/11894,https://governance.aave.co
 https://governance.aave.com/t/aave-v2-v3-security-incident-04-11-2023/15335,https://governance.aave.com/u/bgdlabs,2023-11-01,Aave v2/v3 security incident 04/11/2023
 https://governance.aave.com/t/bgd-aave-governance-v3/12367,https://governance.aave.com/u/bgdlabs,2023-10-01,BGD. Aave Governance V3
 https://governance.aave.com/t/bgd-grant-flashborrower-role-to-debtswapadapter-s/14595,https://governance.aave.com/u/bgdlabs,2023-10-01,BGD. Grant FlashBorrower role to DebtSwapAdapter/s
+https://governance.aave.com/t/update-the-strategicassetmanager-contract/15029,https://governance.aave.com/u/llamaxyz,2023-10-01,Update the StrategicAssetManager Contract
+https://governance.aave.com/t/update-on-aave-swapper-and-strategic-asset-manager-contracts/14522,https://governance.aave.com/u/llamaxyz,2023-09-01,Update on Aave Swapper and Strategic Asset Manager Contracts
+https://governance.aave.com/t/bgd-aave-gnosischain-infrastructure-technical-evaluation/14915,https://governance.aave.com/u/bgdlabs,2023-09-01,BGD. Aave <> GnosisChain. Infrastructure/technical evaluation
+https://governance.aave.com/t/bgd-aave-polygon-zkevm-infrastructure-technical-evaluation/14901,https://governance.aave.com/u/bgdlabs,2023-09-01,BGD. Aave <> Polygon zkEVM. Infrastructure/technical evaluation
+https://governance.aave.com/t/bgd-aave-robot-v1/13091,https://governance.aave.com/u/bgdlabs,2023-08-01,BGD. Aave Robot v1
+https://governance.aave.com/t/bgd-statatoken-operational-update/14497,https://governance.aave.com/u/bgdlabs,2023-08-01,BGD. stataToken operational update
+https://governance.aave.com/t/bgd-sigma-prime-audit-budget-extension/14357,https://governance.aave.com/u/bgdlabs,2023-08-01,BGD. Sigma Prime audit budget extension
+https://governance.aave.com/t/bgd-aave-base-infrastructure-technical-evaluation/14133,https://governance.aave.com/u/bgdlabs,2023-07-01,BGD. Aave <> Base. Infrastructure/technical evaluation
+https://governance.aave.com/t/gauntlet-synchronicity-price-adapter-killswitch-functionality-for-lst-emode/13224,https://governance.aave.com/u/gauntlet,2023-07-01,Gauntlet - Synchronicity Price Adapter “Killswitch” Functionality for LST Emode
+https://governance.aave.com/t/bgd-aave-gho-debt-swap-adapter/14051,https://governance.aave.com/u/bgdlabs,2023-07-01,BGD. Aave GHO Debt Swap adapter
+https://governance.aave.com/t/bgd-a-di-aave-delivery-infrastructure/13951,https://governance.aave.com/u/bgdlabs,2023-07-01,BGD. a.DI - Aave Delivery Infrastructure
+https://governance.aave.com/t/bgd-aave-bnb-chain-infrastructure-technical-evaluation/13752,https://governance.aave.com/u/bgdlabs,2023-07-01,BGD. Aave <> BNB Chain. Infrastructure/technical evaluation
+https://governance.aave.com/t/bgd-technical-analysis-aave-optimism-bedrock-upgrade/13554,https://governance.aave.com/u/bgdlabs,2023-06-01,BGD. Technical analysis Aave <> Optimism Bedrock upgrade
+https://governance.aave.com/t/bgd-working-day-365/13033,https://governance.aave.com/u/bgdlabs,2023-06-01,BGD. Working Day 365
+https://governance.aave.com/t/developer-contribution/13249,https://governance.aave.com/u/itoria_himanshu,2023-05-01,Developer contribution
+https://governance.aave.com/t/bgd-aave-safety-module-v1-5/12148,https://governance.aave.com/u/bgdlabs,2023-05-01,BGD. Aave Safety Module v1.5
+https://governance.aave.com/t/bgd-upgrade-of-aave-v3-periphery-to-3-0-1-across-networks/10744,https://governance.aave.com/u/bgdlabs,2023-05-01,BGD. Upgrade of Aave v3 periphery to 3.0.1 across networks
+https://governance.aave.com/t/bgd-rescue-of-tokens-locked-on-aave-overview-and-phase-1/8150,https://governance.aave.com/u/bgdlabs,2023-05-01,BGD. Rescue of tokens locked on Aave. Overview and Phase 1
+https://governance.aave.com/t/bgd-aave-forest/12755,https://governance.aave.com/u/bgdlabs,2023-05-01,BGD. Aave Forest
+https://governance.aave.com/t/bgd-aave-v2-v3-collectors-unification/12434,https://governance.aave.com/u/bgdlabs,2023-04-01,BGD. Aave v2/v3 Collectors unification
+https://governance.aave.com/t/bgd-aave-debt-swap-adapter-contract/12738,https://governance.aave.com/u/bgdlabs,2023-04-01,BGD. Aave Debt Swap adapter contract
+https://governance.aave.com/t/technical-review-aave-safety-module-v1-5/12436,https://governance.aave.com/u/aavelabs,2023-03-01,Technical Review: Aave Safety Module v1.5
+https://governance.aave.com/t/aave-companies-aave-development-update/12321,https://governance.aave.com/u/aavelabs,2023-03-01,Aave Companies: Aave Development Update
+https://governance.aave.com/t/gho-development-update-testnet-release/11631,https://governance.aave.com/u/aavelabs,2023-02-01,GHO Development Update (Testnet Release)
+https://governance.aave.com/t/bgd-swap-of-price-feed-of-xsushi-on-aave-v2-ethereum/11901,https://governance.aave.com/u/bgdlabs,2023-02-01,BGD. Swap of price feed of xSUSHI on Aave v2 Ethereum
+https://governance.aave.com/t/bgd-technical-analysis-aave-shanghai-capella-ethereum-upgrade/11917,https://governance.aave.com/u/bgdlabs,2023-02-01,BGD. Technical analysis Aave <> Shanghai/Capella Ethereum upgrade
+https://governance.aave.com/t/bgd-aave-v2-v3-migration-tool/11611,https://governance.aave.com/u/bgdlabs,2023-02-01,BGD. Aave v2->v3 migration tool
+https://governance.aave.com/t/bgd-aave-chainlink-proof-of-reserve-phase-1-release-candidate/10972,https://governance.aave.com/u/bgdlabs,2023-02-01,BGD. Aave <> Chainlink Proof of Reserve. Phase 1 Release candidate
+https://governance.aave.com/t/bgd-aave-v3-ethereum-new-deployment-vs-aave-v2-upgrade/9990,https://governance.aave.com/u/bgdlabs,2023-01-01,BGD. Aave v3 Ethereum. New deployment vs Aave v2 Upgrade

@@ -1,6 +1,8 @@
 Link,Author,Release Date,Title
 https://collective.flashbots.net/t/about-the-block-builders-category/124,https://collective.flashbots.net/u/guayabyte,2022-12-01,About the Block Builders category
-https://collective.flashbots.net/t/block-builder-running-on-the-mainnet/3279,https://collective.flashbots.net/u/kosala,2024-04-05,Block builder running on the mainnet
+https://collective.flashbots.net/t/can-builders-unbundle-and-include-extra-transactions-in-searchers-bundle/1659,https://collective.flashbots.net/u/zzh1,2024-04-19,Can builders unbundle and include extra transactions in searcher’s bundle?
+https://collective.flashbots.net/t/do-you-want-to-run-a-builder/212,https://collective.flashbots.net/u/guayabyte,2024-04-12,Do you want to run a builder?
+https://collective.flashbots.net/t/block-builder-running-on-the-mainnet/3279,https://collective.flashbots.net/u/kosala,2024-04-04,Block builder running on the mainnet
 https://collective.flashbots.net/t/builder-error-after-duncan-upgrade/3031,https://collective.flashbots.net/u/kosala,2024-03-19,Builder error after Duncan upgrade
 https://collective.flashbots.net/t/create2-address-in-bundle-transaction/3155,https://collective.flashbots.net/u/ozfrik,2024-03-06,Create2 Address in bundle transaction
 https://collective.flashbots.net/t/flashbots-protect-rpc-conecting-to-a-trusted-builder/3124,https://collective.flashbots.net/u/kosala,2024-02-29,Flashbots protect rpc conecting to a trusted builder
@@ -16,8 +18,6 @@ https://collective.flashbots.net/t/flashbots-protect/507,https://collective.flas
 https://collective.flashbots.net/t/proposal-block-builder-and-relay-identification/1631,https://collective.flashbots.net/u/antonydenyer,2023-08-01,Proposal - Block Builder and Relay Identification
 https://collective.flashbots.net/t/mismatch-between-implementation-and-docs-about-bundle-ordering-formula/1920,https://collective.flashbots.net/u/nikita1,2023-06-01,Mismatch between implementation and docs about Bundle ordering formula
 https://collective.flashbots.net/t/some-error-when-builder-request-builder-relay-goerli-flashbots-net/1479,https://collective.flashbots.net/u/naht,2023-05-01,Some error when builder request builder-relay-goerli.flashbots.net
-https://collective.flashbots.net/t/can-builders-unbundle-and-include-extra-transactions-in-searchers-bundle/1659,https://collective.flashbots.net/u/zzh1,2023-05-01,Can builders unbundle and include extra transactions in searcher’s bundle?
-https://collective.flashbots.net/t/do-you-want-to-run-a-builder/212,https://collective.flashbots.net/u/guayabyte,2023-05-01,Do you want to run a builder?
 https://collective.flashbots.net/t/who-are-these-block-builders-0x388-0xbaf-0xebe-how-can-a-searcher-submit-bundles/1030,https://collective.flashbots.net/u/sirgarfieldc,2023-04-01,Who are these block builders ? 0x388 0xBaf 0xeBe How can a searcher submit bundles?
 https://collective.flashbots.net/t/capella-recommended-upgrades-for-block-builders/1582,https://collective.flashbots.net/u/shana,2023-04-01,Capella: Recommended Upgrades for Block Builders
 https://collective.flashbots.net/t/bookmarks-relevant-for-block-builders/398,https://collective.flashbots.net/u/guayabyte,2023-02-01,Bookmarks relevant for block builders

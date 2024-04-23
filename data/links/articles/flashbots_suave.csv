@@ -1,26 +1,32 @@
 Link,Author,Release Date,Title
 https://collective.flashbots.net/t/about-the-suave-category/2591,https://collective.flashbots.net/u/fred,2023-10-01,About the SUAVE category
-https://collective.flashbots.net/t/request-for-suapp-coprocessor-for-base/3277,https://collective.flashbots.net/u/sxysun,2024-04-05,Request for SUAPP: Coprocessor for Base
-https://collective.flashbots.net/t/suave-wiki/2018,https://collective.flashbots.net/u/quintus,2024-04-01,SUAVE wiki
-https://collective.flashbots.net/t/ethglobal2024-mitigating-lvr-with-univ4-hook-and-a-vickrey-auction-on-suave/3261,https://collective.flashbots.net/u/halo3mic,2024-03-31,EthGlobal2024 | Mitigating LVR with UNIV4 hook and a Vickrey auction on SUAVE
-https://collective.flashbots.net/t/the-problems-solved-by-suave/2816,https://collective.flashbots.net/u/quintus,2024-03-27,The Problems Solved By SUAVE
-https://collective.flashbots.net/t/compensating-mispricing-risk/3245,https://collective.flashbots.net/u/jonahb,2024-03-26,Compensating Mispricing Risk
-https://collective.flashbots.net/t/changelog-3-suave-development-updates-march-25-2024/3238,https://collective.flashbots.net/u/metachris,2024-03-26,"CHANGELOG #3 - SUAVE Development Updates (March 25, 2024)"
+https://collective.flashbots.net/t/suave-wiki/2018,https://collective.flashbots.net/u/quintus,2024-04-21,SUAVE wiki
+https://collective.flashbots.net/t/request-for-suapp-bottom-of-the-block-arbitrage-bot/3336,https://collective.flashbots.net/u/bert,2024-04-20,Request for SUAPP: Bottom of the block arbitrage bot
+https://collective.flashbots.net/t/tee-rainbow-mev-boost-idea/3334,https://collective.flashbots.net/u/dmarz,2024-04-20,TEE + Rainbow MEV Boost Idea
+https://collective.flashbots.net/t/request-for-suapp-solver-builder-bottom-of-block-interface/3335,https://collective.flashbots.net/u/dmarz,2024-04-20,Request for SUAPP: Solver <> Builder Bottom of Block Interface
+https://collective.flashbots.net/t/request-for-suapp-storage-slot-bundle-type/3333,https://collective.flashbots.net/u/dmarz,2024-04-20,Request for SUAPP: Storage Slot Bundle Type
+https://collective.flashbots.net/t/request-for-suapp-one-shot-signature/3332,https://collective.flashbots.net/u/dmarz,2024-04-20,Request for SUAPP: One Shot Signature
+https://collective.flashbots.net/t/request-for-suapp-coprocessor-for-base/3277,https://collective.flashbots.net/u/sxysun,2024-04-14,Request for SUAPP: Coprocessor for Base
+https://collective.flashbots.net/t/anvil-for-mevm-external-provider/3114,https://collective.flashbots.net/u/brock,2024-04-11,Anvil for MEVM external provider
+https://collective.flashbots.net/t/changelog-4-suave-development-updates-april-10-2024/3293,https://collective.flashbots.net/u/cryptrowanderer,2024-04-10,"CHANGELOG #4 - SUAVE Development Updates (April 10, 2024)"
+https://collective.flashbots.net/t/request-for-suapp-inscription-dex/3196,https://collective.flashbots.net/u/bert,2024-04-07,Request for SUAPP: Inscription DEX
+https://collective.flashbots.net/t/request-for-suapp-call-chatgpt-and-mint-an-nft-with-the-response/3197,https://collective.flashbots.net/u/bert,2024-04-07,Request for SUAPP: Call ChatGPT and mint an NFT with the response
+https://collective.flashbots.net/t/ethglobal2024-mitigating-lvr-with-univ4-hook-and-a-vickrey-auction-on-suave/3261,https://collective.flashbots.net/u/halo3mic,2024-03-30,EthGlobal2024 | Mitigating LVR with UNIV4 hook and a Vickrey auction on SUAVE
+https://collective.flashbots.net/t/the-problems-solved-by-suave/2816,https://collective.flashbots.net/u/quintus,2024-03-26,The Problems Solved By SUAVE
+https://collective.flashbots.net/t/compensating-mispricing-risk/3245,https://collective.flashbots.net/u/jonahb,2024-03-25,Compensating Mispricing Risk
+https://collective.flashbots.net/t/changelog-3-suave-development-updates-march-25-2024/3238,https://collective.flashbots.net/u/metachris,2024-03-25,"CHANGELOG #3 - SUAVE Development Updates (March 25, 2024)"
 https://collective.flashbots.net/t/request-for-suapp-suave-on-chain-searcher-bot/3198,https://collective.flashbots.net/u/bert,2024-03-20,Request for SUAPP: SUAVE On-Chain Searcher Bot
-https://collective.flashbots.net/t/suathebys-cross-chain-auction-house/3223,https://collective.flashbots.net/u/gigipower,2024-03-19,Suatheby’s Cross-chain auction house
+https://collective.flashbots.net/t/suathebys-cross-chain-auction-house/3223,https://collective.flashbots.net/u/gigipower,2024-03-18,Suatheby’s Cross-chain auction house
 https://collective.flashbots.net/t/mpc-keyshare/3215,https://collective.flashbots.net/u/eerkaijun,2024-03-18,MPC Keyshare
-https://collective.flashbots.net/t/frequent-batch-auction-on-suave/3104,https://collective.flashbots.net/u/alphaist,2024-03-18,Frequent Batch Auction on SUAVE
-https://collective.flashbots.net/t/private-batch-swaps-using-aztec-and-suave/3217,https://collective.flashbots.net/u/rahul.kothari,2024-03-18,Private Batch Swaps using Aztec and SUAVE
+https://collective.flashbots.net/t/frequent-batch-auction-on-suave/3104,https://collective.flashbots.net/u/alphaist,2024-03-17,Frequent Batch Auction on SUAVE
+https://collective.flashbots.net/t/private-batch-swaps-using-aztec-and-suave/3217,https://collective.flashbots.net/u/rahul.kothari,2024-03-17,Private Batch Swaps using Aztec and SUAVE
 https://collective.flashbots.net/t/information-protocol-deriving-a-suapp-from-first-principles-beginning-with-ideal-pfof-requirements-from-the-next-gen-dex-workshop/3210,https://collective.flashbots.net/u/apriori,2024-03-16,Information Protocol: Deriving a SUAPP from first principles (beginning with ideal PFOF requirements) - from the Next Gen DEX Workshop
-https://collective.flashbots.net/t/request-for-suapp-call-chatgpt-and-mint-an-nft-with-the-response/3197,https://collective.flashbots.net/u/bert,2024-03-14,Request for SUAPP: Call ChatGPT and mint an NFT with the response
-https://collective.flashbots.net/t/request-for-suapp-inscription-dex/3196,https://collective.flashbots.net/u/bert,2024-03-14,Request for SUAPP: Inscription DEX
-https://collective.flashbots.net/t/demonstration-of-suave-oracle/3112,https://collective.flashbots.net/u/halo3mic,2024-03-14,Demonstration of SUAVE oracle
-https://collective.flashbots.net/t/suave-bridge/2696,https://collective.flashbots.net/u/dmarz,2024-03-09,SUAVE Bridge
+https://collective.flashbots.net/t/demonstration-of-suave-oracle/3112,https://collective.flashbots.net/u/halo3mic,2024-03-13,Demonstration of SUAVE oracle
+https://collective.flashbots.net/t/suave-bridge/2696,https://collective.flashbots.net/u/dmarz,2024-03-08,SUAVE Bridge
 https://collective.flashbots.net/t/integrating-suave-with-astria-rollups/3118,https://collective.flashbots.net/u/itamarreif,2024-03-08,Integrating SUAVE with Astria Rollups
 https://collective.flashbots.net/t/emit-solidity-events-during-off-chain-computation/3134,https://collective.flashbots.net/u/ferranbt,2024-03-06,Emit Solidity events during off-chain computation
 https://collective.flashbots.net/t/composable-block-building-mev-compose/3091,https://collective.flashbots.net/u/jinsuk,2024-03-02,Composable block building - Mev-Compose
 https://collective.flashbots.net/t/suave-as-x/1024,https://collective.flashbots.net/u/quintus,2024-02-29,Suave as X
-https://collective.flashbots.net/t/anvil-for-mevm-external-provider/3114,https://collective.flashbots.net/u/brock,2024-02-29,Anvil for MEVM external provider
 https://collective.flashbots.net/t/protecc-ed-execution-on-orderflow/3113,https://collective.flashbots.net/u/dmarz,2024-02-28,Protecc’ed Execution on Orderflow
 https://collective.flashbots.net/t/question-about-non-determinism-in-suave-std-chatgpt-api-http-requests/3100,https://collective.flashbots.net/u/alpo,2024-02-26,Question about non-determinism in suave-std ChatGPT API/HTTP requests
 https://collective.flashbots.net/t/javascript-on-sgx/3092,https://collective.flashbots.net/u/ch4r10t33r,2024-02-23,Javascript on SGX?
