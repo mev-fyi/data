@@ -71,10 +71,10 @@
         "href_selector": "a",
         "next_page_selector": "#gatsby-focus-wrapper > main > nav > div:nth-child(3) > a"
     },
-    "https://a16zcrypto.com/": {
-        "container": "",
-        "subcontainer": "",
-        "href_selector": "",
+    "https://a16zcrypto.com/posts/": {
+        "container": "#wrapper > section.featured > div",
+        "subcontainer": "#wrapper > section.featured > div > div:nth-child(1) > div",
+        "href_selector": "#wrapper > section.featured > div > div:nth-child(1) > div > div.col-sm-10 > a",
         "next_page_selector": ""
     },
     "https://variant.fund/writing/": {

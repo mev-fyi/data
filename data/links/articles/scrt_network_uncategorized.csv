@@ -1,5 +1,6 @@
 Link,Author,Release Date,Title
 https://forum.scrt.network/t/read-me-first-forum-guidelines/8,https://forum.scrt.network/u/system,2018-06-01,Read Me First - Forum Guidelines
+https://forum.scrt.network/t/shade-v2-1-alexandria-upgrade-announced/7291,https://forum.scrt.network/u/carter-woetzel,2024-05-01,Shade v2.1 Alexandria Upgrade Announced
 https://forum.scrt.network/t/dao-dao-x-secret-network-proposal/7119,https://forum.scrt.network/u/carter-woetzel,2023-10-01,DAO DAO X Secret Network Proposal
 https://forum.scrt.network/t/scrt-listed-on-the-earning-aggregator-criffy/7104,https://forum.scrt.network/u/criffy,2023-09-01,SCRT listed on the earning aggregator Criffy
 https://forum.scrt.network/t/view-transactions-from-old-account/7024,https://forum.scrt.network/u/secretmen2,2023-08-01,View transactions from old account
@@ -58,34 +59,3 @@ https://forum.scrt.network/t/eth-rwrds-token/3033,https://forum.scrt.network/u/s
 https://forum.scrt.network/t/how-to-configure-figment-node-in-secretcli/3317,https://forum.scrt.network/u/drgorb,2021-04-01,How to configure figment node in secretcli?
 https://forum.scrt.network/t/proposal-community-reward/2932,https://forum.scrt.network/u/cayle,2021-03-01,Proposal–community reward
 https://forum.scrt.network/t/sushiswap-liquidity/2660,https://forum.scrt.network/u/jas_dog,2021-03-01,Sushiswap liquidity
-https://forum.scrt.network/t/i-didnt-receive-seth-help-me-please/2686,https://forum.scrt.network/u/flood,2021-02-01,"I didn’t receive seth , help me please!"
-https://forum.scrt.network/t/bridge-transfer-failed-eth-to-seth/2725,https://forum.scrt.network/u/raki,2021-02-01,Bridge transfer failed - ETH to SETH
-https://forum.scrt.network/t/eth-secret-bridge-whats-the-business-model/2528,https://forum.scrt.network/u/lbphp,2021-01-01,ETH => Secret bridge. What’s the business model?
-https://forum.scrt.network/t/let-me-understand-eng-has-been-abandoned-75-of-token-holders-left-with-nothing/2506,https://forum.scrt.network/u/funkyfresh,2021-01-01,"Let me understand, ENG has been abandoned > 75% of token holders left with nothing?"
-https://forum.scrt.network/t/przesyl-eng-scrt/2359,https://forum.scrt.network/u/qba753i,2020-12-01,Przesył ENG SCRT
-https://forum.scrt.network/t/why-are-the-eng-and-scrt-prices-different/2238,https://forum.scrt.network/u/lbphp,2020-12-01,Why are the ENG and SCRT prices different?
-https://forum.scrt.network/t/enabling-secret-contracts-to-accept-payment-in-any-snip20-also-enables-the-bridge-to-convert-any-supported-erc20-eth-immediately-to-sscrt-or-native-scrt/2347,https://forum.scrt.network/u/baedrik,2020-12-01,Enabling secret contracts to accept payment in any snip20 (also enables the bridge to convert any supported ERC20/ETH immediately to sSCRT or native SCRT)
-https://forum.scrt.network/t/endor-protocol-secret-network-partnership-status/2313,https://forum.scrt.network/u/gan_rl,2020-12-01,Endor Protocol + Secret Network (partnership status)
-https://forum.scrt.network/t/is-enigma-team-out-of-money/1530,https://forum.scrt.network/u/merit,2020-09-01,Is Enigma Team out of money?
-https://forum.scrt.network/t/staking-commission-and-reporting/1896,https://forum.scrt.network/u/joham,2020-07-01,"Staking, commission and reporting"
-https://forum.scrt.network/t/binance-swap-or-no/1769,https://forum.scrt.network/u/enigmeiro,2020-07-01,Binance Swap or no?
-https://forum.scrt.network/t/hard-forks-and-network-upgrades/1670,https://forum.scrt.network/u/guy,2020-06-01,Hard forks and network upgrades
-https://forum.scrt.network/t/how-to-call-a-function-of-ethereum-contract-from-a-secret-contract-of-enigma/1561,https://forum.scrt.network/u/wystanw,2020-04-01,How to call a function of Ethereum contract from a secret contract of Enigma?
-https://forum.scrt.network/t/why-has-the-eng-subreddit-been-locked/1455,https://forum.scrt.network/u/catmando,2020-03-01,Why has the ENG subreddit been locked?
-https://forum.scrt.network/t/salad-updates-for-2020/1264,https://forum.scrt.network/u/ainsley,2020-01-01,Salad updates for 2020
-https://forum.scrt.network/t/intel-nuc-7i5bnb-sgx-options-confirm-settings-are-correct/1187,https://forum.scrt.network/u/aeonwise,2019-12-01,Intel NUC 7i5BNB SGX options. Confirm settings are correct!
-https://forum.scrt.network/t/how-do-you-buy-sell-exchange-etc-eng/1160,https://forum.scrt.network/u/curly1wny,2019-11-01,How do you buy/sell/exchange/etc. ENG
-https://forum.scrt.network/t/t-e-e-ring-of-trust-with-forcibly-distributed-token/1117,https://forum.scrt.network/u/econymous,2019-11-01,T.E.E. “Ring of Trust” with forcibly distributed token
-https://forum.scrt.network/t/threshold-ecdsa-signatures-with-cheater-identification/1131,https://forum.scrt.network/u/guy,2019-10-01,Threshold ECDSA Signatures with cheater identification
-https://forum.scrt.network/t/some-queries-regarding-sgx/1124,https://forum.scrt.network/u/ezio,2019-10-01,Some queries regarding SGX
-https://forum.scrt.network/t/two-errors-not-enough-allowance-and-incorrect-nonce/1093,https://forum.scrt.network/u/ainsley,2019-10-01,Two errors - “not enough allowance” and “incorrect nonce”
-https://forum.scrt.network/t/problem-running-discovery-test/1031,https://forum.scrt.network/u/berlin,2019-08-01,Problem running discovery test
-https://forum.scrt.network/t/catalyst-for-live-trade/991,https://forum.scrt.network/u/mike0101,2019-07-01,Catalyst for live trade
-https://forum.scrt.network/t/calling-enigma-from-within-a-secret-contract/474,https://forum.scrt.network/u/crypto_mentions,2019-06-01,Calling Enigma from within a secret contract
-https://forum.scrt.network/t/running-secret-auctions/874,https://forum.scrt.network/u/amine,2019-06-01,Running secret auctions
-https://forum.scrt.network/t/remote-attestation-service/880,https://forum.scrt.network/u/ocet,2019-05-01,Remote Attestation Service
-https://forum.scrt.network/t/is-2019-still-the-year-of-enigma-april-dev-updating-coming/822,https://forum.scrt.network/u/zed,2019-05-01,Is 2019 still the year of Enigma? April Dev updating coming?
-https://forum.scrt.network/t/error-in-network-core/645,https://forum.scrt.network/u/ycfung,2019-03-01,Error in network core
-https://forum.scrt.network/t/enigma-setup-loading/348,https://forum.scrt.network/u/fahad,2019-02-01,Enigma Setup loading
-https://forum.scrt.network/t/polkadot-vs-etherium/588,https://forum.scrt.network/u/cryptojoe,2019-02-01,Polkadot vs etherium
-https://forum.scrt.network/t/is-alexander-pentland-still-a-advisor-for-enigma/566,https://forum.scrt.network/u/eve,2019-01-01,Is Alexander Pentland still a Advisor for Enigma?

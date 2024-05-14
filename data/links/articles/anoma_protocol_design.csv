@@ -1,21 +1,28 @@
 Link,Author,Release Date,Title
 https://research.anoma.net/t/about-the-protocol-design-category/295,https://research.anoma.net/u/cwgoes,2023-10-01,About the Protocol Design category
-https://research.anoma.net/t/introducing-iarmm-non-overlay-network-settlement-layer-and-exploring-intent-settlement-on-the-bitcoin-network/527,https://research.anoma.net/u/taryune,2024-04-09,Introducing IARMM: Non-overlay Network Settlement Layer and Exploring Intent Settlement on the Bitcoin Network
-https://research.anoma.net/t/simple-merkleization-system/519,https://research.anoma.net/u/cwgoes,2024-04-04,Simple Merkleization System
+https://research.anoma.net/t/simple-merkleization-system/519,https://research.anoma.net/u/cwgoes,2024-05-10,Simple Merkleization System
+https://research.anoma.net/t/basic-ota-upgrade-system/560,https://research.anoma.net/u/cwgoes,2024-05-10,Basic OTA upgrade system
+https://research.anoma.net/t/user-interaction-messages/563,https://research.anoma.net/u/cwgoes,2024-05-10,User interaction messages
+https://research.anoma.net/t/multisignature-proof-of-stake-application/559,https://research.anoma.net/u/cwgoes,2024-05-10,Multisignature proof-of-stake application
+https://research.anoma.net/t/introducing-iarmm-non-overlay-network-settlement-layer-and-exploring-intent-settlement-on-the-bitcoin-network/527,https://research.anoma.net/u/taryune,2024-05-08,Introducing IARMM: Non-overlay Network Settlement Layer and Exploring Intent Settlement on the Bitcoin Network
+https://research.anoma.net/t/basic-kudos-multichat-and-public-signal-applications/561,https://research.anoma.net/u/cwgoes,2024-05-07,"Basic Kudos, Multichat, and Public Signal applications"
+https://research.anoma.net/t/concrete-specs-details/562,https://research.anoma.net/u/cwgoes,2024-05-05,Concrete specs details
+https://research.anoma.net/t/first-draft-of-application-state-encoding-format/558,https://research.anoma.net/u/cwgoes,2024-05-05,First draft of application state encoding format
+https://research.anoma.net/t/specs-v2-master-planning-thread/551,https://research.anoma.net/u/cwgoes,2024-05-03,Specs v2 Master Planning Thread
+https://research.anoma.net/t/a-question-on-settlement-to-external-chains/444,https://research.anoma.net/u/ankurdubey521,2024-04-24,A question on settlement to external chains
+https://research.anoma.net/t/sketch-of-possible-anoma-proof-of-stake-system-heterogeneous-proof-of-stake/492,https://research.anoma.net/u/cwgoes,2024-04-24,Sketch of possible Anoma proof-of-stake system: “heterogeneous proof-of-stake”
+https://research.anoma.net/t/speculative-execution-with-the-resource-machine/520,https://research.anoma.net/u/cwgoes,2024-04-24,Speculative execution with the resource machine
 https://research.anoma.net/t/some-thoughts-on-controllers-promises-and-fault-isolation/522,https://research.anoma.net/u/cwgoes,2024-04-04,"Some thoughts on controllers, promises, and fault isolation"
-https://research.anoma.net/t/stored-data-format-resource-machine-storage/411,https://research.anoma.net/u/vveiln,2024-04-02,Stored data format: resource machine <> storage
-https://research.anoma.net/t/speculative-execution-with-the-resource-machine/520,https://research.anoma.net/u/cwgoes,2024-04-01,Speculative execution with the resource machine
+https://research.anoma.net/t/stored-data-format-resource-machine-storage/411,https://research.anoma.net/u/vveiln,2024-04-03,Stored data format: resource machine <> storage
 https://research.anoma.net/t/initial-anoma-applications-to-write-in-juvix/512,https://research.anoma.net/u/cwgoes,2024-03-21,Initial Anoma applications to write in Juvix
 https://research.anoma.net/t/rise-of-the-resource-machines-article-feedback/501,https://research.anoma.net/u/apriori,2024-03-11,Rise of the Resource Machines - Article Feedback
 https://research.anoma.net/t/collective-curation-of-topics-to-go-in-resource-machine-report-v2/382,https://research.anoma.net/u/cwgoes,2024-03-08,Collective curation of topics to go in resource machine report v2
 https://research.anoma.net/t/sketch-of-possible-anoma-governance-system-intent-centric-governance/486,https://research.anoma.net/u/cwgoes,2024-03-05,Sketch of possible Anoma governance system: “intent-centric governance”
-https://research.anoma.net/t/sketch-of-possible-anoma-proof-of-stake-system-heterogeneous-proof-of-stake/492,https://research.anoma.net/u/cwgoes,2024-03-01,Sketch of possible Anoma proof-of-stake system: “heterogeneous proof-of-stake”
 https://research.anoma.net/t/abstract-intent-machines-article-feedback/482,https://research.anoma.net/u/apriori,2024-02-23,Abstract Intent Machines - Article feedback
 https://research.anoma.net/t/crdts-on-the-resource-machine/481,https://research.anoma.net/u/cwgoes,2024-02-19,CRDTs on the resource machine
 https://research.anoma.net/t/sketch-of-a-controller-local-name-service-application/478,https://research.anoma.net/u/cwgoes,2024-02-19,Sketch of a controller-local name service application
 https://research.anoma.net/t/relationship-between-internal-machine-interfaces-and-the-resource-machine/479,https://research.anoma.net/u/cwgoes,2024-02-16,Relationship between internal machine interfaces and the resource machine
 https://research.anoma.net/t/the-slow-game-in-decentralized-protocols-navigating-high-frequency-service-regulation-with-low-frequency-governance-wip/196,https://research.anoma.net/u/nikete,2024-01-29,The “Slow Game” in Decentralized Protocols: Navigating High-Frequency Service Regulation with Low-Frequency Governance (WIP)
-https://research.anoma.net/t/a-question-on-settlement-to-external-chains/444,https://research.anoma.net/u/ankurdubey521,2024-01-16,A question on settlement to external chains
 https://research.anoma.net/t/resource-consumption-ownership-and-authorization/422,https://research.anoma.net/u/degregat,2024-01-07,"Resource Consumption, Ownership and Authorization"
 https://research.anoma.net/t/taiga-function-privacy-roadmap/175,https://research.anoma.net/u/joe,2024-01-04,Taiga function privacy roadmap
 https://research.anoma.net/t/the-anoma-level-al-programming-system/421,https://research.anoma.net/u/mariari,2023-12-01,The Anoma Level (AL) Programming System
