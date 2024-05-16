@@ -1,1 +1,541 @@
 Link,Author,Release Date,Title
+https://ethresear.ch/t/read-this-before-posting/8,https://ethresear.ch/u/system,2024-01-29,Read this before posting
+https://ethresear.ch/t/introducing-onebalance/19557,https://ethresear.ch/u/thegostep,2024-05-15,Introducing OneBalance
+https://ethresear.ch/t/optimizing-zk-rollup-scalability-security-and-censorship-resistance-with-epidemic-mpc-efficient-data-structures-and-advanced-cryptographic-techniques/19556,https://ethresear.ch/u/cryptskii,2024-05-15,"Optimizing ZK-Rollup Scalability, Security, and Censorship Resistance with Epidemic MPC, Efficient Data Structures, and Advanced Cryptographic Techniques"
+https://ethresear.ch/t/preparing-withdrawals-for-compromised-validator-or-withdrawal-keys-fao-zilm/10453,https://ethresear.ch/u/tobesvibration,2024-05-15,Preparing withdrawals for compromised validator or withdrawal keys. FAO Zilm
+https://ethresear.ch/t/user-defined-penalties-ensuring-honest-preconf-behavior/19545,https://ethresear.ch/u/jonahb27,2024-05-14,User-Defined Penalties: Ensuring Honest Preconf Behavior
+https://ethresear.ch/t/reward-curve-with-tempered-issuance-eip-research-post/19171,https://ethresear.ch/u/aelowsson,2024-05-14,Reward curve with tempered issuance: EIP research post
+https://ethresear.ch/t/slashing-proofoor-on-chain-slashed-validator-proofs/19421,https://ethresear.ch/u/nerolation,2024-05-14,Slashing Proofoor - On-chain slashed validator proofs
+https://ethresear.ch/t/empirical-analysis-of-the-impact-of-eip-4844-on-ethereums-ecosystem/19486,https://ethresear.ch/u/wanify,2024-05-14,Empirical Analysis of the Impact of EIP-4844 on Ethereum’s Ecosystem
+https://ethresear.ch/t/embedded-fee-markets-and-erc-4337-part-1/19542,https://ethresear.ch/u/daviderezzoli,2024-05-14,Embedded fee markets and ERC-4337 (part 1)
+https://ethresear.ch/t/fraud-proofs-are-broken/19234,https://ethresear.ch/u/gcdepaula,2024-05-13,Fraud Proofs Are Broken
+https://ethresear.ch/t/sandwitch-attacks-on-epbs/19538,https://ethresear.ch/u/potuz,2024-05-13,Sandwitch attacks on ePBS
+https://ethresear.ch/t/maci-with-mostly-off-chain-happy-path/19527,https://ethresear.ch/u/vbuterin,2024-05-13,MACI with mostly-off-chain “happy path”
+https://ethresear.ch/t/zkmpc-publicly-verifiable-spdz-with-constraints-on-secret-inputs/18661,https://ethresear.ch/u/sheagrief,2024-05-13,ZKMPC: Publicly Verifiable SPDZ with Constraints on Secret Inputs
+https://ethresear.ch/t/fulldas-towards-massive-scalability-with-32mb-blocks-and-beyond/19529,https://ethresear.ch/u/cskiraly,2024-05-12,FullDAS: towards massive scalability with 32MB blocks and beyond
+https://ethresear.ch/t/sharded-recursive-zk-snark-proofs/19480,https://ethresear.ch/u/cryptskii,2024-05-11,Sharded Recursive zk-SNARK Proofs
+https://ethresear.ch/t/signature-merging-for-large-scale-consensus/17386,https://ethresear.ch/u/asn,2024-05-10,Signature Merging for Large-Scale Consensus
+https://ethresear.ch/t/based-proposer-commitments-ethereum-s-marketplace-for-proposer-commitments/19517,https://ethresear.ch/u/drewvanderwerff,2024-05-10,Based proposer commitments - Ethereum’s marketplace for proposer commitments
+https://ethresear.ch/t/cex-dex-arbitrage-transaction-fees-block-times-and-lp-profits/19444,https://ethresear.ch/u/atiselsts,2024-05-09,"CEX/DEX arbitrage, transaction fees, block times, and LP profits"
+https://ethresear.ch/t/rfc-draft-anoma-as-the-universal-intent-machine-for-ethereum/19109,https://ethresear.ch/u/cwgoes,2024-05-09,[RFC] [DRAFT] Anoma as the universal intent machine for Ethereum
+https://ethresear.ch/t/client-side-ordinal-transaction-ordering-coto/19503,https://ethresear.ch/u/cryptskii,2024-05-09,Client-Side Ordinal Transaction Ordering (COTO)
+https://ethresear.ch/t/vanilla-based-sequencing/19379,https://ethresear.ch/u/perseverance,2024-05-09,Vanilla Based Sequencing
+https://ethresear.ch/t/research-report-allowing-validators-to-share-client-information-privately-a-project-by-nethermind-research/19506,https://ethresear.ch/u/jorem321,2024-05-08,[Research report] Allowing validators to share client information privately—a project by Nethermind Research
+https://ethresear.ch/t/allowing-validators-to-provide-client-information-privately-a-project-by-nethermind-research-and-nethermind-core/18527,https://ethresear.ch/u/jorem321,2024-05-08,Allowing validators to provide client information privately—a project by Nethermind Research and Nethermind Core
+https://ethresear.ch/t/triadic-consensus-a-fast-and-resilient-consensus-mechanism-for-sharded-blockchains/19504,https://ethresear.ch/u/cryptskii,2024-05-08,Triadic Consensus: A Fast and Resilient Consensus Mechanism for Sharded Blockchains
+https://ethresear.ch/t/coded-zkp-fhe-a-decentralized-collaborative-robust-zkp-fhe-system/19459,https://ethresear.ch/u/0x1cc,2024-05-08,"Coded ZKP/FHE, a decentralized, collaborative, robust ZKP/FHE System"
+https://ethresear.ch/t/optimized-decentralized-coded-computing-with-binary-field-snarks/19499,https://ethresear.ch/u/cryptskii,2024-05-08,Optimized Decentralized Coded Computing with Binary Field SNARKs
+https://ethresear.ch/t/zero-knowledge-proofs-of-identity-using-electronic-passports/19263,https://ethresear.ch/u/turboblitz,2024-05-07,Zero-knowledge proofs of identity using electronic passports
+https://ethresear.ch/t/promoting-ethereum-research-to-facilitate-interdisciplinary-collaboration-and-academic-user-engagement/18918,https://ethresear.ch/u/mirror,2024-05-07,Promoting Ethereum Research to facilitate interdisciplinary collaboration and academic user engagement
+https://ethresear.ch/t/tiered-commitment-trees-to-reduce-gas-costs-and-offchain-complexity/19484,https://ethresear.ch/u/rymnc,2024-05-07,Tiered Commitment Trees to reduce gas costs and offchain complexity
+https://ethresear.ch/t/reducing-latency-games-by-levelling-the-playing-field-on-block-size-for-pbs/19356,https://ethresear.ch/u/antonydenyer,2024-05-07,Reducing latency games by levelling the playing field on block size for PBS
+https://ethresear.ch/t/analysis-on-correlated-attestation-penalties/19244,https://ethresear.ch/u/nerolation,2024-05-06,Analysis on ”Correlated Attestation Penalties”
+https://ethresear.ch/t/simplified-active-validator-cap-and-rotation-proposal/9022,https://ethresear.ch/u/vbuterin,2024-05-06,Simplified Active Validator Cap and Rotation Proposal
+https://ethresear.ch/t/unbounded-scaling-of-a-fully-decentralized-network-without-global-coordination-may-the-4th-be-with-you/19456,https://ethresear.ch/u/cryptskii,2024-05-05,Unbounded Scaling of a fully Decentralized Network without Global Coordination - - May the 4th Be With You
+https://ethresear.ch/t/execution-tickets/17944,https://ethresear.ch/u/mikeneuder,2024-05-05,Execution Tickets
+https://ethresear.ch/t/plasma-next-plasma-without-online-requirements/18786,https://ethresear.ch/u/leohio,2024-05-05,Plasma Next: Plasma without Online Requirements
+https://ethresear.ch/t/endgame-staking-economics-a-case-for-targeting/18751,https://ethresear.ch/u/casparschwa,2024-05-03,Endgame Staking Economics: A Case for Targeting
+https://ethresear.ch/t/counter-proposal-to-enshrined-price-feeds-dual-token-oracles/7437,https://ethresear.ch/u/vbuterin,2024-05-03,Counter-proposal to enshrined price feeds: dual-token oracles
+https://ethresear.ch/t/rustic-programming-language-that-targets-the-ethereum-virtual-machine/16292,https://ethresear.ch/u/clearloop,2024-05-02,Rustic programming language that targets the Ethereum Virtual Machine
+https://ethresear.ch/t/confirmation-rule-for-ethereum-pos/15454,https://ethresear.ch/u/adiasg,2024-05-02,Confirmation Rule for Ethereum PoS
+https://ethresear.ch/t/integrity-proofs-to-improve-rollup-security/19437,https://ethresear.ch/u/peshwar9,2024-05-02,Integrity proofs to improve rollup security
+https://ethresear.ch/t/voter-behavior-in-blockchain-governance-a-comparative-study-of-curve-finance-and-polkadot/19436,https://ethresear.ch/u/dengwx11,2024-05-02,Voter Behavior in Blockchain Governance: A Comparative Study of Curve Finance and Polkadot
+https://ethresear.ch/t/uncrowdable-inclusion-lists-the-tension-between-chain-neutrality-preconfirmations-and-proposer-commitments/19372,https://ethresear.ch/u/julian,2024-05-02,"Uncrowdable Inclusion Lists: The Tension between Chain Neutrality, Preconfirmations and Proposer Commitments"
+https://ethresear.ch/t/builder-reveal-timing-game-in-epbs/19424,https://ethresear.ch/u/terence,2024-04-30,Builder Reveal Timing Game in ePBS
+https://ethresear.ch/t/mining-attacks-on-pora-proof-of-random-access/19323,https://ethresear.ch/u/snjax,2024-04-29,Mining attacks on PoRA (Proof of Random Access)
+https://ethresear.ch/t/privacy-and-regulation-in-our-decentralized-future/17538,https://ethresear.ch/u/jiangxb-son,2024-04-29,Privacy and Regulation in our decentralized future
+https://ethresear.ch/t/explanation-of-daicos/465,https://ethresear.ch/u/vbuterin,2024-04-29,Explanation of DAICOs
+https://ethresear.ch/t/enshrine-ai-into-evm/19418,https://ethresear.ch/u/axonon,2024-04-29,Enshrine AI into EVM
+https://ethresear.ch/t/enabling-light-node-to-verify-a-field-element-from-its-column-in-peer-das/19411,https://ethresear.ch/u/athos,2024-04-28,Enabling light node to verify a field element from its column in peer das
+https://ethresear.ch/t/backward-compatible-post-quantum-migration/19340,https://ethresear.ch/u/tanteikg,2024-04-28,Backward-Compatible Post-Quantum Migration
+https://ethresear.ch/t/defining-zkoracle-for-ethereum/15131,https://ethresear.ch/u/fewwwww,2024-04-28,Defining zkOracle for Ethereum
+https://ethresear.ch/t/making-ether-a-better-money/19393,https://ethresear.ch/u/pantheraes,2024-04-27,Making Ether A Better Money
+https://ethresear.ch/t/increase-the-max-effective-balance-a-modest-proposal/15801,https://ethresear.ch/u/mikeneuder,2024-04-27,Increase the MAX_EFFECTIVE_BALANCE – a modest proposal
+https://ethresear.ch/t/trustless-bitcoin-bridge-creation-with-witness-encryption/11953,https://ethresear.ch/u/leohio,2024-04-27,Trustless Bitcoin Bridge Creation with Witness Encryption
+https://ethresear.ch/t/on-block-sizes-gas-limits-and-scalability/18444,https://ethresear.ch/u/nerolation,2024-04-27,"On Block Sizes, Gas Limits and Scalability"
+https://ethresear.ch/t/no-minimum-eth-staking-without-the-lsd/16065,https://ethresear.ch/u/natemiller,2024-04-27,No minimum ETH Staking without the LSD
+https://ethresear.ch/t/how-to-hard-fork-to-save-most-users-funds-in-a-quantum-emergency/18901,https://ethresear.ch/u/vbuterin,2024-04-27,How to hard-fork to save most users’ funds in a quantum emergency
+https://ethresear.ch/t/a-concrete-proposal-for-correlated-attester-penalties/19341,https://ethresear.ch/u/vbuterin,2024-04-26,A concrete proposal for correlated attester penalties
+https://ethresear.ch/t/testing-the-capabilities-of-a-protocol-based-on-distributed-validator-technology-dvt/19368,https://ethresear.ch/u/daniejjimenez,2024-04-25,Testing the Capabilities of a Protocol based on Distributed Validator Technology (DVT)
+https://ethresear.ch/t/preventing-restaking-centralization-risks/16027,https://ethresear.ch/u/idan-levin,2024-04-24,Preventing restaking centralization risks
+https://ethresear.ch/t/from-4844-to-danksharding-a-path-to-scaling-ethereum-da/18046,https://ethresear.ch/u/fradamt,2024-04-23,From 4844 to Danksharding: a path to scaling Ethereum DA
+https://ethresear.ch/t/portal-network-verkle/19339,https://ethresear.ch/u/morph-dev,2024-04-19,Portal Network & Verkle
+https://ethresear.ch/t/plasma-free/16570,https://ethresear.ch/u/barrywhitehat,2024-04-19,**Plasma Free**
+https://ethresear.ch/t/the-safety-attack-against-pos/15649,https://ethresear.ch/u/mart1i1n,2024-04-19,The Safety Attack against PoS
+https://ethresear.ch/t/radius-skde-enhancing-rollup-composability-with-trustless-sequencing/19185,https://ethresear.ch/u/wooju,2024-04-19,Radius SKDE: Enhancing Rollup Composability with Trustless Sequencing
+https://ethresear.ch/t/epbs-design-constraints/18728,https://ethresear.ch/u/potuz,2024-04-18,ePBS design constraints
+https://ethresear.ch/t/lumoz-supports-op-stack-zk-fraud-proof-initiating-a-new-paradigm-in-l2-architecture/19330,https://ethresear.ch/u/nanfengpo,2024-04-18,"Lumoz supports Op Stack + ZK Fraud Proof, Initiating a New Paradigm in L2 Architecture"
+https://ethresear.ch/t/lossydas-lossy-incremental-and-diagonal-sampling-for-data-availability/18963,https://ethresear.ch/u/cskiraly,2024-04-17,"LossyDAS: Lossy, Incremental, and Diagonal Sampling for Data Availability"
+https://ethresear.ch/t/minimal-fully-recursive-zkda-rollup-with-sharded-storage/19020,https://ethresear.ch/u/snjax,2024-04-17,Minimal fully recursive zkDA rollup with sharded storage
+https://ethresear.ch/t/peerdas-a-simpler-das-approach-using-battle-tested-p2p-components/16541,https://ethresear.ch/u/djrtwo,2024-04-17,PeerDAS – a simpler DAS approach using battle-tested p2p components
+https://ethresear.ch/t/economic-analysis-of-execution-tickets/18894,https://ethresear.ch/u/jonahb27,2024-04-17,Economic Analysis of Execution Tickets
+https://ethresear.ch/t/new-zkp-bridge-paper-for-ethereum-full-node-code-is-open-source/19319,https://ethresear.ch/u/billypham09,2024-04-17,New ZKP bridge paper for Ethereum Full Node. Code is open source
+https://ethresear.ch/t/da-trap-when-a-da-attack-becomes-significantly-easy/19183,https://ethresear.ch/u/leohio,2024-04-13,DA Trap: When a DA Attack Becomes Significantly Easy
+https://ethresear.ch/t/quantum-proof-keypairs-with-ecdsa-zk/14901,https://ethresear.ch/u/yush_g,2024-04-13,Quantum Proof Keypairs with ECDSA + ZK
+https://ethresear.ch/t/eip-3074-authcall-and-phishing-protection/19288,https://ethresear.ch/u/miohtama,2024-04-12,EIP-3074 AUTHCALL and phishing protection?
+https://ethresear.ch/t/the-end-game-for-oracles/19276,https://ethresear.ch/u/0xnimrod,2024-04-12,The End Game for Oracles
+https://ethresear.ch/t/why-wait-a-week-fast-finality-optimistic-rollups/18868,https://ethresear.ch/u/mikerah,2024-04-12,Why wait a week? Fast Finality Optimistic Rollups
+https://ethresear.ch/t/appointed-execution-proposers-because-the-proposer-you-know/19284,https://ethresear.ch/u/the-ctra1n,2024-04-12,Appointed Execution Proposers: Because the Proposer you know…
+https://ethresear.ch/t/zero-knowledge-proof-vulnerability-analysis-and-security-auditing/19241,https://ethresear.ch/u/mirror,2024-04-09,Zero-Knowledge Proof Vulnerability Analysis and Security Auditing
+https://ethresear.ch/t/insecura-my-consensus-for-the-pyrmont-network/11833,https://ethresear.ch/u/arnetheduck,2024-04-08,Insecura - my consensus for the pyrmont network
+https://ethresear.ch/t/block-auction-epbs-versus-execution-ticket/19232,https://ethresear.ch/u/terence,2024-04-08,Block-auction ePBS versus Execution Ticket
+https://ethresear.ch/t/reduced-attestation-format-for-gossiping-attestations/19157,https://ethresear.ch/u/giulio2002,2024-04-08,Reduced Attestation Format for gossiping attestations
+https://ethresear.ch/t/octopus-contract-and-its-applications/17844,https://ethresear.ch/u/sorasuegami,2024-04-08,Octopus Contract and its Applications
+https://ethresear.ch/t/charity-bond-account-generation-for-social-networks-and-more/19220,https://ethresear.ch/u/micahzoltu,2024-04-08,Charity Bond Account Generation for Social Networks and More
+https://ethresear.ch/t/is-supernovas-folding-scheme-the-endgame-for-zk/15744,https://ethresear.ch/u/sin7y-research,2024-04-08,Is SuperNova’s Folding Scheme the Endgame for ZK?
+https://ethresear.ch/t/replacing-registration-systems-and-captchas-with-vdfs-to-improve-usability/19217,https://ethresear.ch/u/uptrenda,2024-04-07,Replacing registration systems and captchas with VDFs to improve usability
+https://ethresear.ch/t/on-increasing-the-block-gas-limit/18567,https://ethresear.ch/u/nerolation,2024-04-05,On Increasing the Block Gas Limit
+https://ethresear.ch/t/cross-chain-cowswap/16319,https://ethresear.ch/u/sk1122,2024-04-05,Cross Chain CoWSwap
+https://ethresear.ch/t/towards-an-implementation-of-based-preconfirmations-leveraging-restaking/19211,https://ethresear.ch/u/cairo,2024-04-04,Towards an implementation of based preconfirmations leveraging restaking
+https://ethresear.ch/t/imo-initial-model-offering/18860,https://ethresear.ch/u/fewwwww,2024-04-04,IMO: Initial Model Offering
+https://ethresear.ch/t/eip-7623-post-4844-analysis/19199,https://ethresear.ch/u/nerolation,2024-04-04,EIP-7623 - Post-4844 Analysis
+https://ethresear.ch/t/how-to-purchase-ethereum-gas-in-advance/19069,https://ethresear.ch/u/web3skeptic,2024-04-04,How to purchase Ethereum GAS in advance
+https://ethresear.ch/t/blob-preconfirmations-with-inclusion-lists-to-mitigate-blob-contention-and-censorship/19150,https://ethresear.ch/u/chrmatt,2024-04-04,Blob Preconfirmations with Inclusion Lists to Mitigate Blob Contention and Censorship
+https://ethresear.ch/t/blue-shell-strategy-discouraging-the-most-concentrated-actor-as-an-optimal-path/19200,https://ethresear.ch/u/themandalore,2024-04-03,Blue shell strategy - discouraging the most concentrated actor as an optimal path
+https://ethresear.ch/t/concurrent-block-proposers-in-ethereum/18777,https://ethresear.ch/u/mikeneuder,2024-04-02,Concurrent Block Proposers in Ethereum
+https://ethresear.ch/t/increasing-gas-limit-without-state-growth-implications-through-periodic-scheduled-downtime/19175,https://ethresear.ch/u/maxresnick,2024-04-02,Increasing Gas Limit Without State Growth Implications Through Periodic Scheduled Downtime
+https://ethresear.ch/t/on-chain-distributed-rng-using-zk/19176,https://ethresear.ch/u/kladkogex,2024-04-01,On-chain Distributed RNG using ZK?
+https://ethresear.ch/t/introducing-accrual-based-recurring-payments-for-decentralized-platforms/19147,https://ethresear.ch/u/grybniak,2024-04-01,Introducing Accrual-Based Recurring Payments for Decentralized Platforms
+https://ethresear.ch/t/supporting-decentralized-staking-through-more-anti-correlation-incentives/19116,https://ethresear.ch/u/vbuterin,2024-04-01,Supporting decentralized staking through more anti-correlation incentives
+https://ethresear.ch/t/public-projects-with-preferences-and-predictions/19024,https://ethresear.ch/u/bowaggoner,2024-03-29,Public Projects with Preferences and Predictions
+https://ethresear.ch/t/the-second-slot-itch-statistical-analysis-of-reorgs/16333,https://ethresear.ch/u/nerolation,2024-03-29,The Second-Slot Itch - Statistical Analysis of Reorgs
+https://ethresear.ch/t/privacy-preserving-nullifiers-for-proof-of-identity-applications/18551,https://ethresear.ch/u/turboblitz,2024-03-29,Privacy preserving nullifiers for proof of identity applications
+https://ethresear.ch/t/initial-analysis-of-stake-distribution/19014,https://ethresear.ch/u/julian,2024-03-27,Initial Analysis of Stake Distribution
+https://ethresear.ch/t/unbundling-staking-towards-rainbow-staking/18683,https://ethresear.ch/u/barnabe,2024-03-27,Unbundling staking: Towards rainbow staking
+https://ethresear.ch/t/how-optional-non-kyc-validator-metadata-can-improve-staking-decentralization/17032,https://ethresear.ch/u/comfygummy,2024-03-27,"How (optional, non-KYC) validator metadata can improve staking decentralization"
+https://ethresear.ch/t/steps-to-achieve-atomic-execution-in-rollups/18776,https://ethresear.ch/u/0xtariz,2024-03-27,Steps to Achieve Atomic Execution in Rollups
+https://ethresear.ch/t/addressing-systemic-risks-discouragement-attacks-against-centralized-validator-sets/19067,https://ethresear.ch/u/themandalore,2024-03-27,Addressing systemic risks – discouragement attacks against centralized validator sets
+https://ethresear.ch/t/considering-client-diversity-through-the-lens-of-network-performance/18885,https://ethresear.ch/u/umbnat92,2024-03-26,Considering Client Diversity through the lens of Network Performance
+https://ethresear.ch/t/the-risks-of-lrts/18799,https://ethresear.ch/u/mikeneuder,2024-03-25,The risks of LRTs
+https://ethresear.ch/t/towards-scalable-ethereum-staking-the-imperative-of-stateless-clients-with-compact-proof-sizes/19105,https://ethresear.ch/u/sogolmalek,2024-03-25,Towards Scalable Ethereum Staking: The Imperative of Stateless Clients with Compact Proof Sizes
+https://ethresear.ch/t/zero-knowledge-rainbow-bridge-infusing-blockchain-interactions-with-a-prism-of-privacy/18825,https://ethresear.ch/u/cryptskii,2024-03-24,Zero-Knowledge Rainbow Bridge: Infusing Blockchain Interactions with a Prism of Privacy
+https://ethresear.ch/t/benchmarking-zkp-development-frameworks-the-pantheon-of-zkp/14943,https://ethresear.ch/u/modong,2024-03-24,Benchmarking ZKP Development Frameworks: the Pantheon of ZKP
+https://ethresear.ch/t/zkcasper-a-snark-based-protocol-for-verifying-casper-ffg-consensus/15559,https://ethresear.ch/u/seunlanlege,2024-03-22,zkCasper: A SNARK based protocol for verifying Casper FFG Consensus
+https://ethresear.ch/t/analyzing-eip-7623-increase-calldata-cost/19002,https://ethresear.ch/u/nerolation,2024-03-21,Analyzing EIP-7623: Increase Calldata Cost
+https://ethresear.ch/t/based-preconfirmations/17353,https://ethresear.ch/u/justindrake,2024-03-21,Based preconfirmations
+https://ethresear.ch/t/grim-forker-checks-and-balances-to-amm-protocol-fees/17565,https://ethresear.ch/u/lajarre,2024-03-20,Grim Forker: checks and balances to AMM protocol fees
+https://ethresear.ch/t/zk-fraud-proof-with-zk-state-channel/19004,https://ethresear.ch/u/0x1cc,2024-03-18,ZK Fraud Proof with ZK State Channel
+https://ethresear.ch/t/fractal-scaling-on-ethereum-layer-3-rollups/19022,https://ethresear.ch/u/purpleshadow2000,2024-03-18,Fractal Scaling on Ethereum (Layer 3 Rollups)
+https://ethresear.ch/t/how-ai-revolutionizes-ethereum-another-view-on-ai-blockchain/19010,https://ethresear.ch/u/mirror,2024-03-15,"How AI Revolutionizes Ethereum, Another View on “AI+Blockchain”"
+https://ethresear.ch/t/decentralized-l2-sequencing-w-native-ibc-interoperability/14944,https://ethresear.ch/u/shakeshack,2024-03-11,Decentralized L2 Sequencing w/ Native IBC Interoperability
+https://ethresear.ch/t/ai-rollup-replacing-fault-validity-proof-with-ai-oracle-proof/15320,https://ethresear.ch/u/fewwwww,2024-03-11,"AI Rollup, replacing fault/validity proof with AI oracle proof"
+https://ethresear.ch/t/the-more-the-less-censored-introducing-committee-enforced-inclusion-sets-comis-on-ethereum/18835,https://ethresear.ch/u/soispoke,2024-03-11,"The more, the less censored: Introducing committee-enforced inclusion sets (COMIS) on Ethereum"
+https://ethresear.ch/t/wallet-intents-rethinking-swaps/17682,https://ethresear.ch/u/mattstam,2024-03-07,Wallet Intents - Rethinking Swaps
+https://ethresear.ch/t/first-and-second-price-auctions-and-improved-transaction-fee-markets/2410,https://ethresear.ch/u/vbuterin,2024-03-07,First and second-price auctions and improved transaction-fee markets
+https://ethresear.ch/t/missed-slot-penalties-temperature-check/18713,https://ethresear.ch/u/maxresnick,2024-03-06,Missed Slot Penalties [Temperature Check]
+https://ethresear.ch/t/permissioned-privacy-pools/13572,https://ethresear.ch/u/ameensol,2024-03-06,Permissioned Privacy Pools
+https://ethresear.ch/t/how-to-create-a-custom-bridge-between-two-evm-based-blockcahin/18883,https://ethresear.ch/u/syedmuhamadyasir,2024-03-06,How to create a custom bridge between two EVM-based blockcahin?
+https://ethresear.ch/t/blockchain-sharded-storage-web2-costs-and-web3-security-with-shamir-secret-sharing/18881,https://ethresear.ch/u/snjax,2024-03-06,Blockchain Sharded Storage: Web2 Costs and Web3 Security with Shamir Secret Sharing
+https://ethresear.ch/t/burnth-wormcash-a-practical-implementation-of-eip-7503-on-ethereum/18875,https://ethresear.ch/u/keyvank,2024-03-05,Burnth/WormCash: A practical implementation of EIP-7503 on Ethereum
+https://ethresear.ch/t/shared-sequencer-for-mev-protection-and-profitable-marketplace/15313,https://ethresear.ch/u/0xtariz,2024-03-05,Shared sequencer for MEV protection and profitable marketplace
+https://ethresear.ch/t/rfc-contract-led-storage-rent-roadmap/18642,https://ethresear.ch/u/zergity,2024-03-05,[RFC] Contract-Led Storage-Rent Roadmap
+https://ethresear.ch/t/formally-verified-optimised-epoch-processing/17359,https://ethresear.ch/u/michaelsproul,2024-03-04,Formally-verified optimised epoch processing
+https://ethresear.ch/t/rfc-fixing-ethereum-ux-with-user-centric-asset-model-erc-versioning/18760,https://ethresear.ch/u/peersky,2024-03-03,RFC: Fixing Ethereum UX with user-centric asset model & ERC versioning
+https://ethresear.ch/t/launching-mev-fyi-the-mev-research-chatbot/18796,https://ethresear.ch/u/val,2024-03-03,"Launching mev.fyi, the MEV research chatbot"
+https://ethresear.ch/t/contract-deployment-approaches-in-layer-2-solutions/18851,https://ethresear.ch/u/irnb,2024-03-02,Contract Deployment Approaches in Layer-2 Solutions
+https://ethresear.ch/t/why-is-there-a-clear-separation-between-builders-and-validators-under-pbs/18845,https://ethresear.ch/u/gutterberg,2024-03-01,Why is there a clear separation between builders and validators under PBS?
+https://ethresear.ch/t/faucet-link-directory/12670,https://ethresear.ch/u/desy,2024-03-01,Faucet Link Directory
+https://ethresear.ch/t/privacy-nft-marketplace/18689,https://ethresear.ch/u/terry,2024-03-01,Privacy NFT Marketplace
+https://ethresear.ch/t/micro-oracles-a-simple-commitment-augmented-funding-mechanism/18479,https://ethresear.ch/u/ajesiroo,2024-03-01,Micro oracles: a simple commitment-augmented funding mechanism
+https://ethresear.ch/t/payload-boosts-in-epbs/18769,https://ethresear.ch/u/potuz,2024-02-29,Payload boosts in ePBS
+https://ethresear.ch/t/lookup-singularity-via-mmr/18704,https://ethresear.ch/u/hmac512,2024-02-29,Lookup singularity via MMR
+https://ethresear.ch/t/properties-of-issuance-level-consensus-incentives-and-variability-across-potential-reward-curves/18448,https://ethresear.ch/u/aelowsson,2024-02-28,Properties of issuance level: consensus incentives and variability across potential reward curves
+https://ethresear.ch/t/the-preconfirmation-gateway-unlocking-preconfirmations-from-user-to-preconfer/18812,https://ethresear.ch/u/mteam88,2024-02-27,The Preconfirmation Gateway ~ Unlocking Preconfirmations: From User to Preconfer
+https://ethresear.ch/t/inclusion-list-eip-7547-end-to-end-workflow/18810,https://ethresear.ch/u/terence,2024-02-27,Inclusion List (EIP-7547) End to End Workflow
+https://ethresear.ch/t/easy-proof-of-equivalence-between-multiple-polynomial-commitment-schemes-to-the-same-data/8188,https://ethresear.ch/u/vbuterin,2024-02-27,Easy proof of equivalence between multiple polynomial commitment schemes to the same data
+https://ethresear.ch/t/collusion-resistant-impartial-selection-protocol-crisp/18804,https://ethresear.ch/u/auryn,2024-02-27,Collusion-Resistant Impartial Selection Protocol (CRISP)
+https://ethresear.ch/t/minimal-anti-collusion-infrastructure/5413,https://ethresear.ch/u/vbuterin,2024-02-26,Minimal anti-collusion infrastructure
+https://ethresear.ch/t/cross-layer-communication-trivially-provable-and-efficient-read-access-to-the-parent-chain/15396,https://ethresear.ch/u/brecht,2024-02-24,Cross layer communication: Trivially provable and efficient read access to the parent chain
+https://ethresear.ch/t/a-draft-design-for-a-multi-rollup-system/16533,https://ethresear.ch/u/liveduo,2024-02-24,A draft design for a multi-rollup system
+https://ethresear.ch/t/stateless-validation-in-a-sharded-blockchain/18763,https://ethresear.ch/u/bowenwang1996,2024-02-23,Stateless validation in a sharded blockchain
+https://ethresear.ch/t/unconditional-inclusion-lists/18500,https://ethresear.ch/u/mikeneuder,2024-02-23,Unconditional inclusion lists
+https://ethresear.ch/t/single-slot-finality/16700,https://ethresear.ch/u/niconiconi,2024-02-23,Single Slot Finality
+https://ethresear.ch/t/mev-boost-withdrawal-bug/18749,https://ethresear.ch/u/umbnat92,2024-02-21,MEV-Boost Withdrawal bug
+https://ethresear.ch/t/unified-endgame-rollup-requirements/18733,https://ethresear.ch/u/perseverance,2024-02-21,Unified Endgame Rollup Requirements
+https://ethresear.ch/t/scalability-limitations-of-kademlia-dhts-when-enabling-data-availability-sampling-in-ethereum/18732,https://ethresear.ch/u/leobago,2024-02-20,Scalability limitations of Kademlia DHTs when Enabling Data Availability Sampling in Ethereum
+https://ethresear.ch/t/opsides-ncrc-a-trustless-native-cross-rollup-communication-protocol/16441,https://ethresear.ch/u/nanfengpo,2024-02-19,Opside’s NCRC: A Trustless Native Cross Rollup Communication Protocol
+https://ethresear.ch/t/introducing-yu-a-very-suitable-for-l3-independency-application-blockchain-framework/17302,https://ethresear.ch/u/lawliet-chan,2024-02-18,"Introducing Yu, A very suitable for L3, independency application blockchain framework"
+https://ethresear.ch/t/reducing-challenge-times-in-rollups/14997,https://ethresear.ch/u/edfelten,2024-02-17,Reducing challenge times in rollups
+https://ethresear.ch/t/efficient-onchain-reward-distribution-pooled-payments-dividends/1924,https://ethresear.ch/u/bogdan,2024-02-16,"Efficient Onchain Reward Distribution (pooled payments, dividends)"
+https://ethresear.ch/t/paths-to-hardening-pbs/18666,https://ethresear.ch/u/fradamt,2024-02-16,Paths to hardening PBS
+https://ethresear.ch/t/oao-onchain-ai-oracle/18675,https://ethresear.ch/u/fewwwww,2024-02-16,OAO: Onchain AI Oracle
+https://ethresear.ch/t/opml-is-all-you-need-run-a-13b-ml-model-on-ethereum/17175,https://ethresear.ch/u/0x1cc,2024-02-14,opML is All You Need: Run a 13B ML Model on Ethereum
+https://ethresear.ch/t/rfc-eip7503-private-transfers/18664,https://ethresear.ch/u/mikirov,2024-02-14,[RFC] EIP7503 Private transfers
+https://ethresear.ch/t/what-are-your-thoughts-on-decentralized-lotteries/13089,https://ethresear.ch/u/petertakahashi,2024-02-14,What are your thoughts on decentralized lotteries?
+https://ethresear.ch/t/simple-decentralized-names-with-proof-of-elapsed-time/18663,https://ethresear.ch/u/uptrenda,2024-02-14,Simple decentralized names with proof-of elapsed time?
+https://ethresear.ch/t/the-price-is-right-realigning-proposer-builder-incentives-with-predictive-mev-burn/18656,https://ethresear.ch/u/soispoke,2024-02-13,The price is right: Realigning proposer-builder incentives with predictive MEV-burn
+https://ethresear.ch/t/space-program-update-launch-ethereum-nodes-into-gso-geosynchronous-orbit/18614,https://ethresear.ch/u/mirror,2024-02-13,[Space Program] [Update] Launch Ethereum nodes into GSO （Geosynchronous orbit ）
+https://ethresear.ch/t/minimal-epbs-beacon-chain-changes/18653,https://ethresear.ch/u/terence,2024-02-12,Minimal ePBS - Beacon Chain Changes
+https://ethresear.ch/t/state-lock-auctions-towards-collaborative-block-building/18558,https://ethresear.ch/u/dmarz,2024-02-11,State Lock Auctions: Towards Collaborative Block Building
+https://ethresear.ch/t/transaction-submission-on-based-rollups/18631,https://ethresear.ch/u/mteam88,2024-02-11,Transaction Submission on Based Rollups
+https://ethresear.ch/t/universal-plasma-and-da-challenges/18629,https://ethresear.ch/u/donnoh,2024-02-09,Universal Plasma and DA challenges
+https://ethresear.ch/t/era-archival-files-for-block-and-consensus-data/13526,https://ethresear.ch/u/arnetheduck,2024-02-09,ERA - archival files for block and consensus data
+https://ethresear.ch/t/uniswap-v4-hook-lvr-minimization-with-per-block-conversion-vs-futures-contracts/18610,https://ethresear.ch/u/chris0205.eth,2024-02-08,Uniswap V4 hook: LVR-minimization with Per-block conversion vs. Futures contracts
+https://ethresear.ch/t/prover-time-comparison-of-gkr-groth16-vs-groth16-for-proving-mimc-hashes/8373,https://ethresear.ch/u/alexandrebelling,2024-02-08,Prover time comparison of GKR+Groth16 vs. Groth16 for proving MiMC hashes
+https://ethresear.ch/t/grounded-relay-superpowers-from-relay-coordination/18601,https://ethresear.ch/u/drewvanderwerff,2024-02-07,Grounded Relay: Superpowers from Relay Coordination
+https://ethresear.ch/t/eip-4844-fee-market-analysis/15078,https://ethresear.ch/u/dcrapis,2024-02-07,EIP-4844 Fee Market Analysis
+https://ethresear.ch/t/cross-rollup-nft-wrapper-and-migration-ideas/10507,https://ethresear.ch/u/vbuterin,2024-02-06,Cross-rollup NFT wrapper and migration ideas
+https://ethresear.ch/t/bridging-nfts-across-layers/10799,https://ethresear.ch/u/psinelnikov,2024-02-06,Bridging NFTs across layers
+https://ethresear.ch/t/m-of-n-secret-sharing-with-pre-known-shares/10074,https://ethresear.ch/u/vbuterin,2024-02-06,M-of-N secret sharing with pre-known shares
+https://ethresear.ch/t/intent-based-bridge-between-l2s-and-ethereum-powered-by-multi-proof-storage-proofs/18563,https://ethresear.ch/u/unbalancedparenthese,2024-02-05,Intent based bridge between L2s and Ethereum powered by multi-proof storage proofs
+https://ethresear.ch/t/elgamal-encryption-decryption-and-rerandomization-with-circom-support/8074,https://ethresear.ch/u/weijiekoh,2024-02-04,"ElGamal encryption, decryption, and rerandomization, with circom support"
+https://ethresear.ch/t/single-slot-finality-based-on-discrete-deposits/18199,https://ethresear.ch/u/liveduo,2024-02-04,Single slot finality based on discrete deposits
+https://ethresear.ch/t/based-rollups-superpowers-from-l1-sequencing/15016,https://ethresear.ch/u/justindrake,2024-02-02,Based rollups—superpowers from L1 sequencing
+https://ethresear.ch/t/booster-rollups-part-2-zk-evm-as-a-zk-coprocessor/17279,https://ethresear.ch/u/brecht,2024-02-02,Booster rollups part 2: ZK-EVM as a ZK coprocessor
+https://ethresear.ch/t/empirical-analysis-of-cross-domain-cex-dex-arbitrage-on-ethereum/17620,https://ethresear.ch/u/0xcchan,2024-02-02,Empirical Analysis of Cross Domain CEX <> DEX Arbitrage on Ethereum
+https://ethresear.ch/t/asynchronous-timing-agnostic-sharded-blockchain-using-client-side-ordinal-transaction-ordering/17481,https://ethresear.ch/u/cryptskii,2024-02-01,"Asynchronous, Timing-Agnostic, Sharded Blockchain using Client-side Ordinal Transaction Ordering"
+https://ethresear.ch/t/booster-rollups-scaling-l1-directly/17125,https://ethresear.ch/u/brecht,2024-02-01,Booster rollups - scaling L1 directly
+https://ethresear.ch/t/2fa-zk-rollups-using-sgx/14462,https://ethresear.ch/u/justindrake,2024-01-31,2FA zk-rollups using SGX
+https://ethresear.ch/t/zkconvex-a-large-scale-anonymous-electronic-voting-scheme-based-on-zk-snarks/18461,https://ethresear.ch/u/mirror,2024-01-31,zkConvex - A Large-Scale Anonymous Electronic Voting Scheme Based on zk-SNARKs
+https://ethresear.ch/t/unified-description-of-schnorr-ecdsa-and-bls-digital-signatures/18504,https://ethresear.ch/u/jtapolcai,2024-01-31,"Unified Description of Schnorr, ECDSA and BLS Digital Signatures"
+https://ethresear.ch/t/execution-consensus-client-bootnodes/14588,https://ethresear.ch/u/pcaversaccio,2024-01-30,Execution & Consensus Client Bootnodes
+https://ethresear.ch/t/part2-decentralized-secure-efficient-orbital-station/18392,https://ethresear.ch/u/zerokpunk,2024-01-30,"Part2: Decentralized, Secure, Efficient Orbital Station"
+https://ethresear.ch/t/advancing-blockchain-transaction-privacy-and-compliance-insights-into-innovative-engineering-practices/18487,https://ethresear.ch/u/gyllone,2024-01-29,Advancing Blockchain Transaction Privacy and Compliance: Insights into Innovative Engineering Practices
+https://ethresear.ch/t/analyzing-missed-slot-through-the-lens-of-relays-a-potential-path-for-relay-incentivization/18257,https://ethresear.ch/u/ballsyalchemist,2024-01-26,Analyzing Missed Slot Through The Lens of Relays – A potential path for relay incentivization
+https://ethresear.ch/t/flashbots-frontrunning-the-mev-crisis/8251,https://ethresear.ch/u/thegostep,2024-01-26,Flashbots: Frontrunning the MEV crisis
+https://ethresear.ch/t/completely-recursive-snark-circuit-the-savior-of-play-to-earn/18439,https://ethresear.ch/u/mirror,2024-01-26,Completely Recursive SNARK Circuit - The Savior of “Play to Earn”
+https://ethresear.ch/t/is-this-desk-lacking-administration/17249,https://ethresear.ch/u/peersky,2024-01-26,Is this desk lacking administration?
+https://ethresear.ch/t/an-alternative-incentive-mechanism-to-achieve-client-diversity/11986,https://ethresear.ch/u/ammarlakho,2024-01-25,An alternative incentive mechanism to achieve client diversity
+https://ethresear.ch/t/testing-path-for-a-gas-limit-increase/18399,https://ethresear.ch/u/parithosh,2024-01-24,Testing path for a gas limit increase
+https://ethresear.ch/t/leveraging-an-existing-pki-for-a-trustless-and-privacy-preserving-identity-verification-scheme/15154,https://ethresear.ch/u/pierre,2024-01-23,Leveraging an existing PKI for a trustless and privacy preserving identity verification scheme
+https://ethresear.ch/t/sticking-to-8192-signatures-per-slot-post-ssf-how-and-why/17989,https://ethresear.ch/u/vbuterin,2024-01-22,Sticking to 8192 signatures per slot post-SSF: how and why
+https://ethresear.ch/t/basic-tokenomics-discussion-at-econ-101-level/18110,https://ethresear.ch/u/noamnisan,2024-01-18,Basic tokenomics discussion at econ-101 level
+https://ethresear.ch/t/default-post-quantum-signature-scheme/2665,https://ethresear.ch/u/ericm,2024-01-18,Default post-quantum signature scheme?
+https://ethresear.ch/t/part1-boosting-the-connectivity-of-ethereum-layer2s/18390,https://ethresear.ch/u/zerokpunk,2024-01-18,Part1: Boosting the connectivity of Ethereum Layer2s
+https://ethresear.ch/t/a-decentralised-solver-architecture-for-executing-intents-on-evm-blockchain/16608,https://ethresear.ch/u/rishotics,2024-01-16,A decentralised solver architecture for executing intents on EVM blockchain
+https://ethresear.ch/t/based-rollups-can-reward-proposers-first-come-first-serve/18317,https://ethresear.ch/u/mteam88,2024-01-15,Based Rollups can reward Proposers First Come First Serve
+https://ethresear.ch/t/privatizing-the-volume-and-timing-of-ethereum-transactions/16184,https://ethresear.ch/u/trevormil,2024-01-15,Privatizing the Volume and Timing of Ethereum Transactions
+https://ethresear.ch/t/private-accounts-module-on-ethereum-without-underlying-protocol-changes/16297,https://ethresear.ch/u/eerkaijun,2024-01-15,Private Accounts Module on Ethereum (Without Underlying Protocol Changes)
+https://ethresear.ch/t/stealth-address-in-account-abstraction/16774,https://ethresear.ch/u/jstinhw,2024-01-15,Stealth Address in Account Abstraction
+https://ethresear.ch/t/cicada-private-on-chain-voting-from-homomorphic-time-lock-puzzles/15748,https://ethresear.ch/u/moodlezoup,2024-01-15,Cicada: private on-chain voting from homomorphic time-lock puzzles
+https://ethresear.ch/t/anti-mixer-privacy-protocol/16687,https://ethresear.ch/u/snjax,2024-01-15,Anti-mixer privacy protocol
+https://ethresear.ch/t/compliant-sanction-for-tornado-cash/18326,https://ethresear.ch/u/jstinhw,2024-01-15,Compliant Sanction for Tornado Cash
+https://ethresear.ch/t/the-language-design-that-on-evm-v-s-that-on-others/9548,https://ethresear.ch/u/ghasshee,2024-01-14,"The language design, that on EVM v.s. that on Others"
+https://ethresear.ch/t/proper-disk-i-o-gas-pricing-via-lru-cache/18146,https://ethresear.ch/u/phabc,2024-01-14,Proper disk i/o gas pricing via LRU cache
+https://ethresear.ch/t/validator-timing-game-post-eip4844/18129,https://ethresear.ch/u/terence,2024-01-13,Validator Timing Game Post EIP4844
+https://ethresear.ch/t/proving-a-chain-of-hashes-using-plonky2/15246,https://ethresear.ch/u/garvitgoel,2024-01-13,Proving a Chain of Hashes using plonky2
+https://ethresear.ch/t/negative-price-amm/17833,https://ethresear.ch/u/v-for-vasya,2024-01-12,Negative Price AMM
+https://ethresear.ch/t/a-totally-innovative-idea-to-solve-privacy-issue-let-us-discuss-the-feasibility-of-this-plan/13742,https://ethresear.ch/u/vitalikfans,2024-01-10,A totally innovative idea to solve privacy issue.Let us discuss the feasibility of this plan
+https://ethresear.ch/t/trust-minimised-dns-oracle-based-on-zk-tls-verification/18183,https://ethresear.ch/u/alexhook,2024-01-10,Trust-minimised DNS oracle based on ZK TLS verification
+https://ethresear.ch/t/social-forking-options/18248,https://ethresear.ch/u/themandalore,2024-01-09,Social Forking Options
+https://ethresear.ch/t/unlocking-pbs-with-cl-verification-of-block-coinbase-e-g-multi-tx-flashloans/17955,https://ethresear.ch/u/thogard785,2024-01-08,Unlocking PBS with CL Verification of “block.coinbase” (E.G. Multi Tx Flashloans)
+https://ethresear.ch/t/daily-demand-cycle-and-intraday-gas-price-volatility/6330,https://ethresear.ch/u/osolmaz,2024-01-08,Daily demand cycle and intraday gas price volatility
+https://ethresear.ch/t/proposer-selection-with-increased-maxeb-eip-7251/18144,https://ethresear.ch/u/sandjohnson,2024-01-08,Proposer selection with increased MaxEB (EIP-7251)
+https://ethresear.ch/t/zkuniswap-a-first-of-its-kind-zkamm/16839,https://ethresear.ch/u/diego,2024-01-07,zkUniswap: a first-of-its-kind zkAMM
+https://ethresear.ch/t/blockchain-based-notarization-platform-on-ethereum/5326,https://ethresear.ch/u/heleness,2024-01-06,Blockchain-based notarization platform on Ethereum
+https://ethresear.ch/t/stark-round-by-round-soundness-and-security-in-random-oracle-model/18096,https://ethresear.ch/u/elibensasson,2024-01-05,STARK Round By Round Soundness and Security in Random Oracle Model
+https://ethresear.ch/t/mapp-multi-asset-privacy-pool/17748,https://ethresear.ch/u/adust09,2024-01-05,MAPP(Multi Asset Privacy Pool)
+https://ethresear.ch/t/analyzing-bft-proposer-promised-preconfirmations/17963,https://ethresear.ch/u/ed,2024-01-04,Analyzing BFT & Proposer-Promised Preconfirmations
+https://ethresear.ch/t/own-dapp-a-more-decentralized-dapp-paradigm/18137,https://ethresear.ch/u/wenzhenxiang,2024-01-04,Own Dapp，a more decentralized Dapp paradigm
+https://ethresear.ch/t/accelerate-l2-evm-execution-with-flat-kv-and-two-stage-fraud-proof/18134,https://ethresear.ch/u/qizhou,2024-01-04,Accelerate L2 EVM Execution with Flat KV and Two-Stage Fraud Proof
+https://ethresear.ch/t/verify-ed25519-signatures-cheaply-on-eth-using-zk-snarks/13139,https://ethresear.ch/u/garvitgoel,2024-01-01,Verify ed25519 signatures cheaply on Eth using ZK-Snarks
+https://ethresear.ch/t/stark-proving-low-degree-ness-of-a-data-availability-root-some-analysis/6214,https://ethresear.ch/u/vbuterin,2023-12-01,STARK-proving low-degree-ness of a data availability root: some analysis
+https://ethresear.ch/t/a-recursive-sierpinski-triangle-topology-sharded-blockchain-unlocking-realtime-global-scalability/17263,https://ethresear.ch/u/cryptskii,2023-12-01,"A recursive Sierpinski Triangle topology, sharded blockchain, unlocking realtime global scalability"
+https://ethresear.ch/t/clarification-on-how-calldata-persists-on-the-blockchain-and-how-optimistic-rollups-use-it/8136,https://ethresear.ch/u/zkzak,2023-12-01,Clarification on how Calldata persists on the blockchain and how Optimistic Rollups use it
+https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509,https://ethresear.ch/u/mikeneuder,2023-12-01,Slashing penalty analysis; EIP-7251
+https://ethresear.ch/t/can-ethscripts-really-replace-l2-can-dumb-contracts-establish-an-ecosystem/17119,https://ethresear.ch/u/baiyibo,2023-12-01,Can Ethscripts really replace L2? Can dumb contracts establish an ecosystem？
+https://ethresear.ch/t/why-enshrine-proposer-builder-separation-a-viable-path-to-epbs/15710,https://ethresear.ch/u/mikeneuder,2023-12-01,Why enshrine Proposer-Builder Separation? A viable path to ePBS
+https://ethresear.ch/t/building-a-decentralized-key-value-store-on-top-of-irc/17967,https://ethresear.ch/u/uptrenda,2023-12-01,Building a decentralized key-value store on top of IRC
+https://ethresear.ch/t/account-abstraction-need-your-feedback-on-explorer/17208,https://ethresear.ch/u/ianlapinskii,2023-12-01,Account Abstraction - Need Your Feedback on Explorer
+https://ethresear.ch/t/a-taxonomy-of-data-availability-policies-in-ethereum-rollups/17949,https://ethresear.ch/u/emmanuel-awosika,2023-12-01,A taxonomy of data availability policies in (Ethereum) rollups
+https://ethresear.ch/t/collecting-attestations-with-gossip-protocols-in-a-single-slot/17470,https://ethresear.ch/u/jtapolcai,2023-12-01,Collecting attestations with gossip protocols in a single slot
+https://ethresear.ch/t/the-cost-of-artificial-latency-in-the-pbs-context/17847,https://ethresear.ch/u/umbnat92,2023-12-01,The cost of artificial latency in the PBS context
+https://ethresear.ch/t/release-blockhash-opcode-restrictions-with-zk-snarks-for-optimistic-bridges/17898,https://ethresear.ch/u/tomo_tagami,2023-12-01,Release Blockhash Opcode Restrictions with zk-SNARKs for Optimistic Bridges
+https://ethresear.ch/t/optimistic-bridge-with-separated-liquidity-pool/17796,https://ethresear.ch/u/tomo_tagami,2023-12-01,Optimistic Bridge with Separated Liquidity Pool
+https://ethresear.ch/t/empirical-analysis-of-the-impact-of-block-delays-on-the-consensus-layer/17888,https://ethresear.ch/u/aimxhaisse,2023-12-01,Empirical analysis of the impact of block delays on the consensus layer
+https://ethresear.ch/t/distributing-ethereum-state-over-portal-network/17882,https://ethresear.ch/u/morph-dev,2023-12-01,Distributing Ethereum State over Portal Network
+https://ethresear.ch/t/dr-changestuff-or-how-i-learned-to-stop-worrying-and-love-mev-burn/17384,https://ethresear.ch/u/mikeneuder,2023-12-01,Dr. changestuff or: how i learned to stop worrying and love mev-burn
+https://ethresear.ch/t/approaches-to-ibc-light-clients-via-snarks/17473,https://ethresear.ch/u/zork780,2023-12-01,Approaches to IBC light clients via SNARKs
+https://ethresear.ch/t/wallet-abstraction-is-not-account-abstraction/17445,https://ethresear.ch/u/wenzhenxiang,2023-12-01,Wallet Abstraction - is not Account Abstraction
+https://ethresear.ch/t/timing-games-implications-and-possible-mitigations/17612,https://ethresear.ch/u/casparschwa,2023-12-01,Timing Games: Implications and Possible Mitigations
+https://ethresear.ch/t/onchain-computation-proofs-for-evm/17804,https://ethresear.ch/u/alexeuler,2023-12-01,Onchain computation proofs for EVM
+https://ethresear.ch/t/trusta-s-ai-and-machine-learning-framework-for-robust-sybil-resistance-in-airdrops/16828,https://ethresear.ch/u/0xpeet,2023-12-01,Trusta’s AI and Machine Learning Framework for Robust Sybil Resistance in Airdrops
+https://ethresear.ch/t/exploring-paths-to-a-decentralized-censorship-resistant-and-non-predatory-mev-ecosystem/17312,https://ethresear.ch/u/thogard785,2023-12-01,"Exploring paths to a decentralized, censorship-resistant, and non-predatory MEV Ecosystem"
+https://ethresear.ch/t/new-paradigm-wallets-and-tokens/15947,https://ethresear.ch/u/wenzhenxiang,2023-12-01,New Paradigm Wallets and Tokens
+https://ethresear.ch/t/transper-state-extraction-and-monitoring-of-ethereum-contracts/7736,https://ethresear.ch/u/talhaahmad209,2023-12-01,Transper: State Extraction and monitoring of Ethereum Contracts
+https://ethresear.ch/t/eip-665-add-precompiled-contract-for-ed25519-signature-verification/17689,https://ethresear.ch/u/bomuidesign,2023-12-01,EIP-665: Add precompiled contract for Ed25519 signature verification
+https://ethresear.ch/t/the-zk-op-debate-in-raas-why-zk-raas-takes-the-lead/16492,https://ethresear.ch/u/nanfengpo,2023-12-01,The ZK/OP Debate in RaaS: Why ZK-RaaS Takes the Lead
+https://ethresear.ch/t/kzg-privacy-pools/17750,https://ethresear.ch/u/eerkaijun,2023-12-01,KZG Privacy Pools
+https://ethresear.ch/t/building-an-evm-for-bitcoin/15402,https://ethresear.ch/u/punk3700,2023-12-01,Building an EVM for Bitcoin
+https://ethresear.ch/t/decentralized-mev-relays-enhancing-security-with-zero-knowledge-proofs/15404,https://ethresear.ch/u/bsanchez1998,2023-12-01,Decentralized MEV Relays: Enhancing security with Zero-Knowledge Proofs
+https://ethresear.ch/t/transaction-carrying-theorem-tct-proposal-design-level-safety-for-smart-contract/17651,https://ethresear.ch/u/billy1900,2023-12-01,Transaction Carrying Theorem (TCT) Proposal: design-level safety for smart contract
+https://ethresear.ch/t/edinburgh-decentralization-index-invitation-to-contribute/17540,https://ethresear.ch/u/mtefagh,2023-12-01,Edinburgh Decentralization Index - Invitation to Contribute
+https://ethresear.ch/t/flooding-protocol-for-collecting-attestations-in-a-single-slot/17553,https://ethresear.ch/u/jtapolcai,2023-12-01,Flooding Protocol for Collecting Attestations in a Single Slot
+https://ethresear.ch/t/construction-of-perpetuals-amm-protocol/16072,https://ethresear.ch/u/zergity,2023-12-01,Construction of Perpetuals AMM Protocol
+https://ethresear.ch/t/perp-dex-liquidity/17624,https://ethresear.ch/u/parzivalishan,2023-12-01,Perp dex liquidity
+https://ethresear.ch/t/enhancing-the-competitive-edge-of-lst-by-expanding-the-use-cases-of-new-lsts/17616,https://ethresear.ch/u/signalxu,2023-12-01,Enhancing the competitive edge of LST by expanding the use cases of new LSTs
+https://ethresear.ch/t/trustless-access-to-ethereum-state-with-swarm/17350,https://ethresear.ch/u/tonytony,2023-12-01,Trustless access to Ethereum State with Swarm
+https://ethresear.ch/t/introducing-exclave-scaling-l1-with-zk-coprocessor/17572,https://ethresear.ch/u/sky-ranker,2023-12-01,"Introducing Exclave, scaling L1 with ZK coprocessor"
+https://ethresear.ch/t/bringing-polkadot-tech-to-ethereum/17104,https://ethresear.ch/u/apoorvsadana,2023-12-01,Bringing Polkadot tech to Ethereum
+https://ethresear.ch/t/nebula-a-novel-discv5-dht-crawler/17488,https://ethresear.ch/u/dennis-tra,2023-11-01,Nebula - A novel discv5 DHT crawler
+https://ethresear.ch/t/introducing-crosslayer-and-delphinus-lab-zkwasm-rollups-solution-brings-ewasm-to-layer2/17487,https://ethresear.ch/u/bngjly,2023-11-01,Introducing CrossLayer and Delphinus Lab: zkWasm Rollups solution brings eWASM to Layer2
+https://ethresear.ch/t/poloniex-hacker-lost-2-500-000-to-a-known-erc-20-security-flaw-that-i-disclosed-in-2017/17387,https://ethresear.ch/u/dexaran,2023-11-01,"Poloniex hacker lost $2,500,000 to a known ERC-20 security flaw that I disclosed in 2017"
+https://ethresear.ch/t/network-shards-concept-idea/17417,https://ethresear.ch/u/nashatyrev,2023-11-01,Network Shards (concept idea)
+https://ethresear.ch/t/using-irc-as-an-experimental-dns-system/17523,https://ethresear.ch/u/coinbend,2023-11-01,Using IRC as an experimental DNS system
+https://ethresear.ch/t/media-score-as-the-infrastructure-for-on-chain-reputation-and-user-value-assessment/16830,https://ethresear.ch/u/0xpeet,2023-11-01,MEDIA SCORE as the Infrastructure for On-chain Reputation And User Value Assessment
+https://ethresear.ch/t/cumulative-non-expiring-inclusion-lists/16520,https://ethresear.ch/u/nerolation,2023-11-01,"Cumulative, Non-Expiring Inclusion Lists"
+https://ethresear.ch/t/implications-of-pipelined-bft-on-shared-sequencers/17495,https://ethresear.ch/u/rohan,2023-11-01,Implications of Pipelined BFT on Shared Sequencers
+https://ethresear.ch/t/rollup-decentralisation-analysis-framework/17366,https://ethresear.ch/u/perseverance,2023-11-01,Rollup Decentralisation Analysis Framework
+https://ethresear.ch/t/what-communication-protocols-do-the-eth-clients-nodes-use-for-communicating-with-other-eth-clients/17450,https://ethresear.ch/u/eggsyoncode,2023-11-01,What communication protocols do the eth clients/nodes use for communicating with other eth clients?
+https://ethresear.ch/t/mev-burn-incentivizing-earlier-bidding-in-a-simple-design/17389,https://ethresear.ch/u/aelowsson,2023-11-01,MEV burn: Incentivizing earlier bidding in “a simple design”
+https://ethresear.ch/t/specification-for-the-unchained-index-version-2-0-feedback-welcome/17406,https://ethresear.ch/u/quickblocks,2023-11-01,Specification for the Unchained Index Version 2.0 - Feedback welcome
+https://ethresear.ch/t/discussion-thread-for-evm-plasma-ideas/17429,https://ethresear.ch/u/vbuterin,2023-11-01,Discussion thread for EVM plasma ideas
+https://ethresear.ch/t/deep-learning-based-solution-for-smart-contract-vulnerabilities-detection/17452,https://ethresear.ch/u/mirror,2023-11-01,Deep learning-based solution for smart contract vulnerabilities detection
+https://ethresear.ch/t/the-costs-of-censorship-a-modeling-and-simulation-approach-to-inclusion-lists/17382,https://ethresear.ch/u/soispoke,2023-11-01,The Costs of Censorship: A Modeling and Simulation Approach to Inclusion Lists
+https://ethresear.ch/t/distributed-validator-technology-dvt-mini-pools-safestakes-unique-approach-to-decentralizing-ethereum/17407,https://ethresear.ch/u/daniejjimenez,2023-11-01,Distributed Validator Technology (DVT) + Mini-Pools: SafeStake’s Unique Approach to Decentralizing Ethereum
+https://ethresear.ch/t/validator-smoothing-commitments/17356,https://ethresear.ch/u/jvranek,2023-11-01,Validator Smoothing Commitments
+https://ethresear.ch/t/subnetdas-an-intermediate-das-approach/17169,https://ethresear.ch/u/fradamt,2023-11-01,SubnetDAS - an intermediate DAS approach
+https://ethresear.ch/t/decentralized-reputation-system-for-voluntary-donations-positioning-advertising-and-customer-review/17315,https://ethresear.ch/u/piotruscik,2023-11-01,"Decentralized reputation system for voluntary donations, positioning/advertising and customer review"
+https://ethresear.ch/t/optimistic-delegation-framework-restaking-delegation-for-solo-stakers/17371,https://ethresear.ch/u/drewvanderwerff,2023-11-01,Optimistic Delegation Framework - Restaking Delegation for Solo Stakers
+https://ethresear.ch/t/big-block-diffusion-and-organic-big-blocks-on-ethereum/17346,https://ethresear.ch/u/leobago,2023-11-01,Big Block Diffusion and Organic Big Blocks on Ethereum
+https://ethresear.ch/t/fun-and-games-with-inclusion-lists/16557,https://ethresear.ch/u/barnabe,2023-11-01,Fun and games with inclusion lists
+https://ethresear.ch/t/security-concerns-regarding-token-standards-and-130m-worth-of-erc20-tokens-loss-on-ethereum-mainnet/16387,https://ethresear.ch/u/dexaran,2023-11-01,Security concerns regarding token standards and $130M worth of ERC20 tokens loss on Ethereum mainnet
+https://ethresear.ch/t/using-the-graph-to-preserve-historical-data-and-enable-eip-4444/17318,https://ethresear.ch/u/severiano-sisneros,2023-11-01,Using The Graph to Preserve Historical Data and Enable EIP-4444
+https://ethresear.ch/t/economic-incentives-for-sustainable-ethereum-node-operations-and-data-integrity/17316,https://ethresear.ch/u/tudorpintea999,2023-11-01,Economic Incentives for Sustainable Ethereum Node Operations and Data Integrity
+https://ethresear.ch/t/no-free-lunch-a-new-inclusion-list-design/16389,https://ethresear.ch/u/mikeneuder,2023-11-01,No free lunch – a new inclusion list design
+https://ethresear.ch/t/the-influence-of-cefi-defi-arbitrage-on-order-flow-auction-bid-profiles/17258,https://ethresear.ch/u/tripoli,2023-11-01,The Influence of CeFi-DeFi Arbitrage on Order-Flow Auction Bid Profiles
+https://ethresear.ch/t/searcherbuilder-pics-an-open-source-dashboard-on-searcher-builder-relationship-searcher-dominance/17288,https://ethresear.ch/u/winnster,2023-11-01,Searcherbuilder.pics: an Open-Source Dashboard on Searcher-Builder Relationship & Searcher Dominance
+https://ethresear.ch/t/introducing-poseidon-vm-a-zkapp-friendly-blockchain-virtual-machine-with-evm-compatibility/14012,https://ethresear.ch/u/xerophyte,2023-11-01,Introducing Poseidon VM: A zkApp-friendly blockchain virtual machine with EVM Compatibility
+https://ethresear.ch/t/mev-burn-a-simple-design/15590,https://ethresear.ch/u/justindrake,2023-11-01,MEV burn—a simple design
+https://ethresear.ch/t/the-application-of-zk-snarks-in-solidity-privacy-transformation-computational-optimization-and-mev-resistance/17017,https://ethresear.ch/u/mirror,2023-11-01,"The Application of ZK-SNARKs in Solidity - Privacy Transformation, Computational Optimization, and MEV Resistance"
+https://ethresear.ch/t/practical-we-bridge-theorized-while-reviewing-the-source-code-of-zelda-links-awakening/16115,https://ethresear.ch/u/cryptskii,2023-11-01,Practical WE bridge theorized while reviewing the source code of Zelda: Links Awakening
+https://ethresear.ch/t/specing-out-forward-inclusion-list-w-dedicated-gas-limits/17115,https://ethresear.ch/u/terence,2023-10-01,Spec’ing out Forward Inclusion-List w/ Dedicated Gas Limits
+https://ethresear.ch/t/time-restricted-transaction-execution/17024,https://ethresear.ch/u/joseph,2023-10-01,Time Restricted Transaction Execution
+https://ethresear.ch/t/rfc-deep-dive-into-snap-sync-for-rollups/17204,https://ethresear.ch/u/perseverance,2023-10-01,RFC: Deep dive into snap sync for rollups
+https://ethresear.ch/t/nft-price-oracle-a-credibly-neutral-algorithm-for-nft-price-discovery/17225,https://ethresear.ch/u/black71113,2023-10-01,NFT Price Oracle: A credibly neutral algorithm for NFT price discovery
+https://ethresear.ch/t/proposal-creating-a-hardware-topic/13626,https://ethresear.ch/u/ctrl-alt-lulz,2023-10-01,Proposal: Creating a hardware topic
+https://ethresear.ch/t/economics-for-p2p-rpc-data-marketplace/17214,https://ethresear.ch/u/peersky,2023-10-01,Economics for P2P (RPC) data marketplace
+https://ethresear.ch/t/novel-techniques-for-zkvm-design/17176,https://ethresear.ch/u/victor,2023-10-01,Novel techniques for zkVM design
+https://ethresear.ch/t/in-a-post-mev-burn-world-some-simulations-and-stats/17092,https://ethresear.ch/u/nerolation,2023-10-01,In a post MEV-Burn world - Some simulations and stats
+https://ethresear.ch/t/pos-sequencer-pool-decentralizing-an-optimistic-rollup/16760,https://ethresear.ch/u/psinelnikov,2023-10-01,PoS Sequencer Pool: Decentralizing an Optimistic Rollup
+https://ethresear.ch/t/relays-in-a-post-epbs-world/16278,https://ethresear.ch/u/mikeneuder,2023-10-01,Relays in a post-ePBS world
+https://ethresear.ch/t/twamm-with-zk-to-hide-iceberg-order-details/16337,https://ethresear.ch/u/rabia1272,2023-10-01,Twamm with zk to hide iceberg order details
+https://ethresear.ch/t/cross-rollup-payment-channel-with-no-online-requirement-for-sender-recipient/17136,https://ethresear.ch/u/leohio,2023-10-01,Cross Rollup payment channel with no online requirement for sender/recipient
+https://ethresear.ch/t/fhe-dksap-fully-homomorphic-encryption-based-dual-key-stealth-address-protocol/16213,https://ethresear.ch/u/mason-mind,2023-10-01,FHE-DKSAP: Fully Homomorphic Encryption based Dual Key Stealth Address Protocol
+https://ethresear.ch/t/open-problem-improving-stealth-addresses/7438,https://ethresear.ch/u/vbuterin,2023-10-01,Open problem: improving stealth addresses
+https://ethresear.ch/t/eip-6956-asset-bound-non-fungible-tokens/17142,https://ethresear.ch/u/xiaolou86,2023-10-01,Eip-6956: Asset-bound Non-Fungible Tokens
+https://ethresear.ch/t/supercharging-the-nist-elliptic-curve-seeds-bounty/17137,https://ethresear.ch/u/pcaversaccio,2023-10-01,Supercharging the NIST Elliptic Curve Seeds Bounty
+https://ethresear.ch/t/visualization-for-builders-reputation/15959,https://ethresear.ch/u/keccak255,2023-10-01,Visualization for builders reputation
+https://ethresear.ch/t/jolt-and-lasso-a-new-approach-to-building-zkvm-part-2/17114,https://ethresear.ch/u/jeroenvdgraaf,2023-10-01,"Jolt and Lasso, a New Approach to Building zkVM — Part 2"
+https://ethresear.ch/t/opml-optimistic-machine-learning-on-blockchain/16234,https://ethresear.ch/u/0x1cc,2023-10-01,OPML: Optimistic Machine Learning on Blockchain
+https://ethresear.ch/t/topiada-mini-danksharding-the-most-ethereum-roadmap-compatible-da/17089,https://ethresear.ch/u/yokung,2023-10-01,TopiaDA(Mini Danksharding): The most Ethereum roadmap compatible DA
+https://ethresear.ch/t/commitment-satisfaction-committees-an-in-protocol-solution-to-pepc/17055,https://ethresear.ch/u/diego,2023-10-01,🗳️ Commitment-Satisfaction Committees: An In-Protocol Solution to PEPC
+https://ethresear.ch/t/smart-contract-state-analyzer-extractor-and-explorer-smartmuv/17044,https://ethresear.ch/u/waizkhan7,2023-10-01,"Smart Contract State Analyzer, Extractor and Explorer - SmartMuv"
+https://ethresear.ch/t/cross-l1-information-transfer-via-master-rollup-secured-by-ethereum-consensus/16889,https://ethresear.ch/u/stanieltron,2023-10-01,Cross-L1 information transfer via Master-Rollup secured by Ethereum consensus
+https://ethresear.ch/t/recovering-from-smart-contract-hacks-forkable-reversible-roll-ups/16781,https://ethresear.ch/u/josojo,2023-10-01,"Recovering from smart contract hacks: Forkable, Reversible Roll-Ups"
+https://ethresear.ch/t/making-flashbot-relay-stateless-with-eip-x/16788,https://ethresear.ch/u/sogolmalek,2023-10-01,Making Flashbot Relay stateless with EIP-x
+https://ethresear.ch/t/request-for-a-new-category-of-this-site/16711,https://ethresear.ch/u/ghasshee,2023-10-01,Request for a new category of this site
+https://ethresear.ch/t/realigning-block-building-incentives-and-responsibilities-block-negotiation-layer/16666,https://ethresear.ch/u/lukanus,2023-10-01,Realigning block building incentives and responsibilities - Block Negotiation Layer
+https://ethresear.ch/t/proof-of-validator-a-simple-anonymous-credential-scheme-for-ethereums-dht/16454,https://ethresear.ch/u/asn,2023-09-01,Proof of Validator: A simple anonymous credential scheme for Ethereum’s DHT
+https://ethresear.ch/t/super-finality-high-safety-confirmation-for-casper/16429,https://ethresear.ch/u/ssrivatsan97,2023-09-01,Super-Finality: High-Safety Confirmation for Casper
+https://ethresear.ch/t/where-is-the-alt-mempool/16786,https://ethresear.ch/u/raghavendra-pegasys,2023-09-01,Where is the Alt mempool?
+https://ethresear.ch/t/reducing-lst-dominance-risk-by-decoupling-attestation-weight-from-attestation-rewards/16523,https://ethresear.ch/u/minimalgravitas,2023-09-01,Reducing LST dominance risk by decoupling attestation weight from attestation rewards
+https://ethresear.ch/t/pepc-dvt-pepc-with-no-changes-to-the-consensus-protocol/16514,https://ethresear.ch/u/diego,2023-09-01,PEPC-DVT: PEPC with no changes to the consensus protocol
+https://ethresear.ch/t/making-pepc-dvt-private-with-bls-blinded-multi-signatures/16692,https://ethresear.ch/u/diego,2023-09-01,🛡️ Making PEPC-DVT private with BLS Blinded Multi-Signatures
+https://ethresear.ch/t/resistance-is-not-futile-cr-in-mev-boost/16762,https://ethresear.ch/u/mikeneuder,2023-09-01,Resistance is ~not~ futile; CR in mev-boost
+https://ethresear.ch/t/empirical-analysis-of-builders-behavioral-profiles-bbps/16327,https://ethresear.ch/u/soispoke,2023-09-01,Empirical analysis of Builders’ Behavioral Profiles (BBPs)
+https://ethresear.ch/t/prediction-market-design-for-betting-on-many-highly-improbable-events/8280,https://ethresear.ch/u/vbuterin,2023-09-01,Prediction market design for betting on many highly improbable events
+https://ethresear.ch/t/the-return-of-torus-based-cryptography-whisk-and-curdleproof-in-the-target-group/16678,https://ethresear.ch/u/asanso,2023-09-01,The return of Torus Based Cryptography: Whisk and Curdleproof in the target group
+https://ethresear.ch/t/removing-unnecessary-stress-from-ethereums-p2p-network/15547,https://ethresear.ch/u/adiasg,2023-09-01,Removing Unnecessary Stress from Ethereum’s P2P Network
+https://ethresear.ch/t/median-prices-as-alternative-to-twap-an-optimised-proof-of-concept-analysis-and-simulation/12778,https://ethresear.ch/u/hoytech,2023-09-01,"Median prices as alternative to TWAP: an optimised proof of concept, analysis, and simulation"
+https://ethresear.ch/t/statement-regarding-the-public-report-on-the-analysis-of-minroot/16670,https://ethresear.ch/u/mmaller,2023-09-01,Statement regarding the public report on the analysis of MinRoot
+https://ethresear.ch/t/enterprise-audit-availability-of-layer-2-solutions/16677,https://ethresear.ch/u/meridium,2023-09-01,Enterprise Audit Availability of Layer 2 Solutions
+https://ethresear.ch/t/simple-eth1-withdrawals-beacon-chain-centric/8256,https://ethresear.ch/u/djrtwo,2023-09-01,Simple eth1 withdrawals (beacon-chain centric)
+https://ethresear.ch/t/zero-knowledge-rollup-where-transactions-are-converted-to-zkp-prior-block-inclusion/16665,https://ethresear.ch/u/recursivelylabs,2023-09-01,Zero knowledge rollup where transactions are converted to zkp prior block inclusion
+https://ethresear.ch/t/how-can-we-decentralize-intents/16456,https://ethresear.ch/u/sk1122,2023-09-01,How can we decentralize intents?
+https://ethresear.ch/t/a-summary-on-consumer-blockchains/16484,https://ethresear.ch/u/liveduo,2023-09-01,A summary on consumer blockchains
+https://ethresear.ch/t/make-everything-a-based-optimistic-rollup/15940,https://ethresear.ch/u/onetruekirk,2023-09-01,Make Everything A Based Optimistic Rollup
+https://ethresear.ch/t/composable-airscript/6984,https://ethresear.ch/u/bobbinth,2023-09-01,Composable AirScript
+https://ethresear.ch/t/selfish-mining-in-pos/15551,https://ethresear.ch/u/mart1i1n,2023-09-01,Selfish mining in PoS
+https://ethresear.ch/t/streamlining-fast-finality/16591,https://ethresear.ch/u/fradamt,2023-09-01,Streamlining fast finality
+https://ethresear.ch/t/the-mev-fyi-project-mev-research-content-aggregator-and-search-engine/16586,https://ethresear.ch/u/val,2023-09-01,The mev.fyi project: MEV research content aggregator and search engine
+https://ethresear.ch/t/efficient-stateless-ethereum-execution/16480,https://ethresear.ch/u/sogolmalek,2023-09-01,Efficient Stateless Ethereum Execution
+https://ethresear.ch/t/a-solution-for-a-challenge-computing-new-block-state-root-and-state-changes-audit/16493,https://ethresear.ch/u/sogolmalek,2023-09-01,A solution for a Challenge: Computing New Block State Root and State Changes Audit
+https://ethresear.ch/t/payload-timeliness-committee-ptc-an-epbs-design/16054,https://ethresear.ch/u/mikeneuder,2023-09-01,Payload-timeliness committee (PTC) – an ePBS design
+https://ethresear.ch/t/strong-builder-identity-for-combating-builder-imposter-attacks/16550,https://ethresear.ch/u/maxresnick,2023-09-01,Strong Builder Identity for Combating Builder Imposter Attacks
+https://ethresear.ch/t/managed-cloud-storage/10282,https://ethresear.ch/u/mgraczyk,2023-09-01,Managed Cloud Storage
+https://ethresear.ch/t/an-appchain-based-approach-to-eth-rollups-with-ethlets/16512,https://ethresear.ch/u/jinghiskwon,2023-09-01,An appchain-based approach to Eth Rollups with Ethlets
+https://ethresear.ch/t/lvr-minimization-in-uniswap-v4/15900,https://ethresear.ch/u/the-ctra1n,2023-08-01,LVR-minimization in Uniswap V4
+https://ethresear.ch/t/passkey-based-account-abstraction-signer-for-smart-contract-wallets/15856,https://ethresear.ch/u/rishotics,2023-08-01,Passkey based Account Abstraction signer for smart contract wallets
+https://ethresear.ch/t/implementation-overview-of-partial-state-caching-mechanism/16483,https://ethresear.ch/u/sogolmalek,2023-08-01,Implementation overview Of partial state caching mechanism:
+https://ethresear.ch/t/bid-cancellations-considered-harmful/15500,https://ethresear.ch/u/mikeneuder,2023-08-01,Bid cancellations considered harmful
+https://ethresear.ch/t/better-history-access-by-contracts/2066,https://ethresear.ch/u/fahree,2023-08-01,Better history access by contracts
+https://ethresear.ch/t/jolt-and-lasso-a-new-approach-to-building-zkvms/16448,https://ethresear.ch/u/jeroenvdgraaf,2023-08-01,Jolt and Lasso: A New Approach to Building zkVMs
+https://ethresear.ch/t/onchain-reputation/16411,https://ethresear.ch/u/paven86,2023-08-01,Onchain Reputation
+https://ethresear.ch/t/private-proof-of-burn-ppob-call-free-smart-contract-interactions/16403,https://ethresear.ch/u/keyvank,2023-08-01,Private Proof of Burn (PPoB) + Call-free Smart-Contract interactions
+https://ethresear.ch/t/cross-chain-unified-smart-contract-account-without-preset-keystore/16199,https://ethresear.ch/u/leo,2023-08-01,Cross-Chain Unified Smart Contract Account without Preset Keystore
+https://ethresear.ch/t/zkmips-what-security-means-for-our-zkvm-s-proofs-part-2/16384,https://ethresear.ch/u/jeroenvdgraaf,2023-08-01,zkMIPS: What “Security” Means for Our zkVM’s Proofs (Part 2)
+https://ethresear.ch/t/solidity-function-types-conversion/16324,https://ethresear.ch/u/maniou-t,2023-08-01,Solidity Function Types conversion
+https://ethresear.ch/t/zkmips-what-security-means-for-our-zkvm-s-proofs-part-1/16375,https://ethresear.ch/u/jeroenvdgraaf,2023-08-01,zkMIPS: What “Security” Means for Our zkVM’s Proofs (Part 1)
+https://ethresear.ch/t/a-literature-review-on-rollups-and-validium/16370,https://ethresear.ch/u/liveduo,2023-08-01,A “literature review” on Rollups and Validium
+https://ethresear.ch/t/arcpay-a-trustless-validium/16334,https://ethresear.ch/u/blakemscurr,2023-08-01,ArcPay: a Trustless Validium
+https://ethresear.ch/t/improving-security-for-users-of-defi-services-dexs-through-mpc-threshold-signatures/10035,https://ethresear.ch/u/ra,2023-08-01,Improving security for users of DeFi services/DEXs through MPC/threshold signatures
+https://ethresear.ch/t/what-can-be-skipped-in-an-accountable-casper-ffg-light-client/16318,https://ethresear.ch/u/alistair,2023-08-01,What can be skipped in an accountable Casper FFG light client
+https://ethresear.ch/t/towards-a-stateless-account-abstraction-expanding-my-proposal-for-efficient-witness-verification-and-state-provider-entities/16299,https://ethresear.ch/u/sogolmalek,2023-08-01,Towards a Stateless Account abstraction: expanding my proposal for Efficient Witness Verification and State Provider Entities
+https://ethresear.ch/t/nuances-of-data-recoverability-in-data-availability-sampling/16256,https://ethresear.ch/u/vbuterin,2023-08-01,Nuances of data recoverability in data availability sampling
+https://ethresear.ch/t/latency-arms-race-concerns-in-blockspace-markets/14957,https://ethresear.ch/u/dcrapis,2023-08-01,Latency arms race concerns in blockspace markets
+https://ethresear.ch/t/three-dichotomies-in-epbs/16267,https://ethresear.ch/u/potuz,2023-08-01,Three dichotomies in ePBS
+https://ethresear.ch/t/cryptographic-canaries-and-backups/1235,https://ethresear.ch/u/justindrake,2023-08-01,Cryptographic canaries and backups
+https://ethresear.ch/t/improving-user-experience-for-time-sensitive-transactions-with-a-simple-change-to-execution-logic/16121,https://ethresear.ch/u/maxresnick,2023-08-01,Improving User Experience for Time Sensitive Transactions with a Simple Change to Execution Logic
+https://ethresear.ch/t/roll-up-roll-back-snark-side-chain-17000-tps/3675,https://ethresear.ch/u/barrywhitehat,2023-08-01,Roll_up / roll_back snark side chain ~17000 tps
+https://ethresear.ch/t/enhancing-stateless-witness-generation-for-efficient-verification-in-ethereum/16194,https://ethresear.ch/u/sogolmalek,2023-07-01,Enhancing Stateless Witness Generation for Efficient Verification in Ethereum
+https://ethresear.ch/t/game-theoretic-model-for-mev-boost-auctions-mma/16206,https://ethresear.ch/u/soispoke,2023-07-01,Game-theoretic Model for MEV-boost Auctions (MMA)
+https://ethresear.ch/t/proving-rollups-state/15169,https://ethresear.ch/u/daniel-k-ivanov,2023-07-01,Proving Rollups’ State
+https://ethresear.ch/t/priority-fee-should-be-burned-for-reverted-transactions/16186,https://ethresear.ch/u/michaelscurry,2023-07-01,Priority fee should be burned for reverted transactions
+https://ethresear.ch/t/do-not-add-bls12-precompile-implement-pasta-curves-w-o-trusted-setup-instead/12808,https://ethresear.ch/u/p_m,2023-07-01,"Do not add bls12 precompile, implement Pasta curves w/o trusted setup instead"
+https://ethresear.ch/t/almost-instant-interactive-fraud-proof-using-multi-sect-on-da-blobs-and-multi-step-zk-verifier/16169,https://ethresear.ch/u/qizhou,2023-07-01,Almost Instant Interactive Fraud Proof using Multi-Sect on DA BLOBs and multi-step ZK verifier
+https://ethresear.ch/t/reducing-intents-dependency-on-llms-for-generating-transaction-object/16182,https://ethresear.ch/u/arch0125,2023-07-01,Reducing Intents’ dependency on LLMs for generating Transaction Object
+https://ethresear.ch/t/anyone-working-on-solidity-verifiable-vdf/4279,https://ethresear.ch/u/kladkogex,2023-07-01,Anyone working on Solidity-verifiable VDF?
+https://ethresear.ch/t/a-subscription-protocol-with-a-constant-and-minimal-cost-for-nodes/16162,https://ethresear.ch/u/leohio,2023-07-01,A subscription protocol with a constant and minimal cost for nodes
+https://ethresear.ch/t/zkmips-a-zero-knowledge-zk-vm-based-on-mips-architecture/16156,https://ethresear.ch/u/roboalgo,2023-07-01,zkMIPS: A Zero-Knowledge (zk) VM based on MIPS Architecture
+https://ethresear.ch/t/low-toxicity-amm/13560,https://ethresear.ch/u/alexnezlobin,2023-07-01,Low-Toxicity AMM
+https://ethresear.ch/t/somebody-wants-to-help-me-implement-polynomial-decomposition-algorithm/16150,https://ethresear.ch/u/haael,2023-07-01,Somebody wants to help me implement polynomial decomposition algorithm?
+https://ethresear.ch/t/what-to-do-with-lost-coins-in-post-quantum-world/15703,https://ethresear.ch/u/adamp,2023-07-01,What to do with lost coins in post-quantum world?
+https://ethresear.ch/t/an-evm-execution-layer-for-bitcoin/15694,https://ethresear.ch/u/0xdanrobins,2023-07-01,An EVM Execution Layer for Bitcoin
+https://ethresear.ch/t/implementing-a-secure-low-gas-and-generalized-spv-simplified-payment-verification-based-on-zero-knowledge-proof-zkp-technology/16135,https://ethresear.ch/u/silence,2023-07-01,"Implementing a secure, low-gas, and generalized SPV (Simplified Payment Verification) based on zero-knowledge proof (ZKP) technology"
+https://ethresear.ch/t/voting-delay-attack-punishing-honest-validators-in-pos/15421,https://ethresear.ch/u/mart1i1n,2023-07-01,Voting Delay Attack: Punishing Honest Validators in POS
+https://ethresear.ch/t/caution-against-monetary-experiments/15769,https://ethresear.ch/u/draco,2023-07-01,Caution against Monetary Experiments
+https://ethresear.ch/t/cascading-network-effects-on-ethereums-finality/15871,https://ethresear.ch/u/soispoke,2023-07-01,Cascading Network Effects on Ethereum’s Finality
+https://ethresear.ch/t/selfish-mixing-and-randao-manipulation/16081,https://ethresear.ch/u/nerolation,2023-07-01,Selfish Mixing and RANDAO Manipulation
+https://ethresear.ch/t/layer-2s-and-an-api-for-humanity-ie-popular-consensus/16092,https://ethresear.ch/u/mstrbstrd,2023-07-01,"Layer 2’s and an API for humanity, ie. Popular Consensus"
+https://ethresear.ch/t/free-evm-transaction-debugger-gas-cost-analyzer/16085,https://ethresear.ch/u/kowalski,2023-07-01,Free EVM transaction debugger/gas cost analyzer
+https://ethresear.ch/t/forkable-stablecoin/15820,https://ethresear.ch/u/josojo,2023-07-01,Forkable stablecoin
+https://ethresear.ch/t/parallel-evm-claim/16078,https://ethresear.ch/u/draganrakita,2023-07-01,Parallel EVM claim
+https://ethresear.ch/t/research-summary-modular-zk-rollup-on-demand/16061,https://ethresear.ch/u/tlavaur,2023-07-01,Research Summary - Modular zk-Rollup On-Demand
+https://ethresear.ch/t/the-archimedes-protocol-enhancing-defi-liquidity-and-accessibility-with-customizable-synthetic-trading/16059,https://ethresear.ch/u/armatrix,2023-07-01,The Archimedes Protocol — Enhancing DeFi Liquidity and Accessibility with Customizable Synthetic Trading.
+https://ethresear.ch/t/time-bound-token-tbt-generalized-time-based-claim-on-utility/15934,https://ethresear.ch/u/timelord.eth,2023-07-01,Time Bound Token (TBT): Generalized Time Based Claim on utility
+https://ethresear.ch/t/extending-the-economic-guarantees-of-a-schellingcoin-oracle/15544,https://ethresear.ch/u/claytonroche,2023-07-01,Extending the economic guarantees of a Schellingcoin oracle
+https://ethresear.ch/t/optimistic-pool-a-universal-co-processor-for-ethereum-mainnet/15903,https://ethresear.ch/u/levs57,2023-07-01,Optimistic pool - a universal co-processor for Ethereum mainnet
+https://ethresear.ch/t/opside-zk-pow-v2-0-a-multi-chain-and-multi-rollup-decentralized-prover-network/16034,https://ethresear.ch/u/nanfengpo,2023-07-01,Opside ZK-PoW V2.0: a multi-chain and multi-rollup decentralized prover network
+https://ethresear.ch/t/transaction-malleability-attack-of-groth16-proof/15881,https://ethresear.ch/u/beosin,2023-07-01,Transaction Malleability Attack of Groth16 Proof
+https://ethresear.ch/t/levitation-protocol-for-a-solidity-based-decentralized-sequencer/16013,https://ethresear.ch/u/kladkogex,2023-07-01,Levitation Protocol for a Solidity-based decentralized sequencer
+https://ethresear.ch/t/research-in-attacks-over-gasper/16005,https://ethresear.ch/u/n1ck47,2023-06-01,Research in attacks over Gasper
+https://ethresear.ch/t/password-recovery-for-account-abstraction-wallet/15923,https://ethresear.ch/u/terry,2023-06-01,Password recovery for Account Abstraction Wallet
+https://ethresear.ch/t/progressive-path-towards-precompiles/15980,https://ethresear.ch/u/xinbenlv,2023-06-01,Progressive path towards precompiles
+https://ethresear.ch/t/who-takes-the-tastiest-piece-of-the-mev-supply-chain-cake/15724,https://ethresear.ch/u/eigenphi,2023-06-01,Who Takes The Tastiest Piece of The MEV Supply Chain Cake?
+https://ethresear.ch/t/stateless-account-abstraction-that-scales-ethereum-without-chainges-in-protocol/15585,https://ethresear.ch/u/sogolmalek,2023-06-01,Stateless Account abstraction that scales Ethereum without chainges in protocol
+https://ethresear.ch/t/proposal-for-cross-ru-forced-transactions/15898,https://ethresear.ch/u/kelemeno,2023-06-01,Proposal for Cross RU forced transactions
+https://ethresear.ch/t/let-native-staked-eth-as-rai-s-cdp-based-on-dkg-dvt-rco/15894,https://ethresear.ch/u/flybirdwch,2023-06-01,Let native staked ETH as RAI’s CDP -based on DKG+DVT+RCO
+https://ethresear.ch/t/slashing-leads-to-slashing/15754,https://ethresear.ch/u/mart1i1n,2023-06-01,Slashing Leads to Slashing
+https://ethresear.ch/t/aggregating-pairings-with-sipp-in-plonky2/15842,https://ethresear.ch/u/nuno,2023-06-01,Aggregating pairings with SIPP in plonky2
+https://ethresear.ch/t/gas-estimation-problem-with-internal-transactions/15363,https://ethresear.ch/u/nebojsa,2023-06-01,Gas Estimation problem with internal transactions
+https://ethresear.ch/t/rfc-hierarchical-deterministic-wallet-derivation-function/15214,https://ethresear.ch/u/hazae41,2023-06-01,RFC: Hierarchical Deterministic Wallet Derivation Function
+https://ethresear.ch/t/hybrid-rollup-the-next-generation-infrastructure/15872,https://ethresear.ch/u/sin7y-research,2023-06-01,Hybrid Rollup - The Next-Generation Infrastructure
+https://ethresear.ch/t/rollups-bridges-blockchains/15739,https://ethresear.ch/u/bruno_f,2023-06-01,Rollups = Bridges + Blockchains
+https://ethresear.ch/t/orbiter-cross-rollup-protocol-optimistic-for-the-obedient-majority-and-severe-arbitration-for-malicious-minority/15828,https://ethresear.ch/u/zerokpunk,2023-06-01,Orbiter Cross Rollup Protocol: Optimistic For The Obedient Majority And Severe Arbitration For Malicious Minority
+https://ethresear.ch/t/stateless-rollups/15734,https://ethresear.ch/u/onetruekirk,2023-06-01,Stateless Rollups
+https://ethresear.ch/t/compact-fraud-proofs-for-utxo-chains-without-intermediate-state-serialization/5885,https://ethresear.ch/u/adlerjohn,2023-06-01,Compact Fraud Proofs for UTXO Chains Without Intermediate State Serialization
+https://ethresear.ch/t/branching-oracle-enshrined-rollup-governance/9552,https://ethresear.ch/u/edmundedgar,2023-06-01,Branching Oracle-enshrined Rollup Governance
+https://ethresear.ch/t/block-builder-centralization/12135,https://ethresear.ch/u/jgm,2023-05-01,Block builder centralization
+https://ethresear.ch/t/walllaw-a-dao-complete-governance-strcture/15756,https://ethresear.ch/u/parseb,2023-05-01,WalllaW: A DAO-complete Governance Strcture
+https://ethresear.ch/t/a-simple-persistent-pseudonym-scheme/14930,https://ethresear.ch/u/lsankar4033,2023-05-01,A simple persistent pseudonym scheme
+https://ethresear.ch/t/token-curated-wikis-knowledge-bases/3278,https://ethresear.ch/u/eazyc,2023-05-01,Token Curated Wikis/Knowledge Bases
+https://ethresear.ch/t/don-t-overload-ethereum-s-consensus-a-light-client-bridge-perspective/15667,https://ethresear.ch/u/garvitgoel,2023-05-01,Don’t overload Ethereum’s consensus - A Light Client Bridge Perspective
+https://ethresear.ch/t/quantifying-the-privacy-guarantees-of-validatory-privacy-mechanisms/15715,https://ethresear.ch/u/seresistvanandras,2023-05-01,Quantifying the Privacy Guarantees of Validatory Privacy Mechanisms
+https://ethresear.ch/t/secret-non-single-leader-election/11789,https://ethresear.ch/u/vbuterin,2023-05-01,Secret non-single leader election
+https://ethresear.ch/t/graphing-ethereum-a-persistent-layer-of-relationship-on-ethereum/15700,https://ethresear.ch/u/pond,2023-05-01,Graphing Ethereum - A Persistent Layer of Relationship on Ethereum
+https://ethresear.ch/t/towards-world-supercomputer/15487,https://ethresear.ch/u/fewwwww,2023-05-01,Towards World Supercomputer
+https://ethresear.ch/t/mev-for-based-rollup/15636,https://ethresear.ch/u/sthwnd,2023-05-01,MEV for “Based Rollup”
+https://ethresear.ch/t/alleviate-mev-on-sequencer-with-partial-fields-vdf-encoded-tx-and-zk-based-validity-proof/15668,https://ethresear.ch/u/qizhou,2023-05-01,Alleviate MEV on Sequencer with Partial-Fields-VDF-Encoded Tx and ZK-based Validity Proof
+https://ethresear.ch/t/schnorr-sequencer/15230,https://ethresear.ch/u/wanseob-lim,2023-05-01,Schnorr Sequencer
+https://ethresear.ch/t/sync-committees-exited-validators-participating-in-sync-committee/15634,https://ethresear.ch/u/builderbenny,2023-05-01,Sync committees - exited validators participating in sync committee?
+https://ethresear.ch/t/l2-economics-of-daily-airdrops-arbitrary-amounts-to-growing-base-of-players/15529,https://ethresear.ch/u/cleanapp,2023-05-01,L2 Economics of Daily Airdrops (Arbitrary Amounts to Growing Base of Players)
+https://ethresear.ch/t/rln-on-kzg-polynomial-commitment-scheme/15232,https://ethresear.ch/u/wanseob-lim,2023-05-01,RLN on KZG polynomial commitment scheme
+https://ethresear.ch/t/enabling-dnn-model-inference-on-the-blockchain/15390,https://ethresear.ch/u/canhui.chen,2023-05-01,Enabling DNN Model Inference on the Blockchain
+https://ethresear.ch/t/erc721-extension-for-zk-snarks/13237,https://ethresear.ch/u/nerolation,2023-05-01,ERC721 Extension for zk-SNARKs
+https://ethresear.ch/t/eip-1559-burn-and-price-stability/15626,https://ethresear.ch/u/bmpalatiello,2023-05-01,EIP-1559 burn and price stability
+https://ethresear.ch/t/zk-smart-contracts-for-the-masses-compiling-es6-javascript-to-zksnarks/15623,https://ethresear.ch/u/cf,2023-05-01,Zk Smart Contracts for the Masses: Compiling ES6 JavaScript to zkSNARKs
+https://ethresear.ch/t/designated-verifier-signatures/15100,https://ethresear.ch/u/shreyjaineth,2023-05-01,Designated Verifier Signatures
+https://ethresear.ch/t/rfc-ethereum-rollup-ecosystem-interactive-specification/15560,https://ethresear.ch/u/daniel-k-ivanov,2023-05-01,RFC: Ethereum Rollup Ecosystem - Interactive Specification
+https://ethresear.ch/t/horn-collecting-signatures-for-faster-finality/14219,https://ethresear.ch/u/asn,2023-05-01,Horn: Collecting signatures for faster finality
+https://ethresear.ch/t/a-research-on-mev-transaction-detection-using-graph-neural-networks/15553,https://ethresear.ch/u/wanify,2023-05-01,A research on MEV transaction detection using Graph Neural Networks
+https://ethresear.ch/t/eip-4626-tokenized-vaults/15478,https://ethresear.ch/u/jiokeokwuosa,2023-05-01,EIP-4626: Tokenized Vaults
+https://ethresear.ch/t/zkps-two-step-submission-algorithm-an-implementation-of-decentralized-provers/15504,https://ethresear.ch/u/nanfengpo,2023-05-01,ZKP’s Two-Step Submission Algorithm: An Implementation of Decentralized Provers
+https://ethresear.ch/t/limit-order-ticks/15486,https://ethresear.ch/u/0xrahul,2023-05-01,Limit Order Ticks
+https://ethresear.ch/t/superimposed-liquidity-enhancing-concentrated-liquidity-amm-pools-with-on-chain-limit-order-book/15489,https://ethresear.ch/u/0xrahul,2023-05-01,Superimposed Liquidity: Enhancing Concentrated Liquidity AMM Pools with On-Chain Limit Order Book
+https://ethresear.ch/t/a-hybrid-decentralized-zk-sequencer/15467,https://ethresear.ch/u/kladkogex,2023-05-01,A Hybrid decentralized ZK Sequencer
+https://ethresear.ch/t/hashi-a-principled-approach-to-bridges/14725,https://ethresear.ch/u/mkoeppelmann,2023-05-01,Hashi - A principled approach to bridges
+https://ethresear.ch/t/overcoming-gas-estimation-challenges/15463,https://ethresear.ch/u/jammabeans,2023-04-01,Overcoming Gas Estimation Challenges
+https://ethresear.ch/t/shielded-transfers-tokens-and-nfts/15424,https://ethresear.ch/u/blockdev,2023-04-01,Shielded transfers - Tokens and NFTs
+https://ethresear.ch/t/towards-practical-post-quantum-stealth-addresses/15437,https://ethresear.ch/u/asanso,2023-04-01,Towards practical post quantum stealth addresses
+https://ethresear.ch/t/nocust-a-securely-scalable-commit-chain/5026,https://ethresear.ch/u/guifel,2023-04-01,NOCUST - A Securely Scalable Commit-Chain
+https://ethresear.ch/t/geographical-decentralisation/13350,https://ethresear.ch/u/pdsilva2000,2023-04-01,Geographical Decentralisation
+https://ethresear.ch/t/crowdsourced-decentralized-zk-rollups/15415,https://ethresear.ch/u/kladkogex,2023-04-01,Crowdsourced decentralized ZK Rollups
+https://ethresear.ch/t/bridge-between-ethereum-pow-and-ethereum-pos/15411,https://ethresear.ch/u/syedmuhamadyasir,2023-04-01,Bridge between Ethereum PoW and Ethereum PoS?
+https://ethresear.ch/t/two-way-bridges-between-eth1-and-eth2/6286,https://ethresear.ch/u/vbuterin,2023-04-01,Two-way bridges between eth1 and eth2
+https://ethresear.ch/t/a-soundness-alert-function-for-zk-rollups/15377,https://ethresear.ch/u/liochon,2023-04-01,A soundness alert function for zk-rollups
+https://ethresear.ch/t/an-idea-about-how-to-use-zk-vms-with-the-edge-computing-achitectures-in-ethereum/15231,https://ethresear.ch/u/wanseob-lim,2023-04-01,An idea about how to use zk-vms with the Edge Computing Achitectures in Ethereum
+https://ethresear.ch/t/scam-mechanism-for-subgame-credible-anti-mev/15065,https://ethresear.ch/u/planck,2023-04-01,SCAM Mechanism for Subgame Credible anti-MEV
+https://ethresear.ch/t/could-gip-31-also-happen-on-ethereum/15317,https://ethresear.ch/u/pcaversaccio,2023-04-01,Could GIP-31 also happen on Ethereum?
+https://ethresear.ch/t/equivocation-attacks-in-mev-boost-and-epbs/15338,https://ethresear.ch/u/mikeneuder,2023-04-01,Equivocation attacks in mev-boost and ePBS
+https://ethresear.ch/t/erc-4337-can-token-owners-remotely-delete-token-supplies-from-abstract-smart-contract-wallets/15328,https://ethresear.ch/u/howardleejh,2023-04-01,ERC-4337 - Can Token owners remotely delete token supplies from abstract smart contract wallets?
+https://ethresear.ch/t/reducing-mev-with-transaction-auction/15057,https://ethresear.ch/u/mkoeppelmann,2023-04-01,Reducing MEV with transaction auction
+https://ethresear.ch/t/further-discussion-of-making-eip-1559-more-like-an-amm-curve/15165,https://ethresear.ch/u/maxresnick,2023-04-01,Further discussion of Making EIP 1559 more like an AMM curve
+https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763,https://ethresear.ch/u/asn,2023-04-01,Whisk: A practical shuffle-based SSLE protocol for Ethereum
+https://ethresear.ch/t/bringing-ibc-to-ethereum-using-zk-snarks/13634,https://ethresear.ch/u/garvitgoel,2023-04-01,Bringing IBC to Ethereum using ZK-Snarks
+https://ethresear.ch/t/a-not-quite-cryptoeconomic-decentralized-oracle/6453,https://ethresear.ch/u/vbuterin,2023-04-01,A not-quite-cryptoeconomic decentralized oracle
+https://ethresear.ch/t/ola-a-zkvm-based-high-performance-and-privacy-focusedlayer2-platform/15248,https://ethresear.ch/u/sin7y-research,2023-04-01,"Ola: A ZKVM-based, High-performance and Privacy-focusedLayer2 platform"
+https://ethresear.ch/t/dynamic-attacks-on-eigenlayer/15178,https://ethresear.ch/u/krzhang,2023-04-01,“Dynamic” Attacks On Eigenlayer
+https://ethresear.ch/t/extending-solidity-and-evm-towards-execution-sharding-a-proposal/15195,https://ethresear.ch/u/preda-devteam,2023-04-01,Extending Solidity and EVM towards Execution Sharding: A Proposal
+https://ethresear.ch/t/enabling-on-chain-order-matching-for-order-book-dexs-revisited-segmented-segment-trees-and-octopus-heaps-explained/15180,https://ethresear.ch/u/dev-clober,2023-03-01,[Enabling on-chain order matching for order book DEXs] Revisited: Segmented segment trees and octopus heaps explained
+https://ethresear.ch/t/a-zk-evm-specification/11549,https://ethresear.ch/u/olivierbbb,2023-03-01,A zk-evm specification
+https://ethresear.ch/t/off-chain-l2-nft-auction-protocol-idea/12930,https://ethresear.ch/u/0xkl1mt,2023-03-01,Off-chain/L2 NFT Auction Protocol Idea
+https://ethresear.ch/t/cryptographic-obfuscation-for-smart-contracts-trustless-bitcoin-bridge-and-more/15143,https://ethresear.ch/u/sorasuegami,2023-03-01,Cryptographic Obfuscation for Smart Contracts: Trustless Bitcoin Bridge and More
+https://ethresear.ch/t/graduation-research-ethereum-ecosystem/15126,https://ethresear.ch/u/jonb,2023-03-01,Graduation research Ethereum ecosystem
+https://ethresear.ch/t/low-bond-permissionless-stake-pools/15118,https://ethresear.ch/u/jvranek,2023-03-01,Low-bond Permissionless Stake Pools
+https://ethresear.ch/t/estimating-inclusion-delays-for-censored-transactions/15115,https://ethresear.ch/u/soispoke,2023-03-01,Estimating inclusion delays for censored transactions
+https://ethresear.ch/t/challenging-periods-reimagined-the-key-role-of-sequencer-decentralization/15110,https://ethresear.ch/u/danifi,2023-03-01,Challenging Periods Reimagined: The Key Role of Sequencer Decentralization
+https://ethresear.ch/t/wisp-zk-based-cross-rollup-communication-protocol/15059,https://ethresear.ch/u/daniel-k-ivanov,2023-03-01,Wisp: ZK-based Cross-Rollup-Communication Protocol
+https://ethresear.ch/t/challenging-periods-reimagined-road-to-dynamic-challenging-periods/15077,https://ethresear.ch/u/danifi,2023-03-01,Challenging Periods Reimagined: Road to dynamic challenging periods
+https://ethresear.ch/t/solution-to-scalability-trilemma-using-a-hierarchy-of-independent-chains-of-different-speeds/15064,https://ethresear.ch/u/sim31,2023-03-01,Solution to scalability trilemma using a hierarchy of *independent* chains of different speeds
+https://ethresear.ch/t/risc-v-for-l2-state-transition-computation-by-goshen/15054,https://ethresear.ch/u/0xdanrobins,2023-03-01,RISC-V for L2 state transition computation by Goshen
+https://ethresear.ch/t/using-the-legendre-symbol-as-a-prf-for-the-proof-of-custody/5169,https://ethresear.ch/u/dankrad,2023-03-01,Using the Legendre symbol as a PRF for the Proof of Custody
+https://ethresear.ch/t/poem-proof-of-entropy-minima/15012,https://ethresear.ch/u/alanorwick,2023-03-01,POEM: Proof of Entropy Minima
+https://ethresear.ch/t/anyone-looking-for-a-job-oppportunity-to-work-on-an-evm-innovation/15009,https://ethresear.ch/u/iulianivg,2023-03-01,Anyone looking for a job oppportunity to work on an EVM innovation?
+https://ethresear.ch/t/twap-oracle-extension-to-mitigate-the-risk-of-oracle-manipulation-under-pos/15010,https://ethresear.ch/u/averageuser404,2023-03-01,TWAP oracle extension to mitigate the risk of oracle manipulation under PoS
+https://ethresear.ch/t/multi-verifiers-as-a-hedge-against-validating-bridge-implementation-vulnerabilities/14974,https://ethresear.ch/u/toghrulmaharramov,2023-03-01,Multi-Verifiers as a Hedge Against Validating Bridge Implementation Vulnerabilities
+https://ethresear.ch/t/multiplicity-a-gadget-for-multiple-concurrent-block-proposers/14962,https://ethresear.ch/u/eljhfx,2023-03-01,Multiplicity: A Gadget for Multiple Concurrent Block Proposers
+https://ethresear.ch/t/unbundling-pbs-towards-protocol-enforced-proposer-commitments-pepc/13879,https://ethresear.ch/u/barnabe,2023-03-01,Unbundling PBS: Towards protocol-enforced proposer commitments (PEPC)
+https://ethresear.ch/t/ethereum-path-based-storage-model-and-newly-inline-state-prune/14932,https://ethresear.ch/u/calmbeing,2023-03-01,Ethereum Path-Based Storage Model and Newly Inline State Prune
+https://ethresear.ch/t/a-simple-single-slot-finality-protocol/14920,https://ethresear.ch/u/fradamt,2023-02-01,A simple Single Slot Finality protocol
+https://ethresear.ch/t/uncouple-blobs-from-the-execution-payload/14906,https://ethresear.ch/u/potuz,2023-02-01,Uncouple blobs from the execution payload
+https://ethresear.ch/t/why-i-dread-the-merge-and-why-you-should-too/12740,https://ethresear.ch/u/janeth,2023-02-01,"Why I dread the Merge, and why you should too"
+https://ethresear.ch/t/going-beyond-sbts-erc721-for-verifiable-credentials/14789,https://ethresear.ch/u/brycealan,2023-02-01,Going beyond SBTs & ERC721 for Verifiable Credentials
+https://ethresear.ch/t/towards-more-secure-twap-oracles-introducing-the-zk-median-zero-knowledge-proof-scheme-for-defi/14891,https://ethresear.ch/u/twister-dev,2023-02-01,Towards More Secure TWAP Oracles: Introducing the ZK Median Zero-Knowledge Proof Scheme for DeFi
+https://ethresear.ch/t/non-custodial-delegated-staking-protocol/14842,https://ethresear.ch/u/seongyun-ko,2023-02-01,"Non-custodial, Delegated Staking Protocol"
+https://ethresear.ch/t/benefits-of-not-improving-privacy/14848,https://ethresear.ch/u/michael2crypt,2023-02-01,Benefits of not improving privacy
+https://ethresear.ch/t/who-would-run-a-slasher-and-why/14623,https://ethresear.ch/u/builderbenny,2023-02-01,Who would run a slasher and why?
+https://ethresear.ch/t/helix2-name-link-service/14823,https://ethresear.ch/u/sshmatrix,2023-02-01,Helix2 Name & Link Service
+https://ethresear.ch/t/unveiling-olavm-proof-of-concept-the-next-generation-full-featured-zkvm/14817,https://ethresear.ch/u/sin7y-research,2023-02-01,Unveiling OlaVM Proof of Concept: The Next-Generation Full-Featured zkVM
+https://ethresear.ch/t/token-sales-and-shorting/376,https://ethresear.ch/u/vbuterin,2023-02-01,Token sales and shorting
+https://ethresear.ch/t/cross-rollup-censorship-resistance/14813,https://ethresear.ch/u/kelemeno,2023-02-01,Cross rollup censorship resistance
+https://ethresear.ch/t/how-much-can-we-constrain-builders-without-bringing-back-heavy-burdens-to-proposers/13808,https://ethresear.ch/u/vbuterin,2023-02-01,How much can we constrain builders without bringing back heavy burdens to proposers?
+https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954,https://ethresear.ch/u/aelowsson,2023-02-01,Circulating Supply Equilibrium for Ethereum and Minimum Viable Issuance during the Proof-of-Stake Era
+https://ethresear.ch/t/prediction-markets-and-a-reputation-system-in-place-of-editorial-review/14762,https://ethresear.ch/u/murraci,2023-02-01,Prediction markets and a reputation system in place of editorial review
+https://ethresear.ch/t/value-comparison-using-proof-of-sacrifice/14775,https://ethresear.ch/u/nathanjclark,2023-02-01,Value comparison using Proof-of-Sacrifice
+https://ethresear.ch/t/anomaly-detection-through-temporal-graph-neural-networks-thoughts/14782,https://ethresear.ch/u/christopherley,2023-02-01,Anomaly detection through Temporal Graph Neural Networks (thoughts?)
+https://ethresear.ch/t/what-are-your-thoughts-on-python-etl-what-are-your-preferred-methods-of-aggregating-data-from-ethereum-chain/4224,https://ethresear.ch/u/tucker-chambers,2023-02-01,What are your thoughts on Python ETL? What are your preferred methods of aggregating data from Ethereum chain?
+https://ethresear.ch/t/an-abiv3-design-for-tiny-calldata/14019,https://ethresear.ch/u/esaulpaugh,2023-02-01,An ABIv3 design for tiny calldata
+https://ethresear.ch/t/native-rollup-a-new-paradigm-of-zk-rollup/14529,https://ethresear.ch/u/nanfengpo,2023-02-01,Native Rollup: a new paradigm of zk-Rollup
+https://ethresear.ch/t/approximating-user-welfare-and-surplus-with-transaction-data/14766,https://ethresear.ch/u/dcrapis,2023-02-01,Approximating User Welfare and Surplus with Transaction Data
+https://ethresear.ch/t/hash-based-vdfs-mimc-and-starks/2337,https://ethresear.ch/u/vbuterin,2023-02-01,"Hash-based VDFs, MIMC and STARKs"
+https://ethresear.ch/t/nexus-a-decentralized-verifiable-cloud-computing-network-for-layer-agnostic-ethereum-scaling-powered-by-zkps-mpc/14744,https://ethresear.ch/u/danielmarinq,2023-02-01,Nexus: A Decentralized Verifiable Cloud Computing Network for Layer-Agnostic Ethereum Scaling (powered by ZKPs + MPC)
+https://ethresear.ch/t/2d-data-availability-with-kate-commitments/8081,https://ethresear.ch/u/vbuterin,2023-02-01,2D data availability with Kate commitments
+https://ethresear.ch/t/serverless-off-chain-ewasm-without-the-on-chain-risk/14758,https://ethresear.ch/u/zdanl,2023-02-01,Serverless: Off-chain EWASM without the on-chain risk
+https://ethresear.ch/t/subgroup-membership-testing-on-elliptic-curves-via-the-tate-pairing/13563,https://ethresear.ch/u/dishport,2023-02-01,Subgroup membership testing on elliptic curves via the Tate pairing
+https://ethresear.ch/t/zero-knowledge-tooling-for-an-eth-2-0-wasm-execution-layer/7080,https://ethresear.ch/u/jwasinger,2023-02-01,Zero Knowledge Tooling for an Eth 2.0 Wasm Execution Layer
+https://ethresear.ch/t/probably-outdated-but-eip-170-24kb-max-leading-to-expensive-on-chain-data-blobs-masqueraded-as-compiled-evm-bytecode/14752,https://ethresear.ch/u/zdanl,2023-02-01,"Probably outdated, but: EIP-170 24KB max. leading to Expensive On-Chain Data Blobs masqueraded as compiled EVM bytecode"
+https://ethresear.ch/t/developer-tool-for-execting-methods-in-deployed-contract/14750,https://ethresear.ch/u/samvelraja,2023-02-01,Developer tool for execting methods in deployed contract
+https://ethresear.ch/t/merkle-tree-with-o-1-append/14748,https://ethresear.ch/u/0xall,2023-02-01,Merkle tree with O(1) append
+https://ethresear.ch/t/full-implementation-of-proof-of-solvency-for-cex-based-on-customized-iop/14596,https://ethresear.ch/u/gyllone,2023-02-01,Full Implementation of Proof of Solvency for CEX based on Customized IOP
+https://ethresear.ch/t/axioms-for-constant-function-market-makers-cfmms/14724,https://ethresear.ch/u/kakia89,2023-01-01,Axioms for Constant Function Market Makers (CFMMs)
+https://ethresear.ch/t/incentive-mechanism-design-for-mitigating-frontrunning-and-transaction-reordering-in-decentralized-exchanges/14637,https://ethresear.ch/u/danieldoe,2023-01-01,Incentive Mechanism Design for Mitigating Frontrunning and Transaction Reordering in Decentralized Exchanges
+https://ethresear.ch/t/delay-attacks-on-rollups/14508,https://ethresear.ch/u/augustoteixeira,2023-01-01,Delay Attacks on Rollups
+https://ethresear.ch/t/towards-zero-mev-dynamic-private-anonymous-collateralized-commitments/14714,https://ethresear.ch/u/the-ctra1n,2023-01-01,Towards zero MEV: Dynamic Private Anonymous Collateralized Commitments
+https://ethresear.ch/t/rollup-as-a-service-opportunities-and-challenges/13051,https://ethresear.ch/u/nanfengpo,2023-01-01,Rollup as a Service: Opportunities and Challenges
+https://ethresear.ch/t/using-gkr-inside-a-snark-to-reduce-the-cost-of-hash-verification-down-to-3-constraints/7550,https://ethresear.ch/u/alexandrebelling,2023-01-01,Using GKR inside a SNARK to reduce the cost of hash verification down to 3 constraints
+https://ethresear.ch/t/i-written-a-time-deposit-contract-for-eth-and-erc20-tokens/14708,https://ethresear.ch/u/starrising,2023-01-01,I written a time deposit contract for ETH and erc20 tokens
+https://ethresear.ch/t/burning-mev-through-block-proposer-auctions/14029,https://ethresear.ch/u/domothy,2023-01-01,Burning MEV through block proposer auctions
+https://ethresear.ch/t/pairing-based-polynomial-commitment-scheme-without-a-trusted-setup/14694,https://ethresear.ch/u/zie1ony,2023-01-01,Pairing-based polynomial commitment scheme without a trusted setup
+https://ethresear.ch/t/generalized-low-degree-check-for-degree-2-l-with-application-to-fri/14689,https://ethresear.ch/u/qizhou,2023-01-01,Generalized Low Degree Check for Degree < 2^l with Application to FRI
+https://ethresear.ch/t/withdrawal-credentials-exits-based-on-a-generalized-message-bus/12516,https://ethresear.ch/u/arwer13,2023-01-01,Withdrawal Credentials Exits Based On A Generalized Message Bus

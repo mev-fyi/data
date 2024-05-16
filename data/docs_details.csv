@@ -9578,3 +9578,16 @@ Nomination Pools,,https://docs.availproject.org/docs/stake-on-avail/nomination-p
 Requesting data commitment ranges​,,https://docs.celestia.org/developers/blobstream-x-requesting-data-commitment-ranges,,developers-blobstream-x-requesting-data-commitment-ranges.pdf
 Quick Start Guide for zkSync Node,,https://docs.zksync.io/infra/quickstart.html,,infra-quickstart.html.pdf
 Margin Calculations,,https://docs.dydx.exchange/getting_started/margin_calculations,,getting_started-margin_calculations.pdf
+Glossary,,https://docs.aztec.network/misc/glossary/main,,misc-glossary-main.pdf
+Deploying Your Contracts for Free on the Superchain,,https://docs.optimism.io/builders/app-developers/tutorials/deploy-for-free,,builders-app-developers-tutorials-deploy-for-free.pdf
+ZK Chains,,https://docs.zksync.io/zk-stack/concepts/zk-chains.html,,zk-stack-concepts-zk-chains.html.pdf
+"Sessions The following tutorials provide a detailed, step-by-step guide on how to integrate Account Abstraction Sessions. If you're developing in TypeScript, it's recommended to utilize the SDK.",,https://docs.biconomy.io/tutorials/sessions/,,tutorials-sessions.pdf
+Create a session,,https://docs.biconomy.io/tutorials/sessions/createSession,,tutorials-sessions-createSession.pdf
+Use a session,,https://docs.biconomy.io/tutorials/sessions/useSession,,tutorials-sessions-useSession.pdf
+Create a batch session,,https://docs.biconomy.io/tutorials/sessions/createBatchSession,,tutorials-sessions-createBatchSession.pdf
+Use a batch session,,https://docs.biconomy.io/tutorials/sessions/useBatchSession,,tutorials-sessions-useBatchSession.pdf
+Create a custom SessionStorageClient,,https://docs.biconomy.io/tutorials/sessions/customSessionStorage,,tutorials-sessions-customSessionStorage.pdf
+"Utilities The following tutorials provide a detailed, step-by-step guide on how to use Biconomy SDK utility methods.",,https://docs.biconomy.io/tutorials/utils/,,tutorials-utils.pdf
+Offset User Operation Gas Values,,https://docs.biconomy.io/tutorials/utils/offsetGasValues,,tutorials-utils-offsetGasValues.pdf
+Transfer Ownership of your Smart Account,,https://docs.biconomy.io/tutorials/utils/transferOwnership,,tutorials-utils-transferOwnership.pdf
+Transaction insights,,https://docs.metamask.io/snaps/features/transaction-insights/,,snaps-features-transaction-insights.pdf
