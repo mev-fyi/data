@@ -9591,3 +9591,393 @@ Create a custom SessionStorageClient,,https://docs.biconomy.io/tutorials/session
 Offset User Operation Gas Values,,https://docs.biconomy.io/tutorials/utils/offsetGasValues,,tutorials-utils-offsetGasValues.pdf
 Transfer Ownership of your Smart Account,,https://docs.biconomy.io/tutorials/utils/transferOwnership,,tutorials-utils-transferOwnership.pdf
 Transaction insights,,https://docs.metamask.io/snaps/features/transaction-insights/,,snaps-features-transaction-insights.pdf
+Cluster → Address,,https://docs.clusters.xyz/technical-documentation/javascript-sdk/cluster-address,,technical-documentation-javascript-sdk-cluster-address.pdf
+Address → Cluster,,https://docs.clusters.xyz/technical-documentation/javascript-sdk/address-cluster,,technical-documentation-javascript-sdk-address-cluster.pdf
+Cluster → Metadata,,https://docs.clusters.xyz/technical-documentation/javascript-sdk/cluster-metadata,,technical-documentation-javascript-sdk-cluster-metadata.pdf
+Cluster → Address,,https://docs.clusters.xyz/technical-documentation/rest-api/cluster-address,,technical-documentation-rest-api-cluster-address.pdf
+Address → Cluster,,https://docs.clusters.xyz/technical-documentation/rest-api/address-cluster,,technical-documentation-rest-api-address-cluster.pdf
+Cluster → Metadata,,https://docs.clusters.xyz/technical-documentation/rest-api/cluster-metadata,,technical-documentation-rest-api-cluster-metadata.pdf
+Bidding,,https://docs.clusters.xyz/technical-documentation/rest-api/bidding,,technical-documentation-rest-api-bidding.pdf
+How to Run a Node in the Superchain,,https://docs.optimism.io/builders/node-operators/rollup-node,,builders-node-operators-rollup-node.pdf
+Indexing,,https://docs.clusters.xyz/technical-documentation/rest-api/indexing,,technical-documentation-rest-api-indexing.pdf
+Node Architecture,,https://docs.optimism.io/builders/node-operators/architecture,,builders-node-operators-architecture.pdf
+Managing Wallets,,https://docs.clusters.xyz/technical-documentation/rest-api/managing-wallets,,technical-documentation-rest-api-managing-wallets.pdf
+Node Base Configuration,,https://docs.optimism.io/builders/node-operators/configuration/base-config,,builders-node-operators-configuration-base-config.pdf
+Consensus Layer Configuration Options (op-node),,https://docs.optimism.io/builders/node-operators/configuration/consensus-config,,builders-node-operators-configuration-consensus-config.pdf
+Execution Layer Configuration Options (op-geth),,https://docs.optimism.io/builders/node-operators/configuration/execution-config,,builders-node-operators-configuration-execution-config.pdf
+Design Philosophy & Design Principles,,https://docs.optimism.io/stack/design-principles,,stack-design-principles.pdf
+Rollup Protocol Overview,,https://docs.optimism.io/stack/protocol/rollup/overview,,stack-protocol-rollup-overview.pdf
+Smart Contract Overview,,https://docs.optimism.io/stack/protocol/rollup/smart-contracts,,stack-protocol-rollup-smart-contracts.pdf
+Deposit Flow,,https://docs.optimism.io/stack/protocol/rollup/deposit-flow,,stack-protocol-rollup-deposit-flow.pdf
+Transaction Flow,,https://docs.optimism.io/stack/protocol/rollup/transaction-flow,,stack-protocol-rollup-transaction-flow.pdf
+Withdrawal Flow,,https://docs.optimism.io/stack/protocol/rollup/withdrawal-flow,,stack-protocol-rollup-withdrawal-flow.pdf
+"Install SGX (new DCAP) Got problems with using DCAP in your system? Please ask in the Telegram or Discord for help. For Validators, you can also ask in the SN Validators chat.",,https://docs.scrt.network/secret-network-documentation/infrastructure/setting-up-a-node-validator/testnet/install-sgx-1,,secret-network-documentation-infrastructure-setting-up-a-node-validator-testnet-install-sgx-1.pdf
+"Install SGX (new DCAP) Got problems with using DCAP in your system? Please ask in the Telegram or Discord for help. For Validators, you can also ask in the SN Validators chat.",,https://docs.scrt.network/secret-network-documentation/infrastructure/setting-up-a-node-validator/node-setup/install-sgx-1,,secret-network-documentation-infrastructure-setting-up-a-node-validator-node-setup-install-sgx-1.pdf
+Installing CLI & Creating A New Address,,https://docs.scrt.network/secret-network-documentation/infrastructure/setting-up-a-node-validator/node-setup/installing-cli-and-creating-a-new-address,,secret-network-documentation-infrastructure-setting-up-a-node-validator-node-setup-installing-cli-and-creating-a-new-address.pdf
+API Noderunning This section should give you a rough overview of how to run multiple nodes in a cluster than you can provide for your own dApp to use.,,https://docs.scrt.network/secret-network-documentation/infrastructure/api-noderunning,,secret-network-documentation-infrastructure-api-noderunning.pdf
+"Running Multiple Nodes on the Same Server It's possible to run multiple Secret Nodes on the same Secret-compatible server, and it is fairly easy to do so.",,https://docs.scrt.network/secret-network-documentation/infrastructure/api-noderunning/running-multiple-nodes-on-the-same-server,,secret-network-documentation-infrastructure-api-noderunning-running-multiple-nodes-on-the-same-server.pdf
+"Node Loadbalancing using Nginx To provide endpoints to users, you can use Nginx. It is a powerful tool for providing a loadbalanced endpoint that distributes the load across multiple nodes.",,https://docs.scrt.network/secret-network-documentation/infrastructure/api-noderunning/node-loadbalancing-using-nginx,,secret-network-documentation-infrastructure-api-noderunning-node-loadbalancing-using-nginx.pdf
+Setup Nginx,,https://docs.scrt.network/secret-network-documentation/infrastructure/api-noderunning/node-loadbalancing-using-nginx/setup-nginx,,secret-network-documentation-infrastructure-api-noderunning-node-loadbalancing-using-nginx-setup-nginx.pdf
+Example Nginx config Here is an examplenginx.conf,,https://docs.scrt.network/secret-network-documentation/infrastructure/api-noderunning/node-loadbalancing-using-nginx/example-nginx-config,,secret-network-documentation-infrastructure-api-noderunning-node-loadbalancing-using-nginx-example-nginx-config.pdf
+"Using Auto heal to improve cluster uptime for Nginx Most noderunners have the common problem that stale nodes, meaning nodes that are stuck at a certain block height and will not continue keeping up the chain tip, provide horrible UX to users. To mitigate this, we can add some extra monitoring tools to dynamically add or remove nodes from the cluster.",,https://docs.scrt.network/secret-network-documentation/infrastructure/api-noderunning/using-auto-heal-to-improve-cluster-uptime-for-nginx,,secret-network-documentation-infrastructure-api-noderunning-using-auto-heal-to-improve-cluster-uptime-for-nginx.pdf
+v1.12,,https://docs.scrt.network/secret-network-documentation/infrastructure/upgrade-instructions/v1.12-1,,secret-network-documentation-infrastructure-upgrade-instructions-v1.12-1.pdf
+"Contribute to the documentation First of all, thanks for being here! Our intention is to be as transparent and collaborative as possible, and we hope you enjoy building Secret Contracts and secret apps. We are so grateful to the amazing people who make invaluable contributions to this open-source project and its ecosystem.",,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute,,secret-network-documentation-infrastructure-how-to-contribute.pdf
+"Report Bugs This section walks you through submitting a bug report for Secret Network. Following these guidelines helps maintainers and other members of the community understand your report, reproduce the behavior, and find related reports.",,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute/report-bugs,,secret-network-documentation-infrastructure-how-to-contribute-report-bugs.pdf
+"Suggest Enhancements This section guides you through submitting an enhancement suggestion for Secret Network, including entirely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your request and find related suggestions.",,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute/suggest-enhancements,,secret-network-documentation-infrastructure-how-to-contribute-suggest-enhancements.pdf
+First Contribution Guide Unsure where to begin contributing to Secret Network?,,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute/first-contribution-guide,,secret-network-documentation-infrastructure-how-to-contribute-first-contribution-guide.pdf
+Pull Request Templates Hello there! Welcome. Please follow the steps below to tell us about your contribution.,,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute/pull-request-templates,,secret-network-documentation-infrastructure-how-to-contribute-pull-request-templates.pdf
+Update Documentation,,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute/pull-request-templates/update-documentation,,secret-network-documentation-infrastructure-how-to-contribute-pull-request-templates-update-documentation.pdf
+Bug Fix,,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute/pull-request-templates/bug-fix,,secret-network-documentation-infrastructure-how-to-contribute-pull-request-templates-bug-fix.pdf
+Improve Performance,,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute/pull-request-templates/improve-performance,,secret-network-documentation-infrastructure-how-to-contribute-pull-request-templates-improve-performance.pdf
+Change Functionality,,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute/pull-request-templates/change-functionality,,secret-network-documentation-infrastructure-how-to-contribute-pull-request-templates-change-functionality.pdf
+Style Guide,,https://docs.scrt.network/secret-network-documentation/infrastructure/how-to-contribute/formatting-guide,,secret-network-documentation-infrastructure-how-to-contribute-formatting-guide.pdf
+Versioning & Changelog Detailed Changelog of Secret Network can be found on the Github.,,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog,,secret-network-documentation-infrastructure-versioning-and-changelog.pdf
+Secret Network v1.13 Coming soon,,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog/secret-network-v1.13,,secret-network-documentation-infrastructure-versioning-and-changelog-secret-network-v1.13.pdf
+Secret Network v1.12 * Fix the hardcoded admins feature,,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog/secret-network-v1.12,,secret-network-documentation-infrastructure-versioning-and-changelog-secret-network-v1.12.pdf
+Secret Network v1.11 * Added ibc-hooks middleware by Osmosis.,,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog/secret-network-v1.11,,secret-network-documentation-infrastructure-versioning-and-changelog-secret-network-v1.11.pdf
+Secret Network v1.10 Patch against SGX Downfall vulnerability.,,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog/secret-network-v1.10,,secret-network-documentation-infrastructure-versioning-and-changelog-secret-network-v1.10.pdf
+Secret network v1.9 * New Feature:Randomness injection for secret contracts,,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog/secret-network-v1.9,,secret-network-documentation-infrastructure-versioning-and-changelog-secret-network-v1.9.pdf
+Secret Network v1.7/1.8,,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog/secret-network-v1.7-wip,,secret-network-documentation-infrastructure-versioning-and-changelog-secret-network-v1.7-wip.pdf
+Secret Network v1.6 The Secret Network v1.6 update did not introduce any breaking changes for developers. General performance improvements were introduced and described below;,,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog/secret-network-v1.6,,secret-network-documentation-infrastructure-versioning-and-changelog-secret-network-v1.6.pdf
+"Secret Network v1.5 The Secret Network v1.5 update did not introduce any breaking changes for developers, other than some bug fixes described below;",,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog/secret-network-v1.5-placeholder,,secret-network-documentation-infrastructure-versioning-and-changelog-secret-network-v1.5-placeholder.pdf
+Secret Network v1.4 (CosmWasm 1.0),,https://docs.scrt.network/secret-network-documentation/infrastructure/versioning-and-changelog/migration-from-cw-0.10-to-1.0,,secret-network-documentation-infrastructure-versioning-and-changelog-migration-from-cw-0.10-to-1.0.pdf
+eth_maxPriorityFeePerGas - Polygon PoS post,,https://docs.alchemy.com/reference/eth-maxpriorityfeepergas-polygon,,reference-eth-maxpriorityfeepergas-polygon.pdf
+Safe{Core} Infrastructure,,https://docs.safe.global/core-api/api-overview,,core-api-api-overview.pdf
+Running the Safe Transaction Service,,https://docs.safe.global/core-api/api-safe-transaction-service,,core-api-api-safe-transaction-service.pdf
+EIGEN Token Restaking FAQ Please see theEigenFoundation documentation site,,https://docs.eigenlayer.xyz/eigenlayer/restaking-guides/restaking-user-guide/EIGEN-faq,,eigenlayer-restaking-guides-restaking-user-guide-EIGEN-faq.pdf
+RPC Requirements,,https://docs.safe.global/core-api/api-safe-transaction-service/rpc-requirements,,core-api-api-safe-transaction-service-rpc-requirements.pdf
+FAQ,,https://docs.safe.global/core-api/api-safe-transaction-service/faq,,core-api-api-safe-transaction-service-faq.pdf
+Migrate to v1,,https://docs.safe.global/sdk/protocol-kit/reference/migrate-to-v1,,sdk-protocol-kit-reference-migrate-to-v1.pdf
+Support New Chains,,https://docs.safe.global/core-api/api-support-new-chains,,core-api-api-support-new-chains.pdf
+Migrate to v2,,https://docs.safe.global/sdk/protocol-kit/reference/migrate-to-v2,,sdk-protocol-kit-reference-migrate-to-v2.pdf
+Safe Transaction Service API,,https://docs.safe.global/core-api/transaction-service-overview,,core-api-transaction-service-overview.pdf
+Migrate to v3,,https://docs.safe.global/sdk/protocol-kit/reference/migrate-to-v3,,sdk-protocol-kit-reference-migrate-to-v3.pdf
+Supported Networks,,https://docs.safe.global/core-api/transaction-service-supported-networks,,core-api-transaction-service-supported-networks.pdf
+EigenLayer Learning Resources,,https://docs.eigenlayer.xyz/eigenlayer/resources/learning-resources,,eigenlayer-resources-learning-resources.pdf
+Migrate to v4,,https://docs.safe.global/sdk/protocol-kit/reference/migrate-to-v4,,sdk-protocol-kit-reference-migrate-to-v4.pdf
+Transactions with off-chain signatures,,https://docs.safe.global/core-api/transaction-service-guides/transactions,,core-api-transaction-service-guides-transactions.pdf
+APIs and Dashboards APIs,,https://docs.eigenlayer.xyz/eigenlayer/resources/apis-and-dashboards,,eigenlayer-resources-apis-and-dashboards.pdf
+Aztec Aztec is an L2 that brings programmable privacy to Ethereum.,,https://docs.aztec.network/aztec,,aztec.pdf
+Messages with off-chain signatures,,https://docs.safe.global/core-api/transaction-service-guides/messages,,core-api-transaction-service-guides-messages.pdf
+AVS MicroHacks Hackathon,,https://docs.eigenlayer.xyz/eigenlayer/resources/avs-microhacks,,eigenlayer-resources-avs-microhacks.pdf
+Vision,,https://docs.aztec.network/vision,,vision.pdf
+Manage user delegates,,https://docs.safe.global/core-api/transaction-service-guides/delegates,,core-api-transaction-service-guides-delegates.pdf
+Migrate to v2,,https://docs.safe.global/sdk/relay-kit/reference/migrate-to-v2,,sdk-relay-kit-reference-migrate-to-v2.pdf
+Quickstart The easiest way to start developing on Aztec is simply to click on one of these buttons:,,https://docs.aztec.network/getting_started,,getting_started.pdf
+Migrate to v3,,https://docs.safe.global/sdk/relay-kit/reference/migrate-to-v3,,sdk-relay-kit-reference-migrate-to-v3.pdf
+Migrate to v1,,https://docs.safe.global/sdk/api-kit/reference/migrate-to-v1,,sdk-api-kit-reference-migrate-to-v1.pdf
+"Migration notes Aztec is in full-speed development. Literally every version breaks compatibility with the previous ones. This page attempts to target errors and difficulties you might encounter when upgrading, and how to resolve them.",,https://docs.aztec.network/migration_notes,,migration_notes.pdf
+Migrate to v2,,https://docs.safe.global/sdk/api-kit/reference/migrate-to-v2,,sdk-api-kit-reference-migrate-to-v2.pdf
+Aztec Connect Sunset Deprecated,,https://docs.aztec.network/aztec_connect_sunset,,aztec_connect_sunset.pdf
+"Modal React Hooks Introduction Web3Auth provides essential React hooks for Web3Auth Modal SDK for managing authentication, chain",,https://web3auth.io/docs/sdk/pnp/web/modal/modal-hooks,,docs-sdk-pnp-web-modal-modal-hooks.pdf
+Golang client library tutorial​,,https://docs.celestia.org/developers/golang-client-tutorial,,developers-golang-client-tutorial.pdf
+Supported Wallets,,https://docs.near.org/tools/wallets,,tools-wallets.pdf
+Requesting data commitment ranges​,,https://docs.celestia.org/developers/blobstream-x-requesting-data-commitment-ranges,,developers-blobstream-x-requesting-data-commitment-ranges.pdf
+"No Modal React Hooks Introduction Web3Auth provides essential React hooks for Web3Auth No Modal SDK for managing authentication, chain",,https://web3auth.io/docs/sdk/pnp/web/no-modal/no-modal-hooks,,docs-sdk-pnp-web-no-modal-no-modal-hooks.pdf
+index,,https://docs.arbitrum.io/sdk-docs/,,sdk-docs.pdf
+assetBridger,,https://docs.arbitrum.io/sdk-docs/assetBridger/,,sdk-docs-assetBridger.pdf
+erc20Bridger,,https://docs.arbitrum.io/sdk-docs/assetBridger/erc20Bridger,,sdk-docs-assetBridger-erc20Bridger.pdf
+ethBridger,,https://docs.arbitrum.io/sdk-docs/assetBridger/ethBridger,,sdk-docs-assetBridger-ethBridger.pdf
+address,,https://docs.arbitrum.io/sdk-docs/dataEntities/address,,sdk-docs-dataEntities-address.pdf
+constants,,https://docs.arbitrum.io/sdk-docs/dataEntities/constants,,sdk-docs-dataEntities-constants.pdf
+errors,,https://docs.arbitrum.io/sdk-docs/dataEntities/errors,,sdk-docs-dataEntities-errors.pdf
+event,,https://docs.arbitrum.io/sdk-docs/dataEntities/event,,sdk-docs-dataEntities-event.pdf
+message,,https://docs.arbitrum.io/sdk-docs/dataEntities/message,,sdk-docs-dataEntities-message.pdf
+networks,,https://docs.arbitrum.io/sdk-docs/dataEntities/networks,,sdk-docs-dataEntities-networks.pdf
+retryableData,,https://docs.arbitrum.io/sdk-docs/dataEntities/retryableData,,sdk-docs-dataEntities-retryableData.pdf
+rpc,,https://docs.arbitrum.io/sdk-docs/dataEntities/rpc,,sdk-docs-dataEntities-rpc.pdf
+signerOrProvider,,https://docs.arbitrum.io/sdk-docs/dataEntities/signerOrProvider,,sdk-docs-dataEntities-signerOrProvider.pdf
+transactionRequest,,https://docs.arbitrum.io/sdk-docs/dataEntities/transactionRequest,,sdk-docs-dataEntities-transactionRequest.pdf
+inbox,,https://docs.arbitrum.io/sdk-docs/inbox/,,sdk-docs-inbox.pdf
+L1ToL2Message,,https://docs.arbitrum.io/sdk-docs/message/L1ToL2Message,,sdk-docs-message-L1ToL2Message.pdf
+L1ToL2MessageCreator,,https://docs.arbitrum.io/sdk-docs/message/L1ToL2MessageCreator,,sdk-docs-message-L1ToL2MessageCreator.pdf
+L1ToL2MessageGasEstimator,,https://docs.arbitrum.io/sdk-docs/message/L1ToL2MessageGasEstimator,,sdk-docs-message-L1ToL2MessageGasEstimator.pdf
+L1Transaction,,https://docs.arbitrum.io/sdk-docs/message/L1Transaction,,sdk-docs-message-L1Transaction.pdf
+L2ToL1Message,,https://docs.arbitrum.io/sdk-docs/message/L2ToL1Message,,sdk-docs-message-L2ToL1Message.pdf
+L2ToL1MessageClassic,,https://docs.arbitrum.io/sdk-docs/message/L2ToL1MessageClassic,,sdk-docs-message-L2ToL1MessageClassic.pdf
+L2ToL1MessageNitro,,https://docs.arbitrum.io/sdk-docs/message/L2ToL1MessageNitro,,sdk-docs-message-L2ToL1MessageNitro.pdf
+L2Transaction,,https://docs.arbitrum.io/sdk-docs/message/L2Transaction,,sdk-docs-message-L2Transaction.pdf
+arbProvider,,https://docs.arbitrum.io/sdk-docs/utils/arbProvider,,sdk-docs-utils-arbProvider.pdf
+byte_serialize_params,,https://docs.arbitrum.io/sdk-docs/utils/byte_serialize_params,,sdk-docs-utils-byte_serialize_params.pdf
+eventFetcher,,https://docs.arbitrum.io/sdk-docs/utils/eventFetcher,,sdk-docs-utils-eventFetcher.pdf
+lib,,https://docs.arbitrum.io/sdk-docs/utils/lib,,sdk-docs-utils-lib.pdf
+multicall,,https://docs.arbitrum.io/sdk-docs/utils/multicall,,sdk-docs-utils-multicall.pdf
+types,,https://docs.arbitrum.io/sdk-docs/utils/types,,sdk-docs-utils-types.pdf
+About Sei,,https://www.docs.sei.io/general-overview,,general-overview.pdf
+Staking,,https://www.docs.sei.io/general-staking,,general-staking.pdf
+(V1) Supported Networks and Assets,,https://stargateprotocol.gitbook.io/stargate/developers/v1-supported-networks-and-assets,,stargate-developers-v1-supported-networks-and-assets.pdf
+Governance,,https://www.docs.sei.io/general-governance,,general-governance.pdf
+(V2) Supported Networks and Assets,,https://stargateprotocol.gitbook.io/stargate/developers/v2-supported-networks-and-assets,,stargate-developers-v2-supported-networks-and-assets.pdf
+Submit Feedback,,https://www.docs.sei.io/general-submit-feedback,,general-submit-feedback.pdf
+Sei Branding,,https://www.docs.sei.io/general-brand-kit,,general-brand-kit.pdf
+Getting Started with Sei,,https://www.docs.sei.io/user-quickstart,,user-quickstart.pdf
+user-guides-wallet-setup.pdf,,https://www.docs.sei.io/user-guides/wallet-setup,,user-guides-wallet-setup.pdf
+Linking Sei and EVM / 0x Addresses,,https://www.docs.sei.io/user-guides/linking-addresses,,user-guides-linking-addresses.pdf
+Getting Sei Tokens,,https://www.docs.sei.io/user-guides/getting-tokens,,user-guides-getting-tokens.pdf
+Block Explorers,,https://www.docs.sei.io/user-guides/block-explorers,,user-guides-block-explorers.pdf
+Bridging to Sei Blockchain,,https://www.docs.sei.io/user-guides/bridging,,user-guides-bridging.pdf
+Wrapping and Unwrapping SEI Tokens,,https://www.docs.sei.io/user-guides/wrapped-sei,,user-guides-wrapped-sei.pdf
+user-FAQ.pdf,,https://www.docs.sei.io/user-FAQ,,user-FAQ.pdf
+celestia x Lava,,https://docs.lavanet.xyz/celestia,,celestia.pdf
+Running a celestia RPC Node,,https://docs.lavanet.xyz/celestia-node,,celestia-node.pdf
+Ecosystem Apps,,https://www.docs.sei.io/user-ecosystem-apps,,user-ecosystem-apps.pdf
+Sei is built for developers,,https://www.docs.sei.io/dev-intro,,dev-intro.pdf
+dev-chains.pdf,,https://www.docs.sei.io/dev-chains,,dev-chains.pdf
+Token Standards,,https://www.docs.sei.io/dev-token-standards,,dev-token-standards.pdf
+Gas on Sei,,https://www.docs.sei.io/dev-gas,,dev-gas.pdf
+Smart contracts,,https://www.docs.sei.io/dev-smart-contracts,,dev-smart-contracts.pdf
+Frontend Development,,https://www.docs.sei.io/dev-frontend-dapps,,dev-frontend-dapps.pdf
+Full Node GRPC Streaming,,https://docs.dydx.exchange/validators/full_node_streaming,,validators-full_node_streaming.pdf
+Wallets,,https://www.docs.sei.io/dev-ecosystem-providers/wallets,,dev-ecosystem-providers-wallets.pdf
+Explorers,,https://www.docs.sei.io/dev-ecosystem-providers/explorers,,dev-ecosystem-providers-explorers.pdf
+RPC Providers,,https://www.docs.sei.io/dev-ecosystem-providers/rpc-providers,,dev-ecosystem-providers-rpc-providers.pdf
+Indexers,,https://www.docs.sei.io/dev-ecosystem-providers/indexers,,dev-ecosystem-providers-indexers.pdf
+Centralized Exchanges,,https://www.docs.sei.io/dev-ecosystem-providers/centralized-exchanges,,dev-ecosystem-providers-centralized-exchanges.pdf
+Faucets,,https://www.docs.sei.io/dev-ecosystem-providers/faucets,,dev-ecosystem-providers-faucets.pdf
+Oracles,,https://www.docs.sei.io/dev-ecosystem-providers/oracles,,dev-ecosystem-providers-oracles.pdf
+FAQ,,https://docs.astaria.xyz/concepts/faq,,concepts-faq.pdf
+Bridges,,https://www.docs.sei.io/dev-ecosystem-providers/bridges,,dev-ecosystem-providers-bridges.pdf
+NFT’s,,https://www.docs.sei.io/dev-ecosystem-providers/nfts,,dev-ecosystem-providers-nfts.pdf
+Ecosystem Map,,https://www.docs.sei.io/dev-ecosystem-providers/ecosystem-map,,dev-ecosystem-providers-ecosystem-map.pdf
+Seid CLI,,https://www.docs.sei.io/dev-tutorials/installing-seid,,dev-tutorials-installing-seid.pdf
+Building a Frontend,,https://www.docs.sei.io/dev-tutorials/building-a-frontend,,dev-tutorials-building-a-frontend.pdf
+CosmWasm (general),,https://www.docs.sei.io/dev-tutorials/cosmwasm-general,,dev-tutorials-cosmwasm-general.pdf
+EVM (general),,https://www.docs.sei.io/dev-tutorials/evm-general,,dev-tutorials-evm-general.pdf
+Interact with EVM on Sei via CLI,,https://www.docs.sei.io/dev-tutorials/evm-cli-tutorial,,dev-tutorials-evm-cli-tutorial.pdf
+Token Factory Tutorial,,https://www.docs.sei.io/dev-tutorials/tokenfactory-tutorial,,dev-tutorials-tokenfactory-tutorial.pdf
+NFT Contract Tutorial,,https://www.docs.sei.io/dev-tutorials/nft-contract-tutorial,,dev-tutorials-nft-contract-tutorial.pdf
+Swapping,,https://docs.relay.link/how-it-works/swapping,,how-it-works-swapping.pdf
+Send parallel user ops using 2D nonce,,https://docs.biconomy.io/tutorials/parallelUserOps,,tutorials-parallelUserOps.pdf
+Pointer Contracts,,https://www.docs.sei.io/dev-tutorials/pointer-contracts,,dev-tutorials-pointer-contracts.pdf
+Fees Learn about Relay fees,,https://docs.relay.link/how-it-works/fees,,how-it-works-fees.pdf
+Multi-Sig accounts,,https://www.docs.sei.io/dev-tutorials/multi-sig-accounts,,dev-tutorials-multi-sig-accounts.pdf
+CLI Python Script,,https://docs.dydx.exchange/guides/cli_python_script,,guides-cli_python_script.pdf
+Overview,,https://www.docs.sei.io/dev-tutorials/ibc-protocol,,dev-tutorials-ibc-protocol.pdf
+IBC Relayer,,https://www.docs.sei.io/dev-tutorials/ibc-relayer,,dev-tutorials-ibc-relayer.pdf
+Local Sei Node,,https://www.docs.sei.io/dev-node/intro,,dev-node-intro.pdf
+Running a Sei RPC node,,https://www.docs.sei.io/dev-node/quickstart,,dev-node-quickstart.pdf
+Sei Node Setup Guide,,https://www.docs.sei.io/dev-node/node-operators,,dev-node-node-operators.pdf
+wait 30 seconds before restarting the service after it has failed. RestartSec,,https://www.docs.sei.io/dev-node/node-configuration,,dev-node-node-configuration.pdf
+Configure General Settings,,https://www.docs.sei.io/dev-node/configure-general-settings,,dev-node-configure-general-settings.pdf
+Get trust hash SYNC_BLOCK_HASH,,https://www.docs.sei.io/dev-node/join-a-network,,dev-node-join-a-network.pdf
+Running Seid,,https://www.docs.sei.io/dev-node/running-seid,,dev-node-running-seid.pdf
+What is a Validator,,https://www.docs.sei.io/dev-validators/overview,,dev-validators-overview.pdf
+Registering a Validator on Sei,,https://www.docs.sei.io/dev-validators/register,,dev-validators-register.pdf
+Implement security practices,,https://www.docs.sei.io/dev-validators/security-practices,,dev-validators-security-practices.pdf
+📬 Token Info,,https://docs.aperture.finance/docs/usdaptr-token/token-info,,docs-usdaptr-token-token-info.pdf
+Restore a Validator,,https://www.docs.sei.io/dev-validators/restore-validator,,dev-validators-restore-validator.pdf
+🥧 Tokenomics,,https://docs.aperture.finance/docs/usdaptr-token/tokenomics,,docs-usdaptr-token-tokenomics.pdf
+Running an Oracle Price Feeder,,https://www.docs.sei.io/dev-validators/oracle-price-feeder,,dev-validators-oracle-price-feeder.pdf
+Validator FAQ,,https://www.docs.sei.io/dev-validators/validator-faq,,dev-validators-validator-faq.pdf
+Fee Grants,,https://www.docs.sei.io/dev-advanced-concepts/fee-grants,,dev-advanced-concepts-fee-grants.pdf
+Account Structure,,https://www.docs.sei.io/dev-advanced-concepts/account-structure,,dev-advanced-concepts-account-structure.pdf
+Hardware Wallets,,https://www.docs.sei.io/dev-advanced-concepts/hardware-wallets,,dev-advanced-concepts-hardware-wallets.pdf
+Querying Historical State,,https://www.docs.sei.io/dev-advanced-concepts/querying-historical-state,,dev-advanced-concepts-querying-historical-state.pdf
+Oracles,,https://www.docs.sei.io/dev-advanced-concepts/oracles,,dev-advanced-concepts-oracles.pdf
+dev-advanced-concepts-execute-multiple.pdf,,https://www.docs.sei.io/dev-advanced-concepts/execute-multiple,,dev-advanced-concepts-execute-multiple.pdf
+HD Paths and Coin Types,,https://www.docs.sei.io/dev-advanced-concepts/hd-path-coin-types,,dev-advanced-concepts-hd-path-coin-types.pdf
+Creating a New Proposal,,https://www.docs.sei.io/dev-advanced-concepts/proposals,,dev-advanced-concepts-proposals.pdf
+EVM RPC Endpoints,,https://www.docs.sei.io/dev-advanced-concepts/evm-rpc-endpoints,,dev-advanced-concepts-evm-rpc-endpoints.pdf
+EVM version,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/introduction,,dev-advanced-concepts-interoperability-introduction.pdf
+Example Usage,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/example-usage,,dev-advanced-concepts-interoperability-precompiles-example-usage.pdf
+Addr Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/addr,,dev-advanced-concepts-interoperability-precompiles-addr.pdf
+Bank Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/bank,,dev-advanced-concepts-interoperability-precompiles-bank.pdf
+Staking Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/staking,,dev-advanced-concepts-interoperability-precompiles-staking.pdf
+Distribution Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/distribution,,dev-advanced-concepts-interoperability-precompiles-distribution.pdf
+eth_blobBaseFee Returns the expected base fee for blobs in the next block.,,https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_blobbasefee,,api-networks-ethereum-json-rpc-methods-eth_blobbasefee.pdf
+CosmWasm Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/cosmwasm,,dev-advanced-concepts-interoperability-precompiles-cosmwasm.pdf
+IBC Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/ibc,,dev-advanced-concepts-interoperability-precompiles-ibc.pdf
+JSON Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/json,,dev-advanced-concepts-interoperability-precompiles-json.pdf
+Orcale Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/oracle,,dev-advanced-concepts-interoperability-precompiles-oracle.pdf
+Pointer Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/pointer,,dev-advanced-concepts-interoperability-precompiles-pointer.pdf
+Pointer Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/pointerview,,dev-advanced-concepts-interoperability-precompiles-pointerview.pdf
+Governance Precompile,,https://www.docs.sei.io/dev-advanced-concepts/interoperability/precompiles/governance,,dev-advanced-concepts-interoperability-precompiles-governance.pdf
+Tools and Resources,,https://www.docs.sei.io/dev-resources/tools-and-resources,,dev-resources-tools-and-resources.pdf
+Resources,,https://www.docs.sei.io/dev-resources/resources,,dev-resources-resources.pdf
+Differences with Ethereum,,https://www.docs.sei.io/dev-resources/differences-with-ethereum,,dev-resources-differences-with-ethereum.pdf
+"Comparison of endpoint types The following table compares the differences between the gRPC, REST and CometBFT RPC endpoints.",,https://docs.scrt.network/secret-network-documentation/development/resources-api-contract-addresses/connecting-to-the-network/comparison-of-endpoint-types,,secret-network-documentation-development-resources-api-contract-addresses-connecting-to-the-network-comparison-of-endpoint-types.pdf
+SecretPath + WalletConnect integration,,https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/basics/connecting-metamask-to-secret-network-1,,secret-network-documentation-confidential-computing-layer-ethereum-evm-developer-toolkit-basics-connecting-metamask-to-secret-network-1.pdf
+eth_getBlockReceipts - Polygon PoS post,,https://docs.alchemy.com/reference/eth-getblockreceipts-polygon-pos,,reference-eth-getblockreceipts-polygon-pos.pdf
+eth_getBlockReceipts - Arbitrum post,,https://docs.alchemy.com/reference/eth-getblockreceipts-arbitrum,,reference-eth-getblockreceipts-arbitrum.pdf
+eth_getBlockReceipts - Optimism post,,https://docs.alchemy.com/reference/eth-getblockreceipts-optimism,,reference-eth-getblockreceipts-optimism.pdf
+eth_getBlockReceipts - Base post,,https://docs.alchemy.com/reference/eth-getblockreceipts-base,,reference-eth-getblockreceipts-base.pdf
+eth_getBlockReceipts - Astar post,,https://docs.alchemy.com/reference/eth-getblockreceipts-astar,,reference-eth-getblockreceipts-astar.pdf
+EIGEN Token Overview,,https://docs.eigenlayer.xyz/eigenlayer/overview/eigen-token-overview,,eigenlayer-overview-eigen-token-overview.pdf
+FAQ,,https://docs.galadriel.com/FAQ,,FAQ.pdf
+EaaS: Hosting with Blockscout,,https://docs.blockscout.com/about/premium-features,,about-premium-features.pdf
+Newsletter & Blog,,https://docs.blockscout.com/about/announcements/newsletter-and-blog,,about-announcements-newsletter-and-blog.pdf
+Vera: Verifier Alliance,,https://docs.blockscout.com/about/vera-verifier-alliance,,about-vera-verifier-alliance.pdf
+Operator precedence,,https://docs.cairo-lang.org/language_constructs/operator-precedence.html,,language_constructs-operator-precedence.html.pdf
+Adding your Chain to the Vera database,,https://docs.blockscout.com/about/vera-verifier-alliance/adding-your-chain-to-the-vera-database,,about-vera-verifier-alliance-adding-your-chain-to-the-vera-database.pdf
+Overview,,https://docs.fhenix.zone/docs/tutorial/earlyWin,,docs-tutorial-earlyWin.pdf
+Addressing,,https://docs.ipc.space/specifications/addressing,,specifications-addressing.pdf
+Setting up a Celestia full consensus node​,,https://docs.celestia.org/nodes/full-consensus-node,,nodes-full-consensus-node.pdf
+CometBFT,,https://docs.ipc.space/specifications/cometbft,,specifications-cometbft.pdf
+IPLD Resolver,,https://docs.ipc.space/specifications/ipld-resolver,,specifications-ipld-resolver.pdf
+Materializer,,https://docs.ipc.space/specifications/materializer,,specifications-materializer.pdf
+Top-down Finality,,https://docs.ipc.space/specifications/topdown,,specifications-topdown.pdf
+Golang client library guide​,,https://docs.celestia.org/developers/golang-client-tutorial,,developers-golang-client-tutorial.pdf
+Implementing Fee Currency in Wallets Celo allows paying gas fees in currency other than the native currency. The tokens that can be used to pay gas fees is controlled via governance and the list of tokens allowed is maintained inFeeCurrencyWhitelist.sol,,https://docs.celo.org/developer/fee-currency,,developer-fee-currency.pdf
+EVM Version Information,,https://docs.blockscout.com/for-developers/information-and-settings/evm-version-information,,for-developers-information-and-settings-evm-version-information.pdf
+Using a Public RPC,,https://docs.namada.net/introduction/public-rpc,,introduction-public-rpc.pdf
+Introduction to the Namada Protocol,,https://docs.namada.net/introduction/protocol-intro,,introduction-protocol-intro.pdf
+Established accounts,,https://docs.namada.net/users/transparent-accounts/established-accounts,,users-transparent-accounts-established-accounts.pdf
+Implicit accounts,,https://docs.namada.net/users/transparent-accounts/implicit-accounts,,users-transparent-accounts-implicit-accounts.pdf
+Glossary,,https://docs.namada.net/users/shielded-accounts/glossary,,users-shielded-accounts-glossary.pdf
+Registration,,https://docs.clusters.xyz/technical-documentation/javascript-sdk/registration,,technical-documentation-javascript-sdk-registration.pdf
+MASP Key Management,,https://docs.namada.net/users/shielded-accounts/masp-keys,,users-shielded-accounts-masp-keys.pdf
+Shielding Assets,,https://docs.namada.net/users/shielded-accounts/shielding,,users-shielded-accounts-shielding.pdf
+Unshielding Assets,,https://docs.namada.net/users/shielded-accounts/unshielding,,users-shielded-accounts-unshielding.pdf
+Registration,,https://docs.clusters.xyz/technical-documentation/rest-api/registration,,technical-documentation-rest-api-registration.pdf
+How to Run a Custom Gas Token Chain,,https://docs.optimism.io/builders/chain-operators/management/custom-gas-token,,builders-chain-operators-management-custom-gas-token.pdf
+Shielded IBC,,https://docs.namada.net/users/ibc/shielded-ibc,,users-ibc-shielded-ibc.pdf
+Transparent IBC,,https://docs.namada.net/users/ibc/transparent-ibc,,users-ibc-transparent-ibc.pdf
+Querying Overview,,https://docs.namada.net/users/query,,users-query.pdf
+Validator actions,,https://docs.namada.net/operators/validators/validator-actions,,operators-validators-validator-actions.pdf
+Namada Interface,,https://docs.namada.net/integrating-with-namada/interface,,integrating-with-namada-interface.pdf
+Testnet Faucets,,https://docs.namada.net/networks/testnets/faucet,,networks-testnets-faucet.pdf
+Commands,,https://docs.namada.net/utils,,utils.pdf
+Custom Gas Token Explainer,,https://docs.optimism.io/stack/protocol/features/custom-gas-token,,stack-protocol-features-custom-gas-token.pdf
+introduction-getting_started.pdf,,https://docs.dydx.exchange/introduction-getting_started,,introduction-getting_started.pdf
+Onboarding FAQs,,https://docs.dydx.exchange/introduction-onboarding_faqs,,introduction-onboarding_faqs.pdf
+Hardware Requirements,,https://docs.dydx.exchange/infrastructure_providers-validators/hardware_requirements,,infrastructure_providers-validators-hardware_requirements.pdf
+Required Node Configs,,https://docs.dydx.exchange/infrastructure_providers-validators/required_node_configs,,infrastructure_providers-validators-required_node_configs.pdf
+How to set up a full node,,https://docs.dydx.exchange/infrastructure_providers-validators/how_to_set_up_full_node,,infrastructure_providers-validators-how_to_set_up_full_node.pdf
+Running a Full Node,,https://docs.dydx.exchange/infrastructure_providers-validators/running_full_node,,infrastructure_providers-validators-running_full_node.pdf
+Running a Validator,,https://docs.dydx.exchange/infrastructure_providers-validators/running_a_validator,,infrastructure_providers-validators-running_a_validator.pdf
+Snapshots,,https://docs.dydx.exchange/infrastructure_providers-validators/snapshots,,infrastructure_providers-validators-snapshots.pdf
+Full Node GRPC Streaming,,https://docs.dydx.exchange/infrastructure_providers-validators/full_node_streaming,,infrastructure_providers-validators-full_node_streaming.pdf
+Types of upgrades,,https://docs.dydx.exchange/infrastructure_providers-validators/upgrades/types_of_upgrades,,infrastructure_providers-validators-upgrades-types_of_upgrades.pdf
+Performing Upgrades,,https://docs.dydx.exchange/infrastructure_providers-validators/upgrades/performing_upgrades,,infrastructure_providers-validators-upgrades-performing_upgrades.pdf
+Cosmovisor,,https://docs.dydx.exchange/infrastructure_providers-validators/upgrades/cosmovisor,,infrastructure_providers-validators-upgrades-cosmovisor.pdf
+Using Cosmovisor to stage dYdX Chain binary upgrade,,https://docs.dydx.exchange/infrastructure_providers-validators/upgrades/using_cosmovisor_to_stage_dYdX_Chain_binary_upgrade,,infrastructure_providers-validators-upgrades-using_cosmovisor_to_stage_dYdX_Chain_binary_upgrade.pdf
+infrastructure_providers-validators-upgrades-upgrading_sidecar.pdf,,https://docs.dydx.exchange/infrastructure_providers-validators/upgrades/upgrading_sidecar,,infrastructure_providers-validators-upgrades-upgrading_sidecar.pdf
+Network Constants,,https://docs.dydx.exchange/infrastructure_providers-network/network_constants,,infrastructure_providers-network-network_constants.pdf
+Resources,,https://docs.dydx.exchange/infrastructure_providers-network/resources,,infrastructure_providers-network-resources.pdf
+📖 LI.FI Terminology,,https://docs.li.fi/overview/li.fi-terminology,,overview-li.fi-terminology.pdf
+Faucet,,https://docs.dydx.exchange/infrastructure_providers-network/faucet,,infrastructure_providers-network-faucet.pdf
+v4 Software – Checklist,,https://docs.dydx.exchange/infrastructure_providers-operators/software_checklist,,infrastructure_providers-operators-software_checklist.pdf
+Technical estimates,,https://docs.dydx.exchange/infrastructure_providers-operators/indexer_usage_estimates,,infrastructure_providers-operators-indexer_usage_estimates.pdf
+Indexer Client,,https://docs.dydx.exchange/api_integration-clients/indexer_client,,api_integration-clients-indexer_client.pdf
+Socket Client,,https://docs.dydx.exchange/api_integration-clients/socket_client,,api_integration-clients-socket_client.pdf
+Validator Client,,https://docs.dydx.exchange/api_integration-clients/validator_client,,api_integration-clients-validator_client.pdf
+Composite Client,,https://docs.dydx.exchange/api_integration-clients/composite_client,,api_integration-clients-composite_client.pdf
+Indexer API v1.0.0,,https://docs.dydx.exchange/api_integration-indexer/indexer_api,,api_integration-indexer-indexer_api.pdf
+Indexer Websocket Documentation,,https://docs.dydx.exchange/api_integration-indexer/indexer_websocket,,api_integration-indexer-indexer_websocket.pdf
+Open Source Repositories,,https://docs.dydx.exchange/api_integration-repositories,,api_integration-repositories.pdf
+Blocks Limit,,https://docs.dydx.exchange/api_integration-trading/rate_limits,,api_integration-trading-rate_limits.pdf
+api_integration-trading-other_limits.pdf,,https://docs.dydx.exchange/api_integration-trading/other_limits,,api_integration-trading-other_limits.pdf
+Order Execution Options,,https://docs.dydx.exchange/api_integration-trading/order_types,,api_integration-trading-order_types.pdf
+Differences with Ethereum,,https://www.docs.sei.io/dev-advanced-concepts/differences-with-ethereum,,dev-advanced-concepts-differences-with-ethereum.pdf
+api_integration-trading-short_term_vs_stateful.pdf,,https://docs.dydx.exchange/api_integration-trading/short_term_vs_stateful,,api_integration-trading-short_term_vs_stateful.pdf
+Subscription methods,,https://docs.infura.io/api/networks/arbitrum/json-rpc-methods/subscription-methods,,api-networks-arbitrum-json-rpc-methods-subscription-methods.pdf
+api_integration-deposits_and_withdrawals-cli_commands.pdf,,https://docs.dydx.exchange/api_integration-deposits_and_withdrawals/cli_commands,,api_integration-deposits_and_withdrawals-cli_commands.pdf
+How to send USDC from Ethereum to dYdX,,https://docs.dydx.exchange/api_integration-deposits_and_withdrawals/how_to_send_usdc_from_ethereum_to_dydx,,api_integration-deposits_and_withdrawals-how_to_send_usdc_from_ethereum_to_dydx.pdf
+Withdrawal rate limits and gating,,https://docs.dydx.exchange/api_integration-deposits_and_withdrawals/rate_limits_and_gating,,api_integration-deposits_and_withdrawals-rate_limits_and_gating.pdf
+Constants,,https://docs.dydx.exchange/api_integration-constants,,api_integration-constants.pdf
+How to uncross the orderbook,,https://docs.dydx.exchange/api_integration-guides/how_to_uncross_orderbook,,api_integration-guides-how_to_uncross_orderbook.pdf
+Resources,,https://www.docs.sei.io/resources-resources,,resources-resources.pdf
+api_integration-guides-how_to_interpret_block_data_for_trades.pdf,,https://docs.dydx.exchange/api_integration-guides/how_to_interpret_block_data_for_trades,,api_integration-guides-how_to_interpret_block_data_for_trades.pdf
+Tools and Resources,,https://www.docs.sei.io/resources-tools-and-resources,,resources-tools-and-resources.pdf
+Setting Up Raspberry Pi for API Trading,,https://docs.dydx.exchange/api_integration-guides/setting_up_raspberry_pi_for_api_trading,,api_integration-guides-setting_up_raspberry_pi_for_api_trading.pdf
+CLI Python Script,,https://docs.dydx.exchange/api_integration-guides/cli_python_script,,api_integration-guides-cli_python_script.pdf
+Overview,,https://docs.dydx.exchange/users-rewards/overview,,users-rewards-overview.pdf
+Staking Rewards,,https://docs.dydx.exchange/users-rewards/staking_rewards,,users-rewards-staking_rewards.pdf
+Trading Rewards,,https://docs.dydx.exchange/users-rewards/trading_rewards,,users-rewards-trading_rewards.pdf
+Proposing a new market,,https://docs.dydx.exchange/users-governance/proposing_a_new_market,,users-governance-proposing_a_new_market.pdf
+Slashing a validator,,https://docs.dydx.exchange/users-governance/slashing_a_validator,,users-governance-slashing_a_validator.pdf
+Governance Functionality,,https://docs.dydx.exchange/users-governance/functionalities,,users-governance-functionalities.pdf
+Submitting a Proposal,,https://docs.dydx.exchange/users-governance/submitting_a_proposal,,users-governance-submitting_a_proposal.pdf
+Voting,,https://docs.dydx.exchange/users-governance/voting,,users-governance-voting.pdf
+FAQ Documentation,,https://docs.dydx.exchange/users-faqs,,users-faqs.pdf
+Intro to dYdX Chain Architecture,,https://docs.dydx.exchange/concepts-architecture/architectural_overview,,concepts-architecture-architectural_overview.pdf
+Indexer Deep Dive,,https://docs.dydx.exchange/concepts-architecture/indexer,,concepts-architecture-indexer.pdf
+Margin Calculations,,https://docs.dydx.exchange/concepts-trading/margin,,concepts-trading-margin.pdf
+concepts-trading-rewards_fees_and_parameters.pdf,,https://docs.dydx.exchange/concepts-trading/rewards_fees_and_parameters,,concepts-trading-rewards_fees_and_parameters.pdf
+"The Carbon DeFi versus Uniswap V3 Invariant Functions Carbon DeFi makes use of the same geometric price sequences that have governed AMM behavior since its first realization in 2017. While Carbon DeFi is not an AMM, the majority of the underlying theory is indistinguishable from that of conventional “concentrated liquidity” AMM designs. However, rather than let the price curves be determined by one and the same invariant curve (which, traditionally described two different token balances), instead, each token balance is given its own implicit curve (i.e. one “bonding curve” per token). This allows for arbitrary separation of bidding and asking prices characterized by irreversible token swaps, from which emerges a trading “strategy” – the core object of Carbon DeFi.",,https://docs.carbondefi.xyz/developer-guides/the-carbon-defi-versus-uniswap-v3-invariant-functions,,developer-guides-the-carbon-defi-versus-uniswap-v3-invariant-functions.pdf
+Security,,https://docs.dydx.exchange/other-security,,other-security.pdf
+Terms-of-Use & Privacy Policy,,https://docs.dydx.exchange/other-terms_of_use_and_privacy_policy,,other-terms_of_use_and_privacy_policy.pdf
+From EVM to Secret,,https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/usecases/tokens/from-evm-to-secret,,secret-network-documentation-confidential-computing-layer-ethereum-evm-developer-toolkit-usecases-tokens-from-evm-to-secret.pdf
+From Secret to EVM Coming soon,,https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/usecases/tokens/from-secret-to-evm,,secret-network-documentation-confidential-computing-layer-ethereum-evm-developer-toolkit-usecases-tokens-from-secret-to-evm.pdf
+Running a node/validator Setting up a node/validator,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator,,secret-network-documentation-infrastructure-running-a-node-validator.pdf
+Setting up a node/validator,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator.pdf
+Hardware setup,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup.pdf
+Hardware Compliance,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/hardware-compliance,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-hardware-compliance.pdf
+VPS/Bare-Metal Compliance,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/vps-compliance,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-vps-compliance.pdf
+Leaseweb Setup Website:leaseweb,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/vps-compliance/leaseweb-setup,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-vps-compliance-leaseweb-setup.pdf
+PhoenixNAP Setup Website:phoenixNAP,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/vps-compliance/phoenixnap-setup,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-vps-compliance-phoenixnap-setup.pdf
+Psychz Setup Website:psychz,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/vps-compliance/psychz-setup,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-vps-compliance-psychz-setup.pdf
+nForce Setup Website:nForce,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/vps-compliance/nforce-setup,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-vps-compliance-nforce-setup.pdf
+Vultr Setup Website:Vultr,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/vps-compliance/vultr-setup,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-vps-compliance-vultr-setup.pdf
+OVHCloud Setup Websites:Global,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/vps-compliance/ovhcloud-setup,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-vps-compliance-ovhcloud-setup.pdf
+Microsoft Azure Setup Website:Microsoft Azure,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/vps-compliance/microsoft-azure-setup,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-vps-compliance-microsoft-azure-setup.pdf
+"Patching your Node Nodes on Secret Network are required to be fully patched, and compliant with network requirements. While this requirement makes running a node and maintaining it harder, it is a necessary tradeoff that needs to be done if the network is to remain open and permissionless.",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/patching-your-node,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-patching-your-node.pdf
+Enclave verification In this section we quickly explain what the verification process for your hardware entails and how it works. Instructions for verification are included in the setup guides!,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/enclave-verification,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-enclave-verification.pdf
+Registration troubleshooting,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/hardware-setup/registration-troubleshooting,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-hardware-setup-registration-troubleshooting.pdf
+Testnet Setup,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/testnet,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-testnet.pdf
+"Install SGX Got problems with using DCAP in your system? Please ask in the Telegram or Discord for help. For Validators, you can also ask in the SN Validators chat.",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/testnet/install-sgx-1,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-testnet-install-sgx-1.pdf
+"Install secretd Unlike other Tendermint/Cosmos based daemons,secretd",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/testnet/install-secretd,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-testnet-install-secretd.pdf
+Setup Full Node,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/testnet/run-a-full-node,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-testnet-run-a-full-node.pdf
+Testnet State Sync Note: This documentation assumes you have followed the instructions for,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/testnet/testnet-state-sync,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-testnet-testnet-state-sync.pdf
+Becoming a Testnet Validator,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/testnet/join-as-a-validator,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-testnet-join-as-a-validator.pdf
+Installing CLI & Creating A New Address,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/testnet/installing-cli-and-creating-a-new-address,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-testnet-installing-cli-and-creating-a-new-address.pdf
+Mainnet Setup This section will take you through the process of taking a node from fresh machine to full validator. The general steps are as follows:,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/node-setup,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-node-setup.pdf
+"Install SGX Got problems with using DCAP in your system? Please ask in the Telegram or Discord for help. For Validators, you can also ask in the SN Validators chat.",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/node-setup/install-sgx-1,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-node-setup-install-sgx-1.pdf
+"Install secretd Unlike other Tendermint/Cosmos based daemons,secretd",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/node-setup/install-secretd,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-node-setup-install-secretd.pdf
+Setup Full Node This document details how to join the Secret Networksecret-4,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/node-setup/setup-full-node,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-node-setup-setup-full-node.pdf
+Quicksync / Snapshot Snapshots are compressed folders of the database to reach the current block quickly.,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/node-setup/snapshot,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-node-setup-snapshot.pdf
+Statesync Got questions or need help with,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/node-setup/state-sync,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-node-setup-state-sync.pdf
+Becoming A Validator,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/node-setup/becoming-a-validator,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-node-setup-becoming-a-validator.pdf
+Installing CLI & Creating A New Address,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/setting-up-a-node-validator/node-setup/installing-cli-and-creating-a-new-address,,secret-network-documentation-infrastructure-running-a-node-validator-setting-up-a-node-validator-node-setup-installing-cli-and-creating-a-new-address.pdf
+Maintaining a node/validator Slashing information,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator.pdf
+Slashing information,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-runners,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-runners.pdf
+Migrating a Validator Ensure youbackup your validator,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/migrating-a-validator,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-migrating-a-validator.pdf
+Troubleshooting,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/troubleshooting,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-troubleshooting.pdf
+Validator Backup It isCRUCIAL,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/validator-backup,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-validator-backup.pdf
+"Server security To add basic security to your node, we've provided a guide covering 2 simple tools.",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/security,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-security.pdf
+SSH authentication,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/security/ssh-authentication,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-security-ssh-authentication.pdf
+Server configuration,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/security/server-configuration,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-security-server-configuration.pdf
+Uncomplicated-Firewall (UFW),,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/security/uncomplicated-firewall-ufw,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-security-uncomplicated-firewall-ufw.pdf
+Local CLI,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/security/local-cli,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-security-local-cli.pdf
+Node Monitoring Monitoring is inmensely important so to ensure the liveness and reliabilty of your infrastructure. If your validator is not signing blocks it will eventually get slashed losing you and your delegators some of their SCRT balance. Same for full nodes it is important they are able to serve queries as if they are down performance of dApps and other applications will be limited.\,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring.pdf
+Prometheus Prometheus,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/prometheus,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-prometheus.pdf
+Environment Preperation,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/prometheus/environment-preperation,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-prometheus-environment-preperation.pdf
+"Install Node Exporter As your Prometheus is only capable of collecting metrics, we want to extend its capabilities by addingNode Exporter",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/prometheus/install-node-exporter,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-prometheus-install-node-exporter.pdf
+Install Prometheus Download and UnpackPrometheus,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/prometheus/install-prometheus,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-prometheus-install-prometheus.pdf
+"Configuring Prometheus Prior to using Prometheus, it needs basic configuring. Thus, we need to create a configuration file namedprometheus.yml",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/prometheus/configuring-prometheus,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-prometheus-configuring-prometheus.pdf
+Grafana Grafana allows you to easily visualize your monitoring results and other analytics,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/grafana,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-grafana.pdf
+Install Grafana Install Grafana on our instance which queries our Prometheus server.,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/grafana/install-grafana,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-grafana-install-grafana.pdf
+Grafana Dashboard Install Grafana on our instance which queries our Prometheus server.,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/grafana/grafana-dashboard,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-grafana-grafana-dashboard.pdf
+"Next Steps From here, you're going to want to set up alerts for if something happens with your node, which will be a follow-up document.",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/grafana/next-steps,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-grafana-next-steps.pdf
+Docker Docker,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/docker,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-docker.pdf
+Install Docker,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/docker/install-docker,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-docker-install-docker.pdf
+Configuration Clone thenode_tooling repo,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/docker/configuration,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-docker-configuration.pdf
+Start Containers Start the containers deploying the monitoring stack (Grafana + Prometheus + Node Exporter):,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/docker/start-containers,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-docker-start-containers.pdf
+"Grafana Dashboard The dashboard for Cosmos SDK nodes is pre-installed, to use it:",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/docker/grafana-dashboard,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-docker-grafana-dashboard.pdf
+Application Ports The docker images expose the following ports:,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/docker/application-ports,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-docker-application-ports.pdf
+Stop Containers From thenode_tooling/monitoring,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/docker/stop-containers,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-docker-stop-containers.pdf
+Goaccess Goaccess is a powerful tool when it comes to providing usage statistics for your endpoints.,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/goaccess,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-goaccess.pdf
+"Install Goaccess Before configuring Nginx, install GoAccess, a real-time web log analyzer.",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/goaccess/install-goaccess,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-goaccess-install-goaccess.pdf
+Setup Goaccess,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/node-monitoring/goaccess/setup-goaccess,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-node-monitoring-goaccess-setup-goaccess.pdf
+Helpful commands,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation.pdf
+Query Validators You can query the list of all validators of a specific chain:,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/query-validators,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-query-validators.pdf
+"Bond Tokens On the Secret Network mainnet, we delegateuscrt",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/bond-tokens,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-bond-tokens.pdf
+Withdraw Rewards To withdraw the delegator rewards:,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/withdraw-rewards,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-withdraw-rewards.pdf
+"Query Delegations Once you've submitted a delegation to a validator, you can see it's information by using the following command:",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/query-delegations,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-query-delegations.pdf
+Unbond Tokens There currently is in place a21,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/unbond-tokens,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-unbond-tokens.pdf
+"Query Unbonding-Delegations Once you begin an unbonding-delegation, you can see its information by using the following command:",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/query-unbonding-delegations,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-query-unbonding-delegations.pdf
+Redelegate Tokens A redelegation is a type delegation that allows you to bond illiquid tokens from one validator to another:,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/redelegate-tokens,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-redelegate-tokens.pdf
+"Query Redelegations Once you begin a redelegation, you can see its information by using the following command:",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/query-redelegations,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-query-redelegations.pdf
+Query Parameters Parameters define high level settings for staking. You can get the current values by using:,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/query-parameters,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-query-parameters.pdf
+Query Pool A stakingPool,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/query-pool,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-query-pool.pdf
+Query Delegations To Validator You can also query all of the delegations to a particular validator:,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/maintaining-a-node-validator/delegation/query-delegations-to-validator,,secret-network-documentation-infrastructure-running-a-node-validator-maintaining-a-node-validator-delegation-query-delegations-to-validator.pdf
+API Noderunning This section should give you a rough overview of how to run multiple nodes in a cluster than you can provide for your own dApp to use.,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/api-noderunning,,secret-network-documentation-infrastructure-running-a-node-validator-api-noderunning.pdf
+"Running Multiple Nodes on the Same Server It's possible to run multiple Secret Nodes on the same Secret-compatible server, and it is fairly easy to do so.",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/api-noderunning/running-multiple-nodes-on-the-same-server,,secret-network-documentation-infrastructure-running-a-node-validator-api-noderunning-running-multiple-nodes-on-the-same-server.pdf
+"Node Loadbalancing using Nginx To provide endpoints to users, you can use Nginx. It is a powerful tool for providing a loadbalanced endpoint that distributes the load across multiple nodes.",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/api-noderunning/node-loadbalancing-using-nginx,,secret-network-documentation-infrastructure-running-a-node-validator-api-noderunning-node-loadbalancing-using-nginx.pdf
+Setup Nginx,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/api-noderunning/node-loadbalancing-using-nginx/setup-nginx,,secret-network-documentation-infrastructure-running-a-node-validator-api-noderunning-node-loadbalancing-using-nginx-setup-nginx.pdf
+Example Nginx config Here is an examplenginx.conf,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/api-noderunning/node-loadbalancing-using-nginx/example-nginx-config,,secret-network-documentation-infrastructure-running-a-node-validator-api-noderunning-node-loadbalancing-using-nginx-example-nginx-config.pdf
+"Using Auto heal to improve cluster uptime for Nginx Most noderunners have the common problem that stale nodes, meaning nodes that are stuck at a certain block height and will not continue keeping up the chain tip, provide horrible UX to users. To mitigate this, we can add some extra monitoring tools to dynamically add or remove nodes from the cluster.",,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/api-noderunning/using-auto-heal-to-improve-cluster-uptime-for-nginx,,secret-network-documentation-infrastructure-running-a-node-validator-api-noderunning-using-auto-heal-to-improve-cluster-uptime-for-nginx.pdf
+Sentry and Archive nodes These pages go into detail for setting up infrastructure other than full nodes and validators.,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/sentry-archive-and-ibc-node-setup,,secret-network-documentation-infrastructure-running-a-node-validator-sentry-archive-and-ibc-node-setup.pdf
+Mantlemint,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/sentry-archive-and-ibc-node-setup/mantlemint,,secret-network-documentation-infrastructure-running-a-node-validator-sentry-archive-and-ibc-node-setup-mantlemint.pdf
+Sentry Nodes,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/sentry-archive-and-ibc-node-setup/sentry-nodes,,secret-network-documentation-infrastructure-running-a-node-validator-sentry-archive-and-ibc-node-setup-sentry-nodes.pdf
+Archive Nodes,,https://docs.scrt.network/secret-network-documentation/infrastructure/running-a-node-validator/sentry-archive-and-ibc-node-setup/archive-nodes,,secret-network-documentation-infrastructure-running-a-node-validator-sentry-archive-and-ibc-node-setup-archive-nodes.pdf

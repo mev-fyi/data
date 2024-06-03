@@ -1,1 +1,31 @@
 Link,Author,Release Date,Title
+https://forum.celestia.org/t/about-the-research-category/18,https://forum.celestia.org/u/musalbas,2020-01-01,About the Research category
+https://forum.celestia.org/t/celestia-snark-accounts-design-spec/1639,https://forum.celestia.org/u/puma314,2024-05-29,Celestia Snark Accounts Design Spec
+https://forum.celestia.org/t/moving-toward-safer-and-more-aligned-tia-liquid-staking/1422,https://forum.celestia.org/u/aidangs,,Moving toward safer and more aligned TIA liquid staking
+https://forum.celestia.org/t/customize-your-namespace-rollup-resource-pricing-account-abstraction-and-native-restaking/1666,https://forum.celestia.org/u/nashqueue,,"Customize your namespace, rollup resource pricing, account abstraction and native restaking"
+https://forum.celestia.org/t/preventing-duplicate-blob-submission/1670,https://forum.celestia.org/u/cmwaters,,Preventing duplicate blob submission
+https://forum.celestia.org/t/project-ideas-for-the-infinite-space-bazaar/1663,https://forum.celestia.org/u/colludingnode,,Project Ideas for the Infinite Space Bazaar
+https://forum.celestia.org/t/point-precompile-for-rollup-da-verification/1629,https://forum.celestia.org/u/mikirov,,Point precompile for Rollup DA verification
+https://forum.celestia.org/t/achieving-base-layer-functionality-escape-velocity-without-on-chain-smart-contracts-using-sovereign-zk-rollups/958,https://forum.celestia.org/u/musalbas,,"Achieving base layer functionality escape velocity without on-chain smart contracts, using sovereign ZK rollups"
+https://forum.celestia.org/t/zero-knowledge-in-the-celestia-baselayer/1475,https://forum.celestia.org/u/zmanian,,Zero Knowledge in the Celestia Baselayer
+https://forum.celestia.org/t/defending-against-lst-monopolies/1554,https://forum.celestia.org/u/evan,,Defending Against LST Monopolies
+https://forum.celestia.org/t/security-levels-for-data-availability-for-light-nodes/919,https://forum.celestia.org/u/musalbas,,Security levels for data availability for light nodes
+https://forum.celestia.org/t/staking-is-priced-incorrectly/1569,https://forum.celestia.org/u/faddat,,Staking is priced incorrectly
+https://forum.celestia.org/t/new-applications-of-da-layer/1541,https://forum.celestia.org/u/gylman,,New applications of DA layer
+https://forum.celestia.org/t/ibc-precheck-abci-and-das/1503,https://forum.celestia.org/u/zmanian,,"IBC Precheck, ABCI++ and DAS"
+https://forum.celestia.org/t/leaderless-sovereign-roll-up/420,https://forum.celestia.org/u/colludingnode,,Leaderless Sovereign Roll-Up
+https://forum.celestia.org/t/decentralized-rollup-sequencing-as-a-service-via-interchain-security/423,https://forum.celestia.org/u/nick,2023-12-01,Decentralized Rollup Sequencing as a Service via Interchain Security
+https://forum.celestia.org/t/optimizing-liquid-staking-for-celestia/1149,https://forum.celestia.org/u/ibcguy,2023-12-01,Optimizing Liquid Staking for Celestia
+https://forum.celestia.org/t/zk-proving-das-part-1-intro/1047,https://forum.celestia.org/u/garvitgoel,2023-11-01,ZK-Proving DAS [PART 1]: Intro
+https://forum.celestia.org/t/pos-security-wrt-l2-risk/1331,https://forum.celestia.org/u/josephjohnston,2023-11-01,PoS security wrt L2 risk
+https://forum.celestia.org/t/a-focus-on-sequencer-and-proposer-failures/1319,https://forum.celestia.org/u/shivam,2023-11-01,A Focus on Sequencer and Proposer Failures
+https://forum.celestia.org/t/definition-of-sovereign-rollup/1123,https://forum.celestia.org/u/colludingnode,2023-10-01,Definition of Sovereign Rollup
+https://forum.celestia.org/t/a-draft-design-for-a-multi-rollup-system/1080,https://forum.celestia.org/u/liveduo,2023-09-01,A draft design for a multi-rollup system
+https://forum.celestia.org/t/merkle-witness-compression/1040,https://forum.celestia.org/u/colludingnode,2023-07-01,Merkle Witness Compression
+https://forum.celestia.org/t/nakamoto-consensus-requires-social-coordination-and-subjectivity/28,https://forum.celestia.org/u/adlerjohn,2023-06-01,Nakamoto Consensus Requires Social Coordination and Subjectivity
+https://forum.celestia.org/t/fairblock-rollkit-shared-sequencer-with-threshold-ibe/1009,https://forum.celestia.org/u/fairblock,2023-06-01,Fairblock: Rollkit Shared Sequencer with Threshold IBE
+https://forum.celestia.org/t/assessing-demand-drivers-for-celestia/1002,https://forum.celestia.org/u/schizo-4695,2023-06-01,Assessing demand drivers for Celestia
+https://forum.celestia.org/t/demystifying-namespace-merkle-tree-nmt-exploring-soundness-analysis-and-unveiling-partial-absence-non-inclusion-proofs/998,https://forum.celestia.org/u/stb,2023-06-01,Demystifying Namespace Merkle Tree (NMT): Exploring Soundness Analysis and Unveiling Partial Absence/Non-Inclusion Proofs
+https://forum.celestia.org/t/how-to-get-block-data-from-celestia-node/986,https://forum.celestia.org/u/aakash4dev,2023-05-01,How to get block data from celestia node
+https://forum.celestia.org/t/an-open-modular-stack-for-evm-based-applications-using-celestia-evmos-and-cosmos/89,https://forum.celestia.org/u/musalbas,2023-05-01,"An open, modular stack for EVM-based applications using Celestia, Evmos, and Cosmos"
+https://forum.celestia.org/t/where-to-sequence-transactions/961,https://forum.celestia.org/u/kelemeno,2023-05-01,Where to sequence transactions?
