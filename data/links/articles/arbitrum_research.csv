@@ -1,12 +1,13 @@
 Link,Author,Release Date,Title
 https://research.arbitrum.io/t/welcome-to-the-arbitrum-research-forum/7,https://research.arbitrum.io/u/system,2023-01-01,Welcome to the Arbitrum Research forum
-https://research.arbitrum.io/t/the-power-of-faster-blocks/9609,https://research.arbitrum.io/u/edfelten,2024-05-31,The power of faster blocks
-https://research.arbitrum.io/t/do-shared-mev-auctions-actually-increase-revenue/9606,https://research.arbitrum.io/u/edfelten,2024-05-30,Do shared MEV auctions actually increase revenue?
+https://research.arbitrum.io/t/the-power-of-faster-blocks/9609,https://research.arbitrum.io/u/edfelten,2024-06-23,The power of faster blocks
+https://research.arbitrum.io/t/proposed-design-for-timeboost/9491,https://research.arbitrum.io/u/edfelten,2024-06-23,Proposed design for Timeboost
+https://research.arbitrum.io/t/arbitrum-sepolia-faucet-now-available-on-getblock-io/9613,https://research.arbitrum.io/u/pcgb,2024-06-08,Arbitrum Sepolia Faucet Now Available On GetBlock.io
+https://research.arbitrum.io/t/do-shared-mev-auctions-actually-increase-revenue/9606,https://research.arbitrum.io/u/edfelten,2024-06-07,Do shared MEV auctions actually increase revenue?
 https://research.arbitrum.io/t/paper-on-bold-fast-cheap-dispute-resolution-making-permissionless-validation-safe/9599,https://research.arbitrum.io/u/edfelten,2024-04-15,"Paper on BoLD: fast, cheap dispute resolution, making permissionless validation safe"
 https://research.arbitrum.io/t/decentralized-timeboost-r-d-update/9550,https://research.arbitrum.io/u/ian-espresso,2024-04-02,Decentralized Timeboost R&D Update
 https://research.arbitrum.io/t/security-and-governance-considerations-for-chain-clusters/9560,https://research.arbitrum.io/u/edfelten,2024-03-22,Security and governance considerations for chain-clusters
 https://research.arbitrum.io/t/eip-4844-shard-blobs-and-how-we-would-use-them/43,https://research.arbitrum.io/u/edfelten,2024-03-18,EIP-4844 shard blobs and how we would use them
-https://research.arbitrum.io/t/proposed-design-for-timeboost/9491,https://research.arbitrum.io/u/edfelten,2024-02-29,Proposed design for Timeboost
 https://research.arbitrum.io/t/rip-7614-expose-call-stack-to-contracts/9575,https://research.arbitrum.io/u/canercidam,2024-02-17,RIP-7614: Expose call stack to contracts
 https://research.arbitrum.io/t/how-do-proposers-take-turns-to-submit-new-state-roots-on-l1/9565,https://research.arbitrum.io/u/jli29,2024-01-28,How do proposers take turns to submit new state roots on L1?
 https://research.arbitrum.io/t/stylus-benchmarks-and-feedback/9526,https://research.arbitrum.io/u/daniel-k-ivanov,2023-12-01,Stylus - benchmarks and feedback

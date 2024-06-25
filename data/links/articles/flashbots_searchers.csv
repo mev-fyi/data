@@ -1,5 +1,6 @@
 Link,Author,Release Date,Title
 https://collective.flashbots.net/t/about-the-searchers-category/122,https://collective.flashbots.net/u/guayabyte,2022-12-01,About the Searchers category
+https://collective.flashbots.net/t/trying-to-bundle-flashbots-on-python-but-get-valueerror-code-32000-message-internal-server-error/3563,https://collective.flashbots.net/u/ylasgamers,2024-06-20,"Trying to bundle flashbots on python but get ValueError: {‘code’: -32000, ‘message’: ‘internal server error’}"
 https://collective.flashbots.net/t/blockpassedwithoutinclusion/2859,https://collective.flashbots.net/u/rushi,2024-05-09,BlockPassedWithoutInclusion
 https://collective.flashbots.net/t/error-in-signature-check-wallet/2646,https://collective.flashbots.net/u/cguth,2024-04-03,Error in signature check wallet
 https://collective.flashbots.net/t/erc20-transfer-amount-exceeds-balance-order-of-tx-in-bundle/3249,https://collective.flashbots.net/u/kaladin,2024-03-27,ERC20: transfer amount exceeds balance. Order of tx in bundle
