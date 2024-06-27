@@ -10231,3 +10231,7 @@ Querying Secret contracts,,https://docs.scrt.network/secret-network-documentatio
 Solana coming soon,,https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/supported-networks/solana,,secret-network-documentation-confidential-computing-layer-ethereum-evm-developer-toolkit-supported-networks-solana.pdf
 🔐 Use Ledger hardware wallet,,https://docs.scrt.network/secret-network-documentation/infrastructure/ledger,,secret-network-documentation-infrastructure-ledger.pdf
 🔐 Ledger with SecretCLI,,https://docs.scrt.network/secret-network-documentation/infrastructure/ledger/ledger,,secret-network-documentation-infrastructure-ledger-ledger.pdf
+Rust client library tutorial​,,https://docs.celestia.org/developers/rust-client-tutorial,,developers-rust-client-tutorial.pdf
+Actions and Blinks,,https://solana.com/docs/advanced/actions,,docs-advanced-actions.pdf
+LSM - Liquid Staking from Natively Staked Balance,,https://docs.stride.zone/docs/the-liquid-staking-module,,docs-the-liquid-staking-module.pdf
+LSM Troubleshooting Suggest Edits,,https://docs.stride.zone/docs/lsm-troubleshooting,,docs-lsm-troubleshooting.pdf

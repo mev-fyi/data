@@ -1,6 +1,7 @@
 Link,Author,Release Date,Title
 https://collective.flashbots.net/t/about-the-searchers-category/122,https://collective.flashbots.net/u/guayabyte,2022-12-01,About the Searchers category
-https://collective.flashbots.net/t/trying-to-bundle-flashbots-on-python-but-get-valueerror-code-32000-message-internal-server-error/3563,https://collective.flashbots.net/u/ylasgamers,2024-06-20,"Trying to bundle flashbots on python but get ValueError: {‘code’: -32000, ‘message’: ‘internal server error’}"
+https://collective.flashbots.net/t/a-list-of-order-flow-auction-ofa-protocols/2573,https://collective.flashbots.net/u/eru_iluvatar,2024-06-27,A list of Order Flow Auction (OFA) Protocols
+https://collective.flashbots.net/t/trying-to-bundle-flashbots-on-python-but-get-valueerror-code-32000-message-internal-server-error/3563,https://collective.flashbots.net/u/ylasgamers,2024-06-19,"Trying to bundle flashbots on python but get ValueError: {‘code’: -32000, ‘message’: ‘internal server error’}"
 https://collective.flashbots.net/t/blockpassedwithoutinclusion/2859,https://collective.flashbots.net/u/rushi,2024-05-09,BlockPassedWithoutInclusion
 https://collective.flashbots.net/t/error-in-signature-check-wallet/2646,https://collective.flashbots.net/u/cguth,2024-04-03,Error in signature check wallet
 https://collective.flashbots.net/t/erc20-transfer-amount-exceeds-balance-order-of-tx-in-bundle/3249,https://collective.flashbots.net/u/kaladin,2024-03-27,ERC20: transfer amount exceeds balance. Order of tx in bundle
@@ -13,7 +14,6 @@ https://collective.flashbots.net/t/bundle-simulation-error/3012,https://collecti
 https://collective.flashbots.net/t/whats-the-order-of-transactions-in-bundle-if-there-are-transactions-in-revertingtxhashes/2806,https://collective.flashbots.net/u/norz,2023-12-01,"What’s the order of transactions in bundle, if there are transactions in revertingTxHashes?"
 https://collective.flashbots.net/t/please-help-me-to-get-all-relay-urls/1232,https://collective.flashbots.net/u/dreamperson0106,2023-11-01,Please help me to get all relay URLs
 https://collective.flashbots.net/t/does-flashbots-support-arbitrum-bsc/1473,https://collective.flashbots.net/u/luke9086,2023-11-01,"Does Flashbots support Arbitrum,BSC?"
-https://collective.flashbots.net/t/a-list-of-order-flow-auction-ofa-protocols/2573,https://collective.flashbots.net/u/eru_iluvatar,2023-10-01,A list of Order Flow Auction (OFA) Protocols
 https://collective.flashbots.net/t/free-high-quality-streaming-mempool-access/2583,https://collective.flashbots.net/u/zeusfyi,2023-10-01,Free High Quality Streaming Mempool Access
 https://collective.flashbots.net/t/some-error-i-ran-into-today-any-recommend-for-fix-please/2557,https://collective.flashbots.net/u/npokemon,2023-10-01,"Some error I ran into today , any recommend for fix please"
 https://collective.flashbots.net/t/flash-loan-arbitrage-tutorial/2490,https://collective.flashbots.net/u/brock,2023-10-01,Flash Loan Arbitrage Tutorial
