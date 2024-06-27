@@ -1173,4 +1173,10 @@ site_configs = {
         'crawl_func': partial(crawl_sidebar, sidebar_selector='body > div.scroll-nojump > div > aside', selenium=True),
         'base_name': '-snaps',
     },
+    'dune': {
+        'base_url': 'https://docs.dune.com/home',
+        'content_selector': '#content-area',
+        'img_selector': '.img_ev3q',
+        'crawl_func': partial(crawl_sidebar, sidebar_selector='#sidebar > div > ul', selenium=True),
+    },
 }

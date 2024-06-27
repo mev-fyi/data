@@ -507,13 +507,13 @@ def main():
         {"csv_file": f"{repo_dir}/data/links/youtube/recommended_youtube_videos_with_details.csv", "tab_name": "YT videos (recommended)", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/links/youtube/youtube_videos.csv", "tab_name": "YT videos (channel list)", "num_cols": 2},
         {"csv_file": f"{repo_dir}/data/docs_details.csv", "tab_name": "Docs", "num_cols": 2},
-        # {"csv_file": f"{repo_dir}/data/links/merged_articles.csv", "tab_name": "All Discourse articles", "num_cols": 2},
+        {"csv_file": f"{repo_dir}/data/links/merged_articles.csv", "tab_name": "All Discourse articles", "num_cols": 2},
 
         {"csv_file": f"{rag_path_to_db}research_papers.csv", "tab_name": "Research papers in DB", "num_cols": 2},
         {"csv_file": f"{rag_path_to_db}articles.csv", "tab_name": "Articles in DB", "num_cols": 2},
         {"csv_file": f"{rag_path_to_db}docs.csv", "tab_name": "Docs in DB", "num_cols": 2},
         {"csv_file": f"{rag_path_to_db}youtube_videos.csv", "tab_name": "Videos in DB", "num_cols": 2},
-        # {"csv_file": f"{rag_path_to_db}all_discourse_articles.csv", "tab_name": "Discourse Articles in DB", "num_cols": 2},
+        {"csv_file": f"{rag_path_to_db}all_discourse_articles.csv", "tab_name": "Discourse Articles in DB", "num_cols": 2},
     ]
 
     # Using ThreadPoolExecutor to parallelize the updates

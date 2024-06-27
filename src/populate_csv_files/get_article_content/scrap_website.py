@@ -93,7 +93,16 @@ def fetch_discourse_content_from_url(url, css_selectors=["div.post[itemprop='tex
 
 def fetch_medium_content_from_url(url):
     try:
+        # if medium is a user name namely it contains "tag" or only username e.g. in this template 'https://medium.com/initc3org' then log and continue
+        if 'tag' in url or url.split('/')[3].startswith('@') or url.split('/')[3] == url.split('/')[3].lower():
+            logging.info(f"URL {url} is a user name, skipping")
+            return empty_content
+
         response = requests.get(url)
+        # check if response is 404 and if it is try removing the part of the url that contains `@<username>/` namely for this example 'https://medium.com/@bloqarl/rektoff/a-security-system-starts-with-the-testing-how-to-properly-battle-test-your-smart-contracts-4dd3a7538959' return 'https://medium.com/rektoff/a-security-system-starts-with-the-testing-how-to-properly-battle-test-your-smart-contracts-4dd3a7538959'
+        if response.status_code == 404:
+            url = url.replace(url.split('/')[3] + '/', '')
+            response = requests.get(url)
         response.encoding = 'utf-8'
         content = response.text
 

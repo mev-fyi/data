@@ -18,6 +18,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 visited_urls = set()  # Add this at the beginning of the script to track visited URLs globally
 
+
 def crawl_site(site_key, csv_lock, overwrite_docs=False, headless_browser=True):
     config = site_configs.get(site_key)
     if not config:
@@ -35,7 +36,6 @@ def crawl_site(site_key, csv_lock, overwrite_docs=False, headless_browser=True):
 
     # Now call the wrapper function, which handles passing the lock correctly
     crawl_func_wrapper(config)
-
 
 
 def generic_crawl(config, overwrite, lock, headless=False):
@@ -109,6 +109,6 @@ if __name__ == '__main__':
     clean_csv_titles()
     overwrite = os.getenv('OVERWRITE_PDFS', 'False').lower() in ('true', '1')
 
-    docs = ['relay']
+    docs = ['dune']
     # docs = None
     main(docs=docs, overwrite=False, headless=False, max_workers=15)

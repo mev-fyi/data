@@ -225,6 +225,8 @@ def run():
         ("https://forum.cow.fi/c/cow-grants-program/10/none", "cow_fi_grants_program"),
         ("https://forum.cow.fi/c/knowledge-base/8", "cow_fi_knowledge_base"),
         ("https://forum.cow.fi/c/treasury-overview-of-cow-dao/21", "cow_fi_treasury_overview"),
+        ("https://gov.l2beat.com/c/methodology-and-framework/5", "l2beat_methodology_and_framework"),
+        ("https://gov.gmx.io/", 'gmx_governance'),
     ]
     # TODO 2024-03-01: automatically extract all subforums from the parent forum page
     with ThreadPoolExecutor() as executor:

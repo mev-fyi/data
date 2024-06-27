@@ -29,11 +29,14 @@ def fetch_and_save_pdf(row, output_dir, overwrite=False):
     if not os.path.exists(pdf_filename) or overwrite:
         time.sleep(random.randint(1, 5))
         content_info = fetch_discourse_content_from_url(row['Link'])
-        if content_info['content']:
-            pdfkit.from_string(markdown_to_html(content_info['content']), pdf_filename)
-            logging.info(f"PDF saved: [{'/'.join(pdf_filename.split('/')[-2:])}]")
-        else:
-            logging.error(f"Failed to fetch content for URL: {row['Link']}")
+        try:
+            if content_info['content']:
+                pdfkit.from_string(markdown_to_html(content_info['content']), pdf_filename)
+                logging.info(f"PDF saved: [{'/'.join(pdf_filename.split('/')[-2:])}]")
+            else:
+                logging.error(f"Failed to fetch content for URL: {row['Link']}")
+        except Exception as e:
+            logging.error(f"Error saving PDF {row}: {e}, continuing")
     else:
         logging.info(f"PDF already exists: [{'/'.join(pdf_filename.split('/')[-2:])}]")
 

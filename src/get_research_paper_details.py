@@ -135,9 +135,9 @@ def get_paper_details_from_iacr(url: str):
         else:
             paper_authors = ''
 
-        paper_release_date = soup.select_one('#metadata > dl:nth-child(2) > dd:nth-child(12)').get_text()
+        paper_release_date = soup.select_one('#metadata > dl:nth-child(2) > dd:nth-child(12)').get_text().strip()
         if 'See all versions' in paper_release_date:
-            paper_release_date = soup.select_one('#metadata > dl:nth-child(2) > dd:nth-child(10)').get_text()
+            paper_release_date = soup.select_one('#metadata > dl:nth-child(2) > dd:nth-child(10)').get_text().strip()
         if ':' in paper_release_date:
             paper_release_date = paper_release_date.split(':')[0].strip()
 
@@ -156,7 +156,7 @@ def get_paper_details_from_iacr(url: str):
             else:
                 logging.warning(f"[IACR] Failed to download a valid PDF file from {url}")
 
-        return {"title": paper_title, "authors": paper_authors, "pdf_link": url, "topics": 'iacr', "release_date": paper_release_date}
+        return {"title": paper_title.strip(), "authors": paper_authors.strip(), "pdf_link": url.strip(), "topics": 'iacr', "release_date": paper_release_date.strip()}
     except requests.exceptions.RequestException as e:
         logging.error(f"[IACR] Failed to fetch the paper details: {e}")
         return None
