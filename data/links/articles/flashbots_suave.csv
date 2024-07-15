@@ -1,7 +1,11 @@
 Link,Author,Release Date,Title
 https://collective.flashbots.net/t/about-the-suave-category/2591,https://collective.flashbots.net/u/fred,2023-10-01,About the SUAVE category
-https://collective.flashbots.net/t/suave-wiki/2018,https://collective.flashbots.net/u/quintus,2024-06-26,SUAVE wiki
-https://collective.flashbots.net/t/flashwares-v-what-do-mev-apps-want-from-tees-anyway/3570,https://collective.flashbots.net/u/mateusz,2024-06-26,Flashwares v: what do MEV apps want from TEEs anyway?
+https://collective.flashbots.net/t/distributed-persistent-storage-for-suave-apps/3673,https://collective.flashbots.net/u/mateusz,2024-07-15,"Distributed, persistent storage for suave apps"
+https://collective.flashbots.net/t/account-abstraction-leveraging-tee/3670,https://collective.flashbots.net/u/mcarlomagno,2024-07-13,Account Abstraction Leveraging TEE
+https://collective.flashbots.net/t/suave-wiki/2018,https://collective.flashbots.net/u/quintus,2024-07-04,SUAVE wiki
+https://collective.flashbots.net/t/request-for-suapp-kettle-cash/3614,https://collective.flashbots.net/u/socrates1024,2024-07-01,Request for SuApp: Kettle Cash
+https://collective.flashbots.net/t/m-o-s-s-a-suave-block-building-proposal/2809,https://collective.flashbots.net/u/quintus,2024-06-30,M.O.S.S. - A SUAVE Block Building Proposal
+https://collective.flashbots.net/t/flashwares-v-what-do-mev-apps-want-from-tees-anyway/3570,https://collective.flashbots.net/u/mateusz,2024-06-28,Flashwares v: what do MEV apps want from TEEs anyway?
 https://collective.flashbots.net/t/crucible-hackathon-yak-bottom-of-the-block-backrunner/3581,https://collective.flashbots.net/u/halo3mic,2024-06-25,Crucible Hackathon: Yak Bottom of the Block Backrunner
 https://collective.flashbots.net/t/crucible-hackathon-overview/3585,https://collective.flashbots.net/u/dmarz,2024-06-24,Crucible Hackathon Overview
 https://collective.flashbots.net/t/crucible-hackathon-narwhal-exploration/3584,https://collective.flashbots.net/u/dmarz,2024-06-24,Crucible Hackathon: Narwhal Exploration
@@ -60,7 +64,6 @@ https://collective.flashbots.net/t/announcing-suave-std/3043,https://collective.
 https://collective.flashbots.net/t/sirrah-tee-coprocessor/2992,https://collective.flashbots.net/u/socrates1024,2024-02-05,Sirrah TEE Coprocessor
 https://collective.flashbots.net/t/gas-sponsorship-idea/2993,https://collective.flashbots.net/u/quintus,2024-01-29,Gas Sponsorship Idea
 https://collective.flashbots.net/t/changelog-1-simple-updates-about-virtually-everything/2943,https://collective.flashbots.net/u/cryptrowanderer,2024-01-19,CHANGELOG #1 - Simple Updates About Virtually Everything
-https://collective.flashbots.net/t/m-o-s-s-a-suave-block-building-proposal/2809,https://collective.flashbots.net/u/quintus,2023-12-01,M.O.S.S. - A SUAVE Block Building Proposal
 https://collective.flashbots.net/t/decentralizing-power-the-great-community/2829,https://collective.flashbots.net/u/cryptrowanderer,2023-12-01,Decentralizing Power & The Great Community
 https://collective.flashbots.net/t/private-libraries-in-suave/2812,https://collective.flashbots.net/u/ferranbt,2023-12-01,Private libraries in SUAVE
 https://collective.flashbots.net/t/async-chain-state-transition-using-messages/2733,https://collective.flashbots.net/u/mateusz,2023-12-01,Async chain state transition using messages
