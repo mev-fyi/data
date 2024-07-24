@@ -5,12 +5,12 @@ from src.populate_csv_files.get_article_content import get_article_content, get_
 from src.populate_csv_files.get_article_content.ethglobal_hackathon import scrap_docs
 from src.populate_csv_files.get_article_content.get_docs import process_repositories
 
-only_run_yt=False
+only_run_yt=True
 
-# populate_csv_files.parse_new_data.run()  # parse incoming data
+populate_csv_files.parse_new_data.run()  # parse incoming data
 # #
-# fetch_youtube_video_details_from_handles.run()
-# extract_recommended_youtube_video_name_from_link.run()
+fetch_youtube_video_details_from_handles.run()
+extract_recommended_youtube_video_name_from_link.run()
 
 if only_run_yt == False:
     pretty_print_articles.run()  # get article titles

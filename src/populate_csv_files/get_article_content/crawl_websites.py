@@ -21,8 +21,6 @@ exclude_pattern = re.compile(
 )
 
 
-
-
 def parse_site(site_name, site):
     unique_urls = set()
     output_rows = []
@@ -97,7 +95,7 @@ def parse_links_from_config_parallel(output_csv_path, workers=5):
 if __name__ == '__main__':
     output_csv_path = f"{root_directory()}/data/crawled_articles.csv"
 
-    site_names =None#['MediumPublication_wintermute']
+    site_names =None #['MediumPublication_wintermute']
     if site_names is not None:
         sites_config = {site_name: sites_config[site_name] for site_name in site_names if site_name in sites_config}
     parse_links_from_config_parallel(output_csv_path, workers=20)  # Example with 4 workers

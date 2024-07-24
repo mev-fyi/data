@@ -19,7 +19,7 @@ KEYWORDS_TO_INCLUDE = ['perps', 'derivatives', 'options', 'order flow', 'orderfl
             'mevboost.pics', 'mev-aware', 'fees', 'pbs', '4337', 'account abstraction', 'boost', 'defi', 'uniswap', 'hook', 'hyperchain', 'erc404', 'erc 404', 'solidity & foundry', 'course', 'invariant test',
             'suave', 'gas war', 'modular summit', 'latency', 'market design', 'searcher', 'staking', 'pre-merge', 'post-merge', 'code audit', 'audit code', 'upgradable smart contract',
             'liquid staking', 'crediblecommitments', 'tee', 'market microstructure', 'rollups', 'rollup', 'roll-up', 'roll-ups', 'uniswap', 'appchain', 'telegram bot', 'L3',
-            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives",
+            'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives", 'hyperliquid',
             'erc', 'eip', 'auction', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'pools', 'censorship', 'starknet', 'nftfi', 'dencun', 'the chopping block',
             '1559', 'BFT', 'selfish mining', 'vickrey auctions', "How They Solved Ethereum's Critical Flaw", 'cryptoeconomics', 'fuzzing', 'formal verification', 'First-Price Auctions',
             'token design', 'token economics', 'crypto economics', "John Adler : Wait, It's All Resource Pricing?", 'evm', 'whiteboard series']

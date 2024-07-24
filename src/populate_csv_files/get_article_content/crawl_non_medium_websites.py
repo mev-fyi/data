@@ -85,9 +85,10 @@ def get_article_urls(config: Dict[str, Dict[str, str]]) -> Dict[str, Set[str]]:
     results: Dict[str, Set[str]] = {}
 
     for url, selectors in config.items():
-        # Check for empty selectors
-        if not all(selectors.values()):
-            logging.warning(f"Selectors for URL {url} are not fully defined. Skipping...")
+        # Check if only 'next_page_selector' can be empty
+        required_selectors = {k: v for k, v in selectors.items() if k != 'next_page_selector'}
+        if not all(required_selectors.values()):
+            logging.warning(f"Required selectors for URL {url} are not fully defined. Skipping...")
             continue
 
         try:
