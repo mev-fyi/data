@@ -8,7 +8,7 @@ AUTHORS = ['Uri Klarman', 'Robert Miller', 'Tarun Chitra', 'Hasu', 'Dan Robinson
 'Max Resnick', 'Quintus Kilbourn', 'Georgios Konstantopoulos', 'Alex Obadia', 'Su Zhu', 'Vitalik Buterin', 'Justin Drake', 'Mike Neuder']
 
 FIRMS = ['eigenlayer', 'dymension', 'bloxroute', 'aptos', 'monad', 'sui', 'sei', 'panoptic', 'sol', 'solana', 'circle', 'chainlink', 'pyth', 'raydium', 'jito', 'orca', 'jupiter',
-         'cosmos', 'stargate', 'layerzero', "injective", 'cowswap', 'astaria',
+         'cosmos', 'stargate', 'layerzero', "injective", 'cowswap', 'astaria', 'bonkbot', 'banana gun',
          'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig', 'balancer', 'sushiswap', 'uma', 'across', 'primev', 'magic eden',
          'uniswap', 'altlayer', 'aztec', 'starkware', 'scroll', 'optimism', 'zksync', 'matter labs', '1inch', 'anoma', 'espresso', 'blast', 'blast l2', 'ambient', 'ambient finance']
 

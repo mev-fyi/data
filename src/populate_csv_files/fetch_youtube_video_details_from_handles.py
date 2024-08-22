@@ -440,7 +440,7 @@ def run():
     PASSTHROUGH = ['Tim Roughgarden Lectures', 'Scraping Bits', 'just a block', 'Bell Curve', 'Flashbots', 'Finematics', 'Sentient', 'NFTfi', 'SevenX Ventures', 'Numerai', 'Unlayered Podcast',
                    'Good Game Podcast', 'The Daily Gwei', 'blocmates', '1000x Podcast', 'Steady Lads Podcast', 'Empire', 'Galaxy', 'Epicenter Podcast', 'The Blockcrunch Podcast with Jason Choi',
                    'a16z crypto', 'SMG', 'Fenbushi Capital', 'Ethereum', 'Celestia', 'LayerZero', 'Fluence Labs', 'Stargate Finance', 'Delphi Digital', 'Solana', 'Remint Reality',
-                   "Adrian Pocobelli's Artist Journal", 'Duct Tape',
+                   "Adrian Pocobelli's Artist Journal", 'Duct Tape', 'Paradigm', 'Logan Jastremski', 'Jon Gjengset', "Let's Get Rusty",
                    'Ava Labs', '=nil; Foundation', 'RISC Zero', 'Nethermind', 'Beyond the Block']  # do not apply any filtering to these channels
     # Define the channel-specific filters which are applied after the first keyword selection
     channel_specific_filters = {
