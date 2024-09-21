@@ -67,7 +67,7 @@ There is maintained work item list [here](task_backlog.md) that you can pick up 
 
 Love what we're doing? Star the repository and spread the word! Your support helps in keeping this initiative active and growing.
 
-# How to setup the environment ?
+## How to setup the environment ?
 
 ```
 ./setup.sh
