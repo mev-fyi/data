@@ -1,15 +1,15 @@
 from src.utils import root_directory
 
 # TODO 2024-02-08: add authors from articles and research papers to authors and firms
-# TODO 2024-02-08: add all alt-L1s C-level: sol, aptos, sei, sui, monad [...]
 # TODO 2024-02-08: add all L2s C-level across ETH and BTC
 AUTHORS = ['Uri Klarman', 'Robert Miller', 'Tarun Chitra', 'Hasu', 'Dan Robinson', 'Jon Charbonneau', 'Tim Roughgarden', 'Scott Kominers', 'Dan Morehead', 'Joey Krug', 'Fenbushi Capital',
 'Barnabe Monnot', 'Guillermo Angeris', 'Stephane Gosselin', 'Mallesh Pai', 'daian', 'Alex Nezlobin', 'Jason Milionis', 'Drew Van der Werff', '0xmaki',
 'Max Resnick', 'Quintus Kilbourn', 'Georgios Konstantopoulos', 'Alex Obadia', 'Su Zhu', 'Vitalik Buterin', 'Justin Drake', 'Mike Neuder']
 
 FIRMS = ['eigenlayer', 'dymension', 'bloxroute', 'aptos', 'monad', 'sui', 'sei', 'panoptic', 'sol', 'solana', 'circle', 'chainlink', 'pyth', 'raydium', 'jito', 'orca', 'jupiter',
-         'cosmos', 'stargate', 'layerzero', "injective", 'cowswap', 'astaria', 'bonkbot', 'banana gun',
-         'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig', 'balancer', 'sushiswap', 'uma', 'across', 'primev', 'magic eden',
+         'cosmos', 'stargate', 'layerzero', "injective", 'cowswap', 'astaria', 'bonkbot', 'banana gun', 'eclipse', 'photon', 'mantle', 'pump.fun', 'virtuals', 'luna', 'svm',
+         'berachain', 'morpho',
+         'aave', 'compound', 'dydx', 'curve', 'maven', 'a16z', 'celestia', 'flashbots', 'paradigm', 'smg', 'rig', 'balancer', 'sushiswap', 'uma', 'across', 'primev', 'magic eden', 'polymarket',
          'uniswap', 'altlayer', 'aztec', 'starkware', 'scroll', 'optimism', 'zksync', 'matter labs', '1inch', 'anoma', 'espresso', 'blast', 'blast l2', 'ambient', 'ambient finance']
 
 
@@ -22,7 +22,9 @@ KEYWORDS_TO_INCLUDE = ['perps', 'derivatives', 'options', 'order flow', 'orderfl
             'cow', 'censorship', 'liquidity', 'censorship', 'ofa', 'pfof', 'payment for order flow', 'decentralisation', 'decentralization', "incentive", "incentives", 'hyperliquid',
             'erc', 'eip', 'auction', 'mechanism design', 'Price-of-Anarchy', 'protocol economics', 'pools', 'censorship', 'starknet', 'nftfi', 'dencun', 'the chopping block',
             '1559', 'BFT', 'selfish mining', 'vickrey auctions', "How They Solved Ethereum's Critical Flaw", 'cryptoeconomics', 'fuzzing', 'formal verification', 'First-Price Auctions',
-            'token design', 'token economics', 'crypto economics', "John Adler : Wait, It's All Resource Pricing?", 'evm', 'whiteboard series']
+            'token design', 'token economics', 'crypto economics', "John Adler : Wait, It's All Resource Pricing?", 'evm', 'whiteboard series', 'prediction markets',
+           'firedancer'
+           ]
 
 KEYWORDS_TO_INCLUDE += AUTHORS
 KEYWORDS_TO_INCLUDE += FIRMS
