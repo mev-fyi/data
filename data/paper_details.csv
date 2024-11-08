@@ -292,3 +292,7 @@ Rolling in the Shadows: Analyzing the Extraction of MEV Across Layer-2 Rollups,"
 Decentralization of Ethereum's Builder Market,"Sen Yang, Kartik Nayak, Fan Zhang",http://arxiv.org/pdf/2405.01329v2,"arXiv, cs.CR",2024-05-02,https://x.com/data_always/status/1787181210885615977?s=46&t=LTSoDWXLa08Oi2VCOCK2Yg
 The Future of MEV,Jonah Burian,http://arxiv.org/pdf/2404.04262v1,"arXiv, cs.CR, cs.GT",2024-03-05,
 ,,https://moallemi.com/ciamac/papers/pricing-dutch-auctions-2024.pdf ,Self-host,,https://x.com/ciamac/status/1796584842966204714?s=46&t=LTSoDWXLa08Oi2VCOCK2Yg
+"Credible, Optimal Auctions via Public Broadcast","Tarun Chitra, Matheus V. X. Ferreira, Kshitij Kulkarni",http://arxiv.org/pdf/2301.12532v2,"arXiv, cs.GT, cs.CR",2023-01-29,https://www.twitter.com/unlock_VALue
+Interpretable ML for High-Frequency Execution,"Timothée Fabre, Vincent Ragel",http://arxiv.org/pdf/2307.04863v2,"arXiv, q-fin.TR",2023-07-10,https://www.twitter.com/unlock_VALue
+Autobahn: Seamless high speed BFT,"Neil Giridharan, Florian Suri-Payer, Ittai Abraham, Lorenzo Alvisi, Natacha Crooks",http://arxiv.org/pdf/2401.10369v3,"arXiv, cs.DC",2024-01-18,https://www.twitter.com/unlock_VALue
+MEV Sharing with Dynamic Extraction Rates,"Pedro Braga, Georgios Chionas, Piotr Krysta, Stefanos Leonardos, Georgios Piliouras, Carmine Ventre",http://arxiv.org/pdf/2402.15849v2,"arXiv, cs.GT, econ.TH, math.DS, 37, 65P20, 91, 93A14, 93A16, C.2.4; F.2; I.2.11; J.2; J.4",2024-02-24,https://twitter.com/chionas_/status/1764619565013581830
