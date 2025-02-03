@@ -12358,3 +12358,18 @@ RewardsManager TheRewardsManager,,https://docs.scrt.network/secret-network-docum
 Prices API Quickstart A new developer's guide to fetching current and historical token prices via the Prices API.,,https://docs.alchemy.com/reference/prices-api-quickstart,,reference-prices-api-quickstart.pdf
 Prices API FAQ Commonly asked questions when using Alchemy's Prices API for fungible token prices.,,https://docs.alchemy.com/reference/prices-api-faq,,reference-prices-api-faq.pdf
 Historical Token Prices post,,https://docs.alchemy.com/reference/get-historical-token-prices,,reference-get-historical-token-prices.pdf
+Sonic Chain API Quickstart Get started building on Sonic and using the JSON-RPC API,,https://docs.alchemy.com/reference/sonic-api-quickstart,,reference-sonic-api-quickstart.pdf
+Sonic Chain API FAQ Frequently asked questions about the Sonic Chain API,,https://docs.alchemy.com/reference/sonic-api-faq,,reference-sonic-api-faq.pdf
+Sonic Chain API Endpoints All Supported Endpoints for Sonic Chain API,,https://docs.alchemy.com/reference/sonic-api-endpoints,,reference-sonic-api-endpoints.pdf
+Lens API Quickstart Get started building on Lens and using the JSON-RPC API,,https://docs.alchemy.com/reference/lens-api-quickstart,,reference-lens-api-quickstart.pdf
+Lens API FAQ Frequently asked questions about the Lens API,,https://docs.alchemy.com/reference/lens-api-faq,,reference-lens-api-faq.pdf
+Lens API Endpoints All supported endpoints for Lens API,,https://docs.alchemy.com/reference/lens-api-endpoints,,reference-lens-api-endpoints.pdf
+Abstract API Quickstart Get started building on Abstract and using the JSON-RPC API,,https://docs.alchemy.com/reference/abstract-api-quickstart,,reference-abstract-api-quickstart.pdf
+Abstract API FAQ Frequently asked questions about the Abstract API,,https://docs.alchemy.com/reference/abstract-api-faq,,reference-abstract-api-faq.pdf
+Abstract API Endpoints All supported endpoints for Abstract API,,https://docs.alchemy.com/reference/abstract-api-endpoints,,reference-abstract-api-endpoints.pdf
+Ink API Quickstart Get started building on Ink and using the JSON-RPC API,,https://docs.alchemy.com/reference/ink-api-quickstart,,reference-ink-api-quickstart.pdf
+Ink API FAQ Frequently asked questions about the Ink API,,https://docs.alchemy.com/reference/ink-api-faq,,reference-ink-api-faq.pdf
+Ink API Endpoints All supported endpoints for Ink API,,https://docs.alchemy.com/reference/ink-api-endpoints,,reference-ink-api-endpoints.pdf
+Lumia API Quickstart Get started building on Lumia and using the JSON-RPC API,,https://docs.alchemy.com/reference/lumia-api-quickstart,,reference-lumia-api-quickstart.pdf
+Lumia API FAQ Frequently asked questions about the Lens API,,https://docs.alchemy.com/reference/lumia-api-faq,,reference-lumia-api-faq.pdf
+Lumia API Endpoints All supported endpoints for Lumia API,,https://docs.alchemy.com/reference/lumia-api-endpoints,,reference-lumia-api-endpoints.pdf
